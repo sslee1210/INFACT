@@ -100,4 +100,21 @@
   .home-main {
     overflow-x: hidden;
   }
+
+  .hero.home-focus-section,
+  .hero.home-focus-section .hero__inner {
+    height: auto;
+    min-height: 86svh;
+  }
+
+  .hero.home-focus-section .hero__inner {
+    padding-top: clamp(86px, 22vw, 104px);
+    padding-bottom: clamp(52px, 12vw, 68px);
+  }
+
+  .about-blend-button,
+  .experience-showcase__button,
+  .contact-banner__button--primary {
+    min-width: auto;
+  }
 }

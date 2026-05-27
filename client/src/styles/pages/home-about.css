@@ -443,10 +443,13 @@
   }
 
   .about-blend-button {
-    width: 100%;
+    width: fit-content;
+    min-width: 0;
     justify-content: center;
     margin-top: var(--fluid-gap-sm);
-    padding: clamp(12px, 3vw, 14px) clamp(14px, 3.4vw, 16px);
+    padding: clamp(10px, 2.6vw, 12px) clamp(16px, 4.4vw, 20px);
+    min-height: 40px;
+    font-size: 0.84rem;
   }
 
   .about-blend-visual {

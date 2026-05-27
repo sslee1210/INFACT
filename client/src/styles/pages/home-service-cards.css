@@ -359,7 +359,10 @@
     max-width: none;
     height: auto;
     grid-template-columns: 1fr;
+    gap: 12px;
     margin: 0;
+    overflow: visible;
+    background: transparent;
   }
 
   .service-card-rail:has(.service-card:nth-child(1):hover),
@@ -372,25 +375,52 @@
   }
 
   .service-card {
-    height: clamp(260px, 58vw, 360px);
+    height: auto;
+    min-height: 124px;
+    grid-template-columns: minmax(110px, 36%) minmax(0, 1fr);
+    grid-template-rows: 1fr;
     border-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 0;
+    border-radius: 8px;
+    background: #10243c;
   }
 
   .service-card:last-child {
     border-bottom: 0;
   }
 
+  .service-card__media {
+    grid-area: 1 / 1;
+    min-height: 124px;
+  }
+
+  .service-card__media img {
+    transform: none;
+  }
+
+  .service-card__media::after {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(10, 24, 47, 0.18) 0%,
+        rgba(10, 24, 47, 0.42) 100%
+      );
+  }
+
   .service-card__content {
-    padding: 26px 26px 32px;
+    grid-area: 1 / 2;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px;
   }
 
   .service-card__label {
-    font-size: 0.74rem;
+    font-size: 0.68rem;
   }
 
   .service-card__title {
-    font-size: clamp(1.45rem, 6vw, 2rem);
+    font-size: clamp(1.06rem, 4.6vw, 1.32rem);
+    line-height: 1.18;
   }
 
   .service-card-rail:hover .service-card,
@@ -414,5 +444,20 @@
   .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__label,
   .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__title {
     opacity: 1;
+  }
+}
+
+@media (max-width: 520px) {
+  .service-card {
+    min-height: 110px;
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .service-card__media {
+    min-height: 110px;
+  }
+
+  .service-card__content {
+    padding: 16px;
   }
 }

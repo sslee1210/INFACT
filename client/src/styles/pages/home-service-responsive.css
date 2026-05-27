@@ -22,14 +22,15 @@
   }
 
   .service-immersive__title {
-    font-size: clamp(1.92rem, 7.4vw, 2.74rem);
+    font-size: clamp(1.58rem, 7vw, 2rem);
   }
 
   .service-card-rail {
-    display: block;
+    display: grid;
     left: auto;
     width: 100%;
     height: auto;
+    gap: 12px;
     margin: 0 auto;
     transform: none;
   }
@@ -42,8 +43,9 @@
     width: 100%;
     height: auto;
     border-right: 0;
-    border-bottom: 1px solid rgba(15, 45, 74, 0.1);
-    min-height: 420px;
+    border-bottom: 0;
+    min-height: 124px;
+    grid-template-columns: minmax(110px, 36%) minmax(0, 1fr);
     grid-template-rows: 1fr;
   }
 
@@ -70,14 +72,15 @@
 
 @media (max-width: 640px) {
   .service-card {
-    min-height: 380px;
-    grid-template-rows: 1fr;
+    min-height: 110px;
+    grid-template-columns: 104px minmax(0, 1fr);
   }
+
   .service-card__content {
-    padding: 20px;
+    padding: 16px;
   }
 
   .service-card__title {
-    font-size: 1.36rem;
+    font-size: clamp(1.06rem, 4.6vw, 1.32rem);
   }
 }

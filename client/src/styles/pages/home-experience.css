@@ -455,18 +455,47 @@
     width: 100%;
     margin-top: 24px;
     margin-right: 0;
-    padding-right: clamp(20px, 5.4vw, 30px);
+    padding-right: 0;
     min-height: auto;
     border-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .home-cta-banner__button {
     --cta-line-height: 12px;
     --cta-line-bottom: 7px;
 
-    min-height: 58px;
-    padding: 0 0 14px 0;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    min-height: 44px;
+    padding: 0 12px;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--home-blue-strong);
+    background-image: none;
+    font-size: clamp(0.86rem, 3.5vw, 0.98rem);
+    letter-spacing: -0.02em;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  .home-cta-banner__button--ghost {
+    background: rgba(12, 23, 48, 0.2);
+    color: #ffffff;
+  }
+
+  .home-cta-banner__button-label {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+  }
+
+  .home-cta-banner__button-label::before,
+  .home-cta-banner__button-label::after {
+    content: none;
   }
 }
 

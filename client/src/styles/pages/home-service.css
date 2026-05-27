@@ -202,3 +202,24 @@
   opacity: 0.34;
   cursor: default;
 }
+
+@media (max-width: 900px) {
+  .service-immersive-section {
+    padding: clamp(56px, 12vw, 72px) 0 clamp(58px, 12vw, 76px);
+    overflow: visible;
+  }
+
+  .service-immersive {
+    gap: 22px;
+  }
+
+  .service-immersive__intro {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .service-immersive__title {
+    font-size: clamp(1.58rem, 7vw, 2rem);
+    line-height: 1.12;
+  }
+}
