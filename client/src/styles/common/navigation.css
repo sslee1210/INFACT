@@ -386,9 +386,12 @@
 
 @media (max-width: 760px) {
   .home-nav__inner {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
     height: clamp(54px, 14vw, 62px);
     gap: clamp(10px, 2.8vw, 16px);
+    width: 100%;
+    padding-left: var(--site-edge-gutter);
+    padding-right: 14px;
   }
 
   .home-nav__logo--white,
@@ -405,22 +408,34 @@
   }
 
   .home-nav__right {
+    grid-column: 3;
+    display: flex;
+    gap: 10px;
+  }
+
+  .home-nav__contact-btn {
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: 0.78rem;
+  }
+
+  .home-nav__today {
     display: none;
   }
 
   .home-nav__mobile-toggle {
-    grid-column: 3;
+    grid-column: 4;
     justify-self: end;
     display: inline-flex;
-    width: 38px;
+    width: 28px;
     height: 38px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 5px;
-    border: 1px solid rgba(22, 28, 129, 0.14);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.82);
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     cursor: pointer;
     transition:
       background-color 0.2s ease,
@@ -428,8 +443,7 @@
   }
 
   .home-nav.is-top:not(.is-mobile-open) .home-nav__mobile-toggle {
-    border-color: rgba(255, 255, 255, 0.34);
-    background: rgba(255, 255, 255, 0.12);
+    background: transparent;
   }
 
   .home-nav__mobile-toggle span {
@@ -526,9 +540,9 @@
 
   .home-nav__mobile-link {
     min-height: 38px;
-    padding: 0 12px;
-    border-radius: 8px;
-    background: rgba(44, 54, 143, 0.06);
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
     font-size: 0.88rem;
     font-weight: 700;
   }
