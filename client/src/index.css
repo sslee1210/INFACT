@@ -1,0 +1,29 @@
+@import "./styles/common/variables.css";
+@import "./styles/common/base.css";
+@import "./styles/common/navigation.css";
+@import "./styles/common/hero.css";
+@import "./styles/common/sections.css";
+@import "./styles/common/footer.css";
+@import "./styles/common/subpages.css";
+@import "./styles/common/animations.css";
+
+@import "./styles/pages/home.css";
+@import "./styles/pages/home-about.css";
+@import "./styles/pages/home-experience.css";
+@import "./styles/pages/home-service.css";
+@import "./styles/pages/home-service-cards.css";
+@import "./styles/pages/home-service-responsive.css";
+@import "./styles/pages/home-contact.css";
+@import "./styles/pages/company.css";
+@import "./styles/pages/company-history.css";
+@import "./styles/pages/company-organization.css";
+@import "./styles/pages/history.css";
+@import "./styles/pages/contact.css";
+@import "./styles/pages/service-shared.css";
+@import "./styles/pages/services.css";
+@import "./styles/pages/service-gmp.css";
+@import "./styles/pages/service-csv.css";
+@import "./styles/pages/service-design.css";
+@import "@/styles/pages/about.css";
+
+@import "./styles/common/responsive.css";

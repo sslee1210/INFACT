@@ -1,0 +1,26 @@
+.timeline {
+  display: grid;
+  gap: var(--fluid-gap-md);
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: clamp(100px, 8vw, 120px) minmax(0, 1fr);
+  gap: var(--fluid-gap-md);
+  padding-top: clamp(16px, 1.5vw, 20px);
+  border-top: 1px solid var(--home-border);
+}
+
+.timeline__year {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--home-text);
+}
+
+.timeline__content h3 {
+  margin: 0 0 var(--fluid-gap-xs);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--home-text);
+}

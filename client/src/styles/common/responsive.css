@@ -1,0 +1,66 @@
+@media (max-width: 1280px) {
+  .home-footer__top {
+    grid-template-columns: clamp(144px, 14vw, 160px) minmax(0, 1fr);
+    gap: var(--fluid-gap-md);
+  }
+
+  .home-footer__brand-logo {
+    width: clamp(144px, 13vw, 154px);
+  }
+}
+
+@media (max-width: 980px) {
+  .home-footer {
+    padding: clamp(28px, 5vw, 36px) 0 clamp(18px, 3vw, 22px);
+  }
+
+  .home-footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--fluid-gap-sm);
+  }
+
+  .home-footer__brand {
+    justify-content: flex-start;
+  }
+
+  .home-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-footer__policy {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 860px) {
+  .home-footer__company-name,
+  .home-footer__company-meta,
+  .home-footer__policy a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-footer__brand-logo {
+    width: clamp(128px, 32vw, 138px);
+  }
+
+  .home-footer__company-name,
+  .home-footer__company-meta {
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+
+  .home-footer__policy {
+    gap: var(--fluid-gap-sm);
+  }
+
+  .home-footer__policy a {
+    font-size: 0.76rem;
+  }
+
+  .home-footer__copyright {
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,13 @@
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(clamp(18px, 1.8vw, 24px));
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

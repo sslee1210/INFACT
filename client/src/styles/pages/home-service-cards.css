@@ -1,0 +1,418 @@
+/* SERVICE CARDS */
+:root {
+  --site-container-width: 100%;
+}
+
+/* Service 카드 영역 */
+.service-immersive__showcase {
+  width: 100%;
+  max-width: var(--site-container-width);
+  min-width: 0;
+  min-height: 0;
+  margin: 0 auto;
+}
+
+.service-card-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+
+  /*
+    데스크톱에서는 16인치 화면 기준 크기감을 유지.
+    27인치, 32인치에서도 더 이상 과도하게 커지지 않음.
+  */
+  width: 100%;
+  max-width: var(--site-container-width);
+  height: clamp(480px, 28vw, 540px);
+  margin: 0 auto;
+
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #0d1b2d;
+  cursor: default;
+
+  transition: grid-template-columns 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* hover 확장 - 세 카드 모두 동일한 방식 */
+.service-card-rail:has(.service-card:nth-child(1):hover),
+.service-card-rail.is-hovering-design {
+  grid-template-columns: 1.7fr 0.65fr 0.65fr;
+}
+
+.service-card-rail:has(.service-card:nth-child(2):hover),
+.service-card-rail.is-hovering-gmp {
+  grid-template-columns: 0.65fr 1.7fr 0.65fr;
+}
+
+.service-card-rail:has(.service-card:nth-child(3):hover),
+.service-card-rail.is-hovering-csv {
+  grid-template-columns: 0.65fr 0.65fr 1.7fr;
+}
+
+.service-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  overflow: hidden;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  background: #0d1b2d;
+  box-shadow: none;
+  backdrop-filter: none;
+  cursor: pointer;
+  opacity: 1;
+
+  transition:
+    opacity 0.36s ease,
+    filter 0.36s ease;
+}
+
+.service-card:last-child {
+  border-right: 0;
+}
+
+.service-card:hover {
+  z-index: 5;
+  transform: none;
+  background: #0d1b2d;
+  box-shadow: none;
+}
+
+.service-card::before {
+  content: none;
+}
+
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 28%
+    );
+  opacity: 0.68;
+}
+
+.service-card__media {
+  position: relative;
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: #0d1b2d;
+}
+
+.service-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /*
+    object-position transition 제거.
+    hover 때 이미지가 옆으로 밀리는 듯한 슬라이딩 현상 방지.
+  */
+  filter: grayscale(0.16) saturate(0.72) brightness(0.92) contrast(0.95);
+  transform: scale(1.025);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.42s ease;
+}
+
+/* 카드별 이미지 기준점 - hover 시에도 유지 */
+.service-card:nth-child(1) .service-card__media img {
+  object-position: 45% center;
+}
+
+.service-card:nth-child(2) .service-card__media img {
+  object-position: center center;
+}
+
+.service-card:nth-child(3) .service-card__media img {
+  object-position: 42% center;
+}
+
+.service-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(215, 230, 242, 0.2) 0%,
+      rgba(63, 91, 116, 0.33) 42%,
+      rgba(10, 24, 47, 0.86) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 19, 38, 0.42) 0%,
+      rgba(44, 75, 104, 0.2) 48%,
+      rgba(210, 226, 238, 0.08) 100%
+    );
+
+  transition:
+    opacity 0.42s ease,
+    background 0.42s ease;
+}
+
+.service-card__content {
+  position: relative;
+  z-index: 3;
+  grid-area: 1 / 1;
+
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding:
+    clamp(26px, 2.2vw, 36px)
+    clamp(24px, 2.4vw, 38px)
+    clamp(28px, 2.5vw, 42px);
+
+  color: #ffffff;
+  background: transparent;
+}
+
+.service-card__topline {
+  display: block;
+  margin: 0;
+}
+
+.service-card__label {
+  display: block;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(0.72rem, 0.76vw, 0.86rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.36);
+  transition: opacity 0.32s ease;
+}
+
+.service-card__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 1.65vw, 2rem);
+  line-height: 1.16;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.45),
+    0 10px 28px rgba(0, 0, 0, 0.32);
+  transition: opacity 0.32s ease;
+}
+
+/* hover 시 선택되지 않은 카드 - 과하게 어둡지 않게 */
+.service-card-rail:hover .service-card,
+.service-card-rail.is-hovering .service-card {
+  opacity: 0.9;
+}
+
+.service-card-rail:hover .service-card:hover,
+.service-card-rail.is-hovering-design .service-card:nth-child(1),
+.service-card-rail.is-hovering-gmp .service-card:nth-child(2),
+.service-card-rail.is-hovering-csv .service-card:nth-child(3) {
+  opacity: 1;
+  z-index: 5;
+}
+
+.service-card-rail:hover .service-card:not(:hover) .service-card__media img,
+.service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__media img,
+.service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__media img,
+.service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__media img {
+  filter: grayscale(0.22) saturate(0.62) brightness(0.82) contrast(0.94);
+  transform: scale(1.025);
+}
+
+.service-card-rail:hover .service-card:not(:hover) .service-card__media::after,
+.service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__media::after,
+.service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__media::after,
+.service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__media::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 33, 54, 0.18) 0%,
+      rgba(15, 31, 55, 0.32) 45%,
+      rgba(7, 17, 34, 0.72) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 20, 38, 0.26) 0%,
+      rgba(34, 58, 84, 0.13) 48%,
+      rgba(210, 226, 238, 0.05) 100%
+    );
+}
+
+.service-card-rail:hover .service-card:not(:hover) .service-card__label,
+.service-card-rail:hover .service-card:not(:hover) .service-card__title,
+.service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__label,
+.service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__title,
+.service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__label,
+.service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__title,
+.service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__label,
+.service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__title {
+  opacity: 0.82;
+}
+
+/* hover된 카드 - 밝게, 크게, 이미지 위치는 고정 */
+.service-card-rail:hover .service-card:hover .service-card__media img,
+.service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__media img,
+.service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__media img,
+.service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__media img {
+  filter: grayscale(0.04) saturate(0.9) brightness(1.02) contrast(1);
+  transform: scale(1.01);
+}
+
+.service-card-rail:hover .service-card:hover .service-card__media::after,
+.service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__media::after,
+.service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__media::after,
+.service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__media::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(215, 230, 242, 0.1) 0%,
+      rgba(63, 91, 116, 0.19) 42%,
+      rgba(10, 24, 47, 0.62) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 19, 38, 0.2) 0%,
+      rgba(44, 75, 104, 0.1) 48%,
+      rgba(210, 226, 238, 0.04) 100%
+    );
+}
+
+.service-card-rail:hover .service-card:hover .service-card__label,
+.service-card-rail:hover .service-card:hover .service-card__title,
+.service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__label,
+.service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__title,
+.service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__label,
+.service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__title,
+.service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__label,
+.service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__title {
+  opacity: 1;
+}
+
+/* 키보드 포커스 대응 */
+.service-card:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.72);
+  outline-offset: -2px;
+}
+
+.service-card:focus-visible .service-card__media img {
+  filter: grayscale(0.04) saturate(0.9) brightness(1.02) contrast(1);
+  transform: scale(1.01);
+}
+
+/* :has 미지원 브라우저 대응 */
+@supports not selector(:has(*)) {
+  .service-card-rail:hover .service-card:hover {
+    transform: none;
+  }
+}
+
+/* 큰 데스크톱 고정 */
+@media (min-width: 901px) {
+  .service-card-rail {
+    max-width: var(--site-container-width);
+  }
+
+  .service-immersive__showcase {
+    max-width: var(--site-container-width);
+  }
+}
+
+/* 태블릿 / 모바일 */
+@media (max-width: 900px) {
+  .service-immersive__showcase {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .service-card-rail {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .service-card-rail:has(.service-card:nth-child(1):hover),
+  .service-card-rail:has(.service-card:nth-child(2):hover),
+  .service-card-rail:has(.service-card:nth-child(3):hover),
+  .service-card-rail.is-hovering-design,
+  .service-card-rail.is-hovering-gmp,
+  .service-card-rail.is-hovering-csv {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: clamp(260px, 58vw, 360px);
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .service-card:last-child {
+    border-bottom: 0;
+  }
+
+  .service-card__content {
+    padding: 26px 26px 32px;
+  }
+
+  .service-card__label {
+    font-size: 0.74rem;
+  }
+
+  .service-card__title {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .service-card-rail:hover .service-card,
+  .service-card-rail.is-hovering .service-card {
+    opacity: 1;
+  }
+
+  .service-card-rail:hover .service-card:not(:hover) .service-card__media img,
+  .service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__media img,
+  .service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__media img,
+  .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__media img {
+    filter: grayscale(0.16) saturate(0.72) brightness(0.92) contrast(0.95);
+  }
+
+  .service-card-rail:hover .service-card:not(:hover) .service-card__label,
+  .service-card-rail:hover .service-card:not(:hover) .service-card__title,
+  .service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__label,
+  .service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__title,
+  .service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__label,
+  .service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__title,
+  .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__label,
+  .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__title {
+    opacity: 1;
+  }
+}

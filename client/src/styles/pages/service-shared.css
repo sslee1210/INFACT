@@ -1,0 +1,41 @@
+.service-page,
+.experience-page {
+  display: grid;
+  gap: var(--fluid-gap-xl);
+}
+
+.service-page__feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(clamp(280px, 28vw, 340px), 0.95fr);
+  gap: var(--fluid-gap-lg);
+  align-items: start;
+}
+
+.service-page__secondary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--fluid-gap-md);
+}
+
+.service-page__secondary-item {
+  padding-top: var(--fluid-gap-sm);
+  border-top: 2px solid var(--home-border);
+}
+
+.service-page__secondary-item h3 {
+  margin: 0 0 var(--fluid-gap-xs);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--home-text);
+}
+
+.service-page__secondary-item p {
+  margin: 0 0 var(--fluid-gap-xs);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--home-text-soft);
+}
+
+.service-design-page {
+  gap: clamp(64px, 7vw, 92px);
+}
