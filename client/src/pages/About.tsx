@@ -81,7 +81,7 @@ export default function About() {
             <div className="about-entry__media">
               <div className="about-entry__image">
                 <img
-                  src="/images/home/about-02.jpg"
+                  src="./images/home/about-02.jpg"
                   alt="인팩트 수행실적 이미지"
                   loading="lazy"
                   decoding="async"

@@ -244,7 +244,7 @@ export default function ServiceDesign() {
         label="Service"
         title={content.title}
         description="초기 요구사항과 GMP 운영 조건을 구조화해 실행 가능한 설계 방향을 제안합니다."
-        image="/images/sub/business.jpg"
+        image="./images/sub/business.jpg"
       />
 
       <section className="section section--white">

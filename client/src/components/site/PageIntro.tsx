@@ -7,13 +7,16 @@ type PageIntroProps = {
   image?: string;
 };
 
+const DEFAULT_INTRO_IMAGE = "./images/sub/banner.jpg";
+
 export function PageIntro({ label, title, description, image }: PageIntroProps) {
   const animationStyle = useMemo(() => {
     const duration = 14;
     const elapsed = (Date.now() % (duration * 1000)) / 1000;
+    const introImage = image ?? DEFAULT_INTRO_IMAGE;
     return {
       "--sub-banner-delay": `-${elapsed}s`,
-      ...(image ? { "--page-intro-image": `url("${image}")` } : {}),
+      "--page-intro-image": `url("${introImage}")`,
     } as CSSProperties;
   }, [image]);
 

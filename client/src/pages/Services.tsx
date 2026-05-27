@@ -11,7 +11,7 @@ export default function Services() {
         label="Services"
         title="프로젝트에 맞는 컨설팅 범위를 제안합니다."
         description="개념설계, GMP, CSV를 프로젝트 흐름에 맞춰 연결하고 필요한 수행 범위를 정리합니다."
-        image="/images/sub/business.jpg"
+        image="./images/sub/business.jpg"
       />
 
       <section className="section section--white">

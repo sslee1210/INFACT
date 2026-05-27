@@ -12,7 +12,7 @@ export const SERVICE_PANELS = [
     tags: ["요구사항 정리", "공정 흐름 분석", "레이아웃 방향", "보고서 문서화"],
     link: "#/service-design",
     linkLabel: "개념설계 자세히 보기",
-    image: "/images/home/service-01.jpg",
+    image: "./images/home/service-01.jpg",
   },
   {
     key: "gmp",
@@ -27,7 +27,7 @@ export const SERVICE_PANELS = [
     tags: ["GMP 기준 검토", "품질 시스템", "SOP", "실사 대응"],
     link: "#/service-gmp",
     linkLabel: "GMP 컨설팅 자세히 보기",
-    image: "/images/home/service-02.jpg",
+    image: "./images/home/service-02.jpg",
   },
   {
     key: "csv",
@@ -42,7 +42,7 @@ export const SERVICE_PANELS = [
     tags: ["CSV", "Data Integrity", "Risk Assessment", "IQ·OQ"],
     link: "#/service-csv",
     linkLabel: "CSV 컨설팅 자세히 보기",
-    image: "/images/home/service-03.jpg",
+    image: "./images/home/service-03.jpg",
   },
 ] as const;
 

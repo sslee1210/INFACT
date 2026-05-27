@@ -33,4 +33,4 @@ corepack.cmd pnpm build
 
 ## 사이트 링크
 
-[INFACT 홈페이지](http://www.in-fact.co.kr)
+[INFACT 홈페이지 작업물](https://sslee1210.github.io/INFACT/)

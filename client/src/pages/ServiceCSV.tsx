@@ -13,7 +13,7 @@ export default function ServiceCSV() {
         label="Service"
         title={content.title}
         description="전산 시스템의 운영 목적과 규제 요구사항을 연결해 검증 범위와 문서 체계를 수립합니다."
-        image="/images/sub/business.jpg"
+        image="./images/sub/business.jpg"
       />
 
       <section className="section section--white">

@@ -14,6 +14,7 @@ function KakaoMapPreview() {
   const canZoomOut = zoomLevel > 0;
   const mapStyle = {
     "--contact-map-scale": MAP_SCALE_VALUES[zoomLevel],
+    "--contact-map-image": 'url("./images/contact/kakao-map-infact.png")',
   } as CSSProperties;
 
   return (

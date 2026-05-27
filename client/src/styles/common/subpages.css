@@ -28,7 +28,7 @@
       rgba(8, 13, 28, 0.26) 0%,
       rgba(8, 13, 28, 0.42) 100%
     ),
-    var(--page-intro-image, url("/images/sub/banner.jpg"));
+    var(--page-intro-image, none);
   background-size: cover;
   background-position: center 58%;
   background-repeat: no-repeat;

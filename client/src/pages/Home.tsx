@@ -5,8 +5,8 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { scrollToTopSoon } from "@/lib/scroll";
 import "@/styles/pages/home.css";
 
-const HERO_BG = "/images/home/hero.jpg";
-const EXPERIENCE_BG = "/images/home/service-03.jpg";
+const HERO_BG = "./images/home/hero.jpg";
+const EXPERIENCE_BG = "./images/home/service-03.jpg";
 
 const EXPERIENCE_CLIENTS = [
   "DONG-A ST",

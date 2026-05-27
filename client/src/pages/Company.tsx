@@ -17,7 +17,7 @@ export default function Company() {
           </div>
 
           <figure className="company-greeting__visual" aria-hidden="true">
-            <img src="/images/sub/intro.jpg" alt="" />
+            <img src="./images/sub/intro.jpg" alt="" />
           </figure>
 
           <div className="company-greeting__body">

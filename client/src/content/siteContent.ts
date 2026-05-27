@@ -14,7 +14,7 @@ export const heroContent = {
   ],
   primaryCta: { label: "문의하기", href: "/contact" },
   secondaryCta: { label: "서비스 보기", href: "/services" },
-  image: "/images/home/hero.jpg",
+  image: "./images/home/hero.jpg",
 };
 
 export const companySnapshot = {
@@ -61,7 +61,7 @@ export const serviceHighlights = {
       "운영체계, 규정·절차, 적합성 검토, 품질 시스템 정비를 프로젝트 목적에 맞게 구조화합니다.",
     scope: ["Project Master Plan", "QMS / SOP", "Qualification Review", "Inspection Support"],
     target: "제조 및 운영체계, 점검 대응, 규정 정비 프로젝트",
-    image: "/images/home/service-01.jpg",
+    image: "./images/home/service-01.jpg",
   },
   design: {
     title: "Conceptual Design",
@@ -69,7 +69,7 @@ export const serviceHighlights = {
       "프로젝트 초기 단계에서 요구사항, 동선, 공간 구성, 유틸리티 조건을 종합적으로 검토해 설계 방향을 정리합니다.",
     scope: ["Layout & Zoning", "Personnel / Material Flow", "Utilities Planning", "Conceptual Report"],
     target: "신규 제조소, 리모델링, 증설, 초기 기획 단계 프로젝트",
-    image: "/images/home/service-02.jpg",
+    image: "./images/home/service-02.jpg",
   },
   csv: {
     title: "CSV Consulting",
@@ -77,7 +77,7 @@ export const serviceHighlights = {
       "규제 시스템 검토, 검증 범위 정의, 문서 패키지, 데이터 무결성 관점을 연결해 수행합니다.",
     scope: ["VMP / URS / FS / DS / RTM", "IQ / OQ / PQ / VSR", "Audit Trail Review", "Access Control"],
     target: "ERP / MES / WMS / LIMS / QMS / EDMS / SCADA / PLC / BMS",
-    image: "/images/home/service-03.jpg",
+    image: "./images/home/service-03.jpg",
   },
 };
 

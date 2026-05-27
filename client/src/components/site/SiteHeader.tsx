@@ -104,12 +104,12 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
             type="button"
           >
             <img
-              src="/images/home/logo1.png"
+              src="./images/home/logo1.png"
               alt="INFACT"
               className="home-nav__logo--white"
             />
             <img
-              src="/images/home/logo1.png"
+              src="./images/home/logo1.png"
               alt="INFACT"
               className="home-nav__logo--dark"
             />

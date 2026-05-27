@@ -57,7 +57,7 @@
 .contact-map__stage {
   position: absolute;
   inset: 0;
-  background-image: url("/images/contact/kakao-map-infact.png");
+  background-image: var(--contact-map-image);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

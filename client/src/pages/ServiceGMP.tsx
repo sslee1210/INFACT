@@ -13,7 +13,7 @@ export default function ServiceGMP() {
         label="Service"
         title={content.title}
         description="운영체계, 절차, 적격성평가와 점검 대응 범위를 프로젝트 목적에 맞게 정리합니다."
-        image="/images/sub/business.jpg"
+        image="./images/sub/business.jpg"
       />
 
       <section className="section section--white">

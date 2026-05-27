@@ -1,7 +1,7 @@
 import { footerNavigation } from "@/content/navigation";
 import { scrollToTopSoon } from "@/lib/scroll";
 
-const FOOTER_LOGO = "/images/home/logo1.png";
+const FOOTER_LOGO = "./images/home/logo1.png";
 
 export function SiteFooter() {
   return (
