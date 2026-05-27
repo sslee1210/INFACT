@@ -388,10 +388,10 @@
   .home-nav__inner {
     grid-template-columns: auto minmax(0, 1fr) auto auto;
     height: clamp(54px, 14vw, 62px);
-    gap: clamp(10px, 2.8vw, 16px);
+    column-gap: 8px;
     width: 100%;
     padding-left: var(--site-edge-gutter);
-    padding-right: 14px;
+    padding-right: 2px;
   }
 
   .home-nav__logo--white,
@@ -409,14 +409,18 @@
 
   .home-nav__right {
     grid-column: 3;
+    grid-row: 1;
     display: flex;
+    justify-self: end;
+    align-self: center;
+    align-items: center;
     gap: 10px;
   }
 
   .home-nav__contact-btn {
-    min-height: 36px;
-    padding: 0 13px;
-    font-size: 0.78rem;
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.74rem;
   }
 
   .home-nav__today {
@@ -425,10 +429,12 @@
 
   .home-nav__mobile-toggle {
     grid-column: 4;
+    grid-row: 1;
     justify-self: end;
+    align-self: center;
     display: inline-flex;
-    width: 28px;
-    height: 38px;
+    width: 30px;
+    height: 34px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
