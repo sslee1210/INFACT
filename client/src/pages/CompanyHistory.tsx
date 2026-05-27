@@ -72,12 +72,6 @@ export default function CompanyHistory() {
 
   const activeIndexRef = useRef(0);
 
-  /* wheel 제스처 상태 */
-
-  const wheelGestureActiveRef = useRef(false);
-  const wheelDirectionRef = useRef<1 | -1 | 0>(0);
-  const wheelGestureEndTimerRef = useRef<number | null>(null);
-
   useEffect(() => {
     activeIndexRef.current = activeIndex;
   }, [activeIndex]);
@@ -113,57 +107,6 @@ export default function CompanyHistory() {
 
     items.forEach((item) => observer.observe(item));
     return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const onWheel = (event: WheelEvent) => {
-      if (Math.abs(event.deltaY) < 4) return;
-
-      const direction: 1 | -1 = event.deltaY > 0 ? 1 : -1;
-
-      /* 방향 바뀌면 새 제스처로 취급 */
-      if (wheelDirectionRef.current !== direction) {
-        wheelGestureActiveRef.current = false;
-      }
-
-      /* 제스처 종료 타이머 갱신 */
-      if (wheelGestureEndTimerRef.current != null) {
-        window.clearTimeout(wheelGestureEndTimerRef.current);
-      }
-
-      wheelGestureEndTimerRef.current = window.setTimeout(() => {
-        wheelGestureActiveRef.current = false;
-        wheelDirectionRef.current = 0;
-        wheelGestureEndTimerRef.current = null;
-      }, 220);
-
-      /* 이미 같은 방향 제스처 처리 중이면 추가 이동 금지 */
-      if (wheelGestureActiveRef.current) return;
-
-      const current = activeIndexRef.current;
-      const next = Math.max(
-        0,
-        Math.min(historyItems.length - 1, current + direction),
-      );
-
-      if (next !== current) {
-        activeIndexRef.current = next;
-        setActiveIndex(next);
-      }
-
-      wheelGestureActiveRef.current = true;
-      wheelDirectionRef.current = direction;
-    };
-
-    window.addEventListener("wheel", onWheel, { passive: true });
-
-    return () => {
-      window.removeEventListener("wheel", onWheel);
-      if (wheelGestureEndTimerRef.current != null) {
-        window.clearTimeout(wheelGestureEndTimerRef.current);
-        wheelGestureEndTimerRef.current = null;
-      }
-    };
   }, []);
 
   useEffect(() => {
@@ -222,13 +165,8 @@ export default function CompanyHistory() {
       }
 
       const firstCenter = centersInList[0];
-      const lastCenter = centersInList[centersInList.length - 1];
-      const progressTarget = clamp(
-        triggerLineAbs - listTopAbs,
-        firstCenter,
-        lastCenter,
-      );
-      const progressPx = Math.max(0, progressTarget - firstCenter);
+      const activeCenter = centersInList[nextIndex];
+      const progressPx = Math.max(0, activeCenter - firstCenter);
 
       listEl.style.setProperty("--history-progress-start", `${firstCenter}px`);
       listEl.style.setProperty("--history-progress-px", `${progressPx}px`);
