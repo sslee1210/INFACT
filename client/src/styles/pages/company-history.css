@@ -66,9 +66,7 @@
   transform: translateX(-50%);
   z-index: 1;
   border-radius: 999px;
-  transition:
-    top 0.12s linear,
-    height 0.12s linear;
+  transition: none;
 }
 
 .history-list__item {

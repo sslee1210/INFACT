@@ -73,6 +73,7 @@ export default function CompanyHistory() {
   const activeIndexRef = useRef(0);
 
   /* wheel 제스처 상태 */
+
   const wheelGestureActiveRef = useRef(false);
   const wheelDirectionRef = useRef<1 | -1 | 0>(0);
   const wheelGestureEndTimerRef = useRef<number | null>(null);
@@ -200,7 +201,7 @@ export default function CompanyHistory() {
         nextIndex = 0;
       } else if (atPageBottom) {
         nextIndex = centersAbs.length - 1;
-      } else if (!wheelGestureActiveRef.current) {
+      } else {
         let nearestIndex = 0;
         let nearestDistance = Math.abs(centersAbs[0] - triggerLineAbs);
 
@@ -212,14 +213,7 @@ export default function CompanyHistory() {
           }
         }
 
-        const current = activeIndexRef.current;
-        const delta = nearestIndex - current;
-
-        if (delta > 0) {
-          nextIndex = current + 1;
-        } else if (delta < 0) {
-          nextIndex = current - 1;
-        }
+        nextIndex = nearestIndex;
       }
 
       if (nextIndex !== activeIndexRef.current) {
@@ -228,8 +222,13 @@ export default function CompanyHistory() {
       }
 
       const firstCenter = centersInList[0];
-      const activeCenter = centersInList[activeIndexRef.current];
-      const progressPx = Math.max(0, activeCenter - firstCenter);
+      const lastCenter = centersInList[centersInList.length - 1];
+      const progressTarget = clamp(
+        triggerLineAbs - listTopAbs,
+        firstCenter,
+        lastCenter,
+      );
+      const progressPx = Math.max(0, progressTarget - firstCenter);
 
       listEl.style.setProperty("--history-progress-start", `${firstCenter}px`);
       listEl.style.setProperty("--history-progress-px", `${progressPx}px`);
