@@ -34,7 +34,7 @@
   background: #0d1b2d;
   cursor: default;
 
-  transition: grid-template-columns 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: grid-template-columns 0.62s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* hover 확장 - 세 카드 모두 동일한 방식 */
@@ -76,8 +76,8 @@
   opacity: 1;
 
   transition:
-    opacity 0.36s ease,
-    filter 0.36s ease;
+    opacity 0.43s ease,
+    filter 0.43s ease;
 }
 
 .service-card:last-child {
@@ -130,12 +130,12 @@
     object-position transition 제거.
     hover 때 이미지가 옆으로 밀리는 듯한 슬라이딩 현상 방지.
   */
-  filter: grayscale(0.16) saturate(0.72) brightness(0.92) contrast(0.95);
+  filter: none;
   transform: scale(1.025);
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.42s ease;
+    transform 0.54s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
 }
 
 /* 카드별 이미지 기준점 - hover 시에도 유지 */
@@ -159,20 +159,20 @@
   background:
     linear-gradient(
       180deg,
-      rgba(215, 230, 242, 0.2) 0%,
-      rgba(63, 91, 116, 0.33) 42%,
-      rgba(10, 24, 47, 0.86) 100%
+      rgba(215, 230, 242, 0.1) 0%,
+      rgba(63, 91, 116, 0.14) 42%,
+      rgba(10, 24, 47, 0.46) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(6, 19, 38, 0.42) 0%,
-      rgba(44, 75, 104, 0.2) 48%,
-      rgba(210, 226, 238, 0.08) 100%
+      rgba(6, 19, 38, 0.14) 0%,
+      rgba(44, 75, 104, 0.08) 48%,
+      rgba(210, 226, 238, 0.04) 100%
     );
 
   transition:
-    opacity 0.42s ease,
-    background 0.42s ease;
+    opacity 0.5s ease,
+    background 0.5s ease;
 }
 
 .service-card__content {
@@ -209,7 +209,7 @@
   letter-spacing: -0.01em;
   text-transform: uppercase;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.36);
-  transition: opacity 0.32s ease;
+  transition: opacity 0.38s ease;
 }
 
 .service-card__title {
@@ -223,7 +223,7 @@
   text-shadow:
     0 2px 12px rgba(0, 0, 0, 0.45),
     0 10px 28px rgba(0, 0, 0, 0.32);
-  transition: opacity 0.32s ease;
+  transition: opacity 0.38s ease;
 }
 
 .service-card__body {
@@ -248,10 +248,10 @@
   opacity: 0;
   transform: translateY(12px);
   transition:
-    opacity 0.28s ease,
-    max-height 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-    padding-top 0.34s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.34s ease,
+    max-height 0.41s cubic-bezier(0.22, 1, 0.36, 1),
+    padding-top 0.41s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.41s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* hover 시 선택되지 않은 카드 - 과하게 어둡지 않게 */
@@ -272,7 +272,7 @@
 .service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__media img,
 .service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__media img,
 .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__media img {
-  filter: grayscale(0.22) saturate(0.62) brightness(0.82) contrast(0.94);
+  filter: none;
   transform: scale(1.025);
 }
 
@@ -283,15 +283,15 @@
   background:
     linear-gradient(
       180deg,
-      rgba(18, 33, 54, 0.18) 0%,
-      rgba(15, 31, 55, 0.32) 45%,
-      rgba(7, 17, 34, 0.72) 100%
+      rgba(215, 230, 242, 0.1) 0%,
+      rgba(63, 91, 116, 0.14) 42%,
+      rgba(10, 24, 47, 0.46) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(8, 20, 38, 0.26) 0%,
-      rgba(34, 58, 84, 0.13) 48%,
-      rgba(210, 226, 238, 0.05) 100%
+      rgba(6, 19, 38, 0.14) 0%,
+      rgba(44, 75, 104, 0.08) 48%,
+      rgba(210, 226, 238, 0.04) 100%
     );
 }
 
@@ -311,7 +311,7 @@
 .service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__media img,
 .service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__media img,
 .service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__media img {
-  filter: grayscale(0.08) saturate(0.82) brightness(0.62) contrast(1.04);
+  filter: brightness(0.84) contrast(1.02);
   transform: scale(1.01);
 }
 
@@ -322,15 +322,15 @@
   background:
     linear-gradient(
       180deg,
-      rgba(6, 13, 28, 0.18) 0%,
-      rgba(7, 17, 34, 0.44) 38%,
-      rgba(5, 13, 28, 0.86) 100%
+      rgba(6, 13, 28, 0.08) 0%,
+      rgba(7, 17, 34, 0.24) 38%,
+      rgba(5, 13, 28, 0.6) 100%
     ),
     linear-gradient(
       90deg,
-      rgba(5, 12, 24, 0.48) 0%,
-      rgba(11, 25, 47, 0.2) 50%,
-      rgba(5, 12, 24, 0.38) 100%
+      rgba(5, 12, 24, 0.22) 0%,
+      rgba(11, 25, 47, 0.12) 50%,
+      rgba(5, 12, 24, 0.2) 100%
     );
 }
 
@@ -363,7 +363,7 @@
 }
 
 .service-card:focus-visible .service-card__media img {
-  filter: grayscale(0.08) saturate(0.82) brightness(0.62) contrast(1.04);
+  filter: brightness(0.84) contrast(1.02);
   transform: scale(1.01);
 }
 
