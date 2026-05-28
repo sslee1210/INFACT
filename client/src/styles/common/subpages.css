@@ -381,3 +381,35 @@
   max-width: var(--fluid-content-wide);
   margin-bottom: var(--fluid-gap-md);
 }
+
+@media (max-width: 720px) {
+  .page-subnav-wrap {
+    overflow: hidden;
+  }
+
+  .page-subnav-row--with-breadcrumb {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .page-subnav {
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .page-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .page-subnav button {
+    flex: 0 0 auto;
+  }
+
+  .page-breadcrumb {
+    display: none;
+  }
+}
