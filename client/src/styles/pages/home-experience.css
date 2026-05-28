@@ -246,25 +246,14 @@
   text-align: left;
   text-decoration: none;
 
-  color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    var(--cta-hover-color) 0%,
-    var(--cta-hover-color) 50%,
-    var(--cta-text-default) 50%,
-    var(--cta-text-default) 100%
-  );
-  background-size: 200% 100%;
-  background-position: 100% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--cta-text-default);
+  -webkit-text-fill-color: currentColor;
 
   box-shadow: none;
 
   transition:
     transform 0.22s ease,
-    background-position 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+    color 0.24s ease;
 }
 
 .home-cta-banner__button + .home-cta-banner__button {
@@ -277,56 +266,38 @@
   width: var(--cta-label-width);
   text-align: left;
   white-space: nowrap;
-  background: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
 }
 
-/*
-  아래줄 + 사선 통합 SVG 라인
-  M0 15 H100 L94 1
-  - 수평선이 텍스트보다 조금만 길게 감
-  - 거기서 왼쪽 위로 약 50도 꺾임 (\ 방향)
-  - 기본: 흰색
-  - hover: 왼쪽 -> 오른쪽 블루
-*/
 .home-cta-banner__button-label::before,
 .home-cta-banner__button-label::after {
   content: "";
   position: absolute;
-  left: auto;
   right: 0;
   bottom: calc(-1 * (var(--cta-line-height) + var(--cta-line-bottom)));
-  width: 100%;
-  height: var(--cta-line-height);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  height: 1.35px;
+  border-radius: 999px;
+  background: currentColor;
   pointer-events: none;
 }
 
 .home-cta-banner__button-label::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 16' preserveAspectRatio='none'%3E%3Cpath d='M0 15 H100 L94 1' fill='none' stroke='white' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  width: 100%;
   opacity: 0.94;
 }
 
 .home-cta-banner__button-label::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 16' preserveAspectRatio='none'%3E%3Cpath d='M0 15 H100 L94 1' fill='none' stroke='%236570d2' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+  width: clamp(14px, 1.1vw, 18px);
+  transform: translateY(-6px) rotate(-62deg);
+  transform-origin: right center;
+  opacity: 0.94;
 }
 
 .home-cta-banner__button:hover,
 .home-cta-banner__button:focus-visible {
   transform: translateY(-1px);
-  background-position: 0 0;
-}
-
-.home-cta-banner__button:hover .home-cta-banner__button-label::after,
-.home-cta-banner__button:focus-visible .home-cta-banner__button-label::after {
-  clip-path: inset(0 0 0 0);
+  color: var(--cta-hover-color);
 }
 
 /* 기존 split CTA 잔여 스타일 방지 */
