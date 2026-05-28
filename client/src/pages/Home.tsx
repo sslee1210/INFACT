@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { ServiceShowcase } from "@/components/site/ServiceShowcase";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -47,7 +47,6 @@ type CountUpProps = {
 
 function CountUpValue({ target, suffix = "", format = false }: CountUpProps) {
   const ref = useRef<HTMLElement | null>(null);
-  const [value, setValue] = useState(0);
 
   useEffect(() => {
     const element = ref.current;
@@ -63,7 +62,9 @@ function CountUpValue({ target, suffix = "", format = false }: CountUpProps) {
       const tick = (now: number) => {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        setValue(Math.round(target * eased));
+        const nextValue = Math.round(target * eased);
+        const text = format ? nextValue.toLocaleString("en-US") : String(nextValue);
+        element.textContent = `${text}${suffix}`;
 
         if (progress < 1) {
           frameId = requestAnimationFrame(tick);
@@ -89,16 +90,9 @@ function CountUpValue({ target, suffix = "", format = false }: CountUpProps) {
       observer.disconnect();
       cancelAnimationFrame(frameId);
     };
-  }, [target]);
+  }, [format, suffix, target]);
 
-  const text = format ? value.toLocaleString("en-US") : String(value);
-
-  return (
-    <strong ref={ref}>
-      {text}
-      {suffix}
-    </strong>
-  );
+  return <strong ref={ref}>{format ? "0" : 0}{suffix}</strong>;
 }
 
 export default function Home() {

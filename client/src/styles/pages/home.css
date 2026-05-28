@@ -49,6 +49,28 @@
   width: 100%;
 }
 
+@supports (content-visibility: auto) {
+  .about-blend-section,
+  .client-logo-band,
+  .service-immersive-section,
+  .home-cta-banner {
+    content-visibility: auto;
+  }
+
+  .about-blend-section,
+  .service-immersive-section {
+    contain-intrinsic-size: auto 720px;
+  }
+
+  .client-logo-band {
+    contain-intrinsic-size: auto 150px;
+  }
+
+  .home-cta-banner {
+    contain-intrinsic-size: auto 390px;
+  }
+}
+
 .about-blend-button,
 .experience-showcase__button,
 .contact-banner__button--primary {

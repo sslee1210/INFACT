@@ -142,9 +142,11 @@ export function useServiceRail({ itemCount }: UseServiceRailOptions) {
   };
 
   useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
     const onWheel = (event: globalThis.WheelEvent) => {
-      const section = sectionRef.current;
-      if (!section || window.innerWidth <= 860) return;
+      if (window.innerWidth <= 860) return;
       if (Math.abs(event.deltaY) < 8) return;
       if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
 
@@ -214,10 +216,10 @@ export function useServiceRail({ itemCount }: UseServiceRailOptions) {
       scrollToIndex(currentIndex - 1);
     };
 
-    window.addEventListener("wheel", onWheel, { passive: false });
+    section.addEventListener("wheel", onWheel, { passive: false });
 
     return () => {
-      window.removeEventListener("wheel", onWheel);
+      section.removeEventListener("wheel", onWheel);
     };
   }, [itemCount, lockWheel, scrollToIndex]);
 

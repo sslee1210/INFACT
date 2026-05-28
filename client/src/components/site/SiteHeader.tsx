@@ -16,6 +16,12 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const todayCount = useTodayVisitor();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scrolledRef = useRef(scrolled);
+  const scrollFrameRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    scrolledRef.current = scrolled;
+  }, [scrolled]);
 
   useEffect(() => {
     if (!transparentOnTop) {
@@ -23,10 +29,32 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
       return;
     }
 
-    const handleScroll = () => setScrolled(window.scrollY > 24);
+    const updateScrolled = () => {
+      scrollFrameRef.current = null;
+      const nextScrolled = window.scrollY > 24;
+
+      if (nextScrolled === scrolledRef.current) return;
+
+      scrolledRef.current = nextScrolled;
+      setScrolled(nextScrolled);
+    };
+
+    const handleScroll = () => {
+      if (scrollFrameRef.current !== null) return;
+      scrollFrameRef.current = window.requestAnimationFrame(updateScrolled);
+    };
+
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+
+      if (scrollFrameRef.current !== null) {
+        window.cancelAnimationFrame(scrollFrameRef.current);
+        scrollFrameRef.current = null;
+      }
+    };
   }, [transparentOnTop]);
 
   useEffect(() => {

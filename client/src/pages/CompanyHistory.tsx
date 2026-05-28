@@ -84,18 +84,20 @@ export default function CompanyHistory() {
       (entries) => {
         setVisibleMap((prev) => {
           const next = [...prev];
+          let changed = false;
 
           entries.forEach((entry) => {
             const index = Number(
               (entry.target as HTMLElement).dataset.historyIndex ?? "-1",
             );
 
-            if (index >= 0 && entry.isIntersecting) {
+            if (index >= 0 && entry.isIntersecting && !next[index]) {
               next[index] = true;
+              changed = true;
             }
           });
 
-          return next;
+          return changed ? next : prev;
         });
       },
       {
@@ -115,6 +117,7 @@ export default function CompanyHistory() {
     if (!listEl || !items.length) return;
 
     let ticking = false;
+    let frameId = 0;
 
     const clamp = (value: number, min: number, max: number) =>
       Math.min(max, Math.max(min, value));
@@ -190,7 +193,7 @@ export default function CompanyHistory() {
     const onScroll = () => {
       if (ticking) return;
       ticking = true;
-      window.requestAnimationFrame(update);
+      frameId = window.requestAnimationFrame(update);
     };
 
     update();
@@ -200,6 +203,7 @@ export default function CompanyHistory() {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      window.cancelAnimationFrame(frameId);
     };
   }, []);
 
