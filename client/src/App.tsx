@@ -12,7 +12,6 @@ import ReferencesGMP from "./pages/ReferencesGMP";
 import ServiceCSV from "./pages/ServiceCSV";
 import ServiceDesign from "./pages/ServiceDesign";
 import ServiceGMP from "./pages/ServiceGMP";
-import Services from "./pages/Services";
 
 export default function App() {
   return (
@@ -23,7 +22,7 @@ export default function App() {
         <Route path="/company/history" component={CompanyHistory} />
         <Route path="/company/organization" component={CompanyOrganization} />
 
-        <Route path="/services" component={Services} />
+        <Route path="/services" component={ServiceDesign} />
         <Route path="/service-design" component={ServiceDesign} />
         <Route path="/service-gmp" component={ServiceGMP} />
         <Route path="/service-csv" component={ServiceCSV} />

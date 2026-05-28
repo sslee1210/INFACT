@@ -18,10 +18,9 @@ export const siteNavigation: SiteNavigationItem[] = [
   },
   {
     label: "사업안내",
-    href: "/services",
+    href: "/service-design",
     match: ["/services", "/service-design", "/service-gmp", "/service-csv"],
     children: [
-      { label: "사업안내", href: "/services" },
       { label: "개념설계", href: "/service-design" },
       { label: "GMP Consulting", href: "/service-gmp" },
       { label: "CSV Consulting", href: "/service-csv" },
@@ -41,7 +40,7 @@ export const siteNavigation: SiteNavigationItem[] = [
 
 export const footerNavigation = [
   { label: "회사 소개", href: "/company" },
-  { label: "서비스", href: "/services" },
+  { label: "서비스", href: "/service-design" },
   { label: "수행 실적", href: "/references-design" },
   { label: "문의하기", href: "/contact" },
 ];
