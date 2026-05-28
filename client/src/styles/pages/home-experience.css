@@ -276,22 +276,24 @@
   position: absolute;
   right: 0;
   bottom: calc(-1 * (var(--cta-line-height) + var(--cta-line-bottom)));
-  height: 1.35px;
-  border-radius: 999px;
+  width: 100%;
+  height: var(--cta-line-height);
   background: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 16' preserveAspectRatio='none'%3E%3Cpath d='M0 15 H100 L94 1' fill='none' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 16' preserveAspectRatio='none'%3E%3Cpath d='M0 15 H100 L94 1' fill='none' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   pointer-events: none;
 }
 
 .home-cta-banner__button-label::before {
-  width: 100%;
   opacity: 0.94;
 }
 
 .home-cta-banner__button-label::after {
-  width: clamp(14px, 1.1vw, 18px);
-  transform: translateY(-6px) rotate(-62deg);
-  transform-origin: right center;
-  opacity: 0.94;
+  content: none;
 }
 
 .home-cta-banner__button:hover,
