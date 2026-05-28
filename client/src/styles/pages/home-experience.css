@@ -44,7 +44,6 @@
 
 .home-cta-banner {
   --cta-desktop-height: 390px;
-  --cta-content-width: 1520px;
 
   position: relative;
   isolation: isolate;
@@ -137,7 +136,7 @@
   align-items: center;
   align-content: center;
 
-  width: min(var(--site-content-width), var(--cta-content-width));
+  width: var(--site-content-width);
   min-height: inherit;
   margin: 0 auto;
   padding: clamp(40px, 3.4vw, 56px) 0;
@@ -328,8 +327,6 @@
 /* 16인치급 데스크톱(1728px)보다 큰 화면에서도 내부 구도는 유지하고 배경은 전체 폭 사용 */
 @media (min-width: 1729px) {
   .home-cta-banner {
-    --cta-content-width: 1296px;
-
     margin-top: 70px;
   }
 
