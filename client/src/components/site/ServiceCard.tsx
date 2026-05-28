@@ -23,7 +23,10 @@ export function ServiceCard({ panel, index: _index, onHover, onNavigate }: Servi
 
       <div className="service-card__content">
         <p className="service-card__label">{panel.label}</p>
-        <h3 className="service-card__title">{panel.title}</h3>
+        <div className="service-card__body">
+          <h3 className="service-card__title">{panel.title}</h3>
+          <p className="service-card__description">{panel.description}</p>
+        </div>
       </div>
     </a>
   );
