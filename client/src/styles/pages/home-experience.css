@@ -79,6 +79,13 @@
   box-shadow: none;
 }
 
+@media (max-width: 860px) {
+  .client-logo-band,
+  .home-cta-banner {
+    overflow: clip;
+  }
+}
+
 .home-cta-banner::before {
   content: "";
   position: absolute;

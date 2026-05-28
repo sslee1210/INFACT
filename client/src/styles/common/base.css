@@ -70,6 +70,26 @@ img {
   width: 100%;
 }
 
+@media (max-width: 860px) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    overflow-y: auto;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .home-shell,
+  .home-main,
+  .home-main *,
+  .site-app,
+  .site-main {
+    touch-action: pan-y;
+  }
+}
+
 .home-shell {
   min-height: 100vh;
   background: var(--home-bg);

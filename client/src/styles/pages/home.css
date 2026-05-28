@@ -98,7 +98,8 @@
 
 @media (max-width: 860px) {
   .home-main {
-    overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
   }
 
   .hero.home-focus-section,

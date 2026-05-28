@@ -224,6 +224,7 @@ export function useServiceRail({ itemCount }: UseServiceRailOptions) {
   const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
     const rail = railRef.current;
     if (!rail || event.button !== 0) return;
+    if (event.pointerType === "touch" || window.innerWidth <= 860) return;
     if ((event.target as HTMLElement).closest("a, button")) return;
 
     dragStartXRef.current = event.clientX;

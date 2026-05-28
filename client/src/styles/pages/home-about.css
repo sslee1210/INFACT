@@ -240,6 +240,14 @@
   background: none;
 }
 
+@media (max-width: 860px) {
+  .about-blend-section,
+  .about-blend-metric,
+  .about-blend-visual {
+    overflow: clip;
+  }
+}
+
 .about-blend-image {
   --about-image-nudge: 0px;
   position: absolute;

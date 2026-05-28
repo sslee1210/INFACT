@@ -33,6 +33,7 @@
     gap: 12px;
     margin: 0 auto;
     transform: none;
+    touch-action: pan-y;
   }
 
   .service-card {
@@ -47,6 +48,7 @@
     min-height: 124px;
     grid-template-columns: minmax(110px, 36%) minmax(0, 1fr);
     grid-template-rows: 1fr;
+    touch-action: pan-y;
   }
 
   .service-card-rail:hover .service-card,

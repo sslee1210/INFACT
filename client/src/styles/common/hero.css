@@ -190,3 +190,26 @@
     transform: scale(1.04);
   }
 }
+
+@media (max-width: 860px) {
+  .hero,
+  .hero__inner {
+    touch-action: pan-y;
+  }
+
+  .hero {
+    overflow: clip;
+    pointer-events: none;
+  }
+
+  .hero__content,
+  .hero__title,
+  .hero__subtitle {
+    pointer-events: none;
+  }
+
+  .hero__scroll-cue {
+    pointer-events: none;
+    touch-action: pan-y;
+  }
+}

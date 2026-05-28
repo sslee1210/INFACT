@@ -5,6 +5,12 @@
   background: var(--brand-surface);
 }
 
+@media (max-width: 860px) {
+  .contact-banner {
+    overflow: clip;
+  }
+}
+
 .contact-banner__inner {
   position: relative;
   z-index: 1;
