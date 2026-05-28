@@ -218,8 +218,8 @@
 }
 
 .home-cta-banner__button {
-  --cta-hover-color: #6570d2;
-  --cta-text-default: #ffffff;
+  --cta-hover-color: #0f2238;
+  --cta-text-default: #20384f;
   --cta-line-height: clamp(12px, 0.9vw, 16px);
   --cta-line-bottom: clamp(7px, 0.58vw, 10px);
   --cta-label-width: 6.9em;
@@ -243,6 +243,7 @@
   letter-spacing: -0.06em;
   text-align: left;
   text-decoration: none;
+  text-shadow: 0 1px 16px rgba(255, 255, 255, 0.42);
 
   color: var(--cta-text-default);
   -webkit-text-fill-color: currentColor;
