@@ -43,7 +43,6 @@
 }
 
 .home-cta-banner {
-  --cta-desktop-width: 1920px;
   --cta-desktop-height: 390px;
   --cta-content-width: 1520px;
 
@@ -51,9 +50,9 @@
   isolation: isolate;
   overflow: hidden;
 
-  width: min(100vw, var(--cta-desktop-width));
+  width: 100vw;
   min-height: clamp(320px, 22vw, var(--cta-desktop-height));
-  margin: clamp(46px, 4vw, 70px) auto 0;
+  margin: clamp(46px, 4vw, 70px) calc(50% - 50vw) 0;
 
   background-image:
     linear-gradient(
@@ -314,7 +313,7 @@
 /* 1280px 이상에서는 16인치 기준 배너 비율 고정 */
 @media (min-width: 1280px) {
   .home-cta-banner {
-    width: min(100vw, var(--cta-desktop-width));
+    width: 100vw;
     min-height: var(--cta-desktop-height);
     height: var(--cta-desktop-height);
   }
@@ -326,10 +325,9 @@
   }
 }
 
-/* 16인치급 데스크톱(1728px)보다 큰 화면에서도 16인치 기준 구도를 유지 */
+/* 16인치급 데스크톱(1728px)보다 큰 화면에서도 내부 구도는 유지하고 배경은 전체 폭 사용 */
 @media (min-width: 1729px) {
   .home-cta-banner {
-    --cta-desktop-width: 1728px;
     --cta-content-width: 1296px;
 
     margin-top: 70px;
