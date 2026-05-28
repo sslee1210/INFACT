@@ -220,9 +220,9 @@
 .home-cta-banner__button {
   --cta-hover-color: #385b70;
   --cta-text-default: #587487;
-  --cta-arrow-extension: clamp(12px, 1vw, 18px);
+  --cta-label-width: 6.9em;
   --cta-line-height: clamp(12px, 0.9vw, 16px);
-  --cta-line-bottom: clamp(7px, 0.58vw, 10px);
+  --cta-line-bottom: clamp(2px, 0.24vw, 4px);
 
   position: relative;
   display: inline-flex;
@@ -262,7 +262,7 @@
 .home-cta-banner__button-label {
   position: relative;
   display: inline-block;
-  width: max-content;
+  width: var(--cta-label-width);
   text-align: left;
   white-space: nowrap;
   color: inherit;
@@ -273,9 +273,9 @@
 .home-cta-banner__button-label::after {
   content: "";
   position: absolute;
-  right: calc(-1 * var(--cta-arrow-extension));
+  right: 0;
   bottom: calc(-1 * (var(--cta-line-height) + var(--cta-line-bottom)));
-  width: calc(100% + var(--cta-arrow-extension));
+  width: 100%;
   height: var(--cta-line-height);
   background: currentColor;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 16' preserveAspectRatio='none'%3E%3Cpath d='M0 15 H100 L94 1' fill='none' stroke='black' stroke-width='1.35' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
@@ -362,7 +362,7 @@
 
   .home-cta-banner__button {
     --cta-line-height: 16px;
-    --cta-line-bottom: 10px;
+    --cta-line-bottom: 4px;
 
     min-height: 78px;
     padding-bottom: 20px;
