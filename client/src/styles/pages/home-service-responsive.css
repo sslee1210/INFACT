@@ -25,59 +25,12 @@
     font-size: clamp(1.58rem, 7vw, 2rem);
   }
 
-  .service-card-rail {
-    display: grid;
-    left: auto;
-    width: 100%;
-    height: auto;
-    gap: 12px;
-    margin: 0 auto;
-    transform: none;
-    touch-action: pan-y;
-  }
-
-  .service-card {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: auto;
-    border-right: 0;
-    border-bottom: 0;
-    min-height: 124px;
-    grid-template-columns: minmax(110px, 36%) minmax(0, 1fr);
-    grid-template-rows: 1fr;
-    touch-action: pan-y;
-  }
-
-  .service-card-rail:hover .service-card,
-  .service-card-rail:focus-within .service-card,
-  .service-card-rail:hover .service-card:hover,
-  .service-card-rail:focus-within .service-card:focus-visible,
-  .service-card-rail.is-hovering .service-card,
-  .service-card-rail.is-hovering-design .service-card,
-  .service-card-rail.is-hovering-gmp .service-card,
-  .service-card-rail.is-hovering-csv .service-card {
-    left: auto;
-    width: 100%;
-  }
-
   .service-card:not(:first-child) .service-card__content {
     padding-left: clamp(20px, 1.7vw, 28px);
-  }
-
-  .service-card:last-child {
-    border-bottom: 0;
   }
 }
 
 @media (max-width: 640px) {
-  .service-card {
-    min-height: 110px;
-    grid-template-columns: 104px minmax(0, 1fr);
-  }
-
   .service-card__content {
     padding: 16px;
   }

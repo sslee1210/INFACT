@@ -107,15 +107,11 @@
 }
 
 .hero.home-focus-section {
-  min-height: 100vh;
-  min-height: 100svh;
-  height: 100vh;
-  height: 100svh;
+  min-height: 100dvh;
 }
 
 .hero.home-focus-section .hero__inner {
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 100dvh;
 }
 
 @media (max-width: 860px) {
@@ -126,7 +122,6 @@
 
   .hero.home-focus-section,
   .hero.home-focus-section .hero__inner {
-    height: auto;
     min-height: 86svh;
   }
 
