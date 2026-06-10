@@ -14,8 +14,8 @@ export function SiteFooter() {
             </a>
 
             <p className="site-footer__brand-copy">
-              GMP Consulting, Conceptual Design, CSV Consulting을 기반으로
-              제약·바이오 프로젝트의 실무 방향을 함께 설계합니다.
+              현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한
+              계획으로 이어지도록 지원합니다.
             </p>
 
             <div className="site-footer__company-meta">
