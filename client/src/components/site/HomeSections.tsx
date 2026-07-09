@@ -58,8 +58,17 @@ export function HomeHeroSection() {
     >
       <div className="home-container hero__inner">
         <div className="hero__content fade-in">
+          <p className="hero__eyebrow">Pharmaceutical CSV · GxP Compliance · Validation Evidence</p>
           <h1 className="hero__title">{homeHero.title}</h1>
           <p className="hero__subtitle">{homeHero.description}</p>
+
+          <div className="hero__proof" aria-label="인팩트 주요 수행 범위">
+            {homeHero.proofPoints.map((point) => (
+              <span className="hero__proof-item" key={point}>
+                {point}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -102,6 +111,15 @@ export function HomeAboutSection() {
                     />
                     <span>{metric.label}</span>
                   </div>
+                ))}
+              </div>
+
+              <div className="about-blend-methods" aria-label="인팩트 검증 접근 방식">
+                {homeAbout.methodCards.map((item) => (
+                  <article className="about-blend-method" key={item.title}>
+                    <strong>{item.title}</strong>
+                    <p>{item.description}</p>
+                  </article>
                 ))}
               </div>
             </div>
