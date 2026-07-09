@@ -22,10 +22,25 @@ export function ServiceCard({ panel, index: _index, onHover, onNavigate }: Servi
       </div>
 
       <div className="service-card__content">
-        <p className="service-card__label">{panel.label}</p>
+        <div className="service-card__header">
+          <p className="service-card__label">{panel.label}</p>
+          <span className="service-card__stage">{panel.stage}</span>
+        </div>
+
         <div className="service-card__body">
           <h3 className="service-card__title">{panel.title}</h3>
           <p className="service-card__description">{panel.description}</p>
+
+          <dl className="service-card__facts">
+            <div>
+              <dt>Phase</dt>
+              <dd>{panel.phase}</dd>
+            </div>
+            <div>
+              <dt>Output</dt>
+              <dd>{panel.output}</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </a>
