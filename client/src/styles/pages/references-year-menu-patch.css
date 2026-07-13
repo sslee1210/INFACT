@@ -1,0 +1,47 @@
+/* =========================================================
+   연도별 서브 메뉴바 가독성 개선
+   - "프로젝트 보기" 제거 대응
+   - 연도 글자 크기 확대
+   ========================================================= */
+
+.csv-year-menu button {
+  min-height: 66px;
+  align-content: center;
+  justify-items: start;
+  padding: 14px 22px;
+}
+
+.csv-year-menu button > span {
+  font-size: 1.22rem !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.csv-year-menu button > small {
+  display: none !important;
+}
+
+.csv-year-menu button:hover,
+.csv-year-menu button:focus-visible,
+.csv-year-menu button.is-active {
+  padding-left: 27px;
+}
+
+@media (max-width: 960px) {
+  .csv-year-menu button {
+    min-height: 58px;
+    padding: 12px;
+    justify-items: center;
+  }
+
+  .csv-year-menu button > span {
+    font-size: 1.05rem !important;
+  }
+
+  .csv-year-menu button:hover,
+  .csv-year-menu button:focus-visible,
+  .csv-year-menu button.is-active {
+    padding-left: 12px;
+  }
+}

@@ -135,6 +135,11 @@ function ClientLogo({ client, logo }: { client: string; logo: string }) {
 export default function ReferencesCSV() {
   const years = useMemo(() => csvReferenceYears.map((section) => section.year), []);
   const [selectedYear, setSelectedYear] = useState(years[0]);
+  const [yearStartIndex, setYearStartIndex] = useState(0);
+
+  const visibleYears = years.slice(yearStartIndex, yearStartIndex + 4);
+  const canMovePrevious = yearStartIndex > 0;
+  const canMoveNext = yearStartIndex + 4 < years.length;
 
   const selectedSection =
     csvReferenceYears.find((section) => section.year === selectedYear) ??
@@ -161,9 +166,6 @@ export default function ReferencesCSV() {
         <div className="site-shell csv-year-page__intro">
           <p className="section-label">CSV References</p>
           <h2 className="section-title">연도별 수행 프로젝트</h2>
-          <p className="body-copy">
-            오른쪽 연도 메뉴를 선택하면 해당 연도에 수행한 고객사와 시스템만 표시됩니다.
-          </p>
         </div>
 
         <div className="site-shell csv-year-layout">
@@ -183,6 +185,7 @@ export default function ReferencesCSV() {
                   </div>
 
                   <div className="csv-year-card__body">
+                    <h3>{reference.client}</h3>
                     <ul>
                       {reference.systems.map((system) => (
                         <li key={system}>{system}</li>
@@ -201,29 +204,46 @@ export default function ReferencesCSV() {
             </div>
 
             <nav>
-              {years.map((year) => (
+              {visibleYears.map((year) => (
                 <button
                   key={year}
                   type="button"
                   className={selectedYear === year ? "is-active" : ""}
                   aria-current={selectedYear === year ? "page" : undefined}
-                  onClick={() => {
-                    setSelectedYear(year);
-                    window.scrollTo({
-                      top: document.querySelector(".csv-year-page__intro")?.getBoundingClientRect().top
-                        ? window.scrollY +
-                          (document.querySelector(".csv-year-page__intro")?.getBoundingClientRect().top ?? 0) -
-                          120
-                        : window.scrollY,
-                      behavior: "smooth",
-                    });
-                  }}
+                  onClick={() => setSelectedYear(year)}
                 >
                   <span>{year}</span>
-                  <small>프로젝트 보기</small>
                 </button>
               ))}
             </nav>
+
+            <div className="csv-year-menu__controls">
+              <button
+                type="button"
+                className="csv-year-menu__arrow"
+                aria-label="이전 연도 보기"
+                disabled={!canMovePrevious}
+                onClick={() =>
+                  setYearStartIndex((current) => Math.max(0, current - 4))
+                }
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+
+              <button
+                type="button"
+                className="csv-year-menu__arrow"
+                aria-label="다음 연도 보기"
+                disabled={!canMoveNext}
+                onClick={() =>
+                  setYearStartIndex((current) =>
+                    Math.min(years.length - 4, current + 4),
+                  )
+                }
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </aside>
         </div>
       </section>

@@ -1,0 +1,27 @@
+스크린샷을 보면 개념설계와 GMP는 기존 ReferencesDesign.tsx / ReferencesGMP.tsx가 그대로 실행되고 있습니다.
+즉, 이전 수정 파일이 실제 프로젝트 경로에 덮어써지지 않은 상태입니다.
+
+이번 ZIP을 C:\Users\sslee\Desktop\INFACT 폴더에 바로 압축 해제하세요.
+'같은 이름의 파일을 바꾸시겠습니까?'가 나오면 모두 바꾸기를 선택해야 합니다.
+
+반드시 변경되어야 하는 파일
+- client/src/pages/ReferencesDesign.tsx
+- client/src/pages/ReferencesGMP.tsx
+- client/src/components/site/ReferenceYearTabs.tsx
+- client/src/content/references/conceptualDesignReferences.ts
+- client/src/content/references/gmpReferences.ts
+- client/src/styles/pages/references-csv-year-tabs.css
+- client/src/styles/pages/references-design-gmp-empty.css
+
+확인 명령
+cd /c/Users/sslee/Desktop/INFACT
+grep -n "ReferenceYearTabs" client/src/pages/ReferencesDesign.tsx
+grep -n "ReferenceYearTabs" client/src/pages/ReferencesGMP.tsx
+
+두 명령 모두 결과가 나와야 정상입니다.
+
+이후
+corepack pnpm build
+corepack pnpm dev
+
+브라우저에서 Ctrl + Shift + R

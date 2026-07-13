@@ -1,0 +1,16 @@
+.csv-year-empty {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  padding: 40px;
+  border: 1px solid var(--home-border);
+  background: #fff;
+  text-align: center;
+}
+
+.csv-year-empty p {
+  margin: 0;
+  color: var(--home-text-soft);
+  font-size: 0.96rem;
+  line-height: 1.8;
+}

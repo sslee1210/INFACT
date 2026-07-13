@@ -28,6 +28,9 @@ export default function ReferencesDesign() {
         <div className="site-shell csv-year-page__intro">
           <p className="section-label">Conceptual Design References</p>
           <h2 className="section-title">연도별 수행 프로젝트</h2>
+          <p className="body-copy">
+            오른쪽 연도 메뉴를 선택하면 해당 연도에 수행한 고객사와 프로젝트만 표시됩니다.
+          </p>
         </div>
 
         <ReferenceYearTabs
