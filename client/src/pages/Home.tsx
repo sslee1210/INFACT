@@ -1,7 +1,8 @@
 import {
-  ClientLogoBand,
   HomeAboutSection,
-  HomeExperienceCtaSection,
+  HomeCompanyIntroSection,
+  HomeContactSection,
+  HomeExperienceSection,
   HomeHeroSection,
 } from "@/components/site/HomeSections";
 import { ServiceShowcase } from "@/components/site/ServiceShowcase";
@@ -19,10 +20,11 @@ export default function Home() {
 
       <main className="home-main">
         <HomeHeroSection />
+        <HomeCompanyIntroSection />
         <HomeAboutSection />
-        <ClientLogoBand />
+        <HomeExperienceSection />
         <ServiceShowcase />
-        <HomeExperienceCtaSection />
+        <HomeContactSection />
       </main>
 
       <SiteFooter />

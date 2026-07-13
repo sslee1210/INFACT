@@ -1,7 +1,7 @@
-import { Link } from "wouter";
 import { PageIntro } from "@/components/site/PageIntro";
 import { PageLayout } from "@/components/site/PageLayout";
 import { PageSubNav } from "@/components/site/PageSubNav";
+import { ServiceTaskPage } from "@/components/site/ServiceTaskPage";
 import { servicePages } from "@/content/siteContent";
 
 export default function ServiceCSV() {
@@ -26,52 +26,19 @@ export default function ServiceCSV() {
           ]}
         />
 
-        <div className="site-shell service-page">
-          <article className="service-page__feature">
-            <div>
-              <p className="section-label">Validation Scope</p>
-              <h2 className="section-title">{content.overview}</h2>
-              <p className="body-copy">
-                시스템 기능, 권한 구조, Audit Trail, 전자서명, 백업 및 복구 체계를 함께 검토해 검증 범위를 정의합니다.
-              </p>
-            </div>
-            <div className="detail-table">
-              <div className="detail-table__row">
-                <span>대상 시스템</span>
-                <div>{content.applicable.join(" / ")}</div>
-              </div>
-              <div className="detail-table__row">
-                <span>문서 패키지</span>
-                <div>{content.deliverables.join(" / ")}</div>
-              </div>
-            </div>
-          </article>
-
-          <article className="csv-matrix">
-            <div className="detail-table__row">
-              <span>시스템군</span>
-              <div>ERP / MES / WMS / LIMS / QMS / EDMS / SCADA / PLC / BMS</div>
-            </div>
-            <div className="detail-table__row">
-              <span>검증 항목</span>
-              <div>Risk Assessment / Requirement Review / IQ / OQ / PQ / VSR</div>
-            </div>
-            <div className="detail-table__row">
-              <span>데이터 무결성</span>
-              <div>Audit Trail / Electronic Signature / Access Control / Backup & Restore</div>
-            </div>
-            <div className="detail-table__row">
-              <span>수행 방식</span>
-              <div>{content.workflow.join(" / ")}</div>
-            </div>
-          </article>
-
-          <div className="service-page__cta">
-            <Link href="/contact" className="site-button">
-              문의하기
-            </Link>
-          </div>
-        </div>
+        <ServiceTaskPage
+          eyebrow="CSV Consulting"
+          title="시스템 요구사항부터 시험 증적까지 추적성을 연결합니다."
+          description={content.intro}
+          focusTitle="운영 목적, 데이터 무결성, 검증 문서를 하나의 CSV 흐름으로 정리합니다."
+          focusDescription={content.overview}
+          pillars={[
+            { title: "대상 시스템", items: content.scope },
+            { title: "진행 흐름", items: content.workflow },
+            { title: "산출물", items: content.deliverables },
+          ]}
+          ctaLabel="CSV 컨설팅 문의하기"
+        />
       </section>
     </PageLayout>
   );

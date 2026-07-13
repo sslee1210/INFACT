@@ -31,7 +31,7 @@
 
 .service-page__secondary-item p {
   margin: 0 0 var(--fluid-gap-xs);
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   line-height: 1.8;
   color: var(--home-text-soft);
 }

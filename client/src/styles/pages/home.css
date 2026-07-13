@@ -32,7 +32,9 @@
   --home-standard-section-height: clamp(640px, 78svh, 820px);
   --home-compact-section-height: clamp(500px, 62svh, 660px);
   --home-band-section-height: clamp(420px, 52svh, 560px);
-  --home-content-max: clamp(520px, 42vw, 640px);
+  --home-content-max: clamp(520px, 42vw, 960px);
+  --home-section-heading-size: clamp(1.82rem, 2.28vw, 3.57rem);
+  --home-section-copy-size: clamp(0.94rem, 0.95vw, 1.56rem);
   --home-media-radius: clamp(22px, 2vw, 28px);
   --home-pill-height: clamp(28px, 2vw, 30px);
   --home-pill-pad-x: clamp(12px, 1.1vw, 14px);
@@ -41,6 +43,7 @@
 }
 
 .home-main {
+  --site-content-width: min(calc(100% - (clamp(24px, 12.5vw, 360px) * 2)), 2160px);
   overflow-x: clip;
   background: var(--brand-surface);
 }
@@ -49,9 +52,13 @@
   width: 100%;
 }
 
+.home-heading-accent {
+  color: var(--brand-primary);
+}
+
 @supports (content-visibility: auto) {
   .about-blend-section,
-  .client-logo-band,
+  .home-experience-section,
   .service-immersive-section,
   .home-cta-banner {
     content-visibility: auto;
@@ -62,8 +69,8 @@
     contain-intrinsic-size: auto 720px;
   }
 
-  .client-logo-band {
-    contain-intrinsic-size: auto 150px;
+  .home-experience-section {
+    contain-intrinsic-size: auto 620px;
   }
 
   .home-cta-banner {
@@ -116,6 +123,8 @@
 
 @media (max-width: 860px) {
   .home-main {
+    --home-section-heading-size: clamp(1.48rem, 6.4vw, 2rem);
+    --home-section-copy-size: clamp(0.9rem, 3.7vw, 0.98rem);
     overflow-x: clip;
     overflow-y: visible;
   }

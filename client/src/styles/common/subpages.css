@@ -159,7 +159,7 @@
 .stacked-list li {
   position: relative;
   padding-left: clamp(14px, 1.1vw, 16px);
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   line-height: 1.75;
   color: var(--home-text-soft);
 }
@@ -219,7 +219,7 @@
 }
 
 .detail-table__row > div {
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   line-height: 1.8;
   color: var(--home-text-soft);
   word-break: keep-all;
@@ -243,16 +243,19 @@
 
 .key-value-row dd {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   color: var(--home-text);
 }
 
 .page-subnav-wrap {
-  position: static;
+  position: sticky;
+  top: var(--fluid-nav-height);
+  z-index: 1000;
   margin-top: calc(-1 * var(--fluid-section-pad-top));
   margin-bottom: clamp(64px, 5.4vw, 82px);
   background: #fff;
   border-bottom: 1px solid rgba(217, 225, 236, 0.9);
+  box-shadow: 0 8px 24px rgba(17, 38, 86, 0.045);
 }
 
 .page-subnav-row {
@@ -384,6 +387,7 @@
 
 @media (max-width: 720px) {
   .page-subnav-wrap {
+    top: clamp(54px, 14vw, 62px);
     overflow: hidden;
   }
 

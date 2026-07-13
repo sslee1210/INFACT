@@ -241,18 +241,33 @@ export const servicePages = {
   design: {
     title: "Conceptual Design",
     intro:
-      "Conceptual Design은 GMP 제조소를 위한 초기 구조 설계입니다. 공간 배치, 공정 흐름, 유틸리티, 구역 구분을 동시에 검토해 이후 상세 설계와 검증 방향을 잡습니다.",
+      "Conceptual Design은 질의서와 워크숍을 통해 제품 특성, 생산량, 제조공정과 시설 요구사항을 수집하고 GMP Layout과 운영 동선을 구체화하는 초기 설계 서비스입니다.",
     overview:
-      "공정과 공간을 함께 보는 설계 관점이 중요합니다. 동선, 구획, 설비 배치, 유틸리티, 청정 조건, 운영 흐름을 초기 단계에서 정리합니다.",
+      "필요 작업실과 장비 수량, 구획, 청정등급, 인동선·물동선·폐기물 동선, 유틸리티와 보관 조건을 함께 검토해 상세설계의 기준이 되는 도면과 보고서를 정리합니다.",
     scope: [
-      "Facility Size 및 Site Plan 검토",
-      "GMP Layout, Zoning, Class Classification",
-      "Personnel / Material / Waste Flow",
-      "Process Utilities, Air Lock, Storage, Drain",
+      "개념설계 질의서 작성 및 기초 Data 수집",
+      "제품 특성, 생산량, 제조공정 및 장비 요구사항 분석",
+      "Facility Size, Site Plan 및 Room Design Requirement 검토",
+      "GMP Layout, Equipment Plan, 청정등급 및 구역 구분",
+      "인동선, 물동선, 폐기물 동선 및 장비 반입 동선 검토",
+      "Air Lock, 차압, Process Utilities, 보관 및 Drain 조건 검토",
     ],
-    workflow: ["요구사항 수집", "공정 및 동선 분석", "구획/레이아웃 방향 설정", "설계안 및 보고서 정리"],
+    workflow: [
+      "질의서 작성 및 기초 Data 수집",
+      "1차 Workshop과 제조공정 분석",
+      "2~3차 Workshop과 Layout Development",
+      "최종 Workshop 및 Feed-back 반영",
+      "최종 도면과 개념설계 보고서 문서화",
+    ],
     applicable: ["신규 제조소", "리모델링", "증설", "초기 기획 단계 시설 프로젝트"],
-    deliverables: ["Layout Direction", "Zoning Plan", "Flow Review", "Utility Scope", "Conceptual Design Report"],
+    deliverables: [
+      "Facility Size 및 Site Plan",
+      "GMP Layout, Equipment Plan, 청정등급 및 Zone Division",
+      "Personnel / Materials / Waste Flow 및 Drain Plan",
+      "차압, Air Lock, Process Utilities 및 원자재·제품 보관 계획",
+      "Process Analysis Sheet",
+      "Room Design Requirement Sheet 및 개념설계 최종 보고서",
+    ],
   },
   csv: {
     title: "CSV Consulting",
@@ -270,6 +285,111 @@ export const servicePages = {
     applicable: ["생산관리 시스템", "품질 시스템", "문서관리 시스템", "설비/유틸리티 연계 시스템"],
     deliverables: ["Validation Plan", "Document Package", "Traceability Matrix", "Test Protocol & Report"],
   },
+};
+
+export const conceptualDesignDetails = {
+  visuals: {
+    label: "개념설계 수행자료",
+    title: "업무 흐름과 검토 기준을 도식과 표로 확인할 수 있습니다.",
+    description:
+      "질의서와 워크숍에서 확인한 기초자료가 레이아웃, 구획, 동선과 유틸리티 검토를 거쳐 최종 도면과 보고서로 연결되는 구조를 정리했습니다.",
+  },
+  processTable: {
+    label: "단계별 업무표",
+    title: "수행 업무, 확인 자료와 결과물을 단계별로 연결합니다.",
+    description:
+      "프로젝트 초기에 필요한 입력자료와 각 단계의 검토 결과를 구분해 후속 상세설계와 의사결정에 사용할 수 있도록 관리합니다.",
+    rows: [
+      {
+        step: "01",
+        phase: "수행계획 수립",
+        task: "참여 인력과 미팅 일정을 정하고 개념설계 질의서와 사전 요청자료를 준비합니다.",
+        input: "프로젝트 개요, 생산품목, 목표 생산량, 기존 도면 및 일정",
+        output: "수행계획, 질의서, 사전자료 목록",
+      },
+      {
+        step: "02",
+        phase: "기초자료 및 공정 분석",
+        task: "1차 워크숍을 통해 제조공정, 주요 장비, 처리 용량과 물량 흐름을 분석합니다.",
+        input: "제조공정도, 장비 목록, 공정별 처리량, 원자재 및 폐기물 자료",
+        output: "공정 분석표, 작업실 요구사항",
+      },
+      {
+        step: "03",
+        phase: "레이아웃 개발",
+        task: "2~3차 워크숍을 통해 작업실, 장비, 청정구역과 주요 동선을 레이아웃에 반영합니다.",
+        input: "청정도 조건, 장비 크기, 작업자·자재·폐기물·장비 반입 동선",
+        output: "레이아웃, 구역 구분 및 동선 계획",
+      },
+      {
+        step: "04",
+        phase: "설계 조정",
+        task: "최종 워크숍에서 차압, 에어락, 공정 유틸리티, 보관과 배수 조건을 검토합니다.",
+        input: "운영 피드백, 지원설비 사용점, 보관 조건 및 구역별 요구사항",
+        output: "최종 레이아웃, 유틸리티 및 보관 계획",
+      },
+      {
+        step: "05",
+        phase: "최종 문서화",
+        task: "확정된 검토 결과와 피드백을 반영해 도면, 분석표와 개념설계 보고서를 작성합니다.",
+        input: "워크숍 기록, 확정 도면, 검토 의견과 승인된 기초자료",
+        output: "최종 도면, 분석자료, 개념설계 보고서",
+      },
+    ],
+  },
+  report: {
+    label: "개념설계 보고서",
+    title: "상세설계의 기준이 되는 검토 자료를 체계적으로 정리합니다.",
+    description:
+      "시설 규모와 배치부터 청정구역, 동선, 유틸리티와 보관 조건까지 주요 의사결정의 근거를 도면과 보고서로 남깁니다.",
+    items: [
+      "시설 규모 및 대지 배치계획",
+      "제조소 레이아웃",
+      "주요 장비 배치계획",
+      "청정등급 계획",
+      "구역 구분 계획",
+      "작업자 동선",
+      "원자재 및 자재 동선",
+      "폐기물 동선 및 배수계획",
+      "실간 차압 계획",
+      "에어락 및 인터락 계획",
+      "공정 유틸리티 계획",
+      "원자재 보관계획",
+      "반제품 및 완제품 보관계획",
+    ],
+  },
+  analysis: {
+    label: "기초자료 분석",
+    title: "공정 조건과 작업실 요구사항을 같은 기준선에서 검토합니다.",
+    description:
+      "생산공정과 공간 요구조건을 분리하지 않고 함께 분석해 작업실 수, 장비 배치, 처리 용량과 지원설비 범위를 구체화합니다.",
+    groups: [
+      {
+        title: "공정 분석표",
+        description: "제품과 공정별 물량 흐름을 기준으로 필요한 공간과 설비 조건을 확인합니다.",
+        items: ["공정 단계", "주요 장비", "처리 용량", "원자재 및 공정량", "폐기물 및 폐수 발생량"],
+      },
+      {
+        title: "작업실 설계 요구사항",
+        description: "각 작업실의 운영 조건을 정리해 레이아웃과 유틸리티 검토 기준으로 사용합니다.",
+        items: ["작업실명", "배치 장비", "청정도 조건", "필요 유틸리티"],
+      },
+    ],
+  },
+  principles: [
+    {
+      title: "기초자료 확보",
+      description: "질의서와 단계별 워크숍을 통해 제품, 공정, 생산량과 운영 조건을 확인합니다.",
+    },
+    {
+      title: "효율 중심 배치",
+      description: "필요 작업실과 장비를 배치하고 작업자, 자재, 폐기물과 장비 반입 동선을 검토합니다.",
+    },
+    {
+      title: "전문 분야 검토",
+      description: "제조공정, 시설, 장비와 청정구역의 연계 조건을 검토해 설계 지연과 변경 위험을 줄입니다.",
+    },
+  ],
 };
 
 export const experienceSections = {

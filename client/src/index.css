@@ -9,6 +9,7 @@
 
 @import "./styles/pages/home.css";
 @import "./styles/pages/home-about.css";
+@import "./styles/pages/home-company-intro.css";
 @import "./styles/pages/home-experience.css";
 @import "./styles/pages/home-service.css";
 @import "./styles/pages/home-service-cards.css";

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">개념설계 수행 프로세스</title>
+  <desc id="desc">사전자료 수집, 공정 분석, 레이아웃 개발, 설계 조정, 최종 문서화의 5단계 프로세스</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7183b8"/>
+    </marker>
+    <style>
+      .kr { font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; }
+      .title { fill: #142454; font-size: 42px; font-weight: 800; }
+      .sub { fill: #65718f; font-size: 20px; font-weight: 500; }
+      .number { fill: #ffffff; font-size: 18px; font-weight: 800; }
+      .step { fill: #142454; font-size: 25px; font-weight: 800; }
+      .detail { fill: #56627e; font-size: 18px; font-weight: 600; }
+      .lane-label { fill: #263b88; font-size: 17px; font-weight: 800; }
+      .lane-text { fill: #52607d; font-size: 17px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="720" fill="#ffffff"/>
+  <text x="80" y="82" class="kr title">개념설계 수행 프로세스</text>
+  <text x="80" y="122" class="kr sub">기초자료와 워크숍 결과를 레이아웃과 최종 보고서로 연결합니다.</text>
+
+  <line x1="190" y1="210" x2="1406" y2="210" stroke="#c4cee3" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g>
+    <circle cx="190" cy="210" r="42" fill="#273b88"/>
+    <text x="190" y="216" text-anchor="middle" class="kr number">01</text>
+    <rect x="70" y="278" width="240" height="184" rx="4" fill="#f8fafc" stroke="#d6deed"/>
+    <text x="190" y="326" text-anchor="middle" class="kr step">사전자료 수집</text>
+    <text x="190" y="370" text-anchor="middle" class="kr detail">
+      <tspan x="190">수행계획 및 일정</tspan>
+      <tspan x="190" dy="32">개념설계 질의서</tspan>
+      <tspan x="190" dy="32">프로젝트 기초정보</tspan>
+    </text>
+  </g>
+
+  <g>
+    <circle cx="495" cy="210" r="42" fill="#38539e"/>
+    <text x="495" y="216" text-anchor="middle" class="kr number">02</text>
+    <rect x="375" y="278" width="240" height="184" rx="4" fill="#f4f7fb" stroke="#ccd7e9"/>
+    <text x="495" y="326" text-anchor="middle" class="kr step">공정 분석</text>
+    <text x="495" y="370" text-anchor="middle" class="kr detail">
+      <tspan x="495">1차 워크숍</tspan>
+      <tspan x="495" dy="32">공정·장비·용량</tspan>
+      <tspan x="495" dy="32">작업실 요구조건</tspan>
+    </text>
+  </g>
+
+  <g>
+    <circle cx="800" cy="210" r="42" fill="#4c69af"/>
+    <text x="800" y="216" text-anchor="middle" class="kr number">03</text>
+    <rect x="680" y="278" width="240" height="184" rx="4" fill="#eef4fa" stroke="#bfcee4"/>
+    <text x="800" y="326" text-anchor="middle" class="kr step">레이아웃 개발</text>
+    <text x="800" y="370" text-anchor="middle" class="kr detail">
+      <tspan x="800">2~3차 워크숍</tspan>
+      <tspan x="800" dy="32">구획·장비 배치</tspan>
+      <tspan x="800" dy="32">주요 동선 계획</tspan>
+    </text>
+  </g>
+
+  <g>
+    <circle cx="1105" cy="210" r="42" fill="#607fbe"/>
+    <text x="1105" y="216" text-anchor="middle" class="kr number">04</text>
+    <rect x="985" y="278" width="240" height="184" rx="4" fill="#e8f0f8" stroke="#b4c6df"/>
+    <text x="1105" y="326" text-anchor="middle" class="kr step">설계 조정</text>
+    <text x="1105" y="370" text-anchor="middle" class="kr detail">
+      <tspan x="1105">최종 워크숍</tspan>
+      <tspan x="1105" dy="32">차압·에어락</tspan>
+      <tspan x="1105" dy="32">유틸리티·보관</tspan>
+    </text>
+  </g>
+
+  <g>
+    <circle cx="1410" cy="210" r="42" fill="#7494cc"/>
+    <text x="1410" y="216" text-anchor="middle" class="kr number">05</text>
+    <rect x="1290" y="278" width="240" height="184" rx="4" fill="#e2ecf6" stroke="#a9bcda"/>
+    <text x="1410" y="326" text-anchor="middle" class="kr step">최종 문서화</text>
+    <text x="1410" y="370" text-anchor="middle" class="kr detail">
+      <tspan x="1410">피드백 반영</tspan>
+      <tspan x="1410" dy="32">최종 도면</tspan>
+      <tspan x="1410" dy="32">개념설계 보고서</tspan>
+    </text>
+  </g>
+
+  <rect x="70" y="534" width="1460" height="116" fill="#f4f7fb" stroke="#d6deed"/>
+  <line x1="555" y1="534" x2="555" y2="650" stroke="#d6deed"/>
+  <line x1="1040" y1="534" x2="1040" y2="650" stroke="#d6deed"/>
+  <text x="104" y="578" class="kr lane-label">입력자료</text>
+  <text x="104" y="614" class="kr lane-text">질의서 · 생산품목 · 생산량 · 공정도 · 장비 목록</text>
+  <text x="589" y="578" class="kr lane-label">핵심검토</text>
+  <text x="589" y="614" class="kr lane-text">작업실 · 청정구역 · 동선 · 차압 · 유틸리티</text>
+  <text x="1074" y="578" class="kr lane-label">최종결과</text>
+  <text x="1074" y="614" class="kr lane-text">레이아웃 · 분석표 · 검토 기록 · 최종 보고서</text>
+</svg>

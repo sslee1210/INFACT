@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 860" role="img" aria-labelledby="title desc">
+  <title id="title">개념설계 핵심 검토영역 매트릭스</title>
+  <desc id="desc">공간 계획, GMP 구획, 동선 계획, 장비와 유틸리티, 보관과 운영 조건의 검토 항목과 결과 자료</desc>
+  <defs>
+    <style>
+      .kr { font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; }
+      .title { fill: #142454; font-size: 42px; font-weight: 800; }
+      .sub { fill: #65718f; font-size: 20px; font-weight: 500; }
+      .head { fill: #ffffff; font-size: 19px; font-weight: 800; }
+      .num { fill: #36509a; font-size: 17px; font-weight: 900; }
+      .area { fill: #142454; font-size: 23px; font-weight: 800; }
+      .body { fill: #4e5c78; font-size: 18px; font-weight: 600; }
+      .result { fill: #273b88; font-size: 18px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="860" fill="#ffffff"/>
+  <text x="80" y="82" class="kr title">개념설계 핵심 검토영역 매트릭스</text>
+  <text x="80" y="122" class="kr sub">검토영역별 주요 조건과 결과 자료를 연결해 상세설계의 기준을 명확히 합니다.</text>
+
+  <rect x="80" y="174" width="1440" height="72" fill="#273b88"/>
+  <text x="135" y="219" class="kr head">구분</text>
+  <text x="300" y="219" class="kr head">검토영역</text>
+  <text x="620" y="219" class="kr head">주요 검토 항목</text>
+  <text x="1260" y="219" class="kr head">결과 자료</text>
+
+  <g>
+    <rect x="80" y="246" width="1440" height="108" fill="#ffffff"/>
+    <text x="135" y="308" class="kr num">01</text>
+    <text x="300" y="308" class="kr area">공간 계획</text>
+    <text x="620" y="290" class="kr body">
+      <tspan x="620">시설 규모 · 대지 배치 · 작업실 수</tspan>
+      <tspan x="620" dy="30">Room Size · 장비 배치 여유공간</tspan>
+    </text>
+    <text x="1260" y="290" class="kr result">
+      <tspan x="1260">대지 배치계획</tspan>
+      <tspan x="1260" dy="30">제조소 레이아웃</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="80" y="354" width="1440" height="108" fill="#f4f7fb"/>
+    <text x="135" y="416" class="kr num">02</text>
+    <text x="300" y="416" class="kr area">GMP 구획</text>
+    <text x="620" y="398" class="kr body">
+      <tspan x="620">청정등급 · 구역 구분 · 에어락</tspan>
+      <tspan x="620" dy="30">실간 차압 · 갱의실 · 인터락</tspan>
+    </text>
+    <text x="1260" y="398" class="kr result">
+      <tspan x="1260">구역 구분 계획</tspan>
+      <tspan x="1260" dy="30">청정도·차압 계획</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="80" y="462" width="1440" height="108" fill="#ffffff"/>
+    <text x="135" y="524" class="kr num">03</text>
+    <text x="300" y="524" class="kr area">동선 계획</text>
+    <text x="620" y="506" class="kr body">
+      <tspan x="620">작업자 · 원자재 · 자재 · 폐기물</tspan>
+      <tspan x="620" dy="30">장비 반입 · 반제품 · 완제품 동선</tspan>
+    </text>
+    <text x="1260" y="506" class="kr result">
+      <tspan x="1260">주요 동선도</tspan>
+      <tspan x="1260" dy="30">교차오염 검토 기록</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="80" y="570" width="1440" height="108" fill="#f4f7fb"/>
+    <text x="135" y="632" class="kr num">04</text>
+    <text x="300" y="632" class="kr area">장비·유틸리티</text>
+    <text x="620" y="614" class="kr body">
+      <tspan x="620">주요 장비 · 처리 용량 · 사용점</tspan>
+      <tspan x="620" dy="30">정제수 · 압축공기 · 배수 조건</tspan>
+    </text>
+    <text x="1260" y="614" class="kr result">
+      <tspan x="1260">장비 배치계획</tspan>
+      <tspan x="1260" dy="30">유틸리티 사용점 계획</tspan>
+    </text>
+  </g>
+
+  <g>
+    <rect x="80" y="678" width="1440" height="108" fill="#ffffff"/>
+    <text x="135" y="740" class="kr num">05</text>
+    <text x="300" y="740" class="kr area">보관·운영 조건</text>
+    <text x="620" y="722" class="kr body">
+      <tspan x="620">원자재 · 반제품 · 완제품 보관</tspan>
+      <tspan x="620" dy="30">칭량실 · 패스박스 · 운영 흐름</tspan>
+    </text>
+    <text x="1260" y="722" class="kr result">
+      <tspan x="1260">보관계획</tspan>
+      <tspan x="1260" dy="30">작업실 요구조건</tspan>
+    </text>
+  </g>
+
+  <line x1="244" y1="174" x2="244" y2="786" stroke="#d6deed"/>
+  <line x1="560" y1="174" x2="560" y2="786" stroke="#d6deed"/>
+  <line x1="1200" y1="174" x2="1200" y2="786" stroke="#d6deed"/>
+  <rect x="80" y="174" width="1440" height="612" fill="none" stroke="#bfcbe0"/>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1420" viewBox="0 0 720 1420" role="img" aria-labelledby="title desc">
+  <title id="title">개념설계 핵심 검토영역 매트릭스</title>
+  <desc id="desc">공간, GMP 구획, 동선, 장비와 유틸리티, 보관 운영 조건의 검토 항목과 결과 자료</desc>
+  <rect width="720" height="1420" fill="#ffffff"/>
+  <text x="56" y="70" fill="#071d63" font-family="Arial, sans-serif" font-size="34" font-weight="700">개념설계 핵심 검토영역</text>
+  <text x="56" y="108" fill="#66728f" font-family="Arial, sans-serif" font-size="19">검토 기준과 결과 자료를 영역별로 연결합니다.</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="56" y="154" width="608" height="218" fill="#f5f8fd" stroke="#cbd6ea"/>
+    <rect x="56" y="154" width="12" height="218" fill="#173994"/>
+    <text x="92" y="198" fill="#173994" font-size="17" font-weight="700">01</text>
+    <text x="136" y="198" fill="#071d63" font-size="27" font-weight="700">공간 계획</text>
+    <text x="92" y="244" fill="#66728f" font-size="16" font-weight="700">검토 항목</text>
+    <text x="196" y="244" fill="#3f4c6b" font-size="18">시설 규모 · 대지 배치 · 작업실 구성</text>
+    <text x="92" y="294" fill="#66728f" font-size="16" font-weight="700">결과 자료</text>
+    <text x="196" y="294" fill="#3f4c6b" font-size="18">Facility Size · Site Plan · Room List</text>
+    <text x="196" y="326" fill="#3f4c6b" font-size="18">Room Design Requirement</text>
+    <rect x="56" y="390" width="608" height="218" fill="#ffffff" stroke="#cbd6ea"/>
+    <rect x="56" y="390" width="12" height="218" fill="#294aa4"/>
+    <text x="92" y="434" fill="#294aa4" font-size="17" font-weight="700">02</text>
+    <text x="136" y="434" fill="#071d63" font-size="27" font-weight="700">GMP 구획</text>
+    <text x="92" y="480" fill="#66728f" font-size="16" font-weight="700">검토 항목</text>
+    <text x="196" y="480" fill="#3f4c6b" font-size="18">청정등급 · 구역 구분 · 차압 · 에어락</text>
+    <text x="92" y="530" fill="#66728f" font-size="16" font-weight="700">결과 자료</text>
+    <text x="196" y="530" fill="#3f4c6b" font-size="18">GMP Layout · Zone Division</text>
+    <text x="196" y="562" fill="#3f4c6b" font-size="18">Pressure Cascade Plan</text>
+    <rect x="56" y="626" width="608" height="218" fill="#f5f8fd" stroke="#cbd6ea"/>
+    <rect x="56" y="626" width="12" height="218" fill="#3c5db2"/>
+    <text x="92" y="670" fill="#3c5db2" font-size="17" font-weight="700">03</text>
+    <text x="136" y="670" fill="#071d63" font-size="27" font-weight="700">동선 계획</text>
+    <text x="92" y="716" fill="#66728f" font-size="16" font-weight="700">검토 항목</text>
+    <text x="196" y="716" fill="#3f4c6b" font-size="18">작업자 · 자재 · 폐기물 · 장비 반입</text>
+    <text x="92" y="766" fill="#66728f" font-size="16" font-weight="700">결과 자료</text>
+    <text x="196" y="766" fill="#3f4c6b" font-size="18">Personnel · Material · Waste Flow</text>
+    <text x="196" y="798" fill="#3f4c6b" font-size="18">Equipment Access Plan</text>
+    <rect x="56" y="862" width="608" height="218" fill="#ffffff" stroke="#cbd6ea"/>
+    <rect x="56" y="862" width="12" height="218" fill="#536fba"/>
+    <text x="92" y="906" fill="#536fba" font-size="17" font-weight="700">04</text>
+    <text x="136" y="906" fill="#071d63" font-size="27" font-weight="700">장비 · 유틸리티</text>
+    <text x="92" y="952" fill="#66728f" font-size="16" font-weight="700">검토 항목</text>
+    <text x="196" y="952" fill="#3f4c6b" font-size="18">장비 크기 · 사용점 · 공정 지원설비</text>
+    <text x="92" y="1002" fill="#66728f" font-size="16" font-weight="700">결과 자료</text>
+    <text x="196" y="1002" fill="#3f4c6b" font-size="18">Equipment Plan</text>
+    <text x="196" y="1034" fill="#3f4c6b" font-size="18">Process Utility Requirement</text>
+    <rect x="56" y="1098" width="608" height="218" fill="#f5f8fd" stroke="#cbd6ea"/>
+    <rect x="56" y="1098" width="12" height="218" fill="#6c84c3"/>
+    <text x="92" y="1142" fill="#6c84c3" font-size="17" font-weight="700">05</text>
+    <text x="136" y="1142" fill="#071d63" font-size="27" font-weight="700">보관 · 운영 조건</text>
+    <text x="92" y="1188" fill="#66728f" font-size="16" font-weight="700">검토 항목</text>
+    <text x="196" y="1188" fill="#3f4c6b" font-size="18">원자재 · 반제품 · 완제품 · 배수 조건</text>
+    <text x="92" y="1238" fill="#66728f" font-size="16" font-weight="700">결과 자료</text>
+    <text x="196" y="1238" fill="#3f4c6b" font-size="18">Storage Plan · Drain Plan</text>
+    <text x="196" y="1270" fill="#3f4c6b" font-size="18">Operational Requirement</text>
+  </g>
+</svg>

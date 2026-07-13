@@ -6,10 +6,34 @@
   position: relative;
   isolation: isolate;
   min-height: auto;
-  padding: 0 0 clamp(86px, 6.4vw, 112px);
+  padding: clamp(92px, 7.2vw, 128px) 0 clamp(92px, 7.2vw, 128px);
   overflow: hidden;
   color: var(--service-ink);
-  background: var(--brand-surface);
+  background: #ffffff;
+}
+
+.service-immersive-section::before {
+  content: none;
+}
+
+.service-immersive::before {
+  content: "";
+  position: absolute;
+  top: clamp(-430px, -27vw, -360px);
+  left: clamp(-480px, -30vw, -300px);
+  z-index: -1;
+  width: clamp(640px, 50vw, 1380px);
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+background: radial-gradient(
+  circle,
+  transparent 0 33.333%,
+  rgba(125, 137, 156, 0.05) 33.333% 55%,
+  rgba(128, 202, 244, 0.044) 55% 100%
+);
+  box-shadow: none;
+  pointer-events: none;
 }
 
 .service-immersive__backgrounds,
@@ -44,18 +68,17 @@
 
 .service-immersive__overlay {
   z-index: -3;
-  background: var(--brand-surface);
+  background: transparent;
 }
 
 .service-immersive__blueprint {
-  z-index: -2;
-  background: none;
-  opacity: 0;
+  display: none;
 }
 
 .service-immersive {
   position: relative;
   z-index: 1;
+  isolation: isolate;
   width: var(--site-content-width);
   height: auto;
   min-height: 0;
@@ -80,19 +103,19 @@
 }
 
 .service-immersive__eyebrow {
-  margin: 0 0 clamp(16px, 1.5vw, 22px);
-  color: rgba(15, 45, 74, 0.68);
+  margin: 0 0 clamp(14px, 1.3vw, 18px);
+  color: rgba(22, 28, 129, 0.62);
   font-size: 0.78rem;
   line-height: 1;
   font-weight: 800;
-  letter-spacing: 0;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .service-immersive__title {
   margin: 0;
   color: var(--brand-deep);
-  font-size: clamp(1.82rem, 2.28vw, 2.38rem);
+  font-size: var(--home-section-heading-size);
   line-height: 1.24;
   font-weight: 900;
   letter-spacing: 0;
@@ -100,12 +123,36 @@
 }
 
 .service-immersive__summary {
-  max-width: 540px;
+  max-width: 620px;
   margin: clamp(14px, 1.2vw, 18px) auto 0;
   color: rgba(15, 45, 74, 0.76);
-  font-size: 0.86rem;
-  line-height: 1.82;
+  font-size: var(--home-section-copy-size);
+  line-height: 1.76;
+  font-weight: 600;
   word-break: keep-all;
+}
+
+@media (min-width: 2200px) {
+  .service-immersive-section {
+    padding: clamp(128px, 7.2vw, 192px) 0;
+  }
+
+  .service-immersive::before {
+    top: clamp(-652px, -27vw, -540px);
+    left: clamp(-720px, -30vw, -450px);
+  }
+
+  .service-immersive {
+    gap: clamp(54px, 3.4vw, 81px);
+  }
+
+  .service-immersive__intro {
+    max-width: 1080px;
+  }
+
+  .service-immersive__summary {
+    max-width: 930px;
+  }
 }
 
 .service-immersive__showcase {
@@ -219,7 +266,7 @@
   }
 
   .service-immersive__title {
-    font-size: clamp(1.58rem, 7vw, 2rem);
+    font-size: var(--home-section-heading-size);
     line-height: 1.12;
   }
 }

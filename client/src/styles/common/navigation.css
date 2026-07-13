@@ -3,6 +3,8 @@
    ===================== */
 
 .home-nav {
+  --home-nav-menu-font-size: 0.95rem;
+  --home-nav-mobile-menu-font-size: 1rem;
   --home-nav-mega-width: calc(
     (var(--nav-menu-open-item-width) * 3) + (var(--nav-menu-open-gap) * 2)
   );
@@ -135,7 +137,7 @@
   background: none;
   border: 0;
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: var(--home-nav-menu-font-size);
   font-weight: 650;
   letter-spacing: 0;
   position: relative;
@@ -246,7 +248,7 @@
   background: none;
   border: 0;
   cursor: pointer;
-  font-size: 0.98rem;
+  font-size: var(--home-nav-menu-font-size);
   font-weight: 600;
   color: var(--home-text);
   letter-spacing: 0;
@@ -538,7 +540,7 @@
   }
 
   .home-nav__mobile-primary {
-    font-size: 1rem;
+    font-size: var(--home-nav-mobile-menu-font-size);
     font-weight: 850;
   }
 
@@ -553,7 +555,7 @@
     padding: 0;
     border-radius: 0;
     background: transparent;
-    font-size: 0.88rem;
+    font-size: var(--home-nav-mobile-menu-font-size);
     font-weight: 700;
   }
 

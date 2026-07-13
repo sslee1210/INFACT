@@ -1,7 +1,7 @@
-import { Link } from "wouter";
 import { PageIntro } from "@/components/site/PageIntro";
 import { PageLayout } from "@/components/site/PageLayout";
 import { PageSubNav } from "@/components/site/PageSubNav";
+import { ServiceTaskPage } from "@/components/site/ServiceTaskPage";
 import { servicePages } from "@/content/siteContent";
 
 export default function ServiceGMP() {
@@ -26,50 +26,19 @@ export default function ServiceGMP() {
           ]}
         />
 
-        <div className="site-shell service-page">
-          <article className="service-page__feature">
-            <div>
-              <p className="section-label">Service Overview</p>
-              <h2 className="section-title">{content.overview}</h2>
-            </div>
-            <div className="detail-table">
-              <div className="detail-table__row">
-                <span>지원 범위</span>
-                <div>{content.scope.join(" / ")}</div>
-              </div>
-              <div className="detail-table__row">
-                <span>적용 대상</span>
-                <div>{content.applicable.join(" / ")}</div>
-              </div>
-            </div>
-          </article>
-
-          <div className="service-page__secondary">
-            <article className="service-page__secondary-item">
-              <p className="section-label">Workflow</p>
-              <ul className="stacked-list">
-                {content.workflow.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-
-            <article className="service-page__secondary-item">
-              <p className="section-label">Deliverables</p>
-              <ul className="stacked-list">
-                {content.deliverables.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </article>
-          </div>
-
-          <div className="service-page__cta">
-            <Link href="/contact" className="site-button">
-              문의하기
-            </Link>
-          </div>
-        </div>
+        <ServiceTaskPage
+          eyebrow="GMP Consulting"
+          title="운영 기준과 검증 범위를 프로젝트 구조로 정리합니다."
+          description={content.intro}
+          focusTitle="문서체계, 운영 기준, 적격성평가를 같은 기준선 위에서 검토합니다."
+          focusDescription={content.overview}
+          pillars={[
+            { title: "지원 범위", items: content.scope },
+            { title: "진행 흐름", items: content.workflow },
+            { title: "산출물", items: content.deliverables },
+          ]}
+          ctaLabel="GMP 컨설팅 문의하기"
+        />
       </section>
     </PageLayout>
   );

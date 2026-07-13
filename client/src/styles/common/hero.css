@@ -29,6 +29,7 @@
   background-repeat: no-repeat;
   transform: scale(1.04);
   transform-origin: center;
+  animation: hero-image-drift 16s ease-in-out infinite;
 }
 
 .hero__inner {
@@ -145,12 +146,13 @@
 }
 
 @keyframes hero-image-drift {
-  from {
+  0%,
+  100% {
     transform: scale(1.04) translate3d(0, 0, 0);
   }
 
-  to {
-    transform: scale(1.1) translate3d(-1.6%, -1.1%, 0);
+  50% {
+    transform: scale(1.12) translate3d(-2.2%, -1.4%, 0);
   }
 }
 
