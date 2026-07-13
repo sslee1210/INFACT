@@ -1,0 +1,298 @@
+/* =========================================================
+   INFACT Subpage Typography Standard
+   기준: 회사소개 서브페이지의 .section-title / .section-note / .body-copy
+   반드시 index.css의 가장 마지막에 import 하세요.
+   ========================================================= */
+
+:root {
+  --subpage-title-xl: clamp(2rem, 3.1vw, 3.15rem);
+  --subpage-title-lg: clamp(1.8rem, 2.6vw, 2.7rem);
+  --subpage-title-md: 1.05rem;
+  --subpage-body: 0.96rem;
+  --subpage-small: 0.82rem;
+  --subpage-label: 0.72rem;
+  --subpage-table-head: 0.78rem;
+  --subpage-table-title: 0.92rem;
+  --subpage-table-body: 0.92rem;
+}
+
+/* =========================================================
+   한글 렌더링 안정화
+   모바일 전용이 아니라 전체 해상도에 적용
+   ========================================================= */
+
+.page-title,
+.section-title,
+.service-task-overview__head h2,
+.service-task-focus__head h2,
+.service-task-detail__title h2,
+.service-standard-section__head h2,
+.concept-materials__head h2,
+.conceptual-details__head h2,
+.conceptual-document-head h2,
+.concept-redesign-lead__main h2,
+.concept-redesign-section__head h2,
+.concept-redesign-output__copy h2,
+.concept-redesign-cta h2,
+.service-page h2,
+.experience-page h2,
+.references-page h2,
+.contact-page h2,
+.history-page h2,
+.company-section__heading h2 {
+  font-family:
+    "Pretendard",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "맑은 고딕",
+    sans-serif !important;
+  font-kerning: normal;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================================
+   공통 배너
+   ========================================================= */
+
+.page-title {
+  font-size: var(--subpage-title-xl) !important;
+  line-height: 1.16 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
+  word-break: keep-all;
+}
+
+.page-description {
+  font-size: 0.98rem !important;
+  line-height: 1.85 !important;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   공통 섹션 라벨
+   ========================================================= */
+
+.section-label {
+  font-size: var(--subpage-label) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* =========================================================
+   모든 서브페이지 대제목
+   ========================================================= */
+
+.service-task-overview__head h2,
+.service-task-focus__head h2,
+.service-task-detail__title h2,
+.service-standard-section__head h2,
+.concept-materials__head h2,
+.conceptual-details__head h2,
+.conceptual-document-head h2,
+.concept-redesign-lead__main h2,
+.concept-redesign-section__head h2,
+.concept-redesign-output__copy h2,
+.concept-redesign-cta h2,
+.service-page h2,
+.experience-page h2,
+.references-page h2,
+.contact-page h2,
+.history-page h2,
+.company-section__heading h2,
+.section-title {
+  font-size: var(--subpage-title-lg) !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   모든 서브페이지 본문
+   ========================================================= */
+
+.service-task-overview__head > p:not(.section-label),
+.service-task-focus__head > p,
+.service-task-detail__head > p,
+.service-standard-section__head > p,
+.concept-materials__head > p:not(.section-label),
+.conceptual-details__head > p,
+.conceptual-document-head > p:not(.section-label),
+.concept-redesign-lead__main p:not(.section-label),
+.concept-redesign-output__copy p,
+.concept-redesign-cta p:not(.section-label),
+.section-note,
+.body-copy,
+.service-page p,
+.experience-page p,
+.references-page p,
+.contact-page p,
+.history-page p {
+  font-size: var(--subpage-body) !important;
+  line-height: 1.85 !important;
+  font-weight: 500 !important;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   중간 제목 / 표·자료 제목
+   ========================================================= */
+
+.service-task-cycle__item h3,
+.service-standard-scope-item,
+.service-standard-workflow li > strong,
+.service-standard-output-flow strong,
+.concept-deliverable-group h3,
+.conceptual-analysis__group h3,
+.conceptual-principles h3,
+.conceptual-process-card h3,
+.conceptual-report-table__group h3,
+.conceptual-analysis-table__title h3,
+.conceptual-principle-list h3,
+.list-block h3,
+.timeline__content h3 {
+  font-size: var(--subpage-title-md) !important;
+  line-height: 1.55 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.015em !important;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   표
+   ========================================================= */
+
+.concept-table thead th,
+.conceptual-process-table__head strong,
+.detail-table__row > span {
+  font-size: var(--subpage-table-head) !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+}
+
+.concept-table tbody th,
+.conceptual-process-table__row > div:first-child strong {
+  font-size: var(--subpage-table-title) !important;
+  line-height: 1.65 !important;
+  font-weight: 800 !important;
+}
+
+.concept-table tbody td,
+.conceptual-process-table__row > div,
+.detail-table__row > div,
+.key-value-row dd,
+.concept-deliverable-group li,
+.conceptual-report-table__group li,
+.conceptual-analysis-table__body > div,
+.conceptual-principle-list p,
+.list-block p,
+.stacked-list li {
+  font-size: var(--subpage-table-body) !important;
+  line-height: 1.75 !important;
+  font-weight: 500 !important;
+  word-break: keep-all;
+}
+
+/* =========================================================
+   상단 3개 서비스 항목
+   ========================================================= */
+
+.service-task-cycle__item span,
+.service-task-detail__title > span,
+.service-standard-workflow li > span {
+  font-size: 0.72rem !important;
+}
+
+/* =========================================================
+   버튼 / 링크
+   ========================================================= */
+
+.site-button,
+.text-link {
+  font-size: var(--subpage-small) !important;
+}
+
+/* =========================================================
+   32인치·고해상도 상한 고정
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .service-task-overview__head h2,
+  .service-task-focus__head h2,
+  .service-task-detail__title h2,
+  .service-standard-section__head h2,
+  .concept-materials__head h2,
+  .conceptual-details__head h2,
+  .conceptual-document-head h2,
+  .concept-redesign-lead__main h2,
+  .concept-redesign-section__head h2,
+  .concept-redesign-output__copy h2,
+  .concept-redesign-cta h2,
+  .service-page h2,
+  .experience-page h2,
+  .references-page h2,
+  .contact-page h2,
+  .history-page h2,
+  .company-section__heading h2,
+  .section-title {
+    font-size: 2.7rem !important;
+  }
+
+  .service-task-overview__head > p:not(.section-label),
+  .service-task-focus__head > p,
+  .service-task-detail__head > p,
+  .service-standard-section__head > p,
+  .concept-materials__head > p:not(.section-label),
+  .conceptual-details__head > p,
+  .conceptual-document-head > p:not(.section-label),
+  .section-note,
+  .body-copy {
+    font-size: 0.96rem !important;
+  }
+}
+
+/* =========================================================
+   모바일
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .service-task-overview__head h2,
+  .service-task-focus__head h2,
+  .service-task-detail__title h2,
+  .service-standard-section__head h2,
+  .concept-materials__head h2,
+  .conceptual-details__head h2,
+  .conceptual-document-head h2,
+  .concept-redesign-lead__main h2,
+  .concept-redesign-section__head h2,
+  .concept-redesign-output__copy h2,
+  .concept-redesign-cta h2,
+  .service-page h2,
+  .experience-page h2,
+  .references-page h2,
+  .contact-page h2,
+  .history-page h2,
+  .company-section__heading h2,
+  .section-title {
+    font-size: clamp(1.65rem, 7vw, 2rem) !important;
+    line-height: 1.24 !important;
+    letter-spacing: -0.015em !important;
+  }
+
+  .service-task-overview__head > p:not(.section-label),
+  .service-task-focus__head > p,
+  .service-task-detail__head > p,
+  .service-standard-section__head > p,
+  .concept-materials__head > p:not(.section-label),
+  .conceptual-details__head > p,
+  .conceptual-document-head > p:not(.section-label),
+  .section-note,
+  .body-copy {
+    font-size: 0.92rem !important;
+    line-height: 1.75 !important;
+  }
+}
