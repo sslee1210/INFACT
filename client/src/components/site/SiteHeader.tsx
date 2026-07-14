@@ -320,8 +320,14 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
       >
         <div className="home-nav__mobile-panel-inner">
           <div className="home-nav__mobile-panel-head">
-            <span>MENU</span>
-            <strong>IN-FACT</strong>
+            <div
+              className="home-nav__mobile-today"
+              aria-label={`오늘 방문자 ${todayCount}명`}
+            >
+              <span>TODAY</span>
+              <strong>{todayCount}</strong>
+            </div>
+            <span className="home-nav__mobile-panel-label">MENU</span>
           </div>
 
           <div className="home-nav__mobile-groups">

@@ -149,8 +149,9 @@ export default function ServiceCSV() {
               compact
             />
 
-            <figure className="csv-vmodel">
+            <figure className="csv-vmodel-fit">
               <img
+                className="csv-vmodel-fit__image"
                 src="./images/service/csv-validation-v-model.png"
                 alt="Business, Design, Implementation, On-going Framework가 적용된 CSV V-Model"
               />
@@ -274,42 +275,39 @@ export default function ServiceCSV() {
             />
 
             <div className="csv-framework-roadmap">
-              <div className="csv-framework-roadmap__head" aria-hidden="true">
-                <span>단계</span>
-                <span>핵심 검토·수행 내용</span>
-                <span>대표 산출물</span>
-              </div>
+              <div className="csv-framework-roadmap__rail" aria-hidden="true" />
 
-              <div className="csv-framework-roadmap__body">
-                {businessFrameworkRows.map((row) => (
-                  <article key={row.stepEn} className="csv-framework-roadmap__stage">
-                    <div className="csv-framework-roadmap__phase">
-                      <span className="csv-framework-roadmap__phase-no">{row.phase}</span>
-                      <div>
-                        <strong>{row.stepKo}</strong>
-                        <em>{row.stepEn}</em>
-                      </div>
+              {businessFrameworkRows.map((row, index) => (
+                <article key={row.stepEn} className="csv-framework-roadmap__stage">
+                  <div className="csv-framework-roadmap__phase">
+                    <span>{row.phase}</span>
+                    <strong>{row.stepKo}</strong>
+                    <em>{row.stepEn}</em>
+                  </div>
+
+                  <div className="csv-framework-roadmap__content">
+                    <div className="csv-framework-roadmap__purpose">{row.purpose}</div>
+
+                    <div className="csv-framework-roadmap__details">
+                      {row.details.map(([title, description]) => (
+                        <div key={title}>
+                          <strong>{title}</strong>
+                          <p>{description}</p>
+                        </div>
+                      ))}
                     </div>
+                  </div>
 
-                    <div className="csv-framework-roadmap__content">
-                      <div className="csv-framework-roadmap__purpose">{row.purpose}</div>
+                  <div className="csv-framework-roadmap__output">
+                    <span>OUTPUT</span>
+                    <strong>{row.deliverable}</strong>
+                  </div>
 
-                      <div className="csv-framework-roadmap__details">
-                        {row.details.map(([title, description]) => (
-                          <div key={title} className="csv-framework-roadmap__detail">
-                            <strong>{title}</strong>
-                            <p>{description}</p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="csv-framework-roadmap__output">
-                      <strong>{row.deliverable}</strong>
-                    </div>
-                  </article>
-                ))}
-              </div>
+                  {index !== businessFrameworkRows.length - 1 && (
+                    <span className="csv-framework-roadmap__arrow" aria-hidden="true" />
+                  )}
+                </article>
+              ))}
             </div>
           </div>
         </section>

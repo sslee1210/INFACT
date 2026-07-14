@@ -1,53 +1,51 @@
-모바일 최종 보완 — V-Model / 우측 Drawer / 오각형 15% 확대
+현재 GitHub main 기준 최종 모바일 보완
+기준 commit: 27c696c23854d8e798208e80022bcab9aeb00c8c
 
-기준
-- GitHub latest committed responsive baseline: f6580e80220ac5c8ebd6b4575659a3f19daa3663
-- 이전 Contact 중앙정렬 수정도 함께 포함
+1. 모바일 메뉴 상단
+- 회사소개가 상단에 너무 붙던 문제 수정
+- Drawer 내부 top padding 확대
+- 메뉴 그룹 전 TODAY / MENU 메타 행 추가
+- 왼쪽: TODAY + 오늘 방문자 수
+- 오른쪽: MENU
+- 메타 행 아래 여백 추가
 
-1. CSV V-Model
-기존 문제:
-.csv-vmodel img 자체에 width:130%, margin:0 -15%가 걸려 있어
-모바일에서도 이미지가 컨테이너 밖으로 나갈 가능성이 있었음.
+2. 오각형
+- 기존 모바일 115%에서 약 10% 추가 확대
+- 126%, 최대 545px
+- max-width 110vw
+- 중앙 정렬 유지
 
-이번 수정:
-- 기본(모바일/태블릿): figure 100%, image 100%, max-width 100%
-- 이미지 전체 도식이 컨테이너 안에 완전히 표시
-- 데스크톱 1200px 이상에서만 figure 자체를 130% 확대
-- 즉 모바일에서 절대 130% 확대가 적용되지 않음
+3. V-Model
+실제 원인:
+service-csv-page.css 하단에
+@media (max-width: 720px) {
+  .csv-vmodel { overflow-x: auto; }
+  .csv-vmodel img { min-width: 900px; }
+}
+가 남아 있어 모바일에서 강제로 900px 폭이 됨.
 
-2. 모바일 토글 메뉴
-기존:
-- panel top이 header 높이 아래에서 시작
-- 모바일에서 full width라 아래로 펼쳐지는 메뉴처럼 느껴질 수 있음
+수정:
+- 기존 csv-vmodel 클래스를 더 이상 사용하지 않음
+- ServiceCSV.tsx에서 csv-vmodel-fit / csv-vmodel-fit__image로 클래스 교체
+- 기존 900px min-width 규칙 제거
+- 모바일/태블릿에서 width/max-width 100%, min-width 0 강제
+- 기존 다른 CSS의 .csv-vmodel 규칙과 완전히 분리
+- 데스크톱 1200px 이상에서만 130% 확대 유지
 
-변경:
-- viewport 오른쪽 끝에서 슬라이드 인
-- top:0 / full viewport height
-- phone: 최대 380px 또는 화면의 88%
-- tablet: 최대 430px
-- header는 drawer 위에 유지
-- drawer 내부 콘텐츠만 header 높이 아래부터 시작
-- scrim은 전체 viewport 덮음
-
-3. 메인 홈페이지 오각형
-- 모바일 width를 기존 대비 약 15% 확대
-- left:50% + translateX(-50%)로 정확한 중앙 유지
-- max-width:100vw로 화면 밖 과도한 침범 방지
-
-4. Contact
-- 문의하기 / 수행실적 보기 버튼의 실제 가로·세로 중앙정렬 유지
-
-적용 파일
+수정 파일
+- client/src/components/site/SiteHeader.tsx
 - client/src/styles/common/responsive-foundation.css
 - client/src/styles/pages/home-mobile-polish.css
-- client/src/styles/pages/home-responsive-stage2.css
+- client/src/pages/ServiceCSV.tsx
 - client/src/styles/pages/service-csv-page.css
 
-실행
+적용 후
 corepack pnpm dev
 
 강력 새로고침
 Ctrl + Shift + R
 
-확인 폭
-390 / 430 / 768 / 1024 / 1200
+확인
+- 모바일 메뉴: 390 / 430
+- 오각형: 390 / 430
+- CSV V-Model: 390 / 430 / 768 / 1024

@@ -7,30 +7,54 @@
   margin-bottom: 0;
 }
 
-.csv-vmodel {
+
+/* =========================================================
+   Collision-proof V-Model presentation
+   Uses a unique class so legacy .csv-vmodel responsive rules
+   cannot enlarge or crop the diagram on mobile.
+   ========================================================= */
+
+.csv-vmodel-fit {
   width: 100%;
   max-width: 100%;
   margin: 0;
   padding: 0;
+  overflow: visible;
   background: transparent;
   border: 0;
-  overflow: visible;
+  box-sizing: border-box;
 }
 
-.csv-vmodel img {
+.csv-vmodel-fit__image {
   display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  object-fit: contain;
-  object-position: center center;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  transform: none !important;
+  object-fit: contain !important;
+  object-position: center center !important;
 }
 
-/* Desktop keeps the intentionally enlarged 130% presentation.
-   The figure grows, not the image inside a narrow mobile container. */
+@media (max-width: 1199px) {
+  .csv-framework-section .csv-vmodel-fit {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: clamp(28px, 4vw, 44px) auto 0 !important;
+    overflow: visible !important;
+  }
+
+  .csv-framework-section .csv-vmodel-fit__image {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+  }
+}
+
 @media (min-width: 1200px) {
-  .csv-vmodel {
+  .csv-vmodel-fit {
     width: 130%;
     max-width: none;
     margin-left: -15%;
@@ -154,29 +178,15 @@
   margin-right: 10px;
   color: var(--home-blue);
 }
-
 @media (max-width: 1120px) {
-  .csv-vmodel img {
-    width: 100%;
-    margin: 0;
-  }
-
-  .csv-lifecycle-grid {
+.csv-lifecycle-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
   }
 }
 
 @media (max-width: 720px) {
-  .csv-vmodel {
-    overflow-x: auto;
-  }
-
-  .csv-vmodel img {
-    min-width: 900px;
-  }
-
-  .csv-lifecycle-grid {
+.csv-lifecycle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
