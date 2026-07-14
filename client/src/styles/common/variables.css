@@ -13,6 +13,8 @@
   --home-bg: #f4f6ff;
   --home-panel: #ffffff;
   --home-tint: #eef2ff;
+
+  /* 16-inch / 1920px baseline */
   --site-content-max: 1440px;
   --site-edge-gutter: clamp(24px, 12.5vw, 240px);
   --site-gutter: var(--site-edge-gutter);
@@ -24,22 +26,27 @@
     var(--site-edge-gutter),
     calc((100% - var(--site-content-max)) / 2)
   );
+
   --nav-menu-item-width: 7.2vw;
   --nav-menu-gap: 0.55vw;
   --nav-menu-open-item-width: 10.8vw;
   --nav-menu-open-gap: 0.9vw;
+
   --fluid-gap-xs: clamp(8px, 0.8vw, 12px);
   --fluid-gap-sm: clamp(12px, 1vw, 18px);
   --fluid-gap-md: clamp(18px, 1.6vw, 28px);
   --fluid-gap-lg: clamp(28px, 2.6vw, 40px);
   --fluid-gap-xl: clamp(40px, 4.5vw, 56px);
   --fluid-gap-2xl: clamp(48px, 5.8vw, 96px);
+
   --fluid-section-pad-top: clamp(112px, 8.8vw, 136px);
   --fluid-section-pad-bottom: clamp(120px, 9.2vw, 148px);
   --fluid-section-space: clamp(48px, 5.8vw, 96px);
+
   --fluid-content-max: clamp(520px, 42vw, 640px);
   --fluid-content-wide: clamp(620px, 52vw, 760px);
   --fluid-content-xl: clamp(720px, 60vw, 880px);
+
   --fluid-pill-height: clamp(28px, 2vw, 30px);
   --fluid-pill-pad-x: clamp(12px, 1.1vw, 14px);
   --fluid-button-height: clamp(48px, 3.7vw, 54px);
@@ -47,11 +54,67 @@
   --fluid-button-min-width: clamp(170px, 14vw, 188px);
   --fluid-card-radius: clamp(12px, 1.2vw, 16px);
   --fluid-card-radius-lg: clamp(22px, 2vw, 28px);
+
   --fluid-nav-height: clamp(72px, 5.5vw, 80px);
   --fluid-nav-logo-height: clamp(24px, 1.9vw, 28px);
   --fluid-subnav-height: clamp(62px, 5vw, 70px);
   --fluid-site-main-offset: clamp(84px, 6.4vw, 92px);
+
   --fluid-intro-min-height: clamp(380px, 34vw, 460px);
   --fluid-intro-pad-top: clamp(116px, 9.6vw, 138px);
   --fluid-intro-pad-bottom: clamp(88px, 7.8vw, 108px);
+}
+
+/* =========================================================
+   DESKTOP SCALE SYSTEM
+   1920px is the visual baseline.
+   Above 1920px, the entire site scales proportionally:
+   header + main content + footer + typography + spacing.
+   ========================================================= */
+
+@media (min-width: 1920px) {
+  html {
+    /* 1920px -> 16px, 2560px -> 21.333px, 3840px -> 32px */
+    font-size: 0.833333vw;
+  }
+
+  :root {
+    /* 1920 baseline: 240px margin / 1440px content.
+       Because these are rem-based, they grow at exactly the same ratio
+       as the viewport on larger screens. */
+    --site-content-max: 90rem;
+    --site-edge-gutter: 15rem;
+
+    --fluid-gap-xs: 0.75rem;
+    --fluid-gap-sm: 1.125rem;
+    --fluid-gap-md: 1.75rem;
+    --fluid-gap-lg: 2.5rem;
+    --fluid-gap-xl: 3.5rem;
+    --fluid-gap-2xl: 6rem;
+
+    --fluid-section-pad-top: 8.5rem;
+    --fluid-section-pad-bottom: 9.25rem;
+    --fluid-section-space: 6rem;
+
+    --fluid-content-max: 40rem;
+    --fluid-content-wide: 47.5rem;
+    --fluid-content-xl: 55rem;
+
+    --fluid-pill-height: 1.875rem;
+    --fluid-pill-pad-x: 0.875rem;
+    --fluid-button-height: 3.375rem;
+    --fluid-button-pad-x: 1.5rem;
+    --fluid-button-min-width: 11.75rem;
+    --fluid-card-radius: 1rem;
+    --fluid-card-radius-lg: 1.75rem;
+
+    --fluid-nav-height: 5rem;
+    --fluid-nav-logo-height: 1.75rem;
+    --fluid-subnav-height: 4.375rem;
+    --fluid-site-main-offset: 5.75rem;
+
+    --fluid-intro-min-height: 28.75rem;
+    --fluid-intro-pad-top: 8.625rem;
+    --fluid-intro-pad-bottom: 6.75rem;
+  }
 }

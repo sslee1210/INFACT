@@ -1,12 +1,77 @@
-V-Model max-inline-size 수정
+홈페이지 데스크톱 전면 재구축
 
-변경:
-태블릿 / 데스크톱
-max-inline-size: 70% !important;
-→
-max-inline-size: 60% !important;
+문제 원인
+1. 헤더/푸터는 공통 max 1440px 컨테이너 사용
+2. 홈페이지 본문만 home.css에서 max 2160px로 별도 확장
+3. 2200px 이상에서는 회사소개 / About / Experience / Service가
+   각각 다른 비율로 추가 확대
+4. 고정 px 값과 rem/vw 값이 섞여서 32인치/4K에서
+   텍스트, 이미지, 위치, 섹션 간격이 서로 다른 비율로 변함
 
-모바일 100% 규칙은 유지합니다.
+새 기준
+- 1920px = 16인치 데스크톱 기준 캔버스
+- 1920px 이하 기존 디자인 유지
+- 1920px 이상은 전체 사이트가 동일 비율로 확대
+- Header / Main / Footer 모두 같은 콘텐츠 폭과 좌우 여백
+- 특정 섹션만 2200px에서 갑자기 1.5배 커지는 예외 제거
 
-수정 파일:
-client/src/styles/pages/service-csv-page.css
+핵심 방식
+@media (min-width: 1920px) {
+  html { font-size: 0.833333vw; }
+}
+
+1920px -> root 16px
+2560px -> root 21.33px
+3840px -> root 32px
+
+공통 레이아웃
+1920px 기준:
+- 좌우 여백 240px
+- 콘텐츠 1440px
+
+2560px:
+- 좌우 여백 320px
+- 콘텐츠 1920px
+
+3840px:
+- 좌우 여백 480px
+- 콘텐츠 2880px
+
+즉 모든 화면에서 동일한 12.5% / 75% / 12.5% 비율 유지.
+
+수정 파일
+- client/src/styles/common/variables.css
+- client/src/styles/pages/home.css
+- client/src/styles/common/responsive-refinement-stage8.css
+
+보정 대상
+- Header / Footer 공통 스케일
+- 회사소개
+- About / 오각형
+- Experience
+- Service
+- Service 카드
+- Contact CTA
+
+적용
+프로젝트 루트에 client 폴더를 그대로 덮어쓰기
+
+실행
+corepack pnpm build
+corepack pnpm dev
+
+브라우저
+Ctrl + Shift + R
+
+확인 폭
+1728
+1920
+2560
+3440
+3840
+
+기대 결과
+- 화면이 커져도 레이아웃 구도가 바뀌지 않음
+- 헤더 / 본문 / 푸터 좌우 기준선 일치
+- 텍스트 / 이미지 / 여백이 한꺼번에 동일 비율로 확대
+- 2200px에서 갑자기 레이아웃이 바뀌지 않음

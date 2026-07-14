@@ -1039,10 +1039,10 @@
   .service-csv-page .csv-framework-section .csv-vmodel-fit__image,
   .csv-framework-section .csv-vmodel-fit__image,
   .csv-vmodel-fit__image {
-    width: 70% !important;
-    inline-size: 70% !important;
-    max-width: 70% !important;
-    max-inline-size: 60% !important;
+    width: min(60%, 760px) !important;
+    inline-size: min(60%, 760px) !important;
+    max-width: 760px !important;
+    max-inline-size: 760px !important;
     min-width: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -1056,10 +1056,10 @@
   .service-csv-page .csv-framework-section .csv-vmodel-fit__image,
   .csv-framework-section .csv-vmodel-fit__image,
   .csv-vmodel-fit__image {
-    width: 70% !important;
-    inline-size: 70% !important;
-    max-width: 70% !important;
-    max-inline-size: 60% !important;
+    width: min(60%, 960px) !important;
+    inline-size: min(60%, 960px) !important;
+    max-width: 960px !important;
+    max-inline-size: 960px !important;
     min-width: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;

@@ -25,6 +25,7 @@
     #2c368f 52%,
     #6570d2 100%
   );
+
   --home-section-gap: clamp(48px, 5.6vw, 108px);
   --home-section-pad-top: clamp(80px, 7vw, 112px);
   --home-section-pad-bottom: clamp(80px, 7vw, 112px);
@@ -43,7 +44,9 @@
 }
 
 .home-main {
-  --site-content-width: min(calc(100% - (clamp(24px, 12.5vw, 360px) * 2)), 2160px);
+  /* Important:
+     Do NOT redefine --site-content-width here.
+     Header, main content and footer must use the same global container. */
   overflow-x: clip;
   background: var(--brand-surface);
 }
@@ -119,6 +122,25 @@
 
 .hero.home-focus-section .hero__inner {
   min-height: 100dvh;
+}
+
+/* Proportional home tokens above the 1920px baseline. */
+@media (min-width: 1920px) {
+  :root {
+    --home-section-gap: 6.75rem;
+    --home-section-pad-top: 7rem;
+    --home-section-pad-bottom: 7rem;
+    --home-story-section-height: 51.25rem;
+    --home-standard-section-height: 51.25rem;
+    --home-compact-section-height: 41.25rem;
+    --home-band-section-height: 35rem;
+    --home-content-max: 60rem;
+    --home-media-radius: 1.75rem;
+    --home-pill-height: 1.875rem;
+    --home-pill-pad-x: 0.875rem;
+    --home-button-height: 3.375rem;
+    --home-button-pad-x: 1.5rem;
+  }
 }
 
 @media (max-width: 860px) {

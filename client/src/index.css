@@ -59,3 +59,6 @@
 
 /* Stage 8 — targeted mobile corrections */
 @import "./styles/common/responsive-refinement-stage8.css";
+
+/* Ultra-wide desktop correction — 32-inch / 2200px+ */
+@import "./styles/common/ultrawide-layout-fix.css";
