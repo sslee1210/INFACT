@@ -3,13 +3,16 @@ import path from "node:path";
 import process from "node:process";
 
 const root = process.cwd();
-const stylesRoot = path.join(root, "client", "src", "styles");
+const sourceRoot = path.join(root, "client", "src");
+const stylesRoot = path.join(sourceRoot, "styles");
 
-function walkCssFiles(directory) {
+function walkFiles(directory, extensions) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const fullPath = path.join(directory, entry.name);
-    if (entry.isDirectory()) return walkCssFiles(fullPath);
-    if (!entry.isFile() || !entry.name.endsWith(".css")) return [];
+    if (entry.isDirectory()) return walkFiles(fullPath, extensions);
+    if (!entry.isFile() || !extensions.some((extension) => entry.name.endsWith(extension))) {
+      return [];
+    }
     return [fullPath];
   });
 }
@@ -22,8 +25,24 @@ function read(relativePath) {
   return fs.readFileSync(path.join(root, relativePath), "utf8");
 }
 
+function normalizeCssImport(importerFile, specifier) {
+  let absolutePath;
+
+  if (specifier.startsWith("@/")) {
+    absolutePath = path.join(sourceRoot, specifier.slice(2));
+  } else if (specifier.startsWith("./") || specifier.startsWith("../")) {
+    absolutePath = path.resolve(path.dirname(importerFile), specifier);
+  } else {
+    return null;
+  }
+
+  return relative(absolutePath);
+}
+
 const errors = [];
-const cssFiles = walkCssFiles(stylesRoot);
+const warnings = [];
+const cssFiles = walkFiles(stylesRoot, [".css"]);
+const sourceFiles = walkFiles(sourceRoot, [".ts", ".tsx"]);
 
 const forbiddenPathPatterns = [
   { pattern: /stage\d+/i, label: "Stage 번호 기반 CSS 파일명" },
@@ -92,8 +111,64 @@ for (const pattern of ["100vw", "calc(50% - 50vw)"]) {
   }
 }
 
+/* Single CSS entrypoint ownership: a stylesheet already imported by index.css
+   must not also be imported from TS/TSX modules. */
+const indexPath = path.join(sourceRoot, "index.css");
+const indexSource = fs.readFileSync(indexPath, "utf8");
+const globalCssImports = new Set(
+  [...indexSource.matchAll(/@import\s+["']([^"']+\.css)["'];/g)]
+    .map((match) => normalizeCssImport(indexPath, match[1]))
+    .filter(Boolean),
+);
+
+for (const sourceFile of sourceFiles) {
+  const source = fs.readFileSync(sourceFile, "utf8");
+  for (const match of source.matchAll(/import\s+["']([^"']+\.css)["'];/g)) {
+    const normalized = normalizeCssImport(sourceFile, match[1]);
+    if (normalized && globalCssImports.has(normalized)) {
+      errors.push(
+        `${relative(sourceFile)} — index.css와 중복 CSS import: ${normalized}`,
+      );
+    }
+  }
+}
+
+/* Strict budgets only for files whose cascade ownership has already been cleaned.
+   Other files are reported below so they can be reduced incrementally. */
+const importantBudgets = new Map([
+  ["client/src/styles/common/responsive-safety.css", 3],
+  ["client/src/styles/pages/company-history-responsive.css", 0],
+  ["client/src/styles/pages/home-experience.css", 0],
+  ["client/src/styles/pages/home-cta.css", 0],
+]);
+
+const importantCounts = cssFiles
+  .map((file) => {
+    const filePath = relative(file);
+    const count = (fs.readFileSync(file, "utf8").match(/!important/g) ?? []).length;
+    return { filePath, count };
+  })
+  .sort((a, b) => b.count - a.count || a.filePath.localeCompare(b.filePath));
+
+for (const { filePath, count } of importantCounts) {
+  const budget = importantBudgets.get(filePath);
+  if (budget !== undefined && count > budget) {
+    errors.push(`${filePath} — !important ${count}개, 허용 예산 ${budget}개 초과`);
+  }
+}
+
+for (const { filePath, count } of importantCounts.filter((item) => item.count > 0).slice(0, 10)) {
+  warnings.push(`${filePath}: !important ${count}개`);
+}
+
 console.log("\n[IN-FACT CSS Ownership Check]");
 console.log(`검사 CSS 파일: ${cssFiles.length}개`);
+console.log(`전역 index.css import: ${globalCssImports.size}개`);
+
+if (warnings.length > 0) {
+  console.log("\n[참고: !important 밀도 상위 파일]");
+  for (const warning of warnings) console.log(`- ${warning}`);
+}
 
 if (errors.length > 0) {
   console.error("\n[FAIL]");
@@ -106,3 +181,5 @@ console.log("- Stage/patch/polish/ultrawide 파일명 없음");
 console.log("- Home 대형 화면 2200px 전용 확대 규칙 없음");
 console.log("- Home Experience 소유 범위 정리 상태 유지");
 console.log("- Home Experience/CTA viewport breakout 계산 없음");
+console.log("- index.css와 TS/TSX 간 중복 CSS import 없음");
+console.log("- 정리 완료 파일의 !important 예산 준수");
