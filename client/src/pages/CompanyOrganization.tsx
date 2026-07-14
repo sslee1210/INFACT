@@ -59,35 +59,48 @@ export default function CompanyOrganization() {
             </div>
           </div>
 
-          {/* Mobile hierarchy: each level owns its own grid and connectors. */}
+          {/* Mobile hierarchy: vertical spine with nested branch groups. */}
           <div className="org-mobile-tree" aria-label="INFACT 모바일 조직도">
             <div className="org-mobile-tree__lead">대표이사</div>
 
-            <div className="org-mobile-tree__primary-grid">
-              <div className="org-mobile-tree__card org-mobile-tree__card--primary">
-                경영 지원 사업부
+            <div className="org-mobile-branch">
+              <div className="org-mobile-branch__item">
+                <div className="org-mobile-branch__node org-mobile-branch__node--primary">
+                  경영 지원 사업부
+                </div>
               </div>
-              <div className="org-mobile-tree__card org-mobile-tree__card--primary">
-                영업&amp;마케팅 사업부
-              </div>
-              <div className="org-mobile-tree__card org-mobile-tree__card--primary">
-                밸리데이션 사업부
-              </div>
-            </div>
 
-            <div className="org-mobile-tree__secondary-grid">
-              <div className="org-mobile-tree__card org-mobile-tree__card--secondary">
-                GMP 사업부
+              <div className="org-mobile-branch__item">
+                <div className="org-mobile-branch__node org-mobile-branch__node--primary">
+                  영업&amp;마케팅 사업부
+                </div>
               </div>
-              <div className="org-mobile-tree__card org-mobile-tree__card--secondary">
-                CSV 사업부
-              </div>
-            </div>
 
-            <div className="org-mobile-tree__teams-grid">
-              <div className="org-mobile-tree__card org-mobile-tree__card--team">자동제어</div>
-              <div className="org-mobile-tree__card org-mobile-tree__card--team">CSV 1팀</div>
-              <div className="org-mobile-tree__card org-mobile-tree__card--team">CSV 2팀</div>
+              <div className="org-mobile-branch__item org-mobile-branch__item--validation">
+                <div className="org-mobile-branch__node org-mobile-branch__node--primary org-mobile-branch__node--validation">
+                  밸리데이션 사업부
+                </div>
+
+                <div className="org-mobile-branch__children">
+                  <div className="org-mobile-branch__child">
+                    <div className="org-mobile-branch__node org-mobile-branch__node--secondary">
+                      GMP 사업부
+                    </div>
+                  </div>
+
+                  <div className="org-mobile-branch__child org-mobile-branch__child--csv">
+                    <div className="org-mobile-branch__node org-mobile-branch__node--secondary org-mobile-branch__node--csv">
+                      CSV 사업부
+                    </div>
+
+                    <div className="org-mobile-branch__teams">
+                      <div className="org-mobile-branch__team">자동제어</div>
+                      <div className="org-mobile-branch__team">CSV 1팀</div>
+                      <div className="org-mobile-branch__team">CSV 2팀</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
