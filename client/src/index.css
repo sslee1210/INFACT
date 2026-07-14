@@ -59,7 +59,6 @@
 
 /* Shared + remaining page-owned 1920px+ large-desktop rules. */
 @import "./styles/common/large-desktop-layout.css";
-@import "./styles/pages/home-about-large-desktop.css";
 @import "./styles/pages/home-experience-large-desktop.css";
 
 /* Stage 8 — targeted mobile corrections only */
