@@ -157,8 +157,6 @@
   .home-cta-banner__button {
     font-size: clamp(1.15rem, 2vw, 1.5rem) !important;
   }
-
-
 }
 
 /* MOBILE — 0 ~ 767 */
@@ -550,8 +548,6 @@
     color: inherit !important;
     background: currentColor !important;
   }
-
-
 }
 
 @media (max-width: 390px) {
@@ -585,8 +581,6 @@
   .home-cta-banner__content h2 {
     font-size: clamp(1.95rem, 8.8vw, 2.4rem) !important;
   }
-
-
 }
 
 @media (max-width: 900px) and (orientation: landscape) and (max-height: 560px) {
@@ -619,5 +613,63 @@
   .hero::before {
     animation: none !important;
     transition: none !important;
+  }
+}
+
+/* 1920px+ EXPERIENCE
+   Canonical large-desktop values live in the existing home responsive layer.
+   They intentionally override the legacy 2200px-only expansion still present
+   in home-experience.css until that oversized source file is split safely. */
+@media (min-width: 1920px) {
+  .home-experience::after {
+    top: clamp(-11.875rem, -11vw, -8.75rem) !important;
+    right: clamp(-32.5rem, -31vw, -21.875rem) !important;
+    width: clamp(40rem, 52vw, 88.125rem) !important;
+  }
+
+  .home-experience {
+    gap: clamp(4.5rem, 8vw, 7.75rem) !important;
+    padding-top: clamp(5rem, 7.4vw, 7.75rem) !important;
+    padding-bottom: clamp(1rem, 1.6vw, 1.5rem) !important;
+  }
+
+  .home-experience__head {
+    max-width: 45rem !important;
+  }
+
+  .home-experience__head p:not(.home-experience__label) {
+    max-width: 32.5rem !important;
+  }
+
+  .home-experience__metric {
+    min-height: clamp(11.25rem, 14vw, 13.375rem) !important;
+    gap: 0.625rem !important;
+    padding-top: clamp(1.5rem, 2.2vw, 2.125rem) !important;
+  }
+
+  .home-experience__metric-icon {
+    top: clamp(-3.75rem, -4vw, -3rem) !important;
+    width: clamp(2.125rem, 2.7vw, 2.625rem) !important;
+    height: clamp(2.125rem, 2.7vw, 2.625rem) !important;
+  }
+
+  .home-experience__metric strong {
+    font-size: clamp(2rem, 2.45vw, 2.72rem) !important;
+  }
+
+  .home-experience__metric span {
+    font-size: clamp(0.9rem, 0.92vw, 1.02rem) !important;
+  }
+
+  .home-experience__client-marquee {
+    padding: clamp(1.25rem, 2.2vw, 2.125rem) 0 !important;
+  }
+
+  .home-experience__client-track {
+    gap: clamp(3.375rem, 6vw, 7.25rem) !important;
+  }
+
+  .home-experience__client {
+    font-size: clamp(1.08rem, 1.28vw, 1.62rem) !important;
   }
 }
