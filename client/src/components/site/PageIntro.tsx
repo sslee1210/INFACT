@@ -1,4 +1,4 @@
-import { useMemo, type CSSProperties } from "react";
+import { useEffect, useMemo, type CSSProperties } from "react";
 
 type PageIntroProps = {
   label: string;
@@ -8,6 +8,7 @@ type PageIntroProps = {
 };
 
 const DEFAULT_INTRO_IMAGE = "./images/sub/banner.jpg";
+const SITE_NAME = "INFACT";
 
 export function PageIntro({ label, title, description, image }: PageIntroProps) {
   const animationStyle = useMemo(() => {
@@ -19,6 +20,26 @@ export function PageIntro({ label, title, description, image }: PageIntroProps) 
       "--page-intro-image": `url("${introImage}")`,
     } as CSSProperties;
   }, [image]);
+
+  useEffect(() => {
+    const previousTitle = document.title;
+    const descriptionMeta = document.querySelector<HTMLMetaElement>(
+      'meta[name="description"]',
+    );
+    const previousDescription = descriptionMeta?.content;
+
+    document.title = `${title} | ${SITE_NAME}`;
+    if (description && descriptionMeta) {
+      descriptionMeta.content = description;
+    }
+
+    return () => {
+      document.title = previousTitle;
+      if (descriptionMeta && previousDescription !== undefined) {
+        descriptionMeta.content = previousDescription;
+      }
+    };
+  }, [description, title]);
 
   return (
     <section className="page-intro" style={animationStyle}>
