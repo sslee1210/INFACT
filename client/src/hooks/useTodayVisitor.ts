@@ -1,34 +1,52 @@
 import { useEffect, useState } from "react";
 
+const VISIT_DATE_KEY = "infact_visit_date";
+const VISIT_COUNT_KEY = "infact_today_count";
+
+function getSeoulDateKey(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 export function useTodayVisitor() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const todayKey = "infact_visit_date";
-    const countKey = "infact_today_count";
-    const sessionKey = "infact_counted_this_session";
+    // GitHub Pages is a static deployment, so this is intentionally a
+    // browser-local fallback count rather than a site-wide analytics total.
+    try {
+      const today = getSeoulDateKey();
+      const sessionKey = `infact_counted_session_${today}`;
+      const storedDate = localStorage.getItem(VISIT_DATE_KEY);
 
-    const today = new Date().toISOString().slice(0, 10);
-    const storedDate = localStorage.getItem(todayKey);
-    const countedInSession = sessionStorage.getItem(sessionKey);
+      let currentCount = Number.parseInt(localStorage.getItem(VISIT_COUNT_KEY) || "0", 10);
+      if (!Number.isFinite(currentCount) || currentCount < 0) currentCount = 0;
 
-    let currentCount = 0;
+      if (storedDate !== today) {
+        currentCount = 0;
+        localStorage.setItem(VISIT_DATE_KEY, today);
+        localStorage.setItem(VISIT_COUNT_KEY, "0");
+      }
 
-    if (storedDate !== today) {
-      currentCount = 1;
-      localStorage.setItem(todayKey, today);
-      localStorage.setItem(countKey, "1");
-      sessionStorage.setItem(sessionKey, "1");
-    } else {
-      currentCount = Number.parseInt(localStorage.getItem(countKey) || "0", 10);
-      if (!countedInSession) {
+      if (sessionStorage.getItem(sessionKey) !== "1") {
         currentCount += 1;
-        localStorage.setItem(countKey, String(currentCount));
+        localStorage.setItem(VISIT_COUNT_KEY, String(currentCount));
         sessionStorage.setItem(sessionKey, "1");
       }
-    }
 
-    setCount(currentCount);
+      setCount(currentCount);
+    } catch {
+      // Storage can be unavailable in strict privacy modes. Keep the header
+      // stable instead of throwing during initial render.
+      setCount(1);
+    }
   }, []);
 
   return count;
