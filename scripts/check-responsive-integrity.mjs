@@ -171,6 +171,33 @@ for (const requiredImport of requiredImportOrder) {
   previousIndex = currentIndex;
 }
 
+const stage8Path = "client/src/styles/common/responsive-refinement-stage8.css";
+const stage8Source = read(stage8Path);
+const migratedOwnershipSelectors = [
+  {
+    selector: ".home-company-intro",
+    owner: "client/src/styles/pages/home-company-intro.css",
+  },
+];
+
+for (const ownership of migratedOwnershipSelectors) {
+  if (stage8Source.includes(ownership.selector)) {
+    errors.push(
+      `${stage8Path} — 소유권 회귀: ${ownership.selector} 규칙은 ${ownership.owner}에서 관리해야 합니다.`,
+    );
+  }
+}
+
+const companyIntroSource = read("client/src/styles/pages/home-company-intro.css");
+if (
+  !companyIntroSource.includes("@media (min-width: 1920px)") ||
+  !companyIntroSource.includes(".home-company-intro__inner")
+) {
+  errors.push(
+    "client/src/styles/pages/home-company-intro.css — 1920px 이상 회사소개 스케일 규칙이 누락되었습니다.",
+  );
+}
+
 const stage8Index = importMatches.indexOf(
   "./styles/common/responsive-refinement-stage8.css",
 );
@@ -184,6 +211,7 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide override 금지");
+console.log("CSS 소유권 정책: 이전 완료된 섹션은 Stage 8에 다시 정의하지 않음");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
@@ -197,4 +225,5 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
+console.log("- CSS 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
