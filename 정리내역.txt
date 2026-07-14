@@ -1,0 +1,31 @@
+코드 정리 완료
+
+이번 버전은 단순히 마지막에 background:none을 덮어쓴 것이 아니라,
+이전에 누적된 원형/원호 배경 관련 CSS 블록 자체를 삭제했습니다.
+
+삭제한 항목
+- decorative circle pattern
+- random circle background pattern
+- rainbow arc background
+- restrained arc pattern
+- home page radial-gradient motif reuse
+- 이전 restore override 중복 블록
+- service-business-section / overview의 원형 pseudo-element 규칙
+- nth-child 기반 background-image 규칙
+
+최종 상태
+- 개념설계 / GMP / CSV 사업안내 페이지 배경: 순수 #fff
+- background-image: none
+- 관련 ::before / ::after 장식 완전 차단
+
+수정 파일
+- client/src/styles/pages/service-business-layout.css
+- client/src/styles/pages/service-csv-page.css
+
+적용
+cd "/c/Users/sslee/Desktop/05. 전문/0. INFACT"
+corepack pnpm build
+corepack pnpm dev
+
+브라우저
+Ctrl + Shift + R

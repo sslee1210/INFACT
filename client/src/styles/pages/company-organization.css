@@ -25,19 +25,28 @@
   --blue-strong: var(--home-blue-strong);
   --node-width: clamp(172px, 17vw, 220px);
   --secondary-node-width: clamp(144px, 13vw, 168px);
+  --tertiary-node-width: clamp(138px, 12vw, 160px);
   --node-height: clamp(66px, 6.2vw, 78px);
+  --tertiary-node-height: clamp(58px, 5.5vw, 68px);
   --lead-width: clamp(152px, 14vw, 180px);
+
   --lead-left: 50%;
   --primary-left-1: 18%;
   --primary-left-2: 50%;
   --primary-left-3: 82%;
+
   --secondary-left-1: 74%;
   --secondary-left-2: 90%;
 
+  /* CSV 사업부 하위 3개 팀 */
+  --tertiary-left-1: 72%;
+  --tertiary-left-2: 84%;
+  --tertiary-left-3: 96%;
+
   position: relative;
-  width: min(100%, clamp(880px, 84vw, 1120px));
+  width: min(100%, clamp(980px, 90vw, 1240px));
   max-width: 100%;
-  aspect-ratio: 1120 / 560;
+  aspect-ratio: 1240 / 760;
   height: auto;
   margin: 0 auto;
   background: #fff;
@@ -86,6 +95,16 @@
   font-weight: 820;
 }
 
+.org-box--tertiary {
+  min-height: var(--tertiary-node-height);
+  background: #fff;
+  border: 1.5px solid #8f98a8;
+  border-radius: 0;
+  color: var(--home-text);
+  font-size: 0.92rem;
+  font-weight: 820;
+}
+
 /* 대표이사 */
 .org-fixed__lead {
   position: absolute;
@@ -98,7 +117,7 @@
 /* 1차 조직 */
 .org-fixed__primary {
   position: absolute;
-  top: 39%;
+  top: 29%;
   width: var(--node-width);
   transform: translateX(-50%);
 }
@@ -115,7 +134,7 @@
   left: var(--primary-left-3);
 }
 
-/* 메인 연결선 */
+/* 모든 연결선 공통 */
 .org-fixed__main-v,
 .org-fixed__main-h,
 .org-fixed__main-v1,
@@ -124,52 +143,58 @@
 .org-fixed__sub-v,
 .org-fixed__sub-h,
 .org-fixed__sub-v1,
-.org-fixed__sub-v2 {
+.org-fixed__sub-v2,
+.org-fixed__csv-v,
+.org-fixed__csv-h,
+.org-fixed__csv-v1,
+.org-fixed__csv-v2,
+.org-fixed__csv-v3 {
   position: absolute;
   background: var(--line);
 }
 
+/* 대표이사 → 1차 조직 */
 .org-fixed__main-v {
   left: var(--lead-left);
-  top: 14%;
+  top: 10%;
   width: 2px;
-  height: 12%;
+  height: 10%;
   transform: translateX(-50%);
 }
 
 .org-fixed__main-h {
   left: var(--primary-left-1);
-  top: 26%;
+  top: 20%;
   width: calc(var(--primary-left-3) - var(--primary-left-1));
   height: 2px;
 }
 
 .org-fixed__main-v1 {
   left: var(--primary-left-1);
-  top: 26%;
+  top: 20%;
   width: 2px;
-  height: 13%;
+  height: 9%;
 }
 
 .org-fixed__main-v2 {
   left: var(--primary-left-2);
-  top: 26%;
+  top: 20%;
   width: 2px;
-  height: 13%;
+  height: 9%;
   transform: translateX(-50%);
 }
 
 .org-fixed__main-v3 {
   left: var(--primary-left-3);
-  top: 26%;
+  top: 20%;
   width: 2px;
-  height: 13%;
+  height: 9%;
 }
 
 /* 2차 조직 */
 .org-fixed__secondary {
   position: absolute;
-  top: 78%;
+  top: 55%;
   width: var(--secondary-node-width);
   transform: translateX(-50%);
 }
@@ -182,35 +207,92 @@
   left: var(--secondary-left-2);
 }
 
-/* 서브 연결선 */
+/* 밸리데이션 사업부 → GMP / CSV */
 .org-fixed__sub-v {
   left: var(--primary-left-3);
-  top: 53%;
+  top: 39%;
   width: 2px;
-  height: 12%;
+  height: 8%;
 }
 
 .org-fixed__sub-h {
   left: var(--secondary-left-1);
-  top: 65%;
+  top: 47%;
   width: calc(var(--secondary-left-2) - var(--secondary-left-1));
   height: 2px;
 }
 
 .org-fixed__sub-v1 {
   left: var(--secondary-left-1);
-  top: 65%;
+  top: 47%;
   width: 2px;
-  height: 13%;
+  height: 8%;
 }
 
 .org-fixed__sub-v2 {
   left: var(--secondary-left-2);
-  top: 65%;
+  top: 47%;
   width: 2px;
-  height: 13%;
+  height: 8%;
 }
 
+/* CSV 사업부 → 자동제어 / CSV 1팀 / CSV 2팀 */
+.org-fixed__csv-v {
+  left: var(--secondary-left-2);
+  top: 65%;
+  width: 2px;
+  height: 7%;
+}
+
+.org-fixed__csv-h {
+  left: var(--tertiary-left-1);
+  top: 72%;
+  width: calc(var(--tertiary-left-3) - var(--tertiary-left-1));
+  height: 2px;
+}
+
+.org-fixed__csv-v1 {
+  left: var(--tertiary-left-1);
+  top: 72%;
+  width: 2px;
+  height: 8%;
+}
+
+.org-fixed__csv-v2 {
+  left: var(--tertiary-left-2);
+  top: 72%;
+  width: 2px;
+  height: 8%;
+}
+
+.org-fixed__csv-v3 {
+  left: var(--tertiary-left-3);
+  top: 72%;
+  width: 2px;
+  height: 8%;
+}
+
+/* 3차 조직 */
+.org-fixed__tertiary {
+  position: absolute;
+  top: 80%;
+  width: var(--tertiary-node-width);
+  transform: translateX(-50%);
+}
+
+.org-fixed__tertiary--1 {
+  left: var(--tertiary-left-1);
+}
+
+.org-fixed__tertiary--2 {
+  left: var(--tertiary-left-2);
+}
+
+.org-fixed__tertiary--3 {
+  left: var(--tertiary-left-3);
+}
+
+/* 모바일: 조직도는 연결선 없이 계층형 리스트로 변환 */
 @media (max-width: 860px) {
   .org-fixed {
     width: var(--site-content-width);
@@ -228,13 +310,19 @@
   .org-fixed__sub-v,
   .org-fixed__sub-h,
   .org-fixed__sub-v1,
-  .org-fixed__sub-v2 {
+  .org-fixed__sub-v2,
+  .org-fixed__csv-v,
+  .org-fixed__csv-h,
+  .org-fixed__csv-v1,
+  .org-fixed__csv-v2,
+  .org-fixed__csv-v3 {
     display: none;
   }
 
   .org-fixed__lead,
   .org-fixed__primary,
-  .org-fixed__secondary {
+  .org-fixed__secondary,
+  .org-fixed__tertiary {
     position: static;
     transform: none;
     width: 100%;
@@ -245,12 +333,23 @@
     justify-self: end;
   }
 
+  .org-fixed__tertiary {
+    width: calc(100% - clamp(56px, 14vw, 88px));
+    justify-self: end;
+  }
+
   .org-box {
     width: 100%;
     max-width: none;
     min-height: clamp(68px, 7vw, 72px);
     border-radius: clamp(16px, 2vw, 18px);
     font-size: 0.94rem;
+  }
+
+  .org-box--tertiary {
+    min-height: clamp(60px, 6vw, 66px);
+    border-radius: clamp(12px, 1.6vw, 14px);
+    font-size: 0.92rem;
   }
 
   .org-box--lead {
@@ -271,5 +370,294 @@
     font-size: clamp(2rem, 8vw, 2.8rem);
     line-height: 1.08;
   }
-  
+}
+
+
+/* =========================================================
+   CSV 하위 조직 간격 보정
+   - CSV 사업부와 하위 팀 사이 세로 간격 확대
+   - 자동제어 / CSV 1팀 / CSV 2팀을 CSV 사업부 중심으로 재배치
+   - GMP 사업부 영역 침범 방지
+   ========================================================= */
+
+.org-fixed {
+  --secondary-left-1: 62.5% !important;
+  --secondary-left-2: 84.5% !important;
+
+  --tertiary-left-1: 75.5% !important;
+  --tertiary-left-2: 85.25% !important;
+  --tertiary-left-3: 95% !important;
+
+  --tertiary-node-width: clamp(118px, 10vw, 138px) !important;
+
+  width: min(100%, 1320px) !important;
+  aspect-ratio: 1320 / 840 !important;
+}
+
+/* GMP / CSV 사업부를 조금 더 위에 유지 */
+.org-fixed__secondary {
+  top: 53% !important;
+}
+
+/* 밸리데이션 → GMP / CSV */
+.org-fixed__sub-v {
+  top: 38% !important;
+  height: 7% !important;
+}
+
+.org-fixed__sub-h {
+  top: 45% !important;
+}
+
+.org-fixed__sub-v1,
+.org-fixed__sub-v2 {
+  top: 45% !important;
+  height: 8% !important;
+}
+
+/* CSV 사업부 아래 연결선을 충분히 띄움 */
+.org-fixed__csv-v {
+  left: var(--secondary-left-2) !important;
+  top: 63.5% !important;
+  height: 10.5% !important;
+}
+
+.org-fixed__csv-h {
+  left: var(--tertiary-left-1) !important;
+  top: 74% !important;
+  width: calc(var(--tertiary-left-3) - var(--tertiary-left-1)) !important;
+}
+
+.org-fixed__csv-v1,
+.org-fixed__csv-v2,
+.org-fixed__csv-v3 {
+  top: 74% !important;
+  height: 10% !important;
+}
+
+/* 하위 팀은 CSV 사업부에서 충분히 아래로 분리 */
+.org-fixed__tertiary {
+  top: 84% !important;
+}
+
+/* 세 팀 박스의 시각적 밀도도 조금 낮춤 */
+.org-box--tertiary {
+  min-height: 62px !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+
+/* 모바일에서는 기존 계층형 배치 유지 */
+@media (max-width: 860px) {
+  .org-fixed {
+    width: var(--site-content-width) !important;
+    aspect-ratio: auto !important;
+  }
+
+  .org-fixed__secondary,
+  .org-fixed__tertiary {
+    top: auto !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   FINAL CSV BRANCH CONNECTOR
+   CSV 사업부 중심에서 3개 하위 팀 중심으로 정확히 연결
+   - 3등분 트랙 중심을 기준으로 선 배치
+   - 박스는 각 트랙 안에서 여백을 두고 중앙 정렬
+   - 데스크톱/태블릿/모바일 반응형
+   ========================================================= */
+
+/* 전체 하위 사업부 균형 */
+.org-fixed {
+  --secondary-left-1: 64%;
+  --secondary-left-2: 84%;
+
+  width: min(100%, 1260px);
+  aspect-ratio: 1260 / 830;
+}
+
+/* 기존 개별 CSV 하위 연결선/노드는 사용하지 않음 */
+.org-fixed__csv-v,
+.org-fixed__csv-h,
+.org-fixed__csv-v1,
+.org-fixed__csv-v2,
+.org-fixed__csv-v3,
+.org-fixed__tertiary,
+.org-fixed__tertiary--1,
+.org-fixed__tertiary--2,
+.org-fixed__tertiary--3 {
+  display: none !important;
+}
+
+/* GMP / CSV 사업부 */
+.org-fixed__secondary {
+  top: 52%;
+}
+
+/* 밸리데이션 사업부 → GMP / CSV */
+.org-fixed__sub-v {
+  top: 38%;
+  height: 7%;
+}
+
+.org-fixed__sub-h {
+  left: var(--secondary-left-1);
+  top: 45%;
+  width: calc(var(--secondary-left-2) - var(--secondary-left-1));
+}
+
+.org-fixed__sub-v1,
+.org-fixed__sub-v2 {
+  top: 45%;
+  height: 7%;
+}
+
+/* CSV 사업부 하위 3개 팀 전체 브랜치 */
+.org-fixed__csv-branch {
+  --branch-width: clamp(420px, 34vw, 480px);
+  --team-line-drop: clamp(40px, 3.6vw, 48px);
+
+  position: absolute;
+  left: var(--secondary-left-2);
+  top: 64%;
+  width: var(--branch-width);
+  height: 27%;
+  transform: translateX(-50%);
+}
+
+/* CSV 사업부 중앙 → 하위 분기 가로선 중앙 */
+.org-fixed__csv-branch::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 42%;
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+/*
+  3개 팀을 gap 없는 정확한 3등분 트랙으로 배치.
+  실제 박스는 각 트랙 안에서 폭을 줄여 여백을 확보하므로
+  중심선은 항상 1/6, 1/2, 5/6 지점에 정확히 일치한다.
+*/
+.org-fixed__csv-team-grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+}
+
+/* 첫 번째 팀 중심 ↔ 세 번째 팀 중심 */
+.org-fixed__csv-team-grid::before {
+  content: "";
+  position: absolute;
+  left: 16.6666667%;
+  right: 16.6666667%;
+  top: 0;
+  height: 2px;
+  background: var(--line);
+}
+
+/* 각 팀 중심으로 정확히 내려오는 세로선 */
+.org-fixed__csv-team {
+  position: relative;
+  min-width: 0;
+  padding-top: var(--team-line-drop);
+  display: flex;
+  justify-content: center;
+}
+
+.org-fixed__csv-team::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: var(--team-line-drop);
+  background: var(--line);
+  transform: translateX(-50%);
+}
+
+/* 팀 박스는 서로 붙지 않도록 트랙 안쪽으로 폭 제한 */
+.org-fixed__csv-team .org-box--tertiary {
+  width: calc(100% - clamp(22px, 2vw, 30px));
+  max-width: 142px;
+  min-height: 64px;
+  padding: 14px 12px;
+  border: 1.5px solid #8f98a8;
+  border-radius: 0;
+  background: #fff;
+  color: var(--home-text);
+  font-size: 0.9rem;
+  font-weight: 820;
+}
+
+/* 중간 크기 화면에서는 브랜치 폭을 유연하게 축소 */
+@media (max-width: 1100px) and (min-width: 861px) {
+  .org-fixed__csv-branch {
+    --branch-width: clamp(360px, 38vw, 430px);
+  }
+
+  .org-fixed__csv-team .org-box--tertiary {
+    width: calc(100% - 18px);
+    max-width: 132px;
+  }
+}
+
+/* 모바일: 연결선 없이 계층형 목록으로 전환 */
+@media (max-width: 860px) {
+  .org-fixed {
+    width: var(--site-content-width);
+    aspect-ratio: auto;
+  }
+
+  .org-fixed__csv-branch {
+    position: static;
+    width: calc(100% - clamp(56px, 14vw, 88px));
+    height: auto;
+    transform: none;
+    justify-self: end;
+  }
+
+  .org-fixed__csv-branch::before,
+  .org-fixed__csv-team-grid::before,
+  .org-fixed__csv-team::before {
+    display: none;
+  }
+
+  .org-fixed__csv-team-grid {
+    position: static;
+    grid-template-columns: 1fr;
+    gap: var(--fluid-gap-xs);
+  }
+
+  .org-fixed__csv-team {
+    padding-top: 0;
+  }
+
+  .org-fixed__csv-team .org-box--tertiary {
+    width: 100%;
+    max-width: none;
+    min-height: clamp(60px, 6vw, 66px);
+    border-radius: clamp(12px, 1.6vw, 14px);
+  }
+}
+
+
+/* =========================================================
+   CSV 사업부 → 하위팀 연결선 밀착 보정
+   다른 배치는 건드리지 않고 시작점만 CSV 사업부 박스 하단에 정확히 연결
+   ========================================================= */
+
+.org-fixed__csv-branch {
+  top: calc(53% + var(--node-height)) !important;
 }

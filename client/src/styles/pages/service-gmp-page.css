@@ -1,0 +1,294 @@
+/* =========================================================
+   GMP Consulting page — CSV layout aligned
+   모든 섹션 배경은 흰색, 표/매트릭스 중심의 문서형 레이아웃
+   ========================================================= */
+
+.service-gmp-page,
+.service-gmp-page .service-business-overview,
+.service-gmp-page .service-business-section,
+.service-gmp-page .service-business-section--white,
+.service-gmp-page .service-business-section--soft {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+.service-gmp-page .service-business-overview__head h2,
+.service-gmp-page .service-business-overview__description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-gmp-page .service-business-overview__head h2 {
+  max-width: 1100px;
+}
+
+.service-gmp-page .service-business-overview__description {
+  max-width: 980px;
+}
+
+/* ---------- Framework ---------- */
+
+.gmp-framework {
+  border: 1px solid var(--home-border);
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.gmp-framework__head,
+.gmp-framework__row {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1.15fr) minmax(0, 0.85fr) 250px;
+}
+
+.gmp-framework__head {
+  min-height: 58px;
+  border-bottom: 1px solid var(--home-border);
+  background: #f7f8fc;
+}
+
+.gmp-framework__head span {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-right: 1px solid var(--home-border);
+  color: var(--home-blue-strong);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  font-weight: 900;
+}
+
+.gmp-framework__head span:last-child {
+  border-right: 0;
+}
+
+.gmp-framework__row {
+  min-height: 150px;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.gmp-framework__row:last-child {
+  border-bottom: 0;
+}
+
+.gmp-framework__stage {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-content: center;
+  align-items: start;
+  gap: 12px;
+  padding: 24px 20px;
+  border-right: 1px solid var(--home-border);
+  background: #fbfcfe;
+}
+
+.gmp-framework__stage span {
+  color: #8993aa;
+  font-size: 0.74rem;
+  line-height: 1.4;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.gmp-framework__stage strong {
+  color: var(--home-text);
+  font-size: 1rem;
+  line-height: 1.55;
+  font-weight: 900;
+  word-break: keep-all;
+}
+
+.gmp-framework__scope {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border-right: 1px solid var(--home-border);
+}
+
+.gmp-framework__bullet {
+  flex: 0 0 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--home-blue-strong);
+}
+
+.gmp-framework__scope p,
+.gmp-framework__applicable {
+  margin: 0;
+  color: var(--home-text-soft);
+  font-size: 0.96rem;
+  line-height: 1.72;
+  word-break: keep-all;
+}
+
+.gmp-framework__applicable {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  border-right: 1px solid var(--home-border);
+}
+
+.gmp-framework__deliverable {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  background: #fafbfe;
+  color: var(--home-blue-strong);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  font-weight: 900;
+  word-break: keep-all;
+}
+
+/* ---------- Scope ---------- */
+
+.gmp-scope-matrix {
+  border: 1px solid var(--home-border);
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.gmp-scope-matrix__row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.gmp-scope-matrix__row:last-child {
+  border-bottom: 0;
+}
+
+.gmp-scope-matrix__row span,
+.gmp-scope-matrix__row strong {
+  padding: 22px 24px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.gmp-scope-matrix__row span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--home-border);
+  background: #fbfcfe;
+  color: #8993aa;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.gmp-scope-matrix__row strong {
+  color: var(--home-text);
+  font-weight: 800;
+}
+
+/* ---------- Deliverables ---------- */
+
+.gmp-deliverables-matrix {
+  border: 1px solid var(--home-border);
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.gmp-deliverables-matrix__head,
+.gmp-deliverables-matrix__row {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.gmp-deliverables-matrix__head {
+  min-height: 58px;
+  border-bottom: 1px solid var(--home-border);
+  background: #f7f8fc;
+}
+
+.gmp-deliverables-matrix__head span {
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  border-right: 1px solid var(--home-border);
+  color: var(--home-blue-strong);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.gmp-deliverables-matrix__head span:last-child {
+  border-right: 0;
+}
+
+.gmp-deliverables-matrix__row {
+  border-bottom: 1px solid var(--home-border);
+}
+
+.gmp-deliverables-matrix__row:last-child {
+  border-bottom: 0;
+}
+
+.gmp-deliverables-matrix__row > span,
+.gmp-deliverables-matrix__row > strong,
+.gmp-deliverables-matrix__row > p {
+  margin: 0;
+  padding: 22px;
+  border-right: 1px solid var(--home-border);
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.gmp-deliverables-matrix__row > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fbfcfe;
+  color: #8993aa;
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.gmp-deliverables-matrix__row > strong {
+  color: var(--home-text);
+  font-weight: 800;
+}
+
+.gmp-deliverables-matrix__row > p {
+  border-right: 0;
+  color: var(--home-blue-strong);
+  font-weight: 700;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 1120px) {
+  .gmp-framework__head,
+  .gmp-framework__row {
+    grid-template-columns: 170px minmax(0, 1fr) minmax(0, 0.75fr) 210px;
+  }
+}
+
+@media (max-width: 860px) {
+  .gmp-framework__head,
+  .gmp-deliverables-matrix__head {
+    display: none;
+  }
+
+  .gmp-framework__row,
+  .gmp-deliverables-matrix__row {
+    grid-template-columns: 1fr;
+  }
+
+  .gmp-framework__stage,
+  .gmp-framework__scope,
+  .gmp-framework__applicable,
+  .gmp-deliverables-matrix__row > span,
+  .gmp-deliverables-matrix__row > strong {
+    border-right: 0;
+    border-bottom: 1px solid var(--home-border);
+  }
+
+  .gmp-framework__deliverable {
+    border-right: 0;
+  }
+
+  .gmp-deliverables-matrix__row > p {
+    border-right: 0;
+  }
+}

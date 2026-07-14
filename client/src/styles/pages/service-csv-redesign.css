@@ -1,0 +1,968 @@
+/* =========================================================
+   CSV Consulting Redesign
+   기존 CSV Consulting 이하 콘텐츠를 Validation Framework부터 재구성
+   ========================================================= */
+
+.service-csv-redesign {
+  padding-bottom: 0;
+}
+
+.csv-business-section {
+  padding: clamp(78px, 8vw, 118px) 0;
+  border-top: 1px solid var(--home-border);
+}
+
+.csv-business-section:first-of-type {
+  border-top: 0;
+}
+
+.csv-business-section--overview,
+.csv-business-section--scope,
+.csv-business-section--deliverables {
+  background: #fff;
+}
+
+.csv-business-section--framework,
+.csv-business-section--lifecycle,
+.csv-business-section--business {
+  background: #f7f8fb;
+}
+
+.csv-business-heading {
+  display: grid;
+  grid-template-columns: minmax(190px, 250px) minmax(0, 1fr);
+  column-gap: clamp(36px, 5vw, 72px);
+  margin-bottom: clamp(34px, 4vw, 52px);
+}
+
+.csv-business-heading .section-label {
+  grid-row: 1 / span 2;
+  margin: 8px 0 0;
+}
+
+.csv-business-heading h2 {
+  margin: 0;
+  color: var(--home-text);
+  font-size: var(--subpage-title-lg, clamp(1.8rem, 2.6vw, 2.7rem));
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.csv-business-heading > p:not(.section-label) {
+  max-width: 860px;
+  margin: 16px 0 0;
+  color: var(--home-text-soft);
+  font-size: var(--subpage-body, 0.96rem);
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
+.csv-vmodel {
+  margin: 0;
+  padding: clamp(18px, 3vw, 34px);
+  border-top: 2px solid var(--home-blue-strong);
+  border-bottom: 1px solid var(--home-border);
+  background: #f4f4f5;
+}
+
+.csv-vmodel img {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.csv-framework-description {
+  margin-top: 34px;
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.csv-framework-description__row {
+  display: grid;
+  grid-template-columns: 64px 260px minmax(0, 1fr);
+  align-items: start;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.csv-framework-description__row > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-top: 19px;
+  border-radius: 7px;
+  background: var(--home-blue-strong);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.csv-framework-description__row strong {
+  padding: 22px 18px;
+  color: var(--home-text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.csv-framework-description__row p {
+  margin: 0;
+  padding: 22px 18px;
+  color: var(--home-text-soft);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.csv-overview-table,
+.csv-scope-table {
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.csv-overview-table > div,
+.csv-scope-table > div {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.csv-overview-table strong,
+.csv-scope-table strong {
+  padding: 21px 20px;
+  background: #fafbfe;
+  color: var(--home-text);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 800;
+}
+
+.csv-overview-table p,
+.csv-scope-table p {
+  margin: 0;
+  padding: 21px 26px;
+  color: var(--home-text-soft);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.csv-lifecycle-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.csv-lifecycle-column h3 {
+  margin: 0;
+  padding: 11px 8px;
+  border-radius: 18px 18px 0 0;
+  background: var(--home-blue-strong);
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.3;
+  font-weight: 800;
+  text-align: center;
+}
+
+.csv-lifecycle-item {
+  padding: 14px 12px;
+  border: 1px solid #e3e6ef;
+  border-top: 0;
+  background: #fff;
+}
+
+.csv-lifecycle-item strong {
+  display: block;
+  color: var(--home-text);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.csv-lifecycle-item p {
+  margin: 6px 0 0;
+  color: var(--home-text-soft);
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.csv-business-framework {
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.csv-business-framework > div {
+  display: grid;
+  grid-template-columns: 150px 250px minmax(0, 1fr);
+  align-items: start;
+  border-bottom: 1px solid var(--home-border);
+}
+
+.csv-business-framework span {
+  padding: 24px 18px;
+  color: var(--home-blue-strong);
+  font-size: 0.76rem;
+  line-height: 1.5;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.csv-business-framework strong {
+  padding: 22px 18px;
+  color: var(--home-text);
+  font-size: 1rem;
+  line-height: 1.55;
+  font-weight: 800;
+}
+
+.csv-business-framework p {
+  margin: 0;
+  padding: 22px 18px;
+  color: var(--home-text-soft);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.csv-deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.csv-deliverables > div {
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.csv-deliverables h3 {
+  margin: 0;
+  padding: 20px 18px;
+  border-bottom: 1px solid var(--home-border);
+  background: #fafbfe;
+  color: var(--home-text);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+.csv-deliverables ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.csv-deliverables li {
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--home-border);
+  color: var(--home-text-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.csv-deliverables li::before {
+  content: "—";
+  margin-right: 10px;
+  color: var(--home-blue);
+}
+
+.service-csv-redesign .service-task-cta {
+  margin-top: 0;
+}
+
+@media (max-width: 1120px) {
+  .csv-lifecycle-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .csv-business-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .csv-business-heading .section-label {
+    grid-row: auto;
+    margin-bottom: 14px;
+  }
+
+  .csv-framework-description__row {
+    grid-template-columns: 52px 1fr;
+  }
+
+  .csv-framework-description__row p {
+    grid-column: 1 / -1;
+    padding-top: 0;
+  }
+
+  .csv-overview-table > div,
+  .csv-scope-table > div {
+    grid-template-columns: 1fr;
+  }
+
+  .csv-overview-table strong,
+  .csv-scope-table strong {
+    border-bottom: 1px solid var(--home-border);
+  }
+
+  .csv-business-framework > div {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .csv-business-framework p {
+    grid-column: 1 / -1;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .csv-business-section {
+    padding: 68px 0;
+  }
+
+  .csv-vmodel {
+    padding: 12px 0;
+    overflow-x: auto;
+  }
+
+  .csv-vmodel img {
+    min-width: 760px;
+  }
+
+  .csv-lifecycle-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .csv-deliverables {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   Requested refinements
+   ========================================================= */
+
+/* 01 Validation Framework를 첫 번째 섹션으로 배치하며 배경은 흰색으로 통일 */
+.csv-business-section--framework {
+  background: #fff !important;
+}
+
+/* V-Model 영역의 파란 상단선 제거 */
+.csv-vmodel {
+  border-top: 0 !important;
+}
+
+/* 섹션 설명문 크기:
+   회사소개 문구(1.08rem)를 기준으로 약 3% 확대 = 약 1.11rem */
+.csv-business-heading > p:not(.section-label) {
+  font-size: 1.11rem !important;
+  line-height: 1.85 !important;
+}
+
+/* 모바일에서는 지나치게 커지지 않도록 약간만 조정 */
+@media (max-width: 720px) {
+  .csv-business-heading > p:not(.section-label) {
+    font-size: 1rem !important;
+  }
+}
+
+
+/* =========================================================
+   Final typography + V-Model background correction
+   ========================================================= */
+
+/* V-Model 바깥 회색 배경 완전 제거 */
+.csv-vmodel {
+  background: transparent !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Validation Framework 섹션 전체 배경 흰색 고정 */
+.csv-business-section--framework {
+  background: #fff !important;
+}
+
+/* 섹션 설명문과 본문성 텍스트 크기를 동일 기준으로 통일
+   기준: 회사소개 핵심 문구보다 약 3% 크게 설정 */
+.csv-business-heading > p:not(.section-label),
+.csv-framework-description__row p,
+.csv-overview-table p,
+.csv-scope-table p,
+.csv-business-framework p,
+.csv-lifecycle-item p,
+.csv-deliverables li,
+.service-task-overview__head > p:not(.section-label),
+.service-task-cycle__item h3,
+.service-task-cycle__item span {
+  font-size: 1.11rem !important;
+  line-height: 1.8 !important;
+}
+
+/* 제목 계층은 유지하되 본문보다 지나치게 작아지지 않도록 보정 */
+.csv-framework-description__row strong,
+.csv-overview-table strong,
+.csv-scope-table strong,
+.csv-business-framework strong,
+.csv-deliverables h3,
+.csv-lifecycle-column h3 {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+}
+
+/* 번호/라벨은 본문과 동일한 크기 체계로 맞춤 */
+.csv-framework-description__row > span,
+.csv-business-framework span {
+  font-size: 1.03rem !important;
+}
+
+/* 모바일에서는 과도하게 커지지 않도록만 축소 */
+@media (max-width: 720px) {
+  .csv-business-heading > p:not(.section-label),
+  .csv-framework-description__row p,
+  .csv-overview-table p,
+  .csv-scope-table p,
+  .csv-business-framework p,
+  .csv-lifecycle-item p,
+  .csv-deliverables li,
+  .service-task-overview__head > p:not(.section-label),
+  .service-task-cycle__item h3,
+  .service-task-cycle__item span,
+  .csv-framework-description__row strong,
+  .csv-overview-table strong,
+  .csv-scope-table strong,
+  .csv-business-framework strong,
+  .csv-deliverables h3,
+  .csv-lifecycle-column h3 {
+    font-size: 1rem !important;
+  }
+
+  .csv-framework-description__row > span,
+  .csv-business-framework span {
+    font-size: 0.95rem !important;
+  }
+}
+
+
+/* =========================================================
+   Final layout/alignment tuning requested by user
+   ========================================================= */
+
+/* V-Model 30% larger */
+.csv-vmodel img {
+  max-width: 1274px !important;
+}
+
+/* 01 Validation Framework
+   label left, title/description centered */
+.csv-business-heading--framework {
+  display: block !important;
+  margin-bottom: clamp(34px, 4vw, 52px);
+}
+
+.csv-business-heading--framework .section-label {
+  display: block !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+}
+
+.csv-business-heading--framework h2,
+.csv-business-heading--framework > p:not(.section-label) {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.csv-business-heading--framework h2 {
+  font-size: clamp(2.25rem, 4vw, 3.45rem) !important;
+}
+
+.csv-business-heading--framework > p:not(.section-label) {
+  max-width: 980px !important;
+}
+
+/* Remove boxes around 01~04 framework description numbers */
+.csv-framework-description__row > span {
+  width: auto !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  padding: 22px 8px 22px 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--home-blue-strong) !important;
+  place-items: start !important;
+}
+
+/* CSV Consulting label left + body text larger */
+.service-task-overview__head--csv {
+  text-align: left !important;
+}
+
+.service-task-overview__head--csv .section-label {
+  text-align: left !important;
+}
+
+.service-task-overview__head--csv > p:not(.section-label) {
+  font-size: 1.18rem !important;
+  line-height: 1.85 !important;
+}
+
+/* 01 대상 시스템 / 02 진행 흐름 / 03 산출물 */
+.service-task-cycle__item span {
+  font-size: 1.1rem !important;
+  line-height: 1.4 !important;
+}
+
+.service-task-cycle__item h3 {
+  font-size: 1.18rem !important;
+  line-height: 1.5 !important;
+}
+
+/* 02 Overview and 03 CSV Lifecycle
+   label left, title/description centered */
+.csv-business-heading--overview,
+.csv-business-heading--lifecycle {
+  display: block !important;
+}
+
+.csv-business-heading--overview .section-label,
+.csv-business-heading--lifecycle .section-label {
+  display: block !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+}
+
+.csv-business-heading--overview h2,
+.csv-business-heading--overview > p:not(.section-label),
+.csv-business-heading--lifecycle h2,
+.csv-business-heading--lifecycle > p:not(.section-label) {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.csv-business-heading--overview > p:not(.section-label),
+.csv-business-heading--lifecycle > p:not(.section-label) {
+  max-width: 980px !important;
+}
+
+/* Lifecycle blocks equal size */
+.csv-lifecycle-grid {
+  align-items: stretch !important;
+}
+
+.csv-lifecycle-column {
+  display: grid !important;
+  grid-template-rows: auto 1fr 1fr !important;
+  height: 100% !important;
+}
+
+.csv-lifecycle-column h3 {
+  min-height: 52px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+
+.csv-lifecycle-item {
+  min-height: 170px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.csv-lifecycle-item p {
+  margin-top: 8px !important;
+  flex: 1 1 auto !important;
+}
+
+/* keep framework description rows aligned cleanly */
+.csv-framework-description__row {
+  grid-template-columns: 56px 280px minmax(0, 1fr) !important;
+}
+
+@media (max-width: 1120px) {
+  .csv-vmodel img {
+    max-width: 100% !important;
+  }
+
+  .csv-lifecycle-column {
+    grid-template-rows: auto 1fr 1fr !important;
+  }
+
+  .csv-lifecycle-item {
+    min-height: 155px !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .csv-business-heading--framework h2,
+  .csv-business-heading--overview h2,
+  .csv-business-heading--lifecycle h2 {
+    font-size: clamp(1.9rem, 7vw, 2.4rem) !important;
+  }
+
+  .service-task-overview__head--csv > p:not(.section-label),
+  .service-task-cycle__item h3,
+  .csv-business-heading--framework > p:not(.section-label),
+  .csv-business-heading--overview > p:not(.section-label),
+  .csv-business-heading--lifecycle > p:not(.section-label) {
+    font-size: 1rem !important;
+  }
+
+  .csv-framework-description__row {
+    grid-template-columns: 42px 1fr !important;
+  }
+
+  .csv-framework-description__row p {
+    grid-column: 1 / -1 !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .csv-vmodel img {
+    min-width: 900px !important;
+  }
+
+  .csv-lifecycle-item {
+    min-height: 140px !important;
+  }
+}
+
+
+/* =========================================================
+   CSV Consulting typography equalization
+   요청: CSV Consulting 설명문 및 01/02/03 항목을
+   다른 본문 텍스트와 동일한 1.11rem 기준으로 통일
+   ========================================================= */
+
+.service-task-overview__head--csv > p:not(.section-label) {
+  font-size: 1.11rem !important;
+  line-height: 1.8 !important;
+}
+
+.service-task-cycle__item span,
+.service-task-cycle__item h3 {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+}
+
+/* 번호와 항목명은 크기는 동일하게 하되 시각적 계층은 굵기로만 구분 */
+.service-task-cycle__item span {
+  font-weight: 800 !important;
+}
+
+.service-task-cycle__item h3 {
+  font-weight: 800 !important;
+}
+
+@media (max-width: 720px) {
+  .service-task-overview__head--csv > p:not(.section-label),
+  .service-task-cycle__item span,
+  .service-task-cycle__item h3 {
+    font-size: 1rem !important;
+  }
+}
+
+
+/* =========================================================
+   CSV Lifecycle typography equalization
+   계획/요구/설계/위험/검증/종결 및 내부 텍스트를
+   다른 본문 텍스트와 동일한 1.11rem 기준으로 통일
+   ========================================================= */
+
+/* 상단 단계명: 계획 / 요구 / 설계 / 위험 / 검증 / 종결 */
+.csv-lifecycle-column h3 {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+  font-weight: 800 !important;
+}
+
+/* Validation Plan / URS / F&DS / FRA / IQ·OQ·PQ / RTM 등 */
+.csv-lifecycle-item strong {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+  font-weight: 800 !important;
+}
+
+/* 각 항목 설명문 */
+.csv-lifecycle-item p {
+  font-size: 1.11rem !important;
+  line-height: 1.8 !important;
+}
+
+/* 커진 텍스트 기준으로 6개 컬럼의 블록 높이를 동일하게 재조정 */
+.csv-lifecycle-column {
+  display: grid !important;
+  grid-template-rows: 62px repeat(2, minmax(200px, 1fr)) !important;
+  height: 100% !important;
+}
+
+.csv-lifecycle-column h3 {
+  min-height: 62px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding: 12px !important;
+}
+
+.csv-lifecycle-item {
+  min-height: 200px !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  padding: 20px 16px !important;
+}
+
+@media (max-width: 1120px) {
+  .csv-lifecycle-column {
+    grid-template-rows: 58px repeat(2, minmax(180px, 1fr)) !important;
+  }
+
+  .csv-lifecycle-item {
+    min-height: 180px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .csv-lifecycle-column h3,
+  .csv-lifecycle-item strong,
+  .csv-lifecycle-item p {
+    font-size: 1rem !important;
+  }
+
+  .csv-lifecycle-column {
+    grid-template-rows: 54px repeat(2, minmax(160px, 1fr)) !important;
+  }
+
+  .csv-lifecycle-item {
+    min-height: 160px !important;
+  }
+}
+
+
+/* =========================================================
+   FORCE OVERRIDE — CSV Consulting 영역 텍스트 크기
+   subpage-typography-standard.css의 !important 규칙보다
+   더 높은 specificity로 강제 적용
+   ========================================================= */
+
+/* CSV Consulting 소개문 */
+.service-csv-redesign .service-task-overview .service-task-overview__head > p:not(.section-label),
+.service-csv-redesign .service-task-overview__head.service-task-overview__head--csv > p:not(.section-label) {
+  font-size: 1.11rem !important;
+  line-height: 1.8 !important;
+  font-weight: 500 !important;
+}
+
+/* 01 / 02 / 03 번호 */
+.service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > span {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+  font-weight: 800 !important;
+}
+
+/* 대상 시스템 / 진행 흐름 / 산출물 */
+.service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > h3 {
+  font-size: 1.11rem !important;
+  line-height: 1.6 !important;
+  font-weight: 800 !important;
+}
+
+/* 고해상도에서도 동일 크기 유지 */
+@media (min-width: 1600px) {
+  .service-csv-redesign .service-task-overview .service-task-overview__head > p:not(.section-label),
+  .service-csv-redesign .service-task-overview__head.service-task-overview__head--csv > p:not(.section-label),
+  .service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > span,
+  .service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > h3 {
+    font-size: 1.11rem !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .service-csv-redesign .service-task-overview .service-task-overview__head > p:not(.section-label),
+  .service-csv-redesign .service-task-overview__head.service-task-overview__head--csv > p:not(.section-label),
+  .service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > span,
+  .service-csv-redesign .service-task-overview .service-task-cycle .service-task-cycle__item > h3 {
+    font-size: 1rem !important;
+  }
+}
+
+
+/* =========================================================
+   CSV Lifecycle flow arrows
+   진행 순서를 직관적으로 보이도록 각 컬럼 사이에 화살표 추가
+   ========================================================= */
+
+.csv-lifecycle-column {
+  position: relative;
+  overflow: visible;
+}
+
+/* 데스크톱 6열 기준: 각 컬럼 오른쪽에 진행 화살표 */
+@media (min-width: 1121px) {
+  .csv-lifecycle-column:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--home-border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--home-blue-strong);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 0 8px 20px rgba(17, 31, 87, 0.06);
+    z-index: 3;
+  }
+}
+
+/* 3열/2열/1열로 바뀌는 구간에서는 화살표 제거 */
+@media (max-width: 1120px) {
+  .csv-lifecycle-column::after {
+    content: none !important;
+  }
+}
+
+
+/* =========================================================
+   FIX — Lifecycle arrow overlap
+   원인: 컬럼 gap(14px)보다 화살표 원형 버튼(34px)이 더 커서
+   양쪽 카드 위로 겹쳐 보였음.
+   ========================================================= */
+
+@media (min-width: 1121px) {
+  .csv-lifecycle-grid {
+    column-gap: 34px !important;
+  }
+
+  .csv-lifecycle-column:not(:last-child)::after {
+    right: -25px !important;
+    width: 24px !important;
+    height: 24px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: var(--home-blue-strong) !important;
+    font-size: 1.05rem !important;
+  }
+}
+
+
+/* =========================================================
+   FIX — Chevron arrow style
+   요청: 원형/텍스트 화살표가 아니라 첨부 이미지 같은
+   얇은 라인형 chevron 모양으로 변경
+   ========================================================= */
+
+@media (min-width: 1121px) {
+  .csv-lifecycle-column:not(:last-child)::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: -21px !important;
+    width: 14px !important;
+    height: 14px !important;
+    transform: translateY(-50%) rotate(-45deg) !important;
+    border-right: 2px solid #bfc5d2 !important;
+    border-bottom: 2px solid #bfc5d2 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    z-index: 3 !important;
+  }
+}
+
+
+/* =========================================================
+   Section heading alignment refinement
+   - 하단 섹션들도 01/02/03 섹션과 동일한 제목 위치 체계
+   - Validation Framework 제목/설명 아래 여백 제거
+   ========================================================= */
+
+/* 모든 CSV 새 섹션의 제목 체계를 동일하게:
+   section-label은 상단 왼쪽, 제목/설명은 중앙 */
+.csv-business-heading {
+  display: block !important;
+}
+
+.csv-business-heading .section-label {
+  display: block !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+}
+
+.csv-business-heading h2 {
+  max-width: 1100px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+.csv-business-heading > p:not(.section-label) {
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* 01 Validation Framework:
+   제목 + 설명 다음에 즉시 V-Model이 이어지도록 하단 margin 제거 */
+.csv-business-section--framework .csv-business-heading,
+.csv-business-heading--framework {
+  margin-bottom: 0 !important;
+}
+
+/* 제목 설명 자체의 마지막 하단 여백도 제거 */
+.csv-business-section--framework
+  .csv-business-heading
+  > p:not(.section-label),
+.csv-business-heading--framework
+  > p:not(.section-label) {
+  margin-bottom: 0 !important;
+}
+
+/* V-Model도 제목 영역 바로 아래에서 시작 */
+.csv-business-section--framework .csv-vmodel {
+  margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   FIX — CSV Consulting label horizontal alignment
+   다른 section-label과 동일한 site-shell 기준선에 맞춤
+   ========================================================= */
+
+/* 기존 service-task-overview 내부 정렬 차이 제거 */
+.service-csv-redesign .service-task-overview__inner {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* CSV Consulting 라벨/제목/설명 시작점을 다른 섹션과 동일하게 */
+.service-csv-redesign .service-task-overview__head--csv {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.service-csv-redesign .service-task-overview__head--csv .section-label {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+}
+
+/* 3개 항목도 같은 콘텐츠 폭 안에서 유지 */
+.service-csv-redesign .service-task-cycle {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

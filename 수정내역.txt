@@ -1,0 +1,9 @@
+수정 내용
+
+- CSV 사업부 박스 아래와 하위팀 연결선 사이의 빈틈만 수정했습니다.
+- 다른 박스 위치, 하위팀 간격, 가로선 위치는 변경하지 않았습니다.
+- CSV 사업부 박스의 실제 높이(var(--node-height))를 기준으로
+  하위 브랜치 시작점을 정확히 박스 하단에 붙였습니다.
+
+수정 파일
+- client/src/styles/pages/company-organization.css

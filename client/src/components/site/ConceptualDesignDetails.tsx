@@ -1,3 +1,5 @@
+import { ServiceSectionHeader } from "@/components/site/ServiceBusinessLayout";
+
 const inputDataRows = [
   {
     category: "제품 및 생산계획",
@@ -203,201 +205,200 @@ const deliverables = [
   },
 ];
 
+const designFlow = [
+  "기초자료 및 생산계획",
+  "공정 분석 및 작업실 요구사항",
+  "GMP Layout·구역·동선 검토",
+  "청정도·차압·유틸리티·보관조건 검토",
+  "최종 도면 및 개념설계 보고서",
+];
+
+const roomDetails = [
+  ["주요 작업", "activity"],
+  ["배치 장비", "equipment"],
+  ["청정도", "grade"],
+  ["차압 조건", "pressure"],
+  ["필요 유틸리티", "utility"],
+  ["주요 설계 고려사항", "point"],
+] as const;
+
 export function ConceptualDesignDetails() {
   return (
-    <div className="concept-materials">
-      <section className="concept-materials__section concept-materials__section--intro">
+    <>
+      <section className="service-business-section service-business-section--white design-detail-section">
         <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">Project Input</p>
-            <h2>개념설계 착수 전 확인자료</h2>
-            <p>
-              개념설계는 제품·공정·생산량·장비·운영조건을 동일한 기준에서 검토하는 것부터 시작합니다.
-              초기 입력자료를 체계적으로 정리해 시설 규모와 레이아웃 검토의 기준을 설정합니다.
-            </p>
-          </header>
+          <ServiceSectionHeader
+            index="03"
+            label="Project Input"
+            title="개념설계 착수 전 확인자료"
+            description="제품·공정·생산량·장비·운영조건을 같은 기준으로 정리해 시설 규모와 레이아웃 검토의 출발점을 설정합니다."
+          />
 
-          <div className="concept-table-wrap">
-            <table className="concept-table">
-              <thead>
-                <tr>
-                  <th>자료 구분</th>
-                  <th>주요 확인내용</th>
-                  <th>설계 활용목적</th>
-                </tr>
-              </thead>
-              <tbody>
-                {inputDataRows.map((row) => (
-                  <tr key={row.category}>
-                    <th scope="row">{row.category}</th>
-                    <td>{row.items}</td>
-                    <td>{row.purpose}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="concept-materials__section">
-        <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">Process Analysis Sheet</p>
-            <h2>공정 분석표</h2>
-            <p>
-              공정별 장비, 처리용량, 물량 흐름과 지원조건을 함께 검토해 작업실과 지원설비 범위를 결정합니다.
-            </p>
-          </header>
-
-          <div className="concept-table-wrap">
-            <table className="concept-table concept-table--wide">
-              <thead>
-                <tr>
-                  <th>공정 단계</th>
-                  <th>주요 장비</th>
-                  <th>처리용량 검토</th>
-                  <th>자재·제품 흐름</th>
-                  <th>지원조건</th>
-                </tr>
-              </thead>
-              <tbody>
-                {processRows.map((row) => (
-                  <tr key={row.step}>
-                    <th scope="row">{row.step}</th>
-                    <td>{row.equipment}</td>
-                    <td>{row.capacity}</td>
-                    <td>{row.flow}</td>
-                    <td>{row.support}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="concept-materials__section concept-materials__section--soft">
-        <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">Room Design Requirement</p>
-            <h2>작업실 설계 요구사항</h2>
-            <p>
-              각 작업실의 기능과 장비, 청정도, 차압, 유틸리티 요구사항을 정리해 레이아웃과 상세설계의 기준으로 활용합니다.
-            </p>
-          </header>
-
-          <div className="concept-table-wrap">
-            <table className="concept-table concept-table--room">
-              <thead>
-                <tr>
-                  <th>작업실</th>
-                  <th>주요 작업</th>
-                  <th>배치 장비</th>
-                  <th>청정도</th>
-                  <th>차압 조건</th>
-                  <th>필요 유틸리티</th>
-                  <th>주요 설계 고려사항</th>
-                </tr>
-              </thead>
-              <tbody>
-                {roomRows.map((row) => (
-                  <tr key={row.room}>
-                    <th scope="row">{row.room}</th>
-                    <td>{row.activity}</td>
-                    <td>{row.equipment}</td>
-                    <td>{row.grade}</td>
-                    <td>{row.pressure}</td>
-                    <td>{row.utility}</td>
-                    <td>{row.point}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="concept-materials__section">
-        <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">GMP Layout Review Matrix</p>
-            <h2>주요 검토영역과 결과자료</h2>
-            <p>
-              개념설계의 주요 검토영역, 판단기준과 결과자료를 연결해 프로젝트 범위와 의사결정 기준을 명확하게 제시합니다.
-            </p>
-          </header>
-
-          <div className="concept-table-wrap">
-            <table className="concept-table concept-table--matrix">
-              <thead>
-                <tr>
-                  <th>검토영역</th>
-                  <th>주요 검토내용</th>
-                  <th>판단기준</th>
-                  <th>결과자료</th>
-                </tr>
-              </thead>
-              <tbody>
-                {reviewMatrix.map((row) => (
-                  <tr key={row.area}>
-                    <th scope="row">{row.area}</th>
-                    <td>{row.review}</td>
-                    <td>{row.criteria}</td>
-                    <td>{row.output}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="concept-materials__section concept-materials__section--soft">
-        <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">Deliverables</p>
-            <h2>개념설계 주요 산출물</h2>
-            <p>
-              검토 결과는 상세설계와 투자·일정 의사결정에 활용할 수 있도록 영역별 도면과 기술자료로 정리합니다.
-            </p>
-          </header>
-
-          <div className="concept-deliverable-grid">
-            {deliverables.map((group) => (
-              <section key={group.group} className="concept-deliverable-group">
-                <h3>{group.group}</h3>
-                <ul>
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </section>
+          <div className="design-input-matrix">
+            <div className="design-input-matrix__head" aria-hidden="true">
+              <span>자료 구분</span>
+              <span>주요 확인내용</span>
+              <span>설계 활용목적</span>
+            </div>
+            {inputDataRows.map((row) => (
+              <div key={row.category} className="design-input-matrix__row">
+                <strong>{row.category}</strong>
+                <p>{row.items}</p>
+                <p>{row.purpose}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="concept-materials__section concept-materials__section--flow">
+      <section className="service-business-section service-business-section--white design-detail-section">
         <div className="site-shell">
-          <header className="concept-materials__head">
-            <p className="section-label">Design Flow</p>
-            <h2>개념설계 결과의 연결 구조</h2>
-          </header>
+          <ServiceSectionHeader
+            index="04"
+            label="Process Analysis"
+            title="공정 조건과 작업실 요구사항을 함께 검토합니다."
+            description="공정별 장비, 처리용량, 물량 흐름과 지원조건을 연결해 작업실 구성과 지원설비 범위를 결정합니다."
+          />
 
-          <ol className="concept-result-flow">
-            <li>기초자료 및 생산계획</li>
-            <li aria-hidden="true">↓</li>
-            <li>공정 분석 및 작업실 요구사항</li>
-            <li aria-hidden="true">↓</li>
-            <li>GMP Layout·구역·동선 검토</li>
-            <li aria-hidden="true">↓</li>
-            <li>청정도·차압·유틸리티·보관조건 검토</li>
-            <li aria-hidden="true">↓</li>
-            <li>최종 도면 및 개념설계 보고서</li>
+          <div className="design-process-matrix">
+            {processRows.map((row, index) => (
+              <article key={row.step} className="design-process-matrix__row">
+                <div className="design-process-matrix__step">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{row.step}</strong>
+                </div>
+                <dl className="design-process-matrix__details">
+                  <div>
+                    <dt>주요 장비</dt>
+                    <dd>{row.equipment}</dd>
+                  </div>
+                  <div>
+                    <dt>처리용량 검토</dt>
+                    <dd>{row.capacity}</dd>
+                  </div>
+                  <div>
+                    <dt>자재·제품 흐름</dt>
+                    <dd>{row.flow}</dd>
+                  </div>
+                  <div>
+                    <dt>지원조건</dt>
+                    <dd>{row.support}</dd>
+                  </div>
+                </dl>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-business-section service-business-section--white design-detail-section">
+        <div className="site-shell">
+          <ServiceSectionHeader
+            index="05"
+            label="Room Design Requirement"
+            title="작업실별 설계 요구사항"
+            description="기존 7열 표를 작업실별 요구조건 구조로 재구성해 화면 폭과 관계없이 내용을 한눈에 확인할 수 있도록 정리했습니다."
+          />
+
+          <div className="design-room-list">
+            {roomRows.map((row, index) => (
+              <article key={row.room} className="design-room-row">
+                <div className="design-room-row__title">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{row.room}</strong>
+                </div>
+                <dl className="design-room-row__details">
+                  {roomDetails.map(([label, key]) => (
+                    <div key={key}>
+                      <dt>{label}</dt>
+                      <dd>{row[key]}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-business-section service-business-section--white design-detail-section">
+        <div className="site-shell">
+          <ServiceSectionHeader
+            index="06"
+            label="GMP Layout Review"
+            title="주요 검토영역과 결과자료"
+            description="설계 판단기준과 결과자료를 한 행에서 연결해 프로젝트 의사결정 기준과 후속 상세설계 자료를 명확하게 정리합니다."
+          />
+
+          <div className="design-review-matrix">
+            <div className="design-review-matrix__head" aria-hidden="true">
+              <span>검토영역</span>
+              <span>주요 검토내용</span>
+              <span>판단기준</span>
+              <span>결과자료</span>
+            </div>
+            {reviewMatrix.map((row) => (
+              <article key={row.area} className="design-review-matrix__row">
+                <strong>{row.area}</strong>
+                <p>{row.review}</p>
+                <p>{row.criteria}</p>
+                <p>{row.output}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-business-section service-business-section--white design-detail-section">
+        <div className="site-shell">
+          <ServiceSectionHeader
+            index="07"
+            label="Deliverables"
+            title="개념설계 주요 산출물"
+            description="검토 결과를 상세설계, 투자, 일정 의사결정에 활용할 수 있도록 영역별 도면과 기술자료로 정리합니다."
+          />
+
+          <div className="design-deliverables-matrix">
+            <div className="design-deliverables-matrix__head" aria-hidden="true">
+              <span>구분</span>
+              <span>주요 산출물</span>
+            </div>
+            {deliverables.map((group, index) => (
+              <div key={group.group} className="design-deliverables-matrix__row">
+                <div className="design-deliverables-matrix__group">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{group.group}</strong>
+                </div>
+                <ul>
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="service-business-section service-business-section--white design-detail-section">
+        <div className="site-shell">
+          <ServiceSectionHeader
+            index="08"
+            label="Design Flow"
+            title="개념설계 결과의 연결 구조"
+            description="기초자료가 공정 분석, 작업실 요구사항, Layout 검토와 기술조건 검토를 거쳐 최종 도면과 보고서로 연결됩니다."
+          />
+
+          <ol className="design-flow">
+            {designFlow.map((item, index) => (
+              <li key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{item}</strong>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
-    </div>
+    </>
   );
 }

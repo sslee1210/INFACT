@@ -56,6 +56,23 @@ export default function CompanyOrganization() {
             <div className="org-fixed__secondary org-fixed__secondary--2">
               <div className="org-box org-box--secondary">CSV 사업부</div>
             </div>
+
+            {/* CSV 사업부 하위 팀 — 하나의 독립 브랜치로 구성 */}
+            <div className="org-fixed__csv-branch">
+              <div className="org-fixed__csv-team-grid">
+                <div className="org-fixed__csv-team">
+                  <div className="org-box org-box--tertiary">자동제어</div>
+                </div>
+
+                <div className="org-fixed__csv-team">
+                  <div className="org-box org-box--tertiary">CSV 1팀</div>
+                </div>
+
+                <div className="org-fixed__csv-team">
+                  <div className="org-box org-box--tertiary">CSV 2팀</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

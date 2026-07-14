@@ -1,0 +1,23 @@
+조직 구성 서브페이지 수정본입니다.
+
+변경 내용
+- CSV 사업부 아래에 3개 하위 조직 추가
+  자동제어
+  CSV 1팀
+  CSV 2팀
+- CSV 사업부에서 하위 3개 조직으로 연결선 추가
+- 데스크톱에서는 3개 팀을 가로 배치
+- 모바일에서는 계층형 세로 목록으로 자동 변환
+- 기존 조직도 크기를 확장해 하위 조직이 잘리지 않도록 조정
+
+수정 파일
+- client/src/pages/CompanyOrganization.tsx
+- client/src/styles/pages/company-organization.css
+
+적용
+cd "/c/Users/sslee/Desktop/05. 전문/0. INFACT"
+corepack pnpm build
+corepack pnpm dev
+
+브라우저
+Ctrl + Shift + R

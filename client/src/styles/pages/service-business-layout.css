@@ -1,0 +1,760 @@
+/* =========================================================
+   INFACT Service Business Layout
+   CSV를 기준으로 개념설계/GMP/CSV 서브페이지를 동일한 레이아웃 시스템으로 통일
+   기존 service-task 공통 CSS에 의존하지 않는 독립 구조
+   ========================================================= */
+
+.service-business-page {
+  padding-bottom: 0;
+  background: #fff;
+}
+
+.service-business-section {
+  padding: clamp(76px, 7.5vw, 112px) 0;
+  border-top: 1px solid var(--home-border);
+}
+
+.service-business-section--white {
+  background: #fff;
+}
+
+.service-business-section--soft {
+  background: #f7f8fb;
+}
+
+/* ---------- section heading system ---------- */
+
+.service-business-heading {
+  margin-bottom: clamp(34px, 4vw, 52px);
+}
+
+.service-business-heading .section-label {
+  margin: 0 0 18px;
+  text-align: left;
+}
+
+.service-business-heading__copy {
+  max-width: 1100px;
+}
+
+.service-business-heading--centered .service-business-heading__copy {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-business-heading h2 {
+  margin: 0;
+  color: var(--home-text);
+  font-size: var(--subpage-title-lg, clamp(1.8rem, 2.6vw, 2.7rem));
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.service-business-heading__description {
+  max-width: 980px;
+  margin: 16px auto 0;
+  color: var(--home-text-soft);
+  font-size: 1.11rem;
+  line-height: 1.82;
+  font-weight: 500;
+  word-break: keep-all;
+}
+
+.service-business-heading--compact {
+  margin-bottom: 0;
+}
+
+.service-business-heading--compact .service-business-heading__description {
+  margin-bottom: 0;
+}
+
+/* ---------- service overview ---------- */
+
+.service-business-overview {
+  padding: clamp(76px, 7vw, 106px) 0;
+  border-top: 1px solid var(--home-border);
+  background: #fff;
+}
+
+.service-business-overview__head {
+  width: 100%;
+}
+
+.service-business-overview__head .section-label {
+  margin: 0 0 18px;
+  text-align: left;
+}
+
+.service-business-overview__head h2 {
+  max-width: 1100px;
+  margin: 0;
+  color: var(--home-text);
+  font-size: var(--subpage-title-lg, clamp(1.8rem, 2.6vw, 2.7rem));
+  line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.service-business-overview__description {
+  max-width: 980px;
+  margin-top: 18px;
+  color: var(--home-text-soft);
+  font-size: 1.11rem;
+  line-height: 1.82;
+  font-weight: 500;
+}
+
+.service-business-overview__pillars {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 720px;
+  margin: clamp(46px, 5vw, 72px) auto 0;
+}
+
+.service-business-overview__pillar {
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  gap: 10px;
+  border: 1px solid #cbd5ea;
+  border-radius: 50%;
+  background: #f8faff;
+  text-align: center;
+}
+
+.service-business-overview__pillar + .service-business-overview__pillar {
+  margin-left: -1px;
+}
+
+.service-business-overview__pillar:nth-child(2) {
+  background: #edf3fb;
+}
+
+.service-business-overview__pillar:nth-child(3) {
+  background: #e3edf9;
+}
+
+.service-business-overview__pillar span,
+.service-business-overview__pillar strong {
+  font-size: 1.11rem;
+  line-height: 1.55;
+}
+
+.service-business-overview__pillar span {
+  color: var(--home-blue-strong);
+  font-weight: 800;
+}
+
+.service-business-overview__pillar strong {
+  color: var(--home-text);
+  font-weight: 800;
+}
+
+/* ---------- shared tables/lists ---------- */
+
+.service-business-table {
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.service-business-table__row {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.service-business-table__row strong {
+  padding: 21px 20px;
+  background: #fafbfe;
+  color: var(--home-text);
+  font-size: 1.11rem;
+  line-height: 1.65;
+  font-weight: 800;
+}
+
+.service-business-table__row p,
+.service-business-table__row div {
+  margin: 0;
+  padding: 21px 26px;
+  color: var(--home-text-soft);
+  font-size: 1.11rem;
+  line-height: 1.8;
+}
+
+.service-business-flow-list {
+  border-top: 2px solid var(--home-blue-strong);
+}
+
+.service-business-flow-list > div {
+  display: grid;
+  grid-template-columns: 64px 260px minmax(0, 1fr);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.service-business-flow-list span,
+.service-business-flow-list strong,
+.service-business-flow-list p {
+  padding: 22px 18px;
+  font-size: 1.11rem;
+  line-height: 1.7;
+}
+
+.service-business-flow-list span {
+  padding-left: 0;
+  color: var(--home-blue-strong);
+  font-weight: 900;
+}
+
+.service-business-flow-list strong {
+  color: var(--home-text);
+  font-weight: 800;
+}
+
+.service-business-flow-list p {
+  margin: 0;
+  color: var(--home-text-soft);
+}
+
+/* ---------- contact ---------- */
+
+
+
+@media (max-width: 900px) {
+  .service-business-overview__pillars {
+    max-width: 620px;
+  }
+
+  .service-business-table__row {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .service-business-flow-list > div {
+    grid-template-columns: 50px 220px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .service-business-section,
+  .service-business-overview {
+    padding: 68px 0;
+  }
+
+  .service-business-heading__description,
+  .service-business-overview__description,
+  .service-business-overview__pillar span,
+  .service-business-overview__pillar strong,
+  .service-business-table__row strong,
+  .service-business-table__row p,
+  .service-business-table__row div,
+  .service-business-flow-list span,
+  .service-business-flow-list strong,
+  .service-business-flow-list p {
+    font-size: 1rem;
+  }
+
+  .service-business-overview__pillars {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .service-business-overview__pillar + .service-business-overview__pillar {
+    margin-left: 0;
+  }
+
+  .service-business-table__row {
+    grid-template-columns: 1fr;
+  }
+
+  .service-business-table__row strong {
+    border-bottom: 1px solid var(--home-border);
+  }
+
+  .service-business-flow-list > div {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .service-business-flow-list p {
+    grid-column: 1 / -1;
+    padding-top: 0;
+  }
+}
+
+
+/* =========================================================
+   CSV Overview heading alignment
+   CSV Consulting 라벨은 왼쪽 유지,
+   제목/설명은 중앙 정렬
+   ========================================================= */
+
+.service-csv-page .service-business-overview__head {
+  text-align: left;
+}
+
+.service-csv-page .service-business-overview__head .section-label {
+  text-align: left;
+}
+
+.service-csv-page .service-business-overview__head h2,
+.service-csv-page .service-business-overview__description {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.service-csv-page .service-business-overview__head h2 {
+  max-width: 1100px;
+}
+
+.service-csv-page .service-business-overview__description {
+  max-width: 980px;
+}
+
+/* =========================================================
+   CANONICAL BACKGROUND RESET
+   사업안내 3개 서브페이지는 장식 배경 없이 순수 흰색만 사용
+   ========================================================= */
+
+.service-business-page,
+.service-business-section,
+.service-business-section--white,
+.service-business-section--soft,
+.service-business-overview,
+.service-design-page,
+.service-gmp-page,
+.service-csv-page {
+  background: #fff !important;
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+/* 장식용 pseudo-element 완전 차단 */
+.service-business-page::before,
+.service-business-page::after,
+.service-business-section::before,
+.service-business-section::after,
+.service-business-overview::before,
+.service-business-overview::after,
+.service-design-page::before,
+.service-design-page::after,
+.service-gmp-page::before,
+.service-gmp-page::after,
+.service-csv-page::before,
+.service-csv-page::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* 섹션별 변형도 항상 흰색 */
+.service-business-page > .service-business-section,
+.service-business-page > .service-business-overview {
+  background: #fff !important;
+  background-image: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   CANONICAL CONTACT CTA LINK
+   메인 홈페이지 Contact와 동일한 시각 언어:
+   텍스트 + 하단 수평선 + 우측 끝 사선 마감
+   ========================================================= */
+
+
+
+
+
+/* 수평선 */
+
+
+/* 우측 끝 사선 — 수평선 끝점과 정확히 연결 */
+
+
+/* 컴포넌트 내부의 별도 화살표 문자는 숨김 */
+
+
+
+
+
+
+@media (max-width: 920px) {
+  
+
+  
+}
+
+
+/* =========================================================
+   CANONICAL SERVICE CONTACT SECTION
+   독립형 Contact CTA — 기존 충돌 규칙에 의존하지 않음
+   ========================================================= */
+
+.service-business-contact {
+  position: relative !important;
+  min-height: 360px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: hidden !important;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 25, 58, 0.96) 0%,
+      rgba(10, 31, 66, 0.90) 42%,
+      rgba(16, 48, 82, 0.66) 70%,
+      rgba(18, 50, 86, 0.42) 100%
+    ),
+    url("/images/service/csv-contact-bg.png") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.service-business-contact__overlay {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 15, 40, 0.10) 0%,
+    transparent 58%,
+    rgba(255, 255, 255, 0.02) 100%
+  ) !important;
+  pointer-events: none !important;
+}
+
+.service-business-contact__inner {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 320px !important;
+  align-items: center !important;
+  gap: clamp(70px, 8vw, 140px) !important;
+  padding-top: 76px !important;
+  padding-bottom: 76px !important;
+}
+
+.service-business-contact__copy {
+  width: 100% !important;
+  max-width: 780px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.service-business-contact__eyebrow {
+  display: block !important;
+  margin: 0 0 16px !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 0.72rem !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+.service-business-contact__copy h2 {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: clamp(2.2rem, 3.35vw, 3.35rem) !important;
+  line-height: 1.14 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.045em !important;
+  word-break: keep-all !important;
+}
+
+.service-business-contact__rule {
+  display: block !important;
+  width: 42px !important;
+  height: 2px !important;
+  margin: 24px 0 18px !important;
+  background: rgba(255, 255, 255, 0.66) !important;
+}
+
+.service-business-contact__copy > p:last-child {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
+  font-weight: 600 !important;
+  word-break: keep-all !important;
+}
+
+.service-business-contact__action {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.service-business-contact__text-link {
+  position: relative !important;
+  width: 304px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  padding: 0 0 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 1.34rem !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 10px rgba(5, 18, 42, 0.42) !important;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease !important;
+}
+
+/* 메인 Contact 스타일: 하단 수평선 + 우측 사선 마감 */
+
+
+
+
+
+
+.service-business-contact__text-link:hover,
+.service-business-contact__text-link:focus-visible {
+  color: #fff !important;
+  transform: translateX(4px) !important;
+}
+
+@media (max-width: 920px) {
+  .service-business-contact {
+    min-height: 0 !important;
+  }
+
+  .service-business-contact__inner {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  .service-business-contact__action {
+    justify-content: flex-start !important;
+  }
+
+  .service-business-contact__text-link {
+    width: 280px !important;
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .service-business-contact__copy h2 {
+    font-size: clamp(1.95rem, 9vw, 2.55rem) !important;
+  }
+
+  .service-business-contact__copy > p:last-child {
+    font-size: 0.98rem !important;
+  }
+}
+
+
+/* =========================================================
+   CONTACT LAYOUT ALIGNMENT FIX
+   스크린샷 기준: 좌측 콘텐츠가 뷰포트 끝에 붙고
+   우측 CTA도 과도하게 바깥으로 밀린 문제 수정
+   ========================================================= */
+
+.service-business-contact__inner {
+  width: min(100% - 48px, 1400px) !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  grid-template-columns: minmax(0, 1fr) 304px !important;
+  gap: clamp(56px, 7vw, 120px) !important;
+}
+
+.service-business-contact__copy {
+  max-width: 820px !important;
+}
+
+.service-business-contact__action {
+  width: 304px !important;
+  justify-content: flex-end !important;
+}
+
+.service-business-contact__text-link {
+  width: 304px !important;
+  margin-left: auto !important;
+}
+
+/* 큰 화면에서도 메인 콘텐츠 기준선과 동일하게 유지 */
+@media (min-width: 1600px) {
+  .service-business-contact__inner {
+    width: min(100% - 72px, 1400px) !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .service-business-contact__inner {
+    width: min(100% - 36px, 1400px) !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-business-contact__action {
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  .service-business-contact__text-link {
+    width: 280px !important;
+    margin-left: 0 !important;
+  }
+}
+
+
+/* =========================================================
+   Contact CTA arrow fix
+   사선 막대가 분리되어 보이던 문제 수정:
+   하단선 끝에 작은 ㄱ자형 화살표를 연결
+   ========================================================= */
+
+
+
+/* 기존 긴 사선 제거 후, 메인 Contact처럼 짧은 꺾인 화살표로 변경 */
+
+
+/* 수평선과 화살표 연결감을 위해 끝점 보정 */
+.service-business-contact__text-link {
+  padding-right: 34px !important;
+}
+
+
+
+
+/* =========================================================
+   FINAL CONTACT CTA — exact main-home shape
+   메인 홈페이지 Contact의 형태를 SVG로 직접 구현:
+   텍스트 아래 수평선 + 우측 끝에서 위로 꺾이는 짧은 사선
+   pseudo-element를 사용하지 않아 기존 CSS와 충돌하지 않음
+   ========================================================= */
+
+.service-business-contact__action {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.service-business-contact__text-link {
+  width: 304px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 10px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-shadow: 0 1px 10px rgba(5, 18, 42, 0.42) !important;
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease !important;
+}
+
+.service-business-contact__text {
+  display: block !important;
+  padding-left: 0 !important;
+  color: inherit !important;
+  font-size: 1.44rem !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+.service-business-contact__link-line {
+  display: block !important;
+  width: 100% !important;
+  height: 18px !important;
+  overflow: visible !important;
+  color: inherit !important;
+}
+
+.service-business-contact__link-line path {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.2 !important;
+  stroke-linecap: square !important;
+  stroke-linejoin: miter !important;
+  vector-effect: non-scaling-stroke !important;
+}
+
+.service-business-contact__text-link:hover,
+.service-business-contact__text-link:focus-visible {
+  color: #fff !important;
+  opacity: 0.92 !important;
+  transform: translateX(4px) !important;
+}
+
+@media (max-width: 920px) {
+  .service-business-contact__action {
+    justify-content: flex-start !important;
+  }
+
+  .service-business-contact__text-link {
+    width: 280px !important;
+  }
+
+  .service-business-contact__text {
+    font-size: 1.28rem !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL CONTACT CTA PROPORTION
+   텍스트 대비 선 길이를 줄여 메인 Contact와 비슷한 비율로 조정
+   ========================================================= */
+
+.service-business-contact__text-link {
+  width: 246px !important;
+}
+
+.service-business-contact__link-line {
+  width: 246px !important;
+}
+
+@media (max-width: 920px) {
+  .service-business-contact__text-link,
+  .service-business-contact__link-line {
+    width: 236px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL WHITE BACKGROUND GUARD — all service subpages
+   ========================================================= */
+
+.service-design-page,
+.service-gmp-page,
+.service-csv-page,
+.service-design-page .service-business-overview,
+.service-gmp-page .service-business-overview,
+.service-csv-page .service-business-overview,
+.service-design-page .service-business-section,
+.service-gmp-page .service-business-section,
+.service-csv-page .service-business-section,
+.service-design-page .service-business-section--soft,
+.service-gmp-page .service-business-section--soft,
+.service-csv-page .service-business-section--soft {
+  background: #fff !important;
+  background-color: #fff !important;
+  background-image: none !important;
+}
