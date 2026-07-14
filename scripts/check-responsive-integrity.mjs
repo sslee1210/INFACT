@@ -13,52 +13,54 @@ const responsiveFiles = [
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
-  "client/src/styles/common/responsive-refinement-stage8.css",
+  "client/src/styles/pages/company-history-responsive.css",
+  "client/src/styles/pages/contact-responsive.css",
+  "client/src/styles/pages/service-csv-responsive.css",
 ];
 
 const requiredImportOrder = [
-  './styles/common/design-system.css',
-  './styles/common/responsive-foundation.css',
-  './styles/pages/home-mobile-polish.css',
-  './styles/pages/home-responsive-stage2.css',
-  './styles/pages/company-responsive-stage3.css',
-  './styles/pages/services-responsive-stage4.css',
-  './styles/pages/references-responsive-stage5.css',
-  './styles/common/ui-system-stage6.css',
-  './styles/common/responsive-qa-stage7.css',
-  './styles/common/responsive-refinement-stage8.css',
+  "./styles/common/design-system.css",
+  "./styles/common/responsive-foundation.css",
+  "./styles/pages/home-mobile-polish.css",
+  "./styles/pages/home-responsive-stage2.css",
+  "./styles/pages/company-responsive-stage3.css",
+  "./styles/pages/services-responsive-stage4.css",
+  "./styles/pages/references-responsive-stage5.css",
+  "./styles/common/ui-system-stage6.css",
+  "./styles/common/responsive-qa-stage7.css",
+  "./styles/pages/company-history-responsive.css",
+  "./styles/pages/contact-responsive.css",
+  "./styles/pages/service-csv-responsive.css",
 ];
 
 const forbiddenImports = [
   {
-    path: './styles/common/ultrawide-layout-fix.css',
-    reason:
-      '1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.',
+    path: "./styles/common/ultrawide-layout-fix.css",
+    reason: "1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.",
   },
   {
-    path: './styles/common/large-desktop-layout.css',
-    reason:
-      '공통 1920px 이상 컨테이너 가이드는 base.css 본체로 통합되었습니다.',
+    path: "./styles/common/large-desktop-layout.css",
+    reason: "공통 1920px 이상 컨테이너 가이드는 base.css 본체로 통합되었습니다.",
   },
   {
-    path: './styles/pages/home-about-large-desktop.css',
-    reason:
-      'About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.',
+    path: "./styles/pages/home-about-large-desktop.css",
+    reason: "About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.",
   },
   {
-    path: './styles/pages/home-experience-large-desktop.css',
-    reason:
-      'Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.',
+    path: "./styles/pages/home-experience-large-desktop.css",
+    reason: "Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.",
   },
   {
-    path: './styles/pages/home-service-large-desktop.css',
-    reason:
-      '서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.',
+    path: "./styles/pages/home-service-large-desktop.css",
+    reason: "서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.",
   },
   {
-    path: './styles/pages/home-contact-large-desktop.css',
-    reason:
-      '홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.',
+    path: "./styles/pages/home-contact-large-desktop.css",
+    reason: "홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.",
+  },
+  {
+    path: "./styles/common/responsive-refinement-stage8.css",
+    reason: "Stage 8은 페이지별 반응형 모듈로 분해되어 삭제되었습니다.",
   },
 ];
 
@@ -128,9 +130,7 @@ function checkBalancedBraces(source, file) {
     if (current === "{") depth += 1;
     if (current === "}") depth -= 1;
 
-    if (depth < 0) {
-      return `${file}: 닫는 중괄호가 더 많습니다.`;
-    }
+    if (depth < 0) return `${file}: 닫는 중괄호가 더 많습니다.`;
   }
 
   if (inComment) return `${file}: 닫히지 않은 CSS 주석이 있습니다.`;
@@ -141,6 +141,11 @@ function checkBalancedBraces(source, file) {
 
 function lineNumber(source, index) {
   return source.slice(0, index).split("\n").length;
+}
+
+function requireContent(source, file, needles, message, errors) {
+  if (needles.every((needle) => source.includes(needle))) return;
+  errors.push(`${file} — ${message}`);
 }
 
 const errors = [];
@@ -196,40 +201,30 @@ for (const requiredImport of requiredImportOrder) {
   previousIndex = currentIndex;
 }
 
-const stage8Path = "client/src/styles/common/responsive-refinement-stage8.css";
-const stage8Source = read(stage8Path);
-
-if (stage8Source.includes("@media (min-width: 1920px)")) {
+const lastRequiredImport = requiredImportOrder.at(-1);
+if (importMatches.at(-1) !== lastRequiredImport) {
   errors.push(
-    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 기존 base/page responsive CSS에서 관리해야 합니다.`,
-  );
-}
-
-if (stage8Source.includes(".home-company-intro")) {
-  errors.push(
-    `${stage8Path} — 소유권 회귀: .home-company-intro 규칙은 client/src/styles/pages/home-company-intro.css에서 관리해야 합니다.`,
+    `client/src/index.css — 마지막 CSS import는 ${lastRequiredImport}여야 합니다.`,
   );
 }
 
 const baseSource = read("client/src/styles/common/base.css");
-if (
-  !baseSource.includes("@media (min-width: 1920px)") ||
-  !baseSource.includes(".home-main .home-container")
-) {
-  errors.push(
-    "client/src/styles/common/base.css — 1920px 이상 공통 컨테이너 가이드가 누락되었습니다.",
-  );
-}
+requireContent(
+  baseSource,
+  "client/src/styles/common/base.css",
+  ["@media (min-width: 1920px)", ".home-main .home-container"],
+  "1920px 이상 공통 컨테이너 가이드가 누락되었습니다.",
+  errors,
+);
 
 const companyIntroSource = read("client/src/styles/pages/home-company-intro.css");
-if (
-  !companyIntroSource.includes("@media (min-width: 1920px)") ||
-  !companyIntroSource.includes(".home-company-intro__inner")
-) {
-  errors.push(
-    "client/src/styles/pages/home-company-intro.css — 1920px 이상 회사소개 스케일 규칙이 누락되었습니다.",
-  );
-}
+requireContent(
+  companyIntroSource,
+  "client/src/styles/pages/home-company-intro.css",
+  ["@media (min-width: 1920px)", ".home-company-intro__inner"],
+  "1920px 이상 회사소개 스케일 규칙이 누락되었습니다.",
+  errors,
+);
 
 const homeAboutSource = read("client/src/styles/pages/home-about.css");
 if (homeAboutSource.includes("@media (min-width: 2200px)")) {
@@ -237,14 +232,13 @@ if (homeAboutSource.includes("@media (min-width: 2200px)")) {
     "client/src/styles/pages/home-about.css — 레거시 2200px 전용 확대 규칙을 다시 추가하지 마세요.",
   );
 }
-if (
-  !homeAboutSource.includes("@media (min-width: 1920px)") ||
-  !homeAboutSource.includes(".about-process-cycle")
-) {
-  errors.push(
-    "client/src/styles/pages/home-about.css — 1920px 이상 About 스케일 규칙이 누락되었습니다.",
-  );
-}
+requireContent(
+  homeAboutSource,
+  "client/src/styles/pages/home-about.css",
+  ["@media (min-width: 1920px)", ".about-process-cycle"],
+  "1920px 이상 About 스케일 규칙이 누락되었습니다.",
+  errors,
+);
 
 const homeServiceSource = read("client/src/styles/pages/home-service.css");
 if (homeServiceSource.includes("@media (min-width: 2200px)")) {
@@ -252,51 +246,72 @@ if (homeServiceSource.includes("@media (min-width: 2200px)")) {
     "client/src/styles/pages/home-service.css — 레거시 2200px 전용 확대 규칙을 다시 추가하지 마세요.",
   );
 }
-if (
-  !homeServiceSource.includes("@media (min-width: 1920px)") ||
-  !homeServiceSource.includes(".service-immersive-section")
-) {
-  errors.push(
-    "client/src/styles/pages/home-service.css — 1920px 이상 서비스 스케일 규칙이 누락되었습니다.",
-  );
-}
+requireContent(
+  homeServiceSource,
+  "client/src/styles/pages/home-service.css",
+  ["@media (min-width: 1920px)", ".service-immersive-section"],
+  "1920px 이상 서비스 스케일 규칙이 누락되었습니다.",
+  errors,
+);
 
 const homeContactSource = read("client/src/styles/pages/home-contact.css");
-if (
-  !homeContactSource.includes("@media (min-width: 1920px)") ||
-  !homeContactSource.includes(".home-cta-banner")
-) {
-  errors.push(
-    "client/src/styles/pages/home-contact.css — 1920px 이상 홈 CTA 스케일 규칙이 누락되었습니다.",
-  );
-}
-
-const homeResponsiveSource = read("client/src/styles/pages/home-responsive-stage2.css");
-if (
-  !homeResponsiveSource.includes("@media (min-width: 1920px)") ||
-  !homeResponsiveSource.includes(".home-experience__metric strong") ||
-  !homeResponsiveSource.includes(".home-experience__client-track")
-) {
-  errors.push(
-    "client/src/styles/pages/home-responsive-stage2.css — 1920px 이상 Experience 정상화 규칙이 누락되었습니다.",
-  );
-}
-
-const stage8Index = importMatches.indexOf(
-  "./styles/common/responsive-refinement-stage8.css",
+requireContent(
+  homeContactSource,
+  "client/src/styles/pages/home-contact.css",
+  ["@media (min-width: 1920px)", ".home-cta-banner"],
+  "1920px 이상 홈 CTA 스케일 규칙이 누락되었습니다.",
+  errors,
 );
-if (stage8Index !== importMatches.length - 1) {
-  errors.push(
-    "client/src/index.css — responsive-refinement-stage8.css는 마지막 CSS import여야 합니다.",
+
+const homeStage2Source = read("client/src/styles/pages/home-responsive-stage2.css");
+requireContent(
+  homeStage2Source,
+  "client/src/styles/pages/home-responsive-stage2.css",
+  ["@media (min-width: 1920px)", ".home-experience__metric strong"],
+  "1920px 이상 Experience 정상화 규칙이 누락되었습니다.",
+  errors,
+);
+
+const historyResponsiveSource = read("client/src/styles/pages/company-history-responsive.css");
+requireContent(
+  historyResponsiveSource,
+  "client/src/styles/pages/company-history-responsive.css",
+  ["@media (max-width: 767px)", ".history-list__item.is-active time"],
+  "회사 연혁 모바일 진행선 보정이 누락되었습니다.",
+  errors,
+);
+
+const contactResponsiveSource = read("client/src/styles/pages/contact-responsive.css");
+requireContent(
+  contactResponsiveSource,
+  "client/src/styles/pages/contact-responsive.css",
+  [".home-cta-banner__button", ".contact-banner__button"],
+  "CTA 모바일 중앙 정렬 보정이 누락되었습니다.",
+  errors,
+);
+
+const csvResponsiveSource = read("client/src/styles/pages/service-csv-responsive.css");
+requireContent(
+  csvResponsiveSource,
+  "client/src/styles/pages/service-csv-responsive.css",
+  [".csv-vmodel img", ".service-business-overview__pillar"],
+  "CSV V-Model 또는 모바일 원형 pillar 보정이 누락되었습니다.",
+  errors,
+);
+
+const experienceSource = read("client/src/styles/pages/home-experience.css");
+if (experienceSource.includes("@media (min-width: 2200px)")) {
+  warnings.push(
+    "client/src/styles/pages/home-experience.css: 레거시 2200px 블록이 남아 있으며 1920px 정상화 규칙이 뒤에서 무효화합니다.",
   );
 }
 
 console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
-console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 large-desktop·ultrawide import 금지");
-console.log("CSS 소유권 정책: Stage 8은 모바일 보정 전용 / 대형 화면은 기존 base/page responsive CSS");
-console.log("\n[참고: override 밀도]");
+console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide·large-desktop override 금지");
+console.log("반응형 소유권 정책: 전역 Stage 8 금지 / 확인된 보정은 페이지별 responsive CSS에서 관리");
+console.log("\n[참고: override 밀도 및 남은 레거시]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
 if (errors.length > 0) {
@@ -309,5 +324,5 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
-console.log("- CSS 소유권 경계 통과");
+console.log("- 페이지별 반응형 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
