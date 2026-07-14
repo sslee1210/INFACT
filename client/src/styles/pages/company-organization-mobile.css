@@ -20,8 +20,9 @@
     --org-line: #aab2c4;
     --org-line-soft: #cbd1de;
 
-    --org-spine-x: 28px;
-    --org-primary-indent: 58px;
+    --org-lead-connector-x: 78px;
+    --org-spine-x: calc(var(--org-lead-left) + var(--org-lead-connector-x));
+    --org-primary-indent: 128px;
     --org-primary-height: 50px;
     --org-primary-gap: 18px;
 
@@ -33,11 +34,9 @@
     --org-team-height: 38px;
     --org-team-gap: 7px;
 
-    --org-lead-left: 46px;
+    --org-lead-left: 16px;
     --org-lead-width: 224px;
-    --org-lead-center-x: 158px;
-    --org-lead-connector-drop: 18px;
-    --org-lead-connector-elbow: 22px;
+    --org-lead-center-x: 128px;
 
     display: block;
     width: min(100%, 460px);
@@ -46,13 +45,12 @@
     color: var(--org-ink);
   }
 
-  /* CEO */
   .org-mobile-tree__lead {
     position: relative;
     box-sizing: border-box;
     width: var(--org-lead-width);
     min-height: 58px;
-    margin: 0 0 40px var(--org-lead-left);
+    margin: 0 0 18px var(--org-lead-left);
     padding: 12px 20px;
     display: flex;
     align-items: center;
@@ -69,31 +67,27 @@
     box-shadow: 0 10px 24px rgba(24, 35, 111, 0.12);
   }
 
-  /* Clean vertical drop from the CEO center into the connector elbow. */
   .org-mobile-tree__lead::after {
     content: "";
     position: absolute;
-    left: 50%;
+    left: var(--org-lead-connector-x);
     top: 100%;
-    width: 1.5px;
-    height: var(--org-lead-connector-drop);
+    width: 1px;
+    height: 18px;
     background: var(--org-line);
-    transform: translateX(-50%);
   }
 
-  /* Primary organization area */
   .org-mobile-branch {
     position: relative;
     padding-left: var(--org-primary-indent);
   }
 
-  /* Main spine ends exactly at the center of the third primary division. */
   .org-mobile-branch::before {
     content: "";
     position: absolute;
     left: var(--org-spine-x);
     top: 0;
-    width: 1.5px;
+    width: 1px;
     height: calc(
       (var(--org-primary-height) * 2)
       + (var(--org-primary-gap) * 2)
@@ -102,23 +96,8 @@
     background: var(--org-line);
   }
 
-  /*
-     CEO connector:
-     1) the CEO drops vertically to the horizontal bridge,
-     2) the bridge turns down in the whitespace,
-     3) the vertical leg meets the main spine at its top.
-     This keeps the elbow away from the first department branch.
-  */
   .org-mobile-branch::after {
-    content: "";
-    position: absolute;
-    left: var(--org-spine-x);
-    top: calc(-1 * var(--org-lead-connector-elbow));
-    width: calc(var(--org-lead-center-x) - var(--org-spine-x));
-    height: var(--org-lead-connector-elbow);
-    box-sizing: border-box;
-    border-top: 1.5px solid var(--org-line);
-    border-left: 1.5px solid var(--org-line);
+    display: none;
   }
 
   .org-mobile-branch__item {
@@ -132,7 +111,7 @@
     left: calc(-1 * (var(--org-primary-indent) - var(--org-spine-x)));
     top: calc(var(--org-primary-height) / 2);
     width: calc(var(--org-primary-indent) - var(--org-spine-x));
-    height: 1.5px;
+    height: 1px;
     background: var(--org-line);
   }
 
@@ -144,7 +123,6 @@
     word-break: keep-all;
   }
 
-  /* Primary divisions: quieter than the CEO, but still clearly dominant. */
   .org-mobile-branch__node--primary {
     width: min(100%, 300px);
     min-height: var(--org-primary-height);
@@ -168,7 +146,6 @@
     font-weight: 800;
   }
 
-  /* Validation -> GMP / CSV */
   .org-mobile-branch__children {
     position: relative;
     margin-top: 14px;
@@ -181,7 +158,7 @@
     position: absolute;
     left: 0;
     top: -14px;
-    width: 1.5px;
+    width: 1px;
     height: calc(
       14px
       + var(--org-secondary-height)
@@ -202,11 +179,10 @@
     left: calc(-1 * var(--org-child-indent));
     top: calc(var(--org-secondary-height) / 2);
     width: var(--org-child-indent);
-    height: 1.5px;
+    height: 1px;
     background: var(--org-line);
   }
 
-  /* Third level: a softer, deliberately distinct treatment. */
   .org-mobile-branch__node--secondary {
     width: min(100%, 258px);
     min-height: var(--org-secondary-height);
@@ -226,7 +202,6 @@
     background: #f1f3fb;
   }
 
-  /* CSV teams: compact list, not a third set of large cards. */
   .org-mobile-branch__teams {
     position: relative;
     width: min(100%, 222px);
@@ -262,7 +237,7 @@
     box-sizing: border-box;
     min-width: 0;
     min-height: var(--org-team-height);
-    padding: 7px 11px 7px 26px;
+    padding: 7px 11px 7px 14px;
     display: flex;
     align-items: center;
     border: 1px solid #d8dce7;
@@ -289,27 +264,20 @@
   }
 
   .org-mobile-branch__team::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--org-light);
-    transform: translateY(-50%);
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .org-mobile-tree {
-    --org-spine-x: 22px;
-    --org-primary-indent: 50px;
+    --org-lead-connector-x: 73px;
+    --org-spine-x: calc(var(--org-lead-left) + var(--org-lead-connector-x));
+    --org-primary-indent: 123px;
     --org-child-indent: 26px;
     --org-team-indent: 20px;
-    --org-lead-left: 36px;
-    --org-lead-width: 210px;
-    --org-lead-center-x: 141px;
+    --org-lead-left: 12px;
+    --org-lead-width: 208px;
+    --org-lead-center-x: 116px;
     padding-inline: 4px;
   }
 
