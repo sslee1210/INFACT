@@ -12,7 +12,7 @@ const responsiveFiles = [
   "client/src/styles/pages/services-responsive-stage4.css",
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
-  "client/src/styles/common/responsive-qa-stage7.css",
+  "client/src/styles/common/responsive-safety.css",
   "client/src/styles/pages/company-history-responsive.css",
   "client/src/styles/pages/contact-responsive.css",
   "client/src/styles/pages/service-csv-responsive.css",
@@ -27,7 +27,7 @@ const requiredImportOrder = [
   "./styles/pages/services-responsive-stage4.css",
   "./styles/pages/references-responsive-stage5.css",
   "./styles/common/ui-system-stage6.css",
-  "./styles/common/responsive-qa-stage7.css",
+  "./styles/common/responsive-safety.css",
   "./styles/pages/company-history-responsive.css",
   "./styles/pages/contact-responsive.css",
   "./styles/pages/service-csv-responsive.css",
@@ -57,6 +57,10 @@ const forbiddenImports = [
   {
     path: "./styles/pages/home-contact-large-desktop.css",
     reason: "홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.",
+  },
+  {
+    path: "./styles/common/responsive-qa-stage7.css",
+    reason: "Stage 7은 semantic responsive-safety 레이어로 축소되어 삭제되었습니다.",
   },
   {
     path: "./styles/common/responsive-refinement-stage8.css",
@@ -129,7 +133,6 @@ function checkBalancedBraces(source, file) {
 
     if (current === "{") depth += 1;
     if (current === "}") depth -= 1;
-
     if (depth < 0) return `${file}: 닫는 중괄호가 더 많습니다.`;
   }
 
@@ -203,9 +206,7 @@ for (const requiredImport of requiredImportOrder) {
 
 const lastRequiredImport = requiredImportOrder.at(-1);
 if (importMatches.at(-1) !== lastRequiredImport) {
-  errors.push(
-    `client/src/index.css — 마지막 CSS import는 ${lastRequiredImport}여야 합니다.`,
-  );
+  errors.push(`client/src/index.css — 마지막 CSS import는 ${lastRequiredImport}여야 합니다.`);
 }
 
 const baseSource = read("client/src/styles/common/base.css");
@@ -272,6 +273,15 @@ requireContent(
   errors,
 );
 
+const responsiveSafetySource = read("client/src/styles/common/responsive-safety.css");
+requireContent(
+  responsiveSafetySource,
+  "client/src/styles/common/responsive-safety.css",
+  ["overflow-wrap: anywhere", "@media (prefers-reduced-motion: reduce)"],
+  "공통 반응형 안전 규칙이 누락되었습니다.",
+  errors,
+);
+
 const historyResponsiveSource = read("client/src/styles/pages/company-history-responsive.css");
 requireContent(
   historyResponsiveSource,
@@ -310,8 +320,8 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide·large-desktop override 금지");
-console.log("반응형 소유권 정책: 전역 Stage 8 금지 / 확인된 보정은 페이지별 responsive CSS에서 관리");
-console.log("\n[참고: override 밀도 및 남은 레거시]");
+console.log("반응형 소유권 정책: Stage 7·8 금지 / 공통 안전은 responsive-safety / 특수 보정은 페이지별 responsive CSS");
+console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
 if (errors.length > 0) {
@@ -324,5 +334,6 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
-console.log("- 페이지별 반응형 소유권 경계 통과");
+console.log("- Stage 7·8 제거 상태 통과");
+console.log("- CSS 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
