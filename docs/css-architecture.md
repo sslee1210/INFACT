@@ -34,7 +34,7 @@
 - `home-contact.css`: shared contact banner styles plus the 1920px Home CTA refinement
 - `home-mobile-responsive.css`: home mobile-specific layout
 - `home-responsive.css`: home family tablet/mobile and 1920px Experience normalization
-- `home-layout-responsive.css`: final full-width safety correction for Home marquee/CTA
+- `contact-responsive.css`: final Home/Contact CTA mobile width and alignment ownership
 
 ### Page families
 
@@ -42,7 +42,7 @@
 - `services-responsive.css`: service page family
 - `references-responsive.css`: references page family
 - `company-history-responsive.css`: history-specific mobile correction
-- `contact-responsive.css`: contact/home CTA mobile alignment
+- `contact-responsive.css`: contact/home CTA mobile alignment and width safety
 - `service-csv-responsive.css`: CSV-specific V-model and mobile pillar corrections
 
 ## Removed legacy layers
@@ -58,6 +58,7 @@ The following Stage-based or patch-style paths must not be restored:
 - `responsive-qa-stage7.css`
 - `responsive-refinement-stage8.css`
 - `home-mobile-polish.css`
+- `home-layout-responsive.css`
 - `references-year-menu-patch.css`
 - all temporary `*-large-desktop.css` files
 - `ultrawide-layout-fix.css`
@@ -66,7 +67,7 @@ The following Stage-based or patch-style paths must not be restored:
 
 `home-experience.css` no longer contains historical 2200px-only expansion rules, viewport-width breakout math, old Experience Showcase selectors, editorial page selectors, or the removed About process diagram styling. The active file now owns only the current Home Experience section and client marquee.
 
-The Home CTA base styling was separated into `home-cta.css`. Existing tablet/mobile refinements remain in `home-responsive.css`, and the 1920px refinement remains in `home-contact.css`.
+The Home CTA base styling is separated into `home-cta.css`. Tablet/mobile layout remains in `home-responsive.css`, the final CTA width/alignment correction is owned by `contact-responsive.css`, and the 1920px refinement remains in `home-contact.css`.
 
 ## Visit counter note
 
