@@ -8,7 +8,6 @@ import { PageLayout } from "@/components/site/PageLayout";
 import { PageSubNav } from "@/components/site/PageSubNav";
 import { servicePages } from "@/content/siteContent";
 import "@/styles/pages/service-business-layout.css";
-import "@/styles/pages/service-gmp.css";
 import "@/styles/pages/service-gmp-page.css";
 
 export default function ServiceGMP() {
