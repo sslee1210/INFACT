@@ -10,6 +10,10 @@ type PageIntroProps = {
 const DEFAULT_INTRO_IMAGE = "./images/sub/banner.jpg";
 const SITE_NAME = "INFACT";
 
+function getMeta(selector: string) {
+  return document.querySelector<HTMLMetaElement>(selector);
+}
+
 export function PageIntro({ label, title, description, image }: PageIntroProps) {
   const animationStyle = useMemo(() => {
     const duration = 14;
@@ -22,22 +26,30 @@ export function PageIntro({ label, title, description, image }: PageIntroProps) 
   }, [image]);
 
   useEffect(() => {
+    const nextTitle = `${title} | ${SITE_NAME}`;
+    const metadata = [
+      { element: getMeta('meta[name="description"]'), value: description },
+      { element: getMeta('meta[property="og:title"]'), value: nextTitle },
+      { element: getMeta('meta[property="og:description"]'), value: description },
+      { element: getMeta('meta[name="twitter:title"]'), value: nextTitle },
+      { element: getMeta('meta[name="twitter:description"]'), value: description },
+    ];
     const previousTitle = document.title;
-    const descriptionMeta = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]',
-    );
-    const previousDescription = descriptionMeta?.content;
+    const previousValues = metadata.map(({ element }) => element?.content);
 
-    document.title = `${title} | ${SITE_NAME}`;
-    if (description && descriptionMeta) {
-      descriptionMeta.content = description;
-    }
+    document.title = nextTitle;
+    metadata.forEach(({ element, value }) => {
+      if (element && value) element.content = value;
+    });
 
     return () => {
       document.title = previousTitle;
-      if (descriptionMeta && previousDescription !== undefined) {
-        descriptionMeta.content = previousDescription;
-      }
+      metadata.forEach(({ element }, index) => {
+        const previousValue = previousValues[index];
+        if (element && previousValue !== undefined) {
+          element.content = previousValue;
+        }
+      });
     };
   }, [description, title]);
 
