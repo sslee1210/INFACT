@@ -9,7 +9,6 @@ import { PageLayout } from "@/components/site/PageLayout";
 import { PageSubNav } from "@/components/site/PageSubNav";
 import { servicePages } from "@/content/siteContent";
 import "@/styles/pages/service-business-layout.css";
-import "@/styles/pages/service-design.css";
 import "@/styles/pages/service-design-page.css";
 
 export default function ServiceDesign() {
