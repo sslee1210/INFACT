@@ -9,8 +9,13 @@ type PageLayoutProps = {
 export function PageLayout({ children }: PageLayoutProps) {
   return (
     <div className="site-app">
+      <a className="site-skip-link" href="#main-content">
+        본문으로 바로가기
+      </a>
       <SiteHeader />
-      <main className="site-main site-main--overlap">{children}</main>
+      <main id="main-content" className="site-main site-main--overlap" tabIndex={-1}>
+        {children}
+      </main>
       <SiteFooter />
     </div>
   );
