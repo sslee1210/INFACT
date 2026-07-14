@@ -1,0 +1,345 @@
+/* =========================================================
+   STAGE 8 — FINAL MOBILE POLISH / VISUAL COMPLETION
+
+   목적
+   - 연혁 모바일 타임라인 가독성 보정
+   - 사업안내 모바일 카드 완성도 상향
+   - CSV V-Model 과대 노출/가로 침범 수정
+   - CSV Overview 핵심 블록 재구성
+   - Contact CTA 모바일 버튼 완성도 개선
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   COMPANY HISTORY — mobile timeline spacing cleanup
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .history-list {
+    --history-rail-x: 24px !important;
+    gap: 24px !important;
+  }
+
+  .history-list::before {
+    width: 6px !important;
+  }
+
+  .history-list::after {
+    width: 2px !important;
+  }
+
+  .history-list__item,
+  .history-list__item--left,
+  .history-list__item--right {
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 24px !important;
+    padding: 0 0 34px !important;
+  }
+
+  .history-list__item time,
+  .history-list__item--left time,
+  .history-list__item--right time {
+    width: 48px !important;
+    height: 48px !important;
+    margin-left: 0 !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  .history-list__content,
+  .history-list__item--left .history-list__content,
+  .history-list__item--right .history-list__content {
+    padding-top: 0 !important;
+  }
+
+  .history-list__content h3 {
+    font-size: 1.04rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .history-list__item ul {
+    margin-top: 12px !important;
+    gap: 8px !important;
+  }
+
+  .history-list__item li {
+    padding-left: 16px !important;
+    font-size: 0.86rem !important;
+    line-height: 1.72 !important;
+  }
+
+  .history-list__item li::before {
+    left: 2px !important;
+    top: 0.76em !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   HOME / SERVICES — mobile service card polish
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .service-card-rail {
+    gap: 22px !important;
+  }
+
+  .service-card,
+  .service-card:hover,
+  .service-card:focus-visible {
+    border: 1px solid rgba(22, 28, 129, 0.12) !important;
+    background: #fff !important;
+    box-shadow: 0 12px 28px rgba(17, 38, 86, 0.04) !important;
+    overflow: hidden !important;
+  }
+
+  .service-card__media {
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .service-card__content {
+    padding: 20px 20px 18px !important;
+    border-bottom: 0 !important;
+  }
+
+  .service-card__content::after {
+    right: 18px !important;
+    top: 20px !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: grid !important;
+    place-items: center !important;
+    border: 1px solid rgba(22, 28, 129, 0.16) !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+  }
+
+  .service-card__label {
+    margin: 0 56px 8px 0 !important;
+    font-size: 0.74rem !important;
+    letter-spacing: 0.06em !important;
+  }
+
+  .service-card__body {
+    gap: 10px !important;
+    padding-right: 56px !important;
+  }
+
+  .service-card__title {
+    font-size: clamp(1.55rem, 7.2vw, 1.95rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  .service-card__scope {
+    max-width: none !important;
+    font-size: 0.95rem !important;
+    line-height: 1.66 !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   SERVICE CONTACT CTA — support both current one-link CTA
+   and previous two-button variant.
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .service-business-contact {
+    min-height: 500px !important;
+    background-position: 60% center !important;
+  }
+
+  .service-business-contact__inner {
+    gap: 26px !important;
+    padding-top: clamp(56px, 14vw, 72px) !important;
+    padding-bottom: clamp(56px, 14vw, 72px) !important;
+  }
+
+  .service-business-contact__copy h2 {
+    max-width: 11ch !important;
+    font-size: clamp(2.06rem, 9.4vw, 2.86rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .service-business-contact__copy > p:last-child {
+    max-width: 26em !important;
+    font-size: 0.96rem !important;
+    line-height: 1.74 !important;
+  }
+
+  .service-business-contact__action {
+    margin-top: 8px !important;
+  }
+
+  .service-business-contact__text-link {
+    width: min(100%, 292px) !important;
+  }
+
+  /* legacy two-button version */
+  .service-business-contact__links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+
+  .service-business-contact__link {
+    min-height: 56px !important;
+    padding: 0 20px !important;
+    border-radius: 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 1.04rem !important;
+    line-height: 1.3 !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.58) !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .service-business-contact__link:first-child {
+    background: #fff !important;
+    color: var(--home-blue-strong) !important;
+    border-color: #fff !important;
+  }
+
+  .service-business-contact__link:last-child {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+  }
+
+  .service-business-contact__link > span:last-child {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-business-contact__links {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   CSV — V-model / framework / overview mobile optimization
+   --------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .csv-vmodel {
+    margin-top: 28px !important;
+    border: 1px solid rgba(22, 28, 129, 0.1) !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+
+  .csv-vmodel img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .csv-framework-section .service-business-heading {
+    margin-bottom: 26px !important;
+  }
+
+  .csv-framework-section .service-business-heading__copy h2 {
+    font-size: clamp(2rem, 10.8vw, 2.8rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .csv-framework-section .service-business-heading__description {
+    font-size: 0.96rem !important;
+    line-height: 1.74 !important;
+    max-width: 30em !important;
+  }
+
+  .service-csv-page .service-business-overview__head h2 {
+    max-width: 10em !important;
+    font-size: clamp(2rem, 10.4vw, 2.85rem) !important;
+    line-height: 1.14 !important;
+  }
+
+  .service-csv-page .service-business-overview__description {
+    max-width: 29em !important;
+    font-size: 0.98rem !important;
+    line-height: 1.76 !important;
+  }
+
+  .service-business-overview__pillars {
+    width: min(100%, 420px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 30px !important;
+  }
+
+  .service-business-overview__pillar {
+    min-height: 86px !important;
+    aspect-ratio: auto !important;
+    display: grid !important;
+    grid-template-columns: 48px minmax(0, 1fr) !important;
+    align-items: center !important;
+    justify-items: start !important;
+    gap: 0 14px !important;
+    padding: 16px 18px !important;
+    border: 1px solid rgba(22, 28, 129, 0.12) !important;
+    border-radius: 18px !important;
+    background: #fff !important;
+    text-align: left !important;
+  }
+
+  .service-business-overview__pillar + .service-business-overview__pillar {
+    margin-left: 0 !important;
+  }
+
+  .service-business-overview__pillar span,
+  .service-business-overview__pillar strong {
+    font-size: 0.98rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .service-business-overview__pillar span {
+    font-size: 0.82rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .service-business-flow-list.csv-framework-description > div {
+    grid-template-columns: 40px minmax(0, 1fr) !important;
+  }
+
+  .service-business-flow-list.csv-framework-description strong {
+    padding-bottom: 6px !important;
+  }
+
+  .service-business-flow-list.csv-framework-description p {
+    grid-column: 2 / -1 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   Very small screens
+   --------------------------------------------------------- */
+@media (max-width: 390px) {
+  .service-card__content {
+    padding: 18px 18px 16px !important;
+  }
+
+  .service-card__content::after {
+    right: 16px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .service-card__body {
+    padding-right: 52px !important;
+  }
+
+  .service-business-overview__pillar {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    padding: 15px 16px !important;
+  }
+}

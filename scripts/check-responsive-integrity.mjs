@@ -13,6 +13,7 @@ const responsiveFiles = [
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
+  "client/src/styles/common/responsive-refinement-stage8.css",
 ];
 
 const requiredImportOrder = [
@@ -25,6 +26,7 @@ const requiredImportOrder = [
   './styles/pages/references-responsive-stage5.css',
   './styles/common/ui-system-stage6.css',
   './styles/common/responsive-qa-stage7.css',
+  './styles/common/responsive-refinement-stage8.css',
 ];
 
 const forbiddenPatterns = [
@@ -153,10 +155,12 @@ for (const requiredImport of requiredImportOrder) {
   previousIndex = currentIndex;
 }
 
-const stage7Index = importMatches.indexOf("./styles/common/responsive-qa-stage7.css");
-if (stage7Index !== importMatches.length - 1) {
+const stage8Index = importMatches.indexOf(
+  "./styles/common/responsive-refinement-stage8.css",
+);
+if (stage8Index !== importMatches.length - 1) {
   errors.push(
-    "client/src/index.css — responsive-qa-stage7.css는 마지막 CSS import여야 합니다.",
+    "client/src/index.css — responsive-refinement-stage8.css는 마지막 CSS import여야 합니다.",
   );
 }
 

@@ -1,95 +1,43 @@
-7단계 — 최종 반응형 QA / 충돌 CSS 정리
+Stage 8 corrected — 사용자 캡처 기준 4개 문제만 정확히 수정
 
-기준 커밋
-- GitHub main 최신 커밋: 1f0f5d14ab19f0922b9e4855dd9d1bf49e103eb3
-- 커밋 메시지: 전체 페이지 모바일 태블릿 반응형 2차 개편
+기준 GitHub 커밋
+f6580e80220ac5c8ebd6b4575659a3f19daa3663
+전체 페이지 모바일 태블릿 반응형 3차 개편
 
-이번 단계에서 실제로 정리한 항목
+1. 연혁 타임라인
+- 진행 세로선은 원 뒤에 유지
+- 비활성 연도 원의 반투명 배경을 불투명 배경으로 변경
+- 흰색 외곽 마스크를 추가하여 스크롤 진행선이 숫자 위로 비치지 않도록 수정
+- 활성 연도 원도 동일하게 선을 완전히 가림
 
-1. 가로 오버플로 위험 제거
-- 모바일 메뉴 width의 100vw 사용 제거
-  width: min(440px, 100vw) -> width: min(440px, 100%)
-  width: 100vw -> width: 100%
-- 모바일 메인 Contact full-bleed의
-  calc(50% - 50vw) 방식 제거
-- site-edge-gutter 기준으로 정확히 확장하도록 변경
-- html/body overflow-x fallback 추가
-  hidden 기본 + 지원 브라우저에서 clip 사용
+2. 메인 Contact 버튼
+- 모바일의 justify-content:flex-start를 최종 override
+- 문의하기 / 수행실적 보기 텍스트를 버튼 중앙에 정확히 정렬
 
-2. 모바일 메뉴 viewport 높이 fallback
-- 100dvh만 사용하던 구조에 100vh fallback 추가
-- 구형 브라우저에서도 메뉴 높이가 무너지지 않도록 보강
+3. CSV V-Model
+- 데스크톱 CSS의 width:130%, margin:-15%를 모바일/태블릿에서 완전히 취소
+- width/max-width 100%
+- object-fit:contain
+- transform/clip 제거
+- 모바일에서도 전체 도식이 한 화면 폭 안에 전부 표시
 
-3. 불필요한 breakpoint 제거
-- About 다이어그램의 중복 max-width: 560px 보정 블록 삭제
-- 이미 max-width: 767px 규칙과 동일했던 중복 CSS 제거
+4. CSV Consulting 01 / 02 / 03
+- 모바일 카드/세로행 변환 제거
+- 데스크톱과 동일한 3개 원형 디자인 유지
+- 360px에서도 3개가 한 줄에 들어가도록 크기만 반응형 축소
 
-4. 최종 QA Guardrail 신규 추가
-파일:
-client/src/styles/common/responsive-qa-stage7.css
+5. QA 스크립트
+- Stage 8 CSS를 검사 대상과 필수 import 순서에 추가
+- Stage 8 CSS가 최종 import인지 확인
 
-기능:
-- grid/flex 자식 min-width: 0 보강
-- 긴 영문 기술문서명 / 이메일 / 프로젝트명 overflow-wrap 보강
-- 이미지 / SVG / iframe 컨테이너 이탈 방지
-- 767/768, 1199/1200 전환점 안전장치
-- 모바일/태블릿에서 데스크톱 mega menu 강제 비표시
-- 1200px 이상에서 mobile drawer 잔존 방지
-- touch 기기에서 hover 이동 효과 제거
-- reduced-motion 보강
+적용 파일
+- client/src/index.css
+- client/src/styles/common/responsive-refinement-stage8.css
+- scripts/check-responsive-integrity.mjs
 
-5. 자동 반응형 무결성 검사 스크립트 추가
-파일:
-scripts/check-responsive-integrity.mjs
-
-검사 항목:
-- CSS 중괄호 구조
-- 중복 import
-- Stage 1~7 import 순서
-- Stage 7 최종 import 여부
-- 100vw 사용 금지
-- calc(50% - 50vw) 금지
-- overflow-x: auto/scroll 금지
-
-6. package.json QA 명령 추가
-- corepack pnpm qa:responsive
-  반응형 CSS 정적 무결성 검사
-
-- corepack pnpm qa
-  TypeScript check
-  + 반응형 무결성 검사
-  + production build
-
-권장 최종 실행
-cd "/c/Users/sslee/Desktop/05. 전문/0. INFACT"
-
+확인
 corepack pnpm qa
+corepack pnpm dev
 
-또는 개별 실행
-corepack pnpm check
-corepack pnpm qa:responsive
-corepack pnpm build
-
-최종 화면 확인 폭
-360
-390
-430
-768
-820
-1024
-1199
-1200
-1280
-1440
-1920
-
-중요 확인
-- 모든 페이지 가로 스크롤
-- 767 -> 768 전환
-- 1199 -> 1200 전환
-- 모바일 메뉴 열고 화면 회전/확대
-- 연도 메뉴
-- 조직도
-- V-Model / Framework / Matrix
-- Contact
-- Footer
+권장 확인 폭
+360 / 390 / 430 / 768 / 820 / 1200
