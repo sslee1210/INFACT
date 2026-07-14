@@ -36,6 +36,8 @@
     --org-lead-left: 46px;
     --org-lead-width: 224px;
     --org-lead-center-x: 158px;
+    --org-lead-connector-drop: 18px;
+    --org-lead-connector-elbow: 22px;
 
     display: block;
     width: min(100%, 460px);
@@ -50,7 +52,7 @@
     box-sizing: border-box;
     width: var(--org-lead-width);
     min-height: 58px;
-    margin: 0 0 26px var(--org-lead-left);
+    margin: 0 0 40px var(--org-lead-left);
     padding: 12px 20px;
     display: flex;
     align-items: center;
@@ -67,14 +69,14 @@
     box-shadow: 0 10px 24px rgba(24, 35, 111, 0.12);
   }
 
-  /* Vertical drop from CEO center to the top bridge. */
+  /* Clean vertical drop from the CEO center into the connector elbow. */
   .org-mobile-tree__lead::after {
     content: "";
     position: absolute;
     left: 50%;
     top: 100%;
     width: 1.5px;
-    height: 26px;
+    height: var(--org-lead-connector-drop);
     background: var(--org-line);
     transform: translateX(-50%);
   }
@@ -100,15 +102,23 @@
     background: var(--org-line);
   }
 
-  /* Deliberate elbow from the CEO center to the main spine. */
+  /*
+     CEO connector:
+     1) the CEO drops vertically to the horizontal bridge,
+     2) the bridge turns down in the whitespace,
+     3) the vertical leg meets the main spine at its top.
+     This keeps the elbow away from the first department branch.
+  */
   .org-mobile-branch::after {
     content: "";
     position: absolute;
     left: var(--org-spine-x);
-    top: 0;
+    top: calc(-1 * var(--org-lead-connector-elbow));
     width: calc(var(--org-lead-center-x) - var(--org-spine-x));
-    height: 1.5px;
-    background: var(--org-line);
+    height: var(--org-lead-connector-elbow);
+    box-sizing: border-box;
+    border-top: 1.5px solid var(--org-line);
+    border-left: 1.5px solid var(--org-line);
   }
 
   .org-mobile-branch__item {
