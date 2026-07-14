@@ -29,12 +29,12 @@
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
-background: radial-gradient(
-  circle,
-  transparent 0 33.333%,
-  rgba(125, 137, 156, 0.05) 33.333% 55%,
-  rgba(128, 202, 244, 0.044) 55% 100%
-);
+  background: radial-gradient(
+    circle,
+    transparent 0 33.333%,
+    rgba(125, 137, 156, 0.05) 33.333% 55%,
+    rgba(128, 202, 244, 0.044) 55% 100%
+  );
   box-shadow: none;
   transform: none;
   pointer-events: none;
@@ -223,21 +223,31 @@ background: radial-gradient(
   margin: clamp(44px, 4.4vw, 68px) auto 0;
 }
 
-@media (min-width: 2200px) {
+@media (min-width: 1920px) {
   .about-blend-inner::after {
-    left: clamp(-795px, -34vw, -570px);
-    bottom: clamp(-450px, -16vw, -300px);
+    left: clamp(-33.125rem, -34vw, -23.75rem);
+    bottom: clamp(-18.75rem, -16vw, -12.5rem);
+    width: clamp(32.5rem, 44vw, 75rem);
   }
 
   .about-blend-content {
-    padding-top: clamp(92px, 5.4vw, 138px);
-    padding-bottom: clamp(24px, 1.4vw, 36px);
+    padding-top: clamp(4.125rem, 5.4vw, 5.75rem);
+    padding-bottom: clamp(0.75rem, 1.4vw, 1.5rem);
+  }
+
+  .about-blend-desc {
+    max-width: 61.25rem;
   }
 
   .about-process-cycle {
-    margin-top: clamp(68px, 4.4vw, 102px);
+    width: min(100%, 55.125rem);
+    margin-top: clamp(2.75rem, 4.4vw, 4.25rem);
   }
 
+  .about-process-cycle__labels text {
+    font-size: 1.5625rem;
+    stroke-width: 0.375rem;
+  }
 }
 
 .about-process-cycle__svg {
@@ -299,6 +309,7 @@ background: radial-gradient(
   stroke-linejoin: round;
   stroke-width: 6px;
 }
+
 @media (max-width: 1200px) {
   .about-blend-inner {
     grid-template-columns: minmax(0, 1fr);
@@ -347,6 +358,7 @@ background: radial-gradient(
     gap: clamp(26px, 5vw, 36px);
     margin-top: clamp(34px, 8vw, 52px);
   }
+
   .about-process-cycle {
     width: min(100%, 690px);
     margin-top: clamp(34px, 8vw, 52px);
@@ -356,6 +368,7 @@ background: radial-gradient(
     font-size: 25px;
     stroke-width: 5px;
   }
+
   .about-blend-metric {
     text-align: center;
   }
