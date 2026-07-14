@@ -56,6 +56,9 @@
 /* Final Home mobile visual corrections */
 @import "./styles/pages/home-mobile-redesign.css";
 
+/* Final mobile organization axis geometry */
+@import "./styles/pages/company-organization-mobile-axis.css";
+
 /* Page-owned targeted responsive corrections */
 @import "./styles/pages/company-history-responsive.css";
 @import "./styles/pages/contact-responsive.css";
