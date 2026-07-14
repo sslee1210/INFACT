@@ -19,6 +19,14 @@ corepack.cmd pnpm install
 corepack.cmd pnpm dev
 ```
 
+## 품질 검사
+
+TypeScript 검사, 반응형 구조 검사, CSS 소유권 검사와 프로덕션 빌드를 한 번에 실행합니다.
+
+```powershell
+corepack.cmd pnpm qa
+```
+
 ## 빌드
 
 ```powershell
