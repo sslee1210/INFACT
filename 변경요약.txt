@@ -1,0 +1,10 @@
+수정 파일
+- client/src/components/site/SiteHeader.tsx
+- client/src/styles/common/responsive-foundation.css
+- client/src/styles/pages/service-csv-page.css
+- client/src/pages/ReferencesCSV.tsx
+
+패치 방식으로 제공한 이유
+- 사용자가 방금 최신 main에 커밋한 상태를 그대로 기준으로 적용
+- 전체 파일을 과거 버전으로 덮어쓰지 않고 필요한 줄만 변경
+- 최신 커밋 이후의 다른 수정사항 보존

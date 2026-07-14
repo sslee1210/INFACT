@@ -1,47 +1,43 @@
-반응형 대수정 1단계 — 공통 기반 + 전체 메뉴 시스템
+기준 커밋
+887b8e63cae9b38f092dfc72f5ddccc1e4c7e13b (fixed file4)
 
-수정 파일
-1. client/src/components/site/SiteHeader.tsx
-2. client/src/components/site/PageSubNav.tsx
-3. client/src/index.css
-4. client/src/styles/common/responsive-foundation.css (신규)
+적용 방법
 
-주요 변경
-- 태블릿(768~1199px)에서도 데스크톱 메가메뉴 대신 반응형 메뉴 사용
-- 모바일/태블릿 우측 Drawer 메뉴
-- 메뉴 그룹별 아코디언 하위 메뉴
-- 현재 페이지 메뉴 자동 활성화
-- 모바일 메뉴 오픈 시 body 스크롤 잠금
-- ESC로 메뉴 닫기
-- 1200px 이상으로 resize 시 모바일 메뉴 자동 닫기
-- 터치 영역 확대
-- 모바일/태블릿 공통 site-shell, section spacing, typography 조정
-- 서브페이지 하위 메뉴를 3등분 반응형 메뉴로 통일
-- Breadcrumb는 태블릿/모바일에서 숨김
-- 모바일 가로 오버플로 안전장치
+1. ZIP을 프로젝트 루트에 압축 해제
+   C:\Users\sslee\Desktop\05. 전문\0. INFACT
 
-중요
-- 조직도, CSV/GMP/개념설계 개별 페이지 파일은 건드리지 않습니다.
-- 현재 로컬에서 53%로 조정한 조직도 CSS를 덮어쓰지 않습니다.
-- index.css에는 responsive-foundation.css import만 마지막에 추가됩니다.
+2. Git Bash에서 실행
 
-적용
 cd "/c/Users/sslee/Desktop/05. 전문/0. INFACT"
 
-# ZIP을 프로젝트 루트에 덮어쓰기 후
+git apply --check INFACT_latest_refinement.patch
+git apply INFACT_latest_refinement.patch
+
+3. 확인
+
 corepack pnpm build
 corepack pnpm dev
 
-확인 권장 폭
-- 390px
-- 768px
-- 1024px
-- 1199px
-- 1200px
+4. 브라우저 강력 새로고침
 
-브라우저
 Ctrl + Shift + R
 
-주의
-이 수정본은 GitHub 최신 커밋의 공통 파일을 기준으로 작성했습니다.
-현재 로컬의 조직도 추가 수정사항과 충돌하지 않도록 조직도 파일은 포함하지 않았습니다.
+수정 내용
+
+1) 모바일 헤더
+- 햄버거 메뉴 바로 왼쪽에 TODAY + 방문자 수 표시
+- Drawer 내부 TODAY 중복 제거
+- 모바일 최상단이 투명한 상태에서는 TODAY도 흰색
+- 스크롤/메뉴 오픈 시 파란색
+- 390px 이하 별도 축소
+
+2) V-Model
+- 모바일: 현재 100% 유지
+- 태블릿: 기존 100% -> 70% (30% 축소)
+- 데스크톱: 기존 130% -> 91% (정확히 30% 축소)
+- 모두 중앙 정렬
+
+3) 수행실적
+- CSV 카드의 시스템 목록 위에 반복되던 고객사명 삭제
+- 고객사명은 로고/로고 fallback 영역에만 표시
+- 개념설계/GMP는 이미 하단에 고객사명을 별도 표시하지 않아 추가 수정 없음

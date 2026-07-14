@@ -1,0 +1,388 @@
+--- a/client/src/components/site/SiteHeader.tsx
++++ b/client/src/components/site/SiteHeader.tsx
+@@ -254,6 +254,14 @@
+               <span>TODAY</span>
+
+               <strong>{todayCount}</strong>
+
+             </div>
+
++          </div>
+
++
+
++          <div
+
++            className="home-nav__mobile-today-inline"
+
++            aria-label={`오늘 방문자 ${todayCount}명`}
+
++          >
+
++            <span>TODAY</span>
+
++            <strong>{todayCount}</strong>
+
+           </div>
+
+ 
+
+           <button
+
+@@ -320,13 +328,6 @@
+       >
+
+         <div className="home-nav__mobile-panel-inner">
+
+           <div className="home-nav__mobile-panel-head">
+
+-            <div
+
+-              className="home-nav__mobile-today"
+
+-              aria-label={`오늘 방문자 ${todayCount}명`}
+
+-            >
+
+-              <span>TODAY</span>
+
+-              <strong>{todayCount}</strong>
+
+-            </div>
+
+             <span className="home-nav__mobile-panel-label">MENU</span>
+
+           </div>
+
+ 
+--- a/client/src/styles/common/responsive-foundation.css
++++ b/client/src/styles/common/responsive-foundation.css
+@@ -212,6 +212,10 @@
+   }
+
+ 
+
+   .home-nav__today {
+
++    display: none !important;
+
++  }
+
++
+
++  .home-nav__mobile-today-inline {
+
+     display: none !important;
+
+   }
+
+ 
+
+@@ -330,35 +334,19 @@
+     min-height: 34px !important;
+
+     display: flex !important;
+
+     align-items: center !important;
+
+-    justify-content: space-between !important;
+
++    justify-content: flex-end !important;
+
+     gap: 16px !important;
+
+     padding-bottom: 18px !important;
+
+     margin-bottom: 18px !important;
+
+     border-bottom: 1px solid rgba(22, 28, 129, 0.12) !important;
+
+   }
+
+ 
+
+-  .home-nav__mobile-today {
+
+-    display: inline-flex !important;
+
+-    align-items: baseline !important;
+
+-    gap: 8px !important;
+
+-    min-width: 0 !important;
+
+-  }
+
+-
+
+-  .home-nav__mobile-today span,
+
+   .home-nav__mobile-panel-label {
+
+     color: #9299ad !important;
+
+     font-size: 0.68rem !important;
+
+     line-height: 1 !important;
+
+     font-weight: 900 !important;
+
+     letter-spacing: 0.14em !important;
+
+-  }
+
+-
+
+-  .home-nav__mobile-today strong {
+
+-    color: var(--home-blue-strong) !important;
+
+-    font-size: 0.9rem !important;
+
+-    line-height: 1 !important;
+
+-    font-weight: 900 !important;
+
+-    letter-spacing: 0.02em !important;
+
+   }
+
+ 
+
+   .home-nav__mobile-panel-label {
+
+@@ -571,7 +559,7 @@
+   .home-nav__inner {
+
+     width: 100% !important;
+
+     padding-inline: var(--site-edge-gutter) !important;
+
+-    grid-template-columns: auto minmax(0, 1fr) auto !important;
+
++    grid-template-columns: auto minmax(0, 1fr) auto auto !important;
+
+     gap: 10px !important;
+
+   }
+
+ 
+
+@@ -584,8 +572,36 @@
+     display: none !important;
+
+   }
+
+ 
+
++  .home-nav__mobile-today-inline {
+
++    grid-column: 3 !important;
+
++    grid-row: 1 !important;
+
++    justify-self: end !important;
+
++    display: inline-flex !important;
+
++    align-items: baseline !important;
+
++    gap: 5px !important;
+
++    white-space: nowrap !important;
+
++    color: var(--home-blue-strong) !important;
+
++  }
+
++
+
++  .home-nav__mobile-today-inline span {
+
++    font-size: 0.58rem !important;
+
++    line-height: 1 !important;
+
++    font-weight: 900 !important;
+
++    letter-spacing: 0.1em !important;
+
++  }
+
++
+
++  .home-nav__mobile-today-inline strong {
+
++    font-size: 0.78rem !important;
+
++    line-height: 1 !important;
+
++    font-weight: 900 !important;
+
++  }
+
++
+
++  .home-nav.is-top:not(.is-mobile-open) .home-nav__mobile-today-inline {
+
++    color: #fff !important;
+
++  }
+
++
+
+   .home-nav__mobile-toggle {
+
+-    grid-column: 3 !important;
+
++    grid-column: 4 !important;
+
+   }
+
+ 
+
+   .home-nav__mobile-panel {
+
+@@ -605,6 +621,18 @@
+ 
+
+ /* Small phones */
+
+ @media (max-width: 390px) {
+
++  .home-nav__mobile-today-inline {
+
++    gap: 4px !important;
+
++  }
+
++
+
++  .home-nav__mobile-today-inline span {
+
++    font-size: 0.54rem !important;
+
++  }
+
++
+
++  .home-nav__mobile-today-inline strong {
+
++    font-size: 0.72rem !important;
+
++  }
+
++
+
+   .home-nav__mobile-panel-inner {
+
+     padding-top: 24px !important;
+
+   }
+--- a/client/src/styles/pages/service-csv-page.css
++++ b/client/src/styles/pages/service-csv-page.css
+@@ -37,11 +37,12 @@
+   object-position: center center !important;
+
+ }
+
+ 
+
+-@media (max-width: 1199px) {
+
++/* Mobile: keep the complete diagram at full available width. */
+
++@media (max-width: 767px) {
+
+   .csv-framework-section .csv-vmodel-fit {
+
+     width: 100% !important;
+
+     max-width: 100% !important;
+
+-    margin: clamp(28px, 4vw, 44px) auto 0 !important;
+
++    margin: clamp(28px, 7vw, 40px) auto 0 !important;
+
+     overflow: visible !important;
+
+   }
+
+ 
+
+@@ -53,12 +54,29 @@
+   }
+
+ }
+
+ 
+
++/* Tablet: 30% smaller than the previous 100% presentation. */
+
++@media (min-width: 768px) and (max-width: 1199px) {
+
++  .csv-framework-section .csv-vmodel-fit {
+
++    width: 70% !important;
+
++    max-width: 70% !important;
+
++    margin: clamp(28px, 4vw, 44px) auto 0 !important;
+
++    overflow: visible !important;
+
++  }
+
++
+
++  .csv-framework-section .csv-vmodel-fit__image {
+
++    width: 100% !important;
+
++    max-width: 100% !important;
+
++    min-width: 0 !important;
+
++    height: auto !important;
+
++  }
+
++}
+
++
+
++/* Desktop: 30% smaller than the previous 130% presentation (130% × 0.7 = 91%). */
+
+ @media (min-width: 1200px) {
+
+   .csv-vmodel-fit {
+
+-    width: 130%;
+
+-    max-width: none;
+
+-    margin-left: -15%;
+
+-    margin-right: -15%;
+
++    width: 91%;
+
++    max-width: 91%;
+
++    margin: 0 auto;
+
+   }
+
+ }
+
+ 
+--- a/client/src/pages/ReferencesCSV.tsx
++++ b/client/src/pages/ReferencesCSV.tsx
+@@ -187,7 +187,6 @@
+                   </div>
+
+                   <div className="csv-year-card__body">
+-                    <h3>{reference.client}</h3>
+                     <ul>
+                       {reference.systems.map((system) => (
+                         <li key={system}>{system}</li>
