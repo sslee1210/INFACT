@@ -14,7 +14,6 @@ const responsiveFiles = [
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
   "client/src/styles/common/large-desktop-layout.css",
-  "client/src/styles/pages/home-about-large-desktop.css",
   "client/src/styles/pages/home-experience-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
@@ -30,7 +29,6 @@ const requiredImportOrder = [
   './styles/common/ui-system-stage6.css',
   './styles/common/responsive-qa-stage7.css',
   './styles/common/large-desktop-layout.css',
-  './styles/pages/home-about-large-desktop.css',
   './styles/pages/home-experience-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
@@ -40,6 +38,11 @@ const forbiddenImports = [
     path: './styles/common/ultrawide-layout-fix.css',
     reason:
       '1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.',
+  },
+  {
+    path: './styles/pages/home-about-large-desktop.css',
+    reason:
+      'About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.',
   },
   {
     path: './styles/pages/home-service-large-desktop.css',
@@ -209,6 +212,21 @@ if (
 ) {
   errors.push(
     "client/src/styles/pages/home-company-intro.css — 1920px 이상 회사소개 스케일 규칙이 누락되었습니다.",
+  );
+}
+
+const homeAboutSource = read("client/src/styles/pages/home-about.css");
+if (homeAboutSource.includes("@media (min-width: 2200px)")) {
+  errors.push(
+    "client/src/styles/pages/home-about.css — 레거시 2200px 전용 확대 규칙을 다시 추가하지 마세요.",
+  );
+}
+if (
+  !homeAboutSource.includes("@media (min-width: 1920px)") ||
+  !homeAboutSource.includes(".about-process-cycle")
+) {
+  errors.push(
+    "client/src/styles/pages/home-about.css — 1920px 이상 About 스케일 규칙이 누락되었습니다.",
   );
 }
 
