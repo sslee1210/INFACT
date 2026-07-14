@@ -1,0 +1,107 @@
+name: Visual QA
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: visual-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    name: Build and capture responsive screenshots
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable project pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.4.1 --activate
+          pnpm --version
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run quality checks and production build
+        run: pnpm qa
+
+      - name: Install Chromium for screenshot capture
+        run: pnpm dlx playwright@1.52.0 install --with-deps chromium
+
+      - name: Start built site
+        run: |
+          python3 -m http.server 4173 --directory dist/public > /tmp/infact-visual-server.log 2>&1 &
+          echo $! > /tmp/infact-visual-server.pid
+          curl --retry 30 --retry-delay 1 --retry-connrefused http://127.0.0.1:4173/ > /dev/null
+
+      - name: Capture home responsive matrix
+        run: |
+          mkdir -p visual-qa/home
+          capture() {
+            local size="$1"
+            local name="$2"
+            pnpm dlx playwright@1.52.0 screenshot \
+              --browser=chromium \
+              --full-page \
+              --viewport-size="$size" \
+              --wait-for-timeout=3000 \
+              "http://127.0.0.1:4173/#/" \
+              "visual-qa/home/${name}.png"
+          }
+
+          capture "1920,1080" "1920x1080"
+          capture "2560,1440" "2560x1440"
+          capture "3440,1440" "3440x1440"
+          capture "3840,2160" "3840x2160"
+          capture "834,1194" "tablet-834x1194"
+          capture "390,844" "mobile-390x844"
+
+      - name: Capture key page smoke views
+        run: |
+          mkdir -p visual-qa/pages
+          capture_page() {
+            local route="$1"
+            local name="$2"
+            local size="$3"
+            pnpm dlx playwright@1.52.0 screenshot \
+              --browser=chromium \
+              --full-page \
+              --viewport-size="$size" \
+              --wait-for-timeout=2500 \
+              "http://127.0.0.1:4173/#/${route}" \
+              "visual-qa/pages/${name}.png"
+          }
+
+          capture_page "company" "company-1920" "1920,1080"
+          capture_page "service-design" "service-design-1920" "1920,1080"
+          capture_page "references-design" "references-design-1920" "1920,1080"
+          capture_page "contact" "contact-1920" "1920,1080"
+          capture_page "company" "company-mobile" "390,844"
+          capture_page "contact" "contact-mobile" "390,844"
+
+      - name: Upload visual QA screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: infact-visual-qa-${{ github.sha }}
+          path: visual-qa/**/*.png
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Stop local server
+        if: always()
+        run: |
+          if [ -f /tmp/infact-server.pid ]; then
+            kill "$(cat /tmp/infact-server.pid)" || true
+          fi
