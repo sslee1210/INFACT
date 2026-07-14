@@ -31,3 +31,21 @@
 @import "./styles/common/responsive.css";
 @import "./styles/common/subpage-typography-standard.css";
 @import "./styles/pages/references-year-menu-patch.css";
+
+/* Stage 1 responsive foundation — 반드시 마지막에 유지 */
+@import "./styles/common/responsive-foundation.css";
+
+/* Stage 1 mobile visual polish */
+@import "./styles/pages/home-mobile-polish.css";
+
+/* Stage 2 — complete home responsive layout */
+@import "./styles/pages/home-responsive-stage2.css";
+
+/* Stage 3 — company pages responsive overhaul */
+@import "./styles/pages/company-responsive-stage3.css";
+
+/* Stage 4 — service pages responsive overhaul */
+@import "./styles/pages/services-responsive-stage4.css";
+
+/* Stage 5 — references responsive overhaul */
+@import "./styles/pages/references-responsive-stage5.css";

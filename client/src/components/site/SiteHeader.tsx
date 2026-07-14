@@ -8,12 +8,15 @@ type SiteHeaderProps = {
   transparentOnTop?: boolean;
 };
 
+const DESKTOP_MEDIA_QUERY = "(min-width: 1200px)";
+
 export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   const [location, setLocation] = useLocation();
   const [scrolled, setScrolled] = useState(!transparentOnTop);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSectionOpen, setMobileSectionOpen] = useState<string | null>(null);
   const todayCount = useTodayVisitor();
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scrolledRef = useRef(scrolled);
@@ -63,6 +66,63 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const activeGroup = siteNavigation.find((item) =>
+      item.match.some((matchPath) => location === matchPath),
+    );
+
+    setMobileSectionOpen(activeGroup?.label ?? siteNavigation[0]?.label ?? null);
+  }, [location, mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const body = document.body;
+    const previousOverflow = body.style.overflow;
+    const previousPaddingRight = body.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    body.classList.add("is-nav-locked");
+    body.style.overflow = "hidden";
+
+    if (scrollbarWidth > 0) {
+      body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      body.classList.remove("is-nav-locked");
+      body.style.overflow = previousOverflow;
+      body.style.paddingRight = previousPaddingRight;
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setMobileMenuOpen(false);
+      setMobileSectionOpen(null);
+      setOpenMenu(null);
+      setDropdownVisible(false);
+    };
+
+    const desktopMedia = window.matchMedia(DESKTOP_MEDIA_QUERY);
+    const handleViewportChange = (event: MediaQueryListEvent) => {
+      if (!event.matches) return;
+      setMobileMenuOpen(false);
+      setMobileSectionOpen(null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    desktopMedia.addEventListener("change", handleViewportChange);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      desktopMedia.removeEventListener("change", handleViewportChange);
+    };
+  }, []);
+
   const navClassName = useMemo(() => {
     const stateClass = transparentOnTop && !scrolled ? "is-top" : "is-scrolled";
     const dropClass = dropdownVisible ? "has-dropdown" : "";
@@ -73,6 +133,11 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   function closeDropdown() {
     setOpenMenu(null);
     setDropdownVisible(false);
+  }
+
+  function closeMobileMenu() {
+    setMobileMenuOpen(false);
+    setMobileSectionOpen(null);
   }
 
   function handleMenuEnter(label: string) {
@@ -92,7 +157,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   function navigateTo(href: string) {
     const [path, targetId] = href.split("#");
     closeDropdown();
-    setMobileMenuOpen(false);
+    closeMobileMenu();
 
     if (targetId) {
       if (path === location) {
@@ -141,24 +206,10 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
             />
             <img
               src="./images/home/logo1.png"
-              alt="INFACT"
+              alt=""
+              aria-hidden="true"
               className="home-nav__logo--dark"
             />
-          </button>
-
-          <button
-            type="button"
-            className="home-nav__mobile-toggle"
-            aria-label={mobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
-            aria-expanded={mobileMenuOpen}
-            onClick={() => {
-              closeDropdown();
-              setMobileMenuOpen((open) => !open);
-            }}
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
           </button>
 
           <ul className="home-nav__menu">
@@ -204,6 +255,22 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
               <strong>{todayCount}</strong>
             </div>
           </div>
+
+          <button
+            type="button"
+            className="home-nav__mobile-toggle"
+            aria-label={mobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="site-mobile-navigation"
+            onClick={() => {
+              closeDropdown();
+              setMobileMenuOpen((open) => !open);
+            }}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
         </div>
 
         <div
@@ -243,51 +310,110 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
         </div>
       </nav>
 
-      <div className={`home-nav__mobile-panel ${mobileMenuOpen ? "is-open" : ""}`}>
+      <aside
+        id="site-mobile-navigation"
+        className={`home-nav__mobile-panel ${mobileMenuOpen ? "is-open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="전체 메뉴"
+        aria-hidden={!mobileMenuOpen}
+      >
         <div className="home-nav__mobile-panel-inner">
-          {siteNavigation.map((item) => (
-            <section className="home-nav__mobile-group" key={item.href}>
-              <button
-                type="button"
-                className="home-nav__mobile-primary"
-                onClick={() => navigateTo(item.href)}
-              >
-                {item.label}
-              </button>
+          <div className="home-nav__mobile-panel-head">
+            <span>MENU</span>
+            <strong>IN-FACT</strong>
+          </div>
 
-              {item.children ? (
-                <div className="home-nav__mobile-submenu">
-                  {item.children.map((child) => (
+          <div className="home-nav__mobile-groups">
+            {siteNavigation.map((item, index) => {
+              const isActive = item.match.some((matchPath) => location === matchPath);
+              const isExpanded = mobileSectionOpen === item.label;
+              const submenuId = `mobile-submenu-${index}`;
+
+              return (
+                <section
+                  className={`home-nav__mobile-group ${isActive ? "is-active" : ""}`}
+                  key={item.href}
+                >
+                  <div className="home-nav__mobile-group-head">
                     <button
                       type="button"
-                      key={child.href}
-                      className="home-nav__mobile-link"
-                      onClick={() => navigateTo(child.href)}
+                      className="home-nav__mobile-primary"
+                      onClick={() => navigateTo(item.href)}
+                      aria-current={isActive ? "page" : undefined}
                     >
-                      {child.label}
+                      {item.label}
                     </button>
-                  ))}
-                </div>
-              ) : null}
-            </section>
-          ))}
+
+                    {item.children ? (
+                      <button
+                        type="button"
+                        className="home-nav__mobile-expand"
+                        aria-label={`${item.label} 하위 메뉴 ${isExpanded ? "접기" : "펼치기"}`}
+                        aria-expanded={isExpanded}
+                        aria-controls={submenuId}
+                        onClick={() =>
+                          setMobileSectionOpen((current) =>
+                            current === item.label ? null : item.label,
+                          )
+                        }
+                      >
+                        <span aria-hidden="true" />
+                      </button>
+                    ) : null}
+                  </div>
+
+                  {item.children ? (
+                    <div
+                      id={submenuId}
+                      className={`home-nav__mobile-submenu ${
+                        isExpanded ? "is-open" : ""
+                      }`}
+                    >
+                      <div className="home-nav__mobile-submenu-inner">
+                        {item.children.map((child) => {
+                          const [childPath] = child.href.split("#");
+                          const isCurrent = location === childPath;
+
+                          return (
+                            <button
+                              type="button"
+                              key={child.href}
+                              className={`home-nav__mobile-link ${
+                                isCurrent ? "is-current" : ""
+                              }`}
+                              onClick={() => navigateTo(child.href)}
+                              aria-current={isCurrent ? "page" : undefined}
+                            >
+                              {child.label}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ) : null}
+                </section>
+              );
+            })}
+          </div>
 
           <button
             type="button"
             className="home-nav__mobile-contact"
             onClick={() => navigateTo("/contact")}
           >
-            문의하기
+            <span>프로젝트 문의하기</span>
+            <span aria-hidden="true">→</span>
           </button>
         </div>
-      </div>
+      </aside>
 
       <div
         className={`home-nav__scrim ${dropdownVisible || mobileMenuOpen ? "is-open" : ""}`}
         aria-hidden="true"
         onClick={() => {
           closeDropdown();
-          setMobileMenuOpen(false);
+          closeMobileMenu();
         }}
       />
     </>

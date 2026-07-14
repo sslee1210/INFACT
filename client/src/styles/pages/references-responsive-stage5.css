@@ -1,0 +1,719 @@
+/* =========================================================
+   STAGE 5 — REFERENCES RESPONSIVE OVERHAUL
+
+   범위
+   - 개념설계 수행실적
+   - GMP 수행실적
+   - CSV 수행실적
+   - 연도 선택 메뉴
+   - 고객사 / 프로젝트 카드
+
+   Desktop  : 1200px+
+   Tablet   : 768px ~ 1199px
+   Mobile   : 0 ~ 767px
+
+   원칙
+   - 데스크톱 우측 연도 메뉴 유지
+   - 태블릿은 상단 연도 선택 패널
+   - 모바일은 상단 compact year navigator
+   - 모바일 우측 하단 floating 연도 메뉴 제거
+   - 카드 높이 고정 최소화
+   - 가로 스크롤 없음
+   ========================================================= */
+
+/* =========================================================
+   COMMON SAFETY — <=1199
+   ========================================================= */
+
+@media (max-width: 1199px) {
+  .reference-year-page,
+  .csv-reference-page,
+  .csv-year-page {
+    width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+    background: #fff;
+  }
+
+  .reference-year-page *,
+  .csv-reference-page *,
+  .csv-year-page * {
+    min-width: 0;
+  }
+
+  .reference-year-page__intro,
+  .csv-reference-page__intro,
+  .csv-year-page__intro {
+    max-width: 900px !important;
+    margin-bottom: clamp(42px, 6vw, 64px) !important;
+  }
+
+  .reference-year-page__intro .section-title,
+  .csv-reference-page__intro .section-title,
+  .csv-year-page__intro .section-title {
+    font-size: clamp(2.15rem, 4.8vw, 3.2rem) !important;
+    line-height: 1.16 !important;
+  }
+
+  .reference-year-page__intro .body-copy,
+  .csv-reference-page__intro .body-copy,
+  .csv-year-page__intro .body-copy {
+    max-width: 48em !important;
+    margin-top: 16px !important;
+    font-size: 0.97rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .reference-year-page__body,
+  .csv-reference-layout,
+  .csv-year-layout {
+    max-width: none !important;
+  }
+
+  .reference-year-content__head,
+  .csv-year-content__head,
+  .csv-reference-year__head {
+    margin-bottom: clamp(26px, 4vw, 38px) !important;
+    padding-bottom: 16px !important;
+  }
+
+  .reference-year-content__head h2,
+  .csv-year-content__head h2,
+  .csv-reference-year__head h2 {
+    font-size: clamp(1.9rem, 4vw, 2.6rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  /* card visual consistency */
+  .reference-year-card,
+  .csv-reference-card,
+  .csv-year-card {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+
+  .reference-year-card:hover,
+  .csv-reference-card:hover,
+  .csv-year-card:hover {
+    transform: none !important;
+  }
+
+  .reference-year-card__logo,
+  .csv-reference-card__logo,
+  .csv-year-card__logo {
+    min-height: 116px !important;
+    padding: 20px !important;
+  }
+
+  .reference-year-card__logo img,
+  .csv-reference-card__logo img,
+  .csv-year-card__logo img {
+    max-width: 170px !important;
+    height: 60px !important;
+  }
+
+  .reference-year-card__body,
+  .csv-reference-card__body,
+  .csv-year-card__body {
+    min-height: 0 !important;
+    padding: 19px 19px 22px !important;
+  }
+
+  .reference-year-card__body li,
+  .csv-reference-card__body li,
+  .csv-year-card__body li {
+    font-size: 0.87rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .reference-year-empty,
+  .csv-year-empty {
+    min-height: 220px !important;
+    padding: clamp(38px, 6vw, 64px) !important;
+    background: #fff !important;
+  }
+}
+
+/* =========================================================
+   TABLET — 768 ~ 1199
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* -------------------------------------------------------
+     Shared year-separated page:
+     conceptual design / GMP
+     ------------------------------------------------------- */
+
+  .reference-year-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .reference-year-menu {
+    position: static !important;
+    order: -1 !important;
+    width: 100% !important;
+    border: 1px solid var(--home-border) !important;
+    box-shadow: none !important;
+  }
+
+  .reference-year-menu__title {
+    display: none !important;
+  }
+
+  .reference-year-menu nav {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  .reference-year-menu button {
+    min-height: 58px !important;
+    padding: 10px 8px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 0 !important;
+    place-content: center !important;
+    text-align: center !important;
+  }
+
+  .reference-year-menu button:last-child {
+    border-right: 0 !important;
+  }
+
+  .reference-year-menu button > span {
+    font-size: 0.96rem !important;
+  }
+
+  .reference-year-menu button > small {
+    display: none !important;
+  }
+
+  .reference-year-menu button:hover,
+  .reference-year-menu button:focus-visible,
+  .reference-year-menu button.is-active {
+    padding-left: 8px !important;
+  }
+
+  .reference-year-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  /* -------------------------------------------------------
+     CSV separated-year page with controls
+     ------------------------------------------------------- */
+
+  .csv-year-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .csv-year-menu {
+    position: static !important;
+    order: -1 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+  }
+
+  .csv-year-menu__title {
+    display: none !important;
+  }
+
+  .csv-year-menu nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  .csv-year-menu nav > button {
+    min-height: 58px !important;
+    padding: 10px 8px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  .csv-year-menu nav > button:last-child {
+    border-right: 0 !important;
+  }
+
+  .csv-year-menu nav > button > span {
+    font-size: 1rem !important;
+  }
+
+  .csv-year-menu__controls {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .csv-year-menu__arrow {
+    min-height: 44px !important;
+  }
+
+  .csv-year-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+
+  /* -------------------------------------------------------
+     CSV archive page with all years in one document
+     ------------------------------------------------------- */
+
+  .csv-reference-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+
+  .csv-reference-year-nav {
+    position: static !important;
+    order: -1 !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: 1px solid var(--home-border) !important;
+    border-left: 1px solid var(--home-border) !important;
+    background: #fff !important;
+  }
+
+  .csv-reference-year-nav > span {
+    display: none !important;
+  }
+
+  .csv-reference-year-nav nav {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+  }
+
+  .csv-reference-year-nav button {
+    width: 100% !important;
+    min-height: 56px !important;
+    border-right: 1px solid var(--home-border) !important;
+    font-size: 0.9rem !important;
+  }
+
+  .csv-reference-year-nav button:last-child {
+    border-right: 0 !important;
+  }
+
+  .csv-reference-year-nav button::before {
+    top: auto !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .csv-reference-year-nav button.is-active::before {
+    width: 28px !important;
+    height: 2px !important;
+  }
+
+  .csv-reference-year {
+    padding-bottom: clamp(64px, 8vw, 92px) !important;
+  }
+
+  .csv-reference-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE — 0 ~ 767
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .reference-year-page__intro,
+  .csv-reference-page__intro,
+  .csv-year-page__intro {
+    margin-bottom: clamp(34px, 9vw, 46px) !important;
+  }
+
+  .reference-year-page__intro .section-title,
+  .csv-reference-page__intro .section-title,
+  .csv-year-page__intro .section-title {
+    font-size: clamp(2rem, 9.2vw, 2.65rem) !important;
+  }
+
+  .reference-year-page__intro .body-copy,
+  .csv-reference-page__intro .body-copy,
+  .csv-year-page__intro .body-copy {
+    font-size: 0.93rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .reference-year-content__head,
+  .csv-year-content__head {
+    display: block !important;
+    margin-bottom: 22px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .reference-year-content__head > div,
+  .csv-year-content__head > div {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 10px !important;
+  }
+
+  .reference-year-content__head h2,
+  .csv-year-content__head h2,
+  .csv-reference-year__head h2 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem) !important;
+  }
+
+  /* -------------------------------------------------------
+     Shared conceptual / GMP year page
+     ------------------------------------------------------- */
+
+  .reference-year-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .reference-year-menu {
+    position: static !important;
+    order: -1 !important;
+    width: 100% !important;
+    border: 1px solid var(--home-border) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  .reference-year-menu__title {
+    display: none !important;
+  }
+
+  .reference-year-menu nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .reference-year-menu button {
+    min-height: 50px !important;
+    padding: 8px 5px !important;
+    place-content: center !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 1px solid var(--home-border) !important;
+    text-align: center !important;
+  }
+
+  .reference-year-menu button:nth-child(3n) {
+    border-right: 0 !important;
+  }
+
+  .reference-year-menu button > span {
+    font-size: 0.88rem !important;
+  }
+
+  .reference-year-menu button > small {
+    display: none !important;
+  }
+
+  .reference-year-menu button:hover,
+  .reference-year-menu button:focus-visible,
+  .reference-year-menu button.is-active {
+    padding-left: 5px !important;
+  }
+
+  .reference-year-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .reference-year-card {
+    display: grid !important;
+    grid-template-columns: minmax(112px, 34%) minmax(0, 1fr) !important;
+  }
+
+  .reference-year-card__logo {
+    min-height: 132px !important;
+    height: 100% !important;
+    padding: 16px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  .reference-year-card__logo img {
+    max-width: 120px !important;
+    height: 54px !important;
+  }
+
+  .reference-year-card__body {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 132px !important;
+    padding: 17px !important;
+  }
+
+  .reference-year-card__body ul {
+    width: 100% !important;
+  }
+
+  /* -------------------------------------------------------
+     CSV separated-year page
+     ------------------------------------------------------- */
+
+  .csv-year-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .csv-year-menu {
+    position: static !important;
+    order: -1 !important;
+    width: 100% !important;
+    border: 1px solid var(--home-border) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+  }
+
+  .csv-year-menu__title {
+    display: none !important;
+  }
+
+  .csv-year-menu nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .csv-year-menu nav > button {
+    min-height: 50px !important;
+    padding: 8px 5px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 1px solid var(--home-border) !important;
+  }
+
+  .csv-year-menu nav > button:nth-child(2n) {
+    border-right: 0 !important;
+  }
+
+  .csv-year-menu nav > button > span {
+    font-size: 0.9rem !important;
+  }
+
+  .csv-year-menu__controls {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .csv-year-menu__arrow {
+    min-height: 42px !important;
+  }
+
+  .csv-year-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .csv-year-card {
+    display: grid !important;
+    grid-template-columns: minmax(112px, 34%) minmax(0, 1fr) !important;
+  }
+
+  .csv-year-card__logo {
+    min-height: 132px !important;
+    height: 100% !important;
+    padding: 16px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  .csv-year-card__logo img {
+    max-width: 120px !important;
+    height: 54px !important;
+  }
+
+  .csv-year-card__body {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 132px !important;
+    padding: 17px !important;
+  }
+
+  /* -------------------------------------------------------
+     CSV archive page with continuous years
+     ------------------------------------------------------- */
+
+  .csv-reference-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* remove old floating bottom-right navigator */
+  .csv-reference-year-nav {
+    position: static !important;
+    right: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    z-index: auto !important;
+    order: -1 !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: 1px solid var(--home-border) !important;
+    border-left: 1px solid var(--home-border) !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .csv-reference-year-nav > span {
+    display: none !important;
+  }
+
+  .csv-reference-year-nav nav {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+  }
+
+  .csv-reference-year-nav button {
+    width: 100% !important;
+    min-height: 48px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 1px solid var(--home-border) !important;
+    font-size: 0.8rem !important;
+  }
+
+  .csv-reference-year-nav button:nth-child(3n) {
+    border-right: 0 !important;
+  }
+
+  .csv-reference-year-nav button::before {
+    top: auto !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    width: 0 !important;
+    height: 2px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .csv-reference-year-nav button.is-active::before {
+    width: 24px !important;
+    height: 2px !important;
+  }
+
+  .csv-reference-year {
+    padding-bottom: clamp(58px, 15vw, 76px) !important;
+  }
+
+  .csv-reference-year__head {
+    gap: 16px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .csv-reference-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .csv-reference-card {
+    display: grid !important;
+    grid-template-columns: minmax(112px, 34%) minmax(0, 1fr) !important;
+  }
+
+  .csv-reference-card__logo {
+    min-height: 146px !important;
+    height: 100% !important;
+    padding: 16px !important;
+    border-right: 1px solid var(--home-border) !important;
+    border-bottom: 0 !important;
+  }
+
+  .csv-reference-card__logo img {
+    max-width: 120px !important;
+    height: 54px !important;
+  }
+
+  .csv-reference-card__body {
+    min-height: 146px !important;
+    padding: 17px !important;
+  }
+
+  .csv-reference-card__body h3 {
+    font-size: 0.94rem !important;
+  }
+
+  .csv-reference-card__body ul {
+    margin-top: 11px !important;
+    padding-top: 11px !important;
+  }
+
+  /* empty states */
+  .reference-year-empty,
+  .csv-year-empty {
+    min-height: 0 !important;
+    padding: 34px 20px !important;
+    text-align: left !important;
+  }
+
+  .reference-year-empty h2 {
+    font-size: 1.55rem !important;
+  }
+
+  .reference-year-empty > p:not(.section-label),
+  .csv-year-empty p {
+    margin-left: 0 !important;
+    font-size: 0.9rem !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — <=390
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .reference-year-menu nav,
+  .csv-reference-year-nav nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .reference-year-menu button:nth-child(3n),
+  .csv-reference-year-nav button:nth-child(3n) {
+    border-right: 1px solid var(--home-border) !important;
+  }
+
+  .reference-year-menu button:nth-child(2n),
+  .csv-reference-year-nav button:nth-child(2n) {
+    border-right: 0 !important;
+  }
+
+  .reference-year-card,
+  .csv-year-card,
+  .csv-reference-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reference-year-card__logo,
+  .csv-year-card__logo,
+  .csv-reference-card__logo {
+    min-height: 100px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--home-border) !important;
+  }
+
+  .reference-year-card__body,
+  .csv-year-card__body,
+  .csv-reference-card__body {
+    min-height: 0 !important;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .reference-year-card,
+  .csv-reference-card,
+  .csv-year-card,
+  .reference-year-menu button,
+  .csv-year-menu button,
+  .csv-reference-year-nav button {
+    transition: none !important;
+  }
+}

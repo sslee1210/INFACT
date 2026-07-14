@@ -1,23 +1,47 @@
-조직 구성 서브페이지 수정본입니다.
-
-변경 내용
-- CSV 사업부 아래에 3개 하위 조직 추가
-  자동제어
-  CSV 1팀
-  CSV 2팀
-- CSV 사업부에서 하위 3개 조직으로 연결선 추가
-- 데스크톱에서는 3개 팀을 가로 배치
-- 모바일에서는 계층형 세로 목록으로 자동 변환
-- 기존 조직도 크기를 확장해 하위 조직이 잘리지 않도록 조정
+반응형 대수정 1단계 — 공통 기반 + 전체 메뉴 시스템
 
 수정 파일
-- client/src/pages/CompanyOrganization.tsx
-- client/src/styles/pages/company-organization.css
+1. client/src/components/site/SiteHeader.tsx
+2. client/src/components/site/PageSubNav.tsx
+3. client/src/index.css
+4. client/src/styles/common/responsive-foundation.css (신규)
+
+주요 변경
+- 태블릿(768~1199px)에서도 데스크톱 메가메뉴 대신 반응형 메뉴 사용
+- 모바일/태블릿 우측 Drawer 메뉴
+- 메뉴 그룹별 아코디언 하위 메뉴
+- 현재 페이지 메뉴 자동 활성화
+- 모바일 메뉴 오픈 시 body 스크롤 잠금
+- ESC로 메뉴 닫기
+- 1200px 이상으로 resize 시 모바일 메뉴 자동 닫기
+- 터치 영역 확대
+- 모바일/태블릿 공통 site-shell, section spacing, typography 조정
+- 서브페이지 하위 메뉴를 3등분 반응형 메뉴로 통일
+- Breadcrumb는 태블릿/모바일에서 숨김
+- 모바일 가로 오버플로 안전장치
+
+중요
+- 조직도, CSV/GMP/개념설계 개별 페이지 파일은 건드리지 않습니다.
+- 현재 로컬에서 53%로 조정한 조직도 CSS를 덮어쓰지 않습니다.
+- index.css에는 responsive-foundation.css import만 마지막에 추가됩니다.
 
 적용
 cd "/c/Users/sslee/Desktop/05. 전문/0. INFACT"
+
+# ZIP을 프로젝트 루트에 덮어쓰기 후
 corepack pnpm build
 corepack pnpm dev
 
+확인 권장 폭
+- 390px
+- 768px
+- 1024px
+- 1199px
+- 1200px
+
 브라우저
 Ctrl + Shift + R
+
+주의
+이 수정본은 GitHub 최신 커밋의 공통 파일을 기준으로 작성했습니다.
+현재 로컬의 조직도 추가 수정사항과 충돌하지 않도록 조직도 파일은 포함하지 않았습니다.

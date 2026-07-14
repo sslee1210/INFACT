@@ -1,0 +1,380 @@
+/* =========================================================
+   HOME MOBILE POLISH
+   1) About process diagram exact centering
+   2) Service mobile redesign — editorial image + text layout
+
+   This file is imported after all existing responsive styles so
+   it intentionally overrides older mobile card rules.
+   ========================================================= */
+
+/* =========================================================
+   1. ABOUT PROCESS CYCLE — centered on mobile/tablet
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .about-blend-content,
+  .about-blend-copy,
+  .about-blend-texts {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .about-blend-texts {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-blend-desc {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+
+  .about-process-cycle {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(100%, 430px) !important;
+    max-width: 100% !important;
+    margin:
+      clamp(34px, 9vw, 48px)
+      auto
+      0 !important;
+    transform: none !important;
+  }
+
+  .about-process-cycle__svg {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  .about-process-cycle__labels text {
+    font-size: 22px !important;
+    stroke-width: 4px !important;
+  }
+}
+
+/* Remove the old <=560px lateral compensation entirely. */
+@media (max-width: 560px) {
+  .about-process-cycle {
+    left: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   2. SERVICE — mobile editorial redesign
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .service-immersive-section {
+    padding:
+      clamp(70px, 18vw, 86px)
+      0
+      clamp(76px, 20vw, 94px) !important;
+    overflow: hidden !important;
+    background: #fff !important;
+  }
+
+  .service-immersive {
+    gap: clamp(34px, 9vw, 46px) !important;
+  }
+
+  .service-immersive__intro {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: stretch !important;
+    text-align: center !important;
+  }
+
+  .service-immersive__title {
+    font-size: clamp(2.25rem, 11vw, 3rem) !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .service-immersive__summary {
+    max-width: 31em !important;
+    margin:
+      clamp(18px, 5vw, 24px)
+      auto
+      0 !important;
+    font-size: 0.98rem !important;
+    line-height: 1.78 !important;
+    text-align: center !important;
+  }
+
+  .service-immersive__showcase {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .service-card-rail {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: clamp(30px, 8vw, 40px) !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .service-card,
+  .service-card:hover,
+  .service-card:focus-visible {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    contain: none !important;
+  }
+
+  .service-card::before,
+  .service-card::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .service-card__media {
+    grid-area: auto !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9.4 !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+    background: #eef2f6 !important;
+  }
+
+  .service-card__media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transform: scale(1.015) !important;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  }
+
+  .service-card:nth-child(1) .service-card__media img {
+    object-position: 48% center !important;
+  }
+
+  .service-card:nth-child(2) .service-card__media img {
+    object-position: center center !important;
+  }
+
+  .service-card:nth-child(3) .service-card__media img {
+    object-position: 44% center !important;
+  }
+
+  .service-card__media::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(13, 30, 52, 0.02) 0%,
+        rgba(13, 30, 52, 0.12) 100%
+      ) !important;
+  }
+
+  .service-card__content {
+    position: relative !important;
+    grid-area: auto !important;
+    min-height: 0 !important;
+    display: block !important;
+    padding:
+      clamp(18px, 5vw, 22px)
+      0
+      clamp(4px, 1vw, 8px) !important;
+    color: var(--home-text) !important;
+    background: #fff !important;
+    border-bottom: 1px solid rgba(22, 28, 129, 0.16) !important;
+  }
+
+  .service-card__content::after {
+    content: "↗" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: clamp(18px, 5vw, 22px) !important;
+    color: var(--home-blue-strong) !important;
+    font-size: 1.18rem !important;
+    line-height: 1 !important;
+    font-weight: 500 !important;
+  }
+
+  .service-card__label {
+    margin: 0 42px 10px 0 !important;
+    color: var(--home-blue-strong) !important;
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.05em !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .service-card__body {
+    display: grid !important;
+    gap: 8px !important;
+    max-width: none !important;
+    padding-right: 42px !important;
+  }
+
+  .service-card__title {
+    margin: 0 !important;
+    color: var(--home-text) !important;
+    font-size: clamp(1.45rem, 7vw, 1.9rem) !important;
+    line-height: 1.16 !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.045em !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .service-card__scope {
+    margin: 0 !important;
+    max-width: 34em !important;
+    color: var(--home-text-soft) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.62 !important;
+    font-weight: 650 !important;
+    text-shadow: none !important;
+  }
+
+  .service-card__description {
+    display: none !important;
+  }
+
+  .service-card:active .service-card__media img {
+    transform: scale(1.035) !important;
+  }
+
+  .service-card-rail:hover .service-card,
+  .service-card-rail:hover .service-card:hover,
+  .service-card-rail:hover .service-card:not(:hover),
+  .service-card-rail.is-hovering .service-card {
+    opacity: 1 !important;
+  }
+}
+
+/* =========================================================
+   3. SERVICE — tablet refinement
+   Keep the same editorial direction without the cramped dark blocks.
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-immersive-section {
+    padding: clamp(82px, 9vw, 112px) 0 !important;
+  }
+
+  .service-immersive__intro {
+    max-width: 680px !important;
+    justify-self: center !important;
+    text-align: center !important;
+  }
+
+  .service-card-rail {
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  .service-card,
+  .service-card:hover,
+  .service-card:focus-visible {
+    min-height: 250px !important;
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(260px, 42%) minmax(0, 1fr) !important;
+    grid-template-rows: 1fr !important;
+    border: 1px solid rgba(22, 28, 129, 0.12) !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    transform: none !important;
+    opacity: 1 !important;
+    overflow: hidden !important;
+  }
+
+  .service-card::before,
+  .service-card::after {
+    content: none !important;
+  }
+
+  .service-card__media {
+    grid-area: 1 / 1 !important;
+    min-height: 250px !important;
+  }
+
+  .service-card__media::after {
+    background: linear-gradient(
+      90deg,
+      rgba(12, 28, 48, 0.06) 0%,
+      rgba(12, 28, 48, 0.18) 100%
+    ) !important;
+  }
+
+  .service-card__content {
+    grid-area: 1 / 2 !important;
+    min-height: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 34px 38px !important;
+    color: var(--home-text) !important;
+    background: #fff !important;
+  }
+
+  .service-card__label {
+    color: var(--home-blue-strong) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .service-card__title {
+    color: var(--home-text) !important;
+    font-size: clamp(1.65rem, 3vw, 2.1rem) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+  }
+
+  .service-card__scope {
+    color: var(--home-text-soft) !important;
+    font-size: 0.94rem !important;
+    text-shadow: none !important;
+  }
+
+  .service-card__description {
+    display: none !important;
+  }
+
+  .service-card-rail:has(.service-card:nth-child(1):hover),
+  .service-card-rail:has(.service-card:nth-child(2):hover),
+  .service-card-rail:has(.service-card:nth-child(3):hover) {
+    grid-template-columns: 1fr !important;
+  }
+}

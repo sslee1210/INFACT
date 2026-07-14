@@ -1,0 +1,738 @@
+/* =========================================================
+   STAGE 3 — COMPANY PAGES RESPONSIVE OVERHAUL
+
+   범위
+   - 회사소개 / CEO 인사말
+   - 연혁
+   - 조직 구성
+
+   Desktop  : 1200px+
+   Tablet   : 768px ~ 1199px
+   Mobile   : 0 ~ 767px
+
+   데스크톱 조직도 좌표/53% 설정은 건드리지 않는다.
+   아래 규칙은 1199px 이하에서만 적용된다.
+   ========================================================= */
+
+/* =========================================================
+   TABLET — 768 ~ 1199
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* ---------------------------------------------------------
+     COMPANY / CEO GREETING
+     --------------------------------------------------------- */
+
+  .company-section {
+    padding-top: clamp(56px, 7vw, 82px) !important;
+    padding-bottom: clamp(72px, 9vw, 104px) !important;
+  }
+
+  .company-greeting {
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr) !important;
+    grid-template-areas:
+      "heading heading"
+      "visual body" !important;
+    column-gap: clamp(42px, 6vw, 72px) !important;
+    row-gap: clamp(38px, 5vw, 56px) !important;
+    align-items: start !important;
+  }
+
+  .company-greeting .company-section__heading {
+    grid-area: heading !important;
+    width: min(100%, 860px) !important;
+    margin: 0 !important;
+  }
+
+  .company-greeting .company-section__heading .section-title {
+    max-width: 18em !important;
+    font-size: clamp(2.25rem, 4.6vw, 3.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .company-greeting__visual {
+    grid-area: visual !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5 !important;
+    margin: 0 !important;
+    align-self: start !important;
+    justify-self: stretch !important;
+  }
+
+  .company-greeting__visual img {
+    object-position: 58% center !important;
+  }
+
+  .company-greeting__body {
+    grid-area: body !important;
+    max-width: none !important;
+    padding-top: 0 !important;
+  }
+
+  .company-greeting__body .body-copy {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+    font-size: 0.98rem !important;
+    line-height: 1.82 !important;
+  }
+
+  .company-greeting__quote {
+    margin-top: 30px !important;
+    padding-top: 22px !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* ---------------------------------------------------------
+     HISTORY — tablet single-rail timeline
+     --------------------------------------------------------- */
+
+  .history-panel__head {
+    max-width: 720px !important;
+    margin-bottom: clamp(50px, 7vw, 72px) !important;
+  }
+
+  .history-list {
+    --history-rail-x: 40px;
+    width: min(100%, 840px) !important;
+    max-width: 840px !important;
+    gap: 24px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .history-list::before,
+  .history-list::after {
+    left: var(--history-rail-x) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .history-list::before {
+    width: 8px !important;
+  }
+
+  .history-list::after {
+    width: 4px !important;
+  }
+
+  .history-list__item,
+  .history-list__item--left,
+  .history-list__item--right {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+    gap: 28px !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: 0 0 30px !important;
+  }
+
+  .history-list__marker,
+  .history-list__titleLine {
+    display: none !important;
+  }
+
+  .history-list__item time,
+  .history-list__item--left time,
+  .history-list__item--right time {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    width: 64px !important;
+    height: 64px !important;
+    margin-left: 8px !important;
+    font-size: 0.82rem !important;
+    transform: none !important;
+  }
+
+  .history-list__content,
+  .history-list__item--left .history-list__content,
+  .history-list__item--right .history-list__content {
+    position: static !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    padding-top: 6px !important;
+    text-align: left !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .history-list__titleRow,
+  .history-list__item--left .history-list__titleRow,
+  .history-list__item--right .history-list__titleRow {
+    justify-content: flex-start !important;
+  }
+
+  .history-list__content h3 {
+    font-size: 1.12rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .history-list__item ul {
+    margin-top: 12px !important;
+    gap: 7px !important;
+  }
+
+  .history-list__item li {
+    position: relative !important;
+    padding-left: 13px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .history-list__item li::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0.72em !important;
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 50% !important;
+    background: rgba(44, 54, 143, 0.48) !important;
+  }
+
+  /* ---------------------------------------------------------
+     ORGANIZATION — tablet structural grid
+     데스크톱 absolute chart를 축소하지 않고 별도 구조로 전환
+     --------------------------------------------------------- */
+
+  .company-organization {
+    padding-top: 18px !important;
+    padding-bottom: clamp(74px, 9vw, 104px) !important;
+  }
+
+  .company-organization__hero {
+    margin-bottom: clamp(46px, 6vw, 68px) !important;
+  }
+
+  .company-organization__title {
+    font-size: clamp(2.45rem, 5vw, 3.25rem) !important;
+  }
+
+  .org-fixed {
+    width: 100% !important;
+    max-width: 980px !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    grid-auto-rows: auto !important;
+    gap:
+      clamp(24px, 3.5vw, 36px)
+      clamp(18px, 2.5vw, 28px) !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+  }
+
+  .org-fixed__main-v,
+  .org-fixed__main-h,
+  .org-fixed__main-v1,
+  .org-fixed__main-v2,
+  .org-fixed__main-v3,
+  .org-fixed__sub-v,
+  .org-fixed__sub-h,
+  .org-fixed__sub-v1,
+  .org-fixed__sub-v2,
+  .org-fixed__csv-v,
+  .org-fixed__csv-h,
+  .org-fixed__csv-v1,
+  .org-fixed__csv-v2,
+  .org-fixed__csv-v3 {
+    display: none !important;
+  }
+
+  .org-fixed__lead,
+  .org-fixed__primary,
+  .org-fixed__secondary,
+  .org-fixed__csv-branch {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .org-fixed__lead {
+    grid-column: 3 / 5 !important;
+    grid-row: 1 !important;
+  }
+
+  .org-fixed__primary--1 {
+    grid-column: 1 / 3 !important;
+    grid-row: 2 !important;
+  }
+
+  .org-fixed__primary--2 {
+    grid-column: 3 / 5 !important;
+    grid-row: 2 !important;
+  }
+
+  .org-fixed__primary--3 {
+    grid-column: 5 / 7 !important;
+    grid-row: 2 !important;
+  }
+
+  .org-fixed__secondary--1 {
+    grid-column: 4 / 5 !important;
+    grid-row: 3 !important;
+  }
+
+  .org-fixed__secondary--2 {
+    grid-column: 5 / 7 !important;
+    grid-row: 3 !important;
+  }
+
+  .org-fixed__csv-branch {
+    grid-column: 4 / 7 !important;
+    grid-row: 4 !important;
+    justify-self: stretch !important;
+  }
+
+  .org-fixed__csv-branch::before,
+  .org-fixed__csv-team-grid::before,
+  .org-fixed__csv-team::before {
+    display: none !important;
+  }
+
+  .org-fixed__csv-team-grid {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  .org-fixed__csv-team {
+    padding: 0 !important;
+  }
+
+  .org-box {
+    min-height: 72px !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .org-box--lead {
+    min-height: 78px !important;
+    font-size: 1rem !important;
+  }
+
+  .org-fixed__csv-team .org-box--tertiary {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 64px !important;
+    border-radius: 10px !important;
+    font-size: 0.86rem !important;
+  }
+
+  /* hierarchy cues without fragile connector coordinates */
+  .org-fixed__primary--3,
+  .org-fixed__secondary--1,
+  .org-fixed__secondary--2,
+  .org-fixed__csv-branch {
+    position: relative !important;
+  }
+
+  .org-fixed__secondary--1::before,
+  .org-fixed__secondary--2::before,
+  .org-fixed__csv-branch::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: -14px !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 2px !important;
+    background: rgba(143, 152, 168, 0.38) !important;
+  }
+}
+
+/* =========================================================
+   MOBILE — 0 ~ 767
+   ========================================================= */
+
+@media (max-width: 767px) {
+  /* ---------------------------------------------------------
+     COMPANY / CEO GREETING
+     --------------------------------------------------------- */
+
+  .company-section {
+    padding-top: clamp(42px, 11vw, 58px) !important;
+    padding-bottom: clamp(68px, 18vw, 88px) !important;
+  }
+
+  .company-greeting {
+    max-width: none !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "heading"
+      "visual"
+      "body" !important;
+    gap: 0 !important;
+  }
+
+  .company-greeting .company-section__heading {
+    grid-area: heading !important;
+    width: 100% !important;
+    margin: 0 0 clamp(30px, 8vw, 40px) !important;
+  }
+
+  .company-greeting .company-section__heading .section-title {
+    max-width: 100% !important;
+    font-size: clamp(2rem, 9.4vw, 2.7rem) !important;
+    line-height: 1.18 !important;
+  }
+
+  .company-greeting__visual {
+    grid-area: visual !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 11 !important;
+    margin: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  .company-greeting__visual img {
+    object-position: 56% center !important;
+  }
+
+  .company-greeting__body {
+    grid-area: body !important;
+    max-width: none !important;
+    padding-top: clamp(30px, 8vw, 40px) !important;
+  }
+
+  .company-greeting__body .body-copy {
+    margin: 0 0 18px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.8 !important;
+  }
+
+  .company-greeting__quote {
+    margin-top: 28px !important;
+    padding-top: 20px !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  .company-greeting__signature {
+    margin-top: 16px !important;
+    font-size: 0.86rem !important;
+  }
+
+  /* ---------------------------------------------------------
+     HISTORY — mobile single rail
+     --------------------------------------------------------- */
+
+  .history-panel__head {
+    max-width: 100% !important;
+    margin-bottom: clamp(42px, 11vw, 56px) !important;
+  }
+
+  .history-panel__head .body-copy {
+    max-width: 30em !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .history-list {
+    --history-rail-x: 28px;
+    width: 100% !important;
+    max-width: none !important;
+    gap: 18px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .history-list::before,
+  .history-list::after {
+    left: var(--history-rail-x) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .history-list::before {
+    width: 7px !important;
+  }
+
+  .history-list::after {
+    width: 3px !important;
+  }
+
+  .history-list__item,
+  .history-list__item--left,
+  .history-list__item--right {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 62px minmax(0, 1fr) !important;
+    gap: 18px !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: 0 0 28px !important;
+  }
+
+  .history-list__marker,
+  .history-list__titleLine {
+    display: none !important;
+  }
+
+  .history-list__item time,
+  .history-list__item--left time,
+  .history-list__item--right time {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    width: 52px !important;
+    height: 52px !important;
+    margin-left: 2px !important;
+    font-size: 0.74rem !important;
+    transform: none !important;
+  }
+
+  .history-list__content,
+  .history-list__item--left .history-list__content,
+  .history-list__item--right .history-list__content {
+    position: static !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    width: auto !important;
+    padding-top: 3px !important;
+    text-align: left !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .history-list__titleRow,
+  .history-list__item--left .history-list__titleRow,
+  .history-list__item--right .history-list__titleRow {
+    justify-content: flex-start !important;
+  }
+
+  .history-list__content h3 {
+    margin: 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .history-list__item ul {
+    margin-top: 10px !important;
+    gap: 6px !important;
+  }
+
+  .history-list__item li {
+    position: relative !important;
+    padding-left: 12px !important;
+    color: rgba(31, 39, 56, 0.72) !important;
+    font-size: 0.84rem !important;
+    line-height: 1.6 !important;
+    font-weight: 500 !important;
+  }
+
+  .history-list__item li::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0.72em !important;
+    width: 4px !important;
+    height: 4px !important;
+    border-radius: 50% !important;
+    background: rgba(44, 54, 143, 0.46) !important;
+  }
+
+  /* ---------------------------------------------------------
+     ORGANIZATION — mobile hierarchical list
+     --------------------------------------------------------- */
+
+  .company-organization {
+    padding-top: 10px !important;
+    padding-bottom: clamp(68px, 18vw, 88px) !important;
+  }
+
+  .company-organization__hero {
+    margin-bottom: clamp(38px, 10vw, 50px) !important;
+  }
+
+  .company-organization__title {
+    font-size: clamp(2.15rem, 10vw, 2.8rem) !important;
+    line-height: 1.12 !important;
+  }
+
+  .org-fixed {
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 0 !important;
+  }
+
+  .org-fixed__main-v,
+  .org-fixed__main-h,
+  .org-fixed__main-v1,
+  .org-fixed__main-v2,
+  .org-fixed__main-v3,
+  .org-fixed__sub-v,
+  .org-fixed__sub-h,
+  .org-fixed__sub-v1,
+  .org-fixed__sub-v2,
+  .org-fixed__csv-v,
+  .org-fixed__csv-h,
+  .org-fixed__csv-v1,
+  .org-fixed__csv-v2,
+  .org-fixed__csv-v3 {
+    display: none !important;
+  }
+
+  .org-fixed__lead,
+  .org-fixed__primary,
+  .org-fixed__secondary,
+  .org-fixed__csv-branch {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .org-fixed__lead {
+    margin-bottom: 10px !important;
+  }
+
+  .org-fixed__secondary {
+    width: calc(100% - 26px) !important;
+    margin-left: 26px !important;
+    justify-self: stretch !important;
+  }
+
+  .org-fixed__csv-branch {
+    width: calc(100% - 52px) !important;
+    margin-left: 52px !important;
+    justify-self: stretch !important;
+  }
+
+  .org-fixed__csv-branch::before,
+  .org-fixed__csv-team-grid::before,
+  .org-fixed__csv-team::before {
+    display: none !important;
+  }
+
+  .org-fixed__csv-team-grid {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .org-fixed__csv-team {
+    padding: 0 !important;
+  }
+
+  .org-box {
+    min-height: 60px !important;
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 10px !important;
+    padding: 13px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .org-box--lead {
+    min-height: 68px !important;
+    font-size: 0.98rem !important;
+  }
+
+  .org-box--primary {
+    border-width: 1.5px !important;
+  }
+
+  .org-box--secondary {
+    background: #fbfcfe !important;
+  }
+
+  .org-fixed__csv-team .org-box--tertiary {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 54px !important;
+    border-radius: 8px !important;
+    font-size: 0.84rem !important;
+  }
+
+  /* hierarchy cues */
+  .org-fixed__secondary,
+  .org-fixed__csv-branch {
+    position: relative !important;
+  }
+
+  .org-fixed__secondary::before,
+  .org-fixed__csv-branch::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: -14px !important;
+    top: -8px !important;
+    bottom: -8px !important;
+    width: 2px !important;
+    background: rgba(143, 152, 168, 0.34) !important;
+  }
+
+  .org-fixed__csv-branch::before {
+    left: -14px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE — <= 390
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .company-greeting .company-section__heading .section-title {
+    font-size: clamp(1.9rem, 9.2vw, 2.35rem) !important;
+  }
+
+  .company-greeting__visual {
+    aspect-ratio: 4 / 3.1 !important;
+  }
+
+  .history-list__item,
+  .history-list__item--left,
+  .history-list__item--right {
+    grid-template-columns: 56px minmax(0, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .history-list__item time,
+  .history-list__item--left time,
+  .history-list__item--right time {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .org-fixed__secondary {
+    width: calc(100% - 20px) !important;
+    margin-left: 20px !important;
+  }
+
+  .org-fixed__csv-branch {
+    width: calc(100% - 40px) !important;
+    margin-left: 40px !important;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .history-list__item,
+  .history-list__item time,
+  .history-list__content {
+    transition: none !important;
+    transform: none !important;
+  }
+}
