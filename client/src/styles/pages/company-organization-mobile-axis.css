@@ -1,0 +1,71 @@
+/* =========================================================
+   COMPANY ORGANIZATION — MOBILE AXIS FIX
+
+   One continuous main axis only:
+   - starts at ~35% of the CEO block width
+   - continues through the primary organization hierarchy
+   - no separate CEO connector pseudo-element
+   - no decorative bullets inside team rows
+   ========================================================= */
+
+@media (max-width: 860px) {
+  .org-mobile-tree {
+    --org-lead-left: 16px;
+    --org-lead-width: 224px;
+    --org-spine-x: 94px;
+    --org-primary-indent: 128px;
+  }
+
+  .org-mobile-tree__lead {
+    margin-bottom: 18px;
+  }
+
+  /* Remove the old independent CEO connector. */
+  .org-mobile-tree__lead::after {
+    display: none;
+  }
+
+  /* A single vertical axis starts at the CEO bottom edge and continues
+     through the center of the third primary division. */
+  .org-mobile-branch::before {
+    left: var(--org-spine-x);
+    top: -18px;
+    width: 1px;
+    height: calc(
+      18px
+      + (var(--org-primary-height) * 2)
+      + (var(--org-primary-gap) * 2)
+      + (var(--org-primary-height) / 2)
+    );
+  }
+
+  /* Remove the old elbow connector completely. */
+  .org-mobile-branch::after {
+    display: none;
+  }
+
+  /* Primary branches now originate from the exact same single axis. */
+  .org-mobile-branch__item::before {
+    left: calc(-1 * (var(--org-primary-indent) - var(--org-spine-x)));
+    width: calc(var(--org-primary-indent) - var(--org-spine-x));
+    height: 1px;
+  }
+
+  /* Team rows keep the branch line but no decorative dot. */
+  .org-mobile-branch__team {
+    padding-left: 14px;
+  }
+
+  .org-mobile-branch__team::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .org-mobile-tree {
+    --org-lead-left: 12px;
+    --org-lead-width: 208px;
+    --org-spine-x: 85px;
+    --org-primary-indent: 123px;
+  }
+}
