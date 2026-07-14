@@ -129,7 +129,7 @@ iframe {
   }
 
   .home-nav__mobile-panel-head {
-    justify-content: space-between !important;
+    justify-content: space-between;
   }
 
   .home-nav__mobile-panel-close {
@@ -167,17 +167,17 @@ iframe {
   }
 
   .home-nav__mobile-submenu {
-    visibility: hidden !important;
+    visibility: hidden;
     transition:
       grid-template-rows 0.28s ease,
-      visibility 0s linear 0.28s !important;
+      visibility 0s linear 0.28s;
   }
 
   .home-nav__mobile-submenu.is-open {
-    visibility: visible !important;
+    visibility: visible;
     transition:
       grid-template-rows 0.28s ease,
-      visibility 0s linear 0s !important;
+      visibility 0s linear 0s;
   }
 }
 
@@ -219,13 +219,13 @@ iframe {
 @media (min-width: 1200px) {
   .home-nav__mobile-toggle,
   .home-nav__mobile-panel {
-    display: none !important;
+    display: none;
   }
 
   body.is-nav-locked {
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    padding-right: 0 !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-right: 0;
   }
 }
 
@@ -236,7 +236,7 @@ iframe {
   .service-card:hover,
   .ui-button:hover,
   .site-footer__col a:hover {
-    transform: none !important;
+    transform: none;
   }
 }
 
@@ -257,7 +257,7 @@ iframe {
 
   .home-experience__client-track,
   .client-logo-band__track {
-    animation: none !important;
-    transform: none !important;
+    animation: none;
+    transform: none;
   }
 }
