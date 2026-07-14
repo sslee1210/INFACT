@@ -3,10 +3,21 @@
 ## Responsive policy
 
 - 1920px is the desktop visual baseline.
-- Above 1920px, the site scales proportionally through the root `rem` scale defined in `variables.css`.
+- Above 1920px, the shared layout keeps the same `12.5% / 75% / 12.5%` guide through viewport-based container tokens.
+- Root UI scale grows only from `16px` to a maximum of `20px`; body copy, buttons and cards must not continue scaling indefinitely on 4K displays.
+- Media, backgrounds and section layout may use additional viewport space after typography reaches its cap.
 - Header, main content and footer use the same `--site-content-width` / `--site-content-max` guide.
 - Do not add display-specific 2200px, 2560px or 32-inch-only layout correction layers.
 - Do not reintroduce `ultrawide-layout-fix.css` or `large-desktop` override files.
+
+## Visual hierarchy policy
+
+- Hero copy is the strongest text level.
+- Section headings use `--home-section-heading-size` and stay clearly above body copy.
+- Supporting key statements may be larger than body copy but must remain below the section heading level.
+- Body copy uses `--home-section-copy-size` and is capped for large displays.
+- Large screens should gain canvas, image area and breathing room before gaining additional text size.
+- Section rhythm should alternate between story, standard, compact and band densities instead of giving every block the same height.
 
 ## CSS import ownership
 
@@ -27,7 +38,7 @@
 
 ### Common
 
-- `variables.css`: tokens and the 1920px+ scale system
+- `variables.css`: tokens, the 1920px layout baseline and capped large-screen UI scale
 - `design-system.css`: shared UI tokens/components
 - `base.css`: global element/layout defaults and common 1920px container guide
 - `navigation.css`: base header/navigation styles
@@ -40,9 +51,9 @@
 
 ### Home
 
-- `home.css`: home base
+- `home.css`: home base, visual hierarchy and section rhythm tokens
 - `home-company-intro.css`: company intro section
-- `home-about.css`: home About section
+- `home-about.css`: home About section and supporting statement hierarchy
 - `home-experience.css`: active Experience section only
 - `home-service*.css`: service section/cards
 - `home-cta.css`: Home contact CTA base behavior and desktop sizing
