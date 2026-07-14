@@ -33,23 +33,17 @@
 @import "./styles/common/subpage-typography-standard.css";
 @import "./styles/pages/references-year-menu-patch.css";
 
-/* Responsive foundation */
-@import "./styles/common/responsive-foundation.css";
+/* Responsive core */
+@import "./styles/common/responsive-core.css";
 
 /* Home mobile visual polish */
 @import "./styles/pages/home-mobile-polish.css";
 
-/* Stage 2 — complete home responsive layout */
-@import "./styles/pages/home-responsive-stage2.css";
-
-/* Stage 3 — company pages responsive overhaul */
-@import "./styles/pages/company-responsive-stage3.css";
-
-/* Stage 4 — service pages responsive overhaul */
-@import "./styles/pages/services-responsive-stage4.css";
-
-/* Stage 5 — references responsive overhaul */
-@import "./styles/pages/references-responsive-stage5.css";
+/* Page-family responsive layouts */
+@import "./styles/pages/home-responsive.css";
+@import "./styles/pages/company-responsive.css";
+@import "./styles/pages/services-responsive.css";
+@import "./styles/pages/references-responsive.css";
 
 /* Canonical UI system */
 @import "./styles/common/ui-system.css";
