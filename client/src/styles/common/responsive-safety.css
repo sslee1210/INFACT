@@ -9,6 +9,29 @@
    - normalize touch hover and reduced motion
    ========================================================= */
 
+.site-skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 3000;
+  transform: translateY(calc(-100% - 24px));
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--home-blue-strong);
+  box-shadow: 0 10px 30px rgba(7, 18, 46, 0.2);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.18s ease;
+}
+
+.site-skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid rgba(44, 54, 143, 0.35);
+  outline-offset: 3px;
+}
+
 html,
 body,
 #root,
@@ -215,6 +238,10 @@ iframe {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .site-skip-link {
+    transition: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
