@@ -87,3 +87,22 @@
     left: 66.6666667% !important;
   }
 }
+
+/* =========================================================
+   ORGANIZATION TREE — CSV TEAM CONNECTOR PRECISION
+
+   CSS Grid gap changes the mathematical center of the first and third
+   tracks, while the connector uses 1/6 and 5/6 coordinates. Move the
+   visual spacing into each track instead so card centers and connector
+   coordinates are exactly identical.
+   ========================================================= */
+
+@media (min-width: 861px) {
+  .company-organization .org-tree__teams {
+    gap: 0;
+  }
+
+  .company-organization .org-tree__team {
+    padding-inline: clamp(9px, 0.8vw, 12px);
+  }
+}
