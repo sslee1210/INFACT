@@ -1,105 +1,113 @@
 /* =========================================================
-   COMPANY ORGANIZATION — MOBILE SIGNATURE TREE
+   COMPANY ORGANIZATION — MOBILE EDITORIAL TREE
 
-   Mobile-only organization chart based on a classic vertical branch layout.
-   Three signature color levels are used consistently:
-   1) CEO        : deep signature blue
-   2) Divisions  : signature blue
-   3) Subdivisions: light signature blue
-
-   Team nodes remain neutral white so the hierarchy stays readable.
+   A restrained, human-designed organization chart:
+   - CEO is the only strong solid block.
+   - Primary divisions use a quieter signature-blue treatment.
+   - GMP / CSV use a light third-level treatment.
+   - Teams become compact subordinate rows.
+   - Connector geometry is derived from fixed layout variables.
    Desktop/tablet organization tree remains unchanged.
    ========================================================= */
 
 @media (max-width: 860px) {
   .org-mobile-tree {
-    --org-tone-1: var(--home-blue-strong);
-    --org-tone-2: var(--home-blue);
-    --org-tone-3: #9aa8df;
-    --org-line: rgba(31, 44, 132, 0.5);
-    --org-line-soft: rgba(31, 44, 132, 0.26);
+    --org-deep: #18236f;
+    --org-main: #34429b;
+    --org-light: #8f9fd6;
+    --org-light-bg: #f4f6fc;
+    --org-ink: #141a3d;
+    --org-line: #aab2c4;
+    --org-line-soft: #cbd1de;
 
-    --org-spine-x: 24px;
+    --org-spine-x: 28px;
     --org-primary-indent: 58px;
-    --org-child-indent: 34px;
-    --org-team-indent: 26px;
+    --org-primary-height: 50px;
+    --org-primary-gap: 18px;
 
-    --org-primary-height: 52px;
-    --org-primary-gap: 20px;
-    --org-secondary-height: 50px;
-    --org-secondary-gap: 16px;
-    --org-team-height: 40px;
-    --org-team-gap: 8px;
+    --org-child-indent: 30px;
+    --org-secondary-height: 48px;
+    --org-secondary-gap: 14px;
+
+    --org-team-indent: 24px;
+    --org-team-height: 38px;
+    --org-team-gap: 7px;
+
+    --org-lead-left: 46px;
+    --org-lead-width: 224px;
+    --org-lead-center-x: 158px;
 
     display: block;
     width: min(100%, 460px);
     margin: 0 auto;
-    padding: 8px 8px clamp(40px, 10vw, 56px);
-    color: var(--home-text);
+    padding: 8px 8px clamp(42px, 10vw, 58px);
+    color: var(--org-ink);
   }
 
-  /* =======================================================
-     LEVEL 1 — CEO
-     ======================================================= */
-
+  /* CEO */
   .org-mobile-tree__lead {
     position: relative;
     box-sizing: border-box;
-    width: min(60%, 235px);
-    min-height: 60px;
-    margin: 0 0 28px var(--org-spine-x);
+    width: var(--org-lead-width);
+    min-height: 58px;
+    margin: 0 0 26px var(--org-lead-left);
     padding: 12px 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: 0;
-    border-radius: 4px;
-    background: var(--org-tone-1);
-    color: #ffffff;
-
-    font-size: clamp(1rem, 4vw, 1.12rem);
+    border-radius: 6px;
+    background: var(--org-deep);
+    color: #fff;
+    font-size: clamp(1rem, 4vw, 1.1rem);
     line-height: 1.2;
-    font-weight: 850;
+    font-weight: 800;
     letter-spacing: -0.025em;
     text-align: center;
-
-    box-shadow: 0 8px 20px rgba(30, 42, 115, 0.12);
+    box-shadow: 0 10px 24px rgba(24, 35, 111, 0.12);
   }
 
-  /* CEO block connects exactly to the main spine. */
+  /* Vertical drop from CEO center to the top bridge. */
   .org-mobile-tree__lead::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 100%;
-    width: 2px;
-    height: 28px;
+    width: 1.5px;
+    height: 26px;
     background: var(--org-line);
+    transform: translateX(-50%);
   }
 
-  /* =======================================================
-     MAIN SPINE — THREE PRIMARY DIVISIONS
-     ======================================================= */
-
+  /* Primary organization area */
   .org-mobile-branch {
     position: relative;
     padding-left: var(--org-primary-indent);
   }
 
-  /* Stop the main spine at the center of the third primary node. */
+  /* Main spine ends exactly at the center of the third primary division. */
   .org-mobile-branch::before {
     content: "";
     position: absolute;
     left: var(--org-spine-x);
     top: 0;
-    width: 2px;
+    width: 1.5px;
     height: calc(
       (var(--org-primary-height) * 2)
       + (var(--org-primary-gap) * 2)
       + (var(--org-primary-height) / 2)
     );
+    background: var(--org-line);
+  }
+
+  /* Deliberate elbow from the CEO center to the main spine. */
+  .org-mobile-branch::after {
+    content: "";
+    position: absolute;
+    left: var(--org-spine-x);
+    top: 0;
+    width: calc(var(--org-lead-center-x) - var(--org-spine-x));
+    height: 1.5px;
     background: var(--org-line);
   }
 
@@ -114,7 +122,7 @@
     left: calc(-1 * (var(--org-primary-indent) - var(--org-spine-x)));
     top: calc(var(--org-primary-height) / 2);
     width: calc(var(--org-primary-indent) - var(--org-spine-x));
-    height: 2px;
+    height: 1.5px;
     background: var(--org-line);
   }
 
@@ -126,46 +134,46 @@
     word-break: keep-all;
   }
 
-  /* =======================================================
-     LEVEL 2 — PRIMARY DIVISIONS
-     ======================================================= */
-
+  /* Primary divisions: quieter than the CEO, but still clearly dominant. */
   .org-mobile-branch__node--primary {
     width: min(100%, 300px);
     min-height: var(--org-primary-height);
-    padding: 11px 18px;
-
-    border: 0;
-    border-radius: 3px;
-    background: var(--org-tone-2);
-    color: #ffffff;
-
-    font-size: clamp(0.92rem, 3.8vw, 1.02rem);
+    padding: 10px 16px 10px 18px;
+    border: 1px solid rgba(52, 66, 155, 0.28);
+    border-left: 5px solid var(--org-main);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--org-deep);
+    font-size: clamp(0.92rem, 3.8vw, 1rem);
     line-height: 1.3;
-    font-weight: 830;
+    font-weight: 760;
     letter-spacing: -0.025em;
+    box-shadow: 0 3px 10px rgba(24, 35, 111, 0.035);
   }
 
-  /* =======================================================
-     VALIDATION SUB-BRANCH
-     ======================================================= */
+  .org-mobile-branch__node--validation {
+    background: #f8f9fd;
+    border-color: rgba(24, 35, 111, 0.32);
+    border-left-color: var(--org-deep);
+    font-weight: 800;
+  }
 
+  /* Validation -> GMP / CSV */
   .org-mobile-branch__children {
     position: relative;
-    margin-top: 18px;
-    margin-left: 14px;
+    margin-top: 14px;
+    margin-left: 16px;
     padding-left: var(--org-child-indent);
   }
 
-  /* Nested spine runs from the Validation node to the CSV node center. */
   .org-mobile-branch__children::before {
     content: "";
     position: absolute;
     left: 0;
-    top: -18px;
-    width: 2px;
+    top: -14px;
+    width: 1.5px;
     height: calc(
-      18px
+      14px
       + var(--org-secondary-height)
       + var(--org-secondary-gap)
       + (var(--org-secondary-height) / 2)
@@ -184,55 +192,50 @@
     left: calc(-1 * var(--org-child-indent));
     top: calc(var(--org-secondary-height) / 2);
     width: var(--org-child-indent);
-    height: 2px;
+    height: 1.5px;
     background: var(--org-line);
   }
 
-  /* =======================================================
-     LEVEL 3 — GMP / CSV
-     ======================================================= */
-
+  /* Third level: a softer, deliberately distinct treatment. */
   .org-mobile-branch__node--secondary {
-    width: min(100%, 260px);
+    width: min(100%, 258px);
     min-height: var(--org-secondary-height);
-    padding: 10px 16px;
-
-    border: 1.5px solid var(--org-tone-3);
+    padding: 9px 14px;
+    border: 1px solid rgba(143, 159, 214, 0.8);
+    border-left: 4px solid var(--org-light);
     border-radius: 3px;
-    background: var(--org-tone-3);
-    color: var(--org-tone-1);
-
-    font-size: clamp(0.9rem, 3.6vw, 1rem);
+    background: var(--org-light-bg);
+    color: var(--org-deep);
+    font-size: clamp(0.9rem, 3.6vw, 0.98rem);
     line-height: 1.3;
-    font-weight: 840;
+    font-weight: 760;
     letter-spacing: -0.025em;
   }
 
-  /* =======================================================
-     CSV TEAM BRANCH
-     ======================================================= */
+  .org-mobile-branch__node--csv {
+    background: #f1f3fb;
+  }
 
+  /* CSV teams: compact list, not a third set of large cards. */
   .org-mobile-branch__teams {
     position: relative;
-    width: min(100%, 230px);
-    margin-top: 14px;
+    width: min(100%, 222px);
+    margin-top: 12px;
     margin-left: 14px;
     padding-left: var(--org-team-indent);
-
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--org-team-gap);
   }
 
-  /* Stop the team spine at the center of the final team node. */
   .org-mobile-branch__teams::before {
     content: "";
     position: absolute;
     left: 0;
-    top: -14px;
-    width: 1.5px;
+    top: -12px;
+    width: 1px;
     height: calc(
-      14px
+      12px
       + (var(--org-team-height) * 2)
       + (var(--org-team-gap) * 2)
       + (var(--org-team-height) / 2)
@@ -249,19 +252,16 @@
     box-sizing: border-box;
     min-width: 0;
     min-height: var(--org-team-height);
-    padding: 8px 12px 8px 30px;
-
+    padding: 7px 11px 7px 26px;
     display: flex;
     align-items: center;
-
-    border: 1px solid rgba(154, 168, 223, 0.72);
+    border: 1px solid #d8dce7;
     border-radius: 2px;
-    background: #ffffff;
-    color: var(--home-text);
-
-    font-size: clamp(0.78rem, 3vw, 0.88rem);
+    background: #fff;
+    color: #27304d;
+    font-size: clamp(0.78rem, 3vw, 0.87rem);
     line-height: 1.25;
-    font-weight: 760;
+    font-weight: 650;
     letter-spacing: -0.02em;
     text-align: left;
     word-break: keep-all;
@@ -273,7 +273,7 @@
     left: calc(-1 * var(--org-team-indent));
     top: 50%;
     width: var(--org-team-indent);
-    height: 1.5px;
+    height: 1px;
     background: var(--org-line-soft);
     transform: translateY(-50%);
   }
@@ -281,34 +281,35 @@
   .org-mobile-branch__team::after {
     content: "";
     position: absolute;
-    left: 12px;
+    left: 10px;
     top: 50%;
-    width: 7px;
-    height: 7px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    background: var(--org-tone-2);
+    background: var(--org-light);
     transform: translateY(-50%);
-    opacity: 0.82;
   }
 }
 
 @media (max-width: 480px) {
   .org-mobile-tree {
-    --org-spine-x: 18px;
+    --org-spine-x: 22px;
     --org-primary-indent: 50px;
-    --org-child-indent: 30px;
-    --org-team-indent: 22px;
+    --org-child-indent: 26px;
+    --org-team-indent: 20px;
+    --org-lead-left: 36px;
+    --org-lead-width: 210px;
+    --org-lead-center-x: 141px;
     padding-inline: 4px;
   }
 
   .org-mobile-tree__lead {
-    width: min(62%, 220px);
     min-height: 56px;
   }
 
   .org-mobile-branch__node--primary {
     width: min(100%, 292px);
-    padding-inline: 16px;
+    padding-inline: 14px 15px;
   }
 
   .org-mobile-branch__children {
@@ -316,11 +317,11 @@
   }
 
   .org-mobile-branch__node--secondary {
-    width: min(100%, 250px);
+    width: min(100%, 246px);
   }
 
   .org-mobile-branch__teams {
-    width: min(100%, 220px);
+    width: min(100%, 216px);
     margin-left: 10px;
   }
 }
