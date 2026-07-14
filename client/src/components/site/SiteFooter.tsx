@@ -5,6 +5,8 @@ import { scrollToTopSoon } from "@/lib/scroll";
 const FOOTER_LOGO = "./images/home/logo1.png";
 
 export function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="site-footer">
       <div className="home-container site-footer__inner">
@@ -57,7 +59,7 @@ export function SiteFooter() {
         </div>
 
         <div className="site-footer__bottom">
-          <p>© 2026 IN-FACT. All rights reserved.</p>
+          <p>© {currentYear} IN-FACT. All rights reserved.</p>
 
           <div className="site-footer__bottom-links" aria-label="보조 메뉴">
             <Link href="/" onClick={scrollToTopSoon}>
