@@ -102,6 +102,6 @@ jobs:
       - name: Stop local server
         if: always()
         run: |
-          if [ -f /tmp/infact-server.pid ]; then
-            kill "$(cat /tmp/infact-server.pid)" || true
+          if [ -f /tmp/infact-visual-server.pid ]; then
+            kill "$(cat /tmp/infact-visual-server.pid)" || true
           fi
