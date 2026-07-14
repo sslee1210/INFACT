@@ -9,6 +9,14 @@ type SiteHeaderProps = {
 };
 
 const DESKTOP_MEDIA_QUERY = "(min-width: 1200px)";
+const FOCUSABLE_SELECTOR = [
+  "a[href]",
+  "button:not([disabled])",
+  "input:not([disabled])",
+  "select:not([disabled])",
+  "textarea:not([disabled])",
+  '[tabindex]:not([tabindex="-1"])',
+].join(",");
 
 export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   const [location, setLocation] = useLocation();
@@ -21,6 +29,9 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scrolledRef = useRef(scrolled);
   const scrollFrameRef = useRef<number | null>(null);
+  const mobileToggleRef = useRef<HTMLButtonElement | null>(null);
+  const mobilePanelRef = useRef<HTMLElement | null>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     scrolledRef.current = scrolled;
@@ -95,6 +106,81 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
       body.classList.remove("is-nav-locked");
       body.style.overflow = previousOverflow;
       body.style.paddingRight = previousPaddingRight;
+    };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const panel = mobilePanelRef.current;
+    previousFocusRef.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : mobileToggleRef.current;
+
+    const getFocusableElements = () => {
+      if (!panel) return [];
+
+      return Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
+        (element) => element.getClientRects().length > 0 && element.getAttribute("aria-hidden") !== "true",
+      );
+    };
+
+    const focusFrame = window.requestAnimationFrame(() => {
+      getFocusableElements()[0]?.focus();
+    });
+
+    const handleModalKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setMobileMenuOpen(false);
+        setMobileSectionOpen(null);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusableElements = getFocusableElements();
+      if (focusableElements.length === 0) {
+        event.preventDefault();
+        return;
+      }
+
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+      const activeElement = document.activeElement;
+
+      if (event.shiftKey) {
+        if (activeElement === firstElement || !panel?.contains(activeElement)) {
+          event.preventDefault();
+          lastElement.focus();
+        }
+        return;
+      }
+
+      if (activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleModalKeyDown);
+
+    return () => {
+      window.cancelAnimationFrame(focusFrame);
+      document.removeEventListener("keydown", handleModalKeyDown);
+
+      const previousFocus = previousFocusRef.current;
+      previousFocusRef.current = null;
+
+      window.requestAnimationFrame(() => {
+        if (previousFocus?.isConnected) {
+          previousFocus.focus();
+          return;
+        }
+
+        mobileToggleRef.current?.focus();
+      });
     };
   }, [mobileMenuOpen]);
 
@@ -265,6 +351,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
           </div>
 
           <button
+            ref={mobileToggleRef}
             type="button"
             className="home-nav__mobile-toggle"
             aria-label={mobileMenuOpen ? "메뉴 닫기" : "메뉴 열기"}
@@ -319,6 +406,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
       </nav>
 
       <aside
+        ref={mobilePanelRef}
         id="site-mobile-navigation"
         className={`home-nav__mobile-panel ${mobileMenuOpen ? "is-open" : ""}`}
         role="dialog"
