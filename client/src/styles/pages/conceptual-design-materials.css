@@ -250,3 +250,335 @@
     padding: 15px 16px;
   }
 }
+
+
+
+/* =========================================================
+   INFACT Conceptual Design — unified typography and layout
+   Load this file AFTER service-shared.css and service-design.css.
+   ========================================================= */
+
+.service-task-page--standard,
+.concept-materials {
+  --concept-title-size: clamp(2rem, 2.55vw, 3rem);
+  --concept-section-size: clamp(1.85rem, 2.15vw, 2.5rem);
+  --concept-subtitle-size: 1.125rem;
+  --concept-body-size: 1rem;
+  --concept-small-size: 0.875rem;
+}
+
+/* Standard typography */
+.service-task-page--standard h2,
+.concept-materials h2 {
+  word-break: keep-all;
+}
+
+.service-task-overview__head h2,
+.service-standard-head h2,
+.concept-materials__head h2 {
+  font-size: var(--concept-title-size) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.045em !important;
+}
+
+.service-task-overview__head > p:not(.section-label),
+.service-standard-head > p,
+.service-standard-section__head > p,
+.concept-materials__head > p:not(.section-label) {
+  font-size: var(--concept-body-size) !important;
+  line-height: 1.8 !important;
+  font-weight: 500 !important;
+}
+
+.service-standard-section__head h2 {
+  margin: 0;
+  color: var(--home-text);
+  font-size: var(--concept-section-size);
+  line-height: 1.25;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+/* Remove obsolete heading label */
+.service-task-focus__head .section-label {
+  display: none !important;
+}
+
+/* Shared section alignment */
+.service-standard-section {
+  padding: clamp(72px, 7vw, 108px) 0;
+}
+
+.service-standard-section__head {
+  display: grid;
+  justify-items: center;
+  max-width: 860px;
+  margin: 0 auto clamp(34px, 4vw, 52px);
+  text-align: center;
+}
+
+.service-standard-section__head p {
+  margin: 14px 0 0;
+  color: var(--home-text-soft);
+}
+
+/* Scope: centered 3 x 2 matrix */
+.service-standard-section--scope {
+  background: #fff;
+}
+
+.service-standard-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  border-top: 2px solid var(--home-blue-strong);
+  border-left: 1px solid var(--home-border);
+}
+
+.service-standard-scope-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 112px;
+  padding: 24px 28px;
+  border-right: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+  color: var(--home-text);
+  background: #fff;
+  font-size: var(--concept-body-size);
+  line-height: 1.62;
+  font-weight: 700;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* Workflow: full-width, centered and readable */
+.service-standard-section--workflow {
+  background: #f4f7fb;
+}
+
+.service-standard-workflow {
+  display: grid;
+  grid-template-columns: repeat(var(--workflow-count), minmax(0, 1fr));
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.service-standard-workflow li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-width: 0;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.service-standard-workflow li::before {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #bfcbe0;
+  z-index: 0;
+}
+
+.service-standard-workflow li:first-child::before {
+  left: 50%;
+  width: 50%;
+}
+
+.service-standard-workflow li:last-child::before {
+  width: 50%;
+}
+
+.service-standard-workflow li > span {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #b8c5dd;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--home-blue-strong);
+  font-size: 0.75rem;
+  font-weight: 850;
+}
+
+.service-standard-workflow li > strong {
+  display: block;
+  margin-top: 20px;
+  max-width: 180px;
+  color: var(--home-text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 720;
+  word-break: keep-all;
+}
+
+/* Outputs: centered, no boxes and no horizontal rules */
+.service-standard-section--outputs {
+  background: #fff;
+}
+
+.service-standard-output-flow {
+  display: grid;
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.service-standard-output-flow li {
+  display: grid;
+  justify-items: center;
+}
+
+.service-standard-output-flow strong {
+  display: block;
+  padding: 11px 20px;
+  color: var(--home-text);
+  font-size: var(--concept-body-size);
+  line-height: 1.65;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+.service-standard-output-flow span {
+  display: block;
+  padding: 4px 0;
+  color: var(--home-blue-strong);
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 800;
+}
+
+/* Conceptual materials headings are centered and use same scale */
+.concept-materials__head {
+  display: grid;
+  justify-items: center;
+  max-width: 960px;
+  margin: 0 auto clamp(34px, 4vw, 50px);
+  text-align: center;
+}
+
+.concept-materials__head .section-label {
+  justify-self: center;
+}
+
+.concept-materials__section--intro {
+  border-top: 0 !important;
+}
+
+/* Result flow: center and remove top/bottom lines */
+.concept-materials__section--flow {
+  border-top: 0 !important;
+}
+
+.concept-result-flow {
+  width: min(1000px, 100%);
+  max-width: none !important;
+  margin: 0 auto !important;
+}
+
+.concept-result-flow li:nth-child(odd) {
+  padding: 11px 20px !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  font-size: var(--concept-body-size) !important;
+  line-height: 1.65 !important;
+  font-weight: 700 !important;
+}
+
+.concept-result-flow li:nth-child(even) {
+  padding: 4px 0 !important;
+  font-size: 1.25rem !important;
+}
+
+/* Normalize table typography */
+.concept-table thead th {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+}
+
+.concept-table tbody th {
+  font-size: 0.9375rem !important;
+  line-height: 1.6 !important;
+  font-weight: 750 !important;
+}
+
+.concept-table tbody td {
+  font-size: 0.9375rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+}
+
+.concept-deliverable-group h3 {
+  font-size: 1.125rem !important;
+  line-height: 1.45 !important;
+}
+
+.concept-deliverable-group li {
+  font-size: 0.9375rem !important;
+  line-height: 1.65 !important;
+  font-weight: 500 !important;
+}
+
+@media (max-width: 1020px) {
+  .service-standard-scope-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-standard-workflow {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: min(640px, 100%);
+  }
+
+  .service-standard-workflow li {
+    padding: 0;
+  }
+
+  .service-standard-workflow li::before {
+    display: none;
+  }
+
+  .service-standard-workflow li > strong {
+    max-width: none;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .service-standard-section {
+    padding: 56px 0;
+  }
+
+  .service-standard-scope-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-standard-scope-item {
+    min-height: 88px;
+    padding: 20px;
+  }
+
+  .concept-materials__head,
+  .service-standard-section__head {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .concept-materials__head .section-label {
+    justify-self: start;
+  }
+}
