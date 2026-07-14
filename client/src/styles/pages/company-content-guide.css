@@ -40,9 +40,38 @@
     max-width: none;
   }
 
-  /* Organization: remove the independent 1240px desktop cap. */
-  .org-fixed {
-    width: 100%;
-    max-width: none;
+  /* =======================================================
+     ORGANIZATION — DESKTOP GUIDE BALANCE
+
+     The old 1260/1320px coordinate system left unused space on
+     the left after the Company shell was widened. Keep the CSV
+     branch aligned to the right guide, extend the first primary
+     department to the left guide, and rebalance GMP / CSV below
+     the Validation division.
+     ======================================================= */
+
+  .company-organization .org-fixed {
+    width: 100% !important;
+    max-width: none !important;
+
+    /* Primary row: left guide / center / validation branch */
+    --primary-left-1: 8% !important;
+    --primary-left-2: 50% !important;
+    --primary-left-3: 82% !important;
+
+    /* Validation children: GMP spreads left, CSV stays on the
+       right branch so its three teams remain aligned to the guide. */
+    --secondary-left-1: 64% !important;
+    --secondary-left-2: 82% !important;
+  }
+
+  /* Keep the validation branch geometry tied to the new positions. */
+  .company-organization .org-fixed__sub-h {
+    left: var(--secondary-left-1) !important;
+    width: calc(var(--secondary-left-2) - var(--secondary-left-1)) !important;
+  }
+
+  .company-organization .org-fixed__csv-branch {
+    left: var(--secondary-left-2) !important;
   }
 }
