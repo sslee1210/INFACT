@@ -6,13 +6,14 @@ const root = process.cwd();
 
 const responsiveFiles = [
   "client/src/styles/common/responsive-core.css",
-  "client/src/styles/pages/home-mobile-polish.css",
+  "client/src/styles/pages/home-mobile-responsive.css",
   "client/src/styles/pages/home-responsive.css",
   "client/src/styles/pages/company-responsive.css",
   "client/src/styles/pages/services-responsive.css",
   "client/src/styles/pages/references-responsive.css",
   "client/src/styles/common/ui-system.css",
   "client/src/styles/common/responsive-safety.css",
+  "client/src/styles/pages/home-layout-responsive.css",
   "client/src/styles/pages/company-history-responsive.css",
   "client/src/styles/pages/contact-responsive.css",
   "client/src/styles/pages/service-csv-responsive.css",
@@ -21,13 +22,14 @@ const responsiveFiles = [
 const requiredImportOrder = [
   "./styles/common/design-system.css",
   "./styles/common/responsive-core.css",
-  "./styles/pages/home-mobile-polish.css",
+  "./styles/pages/home-mobile-responsive.css",
   "./styles/pages/home-responsive.css",
   "./styles/pages/company-responsive.css",
   "./styles/pages/services-responsive.css",
   "./styles/pages/references-responsive.css",
   "./styles/common/ui-system.css",
   "./styles/common/responsive-safety.css",
+  "./styles/pages/home-layout-responsive.css",
   "./styles/pages/company-history-responsive.css",
   "./styles/pages/contact-responsive.css",
   "./styles/pages/service-csv-responsive.css",
@@ -61,6 +63,14 @@ const forbiddenImports = [
   [
     "./styles/common/responsive-foundation.css",
     "responsive-foundation은 semantic responsive-core.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/home-mobile-polish.css",
+    "home-mobile-polish는 semantic home-mobile-responsive.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/references-year-menu-patch.css",
+    "references-year-menu-patch는 semantic references-year-menu.css로 전환되었습니다.",
   ],
   [
     "./styles/pages/home-responsive-stage2.css",
@@ -315,6 +325,15 @@ requireContent(
   errors,
 );
 
+const homeLayoutResponsiveSource = read("client/src/styles/pages/home-layout-responsive.css");
+requireContent(
+  homeLayoutResponsiveSource,
+  "client/src/styles/pages/home-layout-responsive.css",
+  [".home-experience__client-marquee", ".home-cta-banner"],
+  "Home full-width 섹션의 viewport-width 제거 보정이 누락되었습니다.",
+  errors,
+);
+
 const historyResponsiveSource = read("client/src/styles/pages/company-history-responsive.css");
 requireContent(
   historyResponsiveSource,
@@ -353,7 +372,7 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide·large-desktop override 금지");
-console.log("반응형 소유권 정책: Stage 번호 기반 CSS 금지 / semantic responsive CSS에서 관리");
+console.log("반응형 소유권 정책: Stage·patch·polish 이름 금지 / semantic responsive CSS에서 관리");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
@@ -367,6 +386,6 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
-console.log("- Stage 번호 기반 CSS 제거 상태 통과");
+console.log("- 레거시 Stage·patch·polish 경로 제거 상태 통과");
 console.log("- CSS 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
