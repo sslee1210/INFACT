@@ -29,6 +29,14 @@ const requiredImportOrder = [
   './styles/common/responsive-refinement-stage8.css',
 ];
 
+const forbiddenImports = [
+  {
+    path: './styles/common/ultrawide-layout-fix.css',
+    reason:
+      '1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.',
+  },
+];
+
 const forbiddenPatterns = [
   {
     label: "100vw 사용",
@@ -142,6 +150,14 @@ if (duplicates.length > 0) {
   errors.push(`client/src/index.css — 중복 import: ${[...new Set(duplicates)].join(", ")}`);
 }
 
+for (const forbiddenImport of forbiddenImports) {
+  if (importMatches.includes(forbiddenImport.path)) {
+    errors.push(
+      `client/src/index.css — 금지된 import: ${forbiddenImport.path}. ${forbiddenImport.reason}`,
+    );
+  }
+}
+
 let previousIndex = -1;
 for (const requiredImport of requiredImportOrder) {
   const currentIndex = importMatches.indexOf(requiredImport);
@@ -167,6 +183,7 @@ if (stage8Index !== importMatches.length - 1) {
 console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
+console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide override 금지");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
@@ -179,4 +196,5 @@ if (errors.length > 0) {
 console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
+console.log("- 대형 화면 레이어 정책 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
