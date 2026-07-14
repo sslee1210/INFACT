@@ -717,3 +717,23 @@
     transition: none !important;
   }
 }
+
+/* =========================================================
+   REFERENCE CARD CONTENT CLEANUP
+   Customer identity stays in the logo/fallback area only.
+   The lower text area shows systems/projects without repeating
+   the customer name.
+   ========================================================= */
+
+.csv-year-card__body > h3,
+.csv-reference-card__body > h3 {
+  display: none !important;
+}
+
+.csv-year-card__body > ul,
+.csv-reference-card__body > ul {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+

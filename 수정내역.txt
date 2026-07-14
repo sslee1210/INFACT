@@ -1,51 +1,12 @@
-현재 GitHub main 기준 최종 모바일 보완
-기준 commit: 27c696c23854d8e798208e80022bcab9aeb00c8c
+V-Model max-inline-size 수정
 
-1. 모바일 메뉴 상단
-- 회사소개가 상단에 너무 붙던 문제 수정
-- Drawer 내부 top padding 확대
-- 메뉴 그룹 전 TODAY / MENU 메타 행 추가
-- 왼쪽: TODAY + 오늘 방문자 수
-- 오른쪽: MENU
-- 메타 행 아래 여백 추가
+변경:
+태블릿 / 데스크톱
+max-inline-size: 70% !important;
+→
+max-inline-size: 60% !important;
 
-2. 오각형
-- 기존 모바일 115%에서 약 10% 추가 확대
-- 126%, 최대 545px
-- max-width 110vw
-- 중앙 정렬 유지
+모바일 100% 규칙은 유지합니다.
 
-3. V-Model
-실제 원인:
-service-csv-page.css 하단에
-@media (max-width: 720px) {
-  .csv-vmodel { overflow-x: auto; }
-  .csv-vmodel img { min-width: 900px; }
-}
-가 남아 있어 모바일에서 강제로 900px 폭이 됨.
-
-수정:
-- 기존 csv-vmodel 클래스를 더 이상 사용하지 않음
-- ServiceCSV.tsx에서 csv-vmodel-fit / csv-vmodel-fit__image로 클래스 교체
-- 기존 900px min-width 규칙 제거
-- 모바일/태블릿에서 width/max-width 100%, min-width 0 강제
-- 기존 다른 CSS의 .csv-vmodel 규칙과 완전히 분리
-- 데스크톱 1200px 이상에서만 130% 확대 유지
-
-수정 파일
-- client/src/components/site/SiteHeader.tsx
-- client/src/styles/common/responsive-foundation.css
-- client/src/styles/pages/home-mobile-polish.css
-- client/src/pages/ServiceCSV.tsx
-- client/src/styles/pages/service-csv-page.css
-
-적용 후
-corepack pnpm dev
-
-강력 새로고침
-Ctrl + Shift + R
-
-확인
-- 모바일 메뉴: 390 / 430
-- 오각형: 390 / 430
-- CSV V-Model: 390 / 430 / 768 / 1024
+수정 파일:
+client/src/styles/pages/service-csv-page.css

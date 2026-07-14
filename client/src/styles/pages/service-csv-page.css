@@ -1012,3 +1012,57 @@
   background: #fff !important;
   background-image: none !important;
 }
+
+/* =========================================================
+   FINAL V-MODEL SIZE CONTROL
+   Directly controls the image itself so parent width or other
+   responsive rules cannot keep the artwork at 100%.
+   ========================================================= */
+
+/* Mobile: keep the complete V-Model at full available width. */
+@media (max-width: 767px) {
+  .service-csv-page .csv-framework-section .csv-vmodel-fit__image,
+  .csv-framework-section .csv-vmodel-fit__image,
+  .csv-vmodel-fit__image {
+    width: 100% !important;
+    inline-size: 100% !important;
+    max-width: 100% !important;
+    max-inline-size: 100% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Tablet: image itself is 30% smaller. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-csv-page .csv-framework-section .csv-vmodel-fit__image,
+  .csv-framework-section .csv-vmodel-fit__image,
+  .csv-vmodel-fit__image {
+    width: 70% !important;
+    inline-size: 70% !important;
+    max-width: 70% !important;
+    max-inline-size: 60% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Desktop: keep the existing 130% figure, but make the image 70%.
+   Effective visual size = 130% × 70% = 91%, exactly 30% smaller
+   than the previous 130% presentation. */
+@media (min-width: 1200px) {
+  .service-csv-page .csv-framework-section .csv-vmodel-fit__image,
+  .csv-framework-section .csv-vmodel-fit__image,
+  .csv-vmodel-fit__image {
+    width: 70% !important;
+    inline-size: 70% !important;
+    max-width: 70% !important;
+    max-inline-size: 60% !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
