@@ -11,7 +11,8 @@
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "qa:responsive": "node scripts/check-responsive-integrity.mjs",
-    "qa": "pnpm check && pnpm qa:responsive && pnpm build",
+    "qa:css-ownership": "node scripts/check-css-ownership.mjs",
+    "qa": "pnpm check && pnpm qa:responsive && pnpm qa:css-ownership && pnpm build",
     "format": "prettier --write ."
   },
   "dependencies": {
