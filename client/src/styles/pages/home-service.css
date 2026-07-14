@@ -26,12 +26,12 @@
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
-background: radial-gradient(
-  circle,
-  transparent 0 33.333%,
-  rgba(125, 137, 156, 0.05) 33.333% 55%,
-  rgba(128, 202, 244, 0.044) 55% 100%
-);
+  background: radial-gradient(
+    circle,
+    transparent 0 33.333%,
+    rgba(125, 137, 156, 0.05) 33.333% 55%,
+    rgba(128, 202, 244, 0.044) 55% 100%
+  );
   box-shadow: none;
   pointer-events: none;
 }
@@ -130,29 +130,6 @@ background: radial-gradient(
   line-height: 1.76;
   font-weight: 600;
   word-break: keep-all;
-}
-
-@media (min-width: 2200px) {
-  .service-immersive-section {
-    padding: clamp(128px, 7.2vw, 192px) 0;
-  }
-
-  .service-immersive::before {
-    top: clamp(-652px, -27vw, -540px);
-    left: clamp(-720px, -30vw, -450px);
-  }
-
-  .service-immersive {
-    gap: clamp(54px, 3.4vw, 81px);
-  }
-
-  .service-immersive__intro {
-    max-width: 1080px;
-  }
-
-  .service-immersive__summary {
-    max-width: 930px;
-  }
 }
 
 .service-immersive__showcase {
