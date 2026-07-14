@@ -5,12 +5,12 @@ import process from "node:process";
 const root = process.cwd();
 
 const responsiveFiles = [
-  "client/src/styles/common/responsive-foundation.css",
+  "client/src/styles/common/responsive-core.css",
   "client/src/styles/pages/home-mobile-polish.css",
-  "client/src/styles/pages/home-responsive-stage2.css",
-  "client/src/styles/pages/company-responsive-stage3.css",
-  "client/src/styles/pages/services-responsive-stage4.css",
-  "client/src/styles/pages/references-responsive-stage5.css",
+  "client/src/styles/pages/home-responsive.css",
+  "client/src/styles/pages/company-responsive.css",
+  "client/src/styles/pages/services-responsive.css",
+  "client/src/styles/pages/references-responsive.css",
   "client/src/styles/common/ui-system.css",
   "client/src/styles/common/responsive-safety.css",
   "client/src/styles/pages/company-history-responsive.css",
@@ -20,12 +20,12 @@ const responsiveFiles = [
 
 const requiredImportOrder = [
   "./styles/common/design-system.css",
-  "./styles/common/responsive-foundation.css",
+  "./styles/common/responsive-core.css",
   "./styles/pages/home-mobile-polish.css",
-  "./styles/pages/home-responsive-stage2.css",
-  "./styles/pages/company-responsive-stage3.css",
-  "./styles/pages/services-responsive-stage4.css",
-  "./styles/pages/references-responsive-stage5.css",
+  "./styles/pages/home-responsive.css",
+  "./styles/pages/company-responsive.css",
+  "./styles/pages/services-responsive.css",
+  "./styles/pages/references-responsive.css",
   "./styles/common/ui-system.css",
   "./styles/common/responsive-safety.css",
   "./styles/pages/company-history-responsive.css",
@@ -48,7 +48,7 @@ const forbiddenImports = [
   ],
   [
     "./styles/pages/home-experience-large-desktop.css",
-    "Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.",
+    "Experience 대형 화면 규칙은 Home 반응형 레이어로 통합되었습니다.",
   ],
   [
     "./styles/pages/home-service-large-desktop.css",
@@ -57,6 +57,26 @@ const forbiddenImports = [
   [
     "./styles/pages/home-contact-large-desktop.css",
     "홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.",
+  ],
+  [
+    "./styles/common/responsive-foundation.css",
+    "responsive-foundation은 semantic responsive-core.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/home-responsive-stage2.css",
+    "Stage 2는 semantic home-responsive.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/company-responsive-stage3.css",
+    "Stage 3는 semantic company-responsive.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/services-responsive-stage4.css",
+    "Stage 4는 semantic services-responsive.css로 전환되었습니다.",
+  ],
+  [
+    "./styles/pages/references-responsive-stage5.css",
+    "Stage 5는 semantic references-responsive.css로 전환되었습니다.",
   ],
   [
     "./styles/common/ui-system-stage6.css",
@@ -268,10 +288,10 @@ requireContent(
   errors,
 );
 
-const homeStage2Source = read("client/src/styles/pages/home-responsive-stage2.css");
+const homeResponsiveSource = read("client/src/styles/pages/home-responsive.css");
 requireContent(
-  homeStage2Source,
-  "client/src/styles/pages/home-responsive-stage2.css",
+  homeResponsiveSource,
+  "client/src/styles/pages/home-responsive.css",
   ["@media (min-width: 1920px)", ".home-experience__metric strong"],
   "1920px 이상 Experience 정상화 규칙이 누락되었습니다.",
   errors,
@@ -333,7 +353,7 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide·large-desktop override 금지");
-console.log("반응형 소유권 정책: Stage 6·7·8 금지 / 공통 UI와 안전 규칙은 semantic CSS에서 관리");
+console.log("반응형 소유권 정책: Stage 번호 기반 CSS 금지 / semantic responsive CSS에서 관리");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
@@ -347,6 +367,6 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
-console.log("- Stage 6·7·8 제거 상태 통과");
+console.log("- Stage 번호 기반 CSS 제거 상태 통과");
 console.log("- CSS 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
