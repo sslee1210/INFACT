@@ -17,6 +17,7 @@ type ReferenceYearTabsProps = {
 };
 
 const logoExtensions = ["svg", "png", "webp"];
+const visibleYearCount = 4;
 
 function ClientLogo({ client, logo }: { client: string; logo: string }) {
   const [extensionIndex, setExtensionIndex] = useState(0);
@@ -56,12 +57,30 @@ export function ReferenceYearTabs({
   const [selectedYear, setSelectedYear] = useState(yearNumbers[0]);
   const [yearStartIndex, setYearStartIndex] = useState(0);
 
-  const visibleYears = yearNumbers.slice(yearStartIndex, yearStartIndex + 4);
+  const visibleYears = yearNumbers.slice(
+    yearStartIndex,
+    yearStartIndex + visibleYearCount,
+  );
   const canMovePrevious = yearStartIndex > 0;
-  const canMoveNext = yearStartIndex + 4 < yearNumbers.length;
+  const canMoveNext = yearStartIndex + visibleYearCount < yearNumbers.length;
 
   const selectedSection =
     years.find((section) => section.year === selectedYear) ?? years[0];
+
+  const moveYearWindow = (direction: -1 | 1) => {
+    const maxStartIndex = Math.max(0, yearNumbers.length - visibleYearCount);
+    const nextStartIndex = Math.min(
+      maxStartIndex,
+      Math.max(0, yearStartIndex + direction * visibleYearCount),
+    );
+
+    setYearStartIndex(nextStartIndex);
+
+    const nextVisibleYear = yearNumbers[nextStartIndex];
+    if (nextVisibleYear !== undefined) {
+      setSelectedYear(nextVisibleYear);
+    }
+  };
 
   return (
     <div className="site-shell csv-year-layout">
@@ -124,9 +143,7 @@ export function ReferenceYearTabs({
             className="csv-year-menu__arrow"
             aria-label="이전 연도 보기"
             disabled={!canMovePrevious}
-            onClick={() =>
-              setYearStartIndex((current) => Math.max(0, current - 4))
-            }
+            onClick={() => moveYearWindow(-1)}
           >
             <span aria-hidden="true">←</span>
           </button>
@@ -136,11 +153,7 @@ export function ReferenceYearTabs({
             className="csv-year-menu__arrow"
             aria-label="다음 연도 보기"
             disabled={!canMoveNext}
-            onClick={() =>
-              setYearStartIndex((current) =>
-                Math.min(yearNumbers.length - 4, current + 4),
-              )
-            }
+            onClick={() => moveYearWindow(1)}
           >
             <span aria-hidden="true">→</span>
           </button>
