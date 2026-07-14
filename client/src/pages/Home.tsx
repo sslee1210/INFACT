@@ -16,9 +16,12 @@ export default function Home() {
 
   return (
     <div className="home-shell">
+      <a className="site-skip-link" href="#main-content">
+        본문으로 바로가기
+      </a>
       <SiteHeader transparentOnTop />
 
-      <main className="home-main">
+      <main id="main-content" className="home-main" tabIndex={-1}>
         <HomeHeroSection />
         <HomeCompanyIntroSection />
         <HomeAboutSection />
