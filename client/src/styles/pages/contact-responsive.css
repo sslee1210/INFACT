@@ -1,6 +1,20 @@
 /* HOME + CONTACT CTA — TARGETED RESPONSIVE CORRECTIONS */
 
+.home-cta-banner {
+  inline-size: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (max-width: 767px) {
+  .home-cta-banner {
+    inline-size: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
   .home-cta-banner__button,
   .contact-banner__button {
     justify-content: center !important;
