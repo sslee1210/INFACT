@@ -1,0 +1,323 @@
+/* =========================================================
+   COMPANY ORGANIZATION TREE
+
+   Structured hierarchy replacing the previous absolute-positioned chart.
+   Connector lines are derived from the same grid that owns each node, so
+   boxes and lines stay aligned when the viewport changes.
+   ========================================================= */
+
+.org-tree {
+  --org-line: #97a1b2;
+  --org-line-width: 2px;
+  --org-primary-drop: clamp(58px, 4.8vw, 72px);
+  --org-secondary-drop: clamp(58px, 4.8vw, 72px);
+  --org-team-drop: clamp(48px, 4vw, 60px);
+  width: 100%;
+  min-height: clamp(720px, 56vw, 860px);
+  padding: clamp(10px, 1vw, 16px) 0 clamp(42px, 4vw, 60px);
+  color: var(--home-text);
+}
+
+.org-tree__box {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.org-tree__box--lead {
+  width: clamp(168px, 13vw, 190px);
+  min-height: 76px;
+  border: 2px solid var(--home-blue);
+  background: var(--home-blue);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 850;
+  box-shadow: 0 10px 24px rgba(30, 42, 115, 0.14);
+}
+
+.org-tree__box--primary {
+  width: clamp(190px, 16vw, 220px);
+  min-height: 78px;
+  border: 2px solid var(--home-blue);
+  color: var(--home-blue-strong);
+  font-size: 0.96rem;
+  font-weight: 830;
+}
+
+.org-tree__box--secondary {
+  width: clamp(160px, 13vw, 182px);
+  min-height: 72px;
+  border: 2px solid #c3ccdb;
+  color: #1f2738;
+  font-size: 0.95rem;
+  font-weight: 820;
+}
+
+.org-tree__box--team {
+  min-height: 64px;
+  border: 1.5px solid #aab4c4;
+  color: var(--home-text);
+  font-size: 0.9rem;
+  font-weight: 820;
+}
+
+.org-tree__lead {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.org-tree__lead::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: var(--org-line-width);
+  height: var(--org-primary-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+/*
+  The primary track uses 68% of the content guide.
+  Three equal grid columns place the centers at approximately:
+  27.3% / 50% / 72.7% of the full content width.
+  This keeps the three primary divisions evenly spaced while leaving enough
+  room for the Validation branch below.
+*/
+.org-tree__primary-row {
+  position: relative;
+  width: 68%;
+  margin: var(--org-primary-drop) auto 0;
+  padding-top: var(--org-primary-drop);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  justify-items: center;
+}
+
+.org-tree__primary-row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16.6666667%;
+  right: 16.6666667%;
+  height: var(--org-line-width);
+  background: var(--org-line);
+}
+
+.org-tree__primary-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.org-tree__primary-node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--org-primary-drop));
+  width: var(--org-line-width);
+  height: var(--org-primary-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+/* Validation branch: two children with equal spacing around the parent. */
+.org-tree__validation-children {
+  position: relative;
+  width: clamp(430px, 34vw, 500px);
+  margin-top: var(--org-secondary-drop);
+  padding-top: var(--org-secondary-drop);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+}
+
+.org-tree__validation-children::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: var(--org-line-width);
+  background: var(--org-line);
+}
+
+.org-tree__validation-children::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--org-secondary-drop));
+  width: var(--org-line-width);
+  height: var(--org-secondary-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+.org-tree__secondary-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.org-tree__secondary-node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--org-secondary-drop));
+  width: var(--org-line-width);
+  height: var(--org-secondary-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+/*
+  CSV team branch keeps full-size team boxes.
+  The branch is slightly shifted left while its incoming stem remains aligned
+  to the CSV box center, preventing the third team from touching the right edge.
+*/
+.org-tree__teams {
+  position: relative;
+  width: clamp(390px, 29vw, 430px);
+  margin-top: var(--org-team-drop);
+  margin-left: 50%;
+  padding-top: var(--org-team-drop);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.4vw, 20px);
+  transform: translateX(-55%);
+}
+
+.org-tree__teams::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16.6666667%;
+  right: 16.6666667%;
+  height: var(--org-line-width);
+  background: var(--org-line);
+}
+
+.org-tree__teams::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--org-team-drop));
+  left: 55%;
+  width: var(--org-line-width);
+  height: var(--org-team-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+.org-tree__team {
+  position: relative;
+  min-width: 0;
+}
+
+.org-tree__team::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(-1 * var(--org-team-drop));
+  width: var(--org-line-width);
+  height: var(--org-team-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 861px) and (max-width: 1199px) {
+  .org-tree {
+    min-height: 720px;
+  }
+
+  .org-tree__primary-row {
+    width: 88%;
+  }
+
+  .org-tree__box--primary {
+    width: min(100%, 190px);
+  }
+
+  .org-tree__validation-children {
+    width: min(460px, 54vw);
+  }
+
+  .org-tree__teams {
+    width: min(390px, 46vw);
+  }
+}
+
+@media (max-width: 860px) {
+  .org-tree {
+    min-height: 0;
+    padding-bottom: clamp(28px, 7vw, 44px);
+  }
+
+  .org-tree__lead,
+  .org-tree__primary-node,
+  .org-tree__secondary-node {
+    align-items: stretch;
+  }
+
+  .org-tree__lead::after,
+  .org-tree__primary-row::before,
+  .org-tree__primary-node::before,
+  .org-tree__validation-children::before,
+  .org-tree__validation-children::after,
+  .org-tree__secondary-node::before,
+  .org-tree__teams::before,
+  .org-tree__teams::after,
+  .org-tree__team::before {
+    display: none;
+  }
+
+  .org-tree__box,
+  .org-tree__box--lead,
+  .org-tree__box--primary,
+  .org-tree__box--secondary,
+  .org-tree__box--team {
+    width: 100%;
+    min-height: 64px;
+    border-radius: 14px;
+  }
+
+  .org-tree__primary-row {
+    width: 100%;
+    margin-top: 18px;
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .org-tree__validation-children {
+    width: calc(100% - clamp(28px, 8vw, 48px));
+    margin: 12px 0 0 auto;
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .org-tree__teams {
+    width: calc(100% - clamp(28px, 8vw, 48px));
+    margin: 12px 0 0 auto;
+    padding-top: 0;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    transform: none;
+  }
+}
