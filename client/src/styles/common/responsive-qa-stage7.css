@@ -1,5 +1,5 @@
 /* =========================================================
-   STAGE 7 — FINAL RESPONSIVE QA GUARDRAILS
+   STAGE 7 — RESPONSIVE QA GUARDRAILS
 
    Purpose
    - prevent accidental horizontal overflow
@@ -7,7 +7,7 @@
    - harden 767/768 and 1199/1200 breakpoint transitions
    - keep media and dense matrices inside their containers
 
-   This file is intentionally small and is imported last.
+   This file provides late-stage guardrails before final refinements.
    ========================================================= */
 
 html,
@@ -185,5 +185,17 @@ iframe {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .home-experience__client-track,
+  .client-logo-band__track {
+    animation: none !important;
+    transform: none !important;
   }
 }
