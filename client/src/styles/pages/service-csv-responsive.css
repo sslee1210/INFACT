@@ -1,0 +1,107 @@
+/* CSV SERVICE — TARGETED RESPONSIVE CORRECTIONS */
+
+@media (max-width: 1199px) {
+  .service-csv-page .csv-framework-section .csv-vmodel {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin:
+      clamp(28px, 4vw, 44px)
+      auto
+      0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .service-csv-page .csv-framework-section .csv-vmodel img {
+    display: block !important;
+    inline-size: 100% !important;
+    width: 100% !important;
+    max-inline-size: 100% !important;
+    max-width: 100% !important;
+    block-size: auto !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-csv-page .csv-framework-section .csv-vmodel {
+    width: min(100%, 620px) !important;
+  }
+
+  .service-csv-page .service-business-overview__pillars {
+    width: 100% !important;
+    max-width: 620px !important;
+    margin:
+      clamp(34px, 8vw, 46px)
+      auto
+      0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(6px, 1.8vw, 12px) !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar,
+  .service-csv-page .service-business-overview__pillar:first-child {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    place-content: center !important;
+    place-items: center !important;
+    gap: 5px !important;
+    margin-left: 0 !important;
+    padding: clamp(8px, 2vw, 14px) !important;
+    border: 1px solid #cbd5ea !important;
+    border-radius: 50% !important;
+    background: #f8faff !important;
+    text-align: center !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar:nth-child(2) {
+    background: #edf3fb !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar:nth-child(3) {
+    background: #e3edf9 !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar span {
+    color: var(--home-blue-strong) !important;
+    font-size: clamp(0.66rem, 2.5vw, 0.8rem) !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar strong {
+    max-width: 7em !important;
+    color: var(--home-text) !important;
+    font-size: clamp(0.72rem, 2.9vw, 0.94rem) !important;
+    line-height: 1.35 !important;
+    font-weight: 850 !important;
+    word-break: keep-all !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .service-csv-page .service-business-overview__pillars {
+    gap: 5px !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar {
+    padding: 7px !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar strong {
+    font-size: clamp(0.68rem, 3vw, 0.82rem) !important;
+  }
+}
