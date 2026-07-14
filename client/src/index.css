@@ -57,5 +57,11 @@
 /* Stage 7 — final responsive QA guardrails */
 @import "./styles/common/responsive-qa-stage7.css";
 
-/* Stage 8 — final responsive refinement and large-desktop policy */
+/* Home page 1920px+ rules live with their page domains, not in Stage 8. */
+@import "./styles/pages/home-about-large-desktop.css";
+@import "./styles/pages/home-experience-large-desktop.css";
+@import "./styles/pages/home-service-large-desktop.css";
+@import "./styles/pages/home-contact-large-desktop.css";
+
+/* Stage 8 — targeted mobile corrections + shared large-desktop guide */
 @import "./styles/common/responsive-refinement-stage8.css";
