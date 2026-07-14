@@ -1,0 +1,181 @@
+/* =========================================================
+   RESPONSIVE SAFETY
+
+   Cross-page safeguards that are genuinely global:
+   - prevent horizontal overflow
+   - keep dense grid/matrix children shrinkable
+   - wrap long technical strings
+   - keep media inside containers
+   - normalize touch hover and reduced motion
+   ========================================================= */
+
+html,
+body,
+#root,
+.site-app,
+.site-main {
+  max-inline-size: 100%;
+}
+
+.site-app,
+.site-main,
+.section,
+.site-shell,
+.home-container {
+  min-inline-size: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-inline-size: 100%;
+}
+
+:where(
+  .service-business-table__row,
+  .design-input-matrix__row,
+  .design-process-matrix__row,
+  .design-process-matrix__details,
+  .design-room-row,
+  .design-room-row__details,
+  .design-review-matrix__row,
+  .design-deliverables-matrix__row,
+  .gmp-framework__row,
+  .gmp-deliverables-matrix__row,
+  .csv-framework-roadmap__stage,
+  .csv-framework-roadmap__content,
+  .csv-deliverables-matrix__row,
+  .reference-year-card,
+  .csv-reference-card,
+  .csv-year-card,
+  .contact-team-item
+) > * {
+  min-inline-size: 0;
+}
+
+:where(
+  .service-business-page,
+  .service-design-page,
+  .service-gmp-page,
+  .service-csv-page,
+  .reference-year-page,
+  .csv-reference-page,
+  .csv-year-page,
+  .contact-page
+) :where(p, li, dd, a, strong) {
+  overflow-wrap: anywhere;
+}
+
+:where(
+  .service-business-page,
+  .reference-year-page,
+  .csv-reference-page,
+  .csv-year-page
+) :where(img, svg) {
+  max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .page-subnav-wrap {
+    max-width: 100%;
+  }
+
+  .service-business-contact,
+  .home-cta-banner,
+  .company-organization,
+  .home-company-intro,
+  .about-blend-section,
+  .home-experience-section {
+    overflow-x: clip;
+  }
+
+  @supports not (overflow: clip) {
+    .service-business-contact,
+    .home-cta-banner,
+    .company-organization,
+    .home-company-intro,
+    .about-blend-section,
+    .home-experience-section {
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home-nav__mobile-panel {
+    max-width: 100%;
+  }
+
+  .home-cta-banner {
+    box-sizing: border-box;
+  }
+
+  .page-subnav button,
+  .reference-year-menu button,
+  .csv-year-menu button,
+  .csv-reference-year-nav button,
+  .contact-team-item__details dd,
+  .site-footer__company-meta,
+  .site-footer__col,
+  .site-footer__bottom {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-nav__mobile-panel {
+    max-width: min(430px, 52%);
+  }
+
+  .reference-year-grid,
+  .csv-reference-grid,
+  .csv-year-grid,
+  .csv-scope-grid,
+  .csv-lifecycle-grid {
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-nav__mobile-toggle,
+  .home-nav__mobile-panel {
+    display: none !important;
+  }
+
+  body.is-nav-locked {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .reference-year-card:hover,
+  .csv-reference-card:hover,
+  .csv-year-card:hover,
+  .service-card:hover,
+  .ui-button:hover,
+  .site-footer__col a:hover {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .home-experience__client-track,
+  .client-logo-band__track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
