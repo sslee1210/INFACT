@@ -13,11 +13,16 @@ export function CountUpValue({ target, suffix = "", format = false }: CountUpVal
     const element = ref.current;
     if (!element) return;
 
-    let frameId = 0;
-    let started = false;
-
     const formatValue = (value: number) =>
       format ? value.toLocaleString("en-US") : String(value);
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      element.textContent = `${formatValue(target)}${suffix}`;
+      return;
+    }
+
+    let frameId = 0;
+    let started = false;
 
     const animate = () => {
       const duration = 1800;
