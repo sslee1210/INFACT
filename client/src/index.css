@@ -33,10 +33,10 @@
 @import "./styles/common/subpage-typography-standard.css";
 @import "./styles/pages/references-year-menu-patch.css";
 
-/* Stage 1 responsive foundation — 반드시 마지막에 유지 */
+/* Responsive foundation */
 @import "./styles/common/responsive-foundation.css";
 
-/* Stage 1 mobile visual polish */
+/* Home mobile visual polish */
 @import "./styles/pages/home-mobile-polish.css";
 
 /* Stage 2 — complete home responsive layout */
@@ -54,8 +54,8 @@
 /* Stage 6 — canonical UI system / contact / footer */
 @import "./styles/common/ui-system-stage6.css";
 
-/* Stage 7 — responsive QA guardrails */
-@import "./styles/common/responsive-qa-stage7.css";
+/* Cross-page responsive safety */
+@import "./styles/common/responsive-safety.css";
 
 /* Page-owned targeted responsive corrections */
 @import "./styles/pages/company-history-responsive.css";
