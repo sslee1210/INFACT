@@ -1,0 +1,48 @@
+/* =========================================================
+   COMPANY CONTENT GUIDE
+
+   Keep the three Company subpages on the same horizontal guide
+   as the shared header and footer. Tablet/mobile layouts remain
+   owned by company-responsive.css.
+   ========================================================= */
+
+@media (min-width: 1200px) {
+  .site-main .company-section {
+    width: var(--site-content-width);
+    max-width: var(--site-content-max);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* CEO greeting: use the full shared guide instead of the old 1220px cap. */
+  .company-greeting {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    column-gap: clamp(48px, 5vw, 88px);
+    justify-content: stretch;
+  }
+
+  .company-greeting__body {
+    max-width: none;
+  }
+
+  .company-greeting__visual {
+    justify-self: end;
+    width: min(100%, 560px);
+    margin-left: 0;
+  }
+
+  /* History: let the timeline occupy the same page guide as the shell. */
+  .history-panel,
+  .history-list {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Organization: remove the independent 1240px desktop cap. */
+  .org-fixed {
+    width: 100%;
+    max-width: none;
+  }
+}
