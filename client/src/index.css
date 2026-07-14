@@ -54,8 +54,10 @@
 /* Stage 6 — canonical UI system / contact / footer */
 @import "./styles/common/ui-system-stage6.css";
 
-/* Stage 7 — final responsive QA guardrails */
+/* Stage 7 — responsive QA guardrails */
 @import "./styles/common/responsive-qa-stage7.css";
 
-/* Stage 8 — targeted mobile corrections only */
-@import "./styles/common/responsive-refinement-stage8.css";
+/* Page-owned targeted responsive corrections */
+@import "./styles/pages/company-history-responsive.css";
+@import "./styles/pages/contact-responsive.css";
+@import "./styles/pages/service-csv-responsive.css";
