@@ -50,6 +50,9 @@
 /* Cross-page responsive safety */
 @import "./styles/common/responsive-safety.css";
 
+/* Final Home mobile visual corrections */
+@import "./styles/pages/home-mobile-redesign.css";
+
 /* Page-owned targeted responsive corrections */
 @import "./styles/pages/company-history-responsive.css";
 @import "./styles/pages/contact-responsive.css";
