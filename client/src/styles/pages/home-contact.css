@@ -128,6 +128,35 @@
   transform: translateY(-50%);
 }
 
+/* Home page full-width CTA large-desktop sizing. */
+@media (min-width: 1920px) {
+  .home-cta-banner {
+    --cta-desktop-height: 24.375rem;
+  }
+
+  .home-cta-banner__content {
+    grid-template-columns: minmax(0, 1fr) minmax(24.375rem, 0.36fr);
+    column-gap: clamp(2.75rem, 5.4vw, 6rem);
+    padding: clamp(2.5rem, 3.4vw, 3.5rem) 0;
+  }
+
+  .home-cta-banner__content p {
+    width: min(35rem, 100%);
+  }
+
+  .home-cta-banner__actions {
+    width: min(100%, 23.125rem);
+    min-height: 12.75rem;
+    gap: 1.875rem;
+    margin-right: 1rem;
+  }
+
+  .home-cta-banner__button {
+    min-height: 4.875rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
 @media (max-width: 860px) {
   .contact-banner__inner {
     min-height: auto;
