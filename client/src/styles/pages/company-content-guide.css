@@ -41,37 +41,49 @@
   }
 
   /* =======================================================
-     ORGANIZATION — DESKTOP GUIDE BALANCE
+     ORGANIZATION — DESKTOP EQUAL SPACING
 
-     The old 1260/1320px coordinate system left unused space on
-     the left after the Company shell was widened. Keep the CSV
-     branch aligned to the right guide, extend the first primary
-     department to the left guide, and rebalance GMP / CSV below
-     the Validation division.
+     Primary row uses a mathematically equal 32% interval:
+       18% -> 50% -> 82%
+
+     Validation children split symmetrically around 82%:
+       GMP 74% <- 8% -> 82% <- 8% -> CSV 90%
      ======================================================= */
 
   .company-organization .org-fixed {
     width: 100% !important;
     max-width: none !important;
 
-    /* Primary row: left guide / center / validation branch */
-    --primary-left-1: 8% !important;
+    --primary-left-1: 18% !important;
     --primary-left-2: 50% !important;
     --primary-left-3: 82% !important;
 
-    /* Validation children: GMP spreads left, CSV stays on the
-       right branch so its three teams remain aligned to the guide. */
-    --secondary-left-1: 64% !important;
-    --secondary-left-2: 82% !important;
+    --secondary-left-1: 74% !important;
+    --secondary-left-2: 90% !important;
   }
 
-  /* Keep the validation branch geometry tied to the new positions. */
+  /* Primary connector spans exactly from the first to the third node. */
+  .company-organization .org-fixed__main-h {
+    left: var(--primary-left-1) !important;
+    width: calc(var(--primary-left-3) - var(--primary-left-1)) !important;
+  }
+
+  /* Validation splits into two equally spaced children. */
   .company-organization .org-fixed__sub-h {
     left: var(--secondary-left-1) !important;
     width: calc(var(--secondary-left-2) - var(--secondary-left-1)) !important;
   }
 
+  /* Keep the CSV child branch connected to the repositioned CSV node.
+     The branch box shifts farther left than a normal 50% transform so the
+     three team boxes remain inside the shared content guide. */
   .company-organization .org-fixed__csv-branch {
+    --branch-width: clamp(270px, 22vw, 360px) !important;
     left: var(--secondary-left-2) !important;
+    transform: translateX(-66.6666667%) !important;
+  }
+
+  .company-organization .org-fixed__csv-branch::before {
+    left: 66.6666667% !important;
   }
 }
