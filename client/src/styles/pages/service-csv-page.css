@@ -8,6 +8,8 @@
 }
 
 .csv-vmodel {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
   background: transparent;
@@ -17,10 +19,23 @@
 
 .csv-vmodel img {
   display: block;
-  width: 130%;
-  max-width: none;
+  width: 100%;
+  max-width: 100%;
   height: auto;
-  margin: 0 -15%;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* Desktop keeps the intentionally enlarged 130% presentation.
+   The figure grows, not the image inside a narrow mobile container. */
+@media (min-width: 1200px) {
+  .csv-vmodel {
+    width: 130%;
+    max-width: none;
+    margin-left: -15%;
+    margin-right: -15%;
+  }
 }
 
 .csv-framework-description {
@@ -987,47 +1002,3 @@
   background: #fff !important;
   background-image: none !important;
 }
-
-/* =========================================================
-   CRITICAL RESPONSIVE FIX — V-MODEL COMPLETE VIEW
-   The desktop artwork is intentionally oversized at 130%.
-   Tablet/mobile must cancel that rule inside this same
-   component stylesheet so CSS load order cannot re-expand it.
-   ========================================================= */
-
-@media (max-width: 1199px) {
-  .service-csv-page .csv-framework-section .csv-vmodel,
-  .csv-framework-section .csv-vmodel {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: clamp(28px, 4vw, 44px) auto 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-  }
-
-  .service-csv-page .csv-framework-section .csv-vmodel img,
-  .csv-framework-section .csv-vmodel img,
-  .csv-vmodel img {
-    display: block !important;
-    width: 100% !important;
-    inline-size: 100% !important;
-    max-width: 100% !important;
-    max-inline-size: 100% !important;
-    height: auto !important;
-    block-size: auto !important;
-    margin: 0 auto !important;
-    transform: none !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    clip-path: none !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .service-csv-page .csv-framework-section .csv-vmodel,
-  .csv-framework-section .csv-vmodel {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-

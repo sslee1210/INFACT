@@ -272,19 +272,19 @@ a {
     transform: translateY(-7px) rotate(-45deg) !important;
   }
 
-  /* Right-side responsive drawer */
+  /* Right-side responsive drawer — slides from the viewport right edge */
   .home-nav__mobile-panel {
     display: block !important;
     position: fixed !important;
-    top: var(--responsive-nav-height) !important;
+    top: 0 !important;
     right: 0 !important;
     left: auto !important;
     bottom: 0 !important;
-    width: min(440px, 100%) !important;
+    width: min(440px, 88%) !important;
     max-height: none !important;
-    height: calc(100vh - var(--responsive-nav-height)) !important;
-    height: calc(100dvh - var(--responsive-nav-height)) !important;
-    z-index: 1003 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 1001 !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
     overscroll-behavior: contain !important;
@@ -296,7 +296,7 @@ a {
     pointer-events: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
-    transform: translateX(100%) !important;
+    transform: translate3d(104%, 0, 0) !important;
     transition:
       transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
       opacity 0.2s ease,
@@ -307,7 +307,7 @@ a {
     pointer-events: auto !important;
     visibility: visible !important;
     opacity: 1 !important;
-    transform: translateX(0) !important;
+    transform: translate3d(0, 0, 0) !important;
     transition:
       transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
       opacity 0.2s ease !important;
@@ -317,7 +317,9 @@ a {
     width: 100% !important;
     min-height: 100% !important;
     margin: 0 !important;
-    padding: clamp(28px, 5vw, 40px) clamp(26px, 5vw, 38px)
+    padding:
+      calc(var(--responsive-nav-height) + clamp(24px, 4vw, 34px))
+      clamp(26px, 5vw, 38px)
       max(32px, env(safe-area-inset-bottom)) !important;
     display: flex !important;
     flex-direction: column !important;
@@ -512,10 +514,10 @@ a {
   .home-nav__scrim {
     display: block !important;
     position: fixed !important;
-    top: var(--responsive-nav-height) !important;
+    top: 0 !important;
     inset-inline: 0 !important;
     bottom: 0 !important;
-    z-index: 1001 !important;
+    z-index: 1000 !important;
     background: rgba(3, 8, 20, 0.5) !important;
     backdrop-filter: blur(2px);
     opacity: 0 !important;
@@ -572,12 +574,13 @@ a {
   }
 
   .home-nav__mobile-panel {
-    width: 100% !important;
-    border-left: 0 !important;
+    width: min(380px, 88%) !important;
+    border-left: 1px solid rgba(22, 28, 129, 0.1) !important;
   }
 
   .home-nav__mobile-panel-inner {
-    padding-inline: var(--site-edge-gutter) !important;
+    padding-left: clamp(24px, 6vw, 32px) !important;
+    padding-right: clamp(24px, 6vw, 32px) !important;
   }
 
   .home-nav__mobile-primary {
