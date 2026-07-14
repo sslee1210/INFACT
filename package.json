@@ -10,6 +10,8 @@
     "start:prod": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
+    "qa:responsive": "node scripts/check-responsive-integrity.mjs",
+    "qa": "pnpm check && pnpm qa:responsive && pnpm build",
     "format": "prettier --write ."
   },
   "dependencies": {

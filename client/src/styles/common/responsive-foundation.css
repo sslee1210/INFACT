@@ -22,11 +22,19 @@
 
 html {
   min-width: 320px;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
 }
 
 body.is-nav-locked {
@@ -272,8 +280,9 @@ a {
     right: 0 !important;
     left: auto !important;
     bottom: 0 !important;
-    width: min(440px, 100vw) !important;
+    width: min(440px, 100%) !important;
     max-height: none !important;
+    height: calc(100vh - var(--responsive-nav-height)) !important;
     height: calc(100dvh - var(--responsive-nav-height)) !important;
     z-index: 1003 !important;
     overflow-y: auto !important;
@@ -563,7 +572,7 @@ a {
   }
 
   .home-nav__mobile-panel {
-    width: 100vw !important;
+    width: 100% !important;
     border-left: 0 !important;
   }
 

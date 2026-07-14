@@ -53,3 +53,6 @@
 
 /* Stage 6 — canonical UI system / contact / footer */
 @import "./styles/common/ui-system-stage6.css";
+
+/* Stage 7 — final responsive QA guardrails */
+@import "./styles/common/responsive-qa-stage7.css";

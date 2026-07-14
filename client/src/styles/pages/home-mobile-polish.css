@@ -61,15 +61,6 @@
   }
 }
 
-/* Remove the old <=560px lateral compensation entirely. */
-@media (max-width: 560px) {
-  .about-process-cycle {
-    left: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    transform: none !important;
-  }
-}
 
 /* =========================================================
    2. SERVICE — mobile editorial redesign
