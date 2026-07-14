@@ -8,6 +8,21 @@
 - Do not add display-specific 2200px, 2560px or 32-inch-only layout correction layers.
 - Do not reintroduce `ultrawide-layout-fix.css` or `large-desktop` override files.
 
+## CSS import ownership
+
+- `client/src/index.css` is the single global stylesheet entrypoint.
+- A stylesheet imported by `index.css` must not also be imported from a TS/TSX module.
+- Page-only CSS may remain colocated with the page or component that owns it when it is not part of the global entrypoint.
+- Shared page CSS should have one semantic owner rather than being imported repeatedly from multiple unrelated modules.
+- `scripts/check-css-ownership.mjs` fails when a global stylesheet is imported again from TS/TSX.
+
+## `!important` policy
+
+- Keep `!important` only where a later compatibility layer must override an existing `!important` declaration or where an accessibility state must defeat a higher-specificity visual state.
+- Do not add `!important` to new base component styles.
+- Files already cleaned have strict override budgets enforced by `scripts/check-css-ownership.mjs`.
+- The QA report lists the highest-density files so remaining overrides can be reduced incrementally without changing the visual design.
+
 ## Current stylesheet ownership
 
 ### Common
@@ -43,7 +58,7 @@
 - `references-responsive.css`: references page family
 - `company-history-responsive.css`: history-specific mobile correction
 - `contact-responsive.css`: contact/home CTA mobile alignment and width safety
-- `service-csv-responsive.css`: CSV-specific V-model and mobile pillar corrections
+- `service-csv-responsive.css`: CSV-specific mobile pillar correction
 
 ## Removed legacy layers
 
