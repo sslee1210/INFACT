@@ -7,32 +7,32 @@
 
   .history-list::before,
   .history-list::after {
-    z-index: 0 !important;
-    pointer-events: none !important;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .history-list__item,
   .history-list__item--left,
   .history-list__item--right {
-    z-index: 1 !important;
+    z-index: 1;
   }
 
   .history-list__item time,
   .history-list__item--left time,
   .history-list__item--right time {
-    position: relative !important;
-    z-index: 3 !important;
-    background: #eef0f8 !important;
+    position: relative;
+    z-index: 3;
+    background: #eef0f8;
     box-shadow:
       0 0 0 6px #ffffff,
-      0 10px 24px rgba(31, 39, 56, 0.08) !important;
+      0 10px 24px rgba(31, 39, 56, 0.08);
   }
 
   .history-list__item.is-active time {
-    background: var(--history-dot, var(--home-blue)) !important;
-    color: #ffffff !important;
+    background: var(--history-dot, var(--home-blue));
+    color: #ffffff;
     box-shadow:
       0 0 0 6px #ffffff,
-      0 12px 28px rgba(31, 39, 56, 0.14) !important;
+      0 12px 28px rgba(31, 39, 56, 0.14);
   }
 }
