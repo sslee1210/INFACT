@@ -5,6 +5,11 @@ export function useRevealOnScroll(selector = ".fade-in") {
     const elements = document.querySelectorAll(selector);
     if (!elements.length) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      elements.forEach((element) => element.classList.add("visible"));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
