@@ -1,11 +1,11 @@
 /* =========================================================
-   STAGE 8 — TARGETED MOBILE CORRECTIONS
+   STAGE 8 — TARGETED CORRECTIONS
 
-   Fixes only the four issues confirmed from device screenshots:
-   1. History progress line showing through year badges
-   2. Home Contact CTA text not centered inside buttons
-   3. CSV V-Model cropped on mobile
-   4. CSV Consulting 01/02/03 circles must remain circles on mobile
+   Keep this file narrowly scoped:
+   1. Mobile fixes confirmed from device screenshots
+   2. One shared 1920px+ container guide
+
+   Section-specific large-desktop rules belong to page-owned stylesheets.
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -55,7 +55,6 @@
 /* ---------------------------------------------------------
    2) HOME CONTACT CTA
    Center text inside both CTA buttons.
-   The previous mobile rule used justify-content:flex-start.
    --------------------------------------------------------- */
 
 @media (max-width: 767px) {
@@ -78,8 +77,6 @@
 /* ---------------------------------------------------------
    3) CSV V-MODEL
    Always show the complete diagram inside the available width.
-   Base desktop CSS enlarges the image to 130%; this cancels it
-   decisively on tablet/mobile.
    --------------------------------------------------------- */
 
 @media (max-width: 1199px) {
@@ -121,8 +118,6 @@
 /* ---------------------------------------------------------
    4) CSV CONSULTING OVERVIEW PILLARS
    Preserve the desktop visual language: three circles.
-   Mobile only scales them down; it does not convert them into
-   cards, rows, or a vertical list.
    --------------------------------------------------------- */
 
 @media (max-width: 767px) {
@@ -198,17 +193,12 @@
 }
 
 /* =========================================================
-   CANONICAL LARGE-DESKTOP LAYOUT
+   SHARED LARGE-DESKTOP GUIDE
    1920px baseline -> all larger desktop screens scale together.
-
-   Section-specific rules are progressively moving back into
-   their owning stylesheets. Keep only shared or not-yet-migrated
-   rules here.
+   Section-specific rules are imported immediately before this file.
    ========================================================= */
 
 @media (min-width: 1920px) {
-  /* Shared guide:
-     Header, every home section and footer use the same container. */
   .home-main .home-container,
   .home-main .site-shell,
   .home-main .container {
@@ -216,144 +206,5 @@
     max-width: var(--site-content-max) !important;
     margin-left: auto !important;
     margin-right: auto !important;
-  }
-
-  /* ---------------- ABOUT / PENTAGON ---------------- */
-
-  .about-blend-inner::after {
-    left: clamp(-33.125rem, -34vw, -23.75rem) !important;
-    bottom: clamp(-18.75rem, -16vw, -12.5rem) !important;
-    width: clamp(32.5rem, 44vw, 75rem) !important;
-  }
-
-  .about-blend-content {
-    padding-top: clamp(4.125rem, 5.4vw, 5.75rem) !important;
-    padding-bottom: clamp(0.75rem, 1.4vw, 1.5rem) !important;
-  }
-
-  .about-blend-desc {
-    max-width: 61.25rem !important;
-  }
-
-  .about-process-cycle {
-    width: min(100%, 55.125rem) !important;
-    margin-top: clamp(2.75rem, 4.4vw, 4.25rem) !important;
-  }
-
-  .about-process-cycle__labels text {
-    font-size: 1.5625rem !important;
-    stroke-width: 0.375rem !important;
-  }
-
-  /* ---------------- EXPERIENCE ---------------- */
-
-  .home-experience::after {
-    top: clamp(-11.875rem, -11vw, -8.75rem) !important;
-    right: clamp(-32.5rem, -31vw, -21.875rem) !important;
-    width: clamp(40rem, 52vw, 88.125rem) !important;
-  }
-
-  .home-experience {
-    gap: clamp(4.5rem, 8vw, 7.75rem) !important;
-    padding-top: clamp(5rem, 7.4vw, 7.75rem) !important;
-    padding-bottom: clamp(1rem, 1.6vw, 1.5rem) !important;
-  }
-
-  .home-experience__head {
-    max-width: 45rem !important;
-  }
-
-  .home-experience__head p:not(.home-experience__label) {
-    max-width: 32.5rem !important;
-  }
-
-  .home-experience__metric {
-    min-height: clamp(11.25rem, 14vw, 13.375rem) !important;
-    gap: 0.625rem !important;
-    padding-top: clamp(1.5rem, 2.2vw, 2.125rem) !important;
-  }
-
-  .home-experience__metric-icon {
-    top: clamp(-3.75rem, -4vw, -3rem) !important;
-    width: clamp(2.125rem, 2.7vw, 2.625rem) !important;
-    height: clamp(2.125rem, 2.7vw, 2.625rem) !important;
-  }
-
-  .home-experience__client-marquee {
-    padding: clamp(1.25rem, 2.2vw, 2.125rem) 0 !important;
-  }
-
-  .home-experience__client-track {
-    gap: clamp(3.375rem, 6vw, 7.25rem) !important;
-  }
-
-  /* ---------------- SERVICE ---------------- */
-
-  .service-immersive-section {
-    padding:
-      clamp(5.75rem, 7.2vw, 8rem)
-      0
-      clamp(5.75rem, 7.2vw, 8rem) !important;
-  }
-
-  .service-immersive::before {
-    top: clamp(-26.875rem, -27vw, -22.5rem) !important;
-    left: clamp(-30rem, -30vw, -18.75rem) !important;
-    width: clamp(40rem, 50vw, 86.25rem) !important;
-  }
-
-  .service-immersive {
-    gap: clamp(2.125rem, 3.4vw, 3.375rem) !important;
-  }
-
-  .service-immersive__intro {
-    max-width: 45rem !important;
-  }
-
-  .service-immersive__summary {
-    max-width: 38.75rem !important;
-  }
-
-  .service-card-rail {
-    height: 33.75rem !important;
-  }
-
-  .service-card__content {
-    padding:
-      clamp(1.625rem, 2.2vw, 2.25rem)
-      clamp(1.5rem, 2.4vw, 2.375rem)
-      clamp(1.75rem, 2.5vw, 2.625rem) !important;
-  }
-
-  .service-card__body {
-    max-width: min(100%, 32.5rem) !important;
-  }
-
-  /* ---------------- HOME CONTACT CTA ---------------- */
-
-  .home-cta-banner {
-    --cta-desktop-height: 24.375rem !important;
-  }
-
-  .home-cta-banner__content {
-    grid-template-columns: minmax(0, 1fr) minmax(24.375rem, 0.36fr) !important;
-    column-gap: clamp(2.75rem, 5.4vw, 6rem) !important;
-    padding: clamp(2.5rem, 3.4vw, 3.5rem) 0 !important;
-  }
-
-  .home-cta-banner__content p {
-    width: min(35rem, 100%) !important;
-  }
-
-  .home-cta-banner__actions {
-    width: min(100%, 23.125rem) !important;
-    min-height: 12.75rem !important;
-    gap: 1.875rem !important;
-    margin-right: 1rem !important;
-  }
-
-  .home-cta-banner__button {
-    min-height: 4.875rem !important;
-    padding-bottom: 1.25rem !important;
   }
 }
