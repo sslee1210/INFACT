@@ -28,12 +28,13 @@
 - `home.css`: home base
 - `home-company-intro.css`: company intro section
 - `home-about.css`: home About section
-- `home-experience.css`: experience section and legacy home-adjacent rules
+- `home-experience.css`: active Experience section only
 - `home-service*.css`: service section/cards
-- `home-contact.css`: home contact CTA
+- `home-cta.css`: Home contact CTA base behavior and desktop sizing
+- `home-contact.css`: shared contact banner styles plus the 1920px Home CTA refinement
 - `home-mobile-responsive.css`: home mobile-specific layout
 - `home-responsive.css`: home family tablet/mobile and 1920px Experience normalization
-- `home-layout-responsive.css`: full-width ownership corrections without `100vw` breakout math
+- `home-layout-responsive.css`: final full-width safety correction for Home marquee/CTA
 
 ### Page families
 
@@ -61,11 +62,11 @@ The following Stage-based or patch-style paths must not be restored:
 - all temporary `*-large-desktop.css` files
 - `ultrawide-layout-fix.css`
 
-## Known remaining legacy exception
+## Completed Experience cleanup
 
-`home-experience.css` still physically contains historical `@media (min-width: 2200px)` blocks and some old viewport-width breakout declarations. The active 2200px expansion is neutralized by the canonical 1920px+ rules in `home-responsive.css`. Active full-width Home sections are normalized by `home-layout-responsive.css`.
+`home-experience.css` no longer contains historical 2200px-only expansion rules, viewport-width breakout math, old Experience Showcase selectors, editorial page selectors, or the removed About process diagram styling. The active file now owns only the current Home Experience section and client marquee.
 
-Do not edit the large `home-experience.css` file by reconstructing it from partial snippets. Remove the historical blocks only when the complete file can be checked out and edited atomically, then verify that the 1920px+ Experience values remain unchanged.
+The Home CTA base styling was separated into `home-cta.css`. Existing tablet/mobile refinements remain in `home-responsive.css`, and the 1920px refinement remains in `home-contact.css`.
 
 ## Visit counter note
 
