@@ -16,7 +16,6 @@ const responsiveFiles = [
   "client/src/styles/common/large-desktop-layout.css",
   "client/src/styles/pages/home-about-large-desktop.css",
   "client/src/styles/pages/home-experience-large-desktop.css",
-  "client/src/styles/pages/home-contact-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
 
@@ -33,7 +32,6 @@ const requiredImportOrder = [
   './styles/common/large-desktop-layout.css',
   './styles/pages/home-about-large-desktop.css',
   './styles/pages/home-experience-large-desktop.css',
-  './styles/pages/home-contact-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
 
@@ -47,6 +45,11 @@ const forbiddenImports = [
     path: './styles/pages/home-service-large-desktop.css',
     reason:
       '서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.',
+  },
+  {
+    path: './styles/pages/home-contact-large-desktop.css',
+    reason:
+      '홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.',
   },
 ];
 
@@ -221,6 +224,16 @@ if (
 ) {
   errors.push(
     "client/src/styles/pages/home-service.css — 1920px 이상 서비스 스케일 규칙이 누락되었습니다.",
+  );
+}
+
+const homeContactSource = read("client/src/styles/pages/home-contact.css");
+if (
+  !homeContactSource.includes("@media (min-width: 1920px)") ||
+  !homeContactSource.includes(".home-cta-banner")
+) {
+  errors.push(
+    "client/src/styles/pages/home-contact.css — 1920px 이상 홈 CTA 스케일 규칙이 누락되었습니다.",
   );
 }
 
