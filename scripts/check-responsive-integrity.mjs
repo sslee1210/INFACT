@@ -13,6 +13,11 @@ const responsiveFiles = [
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
+  "client/src/styles/common/large-desktop-layout.css",
+  "client/src/styles/pages/home-about-large-desktop.css",
+  "client/src/styles/pages/home-experience-large-desktop.css",
+  "client/src/styles/pages/home-service-large-desktop.css",
+  "client/src/styles/pages/home-contact-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
 
@@ -26,6 +31,11 @@ const requiredImportOrder = [
   './styles/pages/references-responsive-stage5.css',
   './styles/common/ui-system-stage6.css',
   './styles/common/responsive-qa-stage7.css',
+  './styles/common/large-desktop-layout.css',
+  './styles/pages/home-about-large-desktop.css',
+  './styles/pages/home-experience-large-desktop.css',
+  './styles/pages/home-service-large-desktop.css',
+  './styles/pages/home-contact-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
 
@@ -173,19 +183,17 @@ for (const requiredImport of requiredImportOrder) {
 
 const stage8Path = "client/src/styles/common/responsive-refinement-stage8.css";
 const stage8Source = read(stage8Path);
-const migratedOwnershipSelectors = [
-  {
-    selector: ".home-company-intro",
-    owner: "client/src/styles/pages/home-company-intro.css",
-  },
-];
 
-for (const ownership of migratedOwnershipSelectors) {
-  if (stage8Source.includes(ownership.selector)) {
-    errors.push(
-      `${stage8Path} — 소유권 회귀: ${ownership.selector} 규칙은 ${ownership.owner}에서 관리해야 합니다.`,
-    );
-  }
+if (stage8Source.includes("@media (min-width: 1920px)")) {
+  errors.push(
+    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 shared/page-owned large-desktop CSS에서 관리해야 합니다.`,
+  );
+}
+
+if (stage8Source.includes(".home-company-intro")) {
+  errors.push(
+    `${stage8Path} — 소유권 회귀: .home-company-intro 규칙은 client/src/styles/pages/home-company-intro.css에서 관리해야 합니다.`,
+  );
 }
 
 const companyIntroSource = read("client/src/styles/pages/home-company-intro.css");
@@ -211,7 +219,7 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide override 금지");
-console.log("CSS 소유권 정책: 이전 완료된 섹션은 Stage 8에 다시 정의하지 않음");
+console.log("CSS 소유권 정책: Stage 8은 모바일 보정 전용 / 대형 화면은 shared/page-owned CSS");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
