@@ -1,43 +1,51 @@
-Stage 8 corrected — 사용자 캡처 기준 4개 문제만 정확히 수정
+긴급 수정 — Contact 버튼 중앙정렬 / CSV V-Model 전체 표시
 
-기준 GitHub 커밋
-f6580e80220ac5c8ebd6b4575659a3f19daa3663
-전체 페이지 모바일 태블릿 반응형 3차 개편
+1. Contact 버튼
+파일:
+client/src/styles/pages/home-responsive-stage2.css
 
-1. 연혁 타임라인
-- 진행 세로선은 원 뒤에 유지
-- 비활성 연도 원의 반투명 배경을 불투명 배경으로 변경
-- 흰색 외곽 마스크를 추가하여 스크롤 진행선이 숫자 위로 비치지 않도록 수정
-- 활성 연도 원도 동일하게 선을 완전히 가림
+원인:
+- 모바일 최종 override에서 justify-content:flex-start
+- padding-bottom:14px
+- 이 두 규칙 때문에 버튼 박스 중심과 텍스트 중심이 달라짐
 
-2. 메인 Contact 버튼
-- 모바일의 justify-content:flex-start를 최종 override
-- 문의하기 / 수행실적 보기 텍스트를 버튼 중앙에 정확히 정렬
+수정:
+- display:flex
+- align-items:center
+- justify-content:center
+- padding:0 20px
+- label 자체도 flex 중앙정렬
+- 가로/세로 모두 실제 중앙 정렬
 
-3. CSV V-Model
-- 데스크톱 CSS의 width:130%, margin:-15%를 모바일/태블릿에서 완전히 취소
-- width/max-width 100%
+2. CSV V-Model
+파일:
+client/src/styles/pages/service-csv-page.css
+
+원인:
+원본 컴포넌트 CSS가
+- width:130%
+- max-width:none
+- margin:0 -15%
+를 사용함
+
+수정:
+같은 service-csv-page.css 파일의 가장 마지막에서
+1199px 이하 규칙을 직접 추가하여:
+- width:100%
+- max-width:100%
+- margin:0 auto
 - object-fit:contain
-- transform/clip 제거
-- 모바일에서도 전체 도식이 한 화면 폭 안에 전부 표시
+- transform:none
+- clip-path:none
 
-4. CSV Consulting 01 / 02 / 03
-- 모바일 카드/세로행 변환 제거
-- 데스크톱과 동일한 3개 원형 디자인 유지
-- 360px에서도 3개가 한 줄에 들어가도록 크기만 반응형 축소
+즉, 외부 반응형 override의 로딩 순서에 의존하지 않고
+컴포넌트 원본 CSS 내부에서 모바일/태블릿 확대를 직접 취소함.
 
-5. QA 스크립트
-- Stage 8 CSS를 검사 대상과 필수 import 순서에 추가
-- Stage 8 CSS가 최종 import인지 확인
-
-적용 파일
-- client/src/index.css
-- client/src/styles/common/responsive-refinement-stage8.css
-- scripts/check-responsive-integrity.mjs
-
-확인
-corepack pnpm qa
+적용 후:
 corepack pnpm dev
 
-권장 확인 폭
-360 / 390 / 430 / 768 / 820 / 1200
+브라우저:
+Ctrl + Shift + R
+
+확인 폭:
+390 / 430 / 768 / 1024

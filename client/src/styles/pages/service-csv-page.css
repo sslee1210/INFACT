@@ -410,6 +410,17 @@
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.csv-scope-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 118px;
+  height: 118px;
+  border: 1px solid rgba(44, 54, 143, 0.08);
+  border-radius: 50%;
+}
+
 .csv-scope-card:hover {
   transform: translateY(-2px);
   border-color: rgba(44, 54, 143, 0.28);
@@ -977,369 +988,46 @@
   background-image: none !important;
 }
 
-
-
 /* =========================================================
-   FINAL — Risk-Based CSV Governance Framework completion
-   표의 구조·정렬·가독성을 하나의 최종 규칙으로 통일
+   CRITICAL RESPONSIVE FIX — V-MODEL COMPLETE VIEW
+   The desktop artwork is intentionally oversized at 130%.
+   Tablet/mobile must cancel that rule inside this same
+   component stylesheet so CSS load order cannot re-expand it.
    ========================================================= */
 
-.csv-framework-roadmap {
-  overflow: hidden !important;
-  border: 1px solid var(--home-border) !important;
-  border-top: 2px solid var(--home-blue-strong) !important;
-  background: #fff !important;
-}
+@media (max-width: 1199px) {
+  .service-csv-page .csv-framework-section .csv-vmodel,
+  .csv-framework-section .csv-vmodel {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: clamp(28px, 4vw, 44px) auto 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
 
-.csv-framework-roadmap__head {
-  display: grid !important;
-  grid-template-columns: 210px minmax(0, 1fr) 260px !important;
-  min-height: 58px !important;
-  border-bottom: 1px solid var(--home-border) !important;
-  background: #f7f8fc !important;
-}
-
-.csv-framework-roadmap__head span {
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 24px !important;
-  border-right: 1px solid var(--home-border) !important;
-  color: var(--home-blue-strong) !important;
-  font-size: 0.84rem !important;
-  line-height: 1.4 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.02em !important;
-}
-
-.csv-framework-roadmap__head span:last-child {
-  border-right: 0 !important;
-}
-
-.csv-framework-roadmap__body {
-  display: block !important;
-}
-
-.csv-framework-roadmap__stage {
-  position: relative !important;
-  display: grid !important;
-  grid-template-columns: 210px minmax(0, 1fr) 260px !important;
-  min-height: 198px !important;
-  border-bottom: 1px solid var(--home-border) !important;
-  background: #fff !important;
-}
-
-.csv-framework-roadmap__stage:last-child {
-  border-bottom: 0 !important;
-}
-
-.csv-framework-roadmap__phase {
-  display: grid !important;
-  grid-template-columns: 42px minmax(0, 1fr) !important;
-  align-content: center !important;
-  align-items: start !important;
-  gap: 16px !important;
-  padding: 28px 24px !important;
-  border-right: 1px solid var(--home-border) !important;
-  background: #fbfcfe !important;
-  text-align: left !important;
-}
-
-.csv-framework-roadmap__stage:nth-child(even) .csv-framework-roadmap__phase {
-  background: #f8f9fc !important;
-}
-
-.csv-framework-roadmap__phase-no {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 38px !important;
-  height: 38px !important;
-  margin: 0 !important;
-  border: 1px solid rgba(44, 54, 143, 0.18) !important;
-  background: #fff !important;
-  color: var(--home-blue-strong) !important;
-  font-size: 0.74rem !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.06em !important;
-}
-
-.csv-framework-roadmap__phase > div {
-  min-width: 0 !important;
-}
-
-.csv-framework-roadmap__phase strong {
-  display: block !important;
-  margin: 1px 0 0 !important;
-  color: var(--home-text) !important;
-  font-size: 1.08rem !important;
-  line-height: 1.5 !important;
-  font-weight: 900 !important;
-  word-break: keep-all !important;
-}
-
-.csv-framework-roadmap__phase em {
-  display: block !important;
-  margin-top: 5px !important;
-  color: var(--home-blue-strong) !important;
-  font-size: 0.92rem !important;
-  line-height: 1.45 !important;
-  font-style: normal !important;
-  font-weight: 800 !important;
-}
-
-.csv-framework-roadmap__content {
-  padding: 27px 32px !important;
-  border-right: 1px solid var(--home-border) !important;
-  background: #fff !important;
-}
-
-.csv-framework-roadmap__purpose {
-  margin: 0 0 20px !important;
-  padding: 0 0 15px !important;
-  border-bottom: 1px solid #edf0f6 !important;
-  color: var(--home-text) !important;
-  font-size: 1.05rem !important;
-  line-height: 1.65 !important;
-  font-weight: 900 !important;
-}
-
-.csv-framework-roadmap__details {
-  display: grid !important;
-  gap: 13px !important;
-}
-
-.csv-framework-roadmap__detail {
-  display: grid !important;
-  grid-template-columns: 190px minmax(0, 1fr) !important;
-  gap: 22px !important;
-  align-items: start !important;
-}
-
-.csv-framework-roadmap__detail strong {
-  color: var(--home-blue-strong) !important;
-  font-size: 0.97rem !important;
-  line-height: 1.65 !important;
-  font-weight: 800 !important;
-}
-
-.csv-framework-roadmap__detail p {
-  margin: 0 !important;
-  color: var(--home-text-soft) !important;
-  font-size: 0.97rem !important;
-  line-height: 1.72 !important;
-  font-weight: 500 !important;
-}
-
-.csv-framework-roadmap__output {
-  display: grid !important;
-  align-content: center !important;
-  gap: 10px !important;
-  padding: 28px 24px !important;
-  background: #fafbfe !important;
-}
-
-.csv-framework-roadmap__stage:nth-child(even) .csv-framework-roadmap__output {
-  background: #f7f8fc !important;
-}
-
-.csv-framework-roadmap__output span {
-  color: #8993aa !important;
-  font-size: 0.7rem !important;
-  line-height: 1 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.14em !important;
-}
-
-.csv-framework-roadmap__output strong {
-  color: var(--home-blue-strong) !important;
-  font-size: 1.02rem !important;
-  line-height: 1.6 !important;
-  font-weight: 900 !important;
-  word-break: keep-all !important;
-}
-
-/* 예전 타임라인 요소는 최종적으로 완전히 숨김 */
-.csv-framework-roadmap__rail,
-.csv-framework-roadmap__arrow,
-.csv-framework-roadmap__phase::before {
-  display: none !important;
-}
-
-@media (min-width: 1500px) {
-  .csv-framework-roadmap__head,
-  .csv-framework-roadmap__stage {
-    grid-template-columns: 220px minmax(0, 1fr) 280px !important;
+  .service-csv-page .csv-framework-section .csv-vmodel img,
+  .csv-framework-section .csv-vmodel img,
+  .csv-vmodel img {
+    display: block !important;
+    width: 100% !important;
+    inline-size: 100% !important;
+    max-width: 100% !important;
+    max-inline-size: 100% !important;
+    height: auto !important;
+    block-size: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    clip-path: none !important;
   }
 }
 
-@media (max-width: 1120px) {
-  .csv-framework-roadmap__head,
-  .csv-framework-roadmap__stage {
-    grid-template-columns: 180px minmax(0, 1fr) 220px !important;
-  }
-
-  .csv-framework-roadmap__phase {
-    grid-template-columns: 36px minmax(0, 1fr) !important;
-    gap: 12px !important;
-    padding: 24px 18px !important;
-  }
-
-  .csv-framework-roadmap__phase-no {
-    width: 34px !important;
-    height: 34px !important;
-  }
-
-  .csv-framework-roadmap__content {
-    padding: 24px !important;
-  }
-
-  .csv-framework-roadmap__detail {
-    grid-template-columns: 150px minmax(0, 1fr) !important;
-    gap: 18px !important;
+@media (max-width: 767px) {
+  .service-csv-page .csv-framework-section .csv-vmodel,
+  .csv-framework-section .csv-vmodel {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
-@media (max-width: 860px) {
-  .csv-framework-roadmap__head {
-    display: none !important;
-  }
-
-  .csv-framework-roadmap__stage {
-    grid-template-columns: 1fr !important;
-  }
-
-  .csv-framework-roadmap__phase,
-  .csv-framework-roadmap__content,
-  .csv-framework-roadmap__output {
-    border-right: 0 !important;
-  }
-
-  .csv-framework-roadmap__phase,
-  .csv-framework-roadmap__content {
-    border-bottom: 1px solid var(--home-border) !important;
-  }
-
-  .csv-framework-roadmap__output {
-    padding-top: 22px !important;
-    padding-bottom: 22px !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .csv-framework-roadmap__detail {
-    grid-template-columns: 1fr !important;
-    gap: 4px !important;
-  }
-
-  .csv-framework-roadmap__phase strong,
-  .csv-framework-roadmap__purpose,
-  .csv-framework-roadmap__output strong {
-    font-size: 1rem !important;
-  }
-
-  .csv-framework-roadmap__detail strong,
-  .csv-framework-roadmap__detail p {
-    font-size: 0.94rem !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL FRAMEWORK DETAIL POLISH
-   - OUTPUT 라벨 제거
-   - 단계 번호 박스 제거
-   - 세부 항목에 bullet 추가
-   ========================================================= */
-
-/* 단계 번호: 박스 없이 텍스트만 */
-.csv-framework-roadmap__phase-no {
-  display: block !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 2px 0 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-  color: #8993aa !important;
-  font-size: 0.76rem !important;
-  line-height: 1.35 !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.08em !important;
-}
-
-/* 번호 칸을 조금 더 작게 조정 */
-.csv-framework-roadmap__phase {
-  grid-template-columns: 30px minmax(0, 1fr) !important;
-  gap: 14px !important;
-}
-
-/* 세부 항목: 점 bullet + 내용 정렬 */
-.csv-framework-roadmap__detail {
-  position: relative !important;
-  grid-template-columns: 184px minmax(0, 1fr) !important;
-  gap: 22px !important;
-  padding-left: 16px !important;
-}
-
-.csv-framework-roadmap__detail::before {
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  top: 0.72em !important;
-  width: 5px !important;
-  height: 5px !important;
-  border-radius: 50% !important;
-  background: var(--home-blue-strong) !important;
-}
-
-.csv-framework-roadmap__detail strong {
-  position: relative !important;
-}
-
-/* OUTPUT 라벨이 없어졌으므로 산출물 자체를 중앙 정렬 */
-.csv-framework-roadmap__output {
-  display: flex !important;
-  align-items: center !important;
-  padding: 28px 24px !important;
-}
-
-.csv-framework-roadmap__output strong {
-  margin: 0 !important;
-}
-
-/* 혹시 이전 span 스타일이 남아 있어도 표시하지 않음 */
-.csv-framework-roadmap__output > span {
-  display: none !important;
-}
-
-@media (max-width: 1120px) {
-  .csv-framework-roadmap__phase {
-    grid-template-columns: 26px minmax(0, 1fr) !important;
-    gap: 10px !important;
-  }
-
-  .csv-framework-roadmap__detail {
-    grid-template-columns: 146px minmax(0, 1fr) !important;
-    padding-left: 14px !important;
-  }
-}
-
-@media (max-width: 620px) {
-  .csv-framework-roadmap__detail {
-    grid-template-columns: 1fr !important;
-    gap: 4px !important;
-    padding-left: 15px !important;
-  }
-}
-
-
-/* =========================================================
-   FINAL — remove decorative corner circles from service scope cards
-   ========================================================= */
-
-.csv-scope-card::after {
-  content: none !important;
-  display: none !important;
-}
