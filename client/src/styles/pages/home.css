@@ -61,6 +61,12 @@
   color: var(--brand-primary);
 }
 
+/* Supporting statement hierarchy: About keeps a strong editorial message,
+   but it stays one level below the section title instead of competing with it. */
+.about-blend-section {
+  --home-section-heading-size: clamp(1.62rem, 2.05vw, 2.35rem);
+}
+
 @supports (content-visibility: auto) {
   .about-blend-section,
   .home-experience-section,
