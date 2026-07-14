@@ -102,6 +102,44 @@ iframe {
     }
   }
 
+  .home-nav__mobile-panel-head {
+    justify-content: space-between !important;
+  }
+
+  .home-nav__mobile-panel-close {
+    position: relative;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    margin: -5px -10px -5px 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--home-blue-strong);
+    cursor: pointer;
+  }
+
+  .home-nav__mobile-panel-close::before,
+  .home-nav__mobile-panel-close::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+
+  .home-nav__mobile-panel-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .home-nav__mobile-panel-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
   .home-nav__mobile-submenu {
     visibility: hidden !important;
     transition:
