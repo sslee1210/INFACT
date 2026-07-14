@@ -51,8 +51,8 @@
 /* Stage 5 — references responsive overhaul */
 @import "./styles/pages/references-responsive-stage5.css";
 
-/* Stage 6 — canonical UI system / contact / footer */
-@import "./styles/common/ui-system-stage6.css";
+/* Canonical UI system */
+@import "./styles/common/ui-system.css";
 
 /* Cross-page responsive safety */
 @import "./styles/common/responsive-safety.css";
