@@ -57,8 +57,5 @@
 /* Stage 7 — final responsive QA guardrails */
 @import "./styles/common/responsive-qa-stage7.css";
 
-/* Stage 8 — targeted mobile corrections */
+/* Stage 8 — final responsive refinement and large-desktop policy */
 @import "./styles/common/responsive-refinement-stage8.css";
-
-/* Ultra-wide desktop correction — 32-inch / 2200px+ */
-@import "./styles/common/ultrawide-layout-fix.css";
