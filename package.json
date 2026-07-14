@@ -12,7 +12,8 @@
     "check": "tsc --noEmit",
     "qa:responsive": "node scripts/check-responsive-integrity.mjs",
     "qa:css-ownership": "node scripts/check-css-ownership.mjs",
-    "qa": "pnpm check && pnpm qa:responsive && pnpm qa:css-ownership && pnpm build",
+    "qa:app-integrity": "node scripts/check-app-integrity.mjs",
+    "qa": "pnpm check && pnpm qa:responsive && pnpm qa:css-ownership && pnpm qa:app-integrity && pnpm build",
     "format": "prettier --write ."
   },
   "dependencies": {
