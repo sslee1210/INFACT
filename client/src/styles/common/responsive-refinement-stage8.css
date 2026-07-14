@@ -1,11 +1,8 @@
 /* =========================================================
-   STAGE 8 — TARGETED CORRECTIONS
+   STAGE 8 — TARGETED MOBILE CORRECTIONS
 
-   Keep this file narrowly scoped:
-   1. Mobile fixes confirmed from device screenshots
-   2. One shared 1920px+ container guide
-
-   Section-specific large-desktop rules belong to page-owned stylesheets.
+   Keep this file narrowly scoped to confirmed mobile fixes.
+   Large-desktop layout rules live in shared/page-owned stylesheets.
    ========================================================= */
 
 /* ---------------------------------------------------------
@@ -189,22 +186,5 @@
 
   .service-csv-page .service-business-overview__pillar strong {
     font-size: clamp(0.68rem, 3vw, 0.82rem) !important;
-  }
-}
-
-/* =========================================================
-   SHARED LARGE-DESKTOP GUIDE
-   1920px baseline -> all larger desktop screens scale together.
-   Section-specific rules are imported immediately before this file.
-   ========================================================= */
-
-@media (min-width: 1920px) {
-  .home-main .home-container,
-  .home-main .site-shell,
-  .home-main .container {
-    width: var(--site-content-width) !important;
-    max-width: var(--site-content-max) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
 }
