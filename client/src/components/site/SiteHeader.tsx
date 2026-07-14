@@ -122,7 +122,9 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
       if (!panel) return [];
 
       return Array.from(panel.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter(
-        (element) => element.getClientRects().length > 0 && element.getAttribute("aria-hidden") !== "true",
+        (element) =>
+          element.getClientRects().length > 0 &&
+          element.getAttribute("aria-hidden") !== "true",
       );
     };
 
@@ -417,6 +419,12 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
         <div className="home-nav__mobile-panel-inner">
           <div className="home-nav__mobile-panel-head">
             <span className="home-nav__mobile-panel-label">MENU</span>
+            <button
+              type="button"
+              className="home-nav__mobile-panel-close"
+              aria-label="전체 메뉴 닫기"
+              onClick={closeMobileMenu}
+            />
           </div>
 
           <div className="home-nav__mobile-groups">
@@ -464,6 +472,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
                       className={`home-nav__mobile-submenu ${
                         isExpanded ? "is-open" : ""
                       }`}
+                      aria-hidden={!isExpanded}
                     >
                       <div className="home-nav__mobile-submenu-inner">
                         {item.children.map((child) => {
@@ -479,6 +488,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
                               }`}
                               onClick={() => navigateTo(child.href)}
                               aria-current={isCurrent ? "page" : undefined}
+                              tabIndex={isExpanded ? 0 : -1}
                             >
                               {child.label}
                             </button>
