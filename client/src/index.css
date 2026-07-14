@@ -31,13 +31,13 @@
 
 @import "./styles/common/responsive.css";
 @import "./styles/common/subpage-typography-standard.css";
-@import "./styles/pages/references-year-menu-patch.css";
+@import "./styles/pages/references-year-menu.css";
 
 /* Responsive core */
 @import "./styles/common/responsive-core.css";
 
-/* Home mobile visual polish */
-@import "./styles/pages/home-mobile-polish.css";
+/* Home mobile responsive layout */
+@import "./styles/pages/home-mobile-responsive.css";
 
 /* Page-family responsive layouts */
 @import "./styles/pages/home-responsive.css";
