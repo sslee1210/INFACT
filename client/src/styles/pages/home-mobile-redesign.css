@@ -13,8 +13,8 @@
 @media (max-width: 767px) {
   /* =======================================================
      1. ABOUT PROCESS CYCLE
-     Enlarge the whole SVG symmetrically instead of scaling
-     individual SVG groups. This keeps the pentagon centered.
+     Keep the enlarged diagram visually centered in the mobile
+     viewport even though its inherited layout parent is narrower.
      ======================================================= */
 
   .about-blend-content,
@@ -53,7 +53,7 @@
     max-width: 100% !important;
     height: auto !important;
     margin: 0 auto !important;
-    transform: none !important;
+    transform: translateX(16%) !important;
     overflow: visible !important;
   }
 
