@@ -24,12 +24,12 @@
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
-background: radial-gradient(
-  circle,
-  transparent 0 33.333%,
-  rgba(125, 137, 156, 0.05) 33.333% 55%,
-  rgba(128, 202, 244, 0.044) 55% 100%
-);
+  background: radial-gradient(
+    circle,
+    transparent 0 33.333%,
+    rgba(125, 137, 156, 0.05) 33.333% 55%,
+    rgba(128, 202, 244, 0.044) 55% 100%
+  );
   box-shadow: none;
   pointer-events: none;
 }
@@ -152,41 +152,6 @@ background: radial-gradient(
   font-size: var(--home-section-copy-size);
   line-height: 1.7;
   font-weight: 760;
-}
-
-@media (min-width: 2200px) {
-  .home-company-intro__inner {
-    --home-company-image-offset: calc(
-      clamp(10.875rem, 8.55vw, 13.725rem) -
-        clamp(12px, calc(49.5px - 1.25vw), 30px)
-    );
-    --home-company-image-overhang: clamp(72px, 4.8vw, 108px);
-    gap: clamp(96px, 6vw, 144px);
-    padding-top: clamp(112px, 7vw, 168px);
-    padding-bottom: clamp(112px, 7vw, 168px);
-  }
-
-  .home-company-intro__inner::after {
-    top: clamp(-601px, -24vw, -495px);
-    right: clamp(-600px, -24vw, -450px);
-  }
-
-  .home-company-intro__lead {
-    top: clamp(102px, 6.4vw, 147px);
-    width: min(48%, 780px);
-  }
-
-  .home-company-intro__media {
-    height: clamp(690px, 55svh, 915px);
-    margin-top: calc(
-      clamp(45px, 3.1vw, 75px) + clamp(33px, 1.55vw, 37.5px) -
-        clamp(9px, 0.45vw, 12px) + clamp(48px, 2.15vw, 57px)
-    );
-  }
-
-  .home-company-intro__copy {
-    max-width: 720px;
-  }
 }
 
 @media (max-width: 1100px) {
