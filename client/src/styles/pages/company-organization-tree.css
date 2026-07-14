@@ -1,9 +1,9 @@
 /* =========================================================
    COMPANY ORGANIZATION TREE
 
-   Structured hierarchy replacing the previous absolute-positioned chart.
-   Connector lines are derived from the same grid that owns each node, so
-   boxes and lines stay aligned when the viewport changes.
+   Desktop/tablet uses the structured hierarchy.
+   Mobile uses a separate level-based grid so cards and connector
+   lines stay aligned without narrow stacked boxes.
    ========================================================= */
 
 .org-tree {
@@ -11,7 +11,7 @@
   --org-line-width: 2px;
   --org-primary-drop: clamp(58px, 4.8vw, 72px);
   --org-secondary-drop: clamp(58px, 4.8vw, 72px);
-  --org-team-drop: clamp(48px, 4vw, 60px);
+  --org-team-drop: clamp(52px, 4.2vw, 64px);
   width: 100%;
   min-height: clamp(720px, 56vw, 860px);
   padding: clamp(10px, 1vw, 16px) 0 clamp(42px, 4vw, 60px);
@@ -64,8 +64,10 @@
 }
 
 .org-tree__box--team {
-  min-height: 64px;
+  min-height: 68px;
+  padding-inline: 14px;
   border: 1.5px solid #aab4c4;
+  border-radius: 12px;
   color: var(--home-text);
   font-size: 0.9rem;
   font-weight: 820;
@@ -88,13 +90,6 @@
   transform: translateX(-50%);
 }
 
-/*
-  The primary track uses 68% of the content guide.
-  Three equal grid columns place the centers at approximately:
-  27.3% / 50% / 72.7% of the full content width.
-  This keeps the three primary divisions evenly spaced while leaving enough
-  room for the Validation branch below.
-*/
 .org-tree__primary-row {
   position: relative;
   width: 68%;
@@ -135,7 +130,6 @@
   transform: translateX(-50%);
 }
 
-/* Validation branch: two children with equal spacing around the parent. */
 .org-tree__validation-children {
   position: relative;
   width: clamp(430px, 34vw, 500px);
@@ -186,21 +180,15 @@
   transform: translateX(-50%);
 }
 
-/*
-  CSV team branch keeps full-size team boxes.
-  The branch is slightly shifted left while its incoming stem remains aligned
-  to the CSV box center, preventing the third team from touching the right edge.
-*/
+/* CSV teams stay full-size and are centered directly below the CSV node. */
 .org-tree__teams {
   position: relative;
-  width: clamp(390px, 29vw, 430px);
+  width: clamp(450px, 32vw, 520px);
   margin-top: var(--org-team-drop);
-  margin-left: 50%;
   padding-top: var(--org-team-drop);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(14px, 1.4vw, 20px);
-  transform: translateX(-55%);
+  gap: clamp(18px, 1.6vw, 24px);
 }
 
 .org-tree__teams::before {
@@ -217,7 +205,7 @@
   content: "";
   position: absolute;
   top: calc(-1 * var(--org-team-drop));
-  left: 55%;
+  left: 50%;
   width: var(--org-line-width);
   height: var(--org-team-drop);
   background: var(--org-line);
@@ -240,6 +228,11 @@
   transform: translateX(-50%);
 }
 
+/* Dedicated mobile hierarchy is hidden outside the mobile range. */
+.org-mobile-tree {
+  display: none;
+}
+
 @media (min-width: 861px) and (max-width: 1199px) {
   .org-tree {
     min-height: 720px;
@@ -258,66 +251,241 @@
   }
 
   .org-tree__teams {
-    width: min(390px, 46vw);
+    width: min(440px, 50vw);
+    gap: 16px;
   }
 }
 
+/* =========================================================
+   MOBILE ORGANIZATION TREE
+
+   Geometry:
+   - primary grid: three equal columns across the full width
+   - secondary grid: right 2/3, putting GMP under the center primary
+     and CSV under Validation
+   - teams grid: three equal full-width columns
+   Connector coordinates are derived from those same grid centers.
+   ========================================================= */
+
 @media (max-width: 860px) {
   .org-tree {
-    min-height: 0;
-    padding-bottom: clamp(28px, 7vw, 44px);
-  }
-
-  .org-tree__lead,
-  .org-tree__primary-node,
-  .org-tree__secondary-node {
-    align-items: stretch;
-  }
-
-  .org-tree__lead::after,
-  .org-tree__primary-row::before,
-  .org-tree__primary-node::before,
-  .org-tree__validation-children::before,
-  .org-tree__validation-children::after,
-  .org-tree__secondary-node::before,
-  .org-tree__teams::before,
-  .org-tree__teams::after,
-  .org-tree__team::before {
     display: none;
   }
 
-  .org-tree__box,
-  .org-tree__box--lead,
-  .org-tree__box--primary,
-  .org-tree__box--secondary,
-  .org-tree__box--team {
+  .org-mobile-tree {
+    --mobile-org-line: #a1aaba;
+    --mobile-org-line-width: 1.5px;
+    display: block;
     width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 8px 0 clamp(34px, 9vw, 50px);
+    color: var(--home-text);
+  }
+
+  .org-mobile-tree__lead,
+  .org-mobile-tree__card {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    text-align: center;
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+    word-break: keep-all;
+  }
+
+  .org-mobile-tree__lead {
+    position: relative;
+    width: min(58%, 240px);
+    min-height: 68px;
+    margin: 0 auto;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: var(--home-blue);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 850;
+    box-shadow: 0 10px 24px rgba(30, 42, 115, 0.14);
+  }
+
+  .org-mobile-tree__lead::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: var(--mobile-org-line-width);
+    height: 34px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+
+  .org-mobile-tree__card {
+    position: relative;
+    min-height: 68px;
+    padding: 11px 8px;
+    border-radius: 12px;
+    background: #ffffff;
+    font-weight: 820;
+  }
+
+  .org-mobile-tree__card--primary {
+    border: 1.5px solid var(--home-blue);
+    color: var(--home-blue-strong);
+    font-size: clamp(0.76rem, 2.8vw, 0.9rem);
+  }
+
+  .org-mobile-tree__card--secondary {
+    border: 1.5px solid #c3ccdb;
+    color: #1f2738;
+    font-size: clamp(0.78rem, 2.9vw, 0.92rem);
+  }
+
+  .org-mobile-tree__card--team {
+    min-height: 62px;
+    border: 1.5px solid #aab4c4;
+    color: var(--home-text);
+    font-size: clamp(0.74rem, 2.7vw, 0.88rem);
+  }
+
+  .org-mobile-tree__primary-grid,
+  .org-mobile-tree__secondary-grid,
+  .org-mobile-tree__teams-grid {
+    position: relative;
+    display: grid;
+    align-items: stretch;
+  }
+
+  /* Lead -> three primary divisions */
+  .org-mobile-tree__primary-grid {
+    margin-top: 34px;
+    padding-top: 28px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(8px, 2.4vw, 14px);
+  }
+
+  .org-mobile-tree__primary-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16.6666667%;
+    right: 16.6666667%;
+    height: var(--mobile-org-line-width);
+    background: var(--mobile-org-line);
+  }
+
+  .org-mobile-tree__primary-grid .org-mobile-tree__card::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -28px;
+    width: var(--mobile-org-line-width);
+    height: 28px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+
+  /* Validation -> GMP / CSV. Right 2/3 aligns child centers to 50% and 83.33%. */
+  .org-mobile-tree__secondary-grid {
+    width: 66.6666667%;
+    margin: 34px 0 0 auto;
+    padding-top: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(10px, 3vw, 16px);
+  }
+
+  .org-mobile-tree__secondary-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    height: var(--mobile-org-line-width);
+    background: var(--mobile-org-line);
+  }
+
+  .org-mobile-tree__secondary-grid::after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    top: -34px;
+    width: var(--mobile-org-line-width);
+    height: 34px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+
+  .org-mobile-tree__secondary-grid .org-mobile-tree__card::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -28px;
+    width: var(--mobile-org-line-width);
+    height: 28px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+
+  /* CSV -> three teams. Incoming stem is at the CSV center (83.33%). */
+  .org-mobile-tree__teams-grid {
+    margin-top: 34px;
+    padding-top: 28px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(8px, 2.4vw, 14px);
+  }
+
+  .org-mobile-tree__teams-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 16.6666667%;
+    right: 16.6666667%;
+    height: var(--mobile-org-line-width);
+    background: var(--mobile-org-line);
+  }
+
+  .org-mobile-tree__teams-grid::after {
+    content: "";
+    position: absolute;
+    left: 83.3333333%;
+    top: -34px;
+    width: var(--mobile-org-line-width);
+    height: 34px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+
+  .org-mobile-tree__teams-grid .org-mobile-tree__card::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -28px;
+    width: var(--mobile-org-line-width);
+    height: 28px;
+    background: var(--mobile-org-line);
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .org-mobile-tree__lead {
+    width: min(64%, 220px);
     min-height: 64px;
-    border-radius: 14px;
   }
 
-  .org-tree__primary-row {
-    width: 100%;
-    margin-top: 18px;
-    padding-top: 0;
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .org-mobile-tree__card {
+    min-height: 64px;
+    padding: 10px 6px;
+    border-radius: 11px;
   }
 
-  .org-tree__validation-children {
-    width: calc(100% - clamp(28px, 8vw, 48px));
-    margin: 12px 0 0 auto;
-    padding-top: 0;
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .org-mobile-tree__primary-grid,
+  .org-mobile-tree__teams-grid {
+    gap: 7px;
   }
 
-  .org-tree__teams {
-    width: calc(100% - clamp(28px, 8vw, 48px));
-    margin: 12px 0 0 auto;
-    padding-top: 0;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    transform: none;
+  .org-mobile-tree__secondary-grid {
+    gap: 9px;
   }
 }
