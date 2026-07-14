@@ -25,6 +25,10 @@ corepack.cmd pnpm dev
 corepack.cmd pnpm build
 ```
 
+## 스타일 구조
+
+반응형 스케일 정책, CSS 소유권과 제거된 Stage 구조는 [`docs/css-architecture.md`](./docs/css-architecture.md)에 정리되어 있습니다.
+
 ## 저장소 관리
 
 이 프로젝트는 GitHub 저장소에서 버전 관리합니다.
