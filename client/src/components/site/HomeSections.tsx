@@ -7,7 +7,7 @@ import {
   homeExperienceCta,
   homeHero,
 } from "@/content/homePage";
-import { scrollToTopSoon } from "@/lib/scroll";
+import { scrollToElementById, scrollToTopSoon } from "@/lib/scroll";
 
 function LineBreakText({ lines }: { lines: readonly string[] }) {
   return (
@@ -64,10 +64,15 @@ export function HomeHeroSection() {
         </div>
       </div>
 
-      <a href="#about" className="hero__scroll-cue" aria-label="About 섹션으로 이동">
+      <button
+        type="button"
+        className="hero__scroll-cue"
+        aria-label="About 섹션으로 이동"
+        onClick={() => scrollToElementById("about", "smooth")}
+      >
         <span className="hero__scroll-label">SCROLL</span>
         <span className="hero__scroll-line" aria-hidden="true" />
-      </a>
+      </button>
     </BackgroundSection>
   );
 }
