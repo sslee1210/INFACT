@@ -11,7 +11,7 @@ const responsiveFiles = [
   "client/src/styles/pages/company-responsive-stage3.css",
   "client/src/styles/pages/services-responsive-stage4.css",
   "client/src/styles/pages/references-responsive-stage5.css",
-  "client/src/styles/common/ui-system-stage6.css",
+  "client/src/styles/common/ui-system.css",
   "client/src/styles/common/responsive-safety.css",
   "client/src/styles/pages/company-history-responsive.css",
   "client/src/styles/pages/contact-responsive.css",
@@ -26,7 +26,7 @@ const requiredImportOrder = [
   "./styles/pages/company-responsive-stage3.css",
   "./styles/pages/services-responsive-stage4.css",
   "./styles/pages/references-responsive-stage5.css",
-  "./styles/common/ui-system-stage6.css",
+  "./styles/common/ui-system.css",
   "./styles/common/responsive-safety.css",
   "./styles/pages/company-history-responsive.css",
   "./styles/pages/contact-responsive.css",
@@ -34,39 +34,43 @@ const requiredImportOrder = [
 ];
 
 const forbiddenImports = [
-  {
-    path: "./styles/common/ultrawide-layout-fix.css",
-    reason: "1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.",
-  },
-  {
-    path: "./styles/common/large-desktop-layout.css",
-    reason: "공통 1920px 이상 컨테이너 가이드는 base.css 본체로 통합되었습니다.",
-  },
-  {
-    path: "./styles/pages/home-about-large-desktop.css",
-    reason: "About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.",
-  },
-  {
-    path: "./styles/pages/home-experience-large-desktop.css",
-    reason: "Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.",
-  },
-  {
-    path: "./styles/pages/home-service-large-desktop.css",
-    reason: "서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.",
-  },
-  {
-    path: "./styles/pages/home-contact-large-desktop.css",
-    reason: "홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.",
-  },
-  {
-    path: "./styles/common/responsive-qa-stage7.css",
-    reason: "Stage 7은 semantic responsive-safety 레이어로 축소되어 삭제되었습니다.",
-  },
-  {
-    path: "./styles/common/responsive-refinement-stage8.css",
-    reason: "Stage 8은 페이지별 반응형 모듈로 분해되어 삭제되었습니다.",
-  },
-];
+  [
+    "./styles/common/ultrawide-layout-fix.css",
+    "1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.",
+  ],
+  [
+    "./styles/common/large-desktop-layout.css",
+    "공통 1920px 이상 컨테이너 가이드는 base.css 본체로 통합되었습니다.",
+  ],
+  [
+    "./styles/pages/home-about-large-desktop.css",
+    "About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.",
+  ],
+  [
+    "./styles/pages/home-experience-large-desktop.css",
+    "Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.",
+  ],
+  [
+    "./styles/pages/home-service-large-desktop.css",
+    "서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.",
+  ],
+  [
+    "./styles/pages/home-contact-large-desktop.css",
+    "홈 CTA 대형 화면 규칙은 home-contact.css 본체로 통합되었습니다.",
+  ],
+  [
+    "./styles/common/ui-system-stage6.css",
+    "Stage 6은 semantic ui-system.css로 전환되어 삭제되었습니다.",
+  ],
+  [
+    "./styles/common/responsive-qa-stage7.css",
+    "Stage 7은 semantic responsive-safety 레이어로 축소되어 삭제되었습니다.",
+  ],
+  [
+    "./styles/common/responsive-refinement-stage8.css",
+    "Stage 8은 페이지별 반응형 모듈로 분해되어 삭제되었습니다.",
+  ],
+].map(([path, reason]) => ({ path, reason }));
 
 const forbiddenPatterns = [
   {
@@ -273,6 +277,15 @@ requireContent(
   errors,
 );
 
+const uiSystemSource = read("client/src/styles/common/ui-system.css");
+requireContent(
+  uiSystemSource,
+  "client/src/styles/common/ui-system.css",
+  [".home-nav__contact-btn.ui-button", ".contact-team-item"],
+  "공통 UI 또는 Contact UI 규칙이 누락되었습니다.",
+  errors,
+);
+
 const responsiveSafetySource = read("client/src/styles/common/responsive-safety.css");
 requireContent(
   responsiveSafetySource,
@@ -320,7 +333,7 @@ console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
 console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide·large-desktop override 금지");
-console.log("반응형 소유권 정책: Stage 7·8 금지 / 공통 안전은 responsive-safety / 특수 보정은 페이지별 responsive CSS");
+console.log("반응형 소유권 정책: Stage 6·7·8 금지 / 공통 UI와 안전 규칙은 semantic CSS에서 관리");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
@@ -334,6 +347,6 @@ console.log("\n[PASS]");
 console.log("- CSS 구조 검사 통과");
 console.log("- 반응형 import 순서 통과");
 console.log("- 대형 화면 레이어 정책 통과");
-console.log("- Stage 7·8 제거 상태 통과");
+console.log("- Stage 6·7·8 제거 상태 통과");
 console.log("- CSS 소유권 경계 통과");
 console.log("- 가로 오버플로 위험 패턴 없음");
