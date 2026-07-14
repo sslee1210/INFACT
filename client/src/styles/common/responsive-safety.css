@@ -101,6 +101,20 @@ iframe {
       overflow-x: hidden;
     }
   }
+
+  .home-nav__mobile-submenu {
+    visibility: hidden !important;
+    transition:
+      grid-template-rows 0.28s ease,
+      visibility 0s linear 0.28s !important;
+  }
+
+  .home-nav__mobile-submenu.is-open {
+    visibility: visible !important;
+    transition:
+      grid-template-rows 0.28s ease,
+      visibility 0s linear 0s !important;
+  }
 }
 
 @media (max-width: 767px) {
