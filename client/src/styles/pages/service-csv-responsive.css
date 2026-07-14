@@ -1,40 +1,6 @@
 /* CSV SERVICE — TARGETED RESPONSIVE CORRECTIONS */
 
-@media (max-width: 1199px) {
-  .service-csv-page .csv-framework-section .csv-vmodel {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin:
-      clamp(28px, 4vw, 44px)
-      auto
-      0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-    border: 0 !important;
-    background: transparent !important;
-  }
-
-  .service-csv-page .csv-framework-section .csv-vmodel img {
-    display: block !important;
-    inline-size: 100% !important;
-    width: 100% !important;
-    max-inline-size: 100% !important;
-    max-width: 100% !important;
-    block-size: auto !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-    transform: none !important;
-    clip-path: none !important;
-  }
-}
-
 @media (max-width: 767px) {
-  .service-csv-page .csv-framework-section .csv-vmodel {
-    width: min(100%, 620px) !important;
-  }
-
   .service-csv-page .service-business-overview__pillars {
     width: 100% !important;
     max-width: 620px !important;
