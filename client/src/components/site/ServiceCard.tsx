@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import type { ServicePanel } from "@/content/homeServicePanels";
 
 type ServiceCardProps = {
@@ -25,6 +26,10 @@ export function ServiceCard({ panel, index: _index, onNavigate }: ServiceCardPro
           <p className="service-card__scope">{panel.phase}</p>
           <p className="service-card__description">{panel.description}</p>
         </div>
+        <span className="service-card__cta" aria-hidden="true">
+          자세히 보기
+          <ArrowRight size={16} strokeWidth={1.8} />
+        </span>
       </div>
     </a>
   );
