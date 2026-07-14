@@ -35,11 +35,24 @@
     height: clamp(2.125rem, 2.7vw, 2.625rem);
   }
 
+  /* Cancel the old 2200px-only 1.5x typography jump. */
+  .home-experience__metric strong {
+    font-size: clamp(2rem, 2.45vw, 2.72rem);
+  }
+
+  .home-experience__metric span {
+    font-size: clamp(0.9rem, 0.92vw, 1.02rem);
+  }
+
   .home-experience__client-marquee {
     padding: clamp(1.25rem, 2.2vw, 2.125rem) 0;
   }
 
   .home-experience__client-track {
     gap: clamp(3.375rem, 6vw, 7.25rem);
+  }
+
+  .home-experience__client {
+    font-size: clamp(1.08rem, 1.28vw, 1.62rem);
   }
 }
