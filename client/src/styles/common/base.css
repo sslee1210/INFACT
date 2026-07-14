@@ -123,3 +123,16 @@ img {
   margin: 0 auto;
   padding-inline: 0;
 }
+
+/* 1920px is the visual baseline. Header, home content and footer keep the same
+   content-width guide on every larger desktop viewport. */
+@media (min-width: 1920px) {
+  .home-main .home-container,
+  .home-main .site-shell,
+  .home-main .container {
+    width: var(--site-content-width) !important;
+    max-width: var(--site-content-max) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
