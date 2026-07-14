@@ -13,7 +13,6 @@ const responsiveFiles = [
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
-  "client/src/styles/common/large-desktop-layout.css",
   "client/src/styles/pages/home-experience-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
@@ -28,7 +27,6 @@ const requiredImportOrder = [
   './styles/pages/references-responsive-stage5.css',
   './styles/common/ui-system-stage6.css',
   './styles/common/responsive-qa-stage7.css',
-  './styles/common/large-desktop-layout.css',
   './styles/pages/home-experience-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
@@ -38,6 +36,11 @@ const forbiddenImports = [
     path: './styles/common/ultrawide-layout-fix.css',
     reason:
       '1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.',
+  },
+  {
+    path: './styles/common/large-desktop-layout.css',
+    reason:
+      '공통 1920px 이상 컨테이너 가이드는 base.css 본체로 통합되었습니다.',
   },
   {
     path: './styles/pages/home-about-large-desktop.css',
@@ -202,6 +205,16 @@ if (stage8Source.includes("@media (min-width: 1920px)")) {
 if (stage8Source.includes(".home-company-intro")) {
   errors.push(
     `${stage8Path} — 소유권 회귀: .home-company-intro 규칙은 client/src/styles/pages/home-company-intro.css에서 관리해야 합니다.`,
+  );
+}
+
+const baseSource = read("client/src/styles/common/base.css");
+if (
+  !baseSource.includes("@media (min-width: 1920px)") ||
+  !baseSource.includes(".home-main .home-container")
+) {
+  errors.push(
+    "client/src/styles/common/base.css — 1920px 이상 공통 컨테이너 가이드가 누락되었습니다.",
   );
 }
 
