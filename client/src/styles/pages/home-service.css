@@ -227,6 +227,48 @@
   cursor: default;
 }
 
+@media (min-width: 1920px) {
+  .service-immersive-section {
+    padding:
+      clamp(5.75rem, 7.2vw, 8rem)
+      0
+      clamp(5.75rem, 7.2vw, 8rem);
+  }
+
+  .service-immersive::before {
+    top: clamp(-26.875rem, -27vw, -22.5rem);
+    left: clamp(-30rem, -30vw, -18.75rem);
+    width: clamp(40rem, 50vw, 86.25rem);
+  }
+
+  .service-immersive {
+    gap: clamp(2.125rem, 3.4vw, 3.375rem);
+  }
+
+  .service-immersive__intro {
+    max-width: 45rem;
+  }
+
+  .service-immersive__summary {
+    max-width: 38.75rem;
+  }
+
+  .service-card-rail {
+    height: 33.75rem;
+  }
+
+  .service-card__content {
+    padding:
+      clamp(1.625rem, 2.2vw, 2.25rem)
+      clamp(1.5rem, 2.4vw, 2.375rem)
+      clamp(1.75rem, 2.5vw, 2.625rem);
+  }
+
+  .service-card__body {
+    max-width: min(100%, 32.5rem);
+  }
+}
+
 @media (max-width: 900px) {
   .service-immersive-section {
     padding: clamp(56px, 12vw, 72px) 0 clamp(58px, 12vw, 76px);
