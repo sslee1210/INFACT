@@ -16,7 +16,6 @@ const responsiveFiles = [
   "client/src/styles/common/large-desktop-layout.css",
   "client/src/styles/pages/home-about-large-desktop.css",
   "client/src/styles/pages/home-experience-large-desktop.css",
-  "client/src/styles/pages/home-service-large-desktop.css",
   "client/src/styles/pages/home-contact-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
@@ -34,7 +33,6 @@ const requiredImportOrder = [
   './styles/common/large-desktop-layout.css',
   './styles/pages/home-about-large-desktop.css',
   './styles/pages/home-experience-large-desktop.css',
-  './styles/pages/home-service-large-desktop.css',
   './styles/pages/home-contact-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
@@ -44,6 +42,11 @@ const forbiddenImports = [
     path: './styles/common/ultrawide-layout-fix.css',
     reason:
       '1920px 이상 공통 스케일 정책과 충돌하는 별도 ultrawide 보정 레이어를 다시 추가하지 마세요.',
+  },
+  {
+    path: './styles/pages/home-service-large-desktop.css',
+    reason:
+      '서비스 대형 화면 규칙은 home-service.css 본체로 통합되었습니다.',
   },
 ];
 
@@ -186,7 +189,7 @@ const stage8Source = read(stage8Path);
 
 if (stage8Source.includes("@media (min-width: 1920px)")) {
   errors.push(
-    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 shared/page-owned large-desktop CSS에서 관리해야 합니다.`,
+    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 shared/page-owned CSS에서 관리해야 합니다.`,
   );
 }
 
@@ -203,6 +206,21 @@ if (
 ) {
   errors.push(
     "client/src/styles/pages/home-company-intro.css — 1920px 이상 회사소개 스케일 규칙이 누락되었습니다.",
+  );
+}
+
+const homeServiceSource = read("client/src/styles/pages/home-service.css");
+if (homeServiceSource.includes("@media (min-width: 2200px)")) {
+  errors.push(
+    "client/src/styles/pages/home-service.css — 레거시 2200px 전용 확대 규칙을 다시 추가하지 마세요.",
+  );
+}
+if (
+  !homeServiceSource.includes("@media (min-width: 1920px)") ||
+  !homeServiceSource.includes(".service-immersive-section")
+) {
+  errors.push(
+    "client/src/styles/pages/home-service.css — 1920px 이상 서비스 스케일 규칙이 누락되었습니다.",
   );
 }
 
