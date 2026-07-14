@@ -26,16 +26,18 @@
     #6570d2 100%
   );
 
-  --home-section-gap: clamp(48px, 5.6vw, 108px);
-  --home-section-pad-top: clamp(80px, 7vw, 112px);
-  --home-section-pad-bottom: clamp(80px, 7vw, 112px);
+  /* Home visual rhythm: headings stay dominant, body copy stays readable,
+     and section spacing varies enough to avoid a flat one-page rhythm. */
+  --home-section-gap: clamp(44px, 5vw, 96px);
+  --home-section-pad-top: clamp(76px, 6.5vw, 104px);
+  --home-section-pad-bottom: clamp(76px, 6.5vw, 104px);
   --home-story-section-height: clamp(680px, 78svh, 820px);
-  --home-standard-section-height: clamp(640px, 78svh, 820px);
-  --home-compact-section-height: clamp(500px, 62svh, 660px);
-  --home-band-section-height: clamp(420px, 52svh, 560px);
+  --home-standard-section-height: clamp(640px, 74svh, 800px);
+  --home-compact-section-height: clamp(500px, 60svh, 640px);
+  --home-band-section-height: clamp(420px, 50svh, 540px);
   --home-content-max: clamp(520px, 42vw, 960px);
-  --home-section-heading-size: clamp(1.82rem, 2.28vw, 3.57rem);
-  --home-section-copy-size: clamp(0.94rem, 0.95vw, 1.56rem);
+  --home-section-heading-size: clamp(1.82rem, 2.28vw, 3rem);
+  --home-section-copy-size: clamp(0.94rem, 0.95vw, 1.12rem);
   --home-media-radius: clamp(22px, 2vw, 28px);
   --home-pill-height: clamp(28px, 2vw, 30px);
   --home-pill-pad-x: clamp(12px, 1.1vw, 14px);
@@ -124,16 +126,17 @@
   min-height: 100dvh;
 }
 
-/* Proportional home tokens above the 1920px baseline. */
+/* Large screens keep using more canvas, but UI scale is intentionally capped
+   by variables.css so 4K does not turn body copy into presentation-sized text. */
 @media (min-width: 1920px) {
   :root {
-    --home-section-gap: 6.75rem;
-    --home-section-pad-top: 7rem;
-    --home-section-pad-bottom: 7rem;
-    --home-story-section-height: 51.25rem;
-    --home-standard-section-height: 51.25rem;
-    --home-compact-section-height: 41.25rem;
-    --home-band-section-height: 35rem;
+    --home-section-gap: clamp(6rem, 5vw, 7.5rem);
+    --home-section-pad-top: clamp(6.5rem, 5vw, 7.5rem);
+    --home-section-pad-bottom: clamp(6.5rem, 5vw, 7.5rem);
+    --home-story-section-height: clamp(51.25rem, 32vw, 64rem);
+    --home-standard-section-height: clamp(49rem, 30vw, 60rem);
+    --home-compact-section-height: clamp(39rem, 24vw, 48rem);
+    --home-band-section-height: clamp(33rem, 20vw, 40rem);
     --home-content-max: 60rem;
     --home-media-radius: 1.75rem;
     --home-pill-height: 1.875rem;
