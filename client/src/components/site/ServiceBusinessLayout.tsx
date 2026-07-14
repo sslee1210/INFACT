@@ -34,7 +34,9 @@ export function ServiceSectionHeader({
       </p>
       <div className="service-business-heading__copy">
         <h2>{title}</h2>
-        {description && <div className="service-business-heading__description">{description}</div>}
+        {description && (
+          <div className="service-business-heading__description">{description}</div>
+        )}
       </div>
     </header>
   );
@@ -114,7 +116,10 @@ export function ServiceContact({
         </div>
 
         <div className="service-business-contact__action">
-          <Link href="/contact" className="service-business-contact__text-link">
+          <Link
+            href="/contact"
+            className="service-business-contact__text-link ui-line-link"
+          >
             <span className="service-business-contact__text">{buttonLabel}</span>
             <svg
               className="service-business-contact__link-line"

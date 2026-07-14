@@ -1,0 +1,186 @@
+/* =========================================================
+   IN-FACT DESIGN SYSTEM TOKENS
+   Stage 6 — single source for spacing, typography, controls and motion
+   ========================================================= */
+
+:root {
+  /* 8pt spacing scale */
+  --ui-space-1: 8px;
+  --ui-space-2: 16px;
+  --ui-space-3: 24px;
+  --ui-space-4: 32px;
+  --ui-space-5: 48px;
+  --ui-space-6: 64px;
+  --ui-space-7: 80px;
+  --ui-space-8: 96px;
+  --ui-space-9: 120px;
+
+  /* surfaces / borders */
+  --ui-surface: #ffffff;
+  --ui-surface-soft: #f7f8fc;
+  --ui-border: rgba(22, 28, 129, 0.14);
+  --ui-border-strong: rgba(22, 28, 129, 0.24);
+
+  /* typography */
+  --ui-display-size: clamp(3rem, 4.6vw, 4.8rem);
+  --ui-title-size: clamp(2.15rem, 3.4vw, 3.4rem);
+  --ui-subtitle-size: clamp(1.55rem, 2.2vw, 2.25rem);
+  --ui-body-size: 1rem;
+  --ui-text-sm: 0.88rem;
+  --ui-text-xs: 0.78rem;
+  --ui-label-size: 0.7rem;
+
+  /* controls */
+  --ui-control-height: 52px;
+  --ui-control-height-compact: 44px;
+  --ui-control-padding-x: 22px;
+  --ui-touch-min: 48px;
+
+  /* corners: restrained, technical */
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 14px;
+
+  /* motion */
+  --ui-duration: 200ms;
+  --ui-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* section rhythm */
+  --ui-section-y: var(--ui-space-9);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --ui-section-y: var(--ui-space-8);
+    --ui-display-size: clamp(2.75rem, 5.5vw, 4rem);
+    --ui-title-size: clamp(2rem, 4.2vw, 3rem);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --ui-section-y: 72px;
+    --ui-display-size: clamp(2.3rem, 10vw, 3.15rem);
+    --ui-title-size: clamp(1.9rem, 8.6vw, 2.55rem);
+    --ui-subtitle-size: clamp(1.35rem, 6.4vw, 1.85rem);
+    --ui-body-size: 0.96rem;
+    --ui-control-height: 50px;
+  }
+}
+
+/* typography utilities */
+.ui-text-display {
+  font-size: var(--ui-display-size);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.ui-text-title {
+  font-size: var(--ui-title-size);
+  line-height: 1.18;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+}
+
+.ui-text-subtitle {
+  font-size: var(--ui-subtitle-size);
+  line-height: 1.3;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+
+.ui-text-body {
+  font-size: var(--ui-body-size);
+  line-height: 1.78;
+}
+
+.ui-section {
+  padding-block: var(--ui-section-y);
+}
+
+/* shared button system */
+.ui-button {
+  min-height: var(--ui-control-height);
+  padding: 0 var(--ui-control-padding-x);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-space-1);
+  border: 1px solid transparent;
+  border-radius: var(--ui-radius-sm);
+  font: inherit;
+  font-size: 0.92rem;
+  line-height: 1;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color var(--ui-duration) var(--ui-ease),
+    background-color var(--ui-duration) var(--ui-ease),
+    border-color var(--ui-duration) var(--ui-ease),
+    transform var(--ui-duration) var(--ui-ease);
+}
+
+.ui-button--compact {
+  min-height: var(--ui-control-height-compact);
+  padding-inline: 18px;
+  font-size: 0.84rem;
+}
+
+.ui-button--primary {
+  border-color: var(--home-blue-strong);
+  background: var(--home-blue-strong);
+  color: #fff;
+}
+
+.ui-button--secondary {
+  border-color: var(--ui-border);
+  background: var(--ui-surface-soft);
+  color: var(--home-blue-strong);
+}
+
+.ui-button--outline {
+  border-color: var(--home-blue-strong);
+  background: transparent;
+  color: var(--home-blue-strong);
+}
+
+.ui-button--text {
+  min-height: var(--ui-control-height-compact);
+  padding-inline: 0;
+  background: transparent;
+  color: var(--home-blue-strong);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ui-button:hover {
+    transform: translateY(-1px);
+  }
+
+  .ui-button--primary:hover {
+    background: #202a86;
+  }
+}
+
+.ui-line-link {
+  transition:
+    transform var(--ui-duration) var(--ui-ease),
+    opacity var(--ui-duration) var(--ui-ease);
+}
+
+.ui-action-row {
+  min-height: var(--ui-touch-min);
+  transition:
+    color var(--ui-duration) var(--ui-ease),
+    border-color var(--ui-duration) var(--ui-ease),
+    background-color var(--ui-duration) var(--ui-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-button,
+  .ui-line-link,
+  .ui-action-row {
+    transition-duration: 0.01ms;
+  }
+}

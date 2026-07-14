@@ -1,4 +1,5 @@
 @import "./styles/common/variables.css";
+@import "./styles/common/design-system.css";
 @import "./styles/common/base.css";
 @import "./styles/common/navigation.css";
 @import "./styles/common/hero.css";
@@ -49,3 +50,6 @@
 
 /* Stage 5 — references responsive overhaul */
 @import "./styles/pages/references-responsive-stage5.css";
+
+/* Stage 6 — canonical UI system / contact / footer */
+@import "./styles/common/ui-system-stage6.css";

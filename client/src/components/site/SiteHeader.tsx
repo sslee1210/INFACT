@@ -241,7 +241,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
           <div className="home-nav__right">
             <button
               type="button"
-              className="home-nav__contact-btn"
+              className="home-nav__contact-btn ui-button ui-button--primary ui-button--compact"
               onClick={() => navigateTo("/contact")}
             >
               문의하기
@@ -399,7 +399,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
 
           <button
             type="button"
-            className="home-nav__mobile-contact"
+            className="home-nav__mobile-contact ui-action-row"
             onClick={() => navigateTo("/contact")}
           >
             <span>프로젝트 문의하기</span>

@@ -74,6 +74,8 @@ function KakaoMapPreview() {
 }
 
 export default function Contact() {
+  const contactPhoneHref = `tel:${contactInfo.phone.replace(/\D/g, "")}`;
+
   return (
     <PageLayout>
       <PageIntro
@@ -123,7 +125,11 @@ export default function Contact() {
               <div className="detail-table">
                 <div className="detail-table__row">
                   <span>전화</span>
-                  <div>{contactInfo.phone}</div>
+                  <div>
+                    <a className="contact-info-link" href={contactPhoneHref}>
+                      {contactInfo.phone}
+                    </a>
+                  </div>
                 </div>
                 <div className="detail-table__row">
                   <span>팩스</span>
@@ -131,7 +137,14 @@ export default function Contact() {
                 </div>
                 <div className="detail-table__row">
                   <span>이메일</span>
-                  <div>{contactInfo.email}</div>
+                  <div>
+                    <a
+                      className="contact-info-link"
+                      href={`mailto:${contactInfo.email}`}
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </div>
                 </div>
                 <div className="detail-table__row">
                   <span>주소</span>
