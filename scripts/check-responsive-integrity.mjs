@@ -13,7 +13,6 @@ const responsiveFiles = [
   "client/src/styles/pages/references-responsive-stage5.css",
   "client/src/styles/common/ui-system-stage6.css",
   "client/src/styles/common/responsive-qa-stage7.css",
-  "client/src/styles/pages/home-experience-large-desktop.css",
   "client/src/styles/common/responsive-refinement-stage8.css",
 ];
 
@@ -27,7 +26,6 @@ const requiredImportOrder = [
   './styles/pages/references-responsive-stage5.css',
   './styles/common/ui-system-stage6.css',
   './styles/common/responsive-qa-stage7.css',
-  './styles/pages/home-experience-large-desktop.css',
   './styles/common/responsive-refinement-stage8.css',
 ];
 
@@ -46,6 +44,11 @@ const forbiddenImports = [
     path: './styles/pages/home-about-large-desktop.css',
     reason:
       'About 대형 화면 규칙은 home-about.css 본체로 통합되었습니다.',
+  },
+  {
+    path: './styles/pages/home-experience-large-desktop.css',
+    reason:
+      'Experience 대형 화면 규칙은 기존 Home 반응형 레이어로 통합되었습니다.',
   },
   {
     path: './styles/pages/home-service-large-desktop.css',
@@ -198,7 +201,7 @@ const stage8Source = read(stage8Path);
 
 if (stage8Source.includes("@media (min-width: 1920px)")) {
   errors.push(
-    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 shared/page-owned CSS에서 관리해야 합니다.`,
+    `${stage8Path} — 대형 화면 소유권 회귀: 1920px+ 규칙은 기존 base/page responsive CSS에서 관리해야 합니다.`,
   );
 }
 
@@ -268,6 +271,17 @@ if (
   );
 }
 
+const homeResponsiveSource = read("client/src/styles/pages/home-responsive-stage2.css");
+if (
+  !homeResponsiveSource.includes("@media (min-width: 1920px)") ||
+  !homeResponsiveSource.includes(".home-experience__metric strong") ||
+  !homeResponsiveSource.includes(".home-experience__client-track")
+) {
+  errors.push(
+    "client/src/styles/pages/home-responsive-stage2.css — 1920px 이상 Experience 정상화 규칙이 누락되었습니다.",
+  );
+}
+
 const stage8Index = importMatches.indexOf(
   "./styles/common/responsive-refinement-stage8.css",
 );
@@ -280,8 +294,8 @@ if (stage8Index !== importMatches.length - 1) {
 console.log("\n[IN-FACT Responsive Integrity Check]");
 console.log(`검사 파일: ${responsiveFiles.length}개`);
 console.log("정책: 100vw 금지 / 50vw full-bleed 금지 / 명시적 가로 스크롤 금지");
-console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 ultrawide override 금지");
-console.log("CSS 소유권 정책: Stage 8은 모바일 보정 전용 / 대형 화면은 shared/page-owned CSS");
+console.log("대형 화면 정책: 1920px 이상 공통 스케일 / 별도 large-desktop·ultrawide import 금지");
+console.log("CSS 소유권 정책: Stage 8은 모바일 보정 전용 / 대형 화면은 기존 base/page responsive CSS");
 console.log("\n[참고: override 밀도]");
 for (const warning of warnings) console.log(`- ${warning}`);
 
