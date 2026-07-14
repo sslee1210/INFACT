@@ -66,24 +66,26 @@
 }
 
 /* =========================================================
-   DESKTOP SCALE SYSTEM
+   LARGE DESKTOP SCALE SYSTEM
    1920px is the visual baseline.
-   Above 1920px, the entire site scales proportionally:
-   header + main content + footer + typography + spacing.
+
+   - Layout keeps the same 12.5% / 75% / 12.5% guide.
+   - Typography and rem-based UI scale only to a controlled 20px root cap.
+   - Media and layout can continue using viewport space without turning body
+     copy, buttons or cards into oversized 4K UI.
    ========================================================= */
 
 @media (min-width: 1920px) {
   html {
-    /* 1920px -> 16px, 2560px -> 21.333px, 3840px -> 32px */
-    font-size: 0.833333vw;
+    /* 1920px -> 16px, 2400px+ -> capped at 20px */
+    font-size: clamp(16px, 0.833333vw, 20px);
   }
 
   :root {
-    /* 1920 baseline: 240px margin / 1440px content.
-       Because these are rem-based, they grow at exactly the same ratio
-       as the viewport on larger screens. */
-    --site-content-max: 90rem;
-    --site-edge-gutter: 15rem;
+    /* Keep the shared header / main / footer guide proportional even after
+       typography stops scaling. */
+    --site-content-max: 75vw;
+    --site-edge-gutter: 12.5vw;
 
     --fluid-gap-xs: 0.75rem;
     --fluid-gap-sm: 1.125rem;
