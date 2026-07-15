@@ -42,7 +42,6 @@
 
 /* Page-family responsive layouts */
 @import "./styles/pages/home-responsive.css";
-@import "./styles/pages/home-about-cycle-responsive.css";
 @import "./styles/pages/company-responsive.css";
 @import "./styles/pages/company-content-guide.css";
 @import "./styles/pages/services-responsive.css";
@@ -56,6 +55,9 @@
 
 /* Final Home mobile visual corrections */
 @import "./styles/pages/home-mobile-redesign.css";
+
+/* Final Home About cycle geometry */
+@import "./styles/pages/home-about-cycle-responsive.css";
 
 /* Final mobile organization axis geometry */
 @import "./styles/pages/company-organization-mobile-axis.css";
