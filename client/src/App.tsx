@@ -1,4 +1,5 @@
-import { Route, Router, Switch } from "wouter";
+import { useEffect } from "react";
+import { Route, Router, Switch, useLocation } from "wouter";
 import { useHashLocation } from "wouter/use-hash-location";
 import Company from "./pages/Company";
 import CompanyHistory from "./pages/CompanyHistory";
@@ -13,9 +14,20 @@ import ServiceCSV from "./pages/ServiceCSV";
 import ServiceDesign from "./pages/ServiceDesign";
 import ServiceGMP from "./pages/ServiceGMP";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <Router hook={useHashLocation}>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/company" component={Company} />
