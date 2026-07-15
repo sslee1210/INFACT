@@ -42,7 +42,7 @@ export const servicePages = {
     intro:
       "GMP Consulting은 제조소 운영체계, 기준서 및 절차, 점검 및 대응 범위를 프로젝트 일정 안에서 정리하는 서비스입니다.",
     overview:
-      "제조 및 운영체계, 규정/절차, qualification 및 inspection 대응 범위를 프로젝트 상황에 맞게 조정합니다.",
+      "제조 및 운영체계, 규정/절차, Qualification 및 Inspection 대응 범위를 프로젝트 상황에 맞게 조정합니다.",
     scope: [
       "Project Master Plan 및 일정/역할 구조 정리",
       "QMS / SOP / Training / CAPA / Change Control 검토",
@@ -51,7 +51,7 @@ export const servicePages = {
     ],
     workflow: ["범위 정의", "규정 및 기준 검토", "운영체계 정리", "문서화 및 대응 방안 정리"],
     applicable: ["KGMP / BGMP / VGMP 환경", "운영체계 구축", "점검 준비 및 기준서 정비"],
-    deliverables: ["Project Plan", "Gap Review", "QMS / SOP 체계 제안", "점검 결과 및 대응 자료"],
+    deliverables: ["Project Plan", "GAP Review", "QMS / SOP 체계 제안", "점검 결과 및 대응 자료"],
   },
   design: {
     title: "Conceptual Design",

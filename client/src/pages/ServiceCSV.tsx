@@ -57,7 +57,7 @@ const lifecycleColumns = [
 const frameworkDescriptions = [
   ["01", "Business Framework", "시스템 검증 전략, 범위, 역할과 책임, 일정 및 산출물 계획을 수립합니다."],
   ["02", "Design Framework", "사용자 요구사항과 설계 적합성을 검토하고 기능 위험 및 경감 방안을 도출합니다."],
-  ["03", "Implementation Framework", "설치·운전·성능, 기능, SOP, 교육 및 운영 준비상태를 계획에 따라 검증합니다."],
+  ["03", "Implementation Framework", "시스템 기능, 설계, SOP, 교육 및 운영 준비상태를 계획에 따라 검증합니다."],
   ["04", "On-going Framework", "변경관리, 일탈, 정기평가 및 운영 교육을 통해 검증 상태를 유지합니다."],
 ];
 
@@ -172,7 +172,7 @@ export default function ServiceCSV() {
         <ServiceOverview
           eyebrow="02 · CSV Consulting"
           title="시스템 요구사항부터 시험 증적까지 추적성을 연결합니다."
-          description="CSV Consulting은 전산 시스템의 운영 목적과 규제 요구사항을 연결해 검증 범위와 문서 패키지를 정리하는 서비스입니다."
+          description="CSV Consulting은 GxP 컴퓨터 시스템의 운영 목적과 규제 요구사항을 분석하여 적절한 검증 범위와 문서 패키지를 수립하는 서비스입니다."
           pillars={[
             { number: "01", title: "대상 시스템" },
             { number: "02", title: "진행 흐름" },
@@ -212,7 +212,7 @@ export default function ServiceCSV() {
               index="04"
               label="CSV Lifecycle"
               title="컴퓨터화 시스템 밸리데이션 생애주기"
-              description="컴퓨터화 시스템의 전 생애주기 동안 규정, 업무 목적, 시스템 기능 및 데이터 무결성을 연결하여 검증 활동을 관리합니다."
+              description="컴퓨터화 시스템의 전 생애주기 동안 요구사항 정의부터 검증까지 체계적으로 관리하여 규정 준수와 데이터 무결성을 확보합니다."
             />
 
             <div className="csv-lifecycle-grid">
@@ -382,7 +382,7 @@ export default function ServiceCSV() {
                   <strong>Performance Qualification</strong>
                 </div>
                 <div className="csv-deliverables-matrix__purpose">
-                  설치, 기능, 운전 및 실제 사용조건에서 시스템이 의도대로 동작함을 시험하고 증적화합니다.
+                  설치부터 실제 운영 환경까지 시스템이 요구사항에 따라 의도대로 동작하는지 검증하고, 검증 결과를 문서화합니다.
                 </div>
               </div>
 
