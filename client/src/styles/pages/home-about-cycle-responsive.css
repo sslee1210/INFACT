@@ -1,0 +1,21 @@
+/* Home About process cycle — mobile viewport-safe centering */
+@media (max-width: 767px) {
+  .about-process-cycle {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    width: min(100%, 420px) !important;
+    max-width: 420px !important;
+    margin: clamp(34px, 9vw, 48px) auto 0 !important;
+    transform: none !important;
+  }
+
+  .about-process-cycle__svg {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+}
