@@ -12,6 +12,18 @@ function read(relativePath) {
   return fs.readFileSync(absolutePath, "utf8");
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function hasExactModuleImport(source, modulePath) {
+  const escapedModulePath = escapeRegExp(modulePath);
+  const importPattern = new RegExp(
+    `(?:from\\s+|import\\s*)["']${escapedModulePath}["']`,
+  );
+  return importPattern.test(source);
+}
+
 const errors = [];
 
 const appSource = read("client/src/App.tsx");
@@ -45,7 +57,7 @@ for (const obsoleteImport of [
   './pages/History',
   './pages/References',
 ]) {
-  if (appSource.includes(obsoleteImport)) {
+  if (hasExactModuleImport(appSource, obsoleteImport)) {
     errors.push(`client/src/App.tsx — 삭제된 구형 페이지 import 재도입: ${obsoleteImport}`);
   }
 }
