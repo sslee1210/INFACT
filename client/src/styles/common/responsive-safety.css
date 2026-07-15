@@ -62,9 +62,9 @@ iframe {
 /* =========================================================
    GLOBAL TEXT-FLOW SAFETY
 
-   Keep Korean words intact when space allows, but permit an
-   emergency break for long English terms, URLs and technical
-   strings before they can escape or be clipped by a container.
+   Keep Korean words intact. Only exceptionally long unbroken
+   strings such as URLs or technical identifiers may break when
+   they would otherwise overflow their container.
    ========================================================= */
 
 :where(.site-app, .home-shell) :where(
@@ -90,7 +90,7 @@ iframe {
 ) {
   max-inline-size: 100%;
   min-inline-size: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: keep-all;
 }
 
@@ -164,7 +164,8 @@ iframe {
   .csv-year-page,
   .contact-page
 ) :where(p, li, dd, a, strong) {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 :where(
