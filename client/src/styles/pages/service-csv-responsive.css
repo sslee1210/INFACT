@@ -1,5 +1,26 @@
 /* CSV SERVICE — TARGETED RESPONSIVE CORRECTIONS */
 
+/*
+ * Korean copy must wrap only at word boundaries.
+ * This file is imported after the global responsive safety layer,
+ * so these selectors intentionally override emergency word breaking.
+ */
+.service-csv-page .service-business-overview__description,
+.service-csv-page .service-business-heading__description,
+.service-csv-page .csv-deliverables-matrix__purpose,
+.service-csv-page .service-business-table__row p,
+.service-csv-page .service-business-flow-list p,
+.service-csv-page .csv-framework-roadmap__purpose,
+.service-csv-page .csv-framework-roadmap__details p,
+.service-csv-page .csv-scope-card p,
+.service-csv-page .csv-lifecycle-item p {
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  word-break: keep-all !important;
+  line-break: strict;
+  white-space: normal !important;
+}
+
 @media (max-width: 767px) {
   .service-csv-page .service-business-overview__pillars {
     width: 100% !important;
@@ -53,6 +74,8 @@
     font-size: clamp(0.72rem, 2.9vw, 0.94rem) !important;
     line-height: 1.35 !important;
     font-weight: 850 !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
     word-break: keep-all !important;
     text-align: center !important;
   }
