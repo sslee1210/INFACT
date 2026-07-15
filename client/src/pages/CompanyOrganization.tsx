@@ -41,18 +41,6 @@ export default function CompanyOrganization() {
 
                   <div className="org-tree__secondary-node org-tree__secondary-node--csv">
                     <div className="org-tree__box org-tree__box--secondary">CSV 사업부</div>
-
-                    <div className="org-tree__teams">
-                      <div className="org-tree__team">
-                        <div className="org-tree__box org-tree__box--team">자동제어</div>
-                      </div>
-                      <div className="org-tree__team">
-                        <div className="org-tree__box org-tree__box--team">CSV 1팀</div>
-                      </div>
-                      <div className="org-tree__team">
-                        <div className="org-tree__box org-tree__box--team">CSV 2팀</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -91,12 +79,6 @@ export default function CompanyOrganization() {
                   <div className="org-mobile-branch__child org-mobile-branch__child--csv">
                     <div className="org-mobile-branch__node org-mobile-branch__node--secondary org-mobile-branch__node--csv">
                       CSV 사업부
-                    </div>
-
-                    <div className="org-mobile-branch__teams">
-                      <div className="org-mobile-branch__team">자동제어</div>
-                      <div className="org-mobile-branch__team">CSV 1팀</div>
-                      <div className="org-mobile-branch__team">CSV 2팀</div>
                     </div>
                   </div>
                 </div>
