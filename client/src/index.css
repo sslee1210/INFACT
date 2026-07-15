@@ -42,6 +42,7 @@
 
 /* Page-family responsive layouts */
 @import "./styles/pages/home-responsive.css";
+@import "./styles/pages/home-about-cycle-responsive.css";
 @import "./styles/pages/company-responsive.css";
 @import "./styles/pages/company-content-guide.css";
 @import "./styles/pages/services-responsive.css";
