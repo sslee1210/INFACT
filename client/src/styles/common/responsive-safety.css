@@ -94,6 +94,15 @@ iframe {
   word-break: keep-all;
 }
 
+/*
+ * Emergency wrapping is intentionally limited to technical strings.
+ * Normal Korean copy keeps whole words together.
+ */
+:where(.site-app, .home-shell) :where(.text-break-anywhere, code, pre) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 :where(.site-app, .home-shell) :where(
   h1,
   h2,
