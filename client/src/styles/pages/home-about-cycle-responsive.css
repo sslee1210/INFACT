@@ -1,12 +1,12 @@
-/* Home About process cycle — mobile viewport-safe centering */
-@media (max-width: 767px) {
+/* Home About process cycle — final mobile geometry ownership */
+@media (max-width: 47.9375rem) {
   .about-process-cycle {
     position: static !important;
     left: auto !important;
     right: auto !important;
-    width: min(100%, 420px) !important;
-    max-width: 420px !important;
-    margin: clamp(34px, 9vw, 48px) auto 0 !important;
+    width: min(100%, 32rem) !important;
+    max-width: 32rem !important;
+    margin: clamp(2rem, 8vw, 2.75rem) auto 0 !important;
     transform: none !important;
   }
 
@@ -15,7 +15,13 @@
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    margin: 0 auto !important;
+    margin-inline: auto !important;
     transform: none !important;
+    overflow: visible !important;
+  }
+
+  .about-process-cycle__labels text {
+    font-size: 1.375rem !important;
+    stroke-width: 0.25rem !important;
   }
 }
