@@ -49,14 +49,29 @@ export const servicePages = {
       "Qualification / Validation 범위 검토",
       "Inspection 대응 자료 및 현장 준비 지원",
     ],
-    workflow: ["범위 정의", "규정 및 기준 검토", "운영체계 정리", "문서화 및 대응 방안 정리"],
-    applicable: ["KGMP / BGMP / VGMP 환경", "운영체계 구축", "점검 준비 및 기준서 정비"],
-    deliverables: ["Project Plan", "GAP Review", "QMS / SOP 체계 제안", "점검 결과 및 대응 자료"],
+    workflow: [
+      "범위 정의",
+      "규정 및 기준 검토",
+      "운영체계 정리",
+      "문서화 및 대응 방안 정리",
+    ],
+    applicable: [
+      "KGMP / BGMP / VGMP 환경",
+      "운영체계 구축",
+      "점검 준비 및 기준서 정비",
+    ],
+    deliverables: [
+      "Project Plan",
+      "GAP Review",
+      "QMS / SOP 체계 제안",
+      "점검 결과 및 대응 자료",
+    ],
   },
+
   design: {
     title: "Conceptual Design",
     intro:
-      "Conceptual Design은 질의서와 워크숍을 통해 제품 특성, 생산량, 제조공정과 시설 요구사항을 수집하고 GMP Layout과 운영 동선을 구체화하는 초기 설계 서비스입니다.",
+      "Conceptual Design은 질의서와 워크숍을 통해 제품 특성, 생산량, 제조공정과 시설 요구사항을\n수집하고 GMP Layout과 운영 동선을 구체화하는 초기 설계 서비스입니다.",
     overview:
       "필요 작업실과 장비 수량, 구획, 청정등급, 인동선·물동선·폐기물 동선, 유틸리티와 보관 조건을 함께 검토해 상세설계의 기준이 되는 도면과 보고서를 정리합니다.",
     scope: [
@@ -74,7 +89,12 @@ export const servicePages = {
       "최종 Workshop 및 Feed-back 반영",
       "최종 도면과 개념설계 보고서 문서화",
     ],
-    applicable: ["신규 제조소", "리모델링", "증설", "초기 기획 단계 시설 프로젝트"],
+    applicable: [
+      "신규 제조소",
+      "리모델링",
+      "증설",
+      "초기 기획 단계 시설 프로젝트",
+    ],
     deliverables: [
       "Facility Size 및 Site Plan",
       "GMP Layout, Equipment Plan, 청정등급 및 Zone Division",

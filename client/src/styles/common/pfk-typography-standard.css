@@ -1,0 +1,626 @@
+/* =========================================================
+   PFK Computer System Validation typography standard
+   Reference: https://www.pfk.co.kr/service/computer.php
+
+   Desktop scale:
+   61.2 / 43.2 / 37.8 / 34.2 / 25.2 / 21.6 / 18 /
+   16.2 / 14.4 / 14 / 13.5 / 12.6px
+
+   Mobile scale:
+   30 / 26 / 24 / 23 / 19 / 18 / 17 / 16 / 15 /
+   14 / 13 / 12.6 / 11px
+
+   This stylesheet is imported after every page stylesheet so that
+   the site uses one measured typography scale without layout changes.
+   ========================================================= */
+
+:root {
+  --pfk-display: 61.2px;
+  --pfk-page-title: 43.2px;
+  --pfk-section-title: 37.8px;
+  --pfk-overview-title: 34.2px;
+  --pfk-emphasis: 25.2px;
+  --pfk-lead: 21.6px;
+  --pfk-body: 18px;
+  --pfk-support: 16.2px;
+  --pfk-control: 14.4px;
+  --pfk-note: 14px;
+  --pfk-meta: 13.5px;
+  --pfk-label: 12.6px;
+}
+
+/* Shared navigation and controls */
+.home-nav__menu-button {
+  font-size: var(--pfk-body) !important;
+}
+
+.home-nav__mega-link,
+.home-nav__contact-btn,
+.ui-button,
+.site-button,
+.text-link {
+  font-size: var(--pfk-control) !important;
+}
+
+.home-nav__today > span {
+  font-size: var(--pfk-label) !important;
+}
+
+.home-nav__today > strong {
+  font-size: var(--pfk-control) !important;
+}
+
+.page-subnav > button,
+.page-breadcrumb > li {
+  font-size: var(--pfk-support) !important;
+}
+
+/* Shared page hierarchy */
+.page-title {
+  font-size: var(--pfk-page-title) !important;
+}
+
+.section-title,
+.company-organization__title,
+.service-business-heading h2,
+.service-business-overview__head h2,
+.service-business-contact__copy h2,
+.csv-year-content__head h2 {
+  font-size: var(--pfk-section-title) !important;
+}
+
+.company-greeting .company-section__heading .section-title,
+.csv-year-page .csv-year-page__intro .section-title {
+  font-size: var(--pfk-section-title) !important;
+}
+
+.page-description {
+  font-size: var(--pfk-support) !important;
+}
+
+.section-label {
+  font-size: var(--pfk-control) !important;
+}
+
+.service-business-page .service-business-heading .section-label,
+.service-business-page .service-business-overview__head .section-label {
+  font-size: var(--pfk-control) !important;
+}
+
+.body-copy {
+  font-size: var(--pfk-body) !important;
+}
+
+.company-greeting .body-copy {
+  font-size: var(--pfk-body) !important;
+}
+
+/* Home */
+.hero__title {
+  font-size: var(--pfk-display) !important;
+}
+
+.hero__subtitle {
+  font-size: var(--pfk-lead) !important;
+}
+
+.hero__scroll-label,
+.home-company-intro__link,
+.service-immersive__eyebrow,
+.service-card__label,
+.service-card__cta,
+.home-cta-banner__button,
+.home-cta-banner__button-label {
+  font-size: var(--pfk-control) !important;
+}
+
+.home-company-intro__lead h2,
+.home-experience__head h2,
+.service-immersive__title,
+.home-cta-banner__content h2,
+.about-blend-desc {
+  font-size: var(--pfk-section-title) !important;
+}
+
+.home-company-intro__copy p,
+.home-company-intro__statement,
+.home-experience__head p:not(.home-experience__label),
+.service-immersive__summary,
+.home-cta-banner__content p {
+  font-size: var(--pfk-body) !important;
+}
+
+.home-company-intro .home-company-intro__statement {
+  font-size: var(--pfk-body) !important;
+}
+
+.service-card__title,
+.home-experience__client {
+  font-size: var(--pfk-lead) !important;
+}
+
+.service-card__scope {
+  font-size: var(--pfk-support) !important;
+}
+
+.home-experience__metric > strong {
+  font-size: var(--pfk-section-title) !important;
+}
+
+.home-experience__metric > span {
+  font-size: var(--pfk-control) !important;
+}
+
+.about-process-cycle__labels text {
+  font-size: var(--pfk-emphasis) !important;
+}
+
+/* Company, history and organization */
+.company-greeting__quote,
+.history-list__titleRow h3 {
+  font-size: var(--pfk-body) !important;
+}
+
+.company-greeting__signature {
+  font-size: var(--pfk-control) !important;
+}
+
+.history-list__item time,
+.history-list__content li {
+  font-size: var(--pfk-meta) !important;
+}
+
+.org-tree__box--lead {
+  font-size: var(--pfk-body) !important;
+}
+
+.org-tree__box--primary,
+.org-tree__box--secondary {
+  font-size: var(--pfk-support) !important;
+}
+
+/* Service pages: titles and primary reading text */
+.service-business-heading__description,
+.service-business-overview__description {
+  font-size: var(--pfk-lead) !important;
+}
+
+.service-business-page h3 {
+  font-size: var(--pfk-lead) !important;
+}
+
+.service-business-page .service-business-table__row > strong,
+.service-business-page .service-business-table__row > p,
+.service-business-overview__pillar > span,
+.service-business-overview__pillar > strong,
+.csv-lifecycle-item > strong,
+.csv-lifecycle-item > p,
+.csv-scope-card > span,
+.csv-scope-card > p,
+.csv-framework-roadmap__phase > strong,
+.csv-framework-roadmap__phase > em,
+.csv-framework-roadmap__purpose,
+.csv-framework-roadmap__output > strong {
+  font-size: var(--pfk-body) !important;
+}
+
+.service-business-contact__copy > p:last-child {
+  font-size: var(--pfk-body) !important;
+}
+
+.service-business-contact__eyebrow,
+.service-business-contact__text {
+  font-size: var(--pfk-control) !important;
+}
+
+/* Service matrices and structured supporting content */
+.design-process-matrix__step > strong,
+.design-room-row__title > strong,
+.design-input-matrix__row > strong,
+.design-input-matrix__row > p,
+.design-review-matrix__row > strong,
+.design-review-matrix__row > p,
+.design-deliverables-matrix__group > strong,
+.gmp-framework__stage > strong,
+.gmp-framework__scope > p,
+.gmp-framework__deliverable,
+.gmp-framework__applicable,
+.gmp-scope-matrix__row > strong,
+.gmp-deliverables-matrix__row > strong,
+.gmp-deliverables-matrix__row > p,
+.csv-deliverables-matrix__docs > strong,
+.csv-deliverables-matrix__purpose {
+  font-size: var(--pfk-support) !important;
+}
+
+.service-design-page dl dd,
+.service-design-page ul li {
+  font-size: var(--pfk-support) !important;
+}
+
+.design-flow > li > strong,
+.csv-framework-description > div > strong,
+.csv-deliverables-matrix__phase > strong {
+  font-size: var(--pfk-body) !important;
+}
+
+.csv-framework-description > div > p,
+.csv-framework-roadmap__details > div > strong,
+.csv-framework-roadmap__details > div > p {
+  font-size: var(--pfk-support) !important;
+}
+
+.design-flow > li > span,
+.csv-framework-description > div > span {
+  font-size: var(--pfk-label) !important;
+}
+
+.design-process-matrix__step > span,
+.design-room-row__title > span,
+.design-deliverables-matrix__group > span,
+.design-review-matrix__head > span,
+.design-input-matrix__head > span,
+.design-deliverables-matrix__head > span,
+.gmp-framework__head > span,
+.gmp-framework__stage > span,
+.gmp-scope-matrix__row > span,
+.gmp-deliverables-matrix__head > span,
+.gmp-deliverables-matrix__row > span,
+.csv-framework-roadmap__phase > span,
+.csv-framework-roadmap__output > span,
+.csv-deliverables-matrix__head > div,
+.csv-deliverables-matrix__phase > span,
+.service-design-page dl dt {
+  font-size: var(--pfk-label) !important;
+}
+
+/* References */
+.csv-year-menu__title > span {
+  font-size: var(--pfk-label) !important;
+}
+
+.csv-year-content__head > div > span {
+  font-size: var(--pfk-label) !important;
+}
+
+.csv-year-menu__title > strong,
+.csv-year-empty > p {
+  font-size: var(--pfk-support) !important;
+}
+
+.csv-year-menu button > span,
+.csv-year-menu__arrow > span {
+  font-size: var(--pfk-lead) !important;
+}
+
+.csv-year-card__body li {
+  font-size: var(--pfk-control) !important;
+}
+
+/* Contact */
+.contact-team-item__title > h3 {
+  font-size: var(--pfk-lead) !important;
+}
+
+.contact-team-item__title > span,
+.contact-team-item__details dt {
+  font-size: var(--pfk-label) !important;
+}
+
+.contact-team-item__details dd,
+.contact-team-item__details a {
+  font-size: var(--pfk-support) !important;
+}
+
+.contact-map__address > strong {
+  font-size: var(--pfk-control) !important;
+}
+
+.contact-map__address > small,
+.contact-map__address > em,
+.contact-map__address-actions > span,
+.contact-map__scale {
+  font-size: var(--pfk-label) !important;
+}
+
+.contact-map__brand {
+  font-size: var(--pfk-meta) !important;
+}
+
+/* Footer */
+.site-footer__heading {
+  font-size: var(--pfk-label) !important;
+}
+
+.site-footer__brand-copy,
+.site-footer__links a {
+  font-size: var(--pfk-control) !important;
+}
+
+.site-footer__company-meta,
+.site-footer__company-meta p,
+.site-footer__company-meta a,
+.site-footer__bottom,
+.site-footer__bottom a {
+  font-size: var(--pfk-meta) !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-nav__mobile-today-inline > span {
+    font-size: var(--pfk-label) !important;
+  }
+
+  .home-nav__mobile-today-inline > strong {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .org-mobile-tree__lead {
+    font-size: var(--pfk-body) !important;
+  }
+
+  .org-mobile-branch__node--primary,
+  .org-mobile-branch__node--secondary {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .csv-year-page .csv-year-menu nav button > span {
+    font-size: var(--pfk-support) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --pfk-display: 30px;
+    --pfk-page-title: 26px;
+    --pfk-section-title: 24px;
+    --pfk-overview-title: 23px;
+    --pfk-emphasis: 17px;
+    --pfk-lead: 18px;
+    --pfk-body: 16px;
+    --pfk-support: 15px;
+    --pfk-control: 14px;
+    --pfk-note: 14px;
+    --pfk-meta: 13px;
+    --pfk-label: 12.6px;
+    --pfk-index: 11px;
+  }
+
+  .home-nav__mobile-primary {
+    font-size: 19px !important;
+  }
+
+  .home-nav__mobile-link {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .home-nav__mobile-panel-label,
+  .home-nav__mobile-contact,
+  .home-nav__contact-btn {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .home-nav__mobile-today-inline > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .home-nav__mobile-today-inline > strong {
+    font-size: var(--pfk-label) !important;
+  }
+
+  .page-subnav > button {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .page-breadcrumb > li {
+    font-size: var(--pfk-meta) !important;
+  }
+
+  .hero__subtitle {
+    font-size: 17px !important;
+  }
+
+  .hero__scroll-label,
+  .home-company-intro__link,
+  .service-immersive__eyebrow,
+  .service-card__label,
+  .service-card__cta,
+  .home-cta-banner__button,
+  .home-cta-banner__button-label {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .home-company-intro__copy p,
+  .home-company-intro__statement,
+  .home-experience__head p:not(.home-experience__label),
+  .service-immersive__summary,
+  .home-cta-banner__content p {
+    font-size: var(--pfk-body) !important;
+  }
+
+  .service-card__title,
+  .home-experience__client {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .service-card__scope {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .home-experience__metric > strong {
+    font-size: 30px !important;
+  }
+
+  .home-experience__metric > span {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .about-process-cycle__labels text {
+    font-size: 17px !important;
+  }
+
+  .company-greeting__quote,
+  .history-list__titleRow h3 {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .company-greeting__signature,
+  .history-list__content li {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .history-list__item time {
+    font-size: var(--pfk-meta) !important;
+  }
+
+  .org-mobile-tree__lead {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .org-mobile-branch__node--primary {
+    font-size: var(--pfk-body) !important;
+  }
+
+  .org-mobile-branch__node--secondary {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .service-business-heading__description,
+  .service-business-overview__description,
+  .service-business-contact__copy > p:last-child {
+    font-size: var(--pfk-body) !important;
+  }
+
+  .service-business-page h3 {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .service-business-page .service-business-table__row > strong,
+  .service-business-page .service-business-table__row > p,
+  .service-business-overview__pillar > strong,
+  .csv-lifecycle-item > strong,
+  .csv-lifecycle-item > p,
+  .csv-scope-card > p,
+  .csv-framework-roadmap__phase > strong,
+  .csv-framework-roadmap__phase > em,
+  .csv-framework-roadmap__purpose,
+  .csv-framework-roadmap__output > strong,
+  .design-process-matrix__step > strong,
+  .design-room-row__title > strong,
+  .design-input-matrix__row > strong,
+  .design-input-matrix__row > p,
+  .design-review-matrix__row > strong,
+  .design-deliverables-matrix__group > strong,
+  .gmp-framework__stage > strong,
+  .gmp-framework__scope > p,
+  .gmp-framework__deliverable,
+  .gmp-framework__applicable,
+  .gmp-scope-matrix__row > strong,
+  .gmp-deliverables-matrix__row > strong,
+  .csv-deliverables-matrix__docs > strong,
+  .csv-deliverables-matrix__purpose {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .design-flow > li > strong,
+  .csv-framework-description > div > strong,
+  .csv-framework-description > div > p,
+  .csv-framework-roadmap__details > div > strong,
+  .csv-framework-roadmap__details > div > p,
+  .csv-deliverables-matrix__phase > strong {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .service-design-page dl dd,
+  .service-design-page ul li,
+  .design-review-matrix__row > p,
+  .gmp-deliverables-matrix__row > p {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .service-business-overview__pillar > span,
+  .csv-scope-card > span,
+  .design-process-matrix__step > span,
+  .design-room-row__title > span,
+  .design-deliverables-matrix__group > span,
+  .gmp-framework__stage > span,
+  .gmp-scope-matrix__row > span,
+  .gmp-deliverables-matrix__row > span,
+  .csv-framework-roadmap__phase > span,
+  .csv-framework-roadmap__output > span,
+  .csv-deliverables-matrix__phase > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .service-csv-page .service-business-overview__pillar > strong {
+    font-size: var(--pfk-label) !important;
+  }
+
+  .design-flow > li > span,
+  .csv-framework-description > div > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .service-business-contact__eyebrow,
+  .service-business-contact__text {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .csv-year-menu__title > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .csv-year-content__head > div > span {
+    font-size: var(--pfk-index) !important;
+  }
+
+  .csv-year-menu__title > strong,
+  .csv-year-empty > p {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .csv-year-menu button > span,
+  .csv-year-menu__arrow > span {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .csv-year-card__body li {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .contact-team-item__title > h3 {
+    font-size: var(--pfk-lead) !important;
+  }
+
+  .contact-team-item__title > span {
+    font-size: var(--pfk-control) !important;
+  }
+
+  .contact-team-item__details dt {
+    font-size: var(--pfk-meta) !important;
+  }
+
+  .contact-team-item__details dd,
+  .contact-team-item__details a {
+    font-size: var(--pfk-support) !important;
+  }
+
+  .contact-map__address > strong,
+  .contact-map__address > small,
+  .contact-map__address > em,
+  .contact-map__address-actions > span,
+  .contact-map__scale {
+    font-size: var(--pfk-label) !important;
+  }
+
+  .contact-map__brand {
+    font-size: var(--pfk-meta) !important;
+  }
+
+  .contact-map__controls > button {
+    font-size: var(--pfk-lead) !important;
+  }
+}

@@ -98,6 +98,7 @@
 }
 
 .service-business-overview__description {
+  white-space: pre-line;
   max-width: 980px;
   margin-top: 18px;
   color: var(--home-text-soft);

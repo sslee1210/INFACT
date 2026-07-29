@@ -4,7 +4,7 @@ import { Link } from "wouter";
 type ServiceSectionHeaderProps = {
   index?: string;
   label: string;
-  title: string;
+  title: ReactNode;
   description?: ReactNode;
   centered?: boolean;
   compact?: boolean;
@@ -32,10 +32,14 @@ export function ServiceSectionHeader({
         {index ? `${index} · ` : ""}
         {label}
       </p>
+
       <div className="service-business-heading__copy">
         <h2>{title}</h2>
+
         {description && (
-          <div className="service-business-heading__description">{description}</div>
+          <div className="service-business-heading__description">
+            {description}
+          </div>
         )}
       </div>
     </header>
@@ -44,9 +48,12 @@ export function ServiceSectionHeader({
 
 type ServiceOverviewProps = {
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   description: ReactNode;
-  pillars: Array<{ number: string; title: string }>;
+  pillars: Array<{
+    number: string;
+    title: string;
+  }>;
 };
 
 export function ServiceOverview({
@@ -60,13 +67,20 @@ export function ServiceOverview({
       <div className="site-shell">
         <div className="service-business-overview__head">
           <p className="section-label">{eyebrow}</p>
+
           <h2>{title}</h2>
-          <div className="service-business-overview__description">{description}</div>
+
+          <div className="service-business-overview__description">
+            {description}
+          </div>
         </div>
 
         <div className="service-business-overview__pillars">
           {pillars.map((pillar) => (
-            <div key={pillar.number} className="service-business-overview__pillar">
+            <div
+              key={pillar.number}
+              className="service-business-overview__pillar"
+            >
               <span>{pillar.number}</span>
               <strong>{pillar.title}</strong>
             </div>
@@ -90,10 +104,15 @@ export function ServiceContact({
 }: ServiceContactProps) {
   return (
     <section className="service-business-contact">
-      <div className="service-business-contact__overlay" aria-hidden="true" />
+      <div
+        className="service-business-contact__overlay"
+        aria-hidden="true"
+      />
+
       <div className="site-shell service-business-contact__inner">
         <div className="service-business-contact__copy">
           <p className="service-business-contact__eyebrow">Contact</p>
+
           <h2>
             {title ?? (
               <>
@@ -103,7 +122,12 @@ export function ServiceContact({
               </>
             )}
           </h2>
-          <span className="service-business-contact__rule" aria-hidden="true" />
+
+          <span
+            className="service-business-contact__rule"
+            aria-hidden="true"
+          />
+
           <p>
             {description ?? (
               <>
@@ -120,7 +144,10 @@ export function ServiceContact({
             href="/contact"
             className="service-business-contact__text-link ui-line-link"
           >
-            <span className="service-business-contact__text">{buttonLabel}</span>
+            <span className="service-business-contact__text">
+              {buttonLabel}
+            </span>
+
             <svg
               className="service-business-contact__link-line"
               viewBox="0 0 246 18"

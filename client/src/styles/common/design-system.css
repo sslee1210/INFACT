@@ -22,13 +22,17 @@
   --ui-border-strong: rgba(22, 28, 129, 0.24);
 
   /* typography */
-  --ui-display-size: clamp(3rem, 4.6vw, 4.8rem);
-  --ui-title-size: clamp(2.15rem, 3.4vw, 3.4rem);
-  --ui-subtitle-size: clamp(1.55rem, 2.2vw, 2.25rem);
-  --ui-body-size: 1rem;
-  --ui-text-sm: 0.88rem;
-  --ui-text-xs: 0.78rem;
-  --ui-label-size: 0.7rem;
+  /* PFK computer.php scale: 61.2 / 43.2 / 37.8 / 34.2 / 25.2 / 21.6 /
+     18 / 16.2 / 14.4 / 14 / 13.5 / 12.6px */
+  --ui-display-size: 3.825rem;
+  --ui-title-size: 2.7rem;
+  --ui-subtitle-size: 2.3625rem;
+  --ui-lead-size: 1.35rem;
+  --ui-body-size: 1.125rem;
+  --ui-support-size: 1.0125rem;
+  --ui-text-sm: 0.9rem;
+  --ui-text-xs: 0.84375rem;
+  --ui-label-size: 0.7875rem;
 
   /* controls */
   --ui-control-height: 52px;
@@ -52,18 +56,23 @@
 @media (min-width: 768px) and (max-width: 1199px) {
   :root {
     --ui-section-y: var(--ui-space-8);
-    --ui-display-size: clamp(2.75rem, 5.5vw, 4rem);
-    --ui-title-size: clamp(2rem, 4.2vw, 3rem);
+    --ui-display-size: clamp(2.7rem, 4.25vw, 3.825rem);
+    --ui-title-size: clamp(2.35rem, 3.5vw, 2.7rem);
   }
 }
 
 @media (max-width: 767px) {
   :root {
     --ui-section-y: 72px;
-    --ui-display-size: clamp(2.3rem, 10vw, 3.15rem);
-    --ui-title-size: clamp(1.9rem, 8.6vw, 2.55rem);
-    --ui-subtitle-size: clamp(1.35rem, 6.4vw, 1.85rem);
-    --ui-body-size: 0.96rem;
+    /* PFK computer.php mobile scale:
+       30 / 26 / 24 / 23 / 19 / 18 / 17 / 16 / 15 / 14 / 13 / 12.6 / 11px */
+    --ui-display-size: 1.875rem;
+    --ui-title-size: 1.625rem;
+    --ui-subtitle-size: 1.5rem;
+    --ui-body-size: 1rem;
+    --ui-text-sm: 0.9375rem;
+    --ui-text-xs: 0.875rem;
+    --ui-label-size: 0.875rem;
     --ui-control-height: 50px;
   }
 }
@@ -110,7 +119,7 @@
   border: 1px solid transparent;
   border-radius: var(--ui-radius-sm);
   font: inherit;
-  font-size: 0.92rem;
+  font-size: var(--ui-text-sm);
   line-height: 1;
   font-weight: 800;
   text-decoration: none;
@@ -125,7 +134,7 @@
 .ui-button--compact {
   min-height: var(--ui-control-height-compact);
   padding-inline: 18px;
-  font-size: 0.84rem;
+  font-size: var(--ui-text-sm);
 }
 
 .ui-button--primary {
