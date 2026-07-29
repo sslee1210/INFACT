@@ -139,20 +139,16 @@ function ConsultingServiceSections({
           />
 
           <div className="consulting-template__structure">
-            <div className="consulting-template__structure-copy consulting-template__reveal">
-              <strong>{data.structure.statement}</strong>
-              <p>{data.structure.detail}</p>
-            </div>
-
             <ol className="consulting-template__structure-phases">
-              {data.structure.phases.map((phase, index) => (
+              {data.structure.phases.map((phase) => (
                 <li
                   key={phase.title}
                   className="consulting-template__reveal"
                 >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <h3>{phase.title}</h3>
-                  <p>{phase.description}</p>
+                  <div className="consulting-template__structure-phase-copy">
+                    <h3>{phase.title}</h3>
+                    <p>{phase.description}</p>
+                  </div>
                 </li>
               ))}
             </ol>

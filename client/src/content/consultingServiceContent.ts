@@ -67,8 +67,6 @@ export type ConsultingServiceData = {
   };
   structure: {
     description: string;
-    statement: string;
-    detail: string;
     phases: StructurePhase[];
   };
   deliverables: {
@@ -170,9 +168,6 @@ export const consultingServicePages: Record<
     structure: {
       description:
         "질의서와 Workshop에서 수집한 생산정보를 공정분석, 공간계획과 GMP 검토로 발전시켜 최종 개념설계 패키지로 확정합니다.",
-      statement: "생산계획에서 Conceptual Design Package까지 이어지는 설계 흐름",
-      detail:
-        "생산·품질·공무 부서와 설계자가 같은 자료를 기준으로 의사결정할 수 있도록 각 단계의 검토 결과를 다음 단계의 입력자료로 연결합니다.",
       phases: [
         {
           title: "기초자료 정리",
@@ -347,9 +342,6 @@ export const consultingServicePages: Record<
     structure: {
       description:
         "기획 단계부터 문서화, 적격성평가와 최종 실사 대응까지\n개별 요소를 하나의 통합 프로세스로 연결합니다.",
-      statement: "분리되지 않는 연계형 GMP 컨설팅 체계",
-      detail:
-        "복잡한 GMP 요구사항을 프로젝트 목적과 일정에 맞춰 단일 수행 흐름 안에서 관리하고 단계 간 연속성을 확보합니다.",
       phases: [
         {
           title: "VMP & 전략",
@@ -536,9 +528,6 @@ export const consultingServicePages: Record<
     structure: {
       description:
         "기획 단계부터 위험평가, 검증 실행과 운영 이후의 규정 준수 관리까지 CSV 활동을 하나의 통합 프로세스로 연결합니다.",
-      statement: "분리되지 않는 연계형 CSV 컨설팅 체계",
-      detail:
-        "검증문서 작성에 그치지 않고 프로젝트 목적과 일정에 맞춰 요구사항, 위험, 시험결과와 운영통제를 연속성 있게 관리합니다.",
       phases: [
         {
           title: "Strategy & Planning",
