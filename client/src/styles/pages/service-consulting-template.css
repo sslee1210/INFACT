@@ -5,11 +5,15 @@
   --consulting-blue-strong: #164b9a;
   --consulting-line: #d6e0ea;
   --consulting-soft: #f4f7fa;
+  --consulting-section-space: clamp(88px, 7vw, 124px);
+  --consulting-heading-gap: clamp(46px, 4.2vw, 68px);
+  --consulting-panel-min-height: clamp(292px, 20vw, 320px);
+  --consulting-table-row-height: clamp(144px, 10vw, 164px);
   background: #fff;
 }
 
 .consulting-template__section {
-  padding: clamp(54px, 4.3vw, 76px) 0;
+  padding: var(--consulting-section-space) 0;
   border-bottom: 1px solid #e1e7ed;
   background: #fff;
 }
@@ -19,7 +23,7 @@
 }
 
 .consulting-template__section .service-business-heading {
-  margin-bottom: clamp(32px, 3.2vw, 48px);
+  margin-bottom: var(--consulting-heading-gap);
 }
 
 .consulting-template__section .service-business-heading__copy {
@@ -54,8 +58,8 @@
 }
 
 .consulting-template__value {
-  min-height: 230px;
-  padding: clamp(28px, 2.7vw, 44px);
+  min-height: var(--consulting-panel-min-height);
+  padding: clamp(42px, 3.5vw, 58px);
   border-bottom: 1px solid var(--consulting-line);
 }
 
@@ -75,7 +79,7 @@
 
 .consulting-template__value p {
   max-width: 48ch;
-  margin: 18px 0 0;
+  margin: 24px 0 0;
   color: var(--consulting-copy);
   font-size: var(--pfk-support, 1.0125rem);
   line-height: 1.72;
@@ -97,7 +101,7 @@
 .consulting-template__application-row {
   display: grid;
   grid-template-columns: minmax(150px, 0.55fr) minmax(0, 1.45fr);
-  min-height: 72px;
+  min-height: 96px;
   border-bottom: 1px solid var(--consulting-line);
 }
 
@@ -106,7 +110,7 @@
   display: flex;
   align-items: center;
   margin: 0;
-  padding: 18px 22px;
+  padding: 24px 28px;
   word-break: keep-all;
 }
 
@@ -136,7 +140,7 @@
 .consulting-template__application-image img {
   width: 100%;
   height: 100%;
-  min-height: 360px;
+  min-height: 420px;
   object-fit: cover;
 }
 
@@ -149,7 +153,7 @@
 .consulting-template__scope-grid::before {
   content: "";
   position: absolute;
-  top: 52px;
+  top: 59px;
   right: 0;
   left: 0;
   z-index: 0;
@@ -161,8 +165,8 @@
   position: relative;
   z-index: 1;
   min-width: 0;
-  min-height: 240px;
-  padding: 22px clamp(24px, 1.8vw, 34px) 32px;
+  min-height: clamp(310px, 22vw, 350px);
+  padding: 28px clamp(28px, 2vw, 40px) 46px;
   border-right: 1px solid var(--consulting-line);
   border-bottom: 1px solid var(--consulting-line);
 }
@@ -173,8 +177,8 @@
 
 .consulting-template__scope-item > span {
   display: flex;
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   align-items: center;
   justify-content: center;
   border: 3px solid var(--consulting-blue);
@@ -188,7 +192,7 @@
 }
 
 .consulting-template__scope-item h3 {
-  margin: 24px 0 0;
+  margin: 30px 0 0;
   color: var(--consulting-ink);
   font-size: var(--pfk-lead, 1.35rem);
   line-height: 1.45;
@@ -198,7 +202,7 @@
 }
 
 .consulting-template__scope-item p {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
   color: var(--consulting-copy);
   font-size: var(--pfk-support, 1.0125rem);
   line-height: 1.75;
@@ -223,7 +227,7 @@
 }
 
 .consulting-template__execution-head {
-  min-height: 66px;
+  min-height: 76px;
   background: var(--consulting-ink);
   color: #fff;
 }
@@ -231,7 +235,7 @@
 .consulting-template__execution-head span {
   display: flex;
   align-items: center;
-  padding: 18px 28px;
+  padding: 22px 32px;
   border-right: 1px solid rgb(255 255 255 / 0.18);
   font-size: var(--pfk-control, 0.875rem);
   line-height: 1.4;
@@ -253,7 +257,7 @@
 }
 
 .consulting-template__execution-row {
-  min-height: 120px;
+  min-height: var(--consulting-table-row-height);
   border-bottom: 1px solid var(--consulting-line);
 }
 
@@ -273,7 +277,7 @@
   flex-direction: column;
   justify-content: center;
   min-width: 0;
-  padding: 22px 26px;
+  padding: 30px 34px;
   border-left: 1px solid var(--consulting-line);
 }
 
@@ -289,7 +293,7 @@
 
 .consulting-template__execution-copy p,
 .consulting-template__execution-output p {
-  margin: 12px 0 0;
+  margin: 16px 0 0;
   color: var(--consulting-copy);
   font-size: var(--pfk-support, 1.0125rem);
   line-height: 1.65;
@@ -313,8 +317,8 @@
 
 .consulting-template__difference-item {
   position: relative;
-  min-height: 230px;
-  padding: clamp(30px, 2.7vw, 44px);
+  min-height: var(--consulting-panel-min-height);
+  padding: clamp(42px, 3.5vw, 58px);
   border-bottom: 1px solid var(--consulting-line);
 }
 
@@ -326,7 +330,7 @@
   display: block;
   width: 48px;
   height: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   background: var(--consulting-blue);
   content: "";
 }
@@ -343,7 +347,7 @@
 
 .consulting-template__difference-item p {
   max-width: 52ch;
-  margin: 18px 0 0;
+  margin: 24px 0 0;
   color: var(--consulting-copy);
   font-size: var(--pfk-support, 1.0125rem);
   line-height: 1.7;
@@ -375,15 +379,19 @@
 
 @media (min-width: 1920px) {
   .consulting-template__value {
-    min-height: 244px;
+    min-height: 328px;
   }
 
   .consulting-template__scope-item {
-    min-height: 252px;
+    min-height: 360px;
   }
 
   .consulting-template__execution-row {
-    min-height: 126px;
+    min-height: 168px;
+  }
+
+  .consulting-template__difference-item {
+    min-height: 328px;
   }
 }
 
@@ -402,18 +410,18 @@
   }
 
   .consulting-template__scope-grid::before {
-    top: 23px;
+    top: 26px;
     right: auto;
-    bottom: 23px;
-    left: 21px;
+    bottom: 26px;
+    left: 24px;
     width: 3px;
     height: auto;
   }
 
   .consulting-template__scope-item,
   .consulting-template__scope-item:nth-child(2) {
-    min-height: 0;
-    padding: 0 0 46px 76px;
+    min-height: 150px;
+    padding: 0 0 62px 86px;
     border-right: 0;
     border-bottom: 0;
   }
@@ -429,7 +437,7 @@
   }
 
   .consulting-template__scope-item h3 {
-    margin-top: 5px;
+    margin-top: 8px;
   }
 
   .consulting-template__execution-head,
@@ -448,7 +456,7 @@
 
 @media (max-width: 860px) {
   .consulting-template__section {
-    padding: 58px 0;
+    padding: 78px 0;
   }
 
   .consulting-template__value-grid,
@@ -458,7 +466,7 @@
 
   .consulting-template__value,
   .consulting-template__difference-item {
-    min-height: 0;
+    min-height: 232px;
   }
 
   .consulting-template__value:nth-child(odd),
@@ -468,11 +476,11 @@
 
   .consulting-template__application {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 48px;
   }
 
   .consulting-template__application-image img {
-    min-height: 360px;
+    min-height: 380px;
     aspect-ratio: 16 / 9;
   }
 
@@ -482,7 +490,7 @@
 
   .consulting-template__execution-row {
     grid-template-columns: 64px minmax(0, 1fr);
-    min-height: 0;
+    min-height: 252px;
   }
 
   .consulting-template__execution-row > span {
@@ -494,7 +502,8 @@
   .consulting-template__execution-copy,
   .consulting-template__execution-output {
     grid-column: 2;
-    padding: 26px 28px;
+    min-height: 126px;
+    padding: 30px 32px;
   }
 
   .consulting-template__execution-output {
@@ -504,11 +513,11 @@
 
 @media (max-width: 620px) {
   .consulting-template__section {
-    padding: 52px 0;
+    padding: 68px 0;
   }
 
   .consulting-template__section .service-business-heading {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .consulting-template__section .service-business-heading__description {
@@ -518,7 +527,8 @@
 
   .consulting-template__value,
   .consulting-template__difference-item {
-    padding: 32px 22px 36px;
+    min-height: 224px;
+    padding: 38px 22px 42px;
   }
 
   .consulting-template__value p,
@@ -528,25 +538,26 @@
 
   .consulting-template__application-row {
     grid-template-columns: 1fr;
-    min-height: 0;
+    min-height: 116px;
   }
 
   .consulting-template__application-row strong {
-    padding: 18px 20px 8px;
+    padding: 24px 20px 8px;
     background: #fff;
     color: var(--consulting-blue);
   }
 
   .consulting-template__application-row p {
-    padding: 4px 20px 20px;
+    padding: 6px 20px 24px;
   }
 
   .consulting-template__application-image img {
-    min-height: 260px;
+    min-height: 300px;
   }
 
   .consulting-template__scope-item {
-    padding: 0 0 40px 66px;
+    min-height: 142px;
+    padding: 0 0 52px 74px;
   }
 
   .consulting-template__scope-item:last-child {
@@ -555,6 +566,7 @@
 
   .consulting-template__execution-row {
     grid-template-columns: 48px minmax(0, 1fr);
+    min-height: 248px;
   }
 
   .consulting-template__execution-row > span {
@@ -563,7 +575,8 @@
 
   .consulting-template__execution-copy,
   .consulting-template__execution-output {
-    padding: 22px 20px;
+    min-height: 124px;
+    padding: 28px 20px;
   }
 
   .consulting-template__execution-copy h3,

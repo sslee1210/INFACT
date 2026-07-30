@@ -176,12 +176,12 @@
     background:
       radial-gradient(
         ellipse 100% 38% at 50% 96%,
-        rgba(183, 157, 169, 0.2) 0%,
+        rgba(160, 195, 215, 0.22) 0%,
         transparent 78%
       ),
       radial-gradient(
         ellipse 82% 58% at 50% 42%,
-        rgba(93, 137, 169, 0.2) 0%,
+        rgba(174, 208, 226, 0.2) 0%,
         transparent 84%
       ) !important;
   }
@@ -241,10 +241,12 @@
   }
 
   .home-company-intro__inner::after {
-    top: auto !important;
-    right: -320px !important;
-    bottom: -440px !important;
-    width: 760px !important;
+    top: -210px !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 55% !important;
+    width: 426px !important;
+    transform: translateX(-50%) !important;
     opacity: 0.8 !important;
   }
 
@@ -306,9 +308,11 @@
   }
 
   .about-blend-inner::after {
-    left: -300px !important;
-    bottom: -440px !important;
-    width: 760px !important;
+    left: -240px !important;
+    top: 50% !important;
+    bottom: auto !important;
+    width: 426px !important;
+    transform: translateY(-50%) !important;
   }
 
   .about-blend-content {
@@ -344,10 +348,19 @@
   }
 
   .home-experience::after {
+    top: 50% !important;
+    right: -240px !important;
+    bottom: auto !important;
+    width: 426px !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .service-immersive::before {
     top: auto !important;
-    right: -300px !important;
-    bottom: -440px !important;
-    width: 760px !important;
+    bottom: -210px !important;
+    left: 40% !important;
+    width: 426px !important;
+    transform: translateX(-50%) !important;
   }
 
   .home-experience {
@@ -631,10 +644,11 @@
    in home-experience.css until that oversized source file is split safely. */
 @media (min-width: 1920px) {
   .home-experience::after {
-    top: auto !important;
-    right: clamp(-30rem, -20vw, -17.5rem) !important;
-    bottom: clamp(-61.25rem, -44vw, -42.5rem) !important;
-    width: clamp(76.25rem, 84vw, 112.5rem) !important;
+    top: 48% !important;
+    right: clamp(-45rem, -36vw, -32.5rem) !important;
+    bottom: auto !important;
+    width: clamp(42.7rem, 47vw, 63rem) !important;
+    transform: translateY(-50%) !important;
   }
 
   .home-experience {

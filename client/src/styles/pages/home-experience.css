@@ -17,10 +17,11 @@
 .home-experience::after {
   content: "";
   position: absolute;
-  right: clamp(-480px, -20vw, -280px);
-  bottom: clamp(-980px, -44vw, -680px);
+  top: 48%;
+  right: clamp(-720px, -36vw, -520px);
+  bottom: auto;
   z-index: -1;
-  width: clamp(1220px, 84vw, 1800px);
+  width: clamp(683px, 47vw, 1008px);
   aspect-ratio: 1;
   pointer-events: none;
   border: 0;
@@ -31,6 +32,7 @@
     rgba(125, 137, 156, 0.05) 50% 70%,
     rgba(128, 202, 244, 0.044) 70% 100%
   );
+  transform: translateY(-50%);
   box-shadow: none;
 }
 

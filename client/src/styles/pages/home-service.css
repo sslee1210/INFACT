@@ -19,10 +19,11 @@
 .service-immersive::before {
   content: "";
   position: absolute;
-  top: clamp(-980px, -44vw, -680px);
-  left: clamp(-480px, -20vw, -280px);
+  top: auto;
+  bottom: clamp(-434px, -22.4vw, -294px);
+  left: 38%;
   z-index: -1;
-  width: clamp(1220px, 84vw, 1800px);
+  width: clamp(683px, 47vw, 1008px);
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
@@ -32,6 +33,7 @@
     rgba(125, 137, 156, 0.05) 50% 70%,
     rgba(128, 202, 244, 0.044) 70% 100%
   );
+  transform: translateX(-50%);
   box-shadow: none;
   pointer-events: none;
 }
@@ -236,9 +238,11 @@
   }
 
   .service-immersive::before {
-    top: clamp(-61.25rem, -44vw, -42.5rem);
-    left: clamp(-30rem, -20vw, -17.5rem);
-    width: clamp(76.25rem, 84vw, 112.5rem);
+    top: auto;
+    bottom: clamp(-27.125rem, -22.4vw, -18.375rem);
+    left: 38%;
+    width: clamp(42.7rem, 47vw, 63rem);
+    transform: translateX(-50%);
   }
 
   .service-immersive {

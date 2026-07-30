@@ -149,52 +149,42 @@
   padding: 11px 15px;
 }
 
-/* Shared service template */
-.service-business-section,
-.consulting-template__section {
+/* Legacy service template */
+.service-business-section {
   padding-block: clamp(60px, 4.8vw, 78px);
 }
 
-.service-business-heading,
-.consulting-template__section .service-business-heading {
+.service-business-heading {
   margin-bottom: clamp(28px, 2.4vw, 38px);
 }
 
-.service-business-core-value,
-.consulting-template__value {
+.service-business-core-value {
   min-height: 174px;
   padding: clamp(22px, 1.8vw, 28px);
 }
 
-.service-business-applicable,
-.consulting-template__application {
+.service-business-applicable {
   gap: clamp(34px, 3vw, 54px);
 }
 
-.service-business-applicable__visual,
-.consulting-template__application-image img {
+.service-business-applicable__visual {
   min-height: 300px;
 }
 
-.service-business-scope__item,
-.consulting-template__scope-item {
+.service-business-scope__item {
   min-height: 184px;
   padding: 18px clamp(20px, 1.5vw, 26px) 22px;
 }
 
-.service-business-table__row,
-.consulting-template__execution-row {
+.service-business-table__row {
   min-height: 92px;
 }
 
-.service-business-execution__item,
-.consulting-template__execution-copy,
-.consulting-template__execution-output {
+.service-business-execution__item {
   padding: 16px 20px;
 }
 
-.service-business-difference__item,
-.consulting-template__difference-item {
+.service-business-difference__item {
   min-height: 174px;
   padding: clamp(22px, 1.8vw, 28px);
 }
@@ -337,20 +327,6 @@
     padding-block: 60px;
   }
 
-  .consulting-template__section {
-    padding-block: 60px;
-  }
-
-  .consulting-template__scope-item,
-  .consulting-template__scope-item:nth-child(2) {
-    min-height: 0;
-    padding: 0 0 40px 76px;
-  }
-
-  .consulting-template__scope-item:last-child {
-    padding-bottom: 0;
-  }
-
   .history-list__item {
     min-height: clamp(176px, 20vw, 210px);
   }
@@ -477,37 +453,29 @@
     padding-block: 10px;
   }
 
-  .service-business-section,
-  .consulting-template__section {
+  .service-business-section {
     padding-block: clamp(52px, 13vw, 62px);
   }
 
-  .service-business-heading,
-  .consulting-template__section .service-business-heading {
+  .service-business-heading {
     margin-bottom: clamp(28px, 7.5vw, 34px);
   }
 
   .service-business-core-value,
   .service-business-scope__item,
-  .service-business-difference__item,
-  .consulting-template__value,
-  .consulting-template__scope-item,
-  .consulting-template__difference-item {
+  .service-business-difference__item {
     min-height: 0;
   }
 
-  .service-business-core-value,
-  .consulting-template__value {
+  .service-business-core-value {
     padding: 22px 18px 25px;
   }
 
-  .service-business-applicable,
-  .consulting-template__application {
+  .service-business-applicable {
     gap: 24px;
   }
 
-  .service-business-applicable__visual,
-  .consulting-template__application-image img {
+  .service-business-applicable__visual {
     min-height: 240px;
   }
 
@@ -515,25 +483,12 @@
     padding: 16px 18px 20px;
   }
 
-  .consulting-template__scope-item,
-  .consulting-template__scope-item:nth-child(2) {
-    padding: 0 0 34px 68px;
-  }
-
-  .consulting-template__scope-item:last-child {
-    padding-bottom: 0;
-  }
-
-  .service-business-table__row,
-  .consulting-template__execution-row {
+  .service-business-table__row {
     min-height: 0;
   }
 
   .service-business-execution__item,
-  .service-business-difference__item,
-  .consulting-template__execution-copy,
-  .consulting-template__execution-output,
-  .consulting-template__difference-item {
+  .service-business-difference__item {
     padding: 16px 18px;
   }
 
