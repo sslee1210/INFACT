@@ -18,8 +18,8 @@
   .company-greeting {
     width: 100%;
     max-width: none;
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-    column-gap: clamp(48px, 5vw, 88px);
+    grid-template-columns: minmax(0, 1.24fr) minmax(400px, 0.76fr);
+    column-gap: clamp(32px, 3vw, 56px);
     justify-content: stretch;
   }
 
@@ -28,9 +28,15 @@
   }
 
   .company-greeting__visual {
-    justify-self: end;
+    justify-self: start;
     width: min(100%, 560px);
+    height: clamp(500px, 34vw, 580px);
+    margin-top: clamp(150px, 9.5vw, 186px);
     margin-left: 0;
+  }
+
+  .company-greeting__visual img {
+    transform: none;
   }
 
   /* History: let the timeline occupy the same page guide as the shell. */
@@ -85,6 +91,21 @@
 
   .company-organization .org-fixed__csv-branch::before {
     left: 66.6666667% !important;
+  }
+}
+
+/* Laptop desktop range: preserve the wide-monitor composition by giving
+   the greeting copy enough measure instead of compressing both columns. */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .company-greeting {
+    grid-template-columns: minmax(0, 1.36fr) minmax(350px, 0.64fr);
+    column-gap: clamp(24px, 2.2vw, 36px);
+  }
+
+  .company-greeting__visual {
+    width: min(100%, 480px);
+    height: clamp(460px, 34vw, 520px);
+    margin-top: clamp(142px, 10vw, 168px);
   }
 }
 

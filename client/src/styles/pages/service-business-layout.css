@@ -738,6 +738,13 @@
   }
 }
 
+/* Keep the service contact content on the same horizontal guide as every
+   site-shell section instead of using a separate fixed 1400px container. */
+.service-business-contact__inner {
+  width: var(--site-content-width) !important;
+  max-width: var(--site-content-max) !important;
+}
+
 
 /* =========================================================
    FINAL WHITE BACKGROUND GUARD — all service subpages

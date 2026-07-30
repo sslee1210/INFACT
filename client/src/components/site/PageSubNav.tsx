@@ -31,7 +31,7 @@ export function PageSubNav({ breadcrumb, items }: PageSubNavProps) {
 
   const handleClick = (item: PageSubNavItem) => {
     if (item.href) {
-      setLocation(item.href);
+      if (item.href !== location) setLocation(item.href);
       return;
     }
 

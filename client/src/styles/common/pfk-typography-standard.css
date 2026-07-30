@@ -3,30 +3,30 @@
    Reference: https://www.pfk.co.kr/service/computer.php
 
    Desktop scale:
-   61.2 / 43.2 / 37.8 / 34.2 / 25.2 / 21.6 / 18 /
-   16.2 / 14.4 / 14 / 13.5 / 12.6px
+   44 / 32 / 28 / 26 / 20 / 17 / 16 /
+   14.5 / 13 / 12.5 / 12 / 11px
 
    Mobile scale:
-   30 / 26 / 24 / 23 / 19 / 18 / 17 / 16 / 15 /
-   14 / 13 / 12.6 / 11px
+   28 / 24 / 22 / 21 / 17 / 17 / 16 / 15 /
+   13.5 / 13 / 12 / 11.5px
 
    This stylesheet is imported after every page stylesheet so that
    the site uses one measured typography scale without layout changes.
    ========================================================= */
 
 :root {
-  --pfk-display: 61.2px;
-  --pfk-page-title: 43.2px;
-  --pfk-section-title: 37.8px;
-  --pfk-overview-title: 34.2px;
-  --pfk-emphasis: 25.2px;
-  --pfk-lead: 21.6px;
-  --pfk-body: 18px;
-  --pfk-support: 16.2px;
-  --pfk-control: 14.4px;
-  --pfk-note: 14px;
-  --pfk-meta: 13.5px;
-  --pfk-label: 12.6px;
+  --pfk-display: 44px;
+  --pfk-page-title: 32px;
+  --pfk-section-title: 28px;
+  --pfk-overview-title: 26px;
+  --pfk-emphasis: 20px;
+  --pfk-lead: 17px;
+  --pfk-body: 16px;
+  --pfk-support: 14.5px;
+  --pfk-control: 13px;
+  --pfk-note: 12.5px;
+  --pfk-meta: 12px;
+  --pfk-label: 11px;
 }
 
 /* Shared navigation and controls */
@@ -97,7 +97,7 @@
 
 /* Home */
 .hero__title {
-  font-size: var(--pfk-display) !important;
+  font-size: var(--pfk-lead) !important;
 }
 
 .hero__subtitle {
@@ -162,12 +162,15 @@
 }
 
 .company-greeting__signature {
-  font-size: var(--pfk-control) !important;
+  font-size: var(--pfk-lead) !important;
 }
 
-.history-list__item time,
-.history-list__content li {
+.history-list__item time {
   font-size: var(--pfk-meta) !important;
+}
+
+.history-list__content li {
+  font-size: calc(var(--pfk-control) + 1px) !important;
 }
 
 .org-tree__box--lead {
@@ -211,6 +214,13 @@
 .service-business-contact__eyebrow,
 .service-business-contact__text {
   font-size: var(--pfk-control) !important;
+}
+
+@media (min-width: 768px) {
+  .home-cta-banner__button,
+  .home-cta-banner__button-label {
+    font-size: clamp(18px, 1.05vw, 21px) !important;
+  }
 }
 
 /* Service matrices and structured supporting content */
@@ -370,18 +380,18 @@
 
 @media (max-width: 767px) {
   :root {
-    --pfk-display: 30px;
-    --pfk-page-title: 26px;
-    --pfk-section-title: 24px;
-    --pfk-overview-title: 23px;
+    --pfk-display: 28px;
+    --pfk-page-title: 24px;
+    --pfk-section-title: 22px;
+    --pfk-overview-title: 21px;
     --pfk-emphasis: 17px;
-    --pfk-lead: 18px;
+    --pfk-lead: 17px;
     --pfk-body: 16px;
     --pfk-support: 15px;
-    --pfk-control: 14px;
-    --pfk-note: 14px;
-    --pfk-meta: 13px;
-    --pfk-label: 12.6px;
+    --pfk-control: 13.5px;
+    --pfk-note: 13px;
+    --pfk-meta: 12px;
+    --pfk-label: 11.5px;
     --pfk-index: 11px;
   }
 
@@ -463,9 +473,12 @@
     font-size: var(--pfk-lead) !important;
   }
 
-  .company-greeting__signature,
+  .company-greeting__signature {
+    font-size: var(--pfk-lead) !important;
+  }
+
   .history-list__content li {
-    font-size: var(--pfk-control) !important;
+    font-size: calc(var(--pfk-control) + 1px) !important;
   }
 
   .history-list__item time {

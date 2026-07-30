@@ -24,23 +24,55 @@ export default function CompanyOrganization() {
 
             <div className="org-tree__primary-row">
               <div className="org-tree__primary-node">
-                <div className="org-tree__box org-tree__box--primary">경영 지원 사업부</div>
+                <div className="org-tree__box org-tree__box--primary">
+                  경영지원 사업본부
+                </div>
+
+                <div className="org-tree__department">
+                  <div className="org-tree__box org-tree__box--secondary">
+                    인사/총무부
+                  </div>
+                </div>
               </div>
 
               <div className="org-tree__primary-node">
-                <div className="org-tree__box org-tree__box--primary">영업&amp;마케팅 사업부</div>
+                <div className="org-tree__box org-tree__box--primary">
+                  영업&amp;마케팅 사업본부
+                </div>
+
+                <div className="org-tree__department">
+                  <div className="org-tree__box org-tree__box--secondary">
+                    영업&amp;마케팅부
+                  </div>
+                </div>
               </div>
 
               <div className="org-tree__primary-node org-tree__primary-node--validation">
-                <div className="org-tree__box org-tree__box--primary">밸리데이션 사업부</div>
+                <div className="org-tree__box org-tree__box--primary">
+                  밸리데이션 사업본부
+                </div>
 
-                <div className="org-tree__validation-children">
-                  <div className="org-tree__secondary-node">
-                    <div className="org-tree__box org-tree__box--secondary">GMP 사업부</div>
+                <div className="org-tree__department">
+                  <div className="org-tree__box org-tree__box--secondary">
+                    GMP 컨설팅 사업부
                   </div>
 
-                  <div className="org-tree__secondary-node org-tree__secondary-node--csv">
-                    <div className="org-tree__box org-tree__box--secondary">CSV 사업부</div>
+                  <div className="org-tree__teams">
+                    <div className="org-tree__team">
+                      <div className="org-tree__box org-tree__box--team">
+                        개념설계 사업부
+                      </div>
+                    </div>
+                    <div className="org-tree__team">
+                      <div className="org-tree__box org-tree__box--team">
+                        GMP 사업부
+                      </div>
+                    </div>
+                    <div className="org-tree__team">
+                      <div className="org-tree__box org-tree__box--team">
+                        CSV 사업부
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -54,31 +86,53 @@ export default function CompanyOrganization() {
             <div className="org-mobile-branch">
               <div className="org-mobile-branch__item">
                 <div className="org-mobile-branch__node org-mobile-branch__node--primary">
-                  경영 지원 사업부
+                  경영지원 사업본부
+                </div>
+
+                <div className="org-mobile-branch__children org-mobile-branch__children--single">
+                  <div className="org-mobile-branch__child">
+                    <div className="org-mobile-branch__node org-mobile-branch__node--secondary">
+                      인사/총무부
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className="org-mobile-branch__item">
                 <div className="org-mobile-branch__node org-mobile-branch__node--primary">
-                  영업&amp;마케팅 사업부
+                  영업&amp;마케팅 사업본부
+                </div>
+
+                <div className="org-mobile-branch__children org-mobile-branch__children--single">
+                  <div className="org-mobile-branch__child">
+                    <div className="org-mobile-branch__node org-mobile-branch__node--secondary">
+                      영업&amp;마케팅부
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className="org-mobile-branch__item org-mobile-branch__item--validation">
                 <div className="org-mobile-branch__node org-mobile-branch__node--primary org-mobile-branch__node--validation">
-                  밸리데이션 사업부
+                  밸리데이션 사업본부
                 </div>
 
-                <div className="org-mobile-branch__children">
+                <div className="org-mobile-branch__children org-mobile-branch__children--single">
                   <div className="org-mobile-branch__child">
                     <div className="org-mobile-branch__node org-mobile-branch__node--secondary">
-                      GMP 사업부
+                      GMP 컨설팅 사업부
                     </div>
-                  </div>
 
-                  <div className="org-mobile-branch__child org-mobile-branch__child--csv">
-                    <div className="org-mobile-branch__node org-mobile-branch__node--secondary org-mobile-branch__node--csv">
-                      CSV 사업부
+                    <div className="org-mobile-branch__teams">
+                      <div className="org-mobile-branch__team">
+                        개념설계 사업부
+                      </div>
+                      <div className="org-mobile-branch__team">
+                        GMP 사업부
+                      </div>
+                      <div className="org-mobile-branch__team">
+                        CSV 사업부
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -19,18 +19,18 @@
 .service-immersive::before {
   content: "";
   position: absolute;
-  top: clamp(-430px, -27vw, -360px);
-  left: clamp(-480px, -30vw, -300px);
+  top: clamp(-980px, -44vw, -680px);
+  left: clamp(-480px, -20vw, -280px);
   z-index: -1;
-  width: clamp(640px, 50vw, 1380px);
+  width: clamp(1220px, 84vw, 1800px);
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    transparent 0 33.333%,
-    rgba(125, 137, 156, 0.05) 33.333% 55%,
-    rgba(128, 202, 244, 0.044) 55% 100%
+    transparent 0 50%,
+    rgba(125, 137, 156, 0.05) 50% 70%,
+    rgba(128, 202, 244, 0.044) 70% 100%
   );
   box-shadow: none;
   pointer-events: none;
@@ -236,9 +236,9 @@
   }
 
   .service-immersive::before {
-    top: clamp(-26.875rem, -27vw, -22.5rem);
-    left: clamp(-30rem, -30vw, -18.75rem);
-    width: clamp(40rem, 50vw, 86.25rem);
+    top: clamp(-61.25rem, -44vw, -42.5rem);
+    left: clamp(-30rem, -20vw, -17.5rem);
+    width: clamp(76.25rem, 84vw, 112.5rem);
   }
 
   .service-immersive {
@@ -272,7 +272,7 @@
 @media (max-width: 900px) {
   .service-immersive-section {
     padding: clamp(56px, 12vw, 72px) 0 clamp(58px, 12vw, 76px);
-    overflow: visible;
+    overflow: hidden;
   }
 
   .service-immersive {

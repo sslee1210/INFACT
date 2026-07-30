@@ -168,6 +168,10 @@
     background: var(--org-line);
   }
 
+  .org-mobile-branch__children--single::before {
+    height: calc(14px + (var(--org-secondary-height) / 2));
+  }
+
   .org-mobile-branch__child {
     position: relative;
     margin: 0 0 var(--org-secondary-gap);

@@ -76,12 +76,12 @@ a {
     --fluid-nav-height: 72px;
     --fluid-subnav-height: 60px;
     --fluid-site-main-offset: 72px;
-    --fluid-section-pad-top: clamp(88px, 9vw, 112px);
-    --fluid-section-pad-bottom: clamp(92px, 10vw, 120px);
-    --fluid-section-space: clamp(44px, 6vw, 72px);
-    --fluid-intro-min-height: clamp(340px, 42vw, 420px);
-    --fluid-intro-pad-top: clamp(104px, 12vw, 132px);
-    --fluid-intro-pad-bottom: clamp(74px, 8vw, 96px);
+    --fluid-section-pad-top: clamp(68px, 7vw, 84px);
+    --fluid-section-pad-bottom: clamp(72px, 7.5vw, 88px);
+    --fluid-section-space: clamp(36px, 4.5vw, 56px);
+    --fluid-intro-min-height: clamp(280px, 33vw, 330px);
+    --fluid-intro-pad-top: clamp(88px, 9vw, 100px);
+    --fluid-intro-pad-bottom: clamp(52px, 6vw, 64px);
   }
 
   .section-head {
@@ -100,12 +100,12 @@ a {
     --fluid-nav-height: 60px;
     --fluid-subnav-height: 54px;
     --fluid-site-main-offset: 60px;
-    --fluid-section-pad-top: clamp(66px, 18vw, 84px);
-    --fluid-section-pad-bottom: clamp(70px, 19vw, 90px);
-    --fluid-section-space: clamp(36px, 10vw, 52px);
-    --fluid-intro-min-height: clamp(286px, 78vw, 350px);
-    --fluid-intro-pad-top: clamp(88px, 23vw, 108px);
-    --fluid-intro-pad-bottom: clamp(58px, 15vw, 74px);
+    --fluid-section-pad-top: clamp(56px, 15vw, 68px);
+    --fluid-section-pad-bottom: clamp(60px, 16vw, 72px);
+    --fluid-section-space: clamp(30px, 8vw, 42px);
+    --fluid-intro-min-height: clamp(248px, 66vw, 300px);
+    --fluid-intro-pad-top: clamp(78px, 20vw, 92px);
+    --fluid-intro-pad-bottom: clamp(44px, 12vw, 56px);
   }
 
   .section-head {
@@ -681,7 +681,7 @@ a {
   .page-subnav-wrap {
     top: var(--fluid-nav-height) !important;
     margin-top: calc(-1 * var(--fluid-section-pad-top)) !important;
-    margin-bottom: clamp(44px, 6vw, 64px) !important;
+    margin-bottom: clamp(26px, 3.8vw, 36px) !important;
     overflow: visible !important;
     background: rgba(255, 255, 255, 0.985) !important;
     box-shadow: 0 8px 24px rgba(17, 38, 86, 0.04) !important;
@@ -727,7 +727,7 @@ a {
 
 @media (max-width: 767px) {
   .page-subnav-wrap {
-    margin-bottom: clamp(34px, 10vw, 48px) !important;
+    margin-bottom: clamp(20px, 6vw, 28px) !important;
   }
 
   .page-subnav-row,

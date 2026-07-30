@@ -1,38 +1,178 @@
-/* COMPANY HISTORY — TARGETED RESPONSIVE CORRECTIONS */
+/* COMPANY HISTORY - PAGE-OWNED RESPONSIVE GEOMETRY */
 
-@media (max-width: 767px) {
+@media (min-width: 1200px) {
   .history-list {
-    isolation: isolate;
+    width: min(100%, 1040px);
+    max-width: 1040px;
   }
 
-  .history-list::before,
+  .history-list__titleRow {
+    margin-top: clamp(38px, 3.2vw, 46px);
+  }
+}
+
+/* Match the site's compact navigation breakpoint. The timeline uses one
+   vertical axis so the alternating desktop geometry cannot collide with
+   the header or text at tablet and mobile widths. */
+@media (max-width: 1199px) {
+  .history-panel__head {
+    margin-bottom: clamp(44px, 12vw, 58px);
+  }
+
+  .history-list {
+    --history-mobile-rail-x: 18px;
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(42px, 8vw, 56px);
+    width: 100%;
+    max-width: none;
+    padding-bottom: 18px;
+  }
+
+  .history-list::before {
+    content: "";
+    display: block;
+    top: 28px;
+    bottom: 28px;
+    left: var(--history-mobile-rail-x);
+    width: 7px;
+    transform: translateX(-50%);
+  }
+
   .history-list::after {
-    z-index: 0;
-    pointer-events: none;
+    content: "";
+    display: block;
+    top: var(--history-progress-start);
+    left: var(--history-mobile-rail-x);
+    width: 3px;
+    height: var(--history-progress-px);
+    transform: translateX(-50%);
   }
 
   .history-list__item,
   .history-list__item--left,
   .history-list__item--right {
-    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .history-list__marker {
+    position: relative;
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: 16px;
+    height: 16px;
+    margin: clamp(24px, 7vw, 28px) 0 0 10px;
+  }
+
+  .history-list__marker-dot {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+    box-shadow: 0 0 0 4px #ffffff;
+  }
+
+  .history-list__content,
+  .history-list__item--left .history-list__content,
+  .history-list__item--right .history-list__content {
+    position: static;
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: stretch;
+    width: auto;
+    padding: 0;
+    text-align: left;
+    opacity: 1;
+    transform: none;
+  }
+
+  .history-list__meta {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .history-list__item time,
   .history-list__item--left time,
   .history-list__item--right time {
     position: relative;
-    z-index: 3;
-    background: #eef0f8;
-    box-shadow:
-      0 0 0 6px #ffffff,
-      0 10px 24px rgba(31, 39, 56, 0.08);
+    order: 1;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+    width: clamp(58px, 17vw, 68px);
+    height: clamp(58px, 17vw, 68px);
+    margin: 0;
+    color: var(--home-blue-strong);
+    background: rgba(44, 54, 143, 0.14);
+    transform: none;
+    box-shadow: 0 10px 22px rgba(31, 39, 56, 0.1);
+  }
+
+  .history-list__yearLine,
+  .history-list__item--left .history-list__yearLine,
+  .history-list__item--right .history-list__yearLine {
+    display: none;
+  }
+
+  .history-list__titleRow,
+  .history-list__item--left .history-list__titleRow,
+  .history-list__item--right .history-list__titleRow {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .history-list__content h3,
+  .history-list__item--right .history-list__content h3 {
+    max-width: 24em;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .history-list__item ul,
+  .history-list__item--right ul {
+    max-width: none;
+    margin: 12px 0 0;
+    gap: 6px;
+  }
+
+  .history-list__item li {
+    padding: 0;
+    line-height: 1.62;
+  }
+
+  .history-list__item li::before {
+    content: none;
   }
 
   .history-list__item.is-active time {
-    background: var(--history-dot, var(--home-blue));
     color: #ffffff;
+    background: var(--home-blue-strong);
+  }
+
+  .history-list__item.is-active .history-list__marker-dot {
+    border-color: var(--home-blue-strong);
+    background: var(--home-blue-strong);
     box-shadow:
-      0 0 0 6px #ffffff,
-      0 12px 28px rgba(31, 39, 56, 0.14);
+      0 0 0 4px #ffffff,
+      0 0 0 6px rgba(44, 54, 143, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .history-list__item {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

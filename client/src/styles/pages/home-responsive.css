@@ -172,14 +172,22 @@
     min-height: clamp(560px, 86svh, 720px) !important;
   }
 
-  .hero::before {
-    inset: -3% !important;
-    background-image:
-      linear-gradient(180deg, rgba(7, 18, 46, 0.32) 0%, rgba(7, 18, 46, 0.42) 100%),
-      linear-gradient(90deg, rgba(7, 18, 46, 0.18) 0%, rgba(7, 18, 46, 0.08) 100%),
-      var(--hero-image) !important;
-    background-position: 58% center !important;
-    animation-duration: 22s !important;
+  .hero--particle-field::before {
+    background:
+      radial-gradient(
+        ellipse 100% 38% at 50% 96%,
+        rgba(183, 157, 169, 0.2) 0%,
+        transparent 78%
+      ),
+      radial-gradient(
+        ellipse 82% 58% at 50% 42%,
+        rgba(93, 137, 169, 0.2) 0%,
+        transparent 84%
+      ) !important;
+  }
+
+  .hero__particle:nth-child(n + 9) {
+    display: none;
   }
 
   .hero__inner {
@@ -233,9 +241,10 @@
   }
 
   .home-company-intro__inner::after {
-    top: -180px !important;
-    right: -260px !important;
-    width: 560px !important;
+    top: auto !important;
+    right: -320px !important;
+    bottom: -440px !important;
+    width: 760px !important;
     opacity: 0.8 !important;
   }
 
@@ -298,8 +307,8 @@
 
   .about-blend-inner::after {
     left: -300px !important;
-    bottom: -220px !important;
-    width: 580px !important;
+    bottom: -440px !important;
+    width: 760px !important;
   }
 
   .about-blend-content {
@@ -336,9 +345,9 @@
 
   .home-experience::after {
     top: auto !important;
-    right: -250px !important;
-    bottom: -180px !important;
-    width: 560px !important;
+    right: -300px !important;
+    bottom: -440px !important;
+    width: 760px !important;
   }
 
   .home-experience {
@@ -622,9 +631,10 @@
    in home-experience.css until that oversized source file is split safely. */
 @media (min-width: 1920px) {
   .home-experience::after {
-    top: clamp(-11.875rem, -11vw, -8.75rem) !important;
-    right: clamp(-32.5rem, -31vw, -21.875rem) !important;
-    width: clamp(40rem, 52vw, 88.125rem) !important;
+    top: auto !important;
+    right: clamp(-30rem, -20vw, -17.5rem) !important;
+    bottom: clamp(-61.25rem, -44vw, -42.5rem) !important;
+    width: clamp(76.25rem, 84vw, 112.5rem) !important;
   }
 
   .home-experience {

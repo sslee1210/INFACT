@@ -1,8 +1,11 @@
 export const homeHero = {
+  logo: "./images/home/logo1.svg",
   title: "제약·바이오 전문 컨설팅 파트너",
   description:
     "제약·바이오 현장의 요구사항과 규제 기준을 바탕으로 개념설계, GMP, CSV 컨설팅을 제공합니다.",
-  image: "./images/home/hero.jpg",
+  ctaLabel: "문의하기",
+  ctaHref: "#/contact",
+  image: "./images/home/hero-gmp-facility.webp",
 };
 
 export const homeAbout = {

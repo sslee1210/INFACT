@@ -154,7 +154,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background:
+  background: var(
+    --service-card-overlay-default,
     linear-gradient(
       180deg,
       rgba(215, 230, 242, 0.1) 0%,
@@ -166,11 +167,44 @@
       rgba(6, 19, 38, 0.14) 0%,
       rgba(44, 75, 104, 0.08) 48%,
       rgba(210, 226, 238, 0.04) 100%
-    );
+    )
+  );
 
   transition:
     opacity 0.5s ease,
     background 0.5s ease;
+}
+
+/* GMP와 CSV 이미지는 청색 음영 없이 무채색 대비만 유지한다. */
+.service-card[data-service-index="1"],
+.service-card[data-service-index="2"] {
+  --service-card-overlay-default:
+    linear-gradient(
+      180deg,
+      rgba(8, 9, 11, 0.02) 0%,
+      rgba(8, 9, 11, 0.01) 56%,
+      rgba(8, 9, 11, 0.38) 100%
+    );
+  --service-card-overlay-dim:
+    linear-gradient(
+      180deg,
+      rgba(8, 9, 11, 0.04) 0%,
+      rgba(8, 9, 11, 0.03) 52%,
+      rgba(8, 9, 11, 0.42) 100%
+    );
+  --service-card-overlay-active:
+    linear-gradient(
+      180deg,
+      rgba(8, 9, 11, 0.02) 0%,
+      rgba(8, 9, 11, 0.04) 42%,
+      rgba(8, 9, 11, 0.5) 100%
+    );
+  --service-card-overlay-mobile:
+    linear-gradient(
+      90deg,
+      rgba(8, 9, 11, 0.04) 0%,
+      rgba(8, 9, 11, 0.22) 100%
+    );
 }
 
 .service-card__content {
@@ -289,7 +323,8 @@
 .service-card-rail.is-hovering-design .service-card:not(:nth-child(1)) .service-card__media::after,
 .service-card-rail.is-hovering-gmp .service-card:not(:nth-child(2)) .service-card__media::after,
 .service-card-rail.is-hovering-csv .service-card:not(:nth-child(3)) .service-card__media::after {
-  background:
+  background: var(
+    --service-card-overlay-dim,
     linear-gradient(
       180deg,
       rgba(215, 230, 242, 0.1) 0%,
@@ -301,7 +336,8 @@
       rgba(6, 19, 38, 0.14) 0%,
       rgba(44, 75, 104, 0.08) 48%,
       rgba(210, 226, 238, 0.04) 100%
-    );
+    )
+  );
 }
 
 .service-card-rail:hover .service-card:not(:hover) .service-card__label,
@@ -332,7 +368,8 @@
 .service-card-rail.is-hovering-design .service-card:nth-child(1) .service-card__media::after,
 .service-card-rail.is-hovering-gmp .service-card:nth-child(2) .service-card__media::after,
 .service-card-rail.is-hovering-csv .service-card:nth-child(3) .service-card__media::after {
-  background:
+  background: var(
+    --service-card-overlay-active,
     linear-gradient(
       180deg,
       rgba(6, 13, 28, 0.08) 0%,
@@ -344,7 +381,8 @@
       rgba(5, 12, 24, 0.22) 0%,
       rgba(11, 25, 47, 0.12) 50%,
       rgba(5, 12, 24, 0.2) 100%
-    );
+    )
+  );
 }
 
 .service-card-rail:hover .service-card:hover .service-card__label,
@@ -450,12 +488,14 @@
   }
 
   .service-card__media::after {
-    background:
+    background: var(
+      --service-card-overlay-mobile,
       linear-gradient(
         90deg,
         rgba(10, 24, 47, 0.18) 0%,
         rgba(10, 24, 47, 0.42) 100%
-      );
+      )
+    );
   }
 
   .service-card__content {

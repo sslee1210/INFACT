@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from "react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Building2, ClipboardCheck, UsersRound } from "lucide-react";
 import { CountUpValue } from "@/components/site/CountUpValue";
 import {
@@ -8,6 +8,23 @@ import {
   homeHero,
 } from "@/content/homePage";
 import { scrollToElementById, scrollToTopSoon } from "@/lib/scroll";
+
+const homeHeroParticles = [
+  { left: "7%", top: "18%", size: 3, color: "#d8dc82", delay: "-5s", duration: "21s" },
+  { left: "14%", top: "62%", size: 2, color: "#a8ce78", delay: "-12s", duration: "26s" },
+  { left: "23%", top: "34%", size: 2, color: "#e5c778", delay: "-3s", duration: "23s" },
+  { left: "31%", top: "78%", size: 3, color: "#bed985", delay: "-17s", duration: "29s" },
+  { left: "39%", top: "15%", size: 2, color: "#d9d57a", delay: "-8s", duration: "24s" },
+  { left: "47%", top: "68%", size: 2, color: "#9fca72", delay: "-20s", duration: "31s" },
+  { left: "56%", top: "26%", size: 3, color: "#e7cb7c", delay: "-10s", duration: "27s" },
+  { left: "64%", top: "84%", size: 2, color: "#b4d47d", delay: "-4s", duration: "22s" },
+  { left: "72%", top: "42%", size: 2, color: "#d9d67c", delay: "-16s", duration: "28s" },
+  { left: "79%", top: "17%", size: 3, color: "#a9cf78", delay: "-7s", duration: "25s" },
+  { left: "86%", top: "67%", size: 2, color: "#e2c573", delay: "-14s", duration: "30s" },
+  { left: "93%", top: "31%", size: 2, color: "#b6d781", delay: "-2s", duration: "20s" },
+  { left: "4%", top: "88%", size: 2, color: "#d5d77d", delay: "-18s", duration: "27s" },
+  { left: "96%", top: "86%", size: 3, color: "#9fc972", delay: "-9s", duration: "24s" },
+] as const;
 
 function LineBreakText({ lines }: { lines: readonly string[] }) {
   return (
@@ -51,16 +68,68 @@ function BackgroundSection({
 }
 
 export function HomeHeroSection() {
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    if (reducedMotion.matches) {
+      setIsComplete(true);
+      return;
+    }
+
+    const timer = window.setTimeout(() => setIsComplete(true), 950);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
-    <BackgroundSection
-      className="hero hero--strong home-focus-section"
-      imageVar="--hero-image"
-      image={homeHero.image}
-    >
+    <section className="hero hero--strong hero--particle-field home-focus-section">
+      <div className="hero__particles" aria-hidden="true">
+        {homeHeroParticles.map((particle, index) => (
+          <span
+            key={`${particle.left}-${particle.top}`}
+            className="hero__particle"
+            style={{
+              left: particle.left,
+              top: particle.top,
+              width: particle.size,
+              height: particle.size,
+              color: particle.color,
+              animationDelay: particle.delay,
+              animationDuration: particle.duration,
+            }}
+            data-particle-index={index}
+          />
+        ))}
+      </div>
+
       <div className="home-container hero__inner">
-        <div className="hero__content fade-in">
+        <div
+          className={[
+            "hero__content",
+            "hero__content--intro",
+            isComplete ? "is-complete" : "",
+          ].join(" ")}
+        >
           <h1 className="hero__title">{homeHero.title}</h1>
-          <p className="hero__subtitle">{homeHero.description}</p>
+          <img
+            src={homeHero.logo}
+            alt="IN-FACT"
+            className="hero__brand-logo"
+          />
+          <div className="hero__completion" aria-hidden={!isComplete}>
+            <div className="hero__completion-inner">
+              <p className="hero__subtitle">{homeHero.description}</p>
+              <a
+                href={homeHero.ctaHref}
+                className="hero__contact-link ui-button ui-button--primary"
+                onClick={scrollToTopSoon}
+                tabIndex={isComplete ? 0 : -1}
+              >
+                <span className="hero__contact-label">{homeHero.ctaLabel}</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -73,7 +142,7 @@ export function HomeHeroSection() {
         <span className="hero__scroll-label">SCROLL</span>
         <span className="hero__scroll-line" aria-hidden="true" />
       </button>
-    </BackgroundSection>
+    </section>
   );
 }
 

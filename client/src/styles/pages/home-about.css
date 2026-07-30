@@ -22,21 +22,20 @@
 .about-blend-inner::after {
   content: "";
   position: absolute;
-  left: clamp(-530px, -34vw, -380px);
-  bottom: clamp(-300px, -16vw, -200px);
+  left: clamp(-480px, -20vw, -280px);
+  bottom: clamp(-980px, -44vw, -680px);
   z-index: -1;
-  width: clamp(520px, 44vw, 1200px);
+  width: clamp(1220px, 84vw, 1800px);
   aspect-ratio: 1;
   border: 0;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    transparent 0 33.333%,
-    rgba(125, 137, 156, 0.05) 33.333% 55%,
-    rgba(128, 202, 244, 0.044) 55% 100%
+    transparent 0 50%,
+    rgba(125, 137, 156, 0.05) 50% 70%,
+    rgba(128, 202, 244, 0.044) 70% 100%
   );
   box-shadow: none;
-  transform: none;
   pointer-events: none;
 }
 
@@ -225,9 +224,9 @@
 
 @media (min-width: 1920px) {
   .about-blend-inner::after {
-    left: clamp(-33.125rem, -34vw, -23.75rem);
-    bottom: clamp(-18.75rem, -16vw, -12.5rem);
-    width: clamp(32.5rem, 44vw, 75rem);
+    left: clamp(-30rem, -20vw, -17.5rem);
+    bottom: clamp(-61.25rem, -44vw, -42.5rem);
+    width: clamp(76.25rem, 84vw, 112.5rem);
   }
 
   .about-blend-content {

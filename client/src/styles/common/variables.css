@@ -32,16 +32,16 @@
   --nav-menu-open-item-width: 10.8vw;
   --nav-menu-open-gap: 0.9vw;
 
-  --fluid-gap-xs: clamp(8px, 0.8vw, 12px);
-  --fluid-gap-sm: clamp(12px, 1vw, 18px);
-  --fluid-gap-md: clamp(18px, 1.6vw, 28px);
-  --fluid-gap-lg: clamp(28px, 2.6vw, 40px);
-  --fluid-gap-xl: clamp(40px, 4.5vw, 56px);
-  --fluid-gap-2xl: clamp(48px, 5.8vw, 96px);
+  --fluid-gap-xs: clamp(8px, 0.55vw, 10px);
+  --fluid-gap-sm: clamp(11px, 0.75vw, 14px);
+  --fluid-gap-md: clamp(15px, 1vw, 20px);
+  --fluid-gap-lg: clamp(22px, 1.55vw, 30px);
+  --fluid-gap-xl: clamp(30px, 2.2vw, 40px);
+  --fluid-gap-2xl: clamp(40px, 3.2vw, 56px);
 
-  --fluid-section-pad-top: clamp(112px, 8.8vw, 136px);
-  --fluid-section-pad-bottom: clamp(120px, 9.2vw, 148px);
-  --fluid-section-space: clamp(48px, 5.8vw, 96px);
+  --fluid-section-pad-top: clamp(54px, 4vw, 68px);
+  --fluid-section-pad-bottom: clamp(58px, 4.3vw, 72px);
+  --fluid-section-space: clamp(24px, 2.2vw, 36px);
 
   --fluid-content-max: clamp(520px, 42vw, 640px);
   --fluid-content-wide: clamp(620px, 52vw, 760px);
@@ -60,43 +60,44 @@
   --fluid-subnav-height: clamp(62px, 5vw, 70px);
   --fluid-site-main-offset: clamp(84px, 6.4vw, 92px);
 
-  --fluid-intro-min-height: clamp(380px, 34vw, 460px);
-  --fluid-intro-pad-top: clamp(116px, 9.6vw, 138px);
-  --fluid-intro-pad-bottom: clamp(88px, 7.8vw, 108px);
+  --fluid-intro-min-height: clamp(244px, 19vw, 286px);
+  --fluid-intro-pad-top: clamp(72px, 5.6vw, 86px);
+  --fluid-intro-pad-bottom: clamp(36px, 3vw, 48px);
 }
 
 /* =========================================================
    LARGE DESKTOP SCALE SYSTEM
    1920px is the visual baseline.
 
-   - Layout keeps the same 12.5% / 75% / 12.5% guide.
-   - Typography and rem-based UI scale only to a controlled 20px root cap.
+   - Layout follows the 12.5% / 75% / 12.5% guide at 1920px and then
+     keeps a readable 1440px content cap.
+   - Typography and rem-based UI scale only to a controlled 16.5px root cap.
    - Media and layout can continue using viewport space without turning body
      copy, buttons or cards into oversized 4K UI.
    ========================================================= */
 
 @media (min-width: 1920px) {
   html {
-    /* 1920px -> 16px, 2400px+ -> capped at 20px */
-    font-size: clamp(16px, 0.833333vw, 20px);
+    /* 1920px -> 16px, large monitors -> capped at 16.5px */
+    font-size: clamp(16px, 0.7vw, 16.5px);
   }
 
   :root {
-    /* Keep the shared header / main / footer guide proportional even after
-       typography stops scaling. */
-    --site-content-max: 75vw;
-    --site-edge-gutter: 12.5vw;
+    /* Keep ultra-wide displays readable instead of stretching the content
+       past the 1920px baseline. */
+    --site-content-max: 1440px;
+    --site-edge-gutter: max(240px, calc((100vw - 1440px) / 2));
 
-    --fluid-gap-xs: 0.75rem;
-    --fluid-gap-sm: 1.125rem;
-    --fluid-gap-md: 1.75rem;
-    --fluid-gap-lg: 2.5rem;
-    --fluid-gap-xl: 3.5rem;
-    --fluid-gap-2xl: 6rem;
+    --fluid-gap-xs: 0.625rem;
+    --fluid-gap-sm: 0.9375rem;
+    --fluid-gap-md: 1.375rem;
+    --fluid-gap-lg: 2rem;
+    --fluid-gap-xl: 2.5rem;
+    --fluid-gap-2xl: 3.5rem;
 
-    --fluid-section-pad-top: 8.5rem;
-    --fluid-section-pad-bottom: 9.25rem;
-    --fluid-section-space: 6rem;
+    --fluid-section-pad-top: 4.25rem;
+    --fluid-section-pad-bottom: 4.5rem;
+    --fluid-section-space: 2.25rem;
 
     --fluid-content-max: 40rem;
     --fluid-content-wide: 47.5rem;
@@ -115,8 +116,8 @@
     --fluid-subnav-height: 4.375rem;
     --fluid-site-main-offset: 5.75rem;
 
-    --fluid-intro-min-height: 28.75rem;
-    --fluid-intro-pad-top: 8.625rem;
-    --fluid-intro-pad-bottom: 6.75rem;
+    --fluid-intro-min-height: 17.875rem;
+    --fluid-intro-pad-top: 5.375rem;
+    --fluid-intro-pad-bottom: 3rem;
   }
 }

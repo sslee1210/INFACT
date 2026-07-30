@@ -130,6 +130,25 @@
   transform: translateX(-50%);
 }
 
+.org-tree__department {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--org-secondary-drop);
+}
+
+.org-tree__department::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: var(--org-line-width);
+  height: var(--org-secondary-drop);
+  background: var(--org-line);
+  transform: translateX(-50%);
+}
+
 .org-tree__validation-children {
   position: relative;
   width: clamp(430px, 34vw, 500px);

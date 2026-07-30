@@ -1,4 +1,4 @@
-import { Fragment, type CSSProperties } from "react";
+import { Fragment } from "react";
 import { PageIntro } from "@/components/site/PageIntro";
 import { PageLayout } from "@/components/site/PageLayout";
 import { PageSubNav } from "@/components/site/PageSubNav";
@@ -107,8 +107,8 @@ function ConsultingServiceSections({
         <div className="site-shell">
           <ServiceSectionHeader
             index="03"
-            label="Service Scope"
-            title={`${data.sectionName} 주요 지원 범위`}
+            label="Service Roadmap"
+            title={`${data.sectionName} 수행 로드맵`}
             description={<TextLines lines={data.scope.description.split("\n")} />}
           />
 
@@ -127,27 +127,44 @@ function ConsultingServiceSections({
         </div>
       </section>
 
-      <section className="consulting-template__section consulting-template__section--structure">
+      <section className="consulting-template__section consulting-template__section--execution">
         <div className="site-shell">
           <ServiceSectionHeader
             index="04"
-            label="Integrated Structure"
-            title={`${data.sectionName} 프로젝트 원스톱 수행 Structure`}
+            label={data.execution.label ?? "Deliverables"}
+            title={
+              data.execution.title ??
+              `${data.sectionName} 단계별 대표 수행 결과자료`
+            }
             description={
-              <TextLines lines={data.structure.description.split("\n")} />
+              <TextLines lines={data.execution.description.split("\n")} />
             }
           />
 
-          <div className="consulting-template__structure">
-            <ol className="consulting-template__structure-phases">
-              {data.structure.phases.map((phase) => (
+          <div className="consulting-template__execution">
+            <div
+              className="consulting-template__execution-head"
+              aria-hidden="true"
+            >
+              <span>단계</span>
+              <span>수행 구분</span>
+              <span>대표 결과자료</span>
+            </div>
+
+            <ol className="consulting-template__execution-rows">
+              {data.execution.steps.map((step, index) => (
                 <li
-                  key={phase.title}
-                  className="consulting-template__reveal"
+                  key={step.title}
+                  className="consulting-template__execution-row consulting-template__reveal"
                 >
-                  <div className="consulting-template__structure-phase-copy">
-                    <h3>{phase.title}</h3>
-                    <p>{phase.description}</p>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div className="consulting-template__execution-copy">
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </div>
+                  <div className="consulting-template__execution-output">
+                    <strong>{step.outputTitle}</strong>
+                    <p>{step.outputDetail}</p>
                   </div>
                 </li>
               ))}
@@ -156,85 +173,10 @@ function ConsultingServiceSections({
         </div>
       </section>
 
-      <section className="consulting-template__section consulting-template__section--deliverables">
-        <div className="site-shell">
-          <ServiceSectionHeader
-            index="05"
-            label="Deliverables"
-            title={`${data.sectionName} 단계별 대표 수행 결과자료`}
-            description={
-              <TextLines lines={data.deliverables.description.split("\n")} />
-            }
-          />
-
-          <div className="consulting-template__deliverables">
-            <div
-              className="consulting-template__deliverables-head"
-              aria-hidden="true"
-            >
-              <span>단계</span>
-              <span>수행 구분</span>
-              <span>대표 결과자료</span>
-            </div>
-
-            {data.deliverables.rows.map((row) => (
-              <article
-                key={`${row.phase}-${row.focus}`}
-                className="consulting-template__deliverables-row consulting-template__reveal"
-              >
-                <span>{row.phase}</span>
-                <strong>{row.focus}</strong>
-                {row.outputTitle ? (
-                  <div className="consulting-template__deliverable-output">
-                    <strong>{row.outputTitle}</strong>
-                    <span>{row.outputDetail}</span>
-                  </div>
-                ) : (
-                  <p>{row.outputs}</p>
-                )}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="consulting-template__section consulting-template__section--roadmap">
-        <div className="site-shell">
-          <ServiceSectionHeader
-            index="06"
-            label="Roadmap"
-            title={`${data.sectionName} 수행 로드맵`}
-            description={
-              <TextLines lines={data.roadmap.description.split("\n")} />
-            }
-          />
-
-          <ol
-            className="consulting-template__roadmap"
-            style={
-              {
-                "--consulting-roadmap-count": data.roadmap.steps.length,
-              } as CSSProperties
-            }
-          >
-            {data.roadmap.steps.map((step, index) => (
-              <li
-                key={step.title}
-                className="consulting-template__reveal"
-              >
-                <span>Step {index + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.description}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section className="consulting-template__section consulting-template__section--difference">
         <div className="site-shell">
           <ServiceSectionHeader
-            index="07"
+            index="05"
             label="IN-FACT Difference"
             title={`IN-FACT ${data.sectionName} 차별화 포인트`}
             description={
@@ -267,6 +209,7 @@ export function ConsultingServicePage({
   return (
     <PageLayout>
       <PageIntro
+        className="page-intro--service"
         label="Service"
         title={data.pageTitle}
         description={data.pageDescription}

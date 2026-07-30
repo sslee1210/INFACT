@@ -15,33 +15,11 @@ type ScopeItem = {
   description: string;
 };
 
-type StructurePhase = {
+type ExecutionStep = {
   title: string;
   description: string;
-};
-
-type DeliverableRowBase = {
-  phase: string;
-  focus: string;
-};
-
-type DeliverableRow = DeliverableRowBase &
-  (
-    | {
-        outputs: string;
-        outputTitle?: never;
-        outputDetail?: never;
-      }
-    | {
-        outputs?: never;
-        outputTitle: string;
-        outputDetail: string;
-      }
-  );
-
-type RoadmapStep = {
-  title: string;
-  description: string;
+  outputTitle: string;
+  outputDetail: string;
 };
 
 export type ConsultingServiceData = {
@@ -65,17 +43,11 @@ export type ConsultingServiceData = {
     description: string;
     items: ScopeItem[];
   };
-  structure: {
+  execution: {
+    label?: string;
+    title?: string;
     description: string;
-    phases: StructurePhase[];
-  };
-  deliverables: {
-    description: string;
-    rows: DeliverableRow[];
-  };
-  roadmap: {
-    description: string;
-    steps: RoadmapStep[];
+    steps: ExecutionStep[];
   };
   differentiators: {
     description: string;
@@ -98,7 +70,7 @@ export const consultingServicePages: Record<
     sectionName: "개념설계 컨설팅",
     pageDescription:
       "공정, 레이아웃, 유틸리티와 규제 요건을 하나의 실행 가능한 전략으로 통합합니다.",
-    pageImage: "./images/sub/business.jpg",
+    pageImage: "./images/service/conceptual-design-hero.webp",
     coreValue: {
       description:
         "제품과 생산계획을 시설 규모, GMP Layout, 동선과 유틸리티 조건으로 전환해 상세설계를 시작할 수 있는 기준을 만듭니다.",
@@ -118,7 +90,7 @@ export const consultingServicePages: Record<
     application: {
       description:
         "제조시설의 위치와 규모를 결정해야 하거나 기존 시설의 생산능력, 공정 또는 GMP 동선을 재구성해야 하는 프로젝트에 적용합니다.",
-      image: "./images/home/service-conceptual-v3.webp",
+      image: "./images/service/conceptual-design-application.webp",
       imageAlt: "제약 제조시설의 개념설계와 공간 검토",
       items: [
         {
@@ -141,99 +113,59 @@ export const consultingServicePages: Record<
     },
     scope: {
       description:
-        "제품과 제조공정의 기초자료를 분석하고 공정별 공간, 장비, 동선과 환경조건을 일관된 Design Basis로 정리합니다.",
+        "기초자료 확인부터 공간·동선과 유틸리티 기준 확정까지 개념설계의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.",
       items: [
         {
-          title: "제품·생산계획",
+          title: "기초자료·범위 정의",
           description:
-            "제품군, 제형, Batch Size, 연간 생산량과 향후 증설계획을 시설 규모 산정의 입력값으로 정리합니다.",
+            "질의서와 Workshop을 통해 제품, 생산계획, 제조공정, 장비와 운영조건을 수집하고 프로젝트 범위를 합의합니다.",
         },
         {
-          title: "공정·장비 분석",
+          title: "공정·시설 규모 분석",
           description:
-            "공정 순서와 처리시간, 장비 사양·수량, 작업공간과 반입·정비 조건을 검토합니다.",
+            "생산량, 공정별 처리용량과 장비 조건을 분석해 작업실, 창고와 지원시설의 필요 규모를 산정합니다.",
         },
         {
-          title: "GMP Layout·동선",
+          title: "GMP Layout·동선 개발",
           description:
-            "작업실 인접성, 구역 구분과 인원·자재·제품·폐기물·장비 동선의 교차 가능성을 검토합니다.",
+            "공정 인접성, 장비 배치와 청정구역을 검토하고 인원·자재·제품·폐기물 동선을 구체화합니다.",
         },
         {
-          title: "환경·유틸리티 기준",
+          title: "Design Basis 확정",
           description:
-            "청정등급, 차압, 온·습도, 제약용수·가스·배기·전기와 Drain 요구조건을 정리합니다.",
+            "청정등급, 차압, 온·습도와 유틸리티 요구조건을 반영해 후속 상세설계에 사용할 기준을 확정합니다.",
         },
       ],
     },
-    structure: {
+    execution: {
+      label: "Deliverables",
+      title: "개념설계 컨설팅 단계별 대표 수행 결과자료",
       description:
-        "질의서와 Workshop에서 수집한 생산정보를 공정분석, 공간계획과 GMP 검토로 발전시켜 최종 개념설계 패키지로 확정합니다.",
-      phases: [
-        {
-          title: "기초자료 정리",
-          description: "제품, 생산량, 공정, 장비와 운영조건 확인",
-        },
-        {
-          title: "공정·장비 분석",
-          description: "처리용량, 작업순서와 공간 요구사항 산정",
-        },
-        {
-          title: "공간·GMP 통합",
-          description: "Layout, 동선, Zoning과 Utility 조건 검토",
-        },
-        {
-          title: "설계기준 확정",
-          description: "도면, 요구사항과 Concept Report 문서화",
-        },
-      ],
-    },
-    deliverables: {
-      description:
-        "각 단계에서 합의한 검토 결과를 후속 설계와 프로젝트 관리에 사용할 수 있는 도면과 기준자료로 정리합니다.",
-      rows: [
-        {
-          phase: "착수",
-          focus: "프로젝트 입력조건",
-          outputs: "개념설계 질의서 · Project Brief · 제품·생산·장비 기초 Data",
-        },
-        {
-          phase: "분석",
-          focus: "시설 규모·공정 분석",
-          outputs: "Process Analysis Sheet · Facility Size · Equipment List",
-        },
-        {
-          phase: "설계",
-          focus: "Layout·구역·동선",
-          outputs:
-            "Site Plan · GMP Layout · Equipment Plan · Personnel / Material / Waste Flow",
-        },
-        {
-          phase: "확정",
-          focus: "작업실·유틸리티 설계기준",
-          outputs:
-            "Room Design Requirement · Utility / Drain Plan · Conceptual Design Report",
-        },
-      ],
-    },
-    roadmap: {
-      description:
-        "프로젝트 조건을 확인하고 공정과 공간을 단계적으로 발전시켜 최종 설계 기준을 확정합니다.",
+        "각 수행단계에서 합의한 검토 결과를 후속 상세설계와 프로젝트 관리에 사용할 수 있는 도면과 기준자료로 정리합니다.",
       steps: [
         {
           title: "질의서·Workshop",
           description: "제품, 생산계획, 제조공정, 장비와 운영조건을 수집하고 프로젝트 범위를 합의합니다.",
+          outputTitle: "개념설계 질의서 · Project Brief",
+          outputDetail: "제품·생산·장비 기초 Data",
         },
         {
           title: "시설 규모 산정",
           description: "생산량과 공정별 처리용량을 기준으로 작업실, 창고와 지원시설의 필요 규모를 산정합니다.",
+          outputTitle: "Process Analysis Sheet",
+          outputDetail: "Facility Size · Equipment List",
         },
         {
           title: "Layout Development",
           description: "공정 인접성, 장비 배치, 청정구역과 인원·자재·폐기물 동선을 반복 검토합니다.",
+          outputTitle: "Site Plan · GMP Layout · Equipment Plan",
+          outputDetail: "Personnel / Material / Waste Flow",
         },
         {
           title: "Design Basis 확정",
           description: "유틸리티와 작업실 요구사항을 반영해 최종 도면과 개념설계 보고서를 확정합니다.",
+          outputTitle: "Room Design Requirement · Conceptual Design Report",
+          outputDetail: "Utility / Drain Plan",
         },
       ],
     },
@@ -268,10 +200,10 @@ export const consultingServicePages: Record<
     sectionName: "GMP 컨설팅",
     pageDescription:
       "운영 기준부터 적격성평가와 점검 대응까지 하나의 수행 구조로 연결하는 맞춤형 GMP 전문 컨설팅 서비스입니다.",
-    pageImage: "./images/sub/business.jpg",
+    pageImage: "./images/service/gmp-consulting-hero.webp",
     coreValue: {
       description:
-        "형식적이고 과도한 프로세스 도입을 지양하고 제조소의 실제 운영과 프로젝트 일정에 맞는 GMP 실행 기준을 제시합니다.",
+        "형식적이고 과도한 프로세스 도입을 지양하고 제조소 규모, 실제 운영 상황과 프로젝트 일정에 맞는 GMP 실행 기준을 제시합니다.",
       items: [
         {
           title: "실질적 가이드 제공",
@@ -288,7 +220,7 @@ export const consultingServicePages: Record<
     application: {
       description:
         "제조소의 신규 구축과 증설, 기존 품질시스템 고도화부터\n규제기관 Inspection 및 거래처 Audit 준비까지 지원합니다.",
-      image: "./images/home/service-gmp-v3.webp",
+      image: "./images/service/gmp-consulting-application.webp",
       imageAlt: "제약 제조소의 GMP 운영과 품질관리",
       items: [
         {
@@ -315,107 +247,65 @@ export const consultingServicePages: Record<
     },
     scope: {
       description:
-        "프로젝트 전략, 품질시스템, 밸리데이션과 실사 대응을 4대 핵심 영역으로 구성해 제조소 상황에 맞게 지원합니다.",
+        "현장 진단부터 QMS 구축, 밸리데이션과 실사 대응까지 GMP 컨설팅의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.",
       items: [
         {
-          title: "VMP & 전략",
+          title: "범위 정의",
           description:
-            "Validation Master Plan을 수립하고 단계별 수행 일정과 R&R(역할 구조)을 명확하게 정리합니다.",
+            "현장 사전 진단을 통해 프로젝트 목표와 적용 범위를 정하고 Validation Master Plan과 수행계획을 수립합니다.",
         },
         {
-          title: "QMS & SOP",
+          title: "QMS 구축",
           description:
-            "SOP, Training, CAPA, Change Control과 Deviation 절차를 검토하고 제·개정합니다.",
+            "SOP, Training, 일탈·CAPA와 변경관리 절차를 현장 운영에 맞게 정비하고 교육체계를 구축합니다.",
         },
         {
-          title: "Validation",
+          title: "밸리데이션",
           description:
-            "Qualification(DQ/IQ/OQ/PQ), PV와 Computerized System Validation(CSV)의 적용 범위를 검토합니다.",
+            "시설·설비 적격성평가, PV, CSV와 Data Integrity의 적용 범위와 수행 결과를 검토합니다.",
         },
         {
-          title: "Inspection",
+          title: "실사 대응",
           description:
-            "실사 대응 제출자료를 패키징하고 Mock Audit(모의점검)와 현장 대응 가이드를 지원합니다.",
+            "Mock Audit을 수행하고 규제기관 Inspection 및 거래처 Audit에 필요한 대응자료와 현장 지침을 정리합니다.",
         },
       ],
     },
-    structure: {
+    execution: {
+      label: "Deliverables",
+      title: "GMP 컨설팅 단계별 대표 수행 결과자료",
       description:
-        "기획 단계부터 문서화, 적격성평가와 최종 실사 대응까지\n개별 요소를 하나의 통합 프로세스로 연결합니다.",
-      phases: [
+        "범위 정의부터 규정 검토, 운영체계와 실사 대응자료 정리까지 각 단계에서 필요한 대표 결과자료를 프로젝트 목적에 맞춰 구성합니다.",
+      steps: [
         {
-          title: "VMP & 전략",
-          description: "프로젝트 목표, 범위, 일정과 역할 구조 수립",
-        },
-        {
-          title: "QMS & SOP",
-          description: "품질운영 절차 검토, 제·개정과 교육",
-        },
-        {
-          title: "Validation",
-          description: "적격성평가, PV, CSV와 Data Integrity 검토",
-        },
-        {
-          title: "Inspection",
-          description: "제출자료 패키징, Mock Audit와 현장 대응",
-        },
-      ],
-    },
-    deliverables: {
-      description:
-        "범위 정의부터 문서화와 실사 대응까지 각 수행단계의 대표 결과자료를\n프로젝트 목적에 맞춰 구성합니다.",
-      rows: [
-        {
-          phase: "01",
-          focus: "범위 정의",
+          title: "범위 정의",
+          description: "현장 사전 진단을 통해 프로젝트 목표, 적용 범위와 수행 일정을 정리합니다.",
           outputTitle: "Validation Master Plan (VMP)",
           outputDetail: "프로젝트 목표, 범위 및 일정 관리 가이드",
         },
         {
-          phase: "02",
-          focus: "규정 및 기준 검토",
+          title: "규정 및 기준 검토",
+          description: "적용 규정과 현재 운영 기준의 차이를 진단하고 우선 보완과제를 정리합니다.",
           outputTitle: "Compliance Check Sheet",
           outputDetail: "GMP 규정 부합성 검토 및 실행 로드맵",
         },
         {
-          phase: "03",
-          focus: "운영체계 정리",
+          title: "운영체계 정리",
+          description: "SOP, Training, 일탈·CAPA와 변경관리 절차를 현장 운영에 맞게 정비합니다.",
           outputTitle: "QMS / SOP 체계 제안서",
           outputDetail: "현장 맞춤형 품질운영 문서 및 제·개정안",
         },
         {
-          phase: "04",
-          focus: "문서화 및 대응 정리",
+          title: "문서화 및 대응 정리",
+          description: "Mock Audit 결과와 규제기관 Inspection 및 거래처 Audit 대응자료를 최종 문서로 정리합니다.",
           outputTitle: "Inspection Readiness Package",
           outputDetail: "실사 대응 자료집, 모의점검 보고서 및 지침서",
         },
       ],
     },
-    roadmap: {
-      description:
-        "현장 사전 진단과 범위 정의를 시작으로 QMS 구축, 밸리데이션과\n최종 실사 대응까지 단계별로 진행합니다.",
-      steps: [
-        {
-          title: "범위 정의",
-          description: "현장 사전 진단을 수행하고 프로젝트 마스터 플랜(PMP)을 수립합니다.",
-        },
-        {
-          title: "QMS 구축",
-          description: "SOP, 일탈/CAPA와 변경관리 체계를 정비하고 관련 교육을 수행합니다.",
-        },
-        {
-          title: "밸리데이션",
-          description: "설비 적격성평가, CSV와 데이터 완전성(DI) 검토를 수행합니다.",
-        },
-        {
-          title: "실사 대응",
-          description: "Mock Audit을 수행하고 최종 Inspection 대응자료를 수립합니다.",
-        },
-      ],
-    },
     differentiators: {
       description:
-        "현장에서 바로 실행할 수 있는 SOP와 강화되는 글로벌 규제 이슈를 함께 반영해 실사 대응의 실효성을 높입니다.",
+        "시설, 장비와 품질시스템을 분리하지 않고 현장 운영과 문서 실행이 함께 작동하는 GMP 체계를 구축합니다.",
       items: [
         {
           title: "현장 실무형 SOP 고도화",
@@ -423,17 +313,20 @@ export const consultingServicePages: Record<
             "단순 법률 및 규정의 나열에 그치지 않고 작업자가 현장에서 즉시 이행할 수 있는 정교한 표준작업지침서(SOP)를 제작해 교육 및 자체감사 수행 효율을 높입니다.",
         },
         {
-          title: "최신 규제 트렌드 반영",
+          title: "현장 실행과 최신 규제를 함께 반영",
           description:
-            "Data Integrity와 Computer System Validation(CSV) 등 강화되는 글로벌 규제 이슈를 사전에 점검해 향후 실사 지적 가능성에 대비합니다.",
+            "시설·장비 적격성, 품질시스템과 실사 대응자료를 하나의 실행 기준으로 연결하고 Data Integrity와 CSV 등 강화되는 규제 이슈를 선제적으로 점검합니다.",
         },
       ],
     },
     contact: {
-      titleLines: ["운영 기준이 복잡해지기 전에,", "프로젝트 목적에 맞는 GMP 수행 범위를 먼저 정리하세요."],
+      titleLines: [
+        "제조소 운영과 규제 대응의",
+        "GMP 수행 기준을 먼저 정리합니다.",
+      ],
       descriptionLines: [
-        "현재 제조소의 운영 상황과 프로젝트 일정을 기준으로",
-        "필요한 GMP 컨설팅 범위와 수행 순서를 함께 검토합니다.",
+        "시설, 공정과 운영 현황을 알려주시면",
+        "GMP 컨설팅의 출발점과 수행 범위를 함께 정리합니다.",
       ],
     },
   },
@@ -443,38 +336,28 @@ export const consultingServicePages: Record<
     serviceName: "CSV Consulting",
     sectionName: "CSV 컨설팅",
     pageDescription:
-      "GMP 환경에서 운영되는 컴퓨터화시스템이 규제 및 사용자 요구사항을 충족하고 의도한 목적에 따라 안정적으로 운영되도록 지원합니다.",
-    pageImage: "./images/sub/business.jpg",
+      "GMP 환경의 컴퓨터화시스템이 규제 및 사용자 요구사항을 충족하고 의도한 목적에 따라 안정적으로 운영되도록 검증 전 과정을 지원합니다.",
+    pageImage: "./images/service/csv-consulting-hero.webp",
     coreValue: {
       description:
-        "Reliable Validation, Trusted Compliance를 기준으로 규정 준수를 넘어 신뢰할 수 있는 컴퓨터화시스템 검증체계를 구축합니다.",
+        "규정 준수, Data Integrity, 위험 기반 검증과 Lifecycle 관리를 하나의 검증체계로 연결합니다.",
       items: [
         {
-          title: "Regulatory Compliance",
+          title: "규제 준수와 Data Integrity 확보",
           description:
-            "KGMP, FDA 21 CFR Part 11, EU GMP Annex 11과 GAMP 5 등 글로벌 GMP 요구사항에 대응하는 검증체계를 제공합니다.",
+            "KGMP, FDA 21 CFR Part 11, EU GMP Annex 11 등 규제 요구사항과 ALCOA+ 원칙을 검증 근거와 추적성으로 연결해 신뢰할 수 있는 운영 환경을 구축합니다.",
         },
         {
-          title: "Data Integrity",
+          title: "위험 기반 검증과 Lifecycle 관리",
           description:
-            "데이터 완전성과 추적성을 확보해 신뢰할 수 있는 시스템 운영환경을 구축합니다.",
-        },
-        {
-          title: "Risk-Based Validation",
-          description:
-            "위험 기반 접근을 통해 검증범위를 최적화하고 검증 효율성과 품질을 함께 높입니다.",
-        },
-        {
-          title: "Lifecycle Management",
-          description:
-            "시스템 기획부터 운영, 변경관리, 주기적 검토와 재검증까지 전체 생명주기를 지원합니다.",
+            "시스템 영향과 위험도에 따라 검증 범위를 최적화하고 기획부터 운영, 변경관리, 정기 검토와 재검증까지 검증상태를 지속적으로 유지합니다.",
         },
       ],
     },
     application: {
       description:
         "GxP 환경의 컴퓨터화시스템을 대상으로 신규 도입과 밸리데이션, 규제 대응, 정기 검토와 운영체계 수립을 지원합니다.",
-      image: "./images/home/service-csv-v3.webp",
+      image: "./images/service/csv-consulting-application.webp",
       imageAlt: "컴퓨터화시스템 밸리데이션과 데이터 검토",
       items: [
         {
@@ -501,130 +384,97 @@ export const consultingServicePages: Record<
     },
     scope: {
       description:
-        "CSV 전략과 위험평가, 검증 실행과 운영단계 관리를 4대 핵심 영역으로 구성해 프로젝트 전 과정을 지원합니다.",
+        "프로젝트 계획부터 요구사항·위험평가, 검증 실행과 유지관리까지 CSV의 주요 지원 범위를 Lifecycle 순서로 연결합니다.",
       items: [
         {
-          title: "Validation Strategy & Planning",
+          title: "프로젝트 착수·계획",
           description:
-            "시스템 현황과 GxP 영향도를 분석해 프로젝트에 적합한 CSV 전략, 범위와 일정을 수립합니다.",
+            "시스템 현황과 GxP 영향도를 분석해 CSV 전략, 범위와 일정을 수립합니다.",
         },
         {
-          title: "Risk Assessment & Compliance",
+          title: "요구사항·설계 검토",
           description:
-            "위험 기반 접근으로 검증범위를 최적화하고 Data Integrity와 규제 요구사항의 충족 여부를 검토합니다.",
+            "사용자 요구사항과 기능·설계 명세가 규제 및 검증 목적에 적합한지 확인합니다.",
         },
         {
-          title: "Validation Execution",
+          title: "위험평가",
           description:
-            "시스템 적격성을 입증하기 위한 검증문서를 작성하고 시험 수행, 결과 확인과 승인을 체계적으로 관리합니다.",
+            "GxP 영향과 Data Integrity 위험을 평가해 검증범위와 시험 강도를 결정합니다.",
         },
         {
-          title: "Lifecycle Management",
+          title: "검증 실행",
           description:
-            "시스템 운영 이후에도 변경관리, Periodic Review와 Revalidation을 통해 지속적인 규정 준수와 안정적 운영을 지원합니다.",
+            "IQ·OQ·PQ 시험 수행과 결과 확인, 승인 증적을 체계적으로 관리합니다.",
+        },
+        {
+          title: "종결·유지관리",
+          description:
+            "RTM·VSR로 검증을 종결하고 변경관리, 정기 검토와 재검증을 지원합니다.",
         },
       ],
     },
-    structure: {
+    execution: {
+      label: "Deliverables",
+      title: "CSV 컨설팅 단계별 대표 수행 결과자료",
       description:
-        "기획 단계부터 위험평가, 검증 실행과 운영 이후의 규정 준수 관리까지 CSV 활동을 하나의 통합 프로세스로 연결합니다.",
-      phases: [
-        {
-          title: "Strategy & Planning",
-          description: "GxP 영향도, 검증 범위, 역할과 일정 수립",
-        },
-        {
-          title: "Risk & Compliance",
-          description: "위험평가, 규제 요구사항과 Data Integrity 검토",
-        },
-        {
-          title: "Validation Execution",
-          description: "검증문서 작성, 시험 수행과 결과 승인",
-        },
-        {
-          title: "Lifecycle Management",
-          description: "변경관리, 정기 검토, 재검증과 Audit 지원",
-        },
-      ],
-    },
-    deliverables: {
-      description:
-        "계획, 요구·설계, 위험평가, 검증과 운영단계 유지관리까지 CSV Lifecycle에 필요한 대표 결과자료를 구성합니다.",
-      rows: [
-        {
-          phase: "01",
-          focus: "계획",
-          outputs: "Validation Plan · System Assessment",
-        },
-        {
-          phase: "02",
-          focus: "요구·설계",
-          outputs: "User Requirements Specification · Functional / Design Specification Review · Design Qualification",
-        },
-        {
-          phase: "03",
-          focus: "위험평가",
-          outputs: "Functional Risk Assessment · Data Integrity / Gap Assessment",
-        },
-        {
-          phase: "04",
-          focus: "검증",
-          outputs: "Installation Qualification · Operational Qualification · Performance Qualification",
-        },
-        {
-          phase: "05",
-          focus: "종결·유지",
-          outputs: "Requirements Traceability Matrix · Validation Summary Report · Periodic Review / Change Records",
-        },
-      ],
-    },
-    roadmap: {
-      description:
-        "프로젝트 착수와 검증전략 수립부터 위험평가, 검증 실행과 운영단계 규정 준수 관리까지 5단계로 진행합니다.",
+        "요구사항, 위험평가, 시험 증적과 종결자료를 단계별로 연결해 검증 근거와 추적성을 명확하게 정리합니다.",
       steps: [
         {
-          title: "Project Initiation",
-          description: "프로젝트 목표와 범위, GxP 영향도와 시스템 현황을 파악하고 이해관계자를 확인합니다.",
+          title: "프로젝트 착수 · 계획",
+          description: "목표와 범위, GxP 영향도와 시스템 현황을 파악하고 GAMP 5 기반 분류, 역할과 일정을 수립합니다.",
+          outputTitle: "VMP · Validation Plan · System Assessment",
+          outputDetail: "검증 범위, 책임, 일정 및 시스템 현황",
         },
         {
-          title: "Validation Strategy",
-          description: "Validation Master Plan과 Validation Plan을 작성하고 GAMP 5 기반 시스템 분류와 일정을 수립합니다.",
+          title: "요구사항 · 설계 검토",
+          description: "사용자 요구사항을 정의하고 기능·설계 명세의 적합성과 검증 가능성을 확인합니다.",
+          outputTitle: "URS · Functional / Design Specification Review",
+          outputDetail: "User Requirements Specification · Design Qualification",
         },
         {
-          title: "Risk Assessment",
-          description: "Initial Risk Assessment, GxP Impact Assessment, URS와 Data Integrity 요구사항을 검토합니다.",
+          title: "위험평가",
+          description: "GxP 영향과 기능 위험, Data Integrity 요구사항을 평가해 시험 범위와 검증 강도를 결정합니다.",
+          outputTitle: "Functional Risk Assessment",
+          outputDetail: "GxP Impact Assessment · Data Integrity / Gap Assessment",
         },
         {
-          title: "Validation Execution",
-          description: "검증문서를 작성하고 시험 수행과 결과 확인을 거쳐 검증 완료와 승인을 진행합니다.",
+          title: "검증 실행",
+          description: "검증문서를 작성하고 설치·기능·운전·성능 시험의 수행과 결과 확인, 승인을 관리합니다.",
+          outputTitle: "IQ · OQ · PQ",
+          outputDetail: "시험 수행기록, 결과 확인과 승인 증적",
         },
         {
-          title: "운영 및 규정 준수 관리",
-          description: "Change Control, Periodic Review, Revalidation과 Audit 대응으로 검증상태를 유지합니다.",
+          title: "종결 · 유지관리",
+          description: "요구사항과 시험 결과의 추적성을 확인하고 변경관리, 정기 검토, 재검증과 Audit 대응으로 검증상태를 유지합니다.",
+          outputTitle: "RTM · Validation Summary Report",
+          outputDetail: "Periodic Review · Change Records",
         },
       ],
     },
     differentiators: {
       description:
-        "검증 완료 자체보다 규정 준수와 시스템 신뢰성을 지속적으로 유지할 수 있는 CSV 체계를 구축하는 데 집중합니다.",
+        "요구사항, 위험과 시험 증적이 서로 연결되고 운영 이후에도 추적 가능한 CSV 체계를 구축하는 데 집중합니다.",
       items: [
         {
-          title: "검증을 넘어 품질 경쟁력을 높이는 CSV 파트너",
+          title: "검증 완료를 넘어 운영 품질까지 연결",
           description:
-            "일회성 검증문서 작성에 머무르지 않고 시스템의 신뢰성과 규정 준수 상태를 지속적으로 유지할 수 있는 검증체계를 구축합니다.",
+            "현업 프로세스, 시스템 기능, 공급업체 문서와 IT 운영절차를 함께 검토해 규정 준수와 시스템 신뢰성을 지속적으로 유지할 수 있는 검증체계를 구축합니다.",
         },
         {
-          title: "최신 규제 트렌드 반영",
+          title: "요구사항부터 운영까지 이어지는 추적성",
           description:
-            "Data Integrity와 Computer System Validation 등 강화되는 글로벌 규제 이슈를 사전에 점검해 향후 실사 지적 가능성에 대비합니다.",
+            "URS, 위험평가, 시험 시나리오와 결과, RTM/VSR을 연결하고 Data Integrity와 최신 규제 이슈를 반영해 변경과 실사 시에도 검증 근거를 빠르게 확인하도록 합니다.",
         },
       ],
     },
     contact: {
-      titleLines: ["시스템을 도입하거나 변경하기 전에,", "프로젝트 목적에 맞는 CSV 수행 범위를 먼저 정리하세요."],
+      titleLines: [
+        "컴퓨터화시스템 도입과 변경의",
+        "CSV 검증 기준을 먼저 정리합니다.",
+      ],
       descriptionLines: [
-        "대상 시스템의 GxP 영향도와 현재 운영상태를 기준으로",
-        "필요한 검증전략, 문서와 시험범위를 함께 검토합니다.",
+        "대상 시스템과 운영 계획을 알려주시면",
+        "CSV 컨설팅의 출발점과 검증 범위를 함께 정리합니다.",
       ],
     },
   },

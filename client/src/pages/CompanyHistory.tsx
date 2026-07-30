@@ -12,52 +12,56 @@ type HistoryItem = {
 
 const historyItems: HistoryItem[] = [
   {
+    year: "2026",
+    title: "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요.",
+    side: "left",
+    details: [],
+  },
+  {
     year: "2025",
-    title: "해외 컨설팅 및 종합 컨설팅 계약",
+    title: "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜 한해가 되었습니다.",
     side: "right",
-    details: ["EUGMP 해외 컨설팅", "종합 컨설팅 사업 계약"],
+    details: [
+      "그동안 국내 서비스만 진행한 건 아니지만 개념과 건축 및 GMP System 구축까지의 업무를 서비스하게 되었으니 조금은 많이 고무적인 일이 되었습니다.",
+    ],
   },
   {
-    year: "2024",
-    title: "전문 조직 보강",
+    year: "2021~ 2022",
+    title:
+      "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 물리적인 거리를 좁히기 위해 경기 오산시에 사옥을 지어 이전하는 일이 있었습니다.",
     side: "left",
-    details: ["개념설계팀 보강", "GMP 인원 보강", "CSV 인원 보강", "영업팀 보강"],
+    details: [],
   },
   {
-    year: "2021",
-    title: "오산 사옥 확장 이전",
+    year: "2019~ 2020",
+    title:
+      "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 협력사로 성장하는 시기가 있었습니다.",
     side: "right",
-    details: ["오산 사옥 확장 이전"],
-  },
-  {
-    year: "2020",
-    title: "컨설팅 협력 및 사업지원 확대",
-    side: "left",
-    details: ["Consulting 협력사 합병", "코로나19 대책위 발족", "메디인프라 사업지원계약"],
-  },
-  {
-    year: "2019",
-    title: "파트너십 및 CSV IT 사업 확대",
-    side: "right",
-    details: ["SAMSUNG BIOLOGICS Partner 체결", "CSV IT 사업 확대"],
+    details: ["고객님들 감사합니다."],
   },
   {
     year: "2018",
-    title: "GMP 배양설비 구축",
+    title: "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지요.",
     side: "left",
-    details: ["GMP 배양설비 구축", "배양실 운영", "GMP 임직원 Workshop"],
+    details: [
+      "생산시설과 함께 배양실도 같이 구축함으로써 좀더 고객의 요구에 가까워 졌습니다.",
+    ],
   },
   {
     year: "2017",
-    title: "CSV 사업부 창설",
+    title: "2017년에는 CSV 컨설팅도 시작했어요.",
     side: "right",
-    details: ["CSV 사업부 창설", "사옥 이전(용인)", "GMP Clean Room 구축"],
+    details: [
+      "GMP 컨설팅은 인팩트에서 CSV 컨설팅은 협력업체에서 진행하던 업무를 과감한 인적 투자와 System 구축을 통해 사업부를 만들고 서비스를 제공하기 시작했습니다.",
+    ],
   },
   {
     year: "2016",
-    title: "회사 설립",
+    title: "2016년부터 GMP 컨설팅을 시작했어요.",
     side: "left",
-    details: ["회사 설립", "흥덕 IT 밸리 확장 이전", "GMP Workshop"],
+    details: [
+      "인팩트라는 이름으로 경기 용인의 흥덕IT밸리에서 세상에 이름을 알렸습니다.",
+    ],
   },
 ];
 
@@ -69,7 +73,6 @@ export default function CompanyHistory() {
     historyItems.map(() => false),
   );
   const [activeIndex, setActiveIndex] = useState(0);
-
   const activeIndexRef = useRef(0);
 
   useEffect(() => {
@@ -119,47 +122,46 @@ export default function CompanyHistory() {
     let ticking = false;
     let frameId = 0;
 
-    const clamp = (value: number, min: number, max: number) =>
-      Math.min(max, Math.max(min, value));
-
     const update = () => {
-      const rect = listEl.getBoundingClientRect();
+      const listRect = listEl.getBoundingClientRect();
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const viewportBottom = scrollY + viewportHeight;
-
-      const listTopAbs = scrollY + rect.top;
+      const listTopAbs = scrollY + listRect.top;
       const triggerLineAbs = scrollY + viewportHeight * 0.5;
 
-      const centersInList = items.map(
-        (item) => item.offsetTop + item.offsetHeight / 2,
+      const markerCentersInList = items.map((item) => {
+        const marker = item.querySelector<HTMLElement>(".history-list__marker");
+        if (marker && marker.offsetParent !== null) {
+          return item.offsetTop + marker.offsetTop + marker.offsetHeight / 2;
+        }
+
+        const year = item.querySelector<HTMLElement>("time");
+        if (year) {
+          return item.offsetTop + year.offsetTop + year.offsetHeight / 2;
+        }
+
+        return item.offsetTop + item.offsetHeight / 2;
+      });
+      const markerCentersAbs = markerCentersInList.map(
+        (center) => listTopAbs + center,
       );
-      const centersAbs = centersInList.map((center) => listTopAbs + center);
 
       const atPageTop = scrollY <= 4;
       const atPageBottom = viewportBottom >= documentHeight - 4;
-
       let nextIndex = activeIndexRef.current;
 
-      /* wheel 제스처 중이 아닐 때만 스크롤 위치 기반 보정 */
       if (atPageTop) {
         nextIndex = 0;
       } else if (atPageBottom) {
-        nextIndex = centersAbs.length - 1;
+        nextIndex = markerCentersAbs.length - 1;
       } else {
-        let nearestIndex = 0;
-        let nearestDistance = Math.abs(centersAbs[0] - triggerLineAbs);
-
-        for (let i = 1; i < centersAbs.length; i += 1) {
-          const distance = Math.abs(centersAbs[i] - triggerLineAbs);
-          if (distance < nearestDistance) {
-            nearestDistance = distance;
-            nearestIndex = i;
-          }
+        nextIndex = 0;
+        for (let index = 1; index < markerCentersAbs.length; index += 1) {
+          if (markerCentersAbs[index] > triggerLineAbs) break;
+          nextIndex = index;
         }
-
-        nextIndex = nearestIndex;
       }
 
       if (nextIndex !== activeIndexRef.current) {
@@ -167,25 +169,16 @@ export default function CompanyHistory() {
         setActiveIndex(nextIndex);
       }
 
-      const firstCenter = centersInList[0];
-      const activeCenter = centersInList[nextIndex];
-      const progressPx = Math.max(0, activeCenter - firstCenter);
-
-      listEl.style.setProperty("--history-progress-start", `${firstCenter}px`);
-      listEl.style.setProperty("--history-progress-px", `${progressPx}px`);
-
-      centersAbs.forEach((centerAbs, index) => {
-        const distance = Math.abs(centerAbs - triggerLineAbs);
-        const localProgress = clamp(
-          1 - distance / (viewportHeight * 0.32),
-          0,
-          1,
-        );
-        items[index].style.setProperty(
-          "--history-item-progress",
-          `${localProgress}`,
-        );
-      });
+      const firstMarkerCenter = markerCentersInList[0];
+      const activeMarkerCenter = markerCentersInList[nextIndex];
+      listEl.style.setProperty(
+        "--history-progress-start",
+        `${firstMarkerCenter}px`,
+      );
+      listEl.style.setProperty(
+        "--history-progress-px",
+        `${Math.max(0, activeMarkerCenter - firstMarkerCenter)}px`,
+      );
 
       ticking = false;
     };
@@ -245,34 +238,38 @@ export default function CompanyHistory() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    <time>{item.year}</time>
-
-                    <div className="history-list__marker" aria-hidden="true">
-                      <span className="history-list__marker-dot" />
-                    </div>
-
                     <div className="history-list__content">
-                      <div className="history-list__titleRow">
+                      <div className="history-list__meta">
                         {item.side === "right" && (
                           <span
-                            className="history-list__titleLine"
+                            className="history-list__yearLine"
                             aria-hidden="true"
                           />
                         )}
-                        <h3>{item.title}</h3>
+                        <time>{item.year}</time>
                         {item.side === "left" && (
                           <span
-                            className="history-list__titleLine"
+                            className="history-list__yearLine"
                             aria-hidden="true"
                           />
                         )}
                       </div>
 
-                      <ul>
-                        {item.details.map((detail) => (
-                          <li key={detail}>{detail}</li>
-                        ))}
-                      </ul>
+                      <div className="history-list__titleRow">
+                        <h3>{item.title}</h3>
+                      </div>
+
+                      {item.details.length > 0 && (
+                        <ul>
+                          {item.details.map((detail) => (
+                            <li key={detail}>{detail}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+
+                    <div className="history-list__marker" aria-hidden="true">
+                      <span className="history-list__marker-dot" />
                     </div>
                   </article>
                 );

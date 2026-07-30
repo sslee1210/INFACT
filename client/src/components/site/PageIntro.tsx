@@ -5,6 +5,7 @@ type PageIntroProps = {
   title: string;
   description?: string;
   image?: string;
+  className?: string;
 };
 
 const DEFAULT_INTRO_IMAGE = "./images/sub/banner.jpg";
@@ -14,7 +15,13 @@ function getMeta(selector: string) {
   return document.querySelector<HTMLMetaElement>(selector);
 }
 
-export function PageIntro({ label, title, description, image }: PageIntroProps) {
+export function PageIntro({
+  label,
+  title,
+  description,
+  image,
+  className,
+}: PageIntroProps) {
   const animationStyle = useMemo(() => {
     const duration = 14;
     const elapsed = (Date.now() % (duration * 1000)) / 1000;
@@ -54,7 +61,10 @@ export function PageIntro({ label, title, description, image }: PageIntroProps) 
   }, [description, title]);
 
   return (
-    <section className="page-intro" style={animationStyle}>
+    <section
+      className={["page-intro", className].filter(Boolean).join(" ")}
+      style={animationStyle}
+    >
       <div className="site-shell">
         <p className="section-label">{label}</p>
         <h1 className="page-title">{title}</h1>

@@ -11,7 +11,7 @@ export function PageLayout({ children }: PageLayoutProps) {
   return (
     <div className="site-app">
       <SkipLink />
-      <SiteHeader />
+      <SiteHeader transparentOnTop />
       <main id="main-content" className="site-main site-main--overlap" tabIndex={-1}>
         {children}
       </main>

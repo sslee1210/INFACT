@@ -1,0 +1,582 @@
+/* =========================================================
+   INFACT content density standard
+
+   This file is intentionally imported last. It aligns the reading density
+   of every page without shrinking primary body copy below 16px.
+   ========================================================= */
+
+:root {
+  --density-heading-gap: clamp(22px, 1.8vw, 30px);
+  --density-card-pad: clamp(18px, 1.45vw, 24px);
+  --density-row-pad: clamp(14px, 1.1vw, 19px);
+  --density-reading-measure: 68ch;
+}
+
+.site-shell {
+  max-width: var(--site-content-max);
+}
+
+.page-intro {
+  min-height: var(--fluid-intro-min-height);
+  padding-top: var(--fluid-intro-pad-top);
+  padding-bottom: var(--fluid-intro-pad-bottom);
+}
+
+.page-intro__inner,
+.service-business-heading,
+.service-business-overview__head,
+.csv-year-page__intro {
+  row-gap: clamp(10px, 1vw, 16px);
+}
+
+.page-description,
+.service-business-heading__description,
+.service-business-overview__description {
+  max-width: min(100%, var(--density-reading-measure));
+  line-height: 1.65;
+}
+
+.section-title,
+.page-title,
+.service-business-page h2,
+.company-organization__title {
+  line-height: 1.24;
+  letter-spacing: -0.035em;
+}
+
+.body-copy,
+.company-greeting__body,
+.service-business-page p {
+  line-height: 1.7;
+}
+
+.ui-button,
+.site-button,
+.text-link,
+.home-nav__contact-btn,
+.page-subnav > button,
+.csv-year-menu button,
+.csv-year-menu__arrow {
+  min-height: 44px;
+}
+
+/* Home: preserve the hero as the visual moment, then tighten every section. */
+.home-company-intro__inner {
+  gap: clamp(30px, 3.4vw, 52px);
+  padding-block: clamp(56px, 4.5vw, 72px);
+}
+
+.about-blend-content {
+  padding-block: clamp(56px, 4.5vw, 72px);
+}
+
+.about-process-cycle {
+  margin-top: clamp(28px, 2.4vw, 38px);
+}
+
+.home-experience {
+  gap: clamp(36px, 3.4vw, 54px);
+  padding: clamp(56px, 4.5vw, 72px) 0 clamp(18px, 1.8vw, 28px);
+}
+
+.home-experience__metric {
+  min-height: clamp(122px, 9vw, 144px);
+  padding-top: clamp(18px, 1.6vw, 24px);
+}
+
+.service-immersive {
+  padding-block: clamp(56px, 4.5vw, 72px);
+}
+
+.service-immersive__content {
+  gap: clamp(22px, 2.1vw, 34px);
+}
+
+.home-cta-banner {
+  min-height: clamp(292px, 24vw, 350px);
+}
+
+.home-cta-banner__content {
+  padding-block: clamp(40px, 3.4vw, 52px);
+}
+
+/* Company */
+.company-section + .company-section {
+  margin-top: var(--fluid-section-space);
+}
+
+.company-section__heading {
+  margin-bottom: var(--density-heading-gap);
+}
+
+.company-greeting {
+  row-gap: clamp(14px, 1.35vw, 20px);
+}
+
+.company-greeting__body {
+  max-width: min(100%, 78ch);
+}
+
+.company-greeting__visual {
+  width: min(100%, 540px);
+  height: clamp(470px, 32vw, 540px);
+  margin-top: clamp(142px, 9vw, 178px);
+}
+
+.company-greeting__quote {
+  margin-top: clamp(18px, 1.6vw, 24px);
+  padding-top: clamp(12px, 1.1vw, 16px);
+}
+
+.history-panel {
+  gap: clamp(24px, 2.4vw, 34px);
+  padding-bottom: clamp(18px, 2vw, 30px);
+}
+
+.history-list__item {
+  min-height: clamp(172px, 14vw, 206px);
+}
+
+.org-fixed {
+  min-height: clamp(580px, 43vw, 680px);
+  padding-bottom: clamp(28px, 2.4vw, 38px);
+}
+
+.org-tree__box--lead,
+.org-tree__box--primary,
+.org-tree__box--secondary {
+  min-height: clamp(58px, 4.8vw, 68px);
+  padding: 11px 15px;
+}
+
+/* Shared service template */
+.service-business-section,
+.consulting-template__section {
+  padding-block: clamp(60px, 4.8vw, 78px);
+}
+
+.service-business-heading,
+.consulting-template__section .service-business-heading {
+  margin-bottom: clamp(28px, 2.4vw, 38px);
+}
+
+.service-business-core-value,
+.consulting-template__value {
+  min-height: 174px;
+  padding: clamp(22px, 1.8vw, 28px);
+}
+
+.service-business-applicable,
+.consulting-template__application {
+  gap: clamp(34px, 3vw, 54px);
+}
+
+.service-business-applicable__visual,
+.consulting-template__application-image img {
+  min-height: 300px;
+}
+
+.service-business-scope__item,
+.consulting-template__scope-item {
+  min-height: 184px;
+  padding: 18px clamp(20px, 1.5vw, 26px) 22px;
+}
+
+.service-business-table__row,
+.consulting-template__execution-row {
+  min-height: 92px;
+}
+
+.service-business-execution__item,
+.consulting-template__execution-copy,
+.consulting-template__execution-output {
+  padding: 16px 20px;
+}
+
+.service-business-difference__item,
+.consulting-template__difference-item {
+  min-height: 174px;
+  padding: clamp(22px, 1.8vw, 28px);
+}
+
+.service-business-contact__content {
+  min-height: 190px;
+}
+
+/* Service-specific matrices and roadmaps */
+.design-input-matrix__row,
+.design-review-matrix__row,
+.gmp-scope-matrix__row,
+.gmp-deliverables-matrix__row,
+.csv-deliverables-matrix__row {
+  padding-block: var(--density-row-pad);
+}
+
+.design-process-matrix__step,
+.design-room-row,
+.design-deliverables-matrix__group,
+.gmp-framework__stage,
+.csv-framework-roadmap__phase,
+.csv-framework-roadmap__details,
+.csv-framework-roadmap__output {
+  padding: var(--density-card-pad);
+}
+
+.design-flow,
+.csv-framework-description {
+  gap: clamp(12px, 1.2vw, 18px);
+}
+
+/* References */
+.csv-year-page__intro {
+  margin-bottom: clamp(26px, 2.4vw, 36px);
+}
+
+.csv-year-layout {
+  gap: clamp(22px, 2.4vw, 34px);
+}
+
+.csv-year-content__head {
+  margin-bottom: clamp(18px, 1.6vw, 24px);
+}
+
+.csv-year-content__grid {
+  gap: clamp(12px, 1.2vw, 18px);
+}
+
+.csv-year-card__logo {
+  min-height: 92px;
+  padding: 16px;
+}
+
+.csv-year-card__logo img {
+  max-width: 160px;
+}
+
+.csv-year-card__body {
+  min-height: 82px;
+  padding: 14px 16px 17px;
+}
+
+.csv-year-empty {
+  min-height: 220px;
+  padding: 30px;
+}
+
+/* Contact */
+.contact-overview {
+  gap: clamp(28px, 3vw, 44px);
+}
+
+.contact-map {
+  min-height: clamp(268px, 22vw, 304px);
+}
+
+.contact-directory {
+  margin-bottom: clamp(32px, 3.4vw, 46px);
+}
+
+.contact-team-list {
+  gap: clamp(12px, 1.2vw, 18px);
+}
+
+.contact-team-item {
+  padding: clamp(18px, 1.6vw, 23px) clamp(17px, 1.5vw, 22px);
+}
+
+.site-footer {
+  padding-top: clamp(40px, 3.4vw, 52px);
+}
+
+@media (min-width: 1920px) {
+  .company-greeting__visual {
+    width: min(100%, 34rem);
+    height: 32rem;
+    margin-top: 10rem;
+  }
+
+  .history-list__item {
+    min-height: 11.75rem;
+  }
+
+  .org-fixed {
+    min-height: 40rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-company-intro__inner,
+  .about-blend-content,
+  .home-experience {
+    padding-top: clamp(56px, 6vw, 70px) !important;
+    padding-bottom: clamp(54px, 6vw, 68px) !important;
+  }
+
+  .home-company-intro__lead h2,
+  .home-experience__head h2 {
+    font-size: clamp(1.85rem, 3.2vw, 2.25rem) !important;
+  }
+
+  .about-blend-desc {
+    font-size: clamp(1.65rem, 3vw, 2.1rem) !important;
+  }
+
+  .home-experience {
+    gap: clamp(40px, 5vw, 56px) !important;
+  }
+
+  .home-experience__metric {
+    min-height: 132px !important;
+  }
+
+  .home-cta-banner {
+    min-height: 310px !important;
+  }
+
+  .service-business-section {
+    padding-block: 60px;
+  }
+
+  .consulting-template__section {
+    padding-block: 60px;
+  }
+
+  .consulting-template__scope-item,
+  .consulting-template__scope-item:nth-child(2) {
+    min-height: 0;
+    padding: 0 0 40px 76px;
+  }
+
+  .consulting-template__scope-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .history-list__item {
+    min-height: clamp(176px, 20vw, 210px);
+  }
+
+  .org-fixed {
+    min-height: 640px;
+  }
+
+  .csv-year-page__intro {
+    margin-bottom: clamp(28px, 4vw, 40px) !important;
+  }
+
+  .csv-year-layout {
+    gap: 22px !important;
+  }
+
+  .csv-year-content__grid {
+    gap: 14px !important;
+  }
+
+  .csv-year-card__logo {
+    min-height: 96px !important;
+    padding: 16px !important;
+  }
+
+  .csv-year-card__body {
+    min-height: 86px !important;
+    padding: 15px 16px 18px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fluid-section-pad-top: clamp(40px, 10.5vw, 48px);
+    --fluid-section-pad-bottom: clamp(44px, 11.5vw, 54px);
+    --fluid-section-space: clamp(20px, 6vw, 28px);
+    --fluid-intro-min-height: clamp(208px, 56vw, 236px);
+    --fluid-intro-pad-top: clamp(56px, 14vw, 66px);
+    --fluid-intro-pad-bottom: clamp(28px, 7vw, 36px);
+    --density-heading-gap: clamp(18px, 5vw, 24px);
+    --density-card-pad: clamp(15px, 4vw, 18px);
+    --density-row-pad: clamp(12px, 3.5vw, 16px);
+  }
+
+  .page-description,
+  .service-business-heading__description,
+  .service-business-overview__description {
+    line-height: 1.68;
+  }
+
+  .home-company-intro__inner {
+    padding: clamp(48px, 12vw, 58px) 0 clamp(50px, 13vw, 62px) !important;
+  }
+
+  .home-company-intro__lead {
+    margin-bottom: clamp(24px, 7vw, 32px) !important;
+  }
+
+  .home-company-intro__lead h2 {
+    font-size: clamp(1.75rem, 7.4vw, 2.05rem) !important;
+  }
+
+  .about-blend-content {
+    padding: clamp(48px, 12vw, 58px) 0 !important;
+  }
+
+  .about-blend-desc {
+    font-size: clamp(1.55rem, 6.7vw, 1.85rem) !important;
+  }
+
+  .about-process-cycle {
+    margin-top: clamp(28px, 8vw, 38px) !important;
+  }
+
+  .home-experience {
+    gap: clamp(32px, 8vw, 42px) !important;
+    padding: clamp(48px, 12vw, 58px) 0 clamp(18px, 5vw, 24px) !important;
+  }
+
+  .home-experience__head h2 {
+    font-size: clamp(1.75rem, 7.4vw, 2.05rem) !important;
+  }
+
+  .home-experience__metric {
+    min-height: 112px !important;
+    padding-top: 18px !important;
+  }
+
+  .service-immersive {
+    padding-block: clamp(48px, 12vw, 58px) !important;
+  }
+
+  .home-cta-banner {
+    min-height: 270px !important;
+  }
+
+  .home-cta-banner__content {
+    padding-block: clamp(42px, 11vw, 54px) !important;
+  }
+
+  .company-greeting__visual {
+    width: min(100%, 420px);
+    height: auto;
+    aspect-ratio: 1 / 0.86;
+    margin-top: 0;
+  }
+
+  .history-list {
+    gap: clamp(30px, 8vw, 42px);
+  }
+
+  .history-list__item {
+    min-height: 0;
+  }
+
+  .org-mobile-tree {
+    padding-bottom: clamp(28px, 8vw, 40px);
+  }
+
+  .org-mobile-tree__lead,
+  .org-mobile-branch__node--primary,
+  .org-mobile-branch__node--secondary {
+    min-height: 58px;
+    padding-block: 10px;
+  }
+
+  .service-business-section,
+  .consulting-template__section {
+    padding-block: clamp(52px, 13vw, 62px);
+  }
+
+  .service-business-heading,
+  .consulting-template__section .service-business-heading {
+    margin-bottom: clamp(28px, 7.5vw, 34px);
+  }
+
+  .service-business-core-value,
+  .service-business-scope__item,
+  .service-business-difference__item,
+  .consulting-template__value,
+  .consulting-template__scope-item,
+  .consulting-template__difference-item {
+    min-height: 0;
+  }
+
+  .service-business-core-value,
+  .consulting-template__value {
+    padding: 22px 18px 25px;
+  }
+
+  .service-business-applicable,
+  .consulting-template__application {
+    gap: 24px;
+  }
+
+  .service-business-applicable__visual,
+  .consulting-template__application-image img {
+    min-height: 240px;
+  }
+
+  .service-business-scope__item {
+    padding: 16px 18px 20px;
+  }
+
+  .consulting-template__scope-item,
+  .consulting-template__scope-item:nth-child(2) {
+    padding: 0 0 34px 68px;
+  }
+
+  .consulting-template__scope-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .service-business-table__row,
+  .consulting-template__execution-row {
+    min-height: 0;
+  }
+
+  .service-business-execution__item,
+  .service-business-difference__item,
+  .consulting-template__execution-copy,
+  .consulting-template__execution-output,
+  .consulting-template__difference-item {
+    padding: 16px 18px;
+  }
+
+  .csv-year-page__intro {
+    margin-bottom: 24px !important;
+  }
+
+  .csv-year-content__grid {
+    gap: 12px !important;
+  }
+
+  .csv-year-card__logo {
+    min-height: 104px !important;
+    padding: 14px !important;
+  }
+
+  .csv-year-card__body {
+    min-height: 0 !important;
+    padding: 14px 15px 17px !important;
+  }
+
+  .csv-year-empty {
+    min-height: 0 !important;
+    padding: 28px 18px !important;
+  }
+
+  .contact-overview {
+    gap: 24px;
+  }
+
+  .contact-map {
+    min-height: clamp(240px, 68vw, 290px);
+  }
+
+  .contact-directory {
+    margin-bottom: 28px;
+  }
+
+  .contact-team-item {
+    padding: 18px 16px;
+  }
+
+  .site-footer {
+    padding-top: 40px;
+  }
+}

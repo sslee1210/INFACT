@@ -1,4 +1,5 @@
 .company-greeting__visual {
+  position: relative;
   grid-area: visual;
   align-self: start;
   justify-self: start;
@@ -7,6 +8,17 @@
   height: clamp(420px, 34vw, 500px);
   overflow: hidden;
   background: transparent;
+}
+
+.company-greeting__visual::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: clamp(38px, 6vw, 72px);
+  background: linear-gradient(to bottom, rgb(255 255 255 / 0), #fff 88%);
+  pointer-events: none;
 }
 
 .company-greeting__visual img {

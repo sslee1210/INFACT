@@ -25,18 +25,12 @@
     display: none;
   }
 
-  /* A single vertical axis starts at the CEO bottom edge and continues
-     through the center of the third primary division. */
+  /* Lead the main axis from the CEO to the first primary division. */
   .org-mobile-branch::before {
     left: var(--org-spine-x);
     top: -18px;
     width: 1px;
-    height: calc(
-      18px
-      + (var(--org-primary-height) * 2)
-      + (var(--org-primary-gap) * 2)
-      + (var(--org-primary-height) / 2)
-    );
+    height: calc(18px + (var(--org-primary-height) / 2));
   }
 
   /* Remove the old elbow connector completely. */
@@ -49,6 +43,18 @@
     left: calc(-1 * (var(--org-primary-indent) - var(--org-spine-x)));
     width: calc(var(--org-primary-indent) - var(--org-spine-x));
     height: 1px;
+  }
+
+  /* Each primary item extends the same axis to the next primary item.
+     The bottom-based segment follows nested department content naturally. */
+  .org-mobile-branch__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * (var(--org-primary-indent) - var(--org-spine-x)));
+    top: calc(var(--org-primary-height) / 2);
+    bottom: calc(-1 * (var(--org-primary-gap) + (var(--org-primary-height) / 2)));
+    width: 1px;
+    background: var(--org-line);
   }
 
   /* Team rows keep the branch line but no decorative dot. */
