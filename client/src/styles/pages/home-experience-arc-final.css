@@ -1,3 +1,9 @@
+/* Remove the remaining shadow from the main hero logo. */
+.hero__brand-logo {
+  filter: none;
+  box-shadow: none;
+}
+
 /* =========================================================
    HOME ARC — SOFT TWO-LAYER BANDS
 
