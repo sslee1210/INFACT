@@ -21,7 +21,7 @@ const serviceNavigation = [
   { label: "CSV 컨설팅", href: "/service-csv" },
 ] as const;
 
-const SERVICE_BUSINESS_HERO = "./images/service/service-business-hero.svg";
+const SERVICE_BUSINESS_HERO = "./images/service/service-business-hero.png";
 
 type ConsultingServicePageProps = {
   service: ConsultingServiceKey;
