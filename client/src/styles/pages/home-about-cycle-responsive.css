@@ -1,4 +1,42 @@
-/* Home About process cycle — final mobile geometry ownership */
+/* Home About process cycle — final typography and mobile geometry ownership */
+
+/* Keep the diagram geometry intact and reduce only the copy inside the hub. */
+.about-process-cycle__hub {
+  row-gap: clamp(0.65rem, 0.9vw, 0.9rem) !important;
+}
+
+.about-process-cycle__hub > span {
+  display: block;
+  margin: 0 !important;
+  font-size: clamp(0.6rem, 0.66vw, 0.72rem) !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: clamp(0.16em, 0.2vw, 0.24em) !important;
+}
+
+.about-process-cycle__hub > strong {
+  display: block;
+  margin: 0 !important;
+  font-size: clamp(1.65rem, 2vw, 2.1rem) !important;
+  line-height: 1.2 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.055em !important;
+}
+
+@media (min-width: 48rem) and (max-width: 74.9375rem) {
+  .about-process-cycle__hub {
+    row-gap: clamp(0.58rem, 1.2vw, 0.78rem) !important;
+  }
+
+  .about-process-cycle__hub > span {
+    font-size: clamp(0.54rem, 1vw, 0.66rem) !important;
+  }
+
+  .about-process-cycle__hub > strong {
+    font-size: clamp(1.35rem, 2.7vw, 1.8rem) !important;
+  }
+}
+
 @media (max-width: 47.9375rem) {
   .about-process-cycle {
     position: static !important;
@@ -8,6 +46,21 @@
     max-width: 32rem !important;
     margin: clamp(2rem, 8vw, 2.75rem) auto 0 !important;
     transform: none !important;
+  }
+
+  .about-process-cycle__hub {
+    row-gap: clamp(0.42rem, 1.8vw, 0.58rem) !important;
+  }
+
+  .about-process-cycle__hub > span {
+    font-size: clamp(0.46rem, 1.9vw, 0.56rem) !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .about-process-cycle__hub > strong {
+    font-size: clamp(1rem, 5vw, 1.3rem) !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.05em !important;
   }
 
   .about-process-cycle__svg {
