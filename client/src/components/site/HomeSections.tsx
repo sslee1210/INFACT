@@ -174,48 +174,48 @@ export function HomeAboutSection() {
                 ))}
               </p>
 
-              <div className="about-process-cycle" aria-label="GMP 프로젝트 지원 순환 구조">
-                <svg
-                  className="about-process-cycle__svg"
-                  viewBox="0 0 760 510"
-                  role="img"
-                  aria-labelledby="about-process-cycle-title"
-                >
-                  <title id="about-process-cycle-title">
-                    Project Plan, Design, QMS, Compliance, Validation 순환 구조
-                  </title>
-                  <g aria-hidden="true">
-                    <g className="about-process-cycle__edges">
-                      <path d="M380 105 L469 161.5 L558 218" />
-                      <path d="M558 218 L524 314 L490 410" />
-                      <path d="M490 410 L380 410 L270 410" />
-                      <path d="M270 410 L236 314 L202 218" />
-                      <path d="M202 218 L291 161.5 L380 105" />
-                    </g>
+              <div
+                className="about-process-cycle"
+                role="img"
+                aria-label="사업 기획, 시설·공정 설계, 품질 시스템, 규제 대응, 검증·승인으로 이어지는 GMP 프로젝트 지원 체계"
+              >
+                <span
+                  className="about-process-cycle__orbit about-process-cycle__orbit--outer"
+                  aria-hidden="true"
+                />
+                <span
+                  className="about-process-cycle__orbit about-process-cycle__orbit--inner"
+                  aria-hidden="true"
+                />
 
-                    <path
-                      className="about-process-cycle__trace"
-                      pathLength="100"
-                      d="M380 105 L558 218 L490 410 L270 410 L202 218 Z"
-                    />
+                <div className="about-process-cycle__hub">
+                  <span>GMP FRAMEWORK</span>
+                  <strong>
+                    실행 가능한
+                    <br />
+                    품질 체계 설계
+                  </strong>
+                </div>
 
-                    <g className="about-process-cycle__nodes">
-                      <circle cx="380" cy="105" r="5" />
-                      <circle cx="558" cy="218" r="5" />
-                      <circle cx="490" cy="410" r="5" />
-                      <circle cx="270" cy="410" r="5" />
-                      <circle cx="202" cy="218" r="5" />
-                    </g>
-                  </g>
-
-                  <g className="about-process-cycle__labels">
-                    <text x="380" y="58" textAnchor="middle">Project Plan</text>
-                    <text x="650" y="226" textAnchor="middle">Design</text>
-                    <text x="510" y="466" textAnchor="middle">QMS</text>
-                    <text x="250" y="466" textAnchor="middle">Compliance</text>
-                    <text x="105" y="226" textAnchor="middle">Validation</text>
-                  </g>
-                </svg>
+                {[
+                  ["01", "Project Plan", "사업 기획", "plan"],
+                  ["02", "Design", "시설·공정 설계", "design"],
+                  ["03", "QMS", "품질 시스템", "qms"],
+                  ["04", "Compliance", "규제 대응", "compliance"],
+                  ["05", "Validation", "검증·승인", "validation"],
+                ].map(([number, title, description, position]) => (
+                  <div
+                    className={`about-process-cycle__step about-process-cycle__step--${position}`}
+                    key={number}
+                  >
+                    <span className="about-process-cycle__marker" aria-hidden="true">
+                      <span />
+                    </span>
+                    <span className="about-process-cycle__number">{number}</span>
+                    <strong>{title}</strong>
+                    <span className="about-process-cycle__description">{description}</span>
+                  </div>
+                ))}
               </div>
 
             </div>
