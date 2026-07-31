@@ -2,12 +2,12 @@
    The canonical service layout uses !important on the same element, so this
    page-scoped selector must intentionally win that cascade. */
 .consulting-service-page .service-business-contact__text {
-  font-size: clamp(1.65rem, 1.75vw, 1.9rem) !important;
+  font-size: clamp(1.49rem, 1.58vw, 1.71rem) !important;
   line-height: 1.2 !important;
 }
 
 @media (max-width: 57.5rem) {
   .consulting-service-page .service-business-contact__text {
-    font-size: clamp(1.4rem, 4.8vw, 1.55rem) !important;
+    font-size: clamp(1.26rem, 4.32vw, 1.4rem) !important;
   }
 }
