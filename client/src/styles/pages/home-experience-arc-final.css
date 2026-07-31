@@ -1,0 +1,49 @@
+/* =========================================================
+   HOME EXPERIENCE — FINAL ARC POSITION
+
+   Mirrors the company-intro arc vertically:
+   - same size, colour and concentric-band proportions
+   - same horizontal anchor
+   - centre placed outside the lower-right edge
+   ========================================================= */
+
+.home-experience {
+  overflow: visible !important;
+}
+
+.home-experience::after {
+  content: "" !important;
+  position: absolute !important;
+  top: auto !important;
+  right: clamp(-69.375rem, -54vw, -50rem) !important;
+  bottom: clamp(-68.75rem, -54vw, -50rem) !important;
+  left: auto !important;
+  z-index: -1 !important;
+  display: block !important;
+  width: clamp(70rem, 78vw, 97.5rem) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  background: radial-gradient(
+    circle,
+    transparent 0 52%,
+    rgba(118, 132, 154, 0.07) 52% 76%,
+    rgba(84, 170, 218, 0.14) 76% 100%
+  ) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+@media (max-width: 47.9375rem) {
+  .home-experience::after {
+    top: auto !important;
+    right: -38.125rem !important;
+    bottom: -35.625rem !important;
+    left: auto !important;
+    width: 47.5rem !important;
+  }
+}
