@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="640" viewBox="0 0 1920 640" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="leftFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="white"/>
+      <stop offset="0.72" stop-color="white"/>
+      <stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <linearGradient id="middleFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="black"/>
+      <stop offset="0.18" stop-color="white"/>
+      <stop offset="0.82" stop-color="white"/>
+      <stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <linearGradient id="rightFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="black"/>
+      <stop offset="0.28" stop-color="white"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <linearGradient id="coolTone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#163451" stop-opacity="0.16"/>
+      <stop offset="0.52" stop-color="#163451" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#0d2744" stop-opacity="0.14"/>
+    </linearGradient>
+    <mask id="leftMask"><rect width="820" height="640" fill="url(#leftFade)"/></mask>
+    <mask id="middleMask"><rect width="920" height="640" fill="url(#middleFade)"/></mask>
+    <mask id="rightMask"><rect width="820" height="640" fill="url(#rightFade)"/></mask>
+  </defs>
+
+  <rect width="1920" height="640" fill="#dfe8ef"/>
+
+  <g mask="url(#leftMask)">
+    <image href="conceptual-design-hero.webp" x="0" y="0" width="820" height="640" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+
+  <g transform="translate(500 0)" mask="url(#middleMask)">
+    <image href="gmp-consulting-hero.webp" x="0" y="0" width="920" height="640" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+
+  <g transform="translate(1100 0)" mask="url(#rightMask)">
+    <image href="csv-consulting-hero.webp" x="0" y="0" width="820" height="640" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+
+  <rect width="1920" height="640" fill="url(#coolTone)"/>
+</svg>
