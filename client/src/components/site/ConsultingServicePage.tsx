@@ -21,6 +21,8 @@ const serviceNavigation = [
   { label: "CSV 컨설팅", href: "/service-csv" },
 ] as const;
 
+const SERVICE_BUSINESS_HERO = "./images/service/service-business-hero.svg";
+
 type ConsultingServicePageProps = {
   service: ConsultingServiceKey;
 };
@@ -209,11 +211,10 @@ export function ConsultingServicePage({
   return (
     <PageLayout>
       <PageIntro
-        className="page-intro--service"
         label="Service"
         title={data.pageTitle}
         description={data.pageDescription}
-        image={data.pageImage}
+        image={SERVICE_BUSINESS_HERO}
       />
 
       <section
