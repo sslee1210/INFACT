@@ -45,10 +45,12 @@
   left: auto;
 }
 
+/* Place the experience motif outside the lower-right corner so the
+   upper-left portion enters the section in the same rainbow form. */
 .home-experience::after {
-  top: clamp(-1110px, -54vw, -800px);
+  top: auto;
   right: clamp(-1110px, -54vw, -800px);
-  bottom: auto;
+  bottom: clamp(-1100px, -54vw, -800px);
   left: auto;
 }
 
@@ -234,9 +236,9 @@
   }
 
   .home-experience::after {
-    top: -570px !important;
+    top: auto !important;
     right: -610px !important;
-    bottom: auto !important;
+    bottom: -570px !important;
     left: auto !important;
   }
 
