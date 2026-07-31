@@ -1,0 +1,18 @@
+/* SERVICE / CONTACT section spacing
+   Keep a clear visual break only when the home SERVICE section
+   is immediately followed by the home CONTACT CTA section. */
+.service-immersive-section + .home-cta-banner {
+  margin-top: clamp(64px, 5vw, 96px) !important;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service-immersive-section + .home-cta-banner {
+    margin-top: clamp(52px, 6vw, 72px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-immersive-section + .home-cta-banner {
+    margin-top: clamp(40px, 10vw, 56px) !important;
+  }
+}
