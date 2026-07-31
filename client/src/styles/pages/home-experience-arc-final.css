@@ -1,22 +1,22 @@
 /* =========================================================
-   HOME ARC — EQUAL TWO-LAYER BANDS
+   HOME ARC — VISUALLY BALANCED TWO-LAYER BANDS
 
-   The visible arc is divided into two equal-width colour layers:
-   - inner soft gray: 18%
-   - outer pale sky blue: 18%
-
-   A transparent outer margin keeps the sky-blue layer from being clipped
-   when the circle centre sits outside a section boundary.
+   The circle centres sit outside their sections, so the outer band is
+   clipped more heavily than the inner band. The radial widths below are
+   intentionally compensated so the two colours appear close to equal in
+   the visible section area:
+   - inner soft gray: 12%
+   - outer pale sky blue: 24%
    ========================================================= */
 
 .home-main {
-  --home-arc-gray: rgba(118, 132, 154, 0.07);
-  --home-arc-blue: rgba(128, 202, 244, 0.11);
+  --home-arc-gray: rgba(118, 132, 154, 0.065);
+  --home-arc-blue: rgba(128, 202, 244, 0.16);
   --home-arc-fill: radial-gradient(
     circle,
     transparent 0 52%,
-    var(--home-arc-gray) 52% 70%,
-    var(--home-arc-blue) 70% 88%,
+    var(--home-arc-gray) 52% 64%,
+    var(--home-arc-blue) 64% 88%,
     transparent 88% 100%
   );
 }
@@ -52,8 +52,8 @@
     radial-gradient(
       circle,
       transparent 0 52%,
-      rgba(118, 132, 154, 0.07) 52% 70%,
-      rgba(128, 202, 244, 0.11) 70% 88%,
+      rgba(118, 132, 154, 0.065) 52% 64%,
+      rgba(128, 202, 244, 0.16) 64% 88%,
       transparent 88% 100%
     )
   ) !important;
