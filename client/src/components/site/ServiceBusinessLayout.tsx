@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "wouter";
+import "@/styles/pages/service-contact-link-emphasis.css";
 
 type ServiceSectionHeaderProps = {
   index?: string;
