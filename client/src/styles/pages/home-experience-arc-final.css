@@ -1,7 +1,30 @@
 /* =========================================================
+   HOME ARC — EQUAL TWO-LAYER BANDS
+
+   The visible arc is divided into two equal-width colour layers:
+   - inner soft gray: 18%
+   - outer pale sky blue: 18%
+
+   A transparent outer margin keeps the sky-blue layer from being clipped
+   when the circle centre sits outside a section boundary.
+   ========================================================= */
+
+.home-main {
+  --home-arc-gray: rgba(118, 132, 154, 0.07);
+  --home-arc-blue: rgba(128, 202, 244, 0.11);
+  --home-arc-fill: radial-gradient(
+    circle,
+    transparent 0 52%,
+    var(--home-arc-gray) 52% 70%,
+    var(--home-arc-blue) 70% 88%,
+    transparent 88% 100%
+  );
+}
+
+/* =========================================================
    HOME EXPERIENCE — SERVICE ARC MIRROR
 
-   Uses the exact same arc variables and exposure geometry as the SERVICE
+   Uses the same arc variables and exposure geometry as the SERVICE
    section, mirrored from the upper-left to the lower-right.
    ========================================================= */
 
@@ -29,8 +52,9 @@
     radial-gradient(
       circle,
       transparent 0 52%,
-      rgba(118, 132, 154, 0.07) 52% 76%,
-      rgba(84, 170, 218, 0.14) 76% 100%
+      rgba(118, 132, 154, 0.07) 52% 70%,
+      rgba(128, 202, 244, 0.11) 70% 88%,
+      transparent 88% 100%
     )
   ) !important;
   box-shadow: none !important;
@@ -39,9 +63,8 @@
   transform: none !important;
 }
 
-/* The former white marquee background cut the arc off horizontally before
-   the actual section edge. Keep the client names above the motif while
-   allowing the arc to continue naturally to the lower boundary. */
+/* Keep the client names above the motif while allowing the arc to continue
+   naturally to the lower section boundary. */
 .home-experience__client-marquee {
   background: transparent !important;
   isolation: isolate;
