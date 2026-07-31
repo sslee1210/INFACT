@@ -276,7 +276,7 @@ export function HomeExperienceSection() {
         <div className="home-experience__head fade-in">
           <h2 id="home-experience-title">
             검증된 <span className="home-heading-accent">전문 컨설턴트</span>가<br />
-            함께합니다
+            함께합니다.
           </h2>
           <p>{homeExperienceCta.description}</p>
         </div>
