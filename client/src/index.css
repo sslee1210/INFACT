@@ -66,3 +66,6 @@
 @import "./styles/pages/company-history-responsive.css";
 @import "./styles/pages/contact-responsive.css";
 @import "./styles/pages/service-csv-responsive.css";
+
+/* Final Home SERVICE / CONTACT spacing */
+@import "./styles/pages/home-service-contact-spacing.css";
