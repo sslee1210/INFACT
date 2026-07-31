@@ -133,7 +133,8 @@
   .home-company-intro__inner {
     grid-template-columns: minmax(0, 1fr) !important;
     grid-template-rows: auto auto auto !important;
-    gap: clamp(2rem, 5vw, 3rem) !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
     padding-top: clamp(4rem, 8vw, 5rem) !important;
     padding-bottom: clamp(4rem, 8vw, 5rem) !important;
   }
@@ -142,8 +143,11 @@
     position: relative !important;
     top: auto !important;
     left: auto !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
     width: 100% !important;
     max-width: 34rem !important;
+    margin: 0 0 clamp(3rem, 7vw, 4.5rem) !important;
     transform: none !important;
   }
 
@@ -152,7 +156,7 @@
     grid-row: 2 !important;
     width: 100% !important;
     height: clamp(27rem, 72vw, 36rem) !important;
-    margin: 0 !important;
+    margin: 0 0 clamp(2.5rem, 6vw, 3.75rem) !important;
   }
 
   .home-company-intro__copy {
@@ -174,7 +178,12 @@
     width: 47.5rem !important;
   }
 
+  .home-company-intro__lead {
+    margin-bottom: clamp(2.5rem, 9vw, 3.5rem) !important;
+  }
+
   .home-company-intro__media {
     height: clamp(25rem, 118vw, 35rem) !important;
+    margin-bottom: clamp(2.25rem, 8vw, 3.25rem) !important;
   }
 }
