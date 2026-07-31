@@ -36,10 +36,12 @@
   left: clamp(-1110px, -54vw, -800px);
 }
 
+/* Place the company motif outside the upper-right corner so only the
+   lower-left portion of the concentric circle enters like a rainbow arch. */
 .home-company-intro__inner::after {
-  top: auto;
+  top: clamp(-1110px, -54vw, -800px);
   right: clamp(-1110px, -54vw, -800px);
-  bottom: clamp(-1100px, -54vw, -800px);
+  bottom: auto;
   left: auto;
 }
 
@@ -190,7 +192,7 @@
 }
 
 .about-process-cycle__step strong {
-  color: #182443;
+  color: #2c368f !important;
   font-size: clamp(0.9rem, 1.18vw, 1.04rem);
   line-height: 1.25;
   font-weight: 800;
@@ -225,9 +227,9 @@
   }
 
   .home-company-intro__inner::after {
-    top: auto !important;
+    top: -570px !important;
     right: -610px !important;
-    bottom: -570px !important;
+    bottom: auto !important;
     left: auto !important;
   }
 
