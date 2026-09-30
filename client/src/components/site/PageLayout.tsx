@@ -5,14 +5,23 @@ import { SkipLink } from "./SkipLink";
 
 type PageLayoutProps = {
   children: ReactNode;
+  presentation?: "refined";
 };
 
-export function PageLayout({ children }: PageLayoutProps) {
+export function PageLayout({ children, presentation }: PageLayoutProps) {
   return (
-    <div className="site-app">
+    <div
+      className={
+        presentation === "refined" ? "site-app site-app--refined" : "site-app"
+      }
+    >
       <SkipLink />
       <SiteHeader transparentOnTop />
-      <main id="main-content" className="site-main site-main--overlap" tabIndex={-1}>
+      <main
+        id="main-content"
+        className="site-main site-main--overlap"
+        tabIndex={-1}
+      >
         {children}
       </main>
       <SiteFooter />

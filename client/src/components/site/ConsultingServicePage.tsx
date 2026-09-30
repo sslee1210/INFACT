@@ -209,7 +209,7 @@ export function ConsultingServicePage({
   const data = consultingServicePages[service];
 
   return (
-    <PageLayout>
+    <PageLayout presentation="refined">
       <PageIntro
         label="Service"
         title={data.pageTitle}

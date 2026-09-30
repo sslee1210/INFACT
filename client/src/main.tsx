@@ -5,5 +5,7 @@ import "./styles/common/pfk-typography-standard.css";
 import "./styles/common/content-density-standard.css";
 import "./styles/pages/home-visual-refinement.css";
 import "./styles/pages/home-experience-arc-final.css";
+import "./styles/pages/home-presentation.css";
+import "./styles/pages/subpage-presentation.css";
 
 createRoot(document.getElementById("root")!).render(<App />);

@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SkipLink } from "@/components/site/SkipLink";
 import { useRevealOnScroll } from "@/hooks/useRevealOnScroll";
+import "@/styles/pages/home-framework.css";
 
 export default function Home() {
   useRevealOnScroll();

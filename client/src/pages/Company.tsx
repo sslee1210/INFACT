@@ -4,7 +4,7 @@ import { PageLayout } from "@/components/site/PageLayout";
 
 export default function Company() {
   return (
-    <PageLayout>
+    <PageLayout presentation="refined">
       <CompanyIntro />
 
       <section className="section section--white">

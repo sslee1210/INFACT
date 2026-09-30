@@ -148,78 +148,48 @@ export function HomeHeroSection() {
 
 export function HomeAboutSection() {
   return (
-    <section id="about" className="about-blend-section section--with-divider">
-      <div className="home-container about-blend-inner">
-        <div className="about-blend-content fade-in">
-          <div className="about-blend-copy">
-            <div className="about-blend-texts">
-              {homeAbout.titleLines.length > 0 ? (
-                <h2 className="about-blend-title" aria-label={homeAbout.titleLines.join(" ")}>
-                  <LineBreakText lines={homeAbout.titleLines} />
-                </h2>
-              ) : null}
-
-              <p className="about-blend-desc">
-                {homeAbout.descriptionLines.map((line, index) => (
-                  <span key={index}>
-                    {line.map((part, partIndex) =>
-                      part.emphasis ? (
-                        <strong key={`${part.text}-${partIndex}`}>{part.text}</strong>
-                      ) : (
-                        <span key={`${part.text}-${partIndex}`}>{part.text}</span>
-                      ),
-                    )}
-                    {index < homeAbout.descriptionLines.length - 1 && <br />}
-                  </span>
-                ))}
-              </p>
-
-              <div
-                className="about-process-cycle"
-                role="img"
-                aria-label="사업 기획, 시설·공정 설계, 품질 시스템, 규제 대응, 검증·승인으로 이어지는 GMP 프로젝트 지원 체계"
-              >
-                <span
-                  className="about-process-cycle__orbit about-process-cycle__orbit--outer"
-                  aria-hidden="true"
-                />
-                <span
-                  className="about-process-cycle__orbit about-process-cycle__orbit--inner"
-                  aria-hidden="true"
-                />
-
-                <div className="about-process-cycle__hub">
-                  <span>GMP FRAMEWORK</span>
-                  <strong>
-                    실행 가능한
-                    <br />
-                    품질 체계 설계
-                  </strong>
-                </div>
-
-                {[
-                  ["01", "Project Plan", "사업 기획", "plan"],
-                  ["02", "Design", "시설·공정 설계", "design"],
-                  ["03", "QMS", "품질 시스템", "qms"],
-                  ["04", "Compliance", "규제 대응", "compliance"],
-                  ["05", "Validation", "검증·승인", "validation"],
-                ].map(([number, title, description, position]) => (
-                  <div
-                    className={`about-process-cycle__step about-process-cycle__step--${position}`}
-                    key={number}
-                  >
-                    <span className="about-process-cycle__marker" aria-hidden="true">
-                      <span />
-                    </span>
-                    <span className="about-process-cycle__number">{number}</span>
-                    <strong>{title}</strong>
-                    <span className="about-process-cycle__description">{description}</span>
-                  </div>
-                ))}
-              </div>
-
-            </div>
+    <section id="about" className="home-framework" aria-labelledby="home-framework-title">
+      <div className="home-framework__layout">
+        <div className="home-framework__copy">
+          <h2 id="home-framework-title">
+            {homeAbout.descriptionLines.map((line, index) => (
+              <span key={index}>
+                {line.map((part, partIndex) =>
+                  part.emphasis ? (
+                    <strong key={partIndex}>{part.text}</strong>
+                  ) : (
+                    <span key={partIndex}>{part.text}</span>
+                  ),
+                )}
+                {index < homeAbout.descriptionLines.length - 1 && <br />}
+              </span>
+            ))}
+          </h2>
+          <p>{homeAbout.summary}</p>
+        </div>
+        <div
+          className="home-framework__diagram"
+          role="img"
+          aria-label="사업 기획, 시설 및 공정 설계, 품질 시스템, 규제 대응, 검증을 연결하는 GMP 지원 체계"
+        >
+          <div className="home-framework__orbit" aria-hidden="true" />
+          <div className="home-framework__hub">
+            <span>GMP FRAMEWORK</span>
+            <strong>
+              실행 가능한
+              <br />
+              품질 체계 설계
+            </strong>
           </div>
+          {homeAbout.frameworkSteps.map(({ position, title, english }) => (
+            <div
+              className={`home-framework__node home-framework__node--${position}`}
+              key={position}
+            >
+              <strong>{title}</strong>
+              <span>{english}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

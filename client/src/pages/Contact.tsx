@@ -77,7 +77,7 @@ export default function Contact() {
   const contactPhoneHref = `tel:${contactInfo.phone.replace(/\D/g, "")}`;
 
   return (
-    <PageLayout>
+    <PageLayout presentation="refined">
       <PageIntro
         label="Contact"
         title="프로젝트 상담이 필요하신가요?"

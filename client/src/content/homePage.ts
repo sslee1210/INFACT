@@ -20,9 +20,20 @@ export const homeAbout = {
     [
       { text: "GMP 전 과정" },
       { text: "을 " },
+    ],
+    [
       { text: "지원", emphasis: true },
       { text: "합니다." },
     ],
+  ],
+  summary:
+    "사업 기획부터 설계, 품질 시스템 구축과 검증까지 프로젝트에 필요한 업무를 연결합니다.",
+  frameworkSteps: [
+    { position: "plan", title: "사업 기획", english: "Project Plan" },
+    { position: "design", title: "시설·공정 설계", english: "Design" },
+    { position: "qms", title: "품질 시스템", english: "QMS" },
+    { position: "compliance", title: "규제 대응", english: "Compliance" },
+    { position: "validation", title: "검증·승인", english: "Validation" },
   ],
   ctaLabel: "회사 소개 보기",
   ctaHref: "#/company",
@@ -47,7 +58,7 @@ export const homeExperienceClients = [
 ] as const;
 
 export const homeExperienceCta = {
-  titleLines: ["검증된 전문 컨설턴트가", "함께합니다"],
+  titleLines: ["검증된 전문 컨설턴트가", "함께합니다."],
   description:
     "수많은 개념설계·GMP·CSV 프로젝트를 수행한 전문 인력이 축적된 실무 경험을 바탕으로 단계별 기준과 실행 방향을 제시합니다.",
   image: "./images/home/service-03.jpg",
