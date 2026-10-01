@@ -36,8 +36,8 @@ export const SERVICE_PANELS = [
     stage: "EQUIPMENT QUALIFICATION",
     title: "GMP Qualification",
     description:
-      "시설·설비와 Utility의 요구사항을 검토하고 DQ·IQ·OQ·PQ 수행과 결과 문서화를 지원합니다.",
-    phase: "시설·설비 · Utility 적격성평가",
+      "생산, 포장장비, DQ, IQ, OQ, PQ, PV",
+    phase: "Clean Room / Utility",
     output: "DQ · IQ · OQ · PQ · Qualification Report",
     tags: ["시설·설비", "Utility", "DQ·IQ·OQ·PQ", "결과 문서화"],
     link: "#/service-gmp",
@@ -51,8 +51,8 @@ export const SERVICE_PANELS = [
     stage: "SYSTEM VALIDATION",
     title: "Computerized System Validation",
     description:
-      "ERP, MES, LIMS, QMS 등 GxP 시스템에 대한 리스크 기반 검증 문서화와 테스트를 수행합니다.",
-    phase: "시스템 도입 · 변경 관리 · 운영 전 검증",
+      "GxP 시스템에 대한 리스크 기반 검증 문서화와 테스트를 수행합니다.",
+    phase: "ERP, MES, LIMS, QMS 등",
     output: "URS · RA · RTM · IQ/OQ · Validation Report",
     tags: ["CSV", "Data Integrity", "Risk Assessment", "IQ·OQ"],
     link: "#/service-csv",
