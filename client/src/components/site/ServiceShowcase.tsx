@@ -19,8 +19,8 @@ export function ServiceShowcase() {
           </h2>
 
           <p className="service-immersive__summary">
-            초기 기획과 GMP 운영 기준부터 컴퓨터화시스템 검증까지,
-            프로젝트에 필요한 업무 범위를 명확하게 구조화합니다.
+            초기 기획과 GMP 운영 기준에 맞는 검증까지<br/>
+            프로젝트에 필요한 업무 범위로 구현화하고 체계화하여 완성합니다.
           </p>
         </div>
 

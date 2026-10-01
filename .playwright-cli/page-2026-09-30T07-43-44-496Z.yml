@@ -1,0 +1,230 @@
+- generic [ref=f2e3]:
+  - button "본문으로 바로가기" [ref=f2e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f2e5]:
+    - generic [ref=f2e6]:
+      - button "INFACT 홈으로 이동" [ref=f2e7] [cursor=pointer]:
+        - img "INFACT" [ref=f2e8]
+      - list [ref=f2e10]:
+        - listitem [ref=f2e11]:
+          - button "회사소개" [ref=f2e12] [cursor=pointer]
+        - listitem [ref=f2e13]:
+          - button "사업안내" [ref=f2e14] [cursor=pointer]
+        - listitem [ref=f2e15]:
+          - button "수행실적" [ref=f2e16] [cursor=pointer]
+      - generic [ref=f2e17]:
+        - button "문의하기" [ref=f2e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=f2e19]:
+          - generic [ref=f2e20]: TODAY
+          - strong [ref=f2e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=f2e22]:
+    - generic [ref=f2e24]:
+      - paragraph [ref=f2e25]: Service
+      - heading "GMP 컨설팅" [level=1] [ref=f2e26]
+      - paragraph [ref=f2e27]: 운영 기준부터 적격성평가와 점검 대응까지 하나의 수행 구조로 연결하는 맞춤형 GMP 전문 컨설팅 서비스입니다.
+    - generic [ref=f2e28]:
+      - navigation "페이지 하위 메뉴" [ref=f2e29]:
+        - generic [ref=f2e30]:
+          - generic [ref=f2e31]:
+            - button "개념설계" [ref=f2e32] [cursor=pointer]
+            - button "GMP 컨설팅" [ref=f2e33] [cursor=pointer]
+            - button "CSV 컨설팅" [ref=f2e34] [cursor=pointer]
+          - list "현재 위치" [ref=f2e35]:
+            - listitem [ref=f2e36]: 홈
+            - listitem [ref=f2e37]: "> 사업안내"
+            - listitem [ref=f2e38]: "> GMP 컨설팅"
+      - generic [ref=f2e40]:
+        - generic [ref=f2e41]:
+          - paragraph [ref=f2e42]: 01 · Core Value
+          - generic [ref=f2e43]:
+            - heading "GMP 컨설팅 핵심 가치" [level=2] [ref=f2e44]
+            - generic [ref=f2e45]: 형식적이고 과도한 프로세스 도입을 지양하고 제조소 규모, 실제 운영 상황과 프로젝트 일정에 맞는 GMP 실행 기준을 제시합니다.
+        - generic [ref=f2e46]:
+          - article [ref=f2e47]:
+            - heading "실질적 가이드 제공" [level=3] [ref=f2e48]
+            - paragraph [ref=f2e49]: 제조소 규모와 실제 운영 상황, 프로젝트 일정에 가장 잘 맞춘 실질적이고 가용한 GMP 실행 가이드를 제시합니다.
+          - article [ref=f2e50]:
+            - heading "실사 리스크 최소화" [level=3] [ref=f2e51]
+            - paragraph [ref=f2e52]: 운영체계, 규정·절차, 검증(Validation)과 실사 대응 범위를 분리하지 않고 통합적인 수행 구조로 연결해 Inspection 및 Audit 지적 리스크를 선제적으로 줄입니다.
+      - generic [ref=f2e54]:
+        - generic [ref=f2e55]:
+          - paragraph [ref=f2e56]: 02 · Applicable Fields
+          - generic [ref=f2e57]:
+            - heading "GMP 컨설팅 적용 분야 및 대상 제조소" [level=2] [ref=f2e58]
+            - generic [ref=f2e59]: 제조소의 신규 구축과 증설, 기존 품질시스템 고도화부터규제기관 Inspection 및 거래처 Audit 준비까지 지원합니다.
+        - generic [ref=f2e60]:
+          - generic [ref=f2e61]:
+            - article [ref=f2e62]:
+              - strong [ref=f2e63]: 대상 산업
+              - paragraph [ref=f2e64]: 의약품, 바이오, 화장품, 의료기기 제조소
+            - article [ref=f2e65]:
+              - strong [ref=f2e66]: 적용 규제
+              - paragraph [ref=f2e67]: KGMP, cGMP(FDA), EU-GMP 환경 대응
+            - article [ref=f2e68]:
+              - strong [ref=f2e69]: 프로젝트 유형
+              - paragraph [ref=f2e70]: 신규 공장·라인 증설 및 인허가 준비
+            - article [ref=f2e71]:
+              - strong [ref=f2e72]: 품질 고도화
+              - paragraph [ref=f2e73]: 기존 QMS·SOP 현장 실행력 강화 및 Gap 보완
+            - article [ref=f2e74]:
+              - strong [ref=f2e75]: 실사 대비
+              - paragraph [ref=f2e76]: 규제기관 Inspection 및 거래처 Audit 사전 준비
+          - figure [ref=f2e77]:
+            - img "제약 제조소의 GMP 운영과 품질관리" [ref=f2e78]
+      - generic [ref=f2e80]:
+        - generic [ref=f2e81]:
+          - paragraph [ref=f2e82]: 03 · Service Roadmap
+          - generic [ref=f2e83]:
+            - heading "GMP 컨설팅 수행 로드맵" [level=2] [ref=f2e84]
+            - generic [ref=f2e85]: 현장 진단부터 QMS 구축, 밸리데이션과 실사 대응까지 GMP 컨설팅의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.
+        - generic [ref=f2e86]:
+          - article [ref=f2e87]:
+            - generic [ref=f2e88]: "01"
+            - heading "범위 정의" [level=3] [ref=f2e89]
+            - paragraph [ref=f2e90]: 현장 사전 진단을 통해 프로젝트 목표와 적용 범위를 정하고 Validation Master Plan과 수행계획을 수립합니다.
+          - article [ref=f2e91]:
+            - generic [ref=f2e92]: "02"
+            - heading "QMS 구축" [level=3] [ref=f2e93]
+            - paragraph [ref=f2e94]: SOP, Training, 일탈·CAPA와 변경관리 절차를 현장 운영에 맞게 정비하고 교육체계를 구축합니다.
+          - article [ref=f2e95]:
+            - generic [ref=f2e96]: "03"
+            - heading "밸리데이션" [level=3] [ref=f2e97]
+            - paragraph [ref=f2e98]: 시설·설비 적격성평가, PV, CSV와 Data Integrity의 적용 범위와 수행 결과를 검토합니다.
+          - article [ref=f2e99]:
+            - generic [ref=f2e100]: "04"
+            - heading "실사 대응" [level=3] [ref=f2e101]
+            - paragraph [ref=f2e102]: Mock Audit을 수행하고 규제기관 Inspection 및 거래처 Audit에 필요한 대응자료와 현장 지침을 정리합니다.
+      - generic [ref=f2e104]:
+        - generic [ref=f2e105]:
+          - paragraph [ref=f2e106]: 04 · Deliverables
+          - generic [ref=f2e107]:
+            - heading "GMP 컨설팅 단계별 대표 수행 결과자료" [level=2] [ref=f2e108]
+            - generic [ref=f2e109]: 범위 정의부터 규정 검토, 운영체계와 실사 대응자료 정리까지 각 단계에서 필요한 대표 결과자료를 프로젝트 목적에 맞춰 구성합니다.
+        - generic [ref=f2e110]:
+          - generic [aria-hidden] [ref=f2e111]:
+            - generic [ref=f2e112]: 단계
+            - generic [ref=f2e113]: 수행 구분
+            - generic [ref=f2e114]: 대표 결과자료
+          - list [ref=f2e115]:
+            - listitem [ref=f2e116]:
+              - generic [ref=f2e117]: "01"
+              - generic [ref=f2e118]:
+                - heading "범위 정의" [level=3] [ref=f2e119]
+                - paragraph [ref=f2e120]: 현장 사전 진단을 통해 프로젝트 목표, 적용 범위와 수행 일정을 정리합니다.
+              - generic [ref=f2e121]:
+                - strong [ref=f2e122]: Validation Master Plan (VMP)
+                - paragraph [ref=f2e123]: 프로젝트 목표, 범위 및 일정 관리 가이드
+            - listitem [ref=f2e124]:
+              - generic [ref=f2e125]: "02"
+              - generic [ref=f2e126]:
+                - heading "규정 및 기준 검토" [level=3] [ref=f2e127]
+                - paragraph [ref=f2e128]: 적용 규정과 현재 운영 기준의 차이를 진단하고 우선 보완과제를 정리합니다.
+              - generic [ref=f2e129]:
+                - strong [ref=f2e130]: Compliance Check Sheet
+                - paragraph [ref=f2e131]: GMP 규정 부합성 검토 및 실행 로드맵
+            - listitem [ref=f2e132]:
+              - generic [ref=f2e133]: "03"
+              - generic [ref=f2e134]:
+                - heading "운영체계 정리" [level=3] [ref=f2e135]
+                - paragraph [ref=f2e136]: SOP, Training, 일탈·CAPA와 변경관리 절차를 현장 운영에 맞게 정비합니다.
+              - generic [ref=f2e137]:
+                - strong [ref=f2e138]: QMS / SOP 체계 제안서
+                - paragraph [ref=f2e139]: 현장 맞춤형 품질운영 문서 및 제·개정안
+            - listitem [ref=f2e140]:
+              - generic [ref=f2e141]: "04"
+              - generic [ref=f2e142]:
+                - heading "문서화 및 대응 정리" [level=3] [ref=f2e143]
+                - paragraph [ref=f2e144]: Mock Audit 결과와 규제기관 Inspection 및 거래처 Audit 대응자료를 최종 문서로 정리합니다.
+              - generic [ref=f2e145]:
+                - strong [ref=f2e146]: Inspection Readiness Package
+                - paragraph [ref=f2e147]: 실사 대응 자료집, 모의점검 보고서 및 지침서
+      - generic [ref=f2e149]:
+        - generic [ref=f2e150]:
+          - paragraph [ref=f2e151]: 05 · IN-FACT Difference
+          - generic [ref=f2e152]:
+            - heading "IN-FACT GMP 컨설팅 차별화 포인트" [level=2] [ref=f2e153]
+            - generic [ref=f2e154]: 시설, 장비와 품질시스템을 분리하지 않고 현장 운영과 문서 실행이 함께 작동하는 GMP 체계를 구축합니다.
+        - generic [ref=f2e155]:
+          - article [ref=f2e156]:
+            - heading "현장 실무형 SOP 고도화" [level=3] [ref=f2e157]
+            - paragraph [ref=f2e158]: 단순 법률 및 규정의 나열에 그치지 않고 작업자가 현장에서 즉시 이행할 수 있는 정교한 표준작업지침서(SOP)를 제작해 교육 및 자체감사 수행 효율을 높입니다.
+          - article [ref=f2e159]:
+            - heading "현장 실행과 최신 규제를 함께 반영" [level=3] [ref=f2e160]
+            - paragraph [ref=f2e161]: 시설·장비 적격성, 품질시스템과 실사 대응자료를 하나의 실행 기준으로 연결하고 Data Integrity와 CSV 등 강화되는 규제 이슈를 선제적으로 점검합니다.
+      - generic [ref=f2e163]:
+        - generic [ref=f2e164]:
+          - paragraph [ref=f2e165]: Contact
+          - heading "제조소 운영과 규제 대응의 GMP 수행 기준을 먼저 정리합니다." [level=2] [ref=f2e166]: 제조소 운영과 규제 대응의GMP 수행 기준을 먼저 정리합니다.
+          - paragraph [ref=f2e168]: 시설, 공정과 운영 현황을 알려주시면GMP 컨설팅의 출발점과 수행 범위를 함께 정리합니다.
+        - link "프로젝트 문의하기" [ref=f2e170] [cursor=pointer]:
+          - /url: "#/contact"
+  - contentinfo [ref=f2e174]:
+    - generic [ref=f2e175]:
+      - generic [ref=f2e176]:
+        - generic [ref=f2e177]:
+          - link "IN-FACT 홈으로 이동" [ref=f2e178] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f2e179]
+          - paragraph [ref=f2e180]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f2e181]:
+            - paragraph [ref=f2e182]: 대표. 고동주
+            - paragraph [ref=f2e183]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f2e184]:
+              - link "Tel. 031-378-7220" [ref=f2e185] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f2e186] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f2e187]:
+          - generic [ref=f2e188]:
+            - generic [ref=f2e189]: Navigation
+            - link "회사 소개" [ref=f2e190] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f2e191] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f2e192] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f2e193] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f2e194]:
+            - generic [ref=f2e195]: Contact
+            - link "031-378-7220" [ref=f2e196] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f2e197] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f2e198] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f2e199]:
+        - paragraph [ref=f2e200]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f2e201]:
+          - link "홈" [ref=f2e202] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f2e203] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f2e204] [cursor=pointer]:
+            - /url: "#/contact"

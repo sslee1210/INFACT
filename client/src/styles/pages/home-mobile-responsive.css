@@ -173,7 +173,7 @@
     object-position: center center !important;
   }
 
-  .service-card:nth-child(3) .service-card__media img {
+  .service-card:nth-child(4) .service-card__media img {
     object-position: 44% center !important;
   }
 
@@ -363,9 +363,8 @@
     display: none !important;
   }
 
-  .service-card-rail:has(.service-card:nth-child(1):hover),
-  .service-card-rail:has(.service-card:nth-child(2):hover),
-  .service-card-rail:has(.service-card:nth-child(3):hover) {
+  .service-card-rail:has(.service-card:hover),
+  .service-card-rail:has(.service-card:focus-visible) {
     grid-template-columns: 1fr !important;
   }
 }

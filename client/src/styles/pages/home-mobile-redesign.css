@@ -202,6 +202,10 @@
   }
 
   .service-card:nth-child(3) .service-card__media img {
+    object-position: center 25% !important;
+  }
+
+  .service-card:nth-child(4) .service-card__media img {
     object-position: 44% center !important;
   }
 

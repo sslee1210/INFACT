@@ -202,8 +202,9 @@ export function HomeCompanyIntroSection() {
       <div className="home-container home-company-intro__inner">
         <div className="home-company-intro__lead fade-in">
           <h2 id="home-company-intro-title">
-            <span className="home-heading-accent">신뢰</span>는 약속이 아니라<br />
-            <span className="home-heading-accent">검증의 결과</span>입니다.
+            <span className="home-heading-accent">GMP</span>는 검증되어야 하고,<br />
+            <span className="home-heading-accent">INFACT</span>는 {" "}
+            <span className="home-heading-accent">Valification</span>을 지원합니다.
           </h2>
         </div>
 
@@ -216,9 +217,8 @@ export function HomeCompanyIntroSection() {
 
         <div className="home-company-intro__copy fade-in">
           <p className="home-company-intro__statement">
-            ㈜인팩트는 완제의약품(KGMP) / 원료의약품(BGMP) / 동물의약품(VGMP) / Bio
-            Industry / Cosmetic 업계 등에서 필요로 하는 국내외 GMP에 관한 모든 것을
-            제공하고 있습니다.
+            ㈜인팩트는 완제의약품, 원료의약품, 동물의약품, 건강기능식품, 첨단바이오의약품, 화장품 업계에서
+            요구되고, GMP에 관한 모든 서비스를 제공하고 있습니다.
           </p>
           <p>
             인팩트의 모든 임직원은 고객사의 GMP 품질 향상과 확보에 최선을 다하고
@@ -304,8 +304,8 @@ export function HomeContactSection() {
         </h2>
 
         <p>
-          초기 기획, GMP 승인 준비, CSV 문서 패키지까지 현재 단계에 맞는 검토 범위를
-          함께 정리합니다.
+          초기 기획, GMP 허가 승인, GMP System 구축을 위한
+          기준을 정리합니다.
         </p>
 
         <div className="home-cta-banner__actions">

@@ -73,7 +73,7 @@ export const consultingServicePages: Record<
     pageImage: "./images/service/conceptual-design-hero.webp",
     coreValue: {
       description:
-        "제품과 생산계획을 시설 규모, GMP Layout, 동선과 유틸리티 조건으로 전환해 상세설계를 시작할 수 있는 기준을 만듭니다.",
+        "우수의약품 제조 관리 기준을 충족하고 제품과 생산설비를 구축하기 위한 개념으로 해당 규제기관에 위배되지 않고 GMP Layout을 구체화하여 상세 설계의 완전성을 높입니다.",
       items: [
         {
           title: "생산계획을 공간 기준으로 전환",
@@ -89,7 +89,7 @@ export const consultingServicePages: Record<
     },
     application: {
       description:
-        "제조시설의 위치와 규모를 결정해야 하거나 기존 시설의 생산능력, 공정 또는 GMP 동선을 재구성해야 하는 프로젝트에 적용합니다.",
+        "GMP 의약품의 생산을 위한 제조소가 필요하여 GMP 공장을 건축하기 위하거나 기존 설비들의 노후화 또는 새로운 Guide의 요구사항 충족을 위해 Layout을 재구성해야 하는 프로젝트에 적용합니다.",
       image: "./images/service/conceptual-design-application.webp",
       imageAlt: "제약 제조시설의 개념설계와 공간 검토",
       items: [
@@ -113,7 +113,7 @@ export const consultingServicePages: Record<
     },
     scope: {
       description:
-        "기초자료 확인부터 공간·동선과 유틸리티 기준 확정까지 개념설계의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.",
+        "기초자료 수집, 조정, 확인부터 공간·동선과 유틸리티 기준 확정까지 개념설계의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.",
       items: [
         {
           title: "기초자료·범위 정의",
@@ -141,7 +141,7 @@ export const consultingServicePages: Record<
       label: "Deliverables",
       title: "개념설계 컨설팅 단계별 대표 수행 결과자료",
       description:
-        "각 수행단계에서 합의한 검토 결과를 후속 상세설계와 프로젝트 관리에 사용할 수 있는 도면과 기준자료로 정리합니다.",
+        "각 수행단계에서 합의한 검토 결과를 상세설계의 기초 자료로서 사용됩니다.",
       steps: [
         {
           title: "질의서·Workshop",
@@ -153,7 +153,7 @@ export const consultingServicePages: Record<
           title: "시설 규모 산정",
           description: "생산량과 공정별 처리용량을 기준으로 작업실, 창고와 지원시설의 필요 규모를 산정합니다.",
           outputTitle: "Process Analysis Sheet",
-          outputDetail: "Facility Size · Equipment List",
+          outputDetail: "Facility Size, Warehouse, Utility, Equipment List",
         },
         {
           title: "Layout Development",
@@ -165,7 +165,7 @@ export const consultingServicePages: Record<
           title: "Design Basis 확정",
           description: "유틸리티와 작업실 요구사항을 반영해 최종 도면과 개념설계 보고서를 확정합니다.",
           outputTitle: "Room Design Requirement · Conceptual Design Report",
-          outputDetail: "Utility / Drain Plan",
+          outputDetail: "개념배치도(Layout), 청정도, 장비배치도, 차압도, Air flow, 인동선, 물동선, 폐기물동선",
         },
       ],
     },
@@ -176,7 +176,7 @@ export const consultingServicePages: Record<
         {
           title: "공정과 GMP를 함께 보는 공간계획",
           description:
-            "면적 배분에 그치지 않고 제조순서, 작업자 행위, 자재 이동과 오염관리 요구사항을 같은 Layout에서 검토합니다.",
+            "GMP 현장 경험을 바탕으로 생산 현장의 배치와 제조순서, 작업자 행위, 자재이동과 오염관리 요구사항을 밀접하게 검토합니다.",
         },
         {
           title: "상세설계·DQ로 이어지는 근거자료",

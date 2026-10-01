@@ -15,7 +15,7 @@
 .service-card-rail {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   overflow: hidden;
 
@@ -40,17 +40,22 @@
 /* 기존의 실제 폭 확장을 CSS hover만으로 처리한다. */
 .service-card-rail:has(.service-card:nth-child(1):hover),
 .service-card-rail:has(.service-card:nth-child(1):focus-visible) {
-  grid-template-columns: 1.7fr 0.65fr 0.65fr;
+  grid-template-columns: 1.45fr 0.85fr 0.85fr 0.85fr;
 }
 
 .service-card-rail:has(.service-card:nth-child(2):hover),
 .service-card-rail:has(.service-card:nth-child(2):focus-visible) {
-  grid-template-columns: 0.65fr 1.7fr 0.65fr;
+  grid-template-columns: 0.85fr 1.45fr 0.85fr 0.85fr;
 }
 
 .service-card-rail:has(.service-card:nth-child(3):hover),
 .service-card-rail:has(.service-card:nth-child(3):focus-visible) {
-  grid-template-columns: 0.65fr 0.65fr 1.7fr;
+  grid-template-columns: 0.85fr 0.85fr 1.45fr 0.85fr;
+}
+
+.service-card-rail:has(.service-card:nth-child(4):hover),
+.service-card-rail:has(.service-card:nth-child(4):focus-visible) {
+  grid-template-columns: 0.85fr 0.85fr 0.85fr 1.45fr;
 }
 
 .service-card {
@@ -145,7 +150,7 @@
   object-position: center center;
 }
 
-.service-card:nth-child(3) .service-card__media img {
+.service-card:nth-child(4) .service-card__media img {
   object-position: 42% center;
 }
 
@@ -177,7 +182,7 @@
 
 /* GMP와 CSV 이미지는 청색 음영 없이 무채색 대비만 유지한다. */
 .service-card[data-service-index="1"],
-.service-card[data-service-index="2"] {
+.service-card[data-service-index="3"] {
   --service-card-overlay-default:
     linear-gradient(
       180deg,
@@ -451,9 +456,8 @@
     touch-action: pan-y;
   }
 
-  .service-card-rail:has(.service-card:nth-child(1):hover),
-  .service-card-rail:has(.service-card:nth-child(2):hover),
-  .service-card-rail:has(.service-card:nth-child(3):hover),
+  .service-card-rail:has(.service-card:hover),
+  .service-card-rail:has(.service-card:focus-visible),
   .service-card-rail.is-hovering-design,
   .service-card-rail.is-hovering-gmp,
   .service-card-rail.is-hovering-csv {
