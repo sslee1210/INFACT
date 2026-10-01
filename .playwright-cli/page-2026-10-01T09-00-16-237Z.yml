@@ -1,0 +1,162 @@
+- generic [ref=f14e3]:
+  - button "본문으로 바로가기" [ref=f14e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f14e5]:
+    - generic [ref=f14e6]:
+      - button "INFACT 홈으로 이동" [ref=f14e7] [cursor=pointer]:
+        - img "INFACT" [ref=f14e8]
+      - list [ref=f14e10]:
+        - listitem [ref=f14e11]:
+          - button "회사소개" [ref=f14e12] [cursor=pointer]
+        - listitem [ref=f14e13]:
+          - button "사업안내" [ref=f14e14] [cursor=pointer]
+        - listitem [ref=f14e15]:
+          - button "수행실적" [ref=f14e16] [cursor=pointer]
+      - generic [ref=f14e17]:
+        - button "문의하기" [ref=f14e18] [cursor=pointer]
+        - generic "오늘 방문자 0명" [ref=f14e19]:
+          - generic [ref=f14e20]: TODAY
+          - strong [ref=f14e21]: "0"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=f14e22]:
+    - generic [ref=f14e24]:
+      - paragraph [ref=f14e25]: References
+      - heading "CSV 수행실적" [level=1] [ref=f14e26]
+      - paragraph [ref=f14e27]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+    - generic [ref=f14e28]:
+      - navigation "페이지 하위 메뉴" [ref=f14e29]:
+        - generic [ref=f14e30]:
+          - generic [ref=f14e31]:
+            - button "개념설계" [ref=f14e32] [cursor=pointer]
+            - button "GMP" [ref=f14e33] [cursor=pointer]
+            - button "CSV" [ref=f14e34] [cursor=pointer]
+          - list "현재 위치" [ref=f14e35]:
+            - listitem [ref=f14e36]: 홈
+            - listitem [ref=f14e37]: "> 수행실적"
+            - listitem [ref=f14e38]: "> CSV"
+      - generic [ref=f14e39]:
+        - paragraph [ref=f14e40]: CSV References
+        - heading "연도별 수행 프로젝트" [level=2] [ref=f14e41]
+      - generic [ref=f14e42]:
+        - main [ref=f14e43]:
+          - generic [ref=f14e45]:
+            - generic [ref=f14e46]: YEAR
+            - heading "2020" [level=2] [ref=f14e47]
+          - generic [ref=f14e48]:
+            - article [ref=f14e49]:
+              - img "건일제약 로고" [ref=f14e51]
+              - list [ref=f14e53]:
+                - listitem [ref=f14e54]: 카톤인쇄기
+            - article [ref=f14e55]:
+              - img "아이큐어 로고" [ref=f14e57]
+              - list [ref=f14e59]:
+                - listitem [ref=f14e60]: 생산실행시스템(MES)
+            - article [ref=f14e61]:
+              - img "미생물실증지원센터 로고" [ref=f14e63]
+              - list [ref=f14e65]:
+                - listitem [ref=f14e66]: 분석기
+            - article [ref=f14e67]:
+              - img "GC녹십자 로고" [ref=f14e69]
+              - list [ref=f14e71]:
+                - listitem [ref=f14e72]: PLM
+                - listitem [ref=f14e73]: ELN
+            - article [ref=f14e74]:
+              - img "동아ST 로고" [ref=f14e76]
+              - list [ref=f14e78]:
+                - listitem [ref=f14e79]: MES
+                - listitem [ref=f14e80]: SCADA System
+            - article [ref=f14e81]:
+              - img "삼천당제약 로고" [ref=f14e83]
+              - list [ref=f14e85]:
+                - listitem [ref=f14e86]: ERP 외
+            - article [ref=f14e87]:
+              - img "한국얀센 로고" [ref=f14e89]
+              - list [ref=f14e91]:
+                - listitem [ref=f14e92]: 생산효율시스템
+            - article [ref=f14e93]:
+              - img "에스티팜 로고" [ref=f14e95]
+              - list [ref=f14e97]:
+                - listitem [ref=f14e98]: 생산설비
+        - complementary "수행실적 연도 선택" [ref=f14e99]:
+          - generic [ref=f14e100]:
+            - generic [ref=f14e101]: YEAR
+            - strong [ref=f14e102]: 연도 선택
+          - navigation [ref=f14e103]:
+            - button "2020" [ref=f14e104] [cursor=pointer]
+            - button "2019" [ref=f14e106] [cursor=pointer]
+            - button "2018" [ref=f14e108] [cursor=pointer]
+            - button "2017" [ref=f14e110] [cursor=pointer]
+          - generic [ref=f14e112]:
+            - button "이전 연도 보기" [disabled] [ref=f14e113]:
+              - generic [aria-hidden] [ref=f14e114]: ←
+            - button "다음 연도 보기" [ref=f14e115] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e116]: →
+  - contentinfo [ref=f14e117]:
+    - generic [ref=f14e118]:
+      - generic [ref=f14e119]:
+        - generic [ref=f14e120]:
+          - link "IN-FACT 홈으로 이동" [ref=f14e121] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f14e122]
+          - paragraph [ref=f14e123]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f14e124]:
+            - paragraph [ref=f14e125]: 대표. 고동주
+            - paragraph [ref=f14e126]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f14e127]:
+              - link "Tel. 031-378-7220" [ref=f14e128] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f14e129] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f14e130]:
+          - generic [ref=f14e131]:
+            - generic [ref=f14e132]: Navigation
+            - link "회사 소개" [ref=f14e133] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f14e134] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f14e135] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f14e136] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f14e137]:
+            - generic [ref=f14e138]: Contact
+            - link "031-378-7220" [ref=f14e139] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f14e140] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f14e141] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f14e142]:
+        - paragraph [ref=f14e143]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f14e144]:
+          - link "홈" [ref=f14e145] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f14e146] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f14e147] [cursor=pointer]:
+            - /url: "#/contact"

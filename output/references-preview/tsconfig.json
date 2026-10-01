@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./ReferencesPreview.tsx"],
+  "compilerOptions": {
+    "incremental": false
+  }
+}

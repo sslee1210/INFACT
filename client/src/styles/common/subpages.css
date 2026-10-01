@@ -264,6 +264,23 @@
   color: var(--home-text);
 }
 
+@supports (overflow: clip) {
+  /* Keep the document as the sticky scroll container, including mobile history. */
+  body:has(.page-subnav-wrap):not(.is-nav-locked) {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+}
+
+.page-subnav-sentinel {
+  position: relative;
+  display: block;
+  /* A real intersection area without changing the bar's original position. */
+  height: 1px;
+  margin-top: -1px;
+  pointer-events: none;
+}
+
 .page-subnav-wrap {
   position: sticky;
   top: var(--fluid-nav-height);
@@ -273,6 +290,27 @@
   background: #fff;
   border-bottom: 1px solid rgba(217, 225, 236, 0.9);
   box-shadow: 0 8px 24px rgba(17, 38, 86, 0.045);
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.page-subnav-wrap.is-stuck {
+  --subnav-stuck-text: #e6e8ec;
+  --subnav-stuck-current: #fff;
+  --subnav-stuck-border: rgba(255, 255, 255, 0.16);
+  /* Override the existing white mobile navigation surface. */
+  background: #000 !important;
+  border-bottom-color: var(--subnav-stuck-border);
+}
+
+.page-subnav-wrap.is-stuck .page-subnav button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-subnav-wrap {
+    transition: none;
+  }
 }
 
 .page-subnav-row {
@@ -314,7 +352,7 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: var(--home-text-soft);
+  color: var(--subnav-stuck-text, var(--home-text-soft));
   font-size: 0.98rem;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -329,7 +367,7 @@
   bottom: -1px;
   width: clamp(76px, 7vw, 94px);
   height: clamp(2px, 0.28vw, 3px);
-  background: var(--home-blue);
+  background: var(--subnav-stuck-current, var(--home-blue));
   opacity: 0;
   transform: translateX(-50%) scaleX(0.35);
   transform-origin: center;
@@ -341,7 +379,7 @@
 .page-subnav button:hover,
 .page-subnav button:focus-visible,
 .page-subnav button[aria-current="page"] {
-  color: var(--home-blue-strong);
+  color: var(--subnav-stuck-current, var(--home-blue-strong));
   font-weight: 900;
   background: transparent;
 }
@@ -366,7 +404,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  color: var(--home-text-soft);
+  color: var(--subnav-stuck-text, var(--home-text-soft));
   font-size: 0.78rem;
   font-weight: 700;
   white-space: nowrap;
@@ -380,13 +418,13 @@
 
 .page-breadcrumb li + li::before {
   content: ">";
-  color: #a3adbd;
+  color: var(--subnav-stuck-text, #a3adbd);
   font-size: 0.72rem;
   font-weight: 700;
 }
 
 .page-breadcrumb li:last-child {
-  color: var(--home-blue-strong);
+  color: var(--subnav-stuck-current, var(--home-blue-strong));
 }
 
 .company-section {

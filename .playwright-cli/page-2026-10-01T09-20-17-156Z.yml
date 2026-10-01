@@ -1,0 +1,227 @@
+- generic [ref=f17e3]:
+  - button "본문으로 바로가기" [ref=f17e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f17e5]:
+    - generic [ref=f17e6]:
+      - button "INFACT 홈으로 이동" [ref=f17e7] [cursor=pointer]:
+        - img "INFACT" [ref=f17e8]
+      - list [ref=f17e10]:
+        - listitem [ref=f17e11]:
+          - button "회사소개" [ref=f17e12] [cursor=pointer]
+        - listitem [ref=f17e13]:
+          - button "사업안내" [ref=f17e14] [cursor=pointer]
+        - listitem [ref=f17e15]:
+          - button "수행실적" [ref=f17e16] [cursor=pointer]
+      - generic [ref=f17e17]:
+        - button "문의하기" [ref=f17e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=f17e19]:
+          - generic [ref=f17e20]: TODAY
+          - strong [ref=f17e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=f17e22]:
+    - generic [ref=f17e23]:
+      - generic [ref=f17e25]:
+        - paragraph [ref=f17e26]: References
+        - heading "CSV 수행실적" [level=1] [ref=f17e27]
+        - paragraph [ref=f17e28]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+      - navigation "페이지 하위 메뉴" [ref=f17e29]:
+        - generic [ref=f17e30]:
+          - generic [ref=f17e31]:
+            - button "개념설계" [ref=f17e32] [cursor=pointer]
+            - button "GMP" [ref=f17e33] [cursor=pointer]
+            - button "CSV" [ref=f17e34] [cursor=pointer]
+          - list "현재 위치" [ref=f17e35]:
+            - listitem [ref=f17e36]: 홈
+            - listitem [ref=f17e37]: "> 수행실적"
+            - listitem [ref=f17e38]: "> CSV"
+      - region [ref=f17e39]:
+        - generic [ref=f17e40]:
+          - generic [ref=f17e41]:
+            - heading "함께해 온 기업들" [level=2] [ref=f17e42]
+            - paragraph [ref=f17e43]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+          - paragraph [ref=f17e44]: 디자인 미리보기 · 실제 사이트 미적용
+        - group "수행 연도 선택" [ref=f17e45]:
+          - generic [ref=f17e46]: 연도 선택
+          - generic [ref=f17e47]:
+            - button "2020" [ref=f17e48] [cursor=pointer]
+            - button "2019" [pressed] [ref=f17e49] [cursor=pointer]
+            - button "2018" [ref=f17e50] [cursor=pointer]
+            - button "2017" [ref=f17e51] [cursor=pointer]
+            - button "2016" [ref=f17e52] [cursor=pointer]
+        - generic [ref=f17e53]:
+          - generic [ref=f17e54]:
+            - heading "2019" [level=3] [ref=f17e55]
+            - paragraph [ref=f17e56]: CSV 수행 기업
+            - text: 주요 수행사례
+          - generic [ref=f17e57]:
+            - paragraph [ref=f17e58]: 로고 미등록 기업은 회사명으로 표시됩니다.
+            - list "2019년 CSV 수행 기업" [ref=f17e59]:
+              - listitem [ref=f17e60]:
+                - heading "셀트리온" [level=4] [ref=f17e61]
+                - paragraph [ref=f17e63]: 2D Barcode System, 바코드시스템, Print 시스템
+              - listitem [ref=f17e64]:
+                - heading "휴젤" [level=4] [ref=f17e65]
+                - paragraph [ref=f17e67]: 시험일지, EDMS, 포장기, LIMS, QMS
+              - listitem [ref=f17e68]:
+                - heading "OLIC Thailand" [level=4] [ref=f17e69]
+                - paragraph [ref=f17e71]: 2D Barcode System
+              - listitem [ref=f17e72]:
+                - heading "유니메드제약" [level=4] [ref=f17e73]
+                - paragraph [ref=f17e75]: 바코드 일련번호(RFID AG)
+              - listitem [ref=f17e76]:
+                - heading "종근당바이오" [level=4] [ref=f17e77]
+                - paragraph [ref=f17e79]: 프로바이오틱스 신축공장
+              - listitem [ref=f17e80]:
+                - heading "한국프라임제약" [level=4] [ref=f17e81]
+                - paragraph [ref=f17e83]: RWS
+              - listitem [ref=f17e84]:
+                - heading "휴메딕스" [level=4] [ref=f17e85]
+                - paragraph [ref=f17e87]: QMS
+              - listitem [ref=f17e88]:
+                - heading "삼양바이오팜" [level=4] [ref=f17e89]
+                - paragraph [ref=f17e91]: QC 장비
+              - listitem [ref=f17e92]:
+                - heading "도미노코리아" [level=4] [ref=f17e93]
+                - paragraph [ref=f17e95]: 카톤인쇄기, 장비
+              - listitem [ref=f17e96]:
+                - heading "이수앱지스" [level=4] [ref=f17e97]
+                - paragraph [ref=f17e99]: 실험정보관리시스템(LAS)
+              - listitem [ref=f17e100]:
+                - heading "이니스트바이오제약" [level=4] [ref=f17e101]
+                - paragraph [ref=f17e103]: RWS
+              - listitem [ref=f17e104]:
+                - heading "에이프로젠" [level=4] [ref=f17e105]
+                - paragraph [ref=f17e107]: 자동화창고관리시스템
+              - listitem [ref=f17e108]:
+                - heading "SK바이오텍" [level=4] [ref=f17e109]
+                - paragraph [ref=f17e111]: 타임서버
+              - listitem [ref=f17e112]:
+                - heading "GC녹십자" [level=4] [ref=f17e113]
+                - paragraph [ref=f17e115]: Isolator
+              - listitem [ref=f17e116]:
+                - heading "휴온스" [level=4] [ref=f17e117]
+                - paragraph [ref=f17e119]: SCADA System
+              - listitem [ref=f17e120]:
+                - heading "넥스팜코리아" [level=4] [ref=f17e121]
+                - paragraph [ref=f17e123]: 출하관리시스템
+              - listitem [ref=f17e124]:
+                - heading "한국오츠카제약" [level=4] [ref=f17e125]
+                - paragraph [ref=f17e127]: EDMS
+              - listitem [ref=f17e128]:
+                - heading "국제약품" [level=4] [ref=f17e129]
+                - paragraph [ref=f17e131]: ERP, AG, DPS 변경관리
+              - listitem [ref=f17e132]:
+                - heading "동광제약" [level=4] [ref=f17e133]
+                - paragraph [ref=f17e135]: 원료칭량관리시스템, 시험일지, MRP 시스템, 이동식 부스, 분석장비
+              - listitem [ref=f17e136]:
+                - heading "메디톡스" [level=4] [ref=f17e137]
+                - paragraph [ref=f17e139]: 일련번호시스템
+              - listitem [ref=f17e140]:
+                - heading "한국콜마" [level=4] [ref=f17e141]
+                - paragraph [ref=f17e143]: 창고관리시스템
+              - listitem [ref=f17e144]:
+                - heading "동화약품" [level=4] [ref=f17e145]
+                - paragraph [ref=f17e147]: Agilent OpenLAB ECM System
+              - listitem [ref=f17e148]:
+                - heading "애니젠" [level=4] [ref=f17e149]
+                - paragraph [ref=f17e151]: 장비 및 시스템
+              - listitem [ref=f17e152]:
+                - heading "코러스제약" [level=4] [ref=f17e153]
+                - paragraph [ref=f17e155]: 클린부스
+              - listitem [ref=f17e156]:
+                - heading "한림제약" [level=4] [ref=f17e157]
+                - paragraph [ref=f17e159]: GLT
+              - listitem [ref=f17e160]:
+                - heading "하이텍팜" [level=4] [ref=f17e161]
+                - paragraph [ref=f17e163]: PW, WFI, PS System
+              - listitem [ref=f17e164]:
+                - heading "종근당" [level=4] [ref=f17e165]
+                - paragraph [ref=f17e167]: Pass Box
+              - listitem [ref=f17e168]:
+                - heading "한미약품" [level=4] [ref=f17e169]
+                - paragraph [ref=f17e171]: 글러브 리크테스트 장비
+              - listitem [ref=f17e172]:
+                - heading "동아제약" [level=4] [ref=f17e173]
+                - paragraph [ref=f17e175]: 클린부스
+              - listitem [ref=f17e176]:
+                - heading "휴온스제약" [level=4] [ref=f17e177]
+                - paragraph [ref=f17e179]: 모바일 부스
+            - generic [ref=f17e180]:
+              - paragraph [ref=f17e181]: 이 외에도 다양한 기업의 프로젝트를 수행했습니다.
+              - generic [ref=f17e182]: 위 내용은 주요 수행사례의 일부입니다.
+        - complementary [ref=f17e183]:
+          - generic [ref=f17e188]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f17e189]
+            - paragraph [ref=f17e190]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f17e191]:
+            - button "전체 수행실적 다운로드" [disabled] [ref=f17e192]
+            - paragraph [ref=f17e196]: 엑셀 파일 준비 중
+  - contentinfo [ref=f17e197]:
+    - generic [ref=f17e198]:
+      - generic [ref=f17e199]:
+        - generic [ref=f17e200]:
+          - link "IN-FACT 홈으로 이동" [ref=f17e201] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f17e202]
+          - paragraph [ref=f17e203]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f17e204]:
+            - paragraph [ref=f17e205]: 대표. 고동주
+            - paragraph [ref=f17e206]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f17e207]:
+              - link "Tel. 031-378-7220" [ref=f17e208] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f17e209] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f17e210]:
+          - generic [ref=f17e211]:
+            - generic [ref=f17e212]: Navigation
+            - link "회사 소개" [ref=f17e213] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f17e214] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f17e215] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f17e216] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f17e217]:
+            - generic [ref=f17e218]: Contact
+            - link "031-378-7220" [ref=f17e219] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f17e220] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f17e221] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f17e222]:
+        - paragraph [ref=f17e223]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f17e224]:
+          - link "홈" [ref=f17e225] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f17e226] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f17e227] [cursor=pointer]:
+            - /url: "#/contact"

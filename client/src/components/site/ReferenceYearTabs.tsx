@@ -1,164 +1,123 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export type ReferenceClient = {
   client: string;
   logo: string;
-  projects: string[];
+  // 실제 로고 등록 시 ./images/clients/파일명 형태로 지정합니다.
+  logoSrc?: string;
+  projects?: string[];
+  systems?: string[];
 };
 
-export type ReferenceYear = {
-  year: number;
-  clients: ReferenceClient[];
-};
+export type ReferenceYear = { year: number; clients: ReferenceClient[] };
+type ReferenceYearTabsProps = { years: ReferenceYear[]; categoryLabel: string };
 
-type ReferenceYearTabsProps = {
-  years: ReferenceYear[];
-  emptyMessage: string;
-};
+function collectCompanies(records: ReferenceClient[]) {
+  const companies = new Map<string, ReferenceClient & { summary: string[] }>();
+  records.forEach((record) => {
+    const previous = companies.get(record.client);
+    companies.set(record.client, {
+      ...record,
+      logoSrc: previous?.logoSrc ?? record.logoSrc,
+      summary: Array.from(new Set([
+        ...(previous?.summary ?? []),
+        ...(record.systems ?? []),
+        ...(record.projects ?? []),
+      ])),
+    });
+  });
+  return Array.from(companies.values());
+}
 
-const logoExtensions = ["svg", "png", "webp"];
-const visibleYearCount = 4;
-
-function ClientLogo({ client, logo }: { client: string; logo: string }) {
-  const [extensionIndex, setExtensionIndex] = useState(0);
+function CompanyLogo({ client, logoSrc }: ReferenceClient) {
   const [failed, setFailed] = useState(false);
-
-  const handleError = () => {
-    if (extensionIndex < logoExtensions.length - 1) {
-      setExtensionIndex((current) => current + 1);
-      return;
-    }
-    setFailed(true);
-  };
-
-  if (failed || !logo) {
-    return <span className="csv-year-card__logo-fallback">{client}</span>;
-  }
-
+  useEffect(() => setFailed(false), [logoSrc]);
+  const hasLogo = Boolean(logoSrc && !failed);
   return (
-    <img
-      src={`./images/clients/${logo}.${logoExtensions[extensionIndex]}`}
-      alt={`${client} 로고`}
-      loading="lazy"
-      onError={handleError}
-    />
+    <div className="reference-company__logo" data-placeholder={!hasLogo || undefined}>
+      {hasLogo ? (
+        <img
+          src={logoSrc}
+          alt={`${client} 로고`}
+          width={144}
+          height={72}
+          loading="lazy"
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+      ) : <span>{client}<small>로고 등록 예정</small></span>}
+    </div>
   );
 }
 
-export function ReferenceYearTabs({
-  years,
-  emptyMessage,
-}: ReferenceYearTabsProps) {
-  const yearNumbers = useMemo(
-    () => years.map((section) => section.year),
-    [years],
+export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsProps) {
+  const [selectedYear, setSelectedYear] = useState(() =>
+    Number(new URLSearchParams(window.location.search).get("year")),
   );
+  const selected = years.find((item) => item.year === selectedYear) ?? years[0];
+  // 대표 기업의 표시 수만 제한하고, 전체 원본 실적은 그대로 유지합니다.
+  const visibleClients = collectCompanies(selected?.clients ?? []).slice(0, 30);
 
-  const [selectedYear, setSelectedYear] = useState(yearNumbers[0]);
-  const [yearStartIndex, setYearStartIndex] = useState(0);
-
-  const visibleYears = yearNumbers.slice(
-    yearStartIndex,
-    yearStartIndex + visibleYearCount,
-  );
-  const canMovePrevious = yearStartIndex > 0;
-  const canMoveNext = yearStartIndex + visibleYearCount < yearNumbers.length;
-
-  const selectedSection =
-    years.find((section) => section.year === selectedYear) ?? years[0];
-
-  const moveYearWindow = (direction: -1 | 1) => {
-    const maxStartIndex = Math.max(0, yearNumbers.length - visibleYearCount);
-    const nextStartIndex = Math.min(
-      maxStartIndex,
-      Math.max(0, yearStartIndex + direction * visibleYearCount),
-    );
-
-    setYearStartIndex(nextStartIndex);
-
-    const nextVisibleYear = yearNumbers[nextStartIndex];
-    if (nextVisibleYear !== undefined) {
-      setSelectedYear(nextVisibleYear);
-    }
-  };
+  function chooseYear(year: number) {
+    setSelectedYear(year);
+    const url = new URL(window.location.href);
+    url.searchParams.set("year", String(year));
+    window.history.replaceState(window.history.state, "", url);
+  }
 
   return (
-    <div className="site-shell csv-year-layout">
-      <main className="csv-year-content" aria-live="polite">
-        <header className="csv-year-content__head">
-          <div>
-            <span>YEAR</span>
-            <h2>{selectedSection.year}</h2>
-          </div>
-        </header>
-
-        {selectedSection.clients.length > 0 ? (
-          <div className="csv-year-grid">
-            {selectedSection.clients.map((reference) => (
-              <article key={reference.client} className="csv-year-card">
-                <div className="csv-year-card__logo">
-                  <ClientLogo client={reference.client} logo={reference.logo} />
-                </div>
-
-                <div className="csv-year-card__body">
-                  <ul>
-                    {reference.projects.map((project) => (
-                      <li key={project}>{project}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div className="csv-year-empty">
-            <p>{emptyMessage}</p>
-          </div>
-        )}
-      </main>
-
-      <aside className="csv-year-menu" aria-label="수행실적 연도 선택">
-        <div className="csv-year-menu__title">
-          <span>YEAR</span>
-          <strong>연도 선택</strong>
-        </div>
-
-        <nav>
-          {visibleYears.map((year) => (
+    <>
+      <div className="reference-years" role="group" aria-label="수행 연도 선택">
+        <span className="reference-years__label">연도 선택</span>
+        <div className="reference-years__options">
+          {years.map(({ year }) => (
             <button
               key={year}
               type="button"
-              className={selectedYear === year ? "is-active" : ""}
-              aria-current={selectedYear === year ? "page" : undefined}
-              onClick={() => setSelectedYear(year)}
+              aria-pressed={year === selected?.year}
+              aria-controls="reference-results"
+              onClick={() => chooseYear(year)}
             >
-              <span>{year}</span>
+              {year}
             </button>
           ))}
-        </nav>
-
-        <div className="csv-year-menu__controls">
-          <button
-            type="button"
-            className="csv-year-menu__arrow"
-            aria-label="이전 연도 보기"
-            disabled={!canMovePrevious}
-            onClick={() => moveYearWindow(-1)}
-          >
-            <span aria-hidden="true">←</span>
-          </button>
-
-          <button
-            type="button"
-            className="csv-year-menu__arrow"
-            aria-label="다음 연도 보기"
-            disabled={!canMoveNext}
-            onClick={() => moveYearWindow(1)}
-          >
-            <span aria-hidden="true">→</span>
-          </button>
         </div>
-      </aside>
-    </div>
+      </div>
+      <div id="reference-results" className="reference-results">
+        <header className="reference-results__year" aria-live="polite" aria-atomic="true">
+          <h3>{selected?.year}</h3>
+          <p>{categoryLabel} 수행 기업</p>
+          {visibleClients.length > 0 && <span>주요 수행사례</span>}
+        </header>
+        <div className="reference-results__body">
+          {visibleClients.length ? (
+            <>
+              <ul className="reference-companies" aria-label={`${selected?.year}년 ${categoryLabel} 수행 기업`}>
+                {visibleClients.map((company) => (
+                  <li key={company.client} className="reference-company" aria-label={company.client}>
+                    <CompanyLogo {...company} />
+                    <div className="reference-company__details">
+                      <p className="reference-company__summary">
+                        {company.summary.length ? company.summary.join(", ") : "수행 내용 확인 중"}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="reference-results__footnote">
+                <p>이 외에도 다양한 기업의 프로젝트를 수행했습니다.</p>
+                <span>위 내용은 주요 수행사례의 일부입니다.</span>
+              </div>
+            </>
+          ) : (
+            <div className="reference-empty">
+              <p className="reference-empty__title">수행실적을 정리하고 있습니다.</p>
+              <p>{selected ? `${selected.year}년 기업 목록은` : "기업 목록은"} 자료 확인 후 업데이트합니다.</p>
+              <span>전체 실적 자료도 함께 준비하고 있습니다.</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
   );
 }

@@ -1,0 +1,96 @@
+- generic [ref=f23e107]:
+  - button "본문으로 바로가기" [ref=f23e108] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f23e109]:
+    - generic [ref=f23e110]:
+      - button "INFACT 홈으로 이동" [ref=f23e111] [cursor=pointer]:
+        - img "INFACT" [ref=f23e112]
+      - generic "오늘 방문자 0명" [ref=f23e114]:
+        - generic [ref=f23e115]: TODAY
+        - strong [ref=f23e116]: "0"
+      - button "메뉴 열기" [ref=f23e117] [cursor=pointer]
+  - main [ref=f23e121]:
+    - generic [ref=f23e122]:
+      - generic [ref=f23e124]:
+        - paragraph [ref=f23e125]: References
+        - heading "개념설계 수행실적" [level=1] [ref=f23e126]
+        - paragraph [ref=f23e127]: 제약·바이오 제조시설의 공정 분석, GMP Layout, 구역·동선·유틸리티 계획과 개념설계 보고서 작성 실적입니다.
+      - navigation "페이지 하위 메뉴" [ref=f23e128]:
+        - generic [ref=f23e129]:
+          - generic [ref=f23e130]:
+            - button "개념설계" [ref=f23e131] [cursor=pointer]
+            - button "GMP" [ref=f23e132] [cursor=pointer]
+            - button "CSV" [ref=f23e133] [cursor=pointer]
+          - text: "> >"
+      - region [ref=f23e134]:
+        - generic [ref=f23e136]:
+          - heading "함께해 온 기업들" [level=2] [ref=f23e137]
+          - paragraph [ref=f23e138]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=f23e139]:
+          - generic [ref=f23e140]: 연도 선택
+          - generic [ref=f23e141]:
+            - button "2025" [pressed] [ref=f23e142] [cursor=pointer]
+            - button "2024" [ref=f23e143] [cursor=pointer]
+            - button "2023" [ref=f23e144] [cursor=pointer]
+            - button "2022" [ref=f23e145] [cursor=pointer]
+            - button "2021" [ref=f23e146] [cursor=pointer]
+            - button "2020" [ref=f23e147] [cursor=pointer]
+        - generic [ref=f23e148]:
+          - generic [ref=f23e149]:
+            - heading "2025" [level=3] [ref=f23e150]
+            - paragraph [ref=f23e151]: 개념설계 수행 기업
+          - generic [ref=f23e153]:
+            - paragraph [ref=f23e154]: 수행실적을 정리하고 있습니다.
+            - paragraph [ref=f23e155]: 2025년 기업 목록은 자료 확인 후 업데이트합니다.
+            - generic [ref=f23e156]: 전체 실적 자료도 함께 준비하고 있습니다.
+        - complementary [ref=f23e157]:
+          - generic [ref=f23e162]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f23e163]
+            - paragraph [ref=f23e164]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f23e165]:
+            - button "전체 수행실적 다운로드" [disabled] [ref=f23e166]
+            - paragraph [ref=f23e170]: 엑셀 파일 준비 중
+  - contentinfo [ref=f23e171]:
+    - generic [ref=f23e172]:
+      - generic [ref=f23e173]:
+        - generic [ref=f23e174]:
+          - link "IN-FACT 홈으로 이동" [ref=f23e175] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f23e176]
+          - paragraph [ref=f23e177]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f23e178]:
+            - paragraph [ref=f23e179]: 대표. 고동주
+            - paragraph [ref=f23e180]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f23e181]:
+              - link "Tel. 031-378-7220" [ref=f23e182] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f23e183] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f23e184]:
+          - generic [ref=f23e185]:
+            - generic [ref=f23e186]: Navigation
+            - link "회사 소개" [ref=f23e187] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f23e188] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f23e189] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f23e190] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f23e191]:
+            - generic [ref=f23e192]: Contact
+            - link "031-378-7220" [ref=f23e193] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f23e194] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f23e195] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f23e196]:
+        - paragraph [ref=f23e197]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f23e198]:
+          - link "홈" [ref=f23e199] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f23e200] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f23e201] [cursor=pointer]:
+            - /url: "#/contact"

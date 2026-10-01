@@ -69,7 +69,7 @@ html:has(.site-app--refined) {
   }
   .page-subnav-wrap {
     box-shadow: none !important;
-    border-color: var(--subpage-line) !important;
+    border-color: var(--subnav-stuck-border, var(--subpage-line)) !important;
   }
   .page-subnav > button {
     font-size: 15px !important;
@@ -77,12 +77,12 @@ html:has(.site-app--refined) {
     padding-inline: 18px !important;
   }
   .page-subnav > button[aria-current="page"] {
-    color: var(--subpage-accent) !important;
+    color: var(--subnav-stuck-current, var(--subpage-accent)) !important;
     font-weight: 700 !important;
   }
   .page-breadcrumb {
     font-size: 12px !important;
-    color: var(--subpage-muted) !important;
+    color: var(--subnav-stuck-text, var(--subpage-muted)) !important;
   }
   .site-main :is(.section-title, .company-organization__title) {
     font-size: 36px !important;

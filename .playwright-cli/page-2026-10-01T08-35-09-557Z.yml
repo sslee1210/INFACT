@@ -1,0 +1,238 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - heading "원본 로고 · 배경 대비 비교" [level=1] [ref=f8e4]
+      - paragraph [ref=f8e5]: 실제 페이지에 미적용 · 모든 시안에서 원본 로고 색·형태·크기 유지
+    - group "디자인 시안 선택" [ref=f8e6]:
+      - button "현재 디자인" [ref=f8e7] [cursor=pointer]
+      - button "밤하늘 · 은은한 대비" [pressed] [ref=f8e8] [cursor=pointer]
+      - button "더 짙은 밤하늘" [ref=f8e9] [cursor=pointer]
+  - main [ref=f8e10]:
+    - iframe [ref=f8e11]:
+      - generic [ref=f9e3]:
+        - button "본문으로 바로가기" [ref=f9e4] [cursor=pointer]
+        - navigation "주요 메뉴" [ref=f9e5]:
+          - generic [ref=f9e6]:
+            - button "INFACT 홈으로 이동" [ref=f9e7] [cursor=pointer]:
+              - img "INFACT" [ref=f9e8]
+            - list [ref=f9e10]:
+              - listitem [ref=f9e11]:
+                - button "회사소개" [ref=f9e12] [cursor=pointer]
+              - listitem [ref=f9e13]:
+                - button "사업안내" [ref=f9e14] [cursor=pointer]
+              - listitem [ref=f9e15]:
+                - button "수행실적" [ref=f9e16] [cursor=pointer]
+            - generic [ref=f9e17]:
+              - button "문의하기" [ref=f9e18] [cursor=pointer]
+              - generic "오늘 방문자 1명" [ref=f9e19]:
+                - generic [ref=f9e20]: TODAY
+                - strong [ref=f9e21]: "1"
+          - generic:
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - button "인사말"
+                  - listitem:
+                    - button "연혁"
+                  - listitem:
+                    - button "조직도"
+              - generic:
+                - list:
+                  - listitem:
+                    - button "개념설계"
+                  - listitem:
+                    - button "GMP Consulting"
+                  - listitem:
+                    - button "CSV Consulting"
+              - generic:
+                - list:
+                  - listitem:
+                    - button "개념설계"
+                  - listitem:
+                    - button "GMP"
+                  - listitem:
+                    - button "CSV"
+        - main [ref=f9e22]:
+          - generic [ref=f9e23]:
+            - generic [ref=f9e25]:
+              - heading "제약·바이오 전문 컨설팅 파트너" [level=1] [ref=f9e26]
+              - img "IN-FACT" [ref=f9e27]
+              - paragraph [ref=f9e28]: GMP 현장의 요구사항과 규제기준을 바탕으로 개념설계, GMP Consulting, Validation (GMP, CSV) 서비스를 제공합니다.
+              - link [ref=f9e29] [cursor=pointer]:
+                - /url: "#/contact"
+                - generic [ref=f9e30]: 문의하기
+            - button "About 섹션으로 이동" [ref=f9e31] [cursor=pointer]:
+              - generic [ref=f9e32]: SCROLL
+          - region [ref=f9e34]:
+            - generic [ref=f9e35]:
+              - heading "GMP는 검증되어야 하고, INFACT는 Valification을 지원합니다." [level=2] [ref=f9e37]: GMP는 검증되어야 하고,INFACT는 Valification을 지원합니다.
+              - figure [ref=f9e38]:
+                - img "인팩트의 전문성과 신뢰를 상징하는 현대적인 업무용 건물" [ref=f9e39]
+              - generic [ref=f9e40]:
+                - paragraph [ref=f9e41]: ㈜인팩트는 완제의약품, 원료의약품, 동물의약품, 건강기능식품, 첨단바이오의약품, 화장품 업계에서 요구되고, GMP에 관한 모든 서비스를 제공하고 있습니다.
+                - paragraph [ref=f9e42]: 인팩트의 모든 임직원은 고객사의 GMP 품질 향상과 확보에 최선을 다하고 있습니다.
+                - link "회사 소개 보기" [ref=f9e43] [cursor=pointer]:
+                  - /url: "#/company"
+          - region [ref=f9e44]:
+            - generic [ref=f9e45]:
+              - generic [ref=f9e46]:
+                - heading [level=2] [ref=f9e47]:
+                  - generic [ref=f9e48]:
+                    - strong [ref=f9e49]: 기획
+                    - text: 부터
+                    - strong [ref=f9e50]: 승인
+                    - text: 까지,
+                  - generic [ref=f9e51]: GMP 전 과정을
+                  - generic [ref=f9e52]:
+                    - strong [ref=f9e53]: 지원
+                    - text: 합니다.
+                - paragraph [ref=f9e54]: 사업 기획부터 설계, 품질 시스템 구축과 검증까지 프로젝트에 필요한 업무를 연결합니다.
+              - img "사업 기획, 시설 및 공정 설계, 품질 시스템, 규제 대응, 검증을 연결하는 GMP 지원 체계" [ref=f9e55]:
+                - generic [ref=f9e57]:
+                  - generic [ref=f9e58]: GMP FRAMEWORK
+                  - strong [ref=f9e59]: 실행 가능한품질 체계 설계
+                - generic [ref=f9e60]:
+                  - strong [ref=f9e61]: 사업 기획
+                  - generic [ref=f9e62]: Project Plan
+                - generic [ref=f9e63]:
+                  - strong [ref=f9e64]: 시설·공정 설계
+                  - generic [ref=f9e65]: Design
+                - generic [ref=f9e66]:
+                  - strong [ref=f9e67]: 품질 시스템
+                  - generic [ref=f9e68]: QMS
+                - generic [ref=f9e69]:
+                  - strong [ref=f9e70]: 규제 대응
+                  - generic [ref=f9e71]: Compliance
+                - generic [ref=f9e72]:
+                  - strong [ref=f9e73]: 검증·승인
+                  - generic [ref=f9e74]: Validation
+          - region [ref=f9e75]:
+            - generic:
+              - generic [ref=f9e76]:
+                - heading "검증된 전문 컨설턴트가 함께합니다." [level=2] [ref=f9e77]: 검증된 전문 컨설턴트가함께합니다.
+                - paragraph [ref=f9e78]: 개념설계에서부터 GMP 승인에 이르는 많은 프로젝트를 수행한 전문인력이 축적된 실무 경험을 바탕으로 사업별, 진행 단계별, 실행 방향을 제시합니다.
+              - generic "인팩트 회사 정보" [ref=f9e80]:
+                - generic [ref=f9e81]:
+                  - strong [ref=f9e82]: "0"
+                  - generic [ref=f9e83]: 회사 설립
+                - generic [ref=f9e84]:
+                  - strong [ref=f9e85]: 0+
+                  - generic [ref=f9e86]: 누적 프로젝트 수행
+                - generic [ref=f9e87]:
+                  - strong [ref=f9e88]: "0"
+                  - generic [ref=f9e89]: 전문인력
+            - generic "주요 수행 고객사" [ref=f9e90]:
+              - generic [ref=f9e91]:
+                - generic [ref=f9e92]: DONG-A ST
+                - generic [ref=f9e93]: GC Biopharma
+                - generic [ref=f9e94]: Huons
+                - generic [ref=f9e95]: Prestige Biologics
+                - generic [ref=f9e96]: LG Chem
+                - generic [ref=f9e97]: Samchundang Pharm
+                - generic [ref=f9e98]: ST Pharm
+                - generic [ref=f9e99]: CJ CheilJedang
+                - generic [ref=f9e100]: Korea Vaccine
+                - generic [ref=f9e101]: DMBIO
+                - generic [aria-hidden] [ref=f9e102]: DONG-A ST
+                - generic [aria-hidden] [ref=f9e103]: GC Biopharma
+                - generic [aria-hidden] [ref=f9e104]: Huons
+                - generic [aria-hidden] [ref=f9e105]: Prestige Biologics
+                - generic [aria-hidden] [ref=f9e106]: LG Chem
+                - generic [aria-hidden] [ref=f9e107]: Samchundang Pharm
+                - generic [aria-hidden] [ref=f9e108]: ST Pharm
+                - generic [aria-hidden] [ref=f9e109]: CJ CheilJedang
+                - generic [aria-hidden] [ref=f9e110]: Korea Vaccine
+                - generic [aria-hidden] [ref=f9e111]: DMBIO
+          - generic [ref=f9e113]:
+            - generic [ref=f9e114]:
+              - paragraph [ref=f9e115]: SERVICE
+              - heading "프로젝트 단계에 맞는 전문 서비스를 연결합니다." [level=2] [ref=f9e116]: 프로젝트 단계에 맞는전문 서비스를 연결합니다.
+              - paragraph [ref=f9e117]: 초기 기획과 GMP 운영 기준에 맞는 검증까지프로젝트에 필요한 업무 범위로 구현화하고 체계화하여 완성합니다.
+            - generic [ref=f9e119]:
+              - link [ref=f9e120] [cursor=pointer]:
+                - /url: "#/service-design"
+                - generic [ref=f9e122]:
+                  - paragraph [ref=f9e123]: CONCEPTUAL DESIGN
+                  - generic [ref=f9e124]:
+                    - heading "Conceptual Design" [level=3] [ref=f9e125]
+                    - paragraph [ref=f9e126]: 사업 초기
+                    - paragraph: 생산설비 Layout 구축을 위한 Design
+              - link [ref=f9e127] [cursor=pointer]:
+                - /url: "#/service-gmp"
+                - generic [ref=f9e129]:
+                  - paragraph [ref=f9e130]: GMP CONSULTING
+                  - generic [ref=f9e131]:
+                    - heading "GMP Consulting" [level=3] [ref=f9e132]
+                    - paragraph [ref=f9e133]: GMP 품질 시스템 구축
+                    - paragraph: 생산설비 / Utility의 운영 기준 수립과 실사 대응 준비
+              - link [ref=f9e134] [cursor=pointer]:
+                - /url: "#/service-gmp"
+                - generic [ref=f9e136]:
+                  - paragraph [ref=f9e137]: GMP QUALIFICATION
+                  - generic [ref=f9e138]:
+                    - heading "GMP Qualification" [level=3] [ref=f9e139]
+                    - paragraph [ref=f9e140]: Clean Room / Utility
+                    - paragraph: 생산, 포장장비, DQ, IQ, OQ, PQ, PV
+              - link [ref=f9e141] [cursor=pointer]:
+                - /url: "#/service-csv"
+                - generic [ref=f9e143]:
+                  - paragraph [ref=f9e144]: COMPUTERIZED SYSTEM VALIDATION
+                  - generic [ref=f9e145]:
+                    - heading "Computerized System Validation" [level=3] [ref=f9e146]
+                    - paragraph [ref=f9e147]: ERP, MES, LIMS, QMS 등
+                    - paragraph: GxP 시스템에 대한 리스크 기반 검증 문서화와 테스트를 수행합니다.
+          - generic [ref=f9e149]:
+            - heading "프로젝트 범위가 흐려지기 전에 기준부터 정리하세요" [level=2] [ref=f9e150]: CONTACT 프로젝트 범위가 흐려지기 전에기준부터 정리하세요
+            - paragraph [ref=f9e151]: 초기 기획, GMP 허가 승인, GMP System 구축을 위한 기준을 정리합니다.
+            - generic [ref=f9e152]:
+              - link "문의하기" [ref=f9e153] [cursor=pointer]:
+                - /url: "#/contact"
+              - link "수행실적 보기" [ref=f9e155] [cursor=pointer]:
+                - /url: "#/references-design"
+        - contentinfo [ref=f9e157]:
+          - generic [ref=f9e158]:
+            - generic [ref=f9e159]:
+              - generic [ref=f9e160]:
+                - link "IN-FACT 홈으로 이동" [ref=f9e161] [cursor=pointer]:
+                  - /url: "#/"
+                  - img "IN-FACT" [ref=f9e162]
+                - paragraph [ref=f9e163]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+                - generic "회사 정보" [ref=f9e164]:
+                  - paragraph [ref=f9e165]: 대표. 고동주
+                  - paragraph [ref=f9e166]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+                  - paragraph [ref=f9e167]:
+                    - link "Tel. 031-378-7220" [ref=f9e168] [cursor=pointer]:
+                      - /url: tel:0313787220
+                    - text: ·
+                    - link "Fax. 031-378-7221" [ref=f9e169] [cursor=pointer]:
+                      - /url: tel:0313787221
+              - navigation "푸터 메뉴" [ref=f9e170]:
+                - generic [ref=f9e171]:
+                  - generic [ref=f9e172]: Navigation
+                  - link "회사 소개" [ref=f9e173] [cursor=pointer]:
+                    - /url: "#/company"
+                  - link "서비스" [ref=f9e174] [cursor=pointer]:
+                    - /url: "#/service-design"
+                  - link "수행 실적" [ref=f9e175] [cursor=pointer]:
+                    - /url: "#/references-design"
+                  - link "문의하기" [ref=f9e176] [cursor=pointer]:
+                    - /url: "#/contact"
+                - generic [ref=f9e177]:
+                  - generic [ref=f9e178]: Contact
+                  - link "031-378-7220" [ref=f9e179] [cursor=pointer]:
+                    - /url: tel:0313787220
+                  - link "infact@in-fact.co.kr" [ref=f9e180] [cursor=pointer]:
+                    - /url: mailto:infact@in-fact.co.kr
+                  - link "www.in-fact.co.kr" [ref=f9e181] [cursor=pointer]:
+                    - /url: https://www.in-fact.co.kr
+            - generic [ref=f9e182]:
+              - paragraph [ref=f9e183]: © 2026 IN-FACT. All rights reserved.
+              - generic "보조 메뉴" [ref=f9e184]:
+                - link "홈" [ref=f9e185] [cursor=pointer]:
+                  - /url: "#/"
+                - link "회사 소개" [ref=f9e186] [cursor=pointer]:
+                  - /url: "#/company"
+                - link "문의하기" [ref=f9e187] [cursor=pointer]:
+                  - /url: "#/contact"
+  - paragraph [ref=f8e12]: 현재 홈페이지를 불러오고 있습니다.

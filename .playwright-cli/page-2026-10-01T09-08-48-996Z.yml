@@ -1,0 +1,119 @@
+- generic [ref=f15e3]:
+  - button "본문으로 바로가기" [ref=f15e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f15e5]:
+    - generic [ref=f15e6]:
+      - button "INFACT 홈으로 이동" [ref=f15e7] [cursor=pointer]:
+        - img "INFACT" [ref=f15e8]
+      - list [ref=f15e10]:
+        - listitem [ref=f15e11]:
+          - button "회사소개" [ref=f15e12] [cursor=pointer]
+        - listitem [ref=f15e13]:
+          - button "사업안내" [ref=f15e14] [cursor=pointer]
+        - listitem [ref=f15e15]:
+          - button "수행실적" [ref=f15e16] [cursor=pointer]
+      - generic [ref=f15e17]:
+        - button "문의하기" [ref=f15e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=f15e19]:
+          - generic [ref=f15e20]: TODAY
+          - strong [ref=f15e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=f15e22]:
+    - generic [ref=f15e23]:
+      - generic [ref=f15e25]:
+        - paragraph [ref=f15e26]: References
+        - heading "CSV 수행실적" [level=1] [ref=f15e27]
+        - paragraph [ref=f15e28]: 전산시스템부터 제조·시험설비까지. 제약·바이오 현장의 컴퓨터화시스템을 검증합니다.
+      - navigation "페이지 하위 메뉴" [ref=f15e29]:
+        - generic [ref=f15e30]:
+          - generic [ref=f15e31]:
+            - button "개념설계" [ref=f15e32] [cursor=pointer]
+            - button "GMP" [ref=f15e33] [cursor=pointer]
+            - button "CSV" [ref=f15e34] [cursor=pointer]
+          - list "현재 위치" [ref=f15e35]:
+            - listitem [ref=f15e36]: 홈
+            - listitem [ref=f15e37]: "> 수행실적"
+            - listitem [ref=f15e38]: "> CSV"
+      - region [ref=f15e39]:
+        - generic [ref=f15e40]:
+          - generic [ref=f15e41]:
+            - heading "함께해 온 기업들" [level=2] [ref=f15e42]
+            - paragraph [ref=f15e43]: 연도별 주요 수행 기업을 소개합니다. 상세 수행 내역은 전체 실적 자료로 확인하세요.
+          - paragraph [ref=f15e44]: 디자인 미리보기 · 실제 사이트 미적용
+        - status [ref=f15e45]: 수행실적을 불러오는 중입니다.
+        - complementary [ref=f15e46]:
+          - generic [ref=f15e51]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f15e52]
+            - paragraph [ref=f15e53]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f15e54]:
+            - button "전체 수행실적 다운로드" [disabled] [ref=f15e55]
+            - paragraph [ref=f15e59]: 엑셀 파일 준비 중
+  - contentinfo [ref=f15e60]:
+    - generic [ref=f15e61]:
+      - generic [ref=f15e62]:
+        - generic [ref=f15e63]:
+          - link "IN-FACT 홈으로 이동" [ref=f15e64] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f15e65]
+          - paragraph [ref=f15e66]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f15e67]:
+            - paragraph [ref=f15e68]: 대표. 고동주
+            - paragraph [ref=f15e69]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f15e70]:
+              - link "Tel. 031-378-7220" [ref=f15e71] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f15e72] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f15e73]:
+          - generic [ref=f15e74]:
+            - generic [ref=f15e75]: Navigation
+            - link "회사 소개" [ref=f15e76] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f15e77] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f15e78] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f15e79] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f15e80]:
+            - generic [ref=f15e81]: Contact
+            - link "031-378-7220" [ref=f15e82] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f15e83] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f15e84] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f15e85]:
+        - paragraph [ref=f15e86]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f15e87]:
+          - link "홈" [ref=f15e88] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f15e89] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f15e90] [cursor=pointer]:
+            - /url: "#/contact"

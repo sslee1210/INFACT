@@ -224,13 +224,19 @@ export function HomeCompanyIntroSection() {
             인팩트의 모든 임직원은 고객사의 GMP 품질 향상과 확보에 최선을 다하고
             있습니다.
           </p>
-          <a
-            href={homeAbout.ctaHref}
-            className="home-company-intro__link"
-            onClick={scrollToTopSoon}
-          >
-            {homeAbout.ctaLabel}
-          </a>
+          {homeAbout.ctaHref ? (
+            <a
+              href={homeAbout.ctaHref}
+              className="home-company-intro__link"
+              download={homeAbout.ctaDownloadName}
+            >
+              {homeAbout.ctaLabel}
+            </a>
+          ) : (
+            <button type="button" className="home-company-intro__link" disabled>
+              {homeAbout.ctaLabel} (준비 중)
+            </button>
+          )}
         </div>
       </div>
     </section>

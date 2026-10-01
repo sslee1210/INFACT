@@ -1,0 +1,247 @@
+- generic [ref=f24e3]:
+  - button "본문으로 바로가기" [ref=f24e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f24e5]:
+    - generic [ref=f24e6]:
+      - button "INFACT 홈으로 이동" [ref=f24e7] [cursor=pointer]:
+        - img "INFACT" [ref=f24e8]
+      - generic "오늘 방문자 3명" [ref=f24e10]:
+        - generic [ref=f24e11]: TODAY
+        - strong [ref=f24e12]: "3"
+      - button "메뉴 열기" [ref=f24e13] [cursor=pointer]
+  - main [ref=f24e17]:
+    - generic [ref=f24e19]:
+      - paragraph [ref=f24e20]: References
+      - heading "CSV 수행실적" [level=1] [ref=f24e21]
+      - paragraph [ref=f24e22]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+    - generic [ref=f24e23]:
+      - navigation "페이지 하위 메뉴" [ref=f24e24]:
+        - generic [ref=f24e25]:
+          - generic [ref=f24e26]:
+            - button "개념설계" [ref=f24e27] [cursor=pointer]
+            - button "GMP" [ref=f24e28] [cursor=pointer]
+            - button "CSV" [ref=f24e29] [cursor=pointer]
+          - text: "> >"
+      - region [ref=f24e30]:
+        - generic [ref=f24e32]:
+          - heading "함께해 온 기업들" [level=2] [ref=f24e33]
+          - paragraph [ref=f24e34]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=f24e35]:
+          - generic [ref=f24e36]: 연도 선택
+          - generic [ref=f24e37]:
+            - button "2020" [ref=f24e38] [cursor=pointer]
+            - button "2019" [pressed] [ref=f24e39] [cursor=pointer]
+            - button "2018" [ref=f24e40] [cursor=pointer]
+            - button "2017" [ref=f24e41] [cursor=pointer]
+            - button "2016" [ref=f24e42] [cursor=pointer]
+        - generic [ref=f24e43]:
+          - generic [ref=f24e44]:
+            - heading "2019" [level=3] [ref=f24e45]
+            - paragraph [ref=f24e46]: CSV 수행 기업
+            - generic [ref=f24e47]: 주요 수행사례
+          - generic [ref=f24e48]:
+            - list "2019년 CSV 수행 기업" [ref=f24e49]:
+              - listitem "셀트리온" [ref=f24e50]:
+                - generic [ref=f24e52]:
+                  - text: 셀트리온
+                  - generic [ref=f24e53]: 로고 등록 예정
+                - paragraph [ref=f24e55]: 2D Barcode System, 바코드시스템, Print 시스템
+              - listitem "휴젤" [ref=f24e56]:
+                - generic [ref=f24e58]:
+                  - text: 휴젤
+                  - generic [ref=f24e59]: 로고 등록 예정
+                - paragraph [ref=f24e61]: 시험일지, EDMS, 포장기, LIMS, QMS
+              - listitem "OLIC Thailand" [ref=f24e62]:
+                - generic [ref=f24e64]:
+                  - text: OLIC Thailand
+                  - generic [ref=f24e65]: 로고 등록 예정
+                - paragraph [ref=f24e67]: 2D Barcode System
+              - listitem "유니메드제약" [ref=f24e68]:
+                - generic [ref=f24e70]:
+                  - text: 유니메드제약
+                  - generic [ref=f24e71]: 로고 등록 예정
+                - paragraph [ref=f24e73]: 바코드 일련번호(RFID AG)
+              - listitem "종근당바이오" [ref=f24e74]:
+                - generic [ref=f24e76]:
+                  - text: 종근당바이오
+                  - generic [ref=f24e77]: 로고 등록 예정
+                - paragraph [ref=f24e79]: 프로바이오틱스 신축공장
+              - listitem "한국프라임제약" [ref=f24e80]:
+                - generic [ref=f24e82]:
+                  - text: 한국프라임제약
+                  - generic [ref=f24e83]: 로고 등록 예정
+                - paragraph [ref=f24e85]: RWS
+              - listitem "휴메딕스" [ref=f24e86]:
+                - generic [ref=f24e88]:
+                  - text: 휴메딕스
+                  - generic [ref=f24e89]: 로고 등록 예정
+                - paragraph [ref=f24e91]: QMS
+              - listitem "삼양바이오팜" [ref=f24e92]:
+                - generic [ref=f24e94]:
+                  - text: 삼양바이오팜
+                  - generic [ref=f24e95]: 로고 등록 예정
+                - paragraph [ref=f24e97]: QC 장비
+              - listitem "도미노코리아" [ref=f24e98]:
+                - generic [ref=f24e100]:
+                  - text: 도미노코리아
+                  - generic [ref=f24e101]: 로고 등록 예정
+                - paragraph [ref=f24e103]: 카톤인쇄기, 장비
+              - listitem "이수앱지스" [ref=f24e104]:
+                - generic [ref=f24e106]:
+                  - text: 이수앱지스
+                  - generic [ref=f24e107]: 로고 등록 예정
+                - paragraph [ref=f24e109]: 실험정보관리시스템(LAS)
+              - listitem "이니스트바이오제약" [ref=f24e110]:
+                - generic [ref=f24e112]:
+                  - text: 이니스트바이오제약
+                  - generic [ref=f24e113]: 로고 등록 예정
+                - paragraph [ref=f24e115]: RWS
+              - listitem "에이프로젠" [ref=f24e116]:
+                - generic [ref=f24e118]:
+                  - text: 에이프로젠
+                  - generic [ref=f24e119]: 로고 등록 예정
+                - paragraph [ref=f24e121]: 자동화창고관리시스템
+              - listitem "SK바이오텍" [ref=f24e122]:
+                - generic [ref=f24e124]:
+                  - text: SK바이오텍
+                  - generic [ref=f24e125]: 로고 등록 예정
+                - paragraph [ref=f24e127]: 타임서버
+              - listitem "GC녹십자" [ref=f24e128]:
+                - generic [ref=f24e130]:
+                  - text: GC녹십자
+                  - generic [ref=f24e131]: 로고 등록 예정
+                - paragraph [ref=f24e133]: Isolator
+              - listitem "휴온스" [ref=f24e134]:
+                - generic [ref=f24e136]:
+                  - text: 휴온스
+                  - generic [ref=f24e137]: 로고 등록 예정
+                - paragraph [ref=f24e139]: SCADA System
+              - listitem "넥스팜코리아" [ref=f24e140]:
+                - generic [ref=f24e142]:
+                  - text: 넥스팜코리아
+                  - generic [ref=f24e143]: 로고 등록 예정
+                - paragraph [ref=f24e145]: 출하관리시스템
+              - listitem "한국오츠카제약" [ref=f24e146]:
+                - generic [ref=f24e148]:
+                  - text: 한국오츠카제약
+                  - generic [ref=f24e149]: 로고 등록 예정
+                - paragraph [ref=f24e151]: EDMS
+              - listitem "국제약품" [ref=f24e152]:
+                - generic [ref=f24e154]:
+                  - text: 국제약품
+                  - generic [ref=f24e155]: 로고 등록 예정
+                - paragraph [ref=f24e157]: ERP, AG, DPS 변경관리
+              - listitem "동광제약" [ref=f24e158]:
+                - generic [ref=f24e160]:
+                  - text: 동광제약
+                  - generic [ref=f24e161]: 로고 등록 예정
+                - paragraph [ref=f24e163]: 원료칭량관리시스템, 시험일지, MRP 시스템, 이동식 부스, 분석장비
+              - listitem "메디톡스" [ref=f24e164]:
+                - generic [ref=f24e166]:
+                  - text: 메디톡스
+                  - generic [ref=f24e167]: 로고 등록 예정
+                - paragraph [ref=f24e169]: 일련번호시스템
+              - listitem "한국콜마" [ref=f24e170]:
+                - generic [ref=f24e172]:
+                  - text: 한국콜마
+                  - generic [ref=f24e173]: 로고 등록 예정
+                - paragraph [ref=f24e175]: 창고관리시스템
+              - listitem "동화약품" [ref=f24e176]:
+                - generic [ref=f24e178]:
+                  - text: 동화약품
+                  - generic [ref=f24e179]: 로고 등록 예정
+                - paragraph [ref=f24e181]: Agilent OpenLAB ECM System
+              - listitem "애니젠" [ref=f24e182]:
+                - generic [ref=f24e184]:
+                  - text: 애니젠
+                  - generic [ref=f24e185]: 로고 등록 예정
+                - paragraph [ref=f24e187]: 장비 및 시스템
+              - listitem "코러스제약" [ref=f24e188]:
+                - generic [ref=f24e190]:
+                  - text: 코러스제약
+                  - generic [ref=f24e191]: 로고 등록 예정
+                - paragraph [ref=f24e193]: 클린부스
+              - listitem "한림제약" [ref=f24e194]:
+                - generic [ref=f24e196]:
+                  - text: 한림제약
+                  - generic [ref=f24e197]: 로고 등록 예정
+                - paragraph [ref=f24e199]: GLT
+              - listitem "하이텍팜" [ref=f24e200]:
+                - generic [ref=f24e202]:
+                  - text: 하이텍팜
+                  - generic [ref=f24e203]: 로고 등록 예정
+                - paragraph [ref=f24e205]: PW, WFI, PS System
+              - listitem "종근당" [ref=f24e206]:
+                - generic [ref=f24e208]:
+                  - text: 종근당
+                  - generic [ref=f24e209]: 로고 등록 예정
+                - paragraph [ref=f24e211]: Pass Box
+              - listitem "한미약품" [ref=f24e212]:
+                - generic [ref=f24e214]:
+                  - text: 한미약품
+                  - generic [ref=f24e215]: 로고 등록 예정
+                - paragraph [ref=f24e217]: 글러브 리크테스트 장비
+              - listitem "동아제약" [ref=f24e218]:
+                - generic [ref=f24e220]:
+                  - text: 동아제약
+                  - generic [ref=f24e221]: 로고 등록 예정
+                - paragraph [ref=f24e223]: 클린부스
+              - listitem "휴온스제약" [ref=f24e224]:
+                - generic [ref=f24e226]:
+                  - text: 휴온스제약
+                  - generic [ref=f24e227]: 로고 등록 예정
+                - paragraph [ref=f24e229]: 모바일 부스
+            - generic [ref=f24e230]:
+              - paragraph [ref=f24e231]: 이 외에도 다양한 기업의 프로젝트를 수행했습니다.
+              - generic [ref=f24e232]: 위 내용은 주요 수행사례의 일부입니다.
+        - complementary [ref=f24e233]:
+          - generic [ref=f24e238]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f24e239]
+            - paragraph [ref=f24e240]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f24e241]:
+            - button "전체 수행실적 다운로드" [disabled] [ref=f24e242]
+            - paragraph [ref=f24e246]: 엑셀 파일 준비 중
+  - contentinfo [ref=f24e247]:
+    - generic [ref=f24e248]:
+      - generic [ref=f24e249]:
+        - generic [ref=f24e250]:
+          - link "IN-FACT 홈으로 이동" [ref=f24e251] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f24e252]
+          - paragraph [ref=f24e253]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f24e254]:
+            - paragraph [ref=f24e255]: 대표. 고동주
+            - paragraph [ref=f24e256]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f24e257]:
+              - link "Tel. 031-378-7220" [ref=f24e258] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f24e259] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f24e260]:
+          - generic [ref=f24e261]:
+            - generic [ref=f24e262]: Navigation
+            - link "회사 소개" [ref=f24e263] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f24e264] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f24e265] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f24e266] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f24e267]:
+            - generic [ref=f24e268]: Contact
+            - link "031-378-7220" [ref=f24e269] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f24e270] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f24e271] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f24e272]:
+        - paragraph [ref=f24e273]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f24e274]:
+          - link "홈" [ref=f24e275] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f24e276] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f24e277] [cursor=pointer]:
+            - /url: "#/contact"

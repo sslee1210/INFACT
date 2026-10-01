@@ -1,0 +1,112 @@
+- generic [ref=e180]:
+  - button "본문으로 바로가기" [ref=e181] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e182]:
+    - generic [ref=e183]:
+      - button "INFACT 홈으로 이동" [ref=e184] [cursor=pointer]:
+        - img "INFACT" [ref=e185]
+      - generic "오늘 방문자 1명" [ref=e187]:
+        - generic [ref=e188]: TODAY
+        - strong [ref=e189]: "1"
+      - button "메뉴 열기" [ref=e190] [cursor=pointer]
+  - main [ref=e194]:
+    - generic [ref=e196]:
+      - paragraph [ref=e197]: Company
+      - heading "제약·바이오 현장과 규제를 연결합니다." [level=1] [ref=e198]
+      - paragraph [ref=e199]: 인팩트의 인사말, 연혁, 조직 구성을 통해 수행 방식과 전문성을 확인할 수 있습니다.
+    - generic [ref=e200]:
+      - navigation "페이지 하위 메뉴" [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - button "인사말" [ref=e204] [cursor=pointer]
+            - button "연혁" [ref=e205] [cursor=pointer]
+            - button "조직도" [ref=e206] [cursor=pointer]
+          - text: "> >"
+      - generic "인팩트 연혁" [ref=e208]:
+        - generic [ref=e209]:
+          - paragraph [ref=e210]: 연혁
+          - heading "HISTORY" [level=2] [ref=e211]
+          - paragraph [ref=e212]: 주요 연혁과 조직 성장 흐름을 시간 순서에 따라 정리했습니다.
+        - generic [ref=e213]:
+          - article [ref=e214]:
+            - generic [ref=e215]:
+              - time [ref=e217]: "2026"
+              - heading "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요." [level=3] [ref=e219]
+          - article [ref=e220]:
+            - generic [ref=e221]:
+              - time [ref=e223]: "2025"
+              - heading "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜 한해가 되었습니다." [level=3] [ref=e225]
+              - list [ref=e226]:
+                - listitem [ref=e227]: 그동안 국내 서비스만 진행한 건 아니지만 개념과 건축 및 GMP System 구축까지의 업무를 서비스하게 되었으니 조금은 많이 고무적인 일이 되었습니다.
+          - article [ref=e228]:
+            - generic [ref=e229]:
+              - time [ref=e231]: 2021 ~ 2022
+              - heading "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 물리적인 거리를 좁히기 위해 경기 오산시에 사옥을 지어 이전하는 일이 있었습니다." [level=3] [ref=e233]
+          - article [ref=e234]:
+            - generic [ref=e235]:
+              - time [ref=e237]: 2019 ~ 2020
+              - heading "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 협력사로 성장하는 시기가 있었습니다." [level=3] [ref=e239]
+              - list [ref=e240]:
+                - listitem [ref=e241]: 고객님들 감사합니다.
+          - article [ref=e242]:
+            - generic [ref=e243]:
+              - time [ref=e245]: "2018"
+              - heading "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지요." [level=3] [ref=e247]
+              - list [ref=e248]:
+                - listitem [ref=e249]: 생산시설과 함께 배양실도 같이 구축함으로써 좀더 고객의 요구에 가까워 졌습니다.
+          - article [ref=e250]:
+            - generic [ref=e251]:
+              - time [ref=e253]: "2017"
+              - heading "2017년에는 CSV 컨설팅도 시작했어요." [level=3] [ref=e255]
+              - list [ref=e256]:
+                - listitem [ref=e257]: GMP 컨설팅은 인팩트에서 CSV 컨설팅은 협력업체에서 진행하던 업무를 과감한 인적 투자와 System 구축을 통해 사업부를 만들고 서비스를 제공하기 시작했습니다.
+          - article [ref=e258]:
+            - generic [ref=e259]:
+              - time [ref=e261]: "2016"
+              - heading "2016년부터 GMP 컨설팅을 시작했어요." [level=3] [ref=e263]
+              - list [ref=e264]:
+                - listitem [ref=e265]: 인팩트라는 이름으로 경기 용인의 흥덕IT밸리에서 세상에 이름을 알렸습니다.
+  - contentinfo [ref=e266]:
+    - generic [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - link "IN-FACT 홈으로 이동" [ref=e270] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e271]
+          - paragraph [ref=e272]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e273]:
+            - paragraph [ref=e274]: 대표. 고동주
+            - paragraph [ref=e275]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e276]:
+              - link "Tel. 031-378-7220" [ref=e277] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e278] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e279]:
+          - generic [ref=e280]:
+            - generic [ref=e281]: Navigation
+            - link "회사 소개" [ref=e282] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e283] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e284] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e285] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e286]:
+            - generic [ref=e287]: Contact
+            - link "031-378-7220" [ref=e288] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e289] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e290] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e291]:
+        - paragraph [ref=e292]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e293]:
+          - link "홈" [ref=e294] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e295] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e296] [cursor=pointer]:
+            - /url: "#/contact"

@@ -1,12 +1,9 @@
-import { useMemo, useState } from "react";
-import { PageIntro } from "@/components/site/PageIntro";
-import { PageLayout } from "@/components/site/PageLayout";
-import { PageSubNav } from "@/components/site/PageSubNav";
-import "@/styles/pages/references-csv-year-tabs.css";
+import { ReferencesPage } from "@/components/site/ReferencesPage";
 
 type CsvReference = {
   client: string;
   logo: string;
+  logoSrc?: string;
   systems: string[];
 };
 
@@ -103,150 +100,13 @@ const csvReferenceYears: CsvReferenceYear[] = [
   },
 ];
 
-const logoExtensions = ["svg", "png", "webp"];
-
-function ClientLogo({ client, logo }: { client: string; logo: string }) {
-  const [extensionIndex, setExtensionIndex] = useState(0);
-  const [failed, setFailed] = useState(false);
-
-  const handleError = () => {
-    if (extensionIndex < logoExtensions.length - 1) {
-      setExtensionIndex((current) => current + 1);
-      return;
-    }
-
-    setFailed(true);
-  };
-
-  if (failed) {
-    return <span className="csv-year-card__logo-fallback">{client}</span>;
-  }
-
-  return (
-    <img
-      src={`./images/clients/${logo}.${logoExtensions[extensionIndex]}`}
-      alt={`${client} 로고`}
-      loading="lazy"
-      onError={handleError}
-    />
-  );
-}
-
 export default function ReferencesCSV() {
-  const years = useMemo(() => csvReferenceYears.map((section) => section.year), []);
-  const [selectedYear, setSelectedYear] = useState(years[0]);
-  const [yearStartIndex, setYearStartIndex] = useState(0);
-
-  const visibleYears = years.slice(yearStartIndex, yearStartIndex + 4);
-  const canMovePrevious = yearStartIndex > 0;
-  const canMoveNext = yearStartIndex + 4 < years.length;
-
-  const selectedSection =
-    csvReferenceYears.find((section) => section.year === selectedYear) ??
-    csvReferenceYears[0];
-
   return (
-    <PageLayout>
-      <PageIntro
-        label="References"
-        title="CSV 수행실적"
-        description="제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다."
-      />
-
-      <section className="section section--white csv-year-page">
-        <PageSubNav
-          breadcrumb={["홈", "수행실적", "CSV"]}
-          items={[
-            { label: "개념설계", href: "/references-design" },
-            { label: "GMP", href: "/references-gmp" },
-            { label: "CSV", href: "/references-csv" },
-          ]}
-        />
-
-        <div className="site-shell csv-year-page__intro">
-          <p className="section-label">CSV References</p>
-          <h2 className="section-title">연도별 수행 프로젝트</h2>
-        </div>
-
-        <div className="site-shell csv-year-layout">
-          <main className="csv-year-content" aria-live="polite">
-            <header className="csv-year-content__head">
-              <div>
-                <span>YEAR</span>
-                <h2>{selectedSection.year}</h2>
-              </div>
-            </header>
-
-            <div className="csv-year-grid">
-              {selectedSection.clients.map((reference) => (
-                <article key={reference.client} className="csv-year-card">
-                  <div className="csv-year-card__logo">
-                    <ClientLogo client={reference.client} logo={reference.logo} />
-                  </div>
-
-                  <div className="csv-year-card__body">
-                    <h3>{reference.client}</h3>
-                    <ul>
-                      {reference.systems.map((system) => (
-                        <li key={system}>{system}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </main>
-
-          <aside className="csv-year-menu" aria-label="수행실적 연도 선택">
-            <div className="csv-year-menu__title">
-              <span>YEAR</span>
-              <strong>연도 선택</strong>
-            </div>
-
-            <nav>
-              {visibleYears.map((year) => (
-                <button
-                  key={year}
-                  type="button"
-                  className={selectedYear === year ? "is-active" : ""}
-                  aria-current={selectedYear === year ? "page" : undefined}
-                  onClick={() => setSelectedYear(year)}
-                >
-                  <span>{year}</span>
-                </button>
-              ))}
-            </nav>
-
-            <div className="csv-year-menu__controls">
-              <button
-                type="button"
-                className="csv-year-menu__arrow"
-                aria-label="이전 연도 보기"
-                disabled={!canMovePrevious}
-                onClick={() =>
-                  setYearStartIndex((current) => Math.max(0, current - 4))
-                }
-              >
-                <span aria-hidden="true">←</span>
-              </button>
-
-              <button
-                type="button"
-                className="csv-year-menu__arrow"
-                aria-label="다음 연도 보기"
-                disabled={!canMoveNext}
-                onClick={() =>
-                  setYearStartIndex((current) =>
-                    Math.min(years.length - 4, current + 4),
-                  )
-                }
-              >
-                <span aria-hidden="true">→</span>
-              </button>
-            </div>
-          </aside>
-        </div>
-      </section>
-    </PageLayout>
+    <ReferencesPage
+      label="CSV"
+      title="CSV 수행실적"
+      description="제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다."
+      years={csvReferenceYears}
+    />
   );
 }

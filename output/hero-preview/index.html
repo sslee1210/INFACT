@@ -21,8 +21,8 @@
     <div><h1>원본 로고 · 배경 대비 비교</h1><p class="caption">실제 페이지에 미적용 · 모든 시안에서 원본 로고 색·형태·크기 유지</p></div>
     <div class="choices" role="group" aria-label="디자인 시안 선택">
       <button data-mode="original" aria-pressed="false">현재 디자인</button>
-      <button data-mode="dawn" aria-pressed="true">밝은 새벽 · 추천</button>
-      <button data-mode="neutral" aria-pressed="false">옅은 회청색</button>
+      <button data-mode="dawn" aria-pressed="true">해 뜨기 전 새벽</button>
+      <button data-mode="blue" aria-pressed="false">조금 더 푸른 새벽</button>
     </div>
   </header>
   <main class="canvas"><iframe id="preview" src="/#/" title="IN-FACT 히어로 디자인 시안" tabindex="-1"></iframe></main>
@@ -34,8 +34,8 @@
     let mode='dawn', stylesheet;
     const notes={
       original:'현재 디자인: 짙은 파란 로고와 청회색 배경의 밝기가 비슷해 로고의 윗부분이 묻힙니다.',
-      dawn:'추천안: 원본 로고를 그대로 사용하고 배경을 밝은 새벽색으로 조정했습니다. 문구와 메뉴는 짙은 색으로 맞췄습니다. 로고 색상 변경이나 필터는 없습니다.',
-      neutral:'대안: 원본 로고를 그대로 사용하고 배경의 채도를 낮췄습니다. 옅은 회청색 배경에서 회사의 파란 로고가 중심이 되도록 했습니다.'
+      dawn:'해 뜨기 전 하늘처럼 위쪽은 차분한 청색, 아래쪽은 밝은 회청색으로 자연스럽게 이어집니다. 로고 주변의 별도 빛은 완전히 제거했고, 원본 로고와 작은 별빛은 유지했습니다. 실제 홈페이지에는 미적용 상태입니다.',
+      blue:'같은 새벽 분위기에서 푸른 기운을 조금 더 남긴 안입니다. 로고 주변의 별도 색이나 빛 없이 배경 전체의 색으로만 조정했습니다. 원본 로고와 별빛 효과는 그대로입니다.'
     };
     const common=`html,body{overflow:hidden!important;scroll-behavior:auto!important}
       .home-main > :not(.hero),footer{display:none!important}
@@ -46,16 +46,13 @@
       buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));
       if(!stylesheet)return;
       const background=mode==='dawn'
-        ?'linear-gradient(165deg,#d5e1ee 0%,#bfcedf 58%,#9fb9cc 100%)'
-        :'linear-gradient(165deg,#edf0f4 0%,#dce3e9 58%,#bdcdd8 100%)';
+        ?'linear-gradient(180deg,#405673 0%,#647b97 35%,#879ab1 68%,#b2bac5 100%)'
+        :'linear-gradient(180deg,#344f70 0%,#597794 35%,#7f9ab2 68%,#a9bdca 100%)';
       stylesheet.textContent=common+(mode!=='original'?`
         .home-main .hero--particle-field{background:${background}!important}
-        .home-main .hero__title,.home-main .hero__subtitle{color:#273d56!important;text-shadow:none!important}
-        .home-nav.is-top{background:transparent!important;box-shadow:none!important;border-bottom:1px solid rgba(39,61,86,.12)!important}
-        .home-nav.is-top .home-nav__menu button,.home-nav.is-top .home-nav__today,.home-nav.is-top .home-nav__today strong,.home-nav.is-top .home-nav__mobile-toggle{color:#273d56!important}
-        .home-nav.is-top .home-nav__brand img{filter:none!important}
-        .hero__scroll-cue,.hero__scroll-label{color:#273d56!important}
-        .hero__scroll-line{background:#61788f!important}
+        .home-main .hero--particle-field::before,.home-main .hero--particle-field::after{background:none!important;opacity:0!important}
+        .home-main .hero__title,.home-main .hero__subtitle{color:#f3f6fb!important;text-shadow:none!important}
+        .hero__brand-logo{filter:none!important}
       `:'');
       note.textContent=notes[mode];
     }
