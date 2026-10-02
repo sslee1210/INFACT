@@ -1,0 +1,1238 @@
+ <style>.test { display:none !important; visibility: hidden; }</style><!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=yes">
+<title>동아ST</title>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+<script type="text/javascript" src="../resources/js/main.js"></script>
+<script type="text/javascript" src="../resources/js/sub.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+<link rel="stylesheet" type="text/css" href="../resources/css/common.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/en_layout.css?v=1781619828">
+</head>
+<script>
+	var set_cookie = function(name, value, exp) {
+		var date = new Date();
+		date.setTime(date.getTime() + exp*24*60*60*1000);
+		document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+	};
+
+	var get_cookie = function(name) {
+		 var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+		 return value? value[2] : null;
+	};
+
+	$(function() {
+		// 쿠키가 없는경우 팝업 생성
+		//if(get_cookie('hidePopup') != 'y') {
+			//$('.dim, .popup_layer').show();
+		//}
+
+		//$('.btn-popup-close').click(function() {
+			//if($('input[name="hide_popup"]').prop('checked')) {
+				//// 쿠키 추가하여 열리지 않도록 추가
+				//set_cookie('hidePopup', 'y', 7);
+			//}
+
+			//$('.dim, .popup_layer').hide();
+		//});
+
+		$('.btn-move-search').click(function() {
+			window.open('https://donga-st.srpage.co.kr/');
+		})
+			
+		//wg-brown 언어변경시 쿠키에 저장
+		$('.tool button.siteType').click(function(){
+			if($(this).attr('data-type') == 'en') {
+				set_cookie('siteType', 'en', 7);
+				window.location.href = window.location.origin + '/en';
+			}else {	
+				set_cookie('siteType', 'en', -1);
+				window.location.href = window.location.origin + '/html';
+			}
+		});
+
+		if(get_cookie('siteType') == 'en' && !window.location.pathname.includes('/en/')) {
+			debugger
+			var currentPath = window.location.pathname; // 현재 경로 가져오기
+			var newPath = '/en' + currentPath.substring(currentPath.lastIndexOf('/')); // 현재 파일 이름만 가져오기
+			var newUrl = window.location.origin + newPath; // 새로운 URL 생성
+			window.location.href = newUrl; // 리다이렉트
+		} 
+
+		//wg-brown 언어변경시 쿠키에 저장
+	});
+</script>
+<body id="wrap">
+	<div class="dim" style="display:none;"></div>
+	<div class="popup_box" style="display:none;">
+		<div class="popup_layer" style="display:none;">
+			<div class="title">동아에스티 배당안내</div>
+			<div class="content">
+				'23년 결산배당 조회서비스<br>
+				<span class="blue">※ 운영기간</span> : '24년 4월 1일 9:00 ~ '24년 4월 30일 24:00
+			</div>
+			<button type="button" class="btn btn-move-search">배당금 조회서비스 바로가기</button>
+			<div class="popup_footer">
+				<label><input type="checkbox" name="hide_popup" value="y"> 일주일동안 이 창을 열지 않기</label>
+				<button type="button" class="btn btn-popup-close">닫기</button>
+			</div>
+		</div>
+	</div>
+	<header id="header"> 
+        <div class="header">
+            <div class="wrap">
+                <div class="logo"><a href="./"><img src="../resources/img/eng_logo1.png" alt="동아ST"></a></div>
+                <div class="gnb">
+                    <ul class="depth1">
+                        <li class="dl1">
+                            <a href="./introduction.php" class="da1">Dong-A ST</a>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./introduction.php" class="da2">Introducing Dong-A ST</a></li>
+                                <li class="dl2"><a href="./ceomessage.php" class="da2">CEO Greetings</a></li>
+                                <li class="dl2"><a href="./history.php" class="da2">History</a></li>
+                                <!-- <li class="dl2"><a href="./ci.php" class="da2">CI</a></li> -->
+                                <li class="dl2"><a href="./business.php" class="da2">Business Areas</a></li>
+								<li class="dl2"><a href="./oversea.php" class="da2">Global Business</a></li>
+								<li class="dl2"><a href="./plant.php" class="da2">Manufacturing services</a></li>
+                                <li class="dl2"><a href="./location.php" class="da2">Location</a></li>
+                            </ul>
+                        </li>
+						<li class="dl1">
+                            <a href="./medicine.php" class="da1">Dong-A ST<br>Product</a>
+                            <ul class="depth2">
+                                                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="http://rnd.donga-st.com/en/" class="da1" target="_blank">R&amp;D</a>
+                                                    </li>
+                        <li class="dl1">
+                            <a href="./degree.php" class="da1">ESG</a>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./degree.php" class="da2">Jeongdo <br>Management</a></li>
+                                <li class="dl2"><a href="./socialvalue.php" class="da2">Social Value <br>Management</a></li>
+                                <li class="dl2"><a href="./humanrights.php" class="da2">Human Rights <br>Management</a></li>
+                                <li class="dl2"><a href="./environment.php" class="da2">Environmental Health <br>and Safety Management</a></li>
+                                <li class="dl2"><a href="./compliance.php" class="da2">Compliance</a></li>
+                                <li class="dl2"><a href="./consumer.php" class="da2">Consumer-Centered <br>Management (CCM)</a></li>
+                                <li class="dl2"><a href="./contribution.php" class="da2">Corporate Social <br>Responsibility(CSR)</a></li>
+                                <li class="dl2"><a href="./integrated.php" class="da2">Reports and Policies</a></li>
+                                <li class="dl2"><a href="./governance.php" class="da2">Corporate Governance</a></li>
+                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="./stock.php" class="da1">Investors</a>
+                            <ul class="depth2">
+                                <!-- <li class="dl2"><a href="./overview.php" class="da2">Overview</a></li> -->
+                                <!-- <li class="dl2"><a href="./finance.php" class="da2">Statements of <br>Financial Position</a></li> -->
+                                <li class="dl2"><a href="./stock.php" class="da2">Stock Information</a></li>
+                                <li class="dl2"><a href="./ir.php" class="da2">Investor Relations</a></li>
+                                <li class="dl2"><a href="./announce.php" class="da2">Announcements</a></li>
+								<!-- <li class="dl2"><a onclick="window.open('https://donga-st.srpage.co.kr/');" class="da2">배당조회</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="./news.php" class="da1">PR</a>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./news.php" class="da2">News</a></li>
+                                <!-- <li class="dl2"><a href="http://with.donga.co.kr/" class="da2" target="_blank">위드동아</a></li> -->
+								<!-- <li class="dl2"><a href="http://www.donga.co.kr/donga90th/" class="da2" target="_blank">90th 이카이브</a></li> -->
+                            </ul>
+                        </li>
+						<li class="dl1">
+                            <a href="./online.php" class="da1">Contact us</a>
+                            <ul class="depth2">
+                                <!-- <li class="dl2"><a href="./counsel.php" class="da2">상담안내</a></li> -->
+                                <li class="dl2"><a href="./online.php" class="da2">1:1 Online Inquiry</a></li>
+                                <!-- <li class="dl2"><a href="./solution.php" class="da2">의약품 부작용 피해구제사업</a></li> -->
+                                <!-- <li class="dl2"><a href="./conflict.php" class="da2">소비자분쟁 해결 기준</a></li> -->
+                                <!-- <li class="dl2"><a href="./partner.php" class="da2" target="_blank">협력업체 안내</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                    <i class="gnb_bg"></i>
+                </div>
+                <div class="tool">
+                    <ul>
+                        <li><button class="type" id="toolSearch"><img src="../resources/img/icon_search.png"><p class="skip">통합검색</p></button></li>
+                        <li><button class="type" id="toolSite"><img src="../resources/img/icon_sitemap.png"><p class="skip">사이트맵</p></button></li>
+                        <li><button class="type" id="toolLang" onclick="window.open('https://www.donga-st.com/html/')"><img src="../resources/img/icon_lang.png"><p>KR</p><p class="skip">언어선택</p></button></li>
+
+						<li style="display:none;"><button class="type siteType" data-type="kr"><p>kr버전</p></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="search" id="search_wrap">
+            <div class="wrap">
+                <div class="form">
+                    <form class="box" action="./search.php">
+                        <input type="text" name="search" placeholder="검색어를 입력해주세요.">
+                        <button type="submit"><i>검색</i></button>
+                    </form>
+                </div>
+                <div class="recommand">
+                    <dl>
+                        <dt>추천검색어</dt>
+						                    <dd><a href="./search.php?search=그로트로핀">그로트로핀</a></dd>
+					                    <dd><a href="./search.php?search=다파프로">다파프로</a></dd>
+					                    <dd><a href="./search.php?search="></a></dd>
+					                    <dd><a href="./search.php?search="></a></dd>
+					
+
+                        <!--dd><a href="#">#슈가논</a></dd>
+                        <dd><a href="#">#투리온정</a></dd>
+                        <dd><a href="#">#데리본 피하주사 56.5ug</a></dd>
+                        <dd><a href="#">#베리얼</a></dd>
+                        <dd><a href="#">#이달비 클로정</a></dd>
+                        <dd><a href="#">#스티렌2X</a></dd-->
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="sitemap" id="sitemap_wrap">
+            <div class="inner">
+                <div class="head">
+                    <div class="title">Sitemap</div>
+                    <div class="close"><button type="button" id="siteClose"><img src="../resources/img/icon_close_gray.png" class="pc_only"><img src="../resources/img/icon_close_mobile.png" class="mo_only" ><p class="skip">Sitemap Close</p></button></div>
+                </div>
+                <div class="quick mo_only">
+                    <ul>
+                        <!-- <li><a href="#"><img src="../resources/img/quick01.png"><p>제품정보</p></a></li> -->
+                        <!-- <li><a href="#"><img src="../resources/img/quick02.png"><p>R&D <br>파이프라인</p></a></li> -->
+                        <!-- <li><a href="#"><img src="../resources/img/quick03.png"><p>사업분야</p></a></li> -->
+                        <!-- <li><a href="#"><img src="../resources/img/quick04.png"><p>인재채용</p></a></li> -->
+                        <!-- <li><a href="#"><img src="../resources/img/quick05.png"><p>IR <br>Overview</p></a></li> -->
+                        <!-- <li><a href="#"><img src="../resources/img/quick06.png"><p>사업관계자 <br>CP</p></a></li> -->
+												<li><a onclick="window.open('./medicine.php')">
+															<img src="/data/quick/42.png"><p>Dong-A ST
+Product</p></a></li>
+
+        
+												<li><a onclick="window.open('http://rnd.donga-st.com/en/sub/pipeline/pipeline.asp')">
+															<img src="/data/quick/43.png"><p>R&D</p></a></li>
+
+        
+												<li><a onclick="window.open('./business.php')">
+															<img src="/data/quick/44.png"><p>Business Areas
+</p></a></li>
+
+        
+				
+                    </ul>
+                </div>
+                <div class="list">
+                    <ul class="depth1">
+                        <li class="dl1">
+                            <a href="./introduction.php" class="da1 pc_only">Dong-A ST</a>
+                            <button type="button" class="da1 mo_only">Dong-A ST</button>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./introduction.php" class="da2">Introducing Dong-A ST</a></li>
+                                <li class="dl2"><a href="./ceomessage.php" class="da2">CEO Greetings</a></li>
+                                <li class="dl2"><a href="./history.php" class="da2">History</a></li>
+                                <!-- <li class="dl2"><a href="./ci.php" class="da2">CI</a></li> -->
+                                <li class="dl2"><a href="./business.php" class="da2">Business Areas</a></li>
+								<li class="dl2"><a href="./oversea.php" class="da2">Global Business</a></li>
+								<li class="dl2"><a href="./plant.php" class="da2">Manufacturing services</a></li>
+                                <li class="dl2"><a href="./location.php" class="da2">Location</a></li>
+                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="./medicine.php" class="da1 pc_only">Dong-A ST Product</a>
+                            <button type="button" class="da1 mo_only">Dong-A ST Product</button>
+                            <!-- <ul class="depth2"> -->
+                                <!-- <li class="dl2"><a href="./medicine.php" class="da2">전문의약품 (ETC)</a></li> -->
+                                <!-- <li class="dl2"><a href="./machine.php" class="da2">의료기기</a></li> -->
+                                <!-- <li class="dl2"><a href="./diagnosis.php" class="da2">진단</a></li> -->
+                                <!-- <li class="dl2"><a href="./productnews.php" class="da2">제품 소식</a></li> -->
+								<!-- <li class="dl2"><a href="./machineDownloads.php" class="da2">의료기기 첨부문서 자료실</a></li> -->
+                            <!-- </ul> -->
+                        </li>
+                        <li class="dl1">
+                            <a href="http://rnd.donga-st.com/kr/" class="da1 pc_only" target="_blacnk">R&amp;D</a>
+                            <button type="button" class="da1 mo_only">R&amp;D</button>
+                                                    </li>
+                        <li class="dl1">
+                            <a href="./degree.php" class="da1 pc_only">ESG</a>
+                            <button type="button" class="da1 mo_only">ESG</button>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./degree.php" class="da2">Jeongdo <br>Management</a></li>
+                                <li class="dl2"><a href="./socialvalue.php" class="da2">Social Value <br>Management</a></li>
+                                <li class="dl2"><a href="./humanrights.php" class="da2">Human Rights <br>Management</a></li>
+                                <li class="dl2"><a href="./environment.php" class="da2">Environmental Health <br>and Safety Management</a></li>
+                                <li class="dl2"><a href="./compliance.php" class="da2">Compliance</a></li>
+                                <li class="dl2"><a href="./consumer.php" class="da2">Consumer-Centered <br>Management (CCM)</a></li>
+                                <li class="dl2"><a href="./contribution.php" class="da2">Corporate Social <br>Responsibility(CSR)</a></li>
+                                <li class="dl2"><a href="./integrated.php" class="da2">Reports and Policies</a></li>
+                                <li class="dl2"><a href="./governance.php" class="da2">Corporate Governance</a></li>
+                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="./stock.php" class="da1 pc_only">Investors</a>
+                            <button type="button" class="da1 mo_only">Investors</button>
+                            <ul class="depth2">
+                                <!-- <li class="dl2"><a href="./overview.php" class="da2">Overview</a></li> -->
+                                <!-- <li class="dl2"><a href="./finance.php" class="da2">Statements of <br>Financial Position</a></li> -->
+                                <li class="dl2"><a href="./stock.php" class="da2">Stock Information</a></li>
+                                <li class="dl2"><a href="./ir.php" class="da2">Investor Relations</a></li>
+                                <li class="dl2"><a href="./announce.php" class="da2">Announcements</a></li>
+								<!-- <li class="dl2"><a onclick="window.open('https://donga-st.srpage.co.kr/');" class="da2">배당조회</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="dl1">
+                            <a href="./news.php" class="da1 pc_only">PR</a>
+                            <button type="button" class="da1 mo_only">PR</button>
+                            <ul class="depth2">
+                                <li class="dl2"><a href="./news.php" class="da2">News</a></li>
+                                <!-- <li class="dl2"><a href="http://with.donga.co.kr/" class="da2" target="_blank">위드동아</a></li> -->
+								<!-- <li class="dl2"><a href="http://www.donga.co.kr/donga90th/" class="da2" target="_blank">90th 이카이브</a></li> -->
+                            </ul>
+                        </li>
+						<li class="dl1">
+                            <a href="./online.php" class="da1 pc_only">Contact us</a>
+                            <button type="button" class="da1 mo_only">Contact us</button>
+                            <ul class="depth2">
+                                <!-- <li class="dl2"><a href="./counsel.php" class="da2">상담안내</a></li> -->
+                                <li class="dl2"><a href="./online.php" class="da2">1:1 Online Inquiry</a></li>
+                                <!-- <li class="dl2"><a href="./solution.php" class="da2">의약품 부작용 피해구제사업</a></li> -->
+                                <!-- <li class="dl2"><a href="./conflict.php" class="da2">소비자분쟁 해결 기준</a></li> -->
+                                <!-- <li class="dl2"><a href="./partner.php" class="da2" target="_blank">협력업체 안내</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom" style="border-top: 1px solid #dfdfdf; padding-top: 30px;">
+                    <div class="link disabled">
+					<!-- 2025-08-08 wg-robert ↑ disabled 추가 -->
+                        <a style="margin-right: 34px;" href="https://cph.dongasocio.com:2447/index_cp.html" target="_blank">지출보고서</a>
+                        <a style="margin-right: 34px;" href="https://cp.donga-st.com/csr/index" target="_blank">사업관계자 CP</a>
+                        <a style="margin-right: 34px;" href="https://prm-st.dongasocio.com:2446/index_prm.html" target="_blank">PRM</a>
+                        <a style="margin-right: 34px;" href="http://steps.dongasocio.com" target="_blank">S*TEPS</a>
+                        <!-- <a href="#">D-CMS</a> -->
+                    </div>
+                </div>
+                <div class="cs mo_only">
+                    <div class="center">CS Center <strong>02.920.8111</strong></div>
+                    <div class="addr">Address: 64 Cheonhodaero, Dongdaemun-gu, Seoul</div>
+                    <div class="cite">Copyright DONG-A ST, All rights reserved.</div>
+                    <button class="type" id="toolLang" onclick="window.open('https://www.donga-st.com/html/')"><img src="../resources/img/icon_lang.png"><p>KR</p><p class="skip">언어선택</p></button>
+                </div>
+            </div>
+        </div>
+    </header>
+	<section id="container">
+<style>
+	.swiper-wrapper { height:auto; }
+</style>
+<div id="index" class="eng_index">
+    <div class="visual" id="visual">
+        <div class="swiper-wrapper">
+
+			
+            <div class="visual-slide swiper-slide">
+							<div class="video">
+                    <video muted autoplay loop playsinline webkit-playsinline style="max-width: 100%; max-height: 100%; display: block; margin: 20px auto; height: auto; min-height: 200px;">
+                    <source src="https://www.donga-st.com/data/kv/57.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+				</a>
+            </div>
+
+			
+            <div class="visual-slide swiper-slide">
+							<div class="video">
+                    <video muted autoplay loop playsinline webkit-playsinline style="max-width: 100%; max-height: 100%; display: block; margin: 20px auto; height: auto; min-height: 200px;">
+                    <source src="https://www.donga-st.com/data/kv/58.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+				</a>
+            </div>
+
+			
+            <div class="visual-slide swiper-slide">
+							<div class="video">
+                    <video muted autoplay loop playsinline webkit-playsinline style="max-width: 100%; max-height: 100%; display: block; margin: 20px auto; height: auto; min-height: 200px;">
+                    <source src="https://www.donga-st.com/data/kv/59.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+				</a>
+            </div>
+
+			                    </div>
+        <div class="swiper-arrow">
+            <button type="button" class="swiper-arrow-prev"><i>이전 슬라이드</i></button>
+            <button type="button" class="swiper-arrow-next" id="banner-next"><i>다음 슬라이드</i></button>
+        </div>
+        <div class="swiper-tool">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-control">
+                <button type="button" id="swiperPlay"><i></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="search tab-area disabled">
+        <div class="wrap">
+            <div class="head">
+                <div class="tit">어떤 제품을 찾으시나요?</div>
+            </div>
+            <div class="form">
+                <form class="box" action="./search.php">
+                    <input type="text" name="search" placeholder="제품명을 입력해주세요.">
+                    <button type="submit"><i>검색</i></button>
+                </form>
+            </div>
+            <div class="recommand">
+                <dl>
+                    <dt>인기검색어</dt>
+					                    <dd><a href="./medicine.php?searchText=그로트로핀">그로트로핀</a></dd>
+					                    <dd><a href="./medicine.php?searchText=다파프로">다파프로</a></dd>
+					                    <dd><a href="./medicine.php?searchText="></a></dd>
+					                    <dd><a href="./medicine.php?searchText="></a></dd>
+					                </dl>
+            </div>
+                    </div>
+    </div>
+    <div class="rnd eng_rnd">
+        <div class="wrap">
+            <div class="head">
+                <div class="tit">R&amp;D</div>
+            </div>
+            <div class="list">
+                <ul class="swiper-wrapper">
+				                    <li class="swiper-slide">
+                        <a href="http://rnd.donga-st.com/en/sub/company/vision.asp" class="inner" target="_blank">
+                            <div class="img"><img src="https://www.donga-st.com/data/rnd/11.png"></div>
+                            <div class="con">
+                                <div class="tit">Vision and Strategy</div>
+                                <div class="txt">We are committed to consistent investment<br>in R&D, with an unwavering focus on<br>pioneering new drug development.</div>
+                            </div>
+                        </a>
+                    </li>
+					                    <li class="swiper-slide">
+                        <a href="http://rnd.donga-st.com/en/sub/rnd/achievement.asp" class="inner" target="_blank">
+                            <div class="img"><img src="https://www.donga-st.com/data/rnd/12.png"></div>
+                            <div class="con">
+                                <div class="tit">Achievements</div>
+                                <div class="txt">Our dedication to health and well-being has<br>led to significant breakthroughs and tangible<br>results.</div>
+                            </div>
+                        </a>
+                    </li>
+					                    <li class="swiper-slide">
+                        <a href="http://rnd.donga-st.com/en/sub/pipeline/pipeline.asp" class="inner" target="_blank">
+                            <div class="img"><img src="https://www.donga-st.com/data/rnd/13.png"></div>
+                            <div class="con">
+                                <div class="tit">Pipeline</div>
+                                <div class="txt">Our ongoing research efforts span a wide<br>array of projects, pushing the boundaries of<br>medicine to deliver new treatments.</div>
+                            </div>
+                        </a>
+                    </li>
+					                    <li class="swiper-slide">
+                        <a href="http://rnd.donga-st.com/en/sub/company/partnership.asp" class="inner" target="_blank">
+                            <div class="img"><img src="https://www.donga-st.com/data/rnd/15.png"></div>
+                            <div class="con">
+                                <div class="tit">License-in/Out</div>
+                                <div class="txt">We foster win-win collaborations, building all<br>forms of partnerships founded on trust and<br>mutual benefit.</div>
+                            </div>
+                        </a>
+                    </li>
+					                </ul>
+                <script>
+                    $(function(){
+                        var swiper= Swiper;
+                        var init = false;
+                        function swiperMode() {
+                            let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+                            let desktop = window.matchMedia('(min-width: 769px)');
+                            if(mobile.matches) {
+                                if (!init) {
+                                    init = true;
+                                    var swiper = new Swiper(".rnd .list", {
+                                        slidesPerView: 1,
+                                        spaceBetween: 20,
+                                    });
+                                }
+                            }
+                            else if(desktop.matches) {
+                                //swiper.destroy();
+                                init = false;
+                            }
+                        }
+                        window.addEventListener('load', function() {
+                            swiperMode();
+                        });
+                        window.addEventListener('resize', function() {
+                            swiperMode();
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="business">
+        <div class="wrap">
+            <div class="flex">
+                <div class="head">
+                    <div class="tit">Business Areas</div>
+                </div>
+                <div class="list">
+                    <div class="swiper-wrapper">
+                                            <div class="swiper-slide desc" style="">
+                            <a href="http://www.donga-st.com/en/medicine.php" class="inner">
+                                <div class="img"><img src="https://www.donga-st.com/data/business/16.png"></div>
+                                <div class="con">
+                                    <div class="tit">ETC</div>
+                                    <div class="act"><i></i></div>
+                                    <!--2025-07-10 wg-robert 수정 전 원본소스 <div class="act"><i></i></div> -->
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="swiper-slide desc" style="display:none;">
+                            <a href="http://www.donga-st.com/en/diagnosis.php" class="inner">
+                                <div class="img"><img src="https://www.donga-st.com/data/business/18.png"></div>
+                                <div class="con">
+                                    <div class="tit">Diagnostic Tools</div>
+                                    <div class="act"><i></i></div>
+                                    <!--2025-07-10 wg-robert 수정 전 원본소스 <div class="act">VIEW MORE<i></i></div> -->
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="swiper-slide desc" style="">
+                            <a href="http://www.donga-st.com/en/oversea.php" class="inner">
+                                <div class="img"><img src="https://www.donga-st.com/data/business/19.png"></div>
+                                <div class="con">
+                                    <div class="tit">Global Business</div>
+                                    <div class="act"><i></i></div>
+                                    <!--2025-07-10 wg-robert 수정 전 원본소스 <div class="act">VIEW MORE<i></i></div> -->
+                                </div>
+                            </a>
+                        </div>
+                                            <div class="swiper-slide desc" style="">
+                            <a href="https://www.donga-st.com/en/plant.php" class="inner">
+                                <div class="img"><img src="https://www.donga-st.com/data/business/20.png"></div>
+                                <div class="con">
+                                    <div class="tit">PLANT</div>
+                                    <div class="act"><i></i></div>
+                                    <!--2025-07-10 wg-robert 수정 전 원본소스 <div class="act">VIEW MORE<i></i></div> -->
+                                </div>
+                            </a>
+                        </div>
+                                        </div>
+                    <script>
+                        $(function(){
+                            var swiper= Swiper;
+                            var init = false;
+                            function swiperMode() {
+                                let mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+                                let desktop = window.matchMedia('(min-width: 769px)');
+                                if(mobile.matches) {
+                                    if (!init) {
+                                        init = true;
+                                        var swiper = new Swiper(".business .list", {
+                                            slidesPerView: 1,
+                                            spaceBetween: 20,
+                                        });
+                                    }
+                                }
+                                else if(desktop.matches) {
+                                  
+                                    init = false;
+                                }
+                            }
+                            window.addEventListener('load', function() {
+                                swiperMode();
+                            });
+                            window.addEventListener('resize', function() {
+                                swiperMode();
+                            });
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="wrap">
+            <div class="head">
+                <div class="tit">News</div>
+            </div>
+            <div class="list newsList">
+                <ul class="swiper-wrapper">
+									
+                    <li class="swiper-slide">
+                        <a href="./news_detail.php?bo_table=board_news&wr_id=592" class="inner">
+                        <div class="subj">동아쏘시오그룹, AI 신약개발 플랫폼 ‘AIDDP’ 구축… AI 기반 R&D 업무 혁신 본격화</div>
+                        <div class="text">동아쏘시오그룹의 IT 전문 계열사 DAI(디에이아이)와 동아에스티가 AI와 바이오데이터를 융합한 지능형 신약개발 플랫폼 ‘AIDDP(AI Drug Discovery Platform)’를 구축하고 본격 운영에 나선다고 29일 밝혔다.
+
+AIDDP는 신약 후보물질의 설계 및 예측, 분석 결과의 시각화 및 관리까지 신약 연구 전반의 업무를 하나의 환경에서 수행할 수 있도록 구현한 통합 연구 플랫폼이다. 여러 분석 도구와 데이터를 개별적으로 활용하던 기존 방식에서 벗어나, 신약개발의 주요 연구 워크플로우를 하나의 플랫폼에서 유기적으로 연계 및 활용할 수 있도록 구축했다.
+
+AIDDP에는 동아에스티 연구진이 축적한 신약 연구 경험과 컴퓨터 기반 분석 역량을 비롯해, 기존에 활용해 온 연구 워크플로우와 AI 기반 구조 설계 및 분석 모듈 등을 반영했다. 이를 통해 후보물질 탐색부터 표적 단백질과의 결합 가능성 및 구조 안정성 검토까지 연구 전 과정을 하나의 플랫폼에서 효율적으로 수행할 수 있다.
+
+AIDDP의 주요 기능은 ▲싱글셀(Single-cell) 및 공간전사체학(Spatial Transcriptomics) 기반 바이오데이터 시각화 ▲AI 기반 신규 화합물 생성 및 설계 지원 ▲후보물질과 표적 단백질 간 결합 친화도(Affinity) 예측 ▲도킹(Docking) 및 분자동역학(Molecular Dynamics) 시뮬레이션 ▲연구 과제, 분석 결과 및 계산 이력의 통합 관리 등이다.
+
+AIDDP를 통해 연구 과정에서 생성되는 데이터와 분석 결과, 연구자의 역량이 그룹의 핵심 디지털 자산으로 축적된다. 축적된 데이터는 AI 모델 고도화와 신규 후보물질 발굴에 활용되며, 동아쏘시오그룹은 이를 기반으로 외부 솔루션 의존도를 낮추고 독자적인 AI 신약개발 역량과 지식재산권(IP) 확보를 위한 기반도 강화할 예정이다. 아울러 그룹 내 다양한 연구 분야와 계열사에서 활용할 수 있는 공통 AI R&D 플랫폼으로 확대해 나갈 방침이다.
+
+동아쏘시오그룹은 향후 대규모 화합물 가상 스크리닝 기반 후보물질 탐색, AI 기반 논문·특허 및 내외부 연구정보 검색 기능 등을 추가하고, 에이전틱 AI(Agentic AI) 기반 연구 지원 기능을 단계적으로 적용할 계획이다. 장기적으로는 연구자의 탐색부터 분석, 해석, 의사결정까지 지원하는 고도화된 AI 기반 연구 플랫폼으로 발전시켜 연구 생산성과 신약개발 경쟁력을 높여 나갈 예정이다.
+
+DAI 한혜진 사장은 “AIDDP는 동아에스티 연구진의 신약개발 역량과 연구 자산에 DAI의 AI 및 IT 기술력을 결합해 구축한 그룹 최초의 자체 AI 신약개발 플랫폼이다”며 “AI를 연구 도구로 활용하는 데 그치지 않고 연구 워크플로우를 혁신하고, 내부 데이터와 연구 역량을 그룹의 핵심 자산과 독자적인 IP로 전환하는 출발점이라는 데 의미가 있다”고 말했다.
+
+동아에스티 정재훈 사장은 “AIDDP 구축을 통해 연구자들이 신약개발 초기 단계에서 후보물질 최적화에 소요되는 시간과 성공확률을 개선할 수 있는 기반을 마련했다”며 “연구 현장의 피드백을 지속적으로 반영해 플랫폼의 기능과 활용도를 높이고, 궁극적으로 연구자의 AI 기반 연구를 지원하는 핵심 R&D 인프라로 발전시켜 동아에스티의 신약개발 경쟁력을 강화해 나가겠다”고 밝혔다. [끝]</div>
+                        <div class="date">2026-07-29</div>
+                        </a>
+                    </li>
+										
+                    <li class="swiper-slide">
+                        <a href="./news_detail.php?bo_table=board_news&wr_id=591" class="inner">
+                        <div class="subj">동아ST, 전 사업 부문 성장으로 2분기 매출 2,078억 원… 분기 최대 매출 경신</div>
+                        <div class="text">동아에스티(대표이사 사장 정재훈)는 별도재무제표 기준 2026년 2분기 매출액이 전년 동기 대비 17.2% 증가한 2,078억 원을 기록하며 분기 기준 역대 최대 매출을 달성했다고 27일 밝혔다.
+
+같은 기간 영업이익은 도입 품목의 매출이 증가했음에도 원가율이 전년 동기와 유사한 수준을 유지하며 수익성이 개선돼 전년 동기 대비 170.4% 증가한 109억 원을 기록했다.
+
+2026년 2분기 매출 성장은 ETC(전문의약품), 해외사업, 디지털헬스케어 등 전 사업 부문의 고른 성장에 힘입어 달성됐다.
+
+ETC 부문은 전년 동기 대비 15.2% 증가한 1,486억 원을 기록했다. 주력 품목이 안정적인 성장세를 이어갔으며, 도입 품목의 매출 확대도 성장을 견인했다. 하반기 엑스코프리 출시가 예정되어 있어 추가적인 매출 성장이 기대된다.
+
+해외사업 부문은 전년 동기 대비 20.9% 증가한 469억 원을 기록했다. 박카스와 다베포에틴알파 등의 매출 증가가 실적을 뒷받침했다.
+
+디지털헬스케어 부문은 전년 동기 대비 208% 성장한 32억 원을 기록했다. 하이카디 매출이 성장세를 보였으며, 하반기 신제품 하이카디 M350 출시를 통해 디지털헬스케어 사업의 성장세를 이어갈 것으로 기대된다.
+
+연구개발(R&D) 부문에서도 주요 파이프라인의 개발이 순조롭게 진행되고 있으며, 학회 발표 등을 통해 연구 성과를 지속적으로 공개했다.
+
+미국 관계사 메타비아를 통해 개발 중인 MASH(대사이상 지방간염) 및 제2형 당뇨병 치료제 DA-1241은 글로벌 임상 2a상을 완료했다. 비만 치료제 DA-1726은 용량 증량 전략을 기반으로 고용량 도달 시 안전성 확인 및 내약성 최적화를 위한 글로벌 임상 1상 파트 3가 진행 중이다.
+
+타우 응집 저해제 DA-7503, 면역항암제 DA-4505는 국내 임상 1상을 진행 중이다.
+
+동아에스티와 자회사 앱티스는 미국암연구학회(AACR)에서 PARP7 저해제, EGFR 표적 단백질 분해제, 이중항체 ADC를 비롯한 ADC 신약 파이프라인 등 차세대 항암 파이프라인 관련 비임상 연구결과 10건을 발표했다.
+
+동아에스티는 알츠하이머 국제 학회(AAIC)에서 GPX4 활성제 DA-7505, 타우 응집 저해제 DA-7503 비임상 연구 결과를 발표했다.
+
+동아에스티 관계자는 “ETC, 해외사업, 디지털헬스케어 등 전 사업 부문의 고른 성장으로 분기 기준 역대 최대 매출을 달성했다"며 "사업 경쟁력과 연구개발 역량을 지속적으로 강화해 글로벌 헬스케어 기업으로 도약해 나가겠다"고 말했다. [끝]</div>
+                        <div class="date">2026-07-27</div>
+                        </a>
+                    </li>
+										
+                    <li class="swiper-slide">
+                        <a href="./news_detail.php?bo_table=board_news&wr_id=590" class="inner">
+                        <div class="subj">동아참메드, 차세대 내시경 영상시스템 ‘V1 Smart PRO’, 연성비디오내시경 ‘FHD-F7’ 출시</div>
+                        <div class="text">동아에스티의 자회사 동아참메드(대표이사 사장 정재훈)는 차세대 내시경 영상시스템 ‘V1 Smart PRO’와 전용 연성비디오내시경 ‘FHD-F7’을 출시했다고 21일 밝혔다.
+
+V1 Smart PRO는 경성내시경(Rigid Scope)과 연성내시경(Flexible Video Scope)을 하나의 플랫폼에서 사용할 수 있는 내시경 영상시스템이다.
+
+인체공학적 좌우 대칭형 핸들 디자인을 적용해 사용자 편의성을 높였다. 또한 듀얼 광섬유 조명 구조를 적용해 내시경 시야를 밝고 균일하게 확보했으며, 영상 노이즈를 줄이는 DNR(Digital Noise Reduction) 기술과 열을 효과적으로 배출하는 구조를 적용해 장시간 시술 환경에서도 안정적인 영상 품질을 유지할 수 있도록 했다.
+
+V1 Smart PRO와 함께 사용하는 Gun Camera와 Pen Camera도 이미지 센서 성능을 개선해 영상 해상도와 화질을 향상시켰으며, 보다 선명하고 정확한 진단 영상을 제공할 수 있도록 업그레이드했다.
+
+새롭게 출시한 V1 Smart PRO 전용 연성비디오내시경 FHD-F7도 같은 플랫폼에서 사용할 수 있도록 개발돼 의료진은 하나의 시스템으로 다양한 내시경 검사를 보다 효율적으로 수행할 수 있다.
+
+FHD-F7은 비강을 통해 삽입해 후두와 상기도를 관찰 및 진단하는 연성비디오내시경이다. 일반적인 LED 광원 방식이 아닌 광섬유(Fiber) 기반의 광 전달 방식을 적용해 충분한 광량을 확보하고, 보다 밝고 선명한 영상을 구현할 수 있도록 설계됐다.
+
+내시경 끝부분(선단부)과 방향 조절부(만곡부)는 각각 직경 3.6mm와 3.4mm로 슬림하게 설계하고 상·하 120도까지 자유롭게 움직이는 구조를 적용해 비강 통과 시 환자의 불편감을 줄이고 의료진이 원하는 부위를 보다 편리하게 관찰할 수 있도록 했다. 또한 장시간 사용에도 피로도를 최소화할 수 있도록 인체공학적 설계를 적용했으며, 동아참메드의 디자인 아이덴티티를 반영해 제품 완성도를 높였다.
+
+또한 반복적인 세척과 소독 환경에서도 안정적으로 사용할 수 있도록 의료기기 전기적 안전에 관한 국제규격 IEC 60601 시험과 의료기기 생물학적 안전성 관련 기준 규격 시험을 완료해 안전성과 내구성도 강화했다.
+
+동아참메드 관계자는 "국내 연성내시경 시장은 해외 브랜드 제품 의존도가 높은 분야지만, V1 Smart PRO와 FHD-F7이 갖춘 우수한 영상 품질과 가격 경쟁력을 바탕으로 국산 내시경의 새로운 기준을 제시할 것으로 기대한다"며 "앞으로도 지속적인 연구개발을 통해 의료 현장의 요구를 반영한 혁신적인 내시경 솔루션을 선보이고, 국내는 물론 글로벌 시장에서도 경쟁력을 더욱 강화해 나가겠다"고 말했다.
+
+한편, 동아참메드는 동아에스티 계열사로 이비인후과용 진료장비와 의료용 영상장비 등을 생산 및 판매, 수출하는 EMD(ENT 의료기기) 사업부문, 채혈용 소모품, 체외진단의료기기 등을 담당하는 IVD(체외진단) 사업부문, 공간 소독 시스템, 내시경 소독기, 전용소독제, 소독 티슈 등의 HAI(감염관리) 사업부문을 전문적으로 하는 메디컬 헬스케어 전문 기업이다. [끝]</div>
+                        <div class="date">2026-07-21</div>
+                        </a>
+                    </li>
+										
+                    <li class="swiper-slide">
+                        <a href="./news_detail.php?bo_table=board_news&wr_id=589" class="inner">
+                        <div class="subj">동아ST, AAIC서 GPX4 활성제 ‘DA-7505’, 타우 응집 저해제 ‘DA-7503’ 비임상 연구 결과 발표</div>
+                        <div class="text">동아에스티(대표이사 사장 정재훈)는 12일부터 15일까지 영국 런던에서 개최되는 알츠하이머 국제 학회(Alzheimer’s Association International Conference, 이하 AAIC)에서 GPX4 활성제 ‘DA-7505’, 타우 응집 저해제 ‘DA-7503’의 비임상 연구 결과를 포스터 발표했다고 15일 밝혔다.
+
+동아에스티는 13일 ‘A Novel GPX4 Positive Allosteric Modulator Ameliorates Cognitive Impairment by Inhibiting Ferroptosis And Neuroinflammation(새로운 GPX4 양성 알로스테릭 조절제의 페롭토시스 및 신경염증 억제를 통한 인지기능 저하 개선)’을 주제로 DA-7505의 연구 결과를 소개했다.
+
+연구 결과 DA-7505는 신경세포 내 GPX4에 결합해 촉매 활성을 높이고 페롭토시스(Ferroptosis) 환경에서 단백질의 분해를 막아 지질 과산화 및 페롭토시스에 의한 세포 사멸을 효과적으로 억제했다. 특히 기존 활성산소(ROS) 제거 기전의 억제제 대비 우수한 항염 효능을 확인했으며, 알츠하이머병 마우스 모델에서 우수한 인지기능 개선 효과를 나타내 질병조절치료제로(Disease-modifying therapy)서의 가능성을 확인했다.
+
+DA-7505는 신경퇴행과 신경염증을 동시에 억제하는 기전을 바탕으로 알츠하이머병뿐만 아니라 다양한 신경퇴행성 질환 치료제로의 확장 개발 가능성을 시사했다.
+
+페롭토시스는 지질 과산화에 의해 발생하는 철(iron) 의존성 세포사멸 기전으로, 알츠하이머병, 파킨슨병 등 다양한 신경퇴행성 질환과 염증성 질환의 발병에 관여하는 것으로 알려져 있다. DA-7505는 페롭토시스 경로의 핵심 항산화 효소인 GPX4에 대한 우수한 표적 결합력과 높은 혈액뇌장벽(BBB) 투과율을 갖춘 First-in-Class 저분자 화합물이다.
+
+14일에는 ‘Therapeutic Evaluation of DA-7503, a Tau Aggregation Inhibitor, Alone and in Combination with Lecanemab in Tauopathy & AD Models(타우병증 및 알츠하이머병 모델에서 타우 응집 저해제 DA-7503의 단독 및 레카네맙 병용 치료 효과 평가)’를 주제로 DA-7503의 연구 결과를 발표했다.
+
+연구 결과 타우병증 마우스 모델에서 DA-7503은 저용량에서도 인지 및 운동 기능을 유의하게 개선했으며, 낮은 노출 수준에서도 뚜렷한 치료 효능을 확인했다. 이러한 효과는 용량 의존적으로 강화됐으며, 대뇌 피질과 해마 전반에서 타우 단백질의 과인산화와 올리고머 형성을 강력하게 억제하고, 타우 응집 및 축적을 현저히 감소시켜 전반적인 타우 병리를 효과적으로 개선했다.
+
+또한 알츠하이머병 모델에서 DA-7503은 표준약물요법으로 사용되는 아밀로이드-β 표적 항체인 레카네맙과의 병용 투여 시 주요 병리 지표인 타우와 아밀로이드-β를 추가적으로 개선했다. 이는 DA-7503이 알츠하이머병의 질병조절치료제로 개발될 수 있음을 보여주는 동시에, 타우와 아밀로이드-β를 겨냥하는 이중 타깃 접근 전략의 가능성을 시사했다.
+
+DA-7503은 타우병증 및 알츠하이머병 치료제로 개발 중인 저분자 화합물 타우 응집 저해제다. 정상 상태에서 타우 단백질은 신경세포의 미세소관(microtubule)에 결합해 구조를 안정화하는 역할을 한다. 알츠하이머병과 같은 병적인 상황에서는 타우 과인산화 등을 통해 미세소관에서 분리되고, 신경독성을 유발하는 올리고머 및 응집체를 형성한다. DA-7503은 이러한 병적 타우에 선택적으로 작용해 올리고머 형성을 억제하고 세포 내 축적을 저해하는 기전을 갖는다. DA-7503은 임상 1상 진행 중이다.
+
+동아에스티 관계자는 "이번 AAIC에서 발표한 연구 결과를 통해 DA-7503과 DA-7505가 퇴행성 뇌질환에 대한 치료제로서의 가능성이 있음을 다시 한번 입증했다"며 "타우병증과 알츠하이머병의 다양한 발병 기전을 표적으로 하는 차세대 치료제 개발을 위한 연구를 지속하고, 미충족 의료수요가 높은 신경퇴행성 질환 분야의 혁신 신약 개발에 매진하겠다"고 말했다.
+
+한편, AAIC는 알츠하이머 분야 최대 규모의 국제 학회로 매년 전 세계 석학들을 비롯한 연구자 및 제약·바이오 업계 관계자들이 모여 알츠하이머 질환의 연구 성과를 공유하며 다양한 논의를 진행한다. [끝]</div>
+                        <div class="date">2026-07-15</div>
+                        </a>
+                    </li>
+					                    <!--li class="swiper-slide">
+                        <a href="#" class="inner">
+                        <div class="subj">동아ST, 미국 뉴로보 파마슈티컬스와 글로벌 라이선스…</div>
+                        <div class="text">동아에스티(대표이사 사장 김민영)는 지난 14일 오후 미국 뉴로보 파마슈티컬스(NeuroBo Pharmaceuticals, 대표이사 길 프라이스)와 글로벌 라이선스 아웃 및 지분 투자 계약을 체결했다고 15일 밝혔다….</div>
+                        <div class="date">2022-09-15</div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="inner">
+                        <div class="subj">동아ST, 미국 뉴로보 파마슈티컬스와 글로벌 라이선스…</div>
+                        <div class="text">동아에스티(대표이사 사장 김민영)는 지난 14일 오후 미국 뉴로보 파마슈티컬스(NeuroBo Pharmaceuticals, 대표이사 길 프라이스)와 글로벌 라이선스 아웃 및 지분 투자 계약을 체결했다고 15일 밝혔다….</div>
+                        <div class="date">2022-09-15</div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="inner">
+                        <div class="subj">동아ST, 미국 뉴로보 파마슈티컬스와 글로벌 라이선스…</div>
+                        <div class="text">동아에스티(대표이사 사장 김민영)는 지난 14일 오후 미국 뉴로보 파마슈티컬스(NeuroBo Pharmaceuticals, 대표이사 길 프라이스)와 글로벌 라이선스 아웃 및 지분 투자 계약을 체결했다고 15일 밝혔다….</div>
+                        <div class="date">2022-09-15</div>
+                        </a>
+                    </li-->
+                </ul>
+                <div class="swiper-arrow">
+                    <button type="button" class="swiper-arrow-prev"><i>Previous Slide</i></button>
+                    <button type="button" class="swiper-arrow-next"><i>Next Slide</i></button>
+                </div>
+            </div>
+            <div class="more">
+                <a href="./news.php">MORE <i></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="quick">
+        <div class="list">
+            <ul>
+                <li>
+                    <a href="./integrated.php" class="inner">
+                        <div class="img"><img src="../resources/img/quick_img01.png"></div>
+                        <div class="con">
+                            <div class="eng">Annual Report</div>
+                            <!--2025-07-10 wg-robert 원본 미사용 주석처리 <div class="tit">통합 보고서</div> -->
+                        </div>
+                        </a>
+                </li>
+                <li>
+                    <a href="./ir.php?bo_table=board_ir" class="inner">
+                        <div class="img"><img src="../resources/img/quick_img02.png"></div>
+                        <div class="con">
+                            <div class="eng">IR data</div>
+                            <!-- 2025-07-10 wg-robert 원본 미사용 주석처리 <div class="tit">IR 자료실</div> -->
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="popup_val" value=""/>
+<div id="popup" style="display:none";>
+    <div class="popup">
+        <div class="image">
+		        </div>
+        <div class="button">
+            <a href="javascript:;" class="btn btn_today">오늘 하루 열지 않기</a>
+            <a href="javascript:;" class="btn btn_close">닫기</a>
+        </div>
+    </div>
+    
+</div>
+<script src="/js/common.js"></script>
+<script>
+$("#popup .btn_today").on('click', function(){
+	set_cookie("popup", "off", 1); //쿠키값 변경
+	$('html').css('overflow','auto');
+	$(this).closest('#popup').hide();
+});
+
+
+    $("#popup .btn_close").on('click', function(){
+        $('html').css('overflow','auto');
+        $(this).closest('#popup').hide();
+    });
+
+setInterval(() => $('#banner-next').click(), 10000);
+		 
+
+</script>
+
+
+</section>
+    <footer id="footer">
+        <div class="fnb">
+            <div class="wrap">
+                <div class="link">
+                    <a href="./privacy.php" target="_blank"><strong>Personal Data Processing Policy</strong></a>
+					<a href="./policy.php" target="_blank">Personal Data Protection Policy</a>
+                    <!--<a href="./policyactive.php" target="_blank">정보보호 활동</a>-->
+                    <!--2025-07-10 wg-robert 원본 미사용 주석처리 <a href="http://education.donga.co.kr/" target="_blank">인재개발원</a> -->
+					<a id="DMB-3115" class="modalOpen" data-modal="modal-footer" onclick="" target="">DMB-3115 Data Protection Notice</a>
+                </div>
+            </div>
+        </div>
+		        <div class="footer">
+            <div class="wrap">
+                <div class="logo"><!--img src="../resources/img/logo.png"--><img src="https://www.donga-st.com/data/footer/3"></div>
+                <div class="center">Contact <strong>02-920-8111</strong></div>
+                <div class="address">Address: 64 Cheonhodaero, Dongdaemun-gu, Seoul</div>
+                <div class="cite">Copyright DONG-A ST, All rights reserved.</div>
+                <div class="family">
+                    <button type="button" id="familySite">Family Site <i></i></button>
+                    <div class="layer">
+                        <button type="button" id="familySiteClose"><i></i></button>
+                        <div class="tit">Family Sites</div>
+						                        <div class="con">
+                            <strong>Holdings Company</strong>
+                            <ul>
+															<li><a onclick="window.open('https://www.donga.co.kr/main/main?lang=ko')">DONG-A SOCIO HOLDINGS</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Healthcare</strong>
+                            <ul>
+															<li><a onclick="window.open('https://abtis.co.kr/')">ABTIS</a></li>
+
+								
+								
+																<li><a onclick="window.open('http://www.donga-chammed.com/')">DONG-A CHAMMED</a></li>
+
+								
+								
+																<li><a onclick="window.open('http://www.dapharm.com/Main.da')">Dong-A Pharmaceutical</a></li>
+
+								
+								
+																<li><a onclick="window.open('https://www.neurobopharma.com/')">METAVIA</a></li>
+
+								
+								
+																<li><a onclick="window.open('https://www.stpharm.co.kr/')">ST PHARM</a></li>
+
+								
+								
+																<li><a onclick="window.open('http://www.stgenbio.com/')">STgen Bio</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Biopesticide</strong>
+                            <ul>
+															<li><a onclick="window.open('http://www.eco-win.kr/kor/main/main.html')">ECOWIN</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>F/B</strong>
+                            <ul>
+															<li><a onclick="window.open('https://www.donga-otsuka.co.kr/')">DONGA-OTSUKA</a></li>
+
+								
+								
+																<li><a onclick="window.open('http://www.dongcheonsu.com/')">DONGCHEONSU</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Logistics</strong>
+                            <ul>
+															<li><a onclick="window.open('http://yongmalogis.co.kr/')">YONGMA LOGIS</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Packaging</strong>
+                            <ul>
+															<li><a onclick="window.open('http://www.isooseok.com/')">SOO SEOK</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Engineering</strong>
+                            <ul>
+															<li><a onclick="window.open('http://www.koreasinto.com/')">KOREA SINTO</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>IT</strong>
+                            <ul>
+															<li><a onclick="window.open('http://www.dainform.co.kr/')">DA INFORMATION</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Plant</strong>
+                            <ul>
+															<li><a onclick="window.open('https://www.aben.co.kr/')">ABEN E&C</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                        <div class="con">
+                            <strong>Global</strong>
+                            <ul>
+															<li><a onclick="window.open('https://www.donga.co.kr/brand/intro?loc=8&tab=1&lang=ko')">SUZHO DONG-A</a></li>
+
+								
+								
+								                            </ul>
+                        </div>
+						                    </div>
+                </div>
+                <div class="mark">
+                    <a href="https://www.consumer.go.kr/consumer/subIndex/98.do" target="_blank"><img src="../resources/img/footer_mark01.png" alt="스마트컨슈머 의료정보"></a>
+                    <a href="https://nedrug.mfds.go.kr/index" target="_blank"><img src="../resources/img/footer_mark02.png" alt="의약품안전나라 의약품통합정보시스템"></a>
+                    <a href="http://www.paadu.or.kr/main_temp/" target="_blank"><img src="../resources/img/footer_mark03.png" alt="대한약사회 약바로쓰기운동본부"></a>
+                    <a href="/html/consumer.php" target="_blank"><img src="../resources/img/footer_mark04.png" alt="CCM"></a>
+                    <a href="#" target="_blank"><img src="../resources/img/footer_mark06.png" alt="가족친화인증"></a>
+                    <a href="https://cp.donga-st.com/csr/index" target="_blank"><img src="../resources/img/footer_mark05.png" alt="KSA ISO37001 CERTIFIED"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="quickbar" class="disabled">
+        <ul>
+											<li><a onclick="window.open('./medicine.php')">
+															<img src="/data/quick/42.png"><p>제품정보</p></a></li>
+
+        
+											<li><a onclick="window.open('http://rnd.donga-st.com/en/sub/pipeline/pipeline.asp')">
+															<img src="/data/quick/43.png"><p>R&D <br>파이프라인</p></a></li>
+
+        
+											<li><a onclick="window.open('./business.php')">
+															<img src="/data/quick/44.png"><p>사업분야</p></a></li>
+
+        
+											<li><a onclick="window.open('https://talent.dongasocio.com')">
+															<img src="/data/quick/45.png"><p>인재채용</p></a></li>
+
+        
+											<li><a onclick="window.open('http://www.donga-st.com/html/ir.php?bo_table=board_ir')">
+															<img src="/data/quick/46.png"><p>IR 자료실</p></a></li>
+
+        
+											<li><a onclick="window.open('https://cp.donga-st.com/csr/index')">
+															<img src="/data/quick/47.png"><p>사업관계자 <br>CP</p></a></li>
+
+        
+											<li><a onclick="window.open('https://audit.donga.co.kr/?')">
+															<img src="/data/quick/64.png"><p>CLEAN :D</p></a></li>
+
+        
+											<li><a onclick="window.open('https://prm-st.dongasocio.com:2446/index_prm.html')">
+															<img src="/data/quick/65.png"><p>PRM</p></a></li>
+
+        
+											<li><a onclick="window.open('https://econtract.dongasocio.com/')">
+															<img src="/data/quick/66.png"><p>DCMS</p></a></li>
+
+        
+						<!--li><a href="#"><img src="../resources/img/quick01.png"><p>제품정보</p></a></li>
+            <li><a href="#"><img src="../resources/img/quick02.png"><p>R&D <br>파이프라인</p></a></li>
+            <li><a href="#"><img src="../resources/img/quick03.png"><p>사업분야</p></a></li>
+            <li><a href="#"><img src="../resources/img/quick04.png"><p>인재채용</p></a></li>
+            <li><a href="#"><img src="../resources/img/quick05.png"><p>IR <br>Overview</p></a></li>
+            <li><a href="#"><img src="../resources/img/quick06.png"><p>사업관계자 <br>CP</p></a></li-->
+        </ul>
+    </div>
+
+	<div style="display:none;">
+				<div class="con">
+			<strong>Holdings Company</strong>
+			<ul>
+									https://www.donga.co.kr/main/main?lang=ko				<li><a onclick="window.open('https://www.donga.co.kr/main/main?lang=ko')">DONG-A SOCIO HOLDINGS</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Healthcare</strong>
+			<ul>
+									https://abtis.co.kr/				<li><a onclick="window.open('https://abtis.co.kr/')">ABTIS</a></li>
+
+									
+										http://www.donga-chammed.com/				<li><a onclick="window.open('http://www.donga-chammed.com/')">DONG-A CHAMMED</a></li>
+
+									
+										http://www.dapharm.com/Main.da				<li><a onclick="window.open('http://www.dapharm.com/Main.da')">Dong-A Pharmaceutical</a></li>
+
+									
+										https://www.neurobopharma.com/				<li><a onclick="window.open('https://www.neurobopharma.com/')">METAVIA</a></li>
+
+									
+										https://www.stpharm.co.kr/				<li><a onclick="window.open('https://www.stpharm.co.kr/')">ST PHARM</a></li>
+
+									
+										http://www.stgenbio.com/				<li><a onclick="window.open('http://www.stgenbio.com/')">STgen Bio</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Biopesticide</strong>
+			<ul>
+									http://www.eco-win.kr/kor/main/main.html				<li><a onclick="window.open('http://www.eco-win.kr/kor/main/main.html')">ECOWIN</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>F/B</strong>
+			<ul>
+									https://www.donga-otsuka.co.kr/				<li><a onclick="window.open('https://www.donga-otsuka.co.kr/')">DONGA-OTSUKA</a></li>
+
+									
+										http://www.dongcheonsu.com/				<li><a onclick="window.open('http://www.dongcheonsu.com/')">DONGCHEONSU</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Logistics</strong>
+			<ul>
+									http://yongmalogis.co.kr/				<li><a onclick="window.open('http://yongmalogis.co.kr/')">YONGMA LOGIS</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Packaging</strong>
+			<ul>
+									http://www.isooseok.com/				<li><a onclick="window.open('http://www.isooseok.com/')">SOO SEOK</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Engineering</strong>
+			<ul>
+									http://www.koreasinto.com/				<li><a onclick="window.open('http://www.koreasinto.com/')">KOREA SINTO</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>IT</strong>
+			<ul>
+									http://www.dainform.co.kr/				<li><a onclick="window.open('http://www.dainform.co.kr/')">DA INFORMATION</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Plant</strong>
+			<ul>
+									https://www.aben.co.kr/				<li><a onclick="window.open('https://www.aben.co.kr/')">ABEN E&C</a></li>
+
+									
+							</ul>
+		</div>
+				<div class="con">
+			<strong>Global</strong>
+			<ul>
+									https://www.donga.co.kr/brand/intro?loc=8&tab=1&lang=ko				<li><a onclick="window.open('https://www.donga.co.kr/brand/intro?loc=8&tab=1&lang=ko')">SUZHO DONG-A</a></li>
+
+									
+							</ul>
+		</div>
+			</div>
+
+	<div id="modal-footer" class="modal-container">
+		<div class="modal-wrapper">
+			<div class="name">
+				<p>DMB-3115 Data Protection Notice</p>
+			</div>
+			<div class="popup_scroll">
+				<p>Last Edited on [2023-05-02]</p>
+				<br>
+				<p>This Privacy Notice describes the personal data that Dong-A ST Co., Ltd. (hereafter “Dong-A”, “us”, “we”, “our”") collects through our website located at <a href="http://en.donga-st.com/Main.da" target="_blank">http://en.donga-st.com/Main.da</a> that are specific to our product coded DMB-3115 in relation to all clinical trials and regulatory approvals in Europe and how we use and keep safe that information.</p>
+				<br>
+				<p>Dong-A as the Controller of the personal data has committed to comply with the General Data Protection Regulation N°EU 2016/679 (hereinafter, the "GDPR") and all EU applicable laws and regulations regarding data protection collectively referred as "Data Protection Laws".  In compliance with the GDPR, we appointed Data Protection Officer listed below who performs his or her the tasks as required by the GDPR.</p>
+				<br>
+				<p>With this Privacy Notice, Dong-A aims at ensuring that you understand what personal information is collected about you, how your personal information is used and how it is kept safe. </p>
+				<br>
+				<p><strong>GENERAL WARNING AND USE OF SOCIAL MEDIA</strong></p>
+				<br>
+				<p>Access to the Website implies the User’s full and unreserved acceptance of this Privacy Notice (hereinafter the “Notice”), as well as its general terms of use. The User acknowledges having read the information below.</p>
+				<br>
+				<p>The Notice is valid for all pages hosted on the Website. It is not valid for the pages hosted by third parties to which we may refer and whose privacy notices may differ. Dong-A cannot therefore be held responsible for any data processed on these websites or by third parties. This Notice also applies to any other website that Dong-A may operate. </p>
+				<br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>1.	Why, how and for how long do we collect your personal data?</strong></p>
+				</div>
+				<br>
+				<p>We will only process your personal data in connection with specific purposes. We will keep them for no longer than necessary to fulfill the purposes for which we collected it, including any legal requirements.</p>
+				<br>
+				<p>Depending on each case, the processing will therefore be as follows:</p>
+				<br>
+				<div class="tbl">
+					<table>
+						<colgroup>
+							<col style="">
+							<col style="">
+							<col style="">
+							<col style="">
+						</colgroup>
+						<thead>
+							<tr>
+								<th class="">Purposes</th>
+								<th class="">Types of personal data</th>
+								<th class="">Legal basis</th>
+								<th class="">Retention period</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="">To answer to your queries</td>
+								<td class="">Name, email address,<br><br>Please note that other Personal Data may be processed by Dong-A depending on your request and the information you provide us.</td>
+								<td class="">This processing is based on our legitimate interest in answering the requests or queries raised by you through the existing different contact channels<br><br>We understand that the processing of these data is also beneficial to you to the extent that it enables us to assist you adequately and answer to the queries raised.</td>
+								<td class="">We will process your data for the time necessary to meet your request.</td>
+							</tr>
+							<tr>
+								<td>For statistical purposes</td>
+								<td>Aggregate statistical data</td>
+								<td>We consider that we have lawful interest to understand the way our page is consulted (e.g., how many times our page is consulted, from which country, etc.).</td>
+								<td>We may export statistical reports, but we guarantee that this is only in an anonymous form.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- //.tbl -->
+				<br><br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>2.	Data sharing</strong></p>
+				</div>
+				<br>
+				<p>We do not sell or trade your personal data to third parties.</p>
+				<p>However, Dong-A has contracted with the following Services Providers to manage the Website that may have access to your personal data:</p>				
+				<br>
+				<p>-	DA Information for Hosting.</p>
+				<br>
+				<p>Sharing your personal data as explained above may involve a transfer of personal data to a country outside the European Economic Area (EEA), we are therefore committed to complying with the transfer rules under applicable Data Protection Laws and therefore ensure to: </p>				
+				<br>
+				<div class="inner_text_box">
+					<p>•	Transfer your data to countries where the data recipient is located that has been recognized as adequate by the European Commission; or </p>
+					<br>
+					<p>•	Where a country has not received an adequacy decision from the European Commission, to implement appropriate safeguards, such as the EU Standard Contractual Clauses ("SCCs"). </p>
+				</div>
+				<br>
+				<p>You can contact our DPO (see contact details below) if you want to have more details about the mechanism supporting data transfer.</p>
+				<br><br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>3.	How do we protect your information?</strong></p>
+				</div>
+				<br>
+				<p>We process your personal data in a confidential manner and provide a sufficient and adequate level of protection of your personal data. </p>
+				<br>
+				<p>Your personal data is housed behind secured networks and are only accessible by a limited number of persons who have special access rights to such systems and are required to keep the information confidential.</p>
+				<br><br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>4.	Your rights</strong></p>
+				</div>
+				<br>
+				<p>According to the GDPR, you have the following rights: </p>
+				<br>
+				<div class="inner_text_box">
+					<ul>
+						<li>
+							<p>-	<strong>Access.</strong> You have the right to obtain confirmation as to whether or not personal data concerning you are being processed, and, where that is the case, information related to the processing of data and a copy of the data being processed.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Rectification.</strong> You have the right to require rectification of inaccurate data about you.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Right to be forgotten.</strong> To obtain the deletion of your personal data in the situations set forth by applicable data protection law.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Restrict processing.</strong> You have the right to restrict processing of data under certain specified circumstances.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Rectification.</strong> You have the right to require rectification of inaccurate data about you.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Data portability.</strong> You have the right to request for the receipt or the transfer to another organization, in a machine-readable form, of your personal data.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Object to processing.</strong> You have the right to object, on grounds relating to your particular situation, at any time to the processing of your data.</p>
+						</li>
+						<br>
+						<li>
+							<p>-	<strong>Right to withdraw consent.</strong> When you have given your explicit consent for the processing of your data (e.g., Subscription to the Newsletter), you can withdraw it at any time without justification.</p>
+						</li>
+					</ul>
+				</div>
+				<br><br>
+				<p>Please note that all these rights are not absolute and will be assessed on a case-by-case basis by our Data Protection Officer (DPO).</p>
+				<br>
+				<p>If you would like to exercise your rights, please let us know by contacting our DPO at dong-a.dpo@mydata-trust.info.</p>
+				<br>
+				<p>You have also the right to lodge a complaint if you consider that your personal data is not processed in accordance with the GDPR.</p>
+				<br>
+				<p>If you are an EEA resident: You have the right to lodge a complaint with the Data Protection Authority in the Member State of the European Union of your habitual residence, place of work or place of the alleged infringement.</p>
+				<br>
+				<p>Please find the contact information of all Authorities in section 6 "Contacts".</p>
+				<br><br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>5.	Changes to this Privacy Notice</strong></p>
+				</div>
+				<br>
+				<p>This Notice is effective as of the date stated at the top of this page. We may change this Notice from time to time. Please refer back to this Notice on a regular basis. </p>
+				<br><br>
+				<div class="inner_text_box">
+					<p class="color_skyblue"><strong>6.	Contacts</strong></p>
+				</div>
+				<br>
+				<p>If you have any questions or comments about this Notice or our practices regarding your personal data, please contact us.</p>
+				<br>
+				<p>Dong-A ST Co. Ltd., acting as <strong>Controller</strong></p>
+				<p>64, Cheonho-Daero, Dongdaemun-Gu</p>
+				<p>Seoul 02587, Republic of Korea</p>
+				<p>email:  st_ciso@donga.co.kr</p>
+				<p>telephone:  +82 2 920 8254</p>
+				<br>
+				<p><strong>Data Protection Officer</strong></p>
+				<br>
+				<p>MyData-TRUST SA</p>
+				<p>Boulevard Initialis, 7 bt 3 – 7000 Mons (BELGIUM)</p>
+				<br><br>
+				<p><strong>For EU Data Protection Authorities</strong></p>
+				<p><a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">https://edpb.europa.eu/about-edpb/about-edpb/members_en</a></p>
+				<br>
+			</div>
+			<!-- //.popup_scroll -->
+			<div class="button"><a href="javascript:;" class="btn btn_01 modalClose">Close</a></div>
+		</div>
+		<!-- //.modal-wrapper -->
+	</div>
+	<!-- //#modal-product.modal-container -->
+</body>
+</html>

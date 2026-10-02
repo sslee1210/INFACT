@@ -1,0 +1,1530 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="멈추지 않는 도전과 노력으로 차별화된 의약품을 개발합니다." /><!-- 설명 -->
+<meta name="Keywords" CONTENT="(주)한국팜비오, 의약품 생산, 의약품 개발, 의약품 공급" /><!-- 키워드 -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="(주)한국팜비오" /><!-- 타이틀 -->
+<meta property="og:description" content="멈추지 않는 도전과 노력으로 차별화된 의약품을 개발합니다." /><!-- 설명 -->
+<meta property="og:image" content="http://www.pharmbio.co.kr/myimage.jpg" /><!-- 이미지 FULL URL 주소 -->
+<meta property="og:url" content="http://www.pharmbio.co.kr/" /><!-- FULL URL -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="(주)한국팜비오" /><!-- 타이틀 -->
+<meta name="twitter:description" content="멈추지 않는 도전과 노력으로 차별화된 의약품을 개발합니다." /><!-- 설명 -->
+<meta name="twitter:image" content="http://www.pharmbio.co.kr/myimage" /><!-- 이미지 FULL URL 주소 -->
+<meta name="twitter:domain" content="http://www.pharmbio.co.kr/" /><!-- FULL URL -->
+
+<link rel="alternate" href="http://www.pharmbio.co.kr/">
+<link rel="canonical" href="http://www.pharmbio.co.kr/">	<title>(주)한국팜비오</title>
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png" />
+
+	<link rel="Stylesheet" type="text/css" href="/css/jquery.lightbox-0.5.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/fullpage.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/default/base.css?v=1" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/default/index.css?v=1" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/default/layout.css?v=1" media="screen" />
+	<script type="text/javascript" charset="utf-8" src="https://www.pharmbio.co.kr/js/jquery-1.10.2.min.js"></script>
+	<script src="/js/fullpage.js"></script>
+	<script src="/js/swiper.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
+	<script src="/js/jquery.lightbox-0.5.js"></script>
+	<script src="/js/jquery.cookie.js"></script>
+	<script src="/js/jquery.bxslider.js"></script>
+	<script src="/js/index.js"></script>
+
+	<!-- AOS -->
+	<link rel="stylesheet" type="text/css" href="/css/aos.css"/>
+	<script src="/js/aos.js"></script>
+	<script>
+		$(function(){AOS.init({
+			delay: 0,
+			duration: 700,
+			easing: 'ease-in-sine',
+			once: true,
+			mirror: true,
+			anchorPlacement: 'top-bottom',
+		});})
+	</script>
+	<!-- AOS -->
+
+	<script type="text/javascript">
+		//window.onload role
+		$(document).ready(function(){
+			//주메뉴 제어 Begin
+			var bg_box = 'off';//필수 입력
+			var nav_cnt = 0;
+			$(window).scroll(function(){
+				var bg_box = 'off';
+				var sp = $(window).scrollTop();
+				if(sp > 83){
+					$('#header').addClass('scroll');
+				}else{
+					if(bg_box == 'off'){
+						$('#header').removeClass('scroll');
+					}
+				}
+			});
+			$('#header').mouseover(function(){
+				$('#header').addClass('over');
+				if(bg_box == 'off'){
+					bg_box = 'on';
+				}
+				var sp = $(window).scrollTop();
+			});
+			$('div#nav > ul > li').each(function(){
+				$(this).find('a:first').on('mouseover', function(){
+					$('#header').addClass('over');
+					$('.bg_box').addClass('on');
+					if(bg_box == 'off'){
+						bg_box = 'on';
+					}
+					var this_idx = $(this).parent().parent().index() + 1;
+					if(nav_cnt != this_idx){
+						$('div#nav ul li ul').hide();
+						$(this).parent().parent().find('ul').stop().slideDown(0);
+					}
+					nav_cnt = this_idx;
+					$('div#nav > ul > li').removeClass('on');
+					$(this).parent().parent().addClass('on');
+					$('div#nav ul li ul li').removeClass('on');
+					$(this).parent().parent().find('ul > li').addClass('on');
+					//for (var i = 0; i < menuImages.length; i++) { $('div#nav > ul > li:eq(' + i + ') > div > a > img').attr({ src: menuImages[i]['link'] }); }
+					//$(this).find('img').attr({ src: menuImages[$(this).parent().parent().index()]['hover'] });
+				});
+			});
+			$('div#nav > ul > li').each(function(){
+				$(this).find('ul').on('mouseover', function(){
+					$('div#nav > ul > li').removeClass('on');
+					$(this).parent().addClass('on');
+					$('div#nav ul li ul li').removeClass('on')
+					$(this).find('li').addClass('on');
+				});
+			});
+
+			$('#header').on('mouseleave', function(){
+				var sp = $(window).scrollTop();
+				bg_box = 'off';
+				$('div#nav > ul > li').removeClass('on');
+				$('div#nav > ul > li > ul > li').removeClass('on');
+				$('div#nav > ul > li > ul').stop().hide();
+				$('#header').removeClass('over');
+				$('.bg_box').removeClass('on');
+				nav_cnt = 0;
+			});
+			//주메뉴 제어 End
+
+			//언어별
+			$(".select_btn").on("click", function(e){
+				e.preventDefault();
+				if($(".option_list").css("display") == "none"){
+					$(".option_list").slideDown(200);
+				}else {
+					$(".option_list").slideUp(200);
+				}
+				$(".select_btn").toggleClass('on');
+			})
+
+			//2차 메뉴가 없을때 nosub 클래스 주기
+			$('.mobile_top > ul > li').each(function(){
+				if($(this).find('ul').index() != 1){
+					$(this).addClass('nosub');
+				}
+			});
+
+			//사이트맵
+            $('.mobile_top > ul').addClass('mbtop');
+            $('.mbtop > li > div > a').unwrap();
+            $('.mbtop > li > ul > li').each(function(){
+				if($(this).find('a:first').attr('href') == '#'){
+					$(this).find('a:first').attr('href',$(this).find(' > ul > li > a:first').attr('href'));
+				}
+			});
+
+
+			//사이트맵 버튼
+			$('.btn-gnb-menu').click(function(){
+				if($('#header').hasClass('open') == false){
+					$('#header').addClass('open');
+					//$('body,html').css('overflow','hidden');
+				}else{
+					$('#header').removeClass('open');
+					//$('body,html').css('overflow','visible');
+				}
+			});
+
+
+			//모바일 메뉴 작업
+			$('.mbtop > li > a').click(function(){
+				var mbtop_li = $(this).parent();
+				var midx = mbtop_li.index();
+
+				$('.mbtop > li > ul').removeClass('on');
+				$('.mbtop > li').each(function(){
+					if($(this).index() != midx){
+						$(this).removeClass('open_li');
+					}
+				});
+
+				if(mbtop_li.find('ul > li').length > 0){
+					if(mbtop_li.prop('class') == 'open_li'){
+						mbtop_li.removeClass('open_li');
+						mbtop_li.find('ul').removeClass('on');
+					}else{
+						mbtop_li.addClass('open_li');
+						mbtop_li.find('ul').addClass('on');
+					}
+					return false;
+				}
+			});
+
+			$('.topBtn').click(function () {
+				//$.fn.fullpage.setScrollingSpeed(0); 효과를 없애고싶을때
+				$.fn.fullpage.moveTo(1, 1); // 이동하고싶은 페이지
+				//$.fn.fullpage.setScrollingSpeed(700); 효과를 없애고싶을때
+			});
+
+            var proCount1 = 4;
+            var proCount2 = 4;
+            var proCount3 = 4;
+            var proCount4 = 4;
+
+			//웹 제품소개 슬라이드
+			var bullet = [];
+
+			if(proCount1 != 0){ bullet.push('<span class="bullet-text">전문의약품</span>'); }
+			if(proCount2 != 0){ bullet.push('<span class="bullet-text">일반의약품</span>'); }
+			if(proCount3 != 0){ bullet.push('<span class="bullet-text">의료기기</span>'); }
+			if(proCount4 != 0){ bullet.push('<span class="bullet-text">신제품</span>'); }
+
+			var product = new Swiper("#product .swiper-container", {
+				pagination: {
+					el: ".pro-pagination",
+					clickable: true,
+					renderBullet: function (index, className) {
+						return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+					}
+				},
+				navigation: {
+					nextEl: "#product .swiper-button-next",
+					prevEl: "#product .swiper-button-prev",
+				},
+			});
+
+			//모바일 제품소개 슬라이드
+			//참조 https://m.daewoong.co.kr/kr/main/index
+			//네비게이션 끝에 오면 다음 탭으로 넘어감
+			var mobileBullet = [];
+			
+									mobileBullet.push({ prdClass: '11', prdClassName: '전문의약품', });
+									mobileBullet.push({ prdClass: '11', prdClassName: '전문의약품', });
+									mobileBullet.push({ prdClass: '11', prdClassName: '전문의약품', });
+									mobileBullet.push({ prdClass: '11', prdClassName: '전문의약품', });
+							
+									mobileBullet.push({ prdClass: '12', prdClassName: '일반의약품', });
+									mobileBullet.push({ prdClass: '12', prdClassName: '일반의약품', });
+									mobileBullet.push({ prdClass: '12', prdClassName: '일반의약품', });
+									mobileBullet.push({ prdClass: '12', prdClassName: '일반의약품', });
+							
+									mobileBullet.push({ prdClass: '13', prdClassName: '의료기기', });
+									mobileBullet.push({ prdClass: '13', prdClassName: '의료기기', });
+									mobileBullet.push({ prdClass: '13', prdClassName: '의료기기', });
+									mobileBullet.push({ prdClass: '13', prdClassName: '의료기기', });
+							
+									mobileBullet.push({ prdClass: '14', prdClassName: '신제품', });
+									mobileBullet.push({ prdClass: '14', prdClassName: '신제품', });
+									mobileBullet.push({ prdClass: '14', prdClassName: '신제품', });
+									mobileBullet.push({ prdClass: '14', prdClassName: '신제품', });
+							
+			var productSwiper = new Swiper("#product-mob  .swiper-container", {
+				pagination: {
+					el: ".pro-pagination2",
+					clickable: true,
+					type : 'bullets',
+					renderBullet: function (index, className) {
+						console.log(bullet);
+						console.log(index);
+						var item = mobileBullet[index];
+						var pCount = 0;
+						switch(item.prdClass){
+							case '11': pCount = proCount1; break;
+							case '12': pCount = proCount2; break;
+							case '13': pCount = proCount3; break;
+							case '14': pCount = proCount4; break;
+						}
+						return '<div class="' + className + '"><span>' + '<span class="bullet-text" data-prdclass="'+item.prdClass+'" data-hide="'+ (index % pCount == 0 ? 'N': 'Y') +'" style="display:'+ (index%pCount == 0 ? 'block;': 'none;')+'">' + item.prdClassName + '</span>' + '</span></div>';
+					}
+				},
+				on: {
+					slideChange: function () {
+						var activeClass = 'swiper-pagination-bullet-active';
+						var prdClass = $('#product-mob div.' + activeClass).find('span.bullet-text').attr('data-prdclass');
+						$('#product-mob span.bullet-text[data-prdclass="' + prdClass + '"]').each (function (idx, el) {
+							var $target = $(this).parents('div.swiper-pagination-bullet');
+							if (!$target.hasClass(activeClass)) {
+								$target.addClass(activeClass);
+							}
+						});
+					}
+				},
+				navigation: {
+					nextEl: "#product-mob .swiper-button-next",
+					prevEl: "#product-mob .swiper-button-prev",
+				},
+				spaceBetween: 30
+			});
+
+			$('#product-mob span[data-hide="Y"]').each (function (idx, el) {
+				$(this).parents('div.swiper-pagination-bullet').css('display', 'none');
+			});
+
+			$(window).on('resize', function () {
+				if($(window).width() > 768) {
+					if (typeof product !== 'undefined') {
+						product.destroy();
+					}
+					//웹 제품소개 슬라이드
+					var product = new Swiper("#product .swiper-container", {
+						pagination: {
+							el: ".pro-pagination",
+							clickable: true,
+							renderBullet: function (index, className) {
+								return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+							}
+						},
+						navigation: {
+							nextEl: "#product .swiper-button-next",
+							prevEl: "#product .swiper-button-prev",
+						},
+						observer: true,
+						observeParents: true
+					});
+				} else{
+					$('#product-mob span[data-hide="Y"]').each (function (idx, el) {
+						$(this).parents('div.swiper-pagination-bullet').css('display', 'none');
+					});
+				}
+			});
+
+            $('.inbtn').click(function (){
+                if($('input[name="searchword"]').val() == '') {
+                    alert("검색어를 입력해주세요.");
+                    return false;
+                }
+               $('form[name="totalsearch"]').submit();
+            });
+		});
+
+		function handleResize() {
+			// 원하는 동작 실행
+			console.log('Window resized!');
+
+			// 이벤트 핸들러 제거
+			window.removeEventListener('resize', handleResize);
+		}
+
+		function termsPop(){
+			if($('#termsPop').hasClass('active') == false){
+				$('#termsPop').addClass('active');
+				$('body,html').css('overflow','hidden');
+			}else{
+				$('#termsPop').removeClass('active');
+				$('body,html').css('overflow','visible');
+			}
+			return false;
+		}
+		function privacyPop(){
+			if($('#privacyPop').hasClass('active') == false){
+				$('#privacyPop').addClass('active');
+				$('body,html').css('overflow','hidden');
+			}else{
+				$('#privacyPop').removeClass('active');
+				$('body,html').css('overflow','visible');
+			}
+			return false;
+		}
+
+		function popClose(){
+			$('.layerpop').removeClass('active');
+			$('body,html').css('overflow','visible');
+		}
+	</script>
+</head>
+<body>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<div id="header">
+			<!-- 탑메뉴 -->
+			<div class="header_inner">
+				<h1 class="logo"><a href="/index">(주)한국팜비오</a></h1>
+				<div id="nav" class="lnb">
+					
+<ul><li><div><a href="/content/4" title="기업소개">기업소개</a></div><ul><li><a href="/content/29" title="CEO 인사말">CEO 인사말</a></li><li><a href="/content/30" title="개요">개요</a></li><li><a href="/content/63" title="기업이념">기업이념</a></li><li><a href="/content/65" title="연혁">연혁</a></li><li><a href="/content/66" title="CI">CI</a></li><li><a href="/content/67" title="공장소개">공장소개</a></li><li><a href="/content/68" title="Global Network">Global Network</a></li></ul></li><li><div><a href="/content/1" title="연구개발">연구개발</a></div><ul><li><a href="/content/23" title="연구소 소개">연구소 소개</a></li><li><a href="/content/24" title="연구개발분야">연구개발분야</a></li><li><a href="/content/69" title="연구활동/성과">연구활동/성과</a></li></ul></li><li><div><a href="/content/2" title="제품정보">제품정보</a></div><ul><li><a href="/content/25" title="제품소식">제품소식</a></li><li><a href="/content/26" title="제품검색">제품검색</a></li></ul></li><li><div><a href="/content/70" title="기업홍보">기업홍보</a></div><ul><li><a href="/content/71" title="뉴스룸">뉴스룸</a></li><li><a href="/content/72" title="팜비오소식">팜비오소식</a></li><li><a href="/content/73" title="영상자료">영상자료</a></li></ul></li><li><div><a href="/content/74" title="NK메디텍">NK메디텍</a></div><ul><li><a href="/content/75" title="회사소개">회사소개</a></li><li><a href="/content/76" title="제품소개">제품소개</a></li><li><a href="/content/77" title="인재채용">인재채용</a></li><li><a href="/content/78" title="고객센터">고객센터</a></li><li><a href="/content/79" title="Contact us">Contact us</a></li></ul></li><li><div><a href="/content/80" title="인재채용">인재채용</a></div><ul><li><a href="/content/81" title="채용안내">채용안내</a></li><li><a href="/content/82" title="채용공고">채용공고</a></li><li><a href="/content/83" title="인재상">인재상</a></li><li><a href="/content/84" title="직무정보">직무정보</a></li><li><a href="/content/85" title="인사 및 복리후생">인사 및 복리후생</a></li></ul></li><li><div><a href="/content/92" title="KOR">KOR</a></div><ul><li><a href="/content/93" title="ENG">ENG</a></li></ul></li></ul>
+				</div>
+				<div class="tnb">
+					<ul>
+						<li><a href="/content/5">고객지원</a></li>
+						<li><a href="/content/89">윤리경영</a></li>
+						<li><a href="http://www.pharmbioshop.co.kr/main/main.html" target='_blank'>쇼핑몰</a></li>
+						<li class="lang">
+							<a href="#" class="select_btn">KOR <i class="xi-angle-down"></i></a>
+							<ul class="option_list">
+								<li><a href="/en" target="_blank">ENG</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- 햄버거메뉴 -->
+				<div class="btn-gnb-menu">
+					<button type="button" aria-label="menu_button" class="btnAll">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+				<div class="bg_box"></div>
+			</div>
+
+
+			<!-- 전체메뉴펼침 -->
+			<div id="menuAll">
+				<div id="navi">
+
+					<div class="mobile_top">
+						
+<ul><li><div><a href="/content/4" title="기업소개">기업소개</a></div><ul><li><a href="/content/29" title="CEO 인사말">CEO 인사말</a></li><li><a href="/content/30" title="개요">개요</a></li><li><a href="/content/63" title="기업이념">기업이념</a></li><li><a href="/content/65" title="연혁">연혁</a></li><li><a href="/content/66" title="CI">CI</a></li><li><a href="/content/67" title="공장소개">공장소개</a></li><li><a href="/content/68" title="Global Network">Global Network</a></li></ul></li><li><div><a href="/content/1" title="연구개발">연구개발</a></div><ul><li><a href="/content/23" title="연구소 소개">연구소 소개</a></li><li><a href="/content/24" title="연구개발분야">연구개발분야</a></li><li><a href="/content/69" title="연구활동/성과">연구활동/성과</a></li></ul></li><li><div><a href="/content/2" title="제품정보">제품정보</a></div><ul><li><a href="/content/25" title="제품소식">제품소식</a></li><li><a href="/content/26" title="제품검색">제품검색</a></li></ul></li><li><div><a href="/content/70" title="기업홍보">기업홍보</a></div><ul><li><a href="/content/71" title="뉴스룸">뉴스룸</a></li><li><a href="/content/72" title="팜비오소식">팜비오소식</a></li><li><a href="/content/73" title="영상자료">영상자료</a></li></ul></li><li><div><a href="/content/74" title="NK메디텍">NK메디텍</a></div><ul><li><a href="/content/75" title="회사소개">회사소개</a></li><li><a href="/content/76" title="제품소개">제품소개</a></li><li><a href="/content/77" title="인재채용">인재채용</a></li><li><a href="/content/78" title="고객센터">고객센터</a></li><li><a href="/content/79" title="Contact us">Contact us</a></li></ul></li><li><div><a href="/content/80" title="인재채용">인재채용</a></div><ul><li><a href="/content/81" title="채용안내">채용안내</a></li><li><a href="/content/82" title="채용공고">채용공고</a></li><li><a href="/content/83" title="인재상">인재상</a></li><li><a href="/content/84" title="직무정보">직무정보</a></li><li><a href="/content/85" title="인사 및 복리후생">인사 및 복리후생</a></li></ul></li><li><div><a href="/content/92" title="KOR">KOR</a></div><ul><li><a href="/content/93" title="ENG">ENG</a></li></ul></li></ul>
+					</div>
+					<div class="navi_addr">
+						<dl class="option">
+							<dd><a href="/content/5">고객지원</a></dd>
+							<dd><a href="/content/89">윤리경영</a></dd>
+							<dd><a href="http://www.pharmbioshop.co.kr/main/main.html"  target='_blank'>쇼핑몰</a></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+
+
+
+		<!-- container -->
+		<div id="container">
+			<div  id="fullpage">
+				<div id="page1" class=" section">
+					<!-- visual -->
+					<div id="visual" class="visual">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-swiper-autoplay="50000">
+									<div class="mv_txt inn">
+										<span class="">PHARMBIO KOREA INC.</span>
+										<h2>Creative Healthcare Group  </h2>
+										<p>멈추지 않는 도전과 노력으로<br class="mob"> 차별화된 의약품을 개발합니다. </p>
+									</div>
+									<div class="vod-wrap">
+										<video class="vod" id="hero-bg-video" preload="metadata" muted loop="true" autoplay="autoplay" playsinline data-autoplay loop muted >
+											<source src="/images/default/main/phambio_final.mp4?v=1" type="video/mp4"></source>
+										</video>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mv_txt inn">
+										<span class="">PHARMBIO KOREA INC.</span>
+										<h2>Quality of Life</h2>
+										<p>인류의 건강과 더나은 일상을 위해<br class="mob"> 한국팜비오가 함께 합니다.</p>
+									</div>
+									<div class="visual_bg" style="background-image:url('/images/default/main/visual03.jpg?v=1')"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="mv_txt inn">
+										<span class="">PHARMBIO KOREA INC.</span>
+										<h2>Global Leading Healthcare</h2>
+										<p>최고 품질의 우수한 의약품을<br class="mob"> 전세계로 공급하고 있습니다.</p>
+									</div>
+									<div class="visual_bg" style="background-image:url('/images/default/main/visual02.jpg?v=1')"></div>
+								</div>
+							</div>
+
+						</div>
+						<div class="controll">
+							<div class="visual-page swiper-pagination"></div>
+						</div>
+						<span class="scroll"><img src="/images/default/main/scroll.svg" alt="">scroll <i class="ri-arrow-down-s-line"></i></span>
+					</div>
+					<!-- //visual -->
+				</div>
+				<div id="page2" class=" section">
+					<!-- 제품소개 -->
+					<div class="cts1 ">
+						<div class="inner2">
+							<div class="title" data-aos="fade-up">
+								<h3>Product</h3>
+							</div>
+							<div class="search_wrap"  data-aos="fade-up"  data-aos-delay="100">
+								<form action="/search/pro_search" name="totalsearch" method="post">
+									<fieldset>
+										<div class="search_input_wrap">
+											<div class="typeahead">
+												<label for="query" class="blind">검색</label>
+												<input type="text" name="searchword" class="insearch" autocomplete="off" placeholder="제품검색" />
+												<input type="hidden" name="searchkey" value="subject content">
+											</div>
+											<a class="inbtn" style="cursor:pointer;"><img src="/images/default/main/ico-search.png"  alt=""></a>
+										</div>
+									</fieldset>
+								</form>
+								<ul>
+									<li><a href="/board/list/ph_pro/page/1/category/1">#소화기</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/3">#비뇨기</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/2">#면역/대사</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/6">#순환기</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/8">#철분제</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/7">#산부</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/13">#마취/통증</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/5">#호흡기</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/9">#호르몬제</a></li>
+									<li><a href="/board/list/ph_pro/page/1/category/11">#의료기기</a></li>
+								</ul>
+							</div>
+							<!-- 웹 제품 슬라이드 -->
+							<div class="con"  id="product"  data-aos="fade-up"  data-aos-delay="300">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- 전문의약품 4개-->
+																					<div class="swiper-slide">
+												<div class="prd-big">
+													<a href="/board/view/ph_pro/525">
+														<span class="thumb">
+																														<img src="/uploads/board/ph_pro/2254fc2592aa0eefaaa9a978badcda65.png" alt="">
+														</span>
+														<span class="txt">
+															
+															<span class="cate1">전문의약품</span>
+															<span class="subject">오라팡정</span>
+															<span class="cont">
+																환자가 편한 대장내시경 장정결제 알약															</span>
+														</span>
+													</a>
+												</div>
+												<div class="prd-list">
+																											<a href="/board/view/ph_pro/923">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/1c37a5b5d2b0a392d87c82dd792f646f.jpg" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate1">전문의약품</span>
+															<span class="subject">오라팡이지정</span>
+															<span class="cont">
+																환자가 편한 대장내시경 장정결제 알약															</span>
+														</span>
+														</a>
+																											<a href="/board/view/ph_pro/460">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/26b071c440fae481ca2e2aac017b84ad.png" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate1">전문의약품</span>
+															<span class="subject">메디아벤엘정</span>
+															<span class="cont">
+																혈관보강 및 부종 개선제															</span>
+														</span>
+														</a>
+																											<a href="/board/view/ph_pro/450">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/9b44416838422157733138ef63467f44.png" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate1">전문의약품</span>
+															<span class="subject">모노퍼주</span>
+															<span class="cont">
+																고용량 철분주사제															</span>
+														</span>
+														</a>
+																									</div>
+											</div>
+																				<!-- //전문의약품 4개-->
+
+										<!-- 일반의약품 4개 -->
+																					<div class="swiper-slide">
+												<div class="prd-big">
+													<a href="/board/view/ph_pro/523">
+														<span class="thumb">
+																														<img src="/uploads/board/ph_pro/ec809bf5e5f6e8a9abd304704fa49903.png" alt="1" />
+														</span>
+														<span class="txt">
+																														<span class="cate2">일반의약품</span>
+															<span class="subject">노자임캡슐</span>
+															<span class="cont">
+																한국인 임상으로 입증된 고단위 리파아제 소화효소제															</span>
+														</span>
+													</a>
+												</div>
+												<div class="prd-list">
+																											<a href="/board/view/ph_pro/524">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/145b210ee76ba487e109c14d6f604ab9.png" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate2">일반의약품</span>
+															<span class="subject">라시도필캡슐</span>
+															<span class="cont">
+																임상으로 입증된 글로벌 유산균															</span>
+														</span>
+														</a>
+																											<a href="/board/view/ph_pro/449">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/0f43ba2b544b817d82c09cf3b0a07e80.png" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate2">일반의약품</span>
+															<span class="subject">노페로캡슐</span>
+															<span class="cont">
+																수술 전, 후 빈혈 예방															</span>
+														</span>
+														</a>
+																											<a href="/board/view/ph_pro/488">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/a34b1a3c69697f2193212f00d3efcf56.png" alt="">
+															</span>
+															<span class="txt">
+																														<span class="cate2">일반의약품</span>
+															<span class="subject">쏘메토320mg연질캡슐</span>
+															<span class="cont">
+																보험 적용되는 쏘팔메토															</span>
+														</span>
+														</a>
+																									</div>
+											</div>
+																				<!-- //일반의약품 4개 -->
+
+										<!-- 의료기기 4개 -->
+																					<div class="swiper-slide">
+												<div class="prd-big">
+													<a href="/board/view/ph_pro/446">
+														<span class="thumb">
+																														<img src="/uploads/board/ph_pro/942618ea9156e2f06e3533055d0f2ffc.png" alt="">
+														</span>
+														<span class="txt">
+																														<span class="cate3">의료기기</span>
+															<span class="subject">이아루릴 프리필</span>
+															<span class="cont">
+																GAG층 수복을 통한 다양한 방광염의 치료															</span>
+														</span>
+													</a>
+												</div>
+												<div class="prd-list">
+																											<a href="/board/view/nk_pro/81">
+															<span class="thumb">
+																																<img src="/uploads/board/nk_pro/e68940c11f28b8de373ece7d22f5987a.png" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate3">의료기기</span>
+																<span class="subject">케어젤</span>
+																<span class="cont">
+																	항생제가 함유된 겔형, 콜라겐 흡수성 창상피복재																</span>
+															</span>
+														</a>
+																											<a href="/board/view/nk_pro/84">
+															<span class="thumb">
+																																<img src="/uploads/board/nk_pro/7a29f6fc97d80a21ffd130d516a578de.png" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate3">의료기기</span>
+																<span class="subject">콜라폼 A</span>
+																<span class="cont">
+																	수술부위 항균 작용 및 상처 치유																</span>
+															</span>
+														</a>
+																											<a href="/board/view/nk_pro/83">
+															<span class="thumb">
+																																<img src="/uploads/board/nk_pro/7b0b6c3af1425dce6bf8de4c456fbd14.png" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate3">의료기기</span>
+																<span class="subject">팜렉스</span>
+																<span class="cont">
+																	의료용 압박스타킹																</span>
+															</span>
+														</a>
+																									</div>
+											</div>
+																				<!-- //의료기기 4개 -->
+
+										<!-- 신제품 4개 -->
+																					<div class="swiper-slide">
+												<div class="prd-big">
+													<a href="/board/view/ph_pro/991">
+														<span class="thumb">
+																														<img src="/uploads/board/ph_pro/363a71f3f1941441fd4c0da3d0b4d57d.jpg" alt="">
+														</span>
+														<span class="txt">
+																														<span class="cate1">전문의약품</span>
+															<span class="subject">이부페인프리믹스주</span>
+															<span class="cont">
+																해열, 진통제															</span>
+														</span>
+													</a>
+												</div>
+												<div class="prd-list">
+																											<a href="/board/view/ph_pro/990">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/9f916b1898a96b0d2702e3fe75ba3fb9.jpg" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate1">전문의약품</span>
+																<span class="subject">라모론프리필드주</span>
+																<span class="cont">
+																	수술 후 오심, 구토 예방																</span>
+															</span>
+														</a>
+																											<a href="/board/view/ph_pro/989">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/6535d183cd7b7dfc0b83c7e4cb037b3c.jpg" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate1">전문의약품</span>
+																<span class="subject">라모론주</span>
+																<span class="cont">
+																	수술 후 오심, 구토 예방																</span>
+															</span>
+														</a>
+																											<a href="/board/view/ph_pro/988">
+															<span class="thumb">
+																																<img src="/uploads/board/ph_pro/bee288b579506218e5672312d3609aa2.jpg" alt="">
+															</span>
+															<span class="txt">
+																															<span class="cate1">전문의약품</span>
+																<span class="subject">엔도카인액</span>
+																<span class="cont">
+																	구강, 인두 점막 국소마취제																</span>
+															</span>
+														</a>
+																									</div>
+											</div>
+																				<!-- //신제품 4개 -->
+									</div>
+								</div>
+								<div class="">
+									<div class="swiper-pagination pro-pagination"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+							<!-- //웹 제품 슬라이드 -->
+
+							<!-- 모바일 제품 슬라이드 -->
+							<div class="con" id="product-mob"   data-aos="fade-up"  data-aos-delay="300">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- 전문의약품 4개-->
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/525">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/2254fc2592aa0eefaaa9a978badcda65.png" alt=""></span>
+																																																																			<span class="txt abc">
+																												<span class="cate1">전문의약품</span>
+														<span class="subject">오라팡정</span>
+														<span class="cont">
+															환자가 편한 대장내시경 장정결제 알약														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/923">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/1c37a5b5d2b0a392d87c82dd792f646f.jpg" alt=""></span>
+																																																																			<span class="txt abc">
+																												<span class="cate1">전문의약품</span>
+														<span class="subject">오라팡이지정</span>
+														<span class="cont">
+															환자가 편한 대장내시경 장정결제 알약														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/460">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/26b071c440fae481ca2e2aac017b84ad.png" alt=""></span>
+																																																																			<span class="txt abc">
+																												<span class="cate1">전문의약품</span>
+														<span class="subject">메디아벤엘정</span>
+														<span class="cont">
+															혈관보강 및 부종 개선제														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/450">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/9b44416838422157733138ef63467f44.png" alt=""></span>
+																																								<span class="txt abc">
+																												<span class="cate1">전문의약품</span>
+														<span class="subject">모노퍼주</span>
+														<span class="cont">
+															고용량 철분주사제														</span>
+													</span>
+												</a>
+											</div>
+																				<!-- //전문의약품 4개-->
+
+										<!-- 일반의약품 4개 -->
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/523">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/ec809bf5e5f6e8a9abd304704fa49903.png" alt=""></span>
+																																																																			<span class="txt">
+																												<span class="cate2">일반의약품</span>
+														<span class="subject">노자임캡슐</span>
+														<span class="cont">
+															한국인 임상으로 입증된 고단위 리파아제 소화효소제														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/524">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/145b210ee76ba487e109c14d6f604ab9.png" alt=""></span>
+																																																																			<span class="txt">
+																												<span class="cate2">일반의약품</span>
+														<span class="subject">라시도필캡슐</span>
+														<span class="cont">
+															임상으로 입증된 글로벌 유산균														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/449">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/0f43ba2b544b817d82c09cf3b0a07e80.png" alt=""></span>
+																																																																			<span class="txt">
+																												<span class="cate2">일반의약품</span>
+														<span class="subject">노페로캡슐</span>
+														<span class="cont">
+															수술 전, 후 빈혈 예방														</span>
+													</span>
+												</a>
+											</div>
+																					<div class="swiper-slide">
+												<a href="/board/view/ph_pro/488">
+																																																																					<span class="thumb"><img src="/uploads/board/ph_pro/a34b1a3c69697f2193212f00d3efcf56.png" alt=""></span>
+																																																																			<span class="txt">
+																												<span class="cate2">일반의약품</span>
+														<span class="subject">쏘메토320mg연질캡슐</span>
+														<span class="cont">
+															보험 적용되는 쏘팔메토														</span>
+													</span>
+												</a>
+											</div>
+																				<!-- //일반의약품 4개 -->
+
+										<!-- 의료기기 4개 -->
+																				<div class="swiper-slide">
+											<a href="/board/view/ph_pro/446">
+																																																																<span class="thumb"><img src="/uploads/board/ph_pro/942618ea9156e2f06e3533055d0f2ffc.png" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate3">의료기기</span>
+													<span class="subject">이아루릴 프리필</span>
+													<span class="cont">
+														GAG층 수복을 통한 다양한 방광염의 치료													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/nk_pro/81">
+																																																																<span class="thumb"><img src="/uploads/board/nk_pro/e68940c11f28b8de373ece7d22f5987a.png" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate3">의료기기</span>
+													<span class="subject">케어젤</span>
+													<span class="cont">
+														항생제가 함유된 겔형, 콜라겐 흡수성 창상피복재													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/nk_pro/84">
+																																																																<span class="thumb"><img src="/uploads/board/nk_pro/7a29f6fc97d80a21ffd130d516a578de.png" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate3">의료기기</span>
+													<span class="subject">콜라폼 A</span>
+													<span class="cont">
+														수술부위 항균 작용 및 상처 치유													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/nk_pro/83">
+																																							<span class="thumb"><img src="/uploads/board/nk_pro/7b0b6c3af1425dce6bf8de4c456fbd14.png" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate3">의료기기</span>
+													<span class="subject">팜렉스</span>
+													<span class="cont">
+														의료용 압박스타킹													</span>
+												</span>
+											</a>
+										</div>
+																				<!-- //의료기기 4개 -->
+
+										<!-- 신제품 4개 -->
+																				<div class="swiper-slide">
+											<a href="/board/view/ph_pro/991">
+																																																																<span class="thumb"><img src="/uploads/board/ph_pro/363a71f3f1941441fd4c0da3d0b4d57d.jpg" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate1">전문의약품</span>
+													<span class="subject">이부페인프리믹스주</span>
+													<span class="cont">
+														해열, 진통제													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/ph_pro/990">
+																																																																<span class="thumb"><img src="/uploads/board/ph_pro/9f916b1898a96b0d2702e3fe75ba3fb9.jpg" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate1">전문의약품</span>
+													<span class="subject">라모론프리필드주</span>
+													<span class="cont">
+														수술 후 오심, 구토 예방													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/ph_pro/989">
+																																																																<span class="thumb"><img src="/uploads/board/ph_pro/6535d183cd7b7dfc0b83c7e4cb037b3c.jpg" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate1">전문의약품</span>
+													<span class="subject">라모론주</span>
+													<span class="cont">
+														수술 후 오심, 구토 예방													</span>
+												</span>
+											</a>
+										</div>
+																				<div class="swiper-slide">
+											<a href="/board/view/ph_pro/988">
+																																							<span class="thumb"><img src="/uploads/board/ph_pro/bee288b579506218e5672312d3609aa2.jpg" alt=""></span>
+																																					<span class="txt">
+																										<span class="cate1">전문의약품</span>
+													<span class="subject">엔도카인액</span>
+													<span class="cont">
+														구강, 인두 점막 국소마취제													</span>
+												</span>
+											</a>
+										</div>
+																				<!-- //신제품 4개 -->
+									</div>
+								</div>
+								<div class="swiper-pagination pro-pagination2"></div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+							<!-- //모바일 제품 슬라이드 -->
+						</div>
+					</div>
+					<!-- //제품소개 -->
+				</div>
+
+				<div id="page3" class=" section">
+					<div class="cts2 inner">
+						<div class="title">
+							<h3 data-aos="fade-up" >CEO Message</h3>
+							<p data-aos="fade-up" data-aos-delay="100">(주)한국팜비오는 독자적인 기술과 제품 경쟁력을 바탕으로<br>
+							국내 시장을 넘어 해외 제약 시장으로 사업 영역을 확장해 나가고 있으며, <br>
+							과감한 R&D 투자와 끊임없는 기술 혁신으로 글로벌 헬스케어 그룹으로 도약하고 있습니다.</p>
+						</div>
+						<div class="ceo_wrap" data-aos="fade-up" data-aos-delay="200" >
+							<div class="img">
+								<img src="/images/default/main/ceo_img.png" alt="">
+							</div>
+
+							<div class="txt" >
+								"질병없는 건강한 사회를 만드는 '건강 동반자'가 되겠습니다." <br>
+								(주)한국팜비오는 1999년 창업 이래 환자를 위한 우수한 의약품을 개발하기 위해 최선의 노력을<br class="web">
+								다하고 있습니다. 인류의 건강이라는 목표를 이루기 위해 기술 개발에 아끼지 않고 투자하고 있으며,<br class="web">
+								이러한 노력을 거듭해 나가는 가운데 꾸준한 성장을 이어가고 있습니다.<br class="web">
+								정직을 근본으로 하는 경영 원칙을 바탕으로 환자에게 꼭 필요한 의약품, 환자의 삶의 질을 높여줄<br class="web">
+								의약품을 개발하기 위해 도전과 혁신으로 나아가겠습니다.<br>
+
+								<span class="">회장 <b>남봉길</b></span>
+								<p><a href="/content/29">Read More +</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page4" class=" section">
+					<div class="cts3 inner">
+						<div class="title" data-aos="fade-up" >
+							<h3>전 제형 생산이 가능한<br class="mob"> Total Healthcare Group</h3>
+						</div>
+						<ul data-aos="fade-up" data-aos-delay="200" >
+							<li>
+								<a href="/content/30">
+									<div class="txt">
+										<h4>기업개요</h4>
+										<p>더 나은 내일을 위한<br>  건강파트너<br>  (주)한국팜비오입니다</p>
+										<span class="arrow"><em>더보기</em></span>
+									</div>
+									<div class="img">
+										<img src="/images/default/main/cts02_01.png" alt="">
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/content/23">
+									<div class="txt">
+										<h4>연구소소개</h4>
+										<p>적극적인 연구개발로<br>  의약품 시장을 선도합니다.</p>
+										<span class="arrow"><em>더보기</em></span>
+									</div>
+									<div class="img">
+										<img src="/images/default/main/cts02_02.png" alt="">
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/content/67">
+									<div class="txt">
+										<h4>공장소개</h4>
+										<p>내용고형제, 내용액제, 주사제 등<br> 전 제형 생산이 가능한<br> 한국팜비오 제조시설을 소개합니다. </p>
+										<span class="arrow"><em>더보기</em></span>
+									</div>
+									<div class="img">
+										<img src="/images/default/main/cts02_03.png" alt="">
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="/content/75">
+									<div class="txt">
+										<h4>계열사소개</h4>
+										<p>의료기기, 바이오의<br> 약품 제조에 특화된<br> 자회사 엔케이메디텍입니다. </p>
+										<span class="arrow"><em>더보기</em></span>
+									</div>
+									<div class="img">
+										<img src="/images/default/main/cts02_04.png" alt="">
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="page5" class=" section">
+					<div class="cts4">
+						<div class="inner">
+							<div class="title ac"  data-aos="fade-up">
+								<h3>News Room</h3>
+							</div>
+							<p class="ar arrow"  data-aos="fade-up" data-aos-delay="100" ><a href="/board/news">바로가기 ></a></p>
+							<div class="gallery swiper-container" data-aos="fade-up" data-aos-delay="200" >
+								<div class="swiper-wrapper">
+																																							<div class="swiper-slide">
+											<a href="/board/view/news/992">
+												<div class="img" style="background:url('/uploads/board/news/d8e8ba8d3448b3aec7950240d4084cbf.png') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	장정결제서 IBD까지…한국팜비오, 환자 위한 '일편단심 R&amp;D'																																							</span>
+													<span class="date">2026-09-14</span>
+												</span>
+											</a>
+										</div>
+																													<div class="swiper-slide">
+											<a href="/board/view/news/983">
+												<div class="img" style="background:url('/uploads/board/news/4dfba41454883e079725f305fc73f4e3.jpg') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	한국팜비오 &quot;오라팡, 신기능 저하 환자서 안전성 확인&quot;																																							</span>
+													<span class="date">2026-07-08</span>
+												</span>
+											</a>
+										</div>
+																													<div class="swiper-slide">
+											<a href="/board/view/news/979">
+												<div class="img" style="background:url('/uploads/board/news/7fe59a18ecfc7a69d942508ce7bb2b40.png') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	“환자 중심의 치료 환경 개선 위해 총력 기울이겠다”																																							</span>
+													<span class="date">2026-06-08</span>
+												</span>
+											</a>
+										</div>
+																													<div class="swiper-slide">
+											<a href="/board/view/news/978">
+												<div class="img" style="background:url('/uploads/board/news/0a3397514e29271ecc2537096804a1c3.jpeg') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	한국팜비오 충주공장, ISO 14001·45001 동시 획득																																							</span>
+													<span class="date">2026-06-02</span>
+												</span>
+											</a>
+										</div>
+																													<div class="swiper-slide">
+											<a href="/board/view/news/977">
+												<div class="img" style="background:url('/uploads/board/news/b71b3da803d3a4830ca545b5e8ac23d8.jpg') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	한국팜비오, 가정의 달 축하금 6360만원 지급																																							</span>
+													<span class="date">2026-05-21</span>
+												</span>
+											</a>
+										</div>
+																													<div class="swiper-slide">
+											<a href="/board/view/news/976">
+												<div class="img" style="background:url('/uploads/board/news/ac79e2c91501ba1fbc53ab60e5e01204.jpg') no-repeat center center; background-size:cover;"><em>NEWS</em></div>
+												<span class="txt">
+													<span class="subject">	한국팜비오, '항생제 내성 대응' 전국 심포지엄…비뇨의학과 공략																																							</span>
+													<span class="date">2026-05-12</span>
+												</span>
+											</a>
+										</div>
+																																				</div>
+							</div>
+
+							<div class="gallery movie swiper-container" data-aos="fade-up">
+								<div class="swiper-wrapper">
+																														<div class="swiper-slide">
+																								<a href="/board/view/movie/943"><div class="vod" style="background:url('/uploads/board/movie/9f405eea9e3451f1d17bd70479ac4d0b.jpg') no-repeat center center; background-size:cover;"></div></a>
+											</div>
+																					<div class="swiper-slide">
+																								<a href="/board/view/movie/868"><div class="vod" style="background:url('/uploads/board/movie/a06b49a1e85e64212a5cd3a921af02a1.jpg') no-repeat center center; background-size:cover;"></div></a>
+											</div>
+																					<div class="swiper-slide">
+																								<a href="/board/view/movie/785"><div class="vod" style="background:url('/uploads/board/movie/936cabc144701f158c08c18a79b1e292.jpg') no-repeat center center; background-size:cover;"></div></a>
+											</div>
+																											</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="page6" class=" section">
+					<div class="cts5">
+						<div class="title ac">
+							<h3 data-aos="fade-up">Pharmbio People</h3>
+							<p data-aos="fade-up" data-aos-delay="100" >한국팜비오와 함께 새로운 도약을 이루고,<br>  성공의 길을 개척해 나갈 우수한 인재들의 지원을 기다립니다.</p>
+						</div>
+
+						<ul data-aos="fade-up" data-aos-delay="300" >
+							<li>
+								<a href="/content/81">
+									<span class="icon01"></span>
+									<span class="subject">채용 안내</span>
+									<span class="arrow"><em>더보기</em></span>
+								</a>
+							</li>
+							<li>
+								<a href="/board/recruit_pham">
+									<span class="icon02"></span>
+									<span class="subject">채용 공고</span>
+									<span class="arrow"><em>더보기</em></span>
+								</a>
+							</li>
+							<li>
+								<a href="/content/83">
+									<span class="icon03"></span>
+									<span class="subject">인재상</span>
+									<span class="arrow"><em>더보기</em></span>
+								</a>
+							</li>
+							<li>
+								<a href="/content/84">
+									<span class="icon04"></span>
+									<span class="subject">직무소개</span>
+									<span class="arrow"><em>더보기</em></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="page7" class="section fp-auto-height">
+					<!-- footer -->
+					<div id="footer">
+						<div class="inn">
+							<div class="ft_top">
+								<h3><img src="/images/default/main/ft_logo.svg" alt="(주)한국팜비오"/></h3>
+								<ul>
+									<li><span>대표이사</span> 남봉길, 남준상</li>
+									<li><span>전화번호</span> <p><a >02-587-2551</a><br class="mob"> (구입문의 :  ARS 2번 / 복약문의 : ARS 3번)</p></li>
+									<li><span>본 사</span> 서울시 서초구 논현로 83(양재동) A동 7층 </li>
+									<li><span>공 장</span> 충청북도 충주시 대소원면 첨단산업9로 36 </li>
+									<li><span>연 구 소</span> 경기도 성남시 중원구 우림라이온스 밸리 2차 A동 1704호 </li>
+								</ul>
+								<div class="ft_btn">
+									<a href="http://www.pharmbioshop.co.kr/main/main.html" class="btn" target='_blank'>쇼핑몰 이동 ></a>
+									<a class="topBtn"><em>위로</em></a>
+								</div>
+							</div>
+							<div class="ft_bottom">
+								<ul class="f_menu">
+									<li><a onclick="privacyPop()">개인정보처리방침</a></li>
+									<li><a onclick="termsPop()">&nbsp;이메일 무단수집거부</a></li>
+									<li><a href="https://crm.logisales.kr:10223/pharmbio_ws/">ㅣ 전자주문시스템</a></li>
+								</ul>
+								<p class="copy">©2024 PHARMBIOKOREA Inc. ALL RIGHTS RESERVED.</p>
+							</div>
+						</div>
+					</div>
+					<!-- //footer -->
+				</div>
+			</div>
+
+		</div>
+		<!-- //container -->
+		<div class="qbanner">
+			<a href="/content/75" title="엔케이메디텍 바로가기"><img src="/images/default/main/ft_banner.svg" alt="엔케이메디텍 바로가기"></a>
+		</div>
+
+
+	</div>
+	<!-- //wrap -->
+
+	<!-- 이메일수집거부 팝업 -->
+	<div class="layerpop" id="termsPop" >
+		<div class="popcon">
+			<button type="button" onclick="popClose()" class="popClose"><i class="xi-close"></i></button>
+			<div class="pop-head">
+				이메일 무단수집거부
+			</div>
+			<div class="pop-body">
+				<div class="con pd10">
+	<h4 class="mem_title">[이메일무단수집거부]</h4>
+	웹사이트내 이메일주소 무단 수집 거부 정책 안내입니다.<br/><br/>
+
+	본 웹사이트에 게제된 모든 이메일 주소는 개인정보보호법 15조(개인정보의 수집·이용)에 따라 개인정보를 수집할 수 있는 각 호의 경우를 제외하고, 무단으로 수집되는 것을 거부합니다.<br/><br/>
+
+	제15조(개인정보의 수집·이용)
+<br/><br/>
+	01 개인정보처리자는 다음 각 호의 어느 하나에 해당하는 경우에는 개인정보를 수집할 수 있으며 그 수집 목적의 범위에서 이용할 수 있다.<br/><br/>
+	
+	1. 정보주체의 동의를 받은 경우<br/>
+	2. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우<br/>
+	3. 공공기관이 법령 등에서 정하는 소관 업무의 수행을 위하여 불가피한 경우<br/>
+	4. 정보주체와의 계약의 체결 및 이행을 위하여 불가피하게 필요한 경우<br/>
+	5. 정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전 동의를 받을 수 없는 경우로서 명백히 정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우<br/>
+	6. 개인정보처리자의 정당한 이익을 달성하기 위하여 필요한 경우로서 명백하게 정보주체의 권리보다 우선하는 경우. 이 경우 개인정보처리자의 정당한 이익과 상당한 관련이 있고 합리적인 범위를 초과하지 아니하는 경우에 한한다.<br/><br/><br/>
+
+
+	02 개인정보처리자는 제1항제1호에 따른 동의를 받을 때에는 다음 각 호의 사항을 정보주체에게 알려야 한다.<br/>
+	다음 각 호의 어느 하나의 사항을 변경하는 경우에도 이를 알리고 동의를 받아야 한다.<br/><br/>
+
+	1. 개인정보의 수집·이용 목적<br/>
+	2. 수집하려는 개인정보의 항목<br/>
+	3. 개인정보의 보유 및 이용 기간<br/>
+	4. 동의를 거부할 권리가 있다는 사실 및 동의 거부에 따른 불이익이 있는 경우에는 그 불이익의 내용
+</div>			</div>
+		</div>
+	</div>
+	<!-- 개인정보처리방침 팝업 -->
+	<div class="layerpop" id="privacyPop" >
+		<div class="popcon">
+			<button type="button" onclick="popClose()" class="popClose"><i class="xi-close"></i></button>
+			<div class="pop-head">
+				개인정보처리방침
+			</div>
+			<div class="pop-body">
+				<script type="text/javascript">
+	$(function(){
+		$('.snb').hide();
+	});
+</script>
+
+<div class="agree-conts con">
+	<h3>제 1 장 총 칙</h3>
+	<p>(주)한국팜비오(이하 "회사")는 모든 이용자의 개인정보를 소중하게 생각하고 이용자의 개인정보를 효과적으로 관리하고 안전하게 보호하기 위하여 최선의 노력을 다하고 있습니다. 회사는 『개인정보보호법』을 비롯한 개인정보보호 관련 각종 법규를 준수하고 개인정보 처리방침을 제정하여 홈페이지를 통해 이용자가 언제나 쉽게 열람할 수 있도록 하고 있습니다.
+		또한 개인정보 처리방침과 각 사업부의 개별 개인정보 처리방침의 내용이 다를 경우에는 각 사업부의 개별 개인정보 처리방침을 우선 적용합니다.
+	</p>
+	<ul>
+		<li>1. 개인정보란, 생존하는 개인에 관한 정보로서 성명, 이메일, 주소, 전화번호 등에 의하여 당해 개인을 알아볼 수 있는 부호, 문자, 음성, 음향, 영상 및 생체특성 등에 관한 정보(당해 정보만으로는 특정 개인을 알아볼 수 없는 경우에도 다른 정보와 용이하게 결합하여 알아볼 수 있는 것을 포함)를 말합니다. </li>
+		<li>2. 회사는 이용자의 개인정보를 중요시하며, 개인정보보호와 관련된 각종 법규를 준수하고 있습니다. </li>
+		<li>3. 회사는 개인정보처리방침을 통하여 이용자가 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다. </li>
+		<li>4. 회사의 개인정보처리방침은 관련 법령 및 내부 운영 방침의 변경에 따라 변경될 수 있습니다. 개인정보처리방침이 변경되는 경우에는 그 이유 및 변경된 내용을 지체 없이 홈페이지를 통해 공지합니다. </li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 2 장 개인정보의 수집 및 이용목적 </h3>
+	<p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 개인정보 보호법에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+	<ul>
+		<li>1. 홈페이지 회원 가입 및 관리 </li>
+		<li class="list2">
+			회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별•인증, 회원자격 유지•관리, 제한적 본인확인제 시행에 따른 본인확인, 서비스 부정이용 방지, 만 14세 미만 아동의 개인정보 처리시 법정대리인의 동의여부 확인, 각종 고지•통지, 고충처리 등을 목적으로 개인정보를 처리합니다.
+		</li>
+		<li>2. 재화 또는 서비스 제공 </li>
+		<li class="list2">
+			서비스 제공, 계약서•청구서 발송, 콘텐츠 제공, 맞춤서비스 제공, 본인인증, 연령인증 등을 목적으로 개인정보를 처리합니다.
+		</li>
+		<li>3. 고충처리 </li>
+		<li class="list2">
+			민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락•통지, 처리결과 통보 등의 목적으로 개인정보를 처리합니다.
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 3 장 수집하는 개인정보의 항목 및 수집방법 </h3>
+	<p>
+		회사는 회원가입 및 서비스 제공을 위하여 아래와 같이 필요한 최소한의 개인정보만을 수집하며, 인종 및 민족, 사상 및 신조, 출신지 및 본적지, 정치적 성향 및 범죄기록, 건강상태 등 이용자의 인권을 현저하게 침해할 우려가 있는 개인정보는 수집하지 않습니다.
+		또한 회사 내에서의 설문조사나 이벤트 행사시 통계분석이나 경품제공 등을 위해 선별적으로 개인정보 입력을 요청할 수 있으나 이용자들의 사전 동의를 반드시 구할 것입니다.
+	</p>
+	<ul>
+		<li>1. 수집하는 개인정보의 항목 </li>
+		<li class="list2">
+			1) 일반회원가입<br/>
+			① 필수항목 : 이름, 연락처, 이메일주소<br/>
+			② 선택항목 : 주소, 직장명, 직장주소, 직장전화번호<br/>
+			2) 서비스 이용 또는 업무처리 과정에서 생성되어 수집될 수 있는 정보<br/>
+			- 서비스 이용시간/ 이용기록, 접속로그, 이용컨텐츠, 쿠키, 접속 IP, 결제기록<br/>
+		</li>
+		<li>2. 개인정보의 수집 방법 </li>
+		<li class="list2">
+			1) 홈페이지, 회원가입, 행사 응모 및 신청, 이벤트 참여 등 이용자가 입력한 개인정보<br/>
+			2) 서비스 이용 또는 업무 처리 과정에서 생성되거나 제휴사로부터의 제공, 생성정보 수집 툴을 통한 수집 등<br/>
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 4 장 개인정보의 처리 및 보유기간</h3>
+	<p>이용자의 개인정보는 원칙적으로 이용목적이 달성되면 지체 없이 파기하고 수집 시에 동의 받은 개인정보 보유•이용기간이 있다면 이 기간 내에서 개인정보를 처리합니다.
+		단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.
+	</p>
+	<ul>
+		<li>1. 내부 방침에 의한 정보보유 사유 </li>
+		<li class="list2">
+			1) 보존 항목 : 이름, 연락처, 이메일주소<br/>
+			2) 보존 근거 : 개인이 아닌 타인의 개인정보보호 도난 이용의 혼선 방지
+		</li>
+		<li>2. 관련법령에 의한 정보보유 사유</li>
+		<li class="list2">
+			1) 보존 항목 : 이름, 로그인 ID, 결제정보, 서비스 이용기록, 결제기록(탈퇴 시 가지고 있는 것들)<br/>
+			2) 보존 근거 : 전자상거래 등에서의 소비자보호에 관한 법률<br/>
+			3) 보존 기간<br/>
+			- 계약 또는 청약철회 등에 관한 기록 : 5년(전자상거래 등에서의 소비자보호에 관한 법률)<br/>
+			- 대금 결제 및 재화 등의 공급에 관한 기록 : 5년(전자상거래 등에서의 소비자보호에 관한 법률)<br/>
+			- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년(전자상거래 등에서의 소비자보호에 관한 법률)<br/>
+			- 본인확인에 관한 기록 : 6개월(정보통신망 이용촉진 및 정보보호 등에 관한 법률)<br/>
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 5 장 개인정보의 제 3자 제공에 관한 사항</h3>
+	<p>회사는 이용자의 개인정보를 '개인정보 처리방침'에서 명시한 범위 내에서 이용하며, 명시한 범위를 넘어서 제3자와 공유하거나 제공하지 않습니다. 다만, 다음의 경우에는 개인정보를 제3자에게 제공할 수 있습니다.</p>
+	<ul>
+		<li>1. 정보주체로부터 별도의 동의를 받은 경우</li>
+		<li>2. 법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+		<li>3. 정보주체 또는 그 법정대리인이 의사표시를 할 수 없는 상태에 있거나 주소불명 등으로 사전 동의를 받을 수 없는 경우로서 명백히 정보주체 또는 제3자의 급박한 생명, 신체, 재산의 이익을 위하여 필요하다고 인정되는 경우</li>
+		<li>4. 통계작성 및 학술연구 등의 목적을 위하여 필요한 경우로서 특정 개인을 알아볼 수 없는 형태로 개인정보를 제공하는 경우</li>
+		<li>5. 개인정보를 목적 외의 용도로 이용하거나 이를 제3자에게 제공하지 아니하면 다른 법률에서 정하는 소관업무를 수행할 수 없는 경우로서 보호위원회의 심의•의결을 거친 경우</li>
+		<li>6. 조약, 그 밖의 국제협정의 이행을 위하여 외국정부 또는 국제기구에 제공하기 위하여 필요한 경우</li>
+		<li>7. 범죄의 수사와 공소의 제기 및 유지를 위하여 필요한 경우</li>
+		<li>8. 법원의 재판업무 수행을 위하여 필요한 경우</li>
+		<li>9. 형(刑) 및 감호, 보호처분의 집행을 위하여 필요한 경우</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 6 장 정보주체의 권리•의무 및 행사방법</h3>
+	<p>
+		회사는 이용자의 개인정보를 보호하기 위하여 최선을 다하고 있습니다. 개인정보에 대한 개개인의 권한을 최대한 존중하여 언제든지 회사 웹사이트상의 [개인정보 수정]에서 개인정보를 열람, 수정, 삭제할 수 있습니다. 또한 언제든지 회원 탈퇴가 가능하며 탈퇴함으로써 회사의 개인정보 이용에 대한 동의를 철회할 수 있습니다. 회원 탈퇴의 경우 홈페이지나 메일 또는 전화로 요청이 가능합니다. 이 경우 회사는 지체 없이 조치해 드립니다.
+		만 14세 미만 아동의 경우, 법정대리인이 아동의 개인정보를 조회하거나 수정할 권리, 수집 및 이용 동의를 철회할 권리를 가집니다.
+	</p>
+	<br/><br/>
+
+	<h3>제 7 장 이용자 및 법정대리인의 권리•의무 및 행사방법</h3>
+	<ul>
+		<li>① 이용자는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</li>
+		<li class="list2">
+			1. 개인정보 열람요구<br/>
+			2. 오류 등이 있을 경우 정정 요구<br/>
+			3. 삭제요구<br/>
+			4. 처리정지 요구
+		</li>
+		<li>② 제1항에 따른 권리 행사는 회사에 대해 서면, 전화, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체없이 조치하겠습니다.</li>
+		<li>③ 이용자가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 회사는 정정 또는 삭제를 완료할 때까지 당해 개인정보를 이용하거나 제공하지 않습니다.</li>
+		<li>④ 만 14세 미만 아동의 경우, 제1항에 따른 권리 행사는 이용자의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우, 법정대리인은 이용자의 모든 권리를 가집니다.</li>
+		<li>⑤ 이용자는 정보통신망법, 개인정보보호법 등 관계법령을 위반하여 회사가 처리하고 있는 이용자 본인이나 타인의 개인정보 및 사생활을 침해하여서는 아니됩니다.</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 8 장 개인정보 자동 수집 장치의 설치•운영 및 거부</h3>
+	<p>회사는 이용자 개개인에게 개인화되고 맞춤화된 서비스를 제공하기 위해 이용자의 정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다.</p>
+	<ul>
+		<li>1. 쿠키의 사용 목적</li>
+		<li class="list2">
+			회원과 비회원의 접속 빈도나 방문 시간 등의 분석, 이용자의 취향과 관심분야의 파악 및 자취 추적, 각종 이벤트 참여 정도 및 방문 회수 파악 등을 통한 타겟 마케팅 및 개인 맞춤 서비스 제공
+		</li>
+		<li>2. 쿠키 설정 거부 방법</li>
+		<li class="list2">
+			이용자는 쿠키 설치에 대해 거부할 수 있습니다. 단, 쿠키 설치를 거부하였을 경우 로그인이 필요한 일부 서비스의 이용이 어려울 수 있습니다.<br/>
+			(설정방법, IE 기준)웹 브라우저 상단의 도구 > 인터넷 옵션 > 개인정보 > 사이트 차단
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 9 장 개인정보 자동 수집 장치의 설치•운영 및 거부</h3>
+	<p>회사는 이용자 개개인에게 개인화되고 맞춤화된 서비스를 제공하기 위해 이용자의 정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다.</p>
+	<ul>
+		<li>1. 쿠키의 사용 목적</li>
+		<li class="list2">
+			회원과 비회원의 접속 빈도나 방문 시간 등의 분석, 이용자의 취향과 관심분야의 파악 및 자취 추적, 각종 이벤트 참여 정도 및 방문 회수 파악 등을 통한 타겟 마케팅 및 개인 맞춤 서비스 제공
+		</li>
+		<li>2. 쿠키 설정 거부 방법</li>
+		<li class="list2">
+			이용자는 쿠키 설치에 대해 거부할 수 있습니다. 단, 쿠키 설치를 거부하였을 경우 로그인이 필요한 일부 서비스의 이용이 어려울 수 있습니다.<br/>
+			(설정방법, IE 기준)웹 브라우저 상단의 도구 > 인터넷 옵션 > 개인정보 > 사이트 차단
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 10 장 개인정보 파기에 관한 사항</h3>
+	<p>회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.
+		만약 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관 장소를 달리하여 보존합니다.
+	</p>
+	<ul>
+		<li>1. 파기절차</li>
+		<li class="list2">회사는 파기 사유가 발생한 개인정보를 선정하고 회사의 개인정보 보호책임자의 승인을 받아 개인정보를 파기합니다.</li>
+		<li>2. 파기방법</li>
+		<li class="list2">회사는 전자적 파일 형태로 기록•저장된 개인정보는 기록을 재생할 수 없도록 파기하며, 종이 문서에 기록•저장된 개인정보는 분쇄기로 분쇄하거나 소각하여 파기합니다.</li>
+		<li>3. 파기기한</li>
+		<li class="list2">이용자의 개인정보는 개인정보의 보유기간이 경과된 경우 보유기간의 종료일로부터 10일 이내에, 개인정보의 처리 목적 달성 등 그 개인정보가 불필요하게 되었을 때에는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 10일 이내에 그 개인정보를 파기합니다.</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 11 장 개인정보의 안정성 확보조치에 관한 사항</h3>
+	<p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+	<ul>
+		<li>1. 관리적 조치 : 내부관리계획 수립 및 시행, 정기적 직원 교육 등</li>
+		<li>2. 기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템설치, 고유식별정보 등의 암호화, 보안프로그램 설치</li>
+		<li>3. 물리적 조치 : 전산실, 자료보관실 등의 접근 통제</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 12 장 개인정보 보호책임자에 관한 사항</h3>
+	<p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.
+		이용자는 회사의 서비스를 이용하면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자 및 담당부서로 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체없이 답변 및 처리해 드릴 것입니다.
+	</p>
+	<ul>
+		<li>1. 개인정보 보호책임자</li>
+		<li class="list2">
+			- 성명 : 김순길<br/>
+			- 직책 : 상무보<br/>
+			- 연락처 : 02-587-2551 / sgnets@pharmbio.co.kr
+		</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 13 장 권익침해 구제방법</h3>
+	<p>이용자는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다.
+		아래의 기관은 회사와 별개의 기관으로서, 회사의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이필요하시면 문의하여 주시기 바랍니다.
+	</p>
+	<ul>
+		<li>1. 개인정보 침해신고센터 (한국인터넷진흥원 운영)</li>
+		<li class="list2">
+			- 홈페이지 : privacy.kisa.or.kr<br/>
+			- 전화 : (국번없이) 118<br/>
+			- 주소 : (138-950) 서울시 송파구 중대로 135 한국인터넷진흥원 개인정보침해신고센터
+		</li>
+		<li>2. 개인정보 분쟁조정위원회 (한국인터넷진흥원 운영) 소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</li>
+		<li class="list2">
+			- 홈페이지 : privacy.kisa.or.kr<br/>
+			- 전화 : (국번없이) 118<br/>
+			- 주소 : (138-950) 서울시 송파구 중대로 135 한국인터넷진흥원 개인정보침해신고센터
+		</li>
+		<li>3. 대검찰청 사이버범죄수사단 : 02-3480-3573 (www.spo.go.kr)</li>
+		<li>4. 경찰청 사이버테러대응센터 : 1566-0112 (www.netan.go.kr)</li>
+	</ul>
+	<br/><br/>
+
+	<h3>제 14 장 개인정보 처리방침 변경에 관한 사항</h3>
+	<p>이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 가능한 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
+		시행일 : 2018. 11. 09
+	</p>
+</div>			</div>
+		</div>
+	</div>
+
+	<style type="text/css">
+	.popup_web{display:block; }
+	.popup_mob{display:none}
+	.layerPopup{position: absolute;  top: 0;  left: 0; z-index:99999;  }
+	.chkvsb{display:flex; justify-content: space-between; background: #191919; color:#fff; padding:.5rem .5rem;}
+	.chkvsb p{cursor:pointer; font-size:.7rem;}
+	.chkvsb p i{vertical-align:text-top;}
+	
+	/*텍스트만 나올때 대비*/
+	.popup .text{background:#e0f2fe;padding:0.75rem 0.75rem 1rem; }
+	.popup .text img{display:block; height:1.5rem; margin:1rem auto 0;}
+	.popup .text > div{background:#fff; border-radius:0.5rem; padding:1rem; line-height:1.4; box-shadow:0 0 0.5rem rgba(0,0,0,0.1);}
+
+	@media (max-width:1300px){
+	}
+	@media (max-width:1030px){
+		.layerPopup{ height:100%; width: 100%;}
+		.popup_web{display:none;}
+		.popup_mob{display:block;}
+		.popup_mob .popup{position:absolute; left:50%; top:5rem; width:500px; transform:translate(-50%); box-shadow:0 0 20px rgba(0,0,0,0.4);background-color: #191919;}
+		.popup_mob .popup .swiper-pagination{bottom: 0;    position: relative;    background: #191919;}
+		.popup_mob .popup .swiper-pagination-bullet{width:.5rem; height:.5rem; border-radius:.25rem; background:#fff;}
+		.popup_mob .popup .swiper-pagination-bullet-active{width:1.5rem; background:#3b82f6;}
+		.chkvsb{padding:.75rem;}
+		.chkvsb p{ font-size:.85rem;}
+	}
+	@media (max-width:767px){
+		.popup_mob .popup{width:90%;}
+	}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// PC 레이어
+        $('.popup_web .btnCloseLayerPopup').click(function(){
+			var restPeriod = $(this).find('input[name="restPeriod"]').val();
+
+			try {$.cookie('popup' + $(this).data('idx'), '1', { path: '/', expires: restPeriod });}
+			catch (e) {}
+			finally {$('#layerPopup'+$(this).data('idx')).hide();}
+        });
+
+		$('.popup_web .popupClose').click(function() {
+			$(this).parent().parent().hide(500);
+			//$(this).parent().parent().hide();
+		});
+		// Mobile 레이어
+        $('.popup_mob .btnCloseLayerPopup').click(function(){
+			try {$.cookie('popup_mob', '1', { path: '/', expires: 1 });}
+			catch (e) {}
+			finally {$('.popup_mob').hide();}
+        });
+
+		$('.popup_mob .popupClose').click(function() {
+			$('.popup_mob').hide();
+		});
+
+		// 모바일 슬라이드설정
+        var swiper = new Swiper('.popup_mob .popup', {
+			loop: true,
+			loopAdditionalSlides: 1,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		  },
+		});
+	});
+
+</script>
+	<script>
+    $(document).ready(function(){
+		 // 윈도우 팝업을 띄워주면 된다.
+	        })
+</script>
+
+
+<!-- Running time: 0.0925sec / Memory used: 4.7MB -->
+</body>
+</html>

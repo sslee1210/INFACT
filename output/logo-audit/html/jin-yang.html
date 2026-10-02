@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="진양제약">
+	<meta property="og:url" content="http://jinyangpharm.com">
+	<meta property="og:image" content="http://jinyangpharm.com/theme/102114/kr/images/main/jinyang_og.jpg">
+	<meta property="og:description" content="의약품 제조업체, 푸라펜캅셀, 트리마정 등 제품, 연구개발 안내, 건강 정보 제공">
+	<meta name="description" content="의약품 제조업체, 푸라펜캅셀, 트리마정 등 제품, 연구개발 안내, 건강 정보 제공">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>진양제약</title> 
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/jquery.fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/tablet.css" />
+	<link rel="stylesheet" type="text/css" href="/theme/102114/kr/common/css/mobile.css" />
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript" src="/theme/102114/kr/common/js/main.js"></script>
+	<script type="text/javascript" src="/theme/102114/kr/common/js/jquery.fullpage.js"></script>
+	<script type="text/javascript" src="/theme/102114/kr/common/js/popup.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/fabeat/responsive-fullpage-scroll@v1.0.3/dist/fullpage-scroll.js"></script>
+	<script>
+		function ajax_popup(){
+			$.ajax({
+				type: "POST",
+				url: "/popup/ajax_popup",
+				/*data: "",*/
+				success: function(data){
+					if(data){
+						var rtn = $.parseJSON(data);
+						for(var i=0; i < rtn.id.length; i++){
+							//var a = new Array();
+							var o = new Object();
+							o.id = rtn.id[i];
+							o.layer_yn = rtn.layer_yn[i];
+							o.top = rtn.popup_top[i];
+							o.left = rtn.popup_left[i];
+							o.width = rtn.popup_width[i];
+							o.height = rtn.popup_height[i];
+							//a.push(o);
+							/*var param = {"id":rtn.id[i],"layer_yn":rtn.layer_yn[i],"top":rtn.popup_top[i],"left":rtn.popup_left[i],"width":rtn.popup_width[i],"height":rtn.popup_height[i]};*/
+							Popup.adapterPopup(o);
+						}
+					}
+				},
+				error:function(error){console.log('레이어팝업에러');}
+			});
+		}
+
+		$(document).ready(function(){
+			ajax_popup();
+		});
+	</script>
+</head>
+<body>
+	<div class="cover"></div>
+	<div class="mobile_menu">
+		<ul>
+								<li>
+				<a href="javascript:;" >기업정보</a>
+								<ul class="m_depth2">
+																	<li><a href="/html/14" target="_self">인사말</a></li>
+																							<li><a href="/html/16" target="_self">회사소개</a></li>
+																							<li><a href="/html/10" target="">공장소개</a></li>
+																							<li><a href="/html/11" target="">해외사업</a></li>
+																							<li><a href="https://recruit.jinyangpharm.com/recruit/recruit_step.html" target="_blank">채용정보</a></li>
+																							<li><a href="/html/55" target="_self">오시는 길</a></li>
+															</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >제품정보</a>
+								<ul class="m_depth2">
+																	<li><a href="/goods/list/18" target="">제품검색</a></li>
+																							<li><a href="/board/list/19" target="">제품소식</a></li>
+																							<li><a href="/drugstore/20" target="">약국찾기</a></li>
+															</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >연구개발</a>
+								<ul class="m_depth2">
+																	<li><a href="/html/21" target="">생명과학연구소</a></li>
+																							<li><a href="/html/22" target="">연구 분야</a></li>
+																							<li><a href="/html/23" target="">R&D Pipeline</a></li>
+															</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >IR</a>
+								<ul class="m_depth2">
+																	<li><a href="/stock/now/27" target="_self">주가 정보</a></li>
+																							<li><a href="/stock/balance/29" target="_self">재무 정보</a></li>
+																							<li><a href="/stock/dart/31" target="_self">IR</a></li>
+															</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >홍보</a>
+								<ul class="m_depth2">
+																	<li><a href="/board/list/33" target="">진양 소식</a></li>
+																							<li><a href="/board/list/35" target="_self">PR</a></li>
+															</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >온라인서비스</a>
+								<ul class="m_depth2">
+																	<li><a href="/board/list/37" target="">FAQ</a></li>
+																																		<li><a href="http://112.136.142.150:8080/ws-jinyang/" target="_blank">온라인 주문</a></li>
+																							<li><a href="http://112.136.142.150:8080/cso/" target="_blank">EDI 등록시스템</a></li>
+																										</ul>
+					
+			</li>
+				
+								<li>
+				<a href="javascript:;" >윤리준법경영</a>
+								<ul class="m_depth2">
+																	<li><a href="/html/41" target="">자율준수 의지천명</a></li>
+																							<li><a href="/html/42" target="">ISO 조직도 및 인사말</a></li>
+																							<li><a href="/html/43" target="">부패방지방침</a></li>
+																							<li><a href="/html/44" target="">부패신고</a></li>
+															</ul>
+					
+			</li>
+				
+						
+					
+		</ul>
+		<a href="javascript:;" class="m_close"></a>
+	</div>
+	<header>
+	
+		<div class="search_wrap">
+			<form class="search_box" action="/goods/list/18">
+				<input type="hidden" name="keyname" value="goodsnm" />	
+				<input type="text" name="keyword" value="" placeholder="검색할 제품명을 입력해 주세요." class="search_ip"><input type="submit" class="search_btn" value="" />
+			</form>
+		</div>
+		<div class="header_inner">
+			<a href="/" title="로고" class="header_logo"><img src="/theme/102114/kr/images/main/header_logo.png" alt="logo" /></a>
+			<div class="gnb">
+				<ul>
+														<li>
+						<a href="javascript:;" target="_self">
+							기업정보						</a>
+												<ul class="depth2">
+																				<li><a href="/html/14" target="_self">인사말</a></li>
+																											<li><a href="/html/16" target="_self">회사소개</a></li>
+																											<li><a href="/html/10" target="">공장소개</a></li>
+																											<li><a href="/html/11" target="">해외사업</a></li>
+																											<li><a href="https://recruit.jinyangpharm.com/recruit/recruit_step.html" target="_blank">채용정보</a></li>
+																											<li><a href="/html/55" target="_self">오시는 길</a></li>
+													
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							제품정보						</a>
+												<ul class="depth2">
+																				<li><a href="/goods/list/18" target="">제품검색</a></li>
+																											<li><a href="/board/list/19" target="">제품소식</a></li>
+																											<li><a href="/drugstore/20" target="">약국찾기</a></li>
+													
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							연구개발						</a>
+												<ul class="depth2">
+																				<li><a href="/html/21" target="">생명과학연구소</a></li>
+																											<li><a href="/html/22" target="">연구 분야</a></li>
+																											<li><a href="/html/23" target="">R&D Pipeline</a></li>
+													
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							IR						</a>
+												<ul class="depth2">
+																				<li><a href="/stock/now/27" target="_self">주가 정보</a></li>
+																											<li><a href="/stock/balance/29" target="_self">재무 정보</a></li>
+																											<li><a href="/stock/dart/31" target="_self">IR</a></li>
+													
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							홍보						</a>
+												<ul class="depth2">
+																				<li><a href="/board/list/33" target="">진양 소식</a></li>
+																											<li><a href="/board/list/35" target="_self">PR</a></li>
+													
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							온라인서비스						</a>
+												<ul class="depth2">
+																				<li><a href="/board/list/37" target="">FAQ</a></li>
+																																								<li><a href="http://112.136.142.150:8080/ws-jinyang/" target="_blank">온라인 주문</a></li>
+																											<li><a href="http://112.136.142.150:8080/cso/" target="_blank">EDI 등록시스템</a></li>
+																										
+						</ul>
+											</li>
+						
+														<li>
+						<a href="javascript:;" target="_self">
+							윤리준법경영						</a>
+												<ul class="depth2">
+																				<li><a href="/html/41" target="">자율준수 의지천명</a></li>
+																											<li><a href="/html/42" target="">ISO 조직도 및 인사말</a></li>
+																											<li><a href="/html/43" target="">부패방지방침</a></li>
+																											<li><a href="/html/44" target="">부패신고</a></li>
+													
+						</ul>
+											</li>
+						
+										
+									
+				</ul>
+			</div>
+			<div class="header_right">
+				<ul>
+					<li><a href="/en">EN</a></li>
+					<li><a href="javascript:;"><img src="/theme/102114/kr/images/main/icon.png" alt="스위치" class="lang_btn" /></a></li>
+					<li><a href="http://jinyang.thdays.gethompy.com/" class="on">KR</a></li>
+				</ul>
+				<a href="javascript:;" class="header_search"></a>
+				<div class="m_btn">
+					<a href="javascript:;"><span>전체메뉴</span></a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="section_wrap">
+		<section class="section section1">
+			<div class="visual_slide">
+				<div class="slide_txt">
+					<span>JINYANG For a Dazzling  Lifestyle</span>
+					<h3>
+						건강하고 행복한<br>
+						삶을 위한 빛
+					</h3>
+				</div>
+				<div class="slide_box">
+	<!-- 				<div class="">
+						<img src="/theme/102114/kr/images/main/slide_visual01.png" alt=""  class="pVer"/>
+						<img src="/theme/102114/kr/images/mobile/m_slide_visual01.png" alt="" class="mVer" />
+					</div>
+					<div class="">
+						<img src="/theme/102114/kr/images/main/slide_visual02.png" alt="" class="pVer" />
+						<img src="/theme/102114/kr/images/mobile/m_slide_visual02.png" alt="" class="mVer" />
+					</div>
+					<div class="">
+						<img src="/theme/102114/kr/images/main/slide_visual03.png" alt="" class="pVer" />
+						<img src="/theme/102114/kr/images/mobile/m_slide_visual03.png" alt=""  class="mVer"/>
+					</div>
+					<div class="">
+						<img src="/theme/102114/kr/images/main/slide_visual04.png" alt="" class="pVer" />
+						<img src="/theme/102114/kr/images/mobile/m_slide_visual04.png" alt="" class="mVer" />
+					</div> -->
+					<div class="">
+						<figure class="pVer" style="background-image:url('/theme/102114/kr/images/main/slide_visual01.png')"></figure>
+						<figure class="mVer" style="background-image:url('/theme/102114/kr/images/mobile/m_slide_visual01.png');"></figure>
+					</div>
+					<div class="">
+						<figure class="pVer" style="background-image:url('/theme/102114/kr/images/main/slide_visual02.png')"></figure>
+						<figure class="mVer" style="background-image:url('/theme/102114/kr/images/mobile/m_slide_visual02.png');"></figure>
+					</div>
+					<div class="">
+						<figure class="pVer" style="background-image:url('/theme/102114/kr/images/main/slide_visual03.png')"></figure>
+						<figure class="mVer" style="background-image:url('/theme/102114/kr/images/mobile/m_slide_visual03.png');"></figure>
+					</div>
+					<div class="">
+						<figure class="pVer" style="background-image:url('/theme/102114/kr/images/main/slide_visual04.png')"></figure>
+						<figure class="mVer" style="background-image:url('/theme/102114/kr/images/mobile/m_slide_visual04.png');"></figure>
+					</div>			
+				</div>
+			</div>
+		</section>
+		<section class="section section2">
+			<div class="section2_txt_top">
+				<h3>
+					High-tech<br>
+					Drug Development
+				</h3>
+				<span>
+					각종 질환에 대처하고, 국제화의 흐름에 맞춘 최첨단제약 기술 및 예방·치료제의<br>
+					연구개발을 목표로 연구합니다.
+				</span>
+			</div>
+			<div class="section2_txt_bottom">
+				<ul>
+					<li>
+						<h4>치료제 연구개발</h4>
+						<p>
+							생약제제의 개발 및 분석법 연구 등<br>
+							다수 의 연구과제 수행
+						</p>
+					</li>
+					<li>
+						<h4>항암제 개발</h4>
+						<p>
+							특정물질을 이용한 암치료제<br>
+							한국인 원천개발한 치료법 개발
+						</p>
+					</li>
+					<li>
+						<h4>공동 연구개발</h4>
+						<p>
+							비만 치료제인 특수영양식품을<br>
+							개발하여 국내특허 등록
+						</p>
+					</li>
+					<li>
+						<h4>분자생물학적 연구</h4>
+						<p>
+							백혈병치료제 신약에 대한<br>
+							분자생물학적 연구 임상시험 진행
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="section section3">
+			<div class="section3_txt">
+				<h3>Product</h3>
+				<p>
+					진양제약은 지속적인 연구개발을 통해 미래를 창조하는 가치있는<br>
+					발전에 빛을 비추고있습니다.
+				</p>
+				<a href="/goods/list/18" class="more_btn">VIEW MORE</a>
+				
+			</div>
+			<div class="rev_slider">
+								<div class="rev_slide">
+					<div class="slide_visual">
+						<a href="/goods/list/18?keyname=goodsnm&keyword=진토젯" target="_self">
+						<img src="/upload/banner/7af5ff121b1b9c91360d94c2e0c85fea.png" alt="진토젯정"/>
+						<h4>진토젯정</h4>
+						</a>
+					</div>
+				</div>
+								<div class="rev_slide">
+					<div class="slide_visual">
+						<a href="/goods/list/18?keyname=goodsnm&keyword=에스졸정" target="_self">
+						<img src="/upload/banner/75e6a378b33270a9a6dc999e27081178.png" alt="에스졸정"/>
+						<h4>에스졸정</h4>
+						</a>
+					</div>
+				</div>
+								<div class="rev_slide">
+					<div class="slide_visual">
+						<a href="/goods/view/18?goodsno=1&mid=18&category=&keyname=goodsnm&keyword=크리빅스&initial=" target="_self">
+						<img src="/upload/banner/7f169cc122c9c2530b3af1137172c7f8.png" alt="크리빅스"/>
+						<h4>크리빅스</h4>
+						</a>
+					</div>
+				</div>
+								
+			</div>
+		</section>
+		<section class="section section4">
+		  <span class="section4_logo"></span>
+		  <div class="section4_inner">
+			<h4>NEWS</h4>
+			<div class="sec4_table">
+				<ul class="news_list">
+										<li>
+						<a href="/board/view/33?boardno=49">
+							<p class="date">2021.09.30</p>
+							<h2 class="tit">진양제약, 부사장에 김금석 전무이사&#8230;</h2>
+							<p class="content">
+								진양제약(대표 최재준)은 10월 1일부로 김금석 전무이사를 생산본부 부사장으로 승진시키는&#8230;							</p>
+						</a>
+					</li>
+										<li>
+						<a href="/board/view/33?boardno=1">
+							<p class="date">2021.07.01</p>
+							<h2 class="tit">진양제약 창립 50주년</h2>
+							<p class="content">
+								
+
+&nbsp;
+
+&nbsp;
+
+
+
+진양제약 창립 50주년 기념사진
+							</p>
+						</a>
+					</li>
+										<li>
+						<a href="/board/view/33?boardno=12">
+							<p class="date">2019.12.23</p>
+							<h2 class="tit">진양제약,'ISO37001' 인증...윤리-청렴경영&#8230;</h2>
+							<p class="content">
+								진양제약이 부패방지경영시스템 글로벌스탠더드 &#39;ISO 37001&#39;(Anti-Bribery&#8230;							</p>
+						</a>
+					</li>
+										
+				</ul>
+			</div>
+			<div class="sec4_txt">
+				<ul>
+					<li class="ir">
+						<h4>주가정보</h4>
+						<div class="num">
+							<ul>
+								<li class="stock-down">
+																		<img src="/theme/102114/kr/images/main/down_icon.png" alt="down" />
+										
+									3,965								</li>
+								<!-- <li><img src="/theme/102114/kr/images/main/up_icon.png"/>6,630</li>
+								<li><img src="/theme/102114/kr/images/main/up_icon.png"/>6,630</li>
+								<li><img src="/theme/102114/kr/images/main/up_icon.png"/>6,630</li> -->
+							</ul>
+						</div>
+					</li>
+					<li class="day">
+						<h4>전일대비</h4>
+						<div class="num">
+							<ul>
+								<li class="stock-down">
+																		<img src="/theme/102114/kr/images/main/down_icon.png" alt="down" />
+										
+									-								</li>
+								<!-- <li><img src="/theme/102114/kr/images/main/up_icon.png"/>1,230</li>
+								<li><img src="/theme/102114/kr/images/main/up_icon.png"/>1,230</li>
+								<li><img src="/theme/102114/kr/images/main/up_icon.png"/>1,230</li> -->
+							</ul>
+						</div>
+					</li>
+					<li class="rate">
+						<h4>등락률</h4>
+						<div class="num">
+							<ul>
+								<li>0.00%</li>
+								<!-- <li>12.34%</li>
+								<li>12.34%</li>
+								<li>12.34%</li> -->
+							</ul>
+						</div>
+					</li>
+					<li class="volume">
+						<h4>거래량</h4>
+						<div class="num">
+							<ul>
+								<li>3,977</li>
+								<!-- <li>567억</li>
+								<li>567억</li>
+								<li>567억</li> -->
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		  </div>
+		</section>
+		<section class="section section5">
+			<div class="sec5_inner">
+				<div class="sec5_txt">
+					<ul>
+						<li>
+							<p><span class="txt_point">J</span>ust</p>
+							<span class="txt">공정하고</span>
+						</li>
+						<li>
+							<p><span class="txt_point">U</span>nique</p>
+							<span class="txt">유일하며</span>
+						</li>
+						<li>
+							<p><span class="txt_point">S</span>mart</p>
+							<span class="txt">똑똑하고</span>
+						</li>
+						<li>
+							<p><span class="txt_point">T</span>ruthful</p>
+							<span class="txt">정직한</span>
+						</li>
+					</ul>
+				</div>
+				<div class="sec5_txt_bt">
+					<h4>
+						JINYANG<br>
+						<span>PHARM</span>
+					</h4>
+					<p>
+						진양인의 역량 개발을 위한 인사운영과<br>
+						다양한 복지혜택 제공을 통해 개인과<br>
+						회사 모두의 성장을 추구합니다.<br> 
+						함께 미래를 향해 도전할 진양인을 기다립니다.
+					</p>
+				</div>
+				<div class="sec5_btn">
+					<a href="https://recruit.jinyangpharm.com/html/recruit_board.html" target="_blank">채용정보</a>	
+					<a href="https://recruit.jinyangpharm.com/recruit/recruit_step.html" target="_blank">온라인 입사지원</a>	
+				</div>
+			</div>
+		</section>
+		<footer class="section footer_wrap fp-auto-height">
+			<div class="footer_inner">
+				<div class="ft_left">
+					<img src="/theme/102114/kr/images/main/footer_logo.png" alt="footer_logo" class="footer_logo"/>
+					<span class="copy">
+						COPYRIGHT ⓒ JINYANGPHARM.<br>
+						All RIGHTS RESERVED
+					</span>
+				</div>
+				<div class="ft_right">
+					<h3>
+						생명의 소중함과 함께하는 진양제약
+					</h3>
+					<div class="right_box">
+						<a href="/html/55" class="add">서울특별시 서초구 효령로 231&nbsp <span>진양제약 사옥</span></a>
+						<ul>
+							<li><a href="/html/61">고객지원</a></li>
+							
+							<li><a href="http://112.136.142.150:8080/cso/" target="_blank">EDI등록시스템</a></li>
+							<li><a href="/html/44">부패신고</a></li>
+							<li><a href="http://112.136.142.150:8080/ws-jinyang/" target="_blank">온라인 주문</a></li>
+							<li><a href="/html/55">오시는길</a></li>
+							<li><a href="/html/60" class="gain">개인정보처리방침</a></li>
+						</ul>
+					</div>
+					<span class="email">jyp@jinyangpharm.com</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$('#section_wrap').fullpage({
+					//options here
+				//autoScrolling:true,
+				//scrollHorizontally: true
+					'anchors': ['Home', 'Hightech', 'Product', 'NEWS', 'PHARM','Footer'],
+					navigation:true,
+					navigationPosition:'right',
+					css3: true,
+					  
+					afterLoad: function(anchorLink, index) {
+					  // 페이지 로딩 후 Full Page 작동시...
+					  setTimeout(function(){
+						$("body").addClass("mainView");
+					  }, 1000);
+					  
+					  if (index == 1) {
+						  $('.section1 .visual_slide .slide_txt').addClass('on')
+					  }
+
+					},
+					
+					onLeave : function(anchorLink,index) {
+                        //after loading a section, perform these functions
+						
+                        if (index == 1 || anchorLink == 'Home'){
+							$('#fp-nav ul li a, .fp-slidesNav ul li a').removeClass('on')
+                        }
+                        if (index == 2 || anchorLink == 'Hightech'){
+							$('.section2 .section2_txt_top').addClass('on')
+							$('.section2 .section2_txt_bottom ul li').addClass('on')
+							$('#fp-nav ul li a, .fp-slidesNav ul li a').removeClass('on')
+                        }
+
+                        if(index == 3 || anchorLink == 'Product'){
+							$('.section3 .slick-slider').addClass('on')
+                          $('#fp-nav ul li a, .fp-slidesNav ul li a').removeClass('on')
+                        }
+
+                        if(index == 4 || anchorLink == 'NEWS') {
+						 $('.section4 .section4_logo').addClass('on')
+						 $('.section4 .section4_inner .sec4_table').addClass('on')
+						 $('.section4 .section4_inner .sec4_txt').addClass('on')
+                         $('#fp-nav ul li a, .fp-slidesNav ul li a').addClass('on')
+                         $('#fp-nav ul li:nth-child(4) a:before').addClass('on')
+                        }
+                        if(index == 5 || anchorLink == 'PHARM') {
+							 $('.section5 .sec5_inner .sec5_txt').addClass('on')
+							 $('.section5 .sec5_inner .sec5_txt_bt').addClass('on')
+						  $('.section5 .sec5_inner .sec5_txt ul li').addClass('on')
+                          $('#fp-nav ul li a, .fp-slidesNav ul li a').removeClass('on')
+                        }
+                    }
+
+				});
+				
+		
+
+		});
+	
+	</script>
+	 
+</body>
+</html>

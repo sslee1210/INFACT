@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>환인제약</title>
+<link rel="stylesheet" href="https://www.whanin.com/_theme/basic/css/default.css?ver=171222">
+<link rel="stylesheet" href="https://www.whanin.com/_theme/basic/css/main.css?ver=171222">
+<!--[if lte IE 8]>
+<script src="https://www.whanin.com/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.whanin.com";
+var g5_bbs_url   = "https://www.whanin.com/_commonBase";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+
+
+<script src="https://www.whanin.com/js/jquery-1.12.4.min.js"></script>
+<script src="https://www.whanin.com/js/jquery.menu.js?ver=171222"></script>
+<script src="https://www.whanin.com/js/common.js?ver=171222"></script>
+<script src="https://www.whanin.com/js/wrest.js?ver=171222"></script>
+<script src="https://www.whanin.com/js/placeholders.min.js"></script>
+<script src="https://www.whanin.com/js/tab.js" ></script>
+<script src="https://www.whanin.com/js/modal.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/default.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/common.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/contents.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/Layout_m.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/style.css" media="screen, print" />
+
+
+<link rel="stylesheet" href="https://www.whanin.com/_theme/basic/css/fullpage.css" />
+<link rel="stylesheet" type="text/css" href="https://www.whanin.com/_theme/basic/css/product.css" media="screen, print" />
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<!--
+<link rel="stylesheet" href="https://www.whanin.com/js/font-awesome/css/font-awesome.min.css">
+-->
+</head>
+
+<script>
+$(document).ready(function(){
+
+	
+	$('#toggle_search').click(function(){
+
+		$('#search_f').slideToggle();
+	});
+
+	$('.btn-close').click(function(){
+		$('.bg-gnb').css('display','none');
+		$('body').removeClass('fixed');
+	});
+
+	
+	$('#m-nav > .nav > div').click(function(){
+
+		$('.active').children('ul').slideToggle("slow" );
+		$('#m-nav > .nav > div').removeClass('active');
+		$(this).addClass('active');
+		$(this).children('ul').slideToggle("slow" );
+	});
+
+	$('ul.topngb > li').hover(
+		function(){
+			view_search_f();
+			$(this).children('.submenu').slideToggle();
+			$(this).children('a').addClass('on');
+		},
+		function(){
+			$(this).children('.submenu').css('display','none');
+			$(this).children('a').removeClass('on');
+		}
+	);
+
+	$('.bg-gnb').click(function(){
+		$('.bg-gnb').css('display','none');
+		$('body').removeClass('fixed');
+		$('.site_map').css('display', 'none');
+	});
+
+	$('.sitemap_close').click(function(){
+		$('.bg-gnb').css('display','none');
+		$('.site_map').css('display', 'none');
+	});
+
+});
+
+	function view_mmenu(){
+		var wwidth = $(window).width();
+		if(wwidth < 1200){
+			$('.bg-gnb').css('display','block');
+			$('body').addClass('fixed');
+		}else{
+			$('.bg-gnb').css('display','block');
+			$('.site_map').fadeIn();
+		}
+	}
+
+	function view_search_f(){
+		if($('#search_f').is(":visible")){
+			$('#search_f').css('display','none');
+		}
+	}
+
+
+</script>
+</head>
+<body>
+<div id="wrap">
+ <!-- header -->
+	<div id="header" >
+		 
+		<div id="top">
+		<h1><a href="https://www.whanin.com"><img src="https://www.whanin.com/_theme/basic/img/ci.png" alt="환인제약 " /></a></h1>
+		<!-- navi-->
+			<div id="navi" >
+		
+			<ul class="topntop topntop_02">
+				<li><a href="#" onclick ="return false;"  id="toggle_search"></a></li>
+				<li><a href="#" onclick ="view_mmenu();"></a></li>
+				
+			</ul>
+			<ul class="topntop topntop_01">
+				<li><a href="https://www.whanin.com/?lang=kor" class="changelang changelang-kr on">KOR</a></li>
+				<li><a href="https://www.whanin.com/?lang=eng" class="changelang changelang-en ">ENG</a></li>
+			</ul>
+		
+
+
+			<ul class='topngb'>
+								<li>
+					<a href="#" target="_self"
+					class="">기업</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>질병의 고통을 멀리하고<br>생명의 소중함을 추구하는 기업</p>		
+							<ul class='head_coperation'>
+																	<li><a href="/_commonBase/content.php?co_id=ceo" target="_self"><span>CEO 인사말</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=philosophy" target="_self"><span>기업이념</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=history" target="_self"><span>연혁</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=ethical_n_01" target="_self"><span>지속가능경영</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=inlicense_kor" target="_self"><span>파트너십</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=location" target="_self"><span>찾아오시는길</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+								<li>
+					<a href="#" target="_self"
+					class="">R&D</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>차별화된 R&D 역량과<br>오픈이노베이션을 통한<br>새로운 가치 창출</p>		
+							<ul class='head_rnd'>
+																	<li><a href="/_commonBase/content.php?co_id=introduction" target="_self"><span>연구소 소개</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=organization" target="_self"><span>연구 조직</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=pipeline" target="_self"><span>파이프라인</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=innovation_1" target="_self"><span>오픈이노베이션</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+								<li>
+					<a href="#" target="_self"
+					class="">제품</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>환인제약의 다양한 제품을<br>소개합니다</p>		
+							<ul class='head_product'>
+																	<li><a href="/_product/list.php" target="_self"><span>제품정보</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/board.php?bo_table=notice_pchange" target="_self"><span>제품소식</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+								<li>
+					<a href="#" target="_self"
+					class="">투자</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>환인제약은 고객의 건강을<br>최우선의 가치로 여깁니다</p>		
+							<ul class='head_investment'>
+																	<li><a href="/_commonBase/content.php?co_id=business" target="_self"><span>사업개요</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/board.php?bo_table=irm" target="_self"><span>IR자료</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+								<li>
+					<a href="#" target="_self"
+					class="">홍보</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>최신소식을 알려드립니다</p>		
+							<ul class='head_promotion'>
+																	<li><a href="/_commonBase/board.php?bo_table=notice" target="_self"><span>공지사항</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=prmaterials" target="_self"><span>홍보자료</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=prize" target="_self"><span>환인정신의학상</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=qa" target="_self"><span>고객센터</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+								<li>
+					<a href="#" target="_self"
+					class="">채용</a>
+					<div class='submenu'>
+						<div class='submenu_div'>
+							<p>환인제약과 함께 할<br>인재를 모십니다</p>		
+							<ul class='head_recruit'>
+																	<li><a href="/_commonBase/content.php?co_id=talent" target="_self"><span>인재상</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/_commonBase/content.php?co_id=recruitinfo" target="_self"><span>채용안내</span><span class='icon_sp'></span></a></li>
+																	<li><a href="/recruit/recruit_info.php" target="_self"><span>채용공고</span><span class='icon_sp'></span></a></li>
+															</ul>
+						</div>
+					</div>
+				</li>
+							</ul>
+
+			</div>
+			<!-- navi end-->
+		</div>
+		 
+		<div id="search_f" >
+			<div>
+				<form action='/_commonBase/search.php' method='GET'>
+					<input type='hidden' name='sfl' value='wr_subject||wr_content' />
+					<input type='text' name='stx' /><input type='submit' value='검색' /></form>
+			</div>
+		</div>	
+
+	</div>
+
+
+	<!-- Mobile Nav -->
+	<div id="m-nav" >
+		<div class="etc">
+			<a href="https://www.whanin.com/?lang=kor" class="changelang changelang-kr on">KOR</a>
+			<a href="https://www.whanin.com/?lang=eng" class="changelang changelang-en ">ENG</a>
+			
+		</div>
+		<div class="nav">
+						<div>
+				<h2><a href="#" target="_self">기업</a></h2>
+				<ul>
+											<li><a href="/_commonBase/content.php?co_id=ceo" target="_self">CEO 인사말</a></li>
+											<li><a href="/_commonBase/content.php?co_id=philosophy" target="_self">기업이념</a></li>
+											<li><a href="/_commonBase/content.php?co_id=history" target="_self">연혁</a></li>
+											<li><a href="/_commonBase/content.php?co_id=ethical_n_01" target="_self">지속가능경영</a></li>
+											<li><a href="/_commonBase/content.php?co_id=inlicense_kor" target="_self">파트너십</a></li>
+											<li><a href="/_commonBase/content.php?co_id=location" target="_self">찾아오시는길</a></li>
+									</ul>
+			</div>
+						<div>
+				<h2><a href="#" target="_self">R&D</a></h2>
+				<ul>
+											<li><a href="/_commonBase/content.php?co_id=introduction" target="_self">연구소 소개</a></li>
+											<li><a href="/_commonBase/content.php?co_id=organization" target="_self">연구 조직</a></li>
+											<li><a href="/_commonBase/content.php?co_id=pipeline" target="_self">파이프라인</a></li>
+											<li><a href="/_commonBase/content.php?co_id=innovation_1" target="_self">오픈이노베이션</a></li>
+									</ul>
+			</div>
+						<div>
+				<h2><a href="#" target="_self">제품</a></h2>
+				<ul>
+											<li><a href="/_product/list.php" target="_self">제품정보</a></li>
+											<li><a href="/_commonBase/board.php?bo_table=notice_pchange" target="_self">제품소식</a></li>
+									</ul>
+			</div>
+						<div>
+				<h2><a href="#" target="_self">투자</a></h2>
+				<ul>
+											<li><a href="/_commonBase/content.php?co_id=business" target="_self">사업개요</a></li>
+											<li><a href="/_commonBase/board.php?bo_table=irm" target="_self">IR자료</a></li>
+									</ul>
+			</div>
+						<div>
+				<h2><a href="#" target="_self">홍보</a></h2>
+				<ul>
+											<li><a href="/_commonBase/board.php?bo_table=notice" target="_self">공지사항</a></li>
+											<li><a href="/_commonBase/content.php?co_id=prmaterials" target="_self">홍보자료</a></li>
+											<li><a href="/_commonBase/content.php?co_id=prize" target="_self">환인정신의학상</a></li>
+											<li><a href="/_commonBase/content.php?co_id=qa" target="_self">고객센터</a></li>
+									</ul>
+			</div>
+						<div>
+				<h2><a href="#" target="_self">채용</a></h2>
+				<ul>
+											<li><a href="/_commonBase/content.php?co_id=talent" target="_self">인재상</a></li>
+											<li><a href="/_commonBase/content.php?co_id=recruitinfo" target="_self">채용안내</a></li>
+											<li><a href="/recruit/recruit_info.php" target="_self">채용공고</a></li>
+									</ul>
+			</div>
+						</div>
+			<a href="#" class="btn-close"></a>
+	</div>
+	<div class="site_map" >
+		<div>
+			<div class="sitemap_title">
+				SITEMAP
+				<a class="sitemap_close"><img src="/_theme/basic/img/icon_modal_close.png" alt="창 닫기"></a>
+			</div>
+			<ul class='sitemap'>
+			<li><a href='#'>기업</a><ul><li><a href='/_commonBase/content.php?co_id=ceo'>CEO 인사말</a><li><li><a href='/_commonBase/content.php?co_id=philosophy'>기업이념</a><li><li><a href='/_commonBase/content.php?co_id=history'>연혁</a><li><li><a href='/_commonBase/content.php?co_id=ethical_n_01'>지속가능경영</a><li><li><a href='/_commonBase/content.php?co_id=inlicense_kor'>파트너십</a><li><li><a href='/_commonBase/content.php?co_id=location'>찾아오시는길</a><li></ul></li><li><a href='#'>R&D</a><ul><li><a href='/_commonBase/content.php?co_id=introduction'>연구소 소개</a><li><li><a href='/_commonBase/content.php?co_id=organization'>연구 조직</a><li><li><a href='/_commonBase/content.php?co_id=pipeline'>파이프라인</a><li><li><a href='/_commonBase/content.php?co_id=innovation_1'>오픈이노베이션</a><li></ul></li><li><a href='#'>제품</a><ul><li><a href='/_product/list.php'>제품정보</a><li><li><a href='/_commonBase/board.php?bo_table=notice_pchange'>제품소식</a><li></ul></li><li><a href='#'>투자</a><ul><li><a href='/_commonBase/content.php?co_id=business'>사업개요</a><li><li><a href='/_commonBase/board.php?bo_table=irm'>IR자료</a><li></ul></li><li><a href='#'>홍보</a><ul><li><a href='/_commonBase/board.php?bo_table=notice'>공지사항</a><li><li><a href='/_commonBase/content.php?co_id=prmaterials'>홍보자료</a><li><li><a href='/_commonBase/content.php?co_id=prize'>환인정신의학상</a><li><li><a href='/_commonBase/content.php?co_id=qa'>고객센터</a><li></ul></li><li><a href='#'>채용</a><ul><li><a href='/_commonBase/content.php?co_id=talent'>인재상</a><li><li><a href='/_commonBase/content.php?co_id=recruitinfo'>채용안내</a><li><li><a href='/recruit/recruit_info.php'>채용공고</a><li></ul></li>			</ul>
+	 
+		</div>
+	</div>
+
+	<!--</div>-->
+
+	<div class="bg-gnb"></div>
+	<!-- // Mobile Nav -->
+
+	</div>
+	<!-- header end-->
+
+
+<!-- 팝업레이어 시작 { -->
+<div id="hd_pop">
+    <h2>팝업레이어 알림</h2>
+
+<span class="sound_only">팝업레이어 알림이 없습니다.</span></div>
+
+<script>
+$(function() {
+    $(".hd_pops_reject").click(function() {
+        var id = $(this).attr('class').split(' ');
+        var ck_name = id[1];
+        var exp_time = parseInt(id[2]);
+        $("#"+id[1]).css("display", "none");
+        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+    });
+    $('.hd_pops_close').click(function() {
+        var idb = $(this).attr('class').split(' ');
+        $('#'+idb[1]).css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+});
+</script>
+<!-- } 팝업레이어 끝 -->
+<script src="https://www.whanin.com/js/fullpage.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready( function(){
+
+	var wwidth = $(window).width();
+	//index fullpage
+    var myFullpage = new fullpage('#fullpage', {
+		menu: '#sec_menu',
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		//anchors: ['firstPage', 'secondPage', '3rdPage', 'lastPage'],
+        
+        lazyLoad: true,
+		responsiveWidth: 1200,
+		scrollBar: true,
+		loopHorizontal: false,
+		//fixedElements: '#wrap, #footer'
+		fixedElements: '#wrap'
+
+		
+    });
+});
+</script>
+
+<!-- M_content-->
+	<div id="fullpage">
+		<div class="section fp-auto-height-responsive">
+		<!-- visual-->
+			<!-- visual-->
+			<link rel="stylesheet" href="https://www.whanin.com/_theme/basic/css/slider.css">
+			<div id="visual">
+				<div class="slider" id="slider">
+					<div class="slItems">
+						<div class="slItem" style="background-image: url('https://www.whanin.com/_theme/basic/img/slider_0.jpg');"></div>
+						<div class="slItem" style="background-image: url('https://www.whanin.com/_theme/basic/img/slider_1.jpg');"></div>
+						<div class="slItem" style="background-image: url('https://www.whanin.com/_theme/basic/img/slider_2.jpg');"></div>
+					</div>
+				</div>
+				<div class='visual_content'>
+					<div class='cb_slide_text' style='z-index:5'>
+						<div class='section_div'>
+							<div class='title_div'>
+								<p class='main_p'>건강한 웃음, 건강한 사회</p>
+								<p class='sub_p'>질병의 고통을 멀리하고 생명의 소중함을 추구하는 기업</p>
+							</div>
+							<div class='sel_box'>
+								<ul>
+									<li>
+										<a href='/_product/list.php'>
+										<span><img src='https://www.whanin.com/_theme/basic/img/icon_ind_visual_0.png' alt='제품정보'/></span>
+										<p>제품정보</p>
+										<img src='https://www.whanin.com/_theme/basic/img/icon_rnext.png' alt='제품정보_바로가기'/>
+										</a>
+										
+									</il>
+									<li><a href='/_commonBase/content.php?co_id=recruitinfo'>
+										<span><img src='https://www.whanin.com/_theme/basic/img/icon_ind_visual_1.png' alt='채용정보'/></span>
+										<p>채용정보</p>
+										<img src='https://www.whanin.com/_theme/basic/img/icon_rnext.png' alt='채용정보_바로가기'/>
+										</a></il>
+									<li><a href='/_commonBase/content.php?co_id=business'>
+										<span><img src='https://www.whanin.com/_theme/basic/img/icon_ind_visual_2.png' alt='투자정보'/></span>
+										<p>투자정보</p>
+										<img src='https://www.whanin.com/_theme/basic/img/icon_rnext.png' alt='투자정보_바로가기'/>
+									</a></il>
+									<li><a href='/_commonBase/content.php?co_id=qa'>
+										<span><img src='https://www.whanin.com/_theme/basic/img/icon_ind_visual_3.png' alt='고객센터'/></span>
+										<p>고객센터</p>
+										<img src='https://www.whanin.com/_theme/basic/img/icon_rnext.png' alt='고객센터_바로가기'/>
+									</a></il>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+				<!--<script src="./js/slider.min.js"></script>-->
+				<script src="./js/slider.js"></script>
+				<script>
+					$(function(){
+						$('#slider').rbtSlider({
+							height: '100%', 
+							'dots': true,
+							'auto': 4,
+							'maxVisibleItems': 3,
+
+						});
+					});
+				</script>
+			</div>
+		<!-- visual end-->
+		</div>
+		<!--slickslider-->
+		<div class="section fp-auto-height-responsive">
+			<div class='section_div cb_product'>
+				<div class='title_div'>
+					<p class='head_p'>Whan In Pharm.</p><hr class='head_hr'>
+					<p class='main_p'>PRODUCT</p>
+					<p class='sub_p'>환인제약의 신제품 소개입니다.<!--<br>제품검색을 통해 빠르게 찾으실 수 있습니다.--></p>
+				</div>
+			</div>
+			
+		<div>
+			<div class="list-img " style='1px dotted red'>
+				
+										<div>
+							<img src='/_data/product/7ZmY7J247JWE7Yag66qp7IS47Yu07KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>환인아토목세틴정</li>
+									<li>전문의약품</li>
+									<li>중추신경흥분제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=503'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/67iM66as67CU7KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>브리바정</li>
+									<li>전문의약품</li>
+									<li>항전간제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=499'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/7Yag7YyM7Iuc7KaI7KCV7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>토파시즈정</li>
+									<li>전문의약품</li>
+									<li>자가면역질환 치료제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=498'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/64uI7IS47Jio7KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>니세온정</li>
+									<li>전문의약품</li>
+									<li>뇌기능개선제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=479'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/64E66mY7Iuc7JWE7KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>도멘시아정</li>
+									<li>전문의약품</li>
+									<li>치매치료제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=494'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/7ZmY7J247KeV7L2U7KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>환인징코정</li>
+									<li>일반의약품</li>
+									<li>뇌기능개선제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=497'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/7ZmY7J2466mU66eM7Yu07KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>환인메만틴정</li>
+									<li>전문의약품</li>
+									<li>치매치료제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=149'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+										<div>
+							<img src='/_data/product/7ZmY7J2466mU66eM7Yu07Jik65SU7KCV_7ZmI7Y6Y7J207KeA.jpg'/>
+							<div class='list-content'>
+								<ul>
+									<li>환인메만틴오디정</li>
+									<li>전문의약품</li>
+									<li>치매치료제</li>
+									<li><a href='https://www.whanin.com/_product/view.php?item=195'>자세히보기 <span>&gt;</span></a></li>
+								</ul>
+							</div>
+						</div>
+							</div>
+		</div>
+		<link rel="stylesheet" href="slick/slick.css">
+		<!--<script type="text/javascript" src="slick/slick.min.js"></script>-->
+			<script type="text/javascript" src="slick/slick.js"></script>
+	  <script type="text/javascript">
+		$(document).ready(function(){
+			$('.list-img').slick({				
+				infinite: true,
+				speed:2500, // 슬라이드 스피드
+				autoplay: true, //자동플레이 유무( false시 자동플레이 안됨 )
+				autoplaySpeed: 7000, // 자동플레이 스피드
+				slidesToShow: 3, //한 화면에 보여줄 아이템수
+				slidesToScroll: 3, // 한번에 슬라이드 시킬 아이템 개수
+				
+				lazyLoad: 'ondemand',
+				centerMode: true,
+				centerPadding: '0',
+				centermargin:'20px',
+				slidesToShow: 4 ,
+				arrows: true,
+				variableWidth: true,
+				prevArrow: '<div class="slick-arrow"><button class="slick-prev" aria-label="Previous">&#8592;</button></div>',
+                nextArrow: '<div class="slick-arrow" style="text-align:right;"><button class="slick-next" aria-label="Next">&#8594;</button></div>',
+				//variableWidth: true,
+				/*focusOnSelect : true,*/
+				
+				responsive: [
+					{
+						breakpoint: 1200,
+							settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '40px',
+							slidesToShow: 3,
+							speed:2500, // 슬라이드 스피드
+							autoplay: true, //자동플레이 유무( false시 자동플레이 안됨 )
+							autoplaySpeed: 7000, // 자동플레이 스피드
+							variableWidth: false,
+						}
+					},
+					{
+						breakpoint: 840,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '20px',
+							variableWidth: false,
+							speed:2500, // 슬라이드 스피드
+							autoplay: true, //자동플레이 유무( false시 자동플레이 안됨 )
+							autoplaySpeed: 7000, // 자동플레이 스피드
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 640,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '10px',
+							variableWidth: false,
+							slidesToShow: 1
+						}
+					},
+				]
+			
+			});
+		});
+	  </script>
+						<div class='cb_searchbar tcenter '>
+				<div class='searchbar_head'>
+					<div class='title_div'>
+						<p class='head_p'>SEARCH<span class='sub_p'>환인제약의 제품을 검색 하실수 있습니다.</span></p>
+					</div>
+					
+				</div>
+				<div class='main_search'>
+					<form name='form' method='get' action='/_product/list.php'>
+						<select name="code">
+							<option value=''>선택해주세요</option>
+							<option value='BB0165'>치매치료제</option><option value='BB0166'>뇌기능개선제</option><option value='BB0160'>항전간제</option><option value='BB0161'>항우울제</option><option value='BB0162'>조현병치료제</option><option value='BB0163'>신경안정제, 수면, 자율신경조절제</option><option value='BB0164'>중추신경흥분제</option><option value='BB0151'>항바이러스제</option><option value='BB0152'>류마티스치료제</option><option value='BB0153'>근이완제</option><option value='BB0154'>소염진통제</option><option value='BB0155'>금연치료제</option><option value='BB0156'>발기부전치료제</option><option value='BB0157'>전립선질환치료제</option><option value='BB0158'>배뇨장애치료제</option><option value='BB0150'>항히스타민제</option><option value='BB0144'>소화기관용제</option><option value='BB0145'>호흡기치료제</option><option value='BB0146'>순환기관용제</option><option value='BB0147'>당뇨병용제</option><option value='BB0149'>항진균제</option><option value='BB0148'>항생제</option><option value='BB0159'>골다공증예방치료제</option><option value='BB0167'>알코올사용장애 치료제</option><option value='BB0168'>파킨슨병치료제</option><option value='BB0169'>종합비타민제</option><option value='BB0170'>외용제</option><option value='BB0171'>의료기기</option><option value='AA0172'>자가면역질환 치료제</option>						</select>
+						<input type='text' class='main_inp' name='searchn' value='' placeholder='검색할 제품명을 입력해 주세요.' /><a id='frm_conf' onclick="form.submit();"></a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="section fp-auto-height-responsive">
+			<div class='section_div'>
+				<div class='title_div'>
+					<p class='head_p'>Whan In Pharm.</p><hr class='head_hr'>
+					<p class='main_p'>R&D</p>
+					<p class='sub_p'>환인제약은 차별화된 R&D 역량과 <br>오픈이노베이션을 통해 새로운 가치를 창출합니다.</p>
+					
+				</div>
+				<div class='content_box cb_rnd'>
+					<div>
+						<ul class=''>
+							<li><a href="/_commonBase/content.php?co_id=introduction"><div></div><p>연구소 소개</p></a></li>
+							<li><a href="/_commonBase/content.php?co_id=organization"><div></div><p>연구 조직</p></a></li>
+							
+						</ul>
+					</div>
+					<div>
+						<ul class=''>
+							<li><a href="/_commonBase/content.php?co_id=pipeline"><div></div><p>파이프라인</p></a></li>
+							<li><a href="/_commonBase/content.php?co_id=innovation_1"><div></div><p>오픈이노베이션</p></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class='section '>
+			<div class='section_div'>
+				<div class='title_div'>
+					<p class='head_p'>Whan In Pharm.</p><hr class='head_hr'>
+					<p class='main_p'>NEWS ROOM</p>
+					<p class='sub_p'>환인제약의 새로운 소식입니다.</p>
+				</div>
+				<div class='content_box cb_news'>
+					<div class=''>
+						<dl><dt><span class='cate'>[신제품소개]<a href='/_commonBase/board.php?bo_table=notice&wr_id=165'>+</a></span><span>환인제약㈜, 아토목세틴 성분 정제 전…</span></dt><dd>환인제약㈜, 아토목세틴 성분 정제전함량 국내 최초 발매
+
+&nbsp;
+
+환인제약(대…<span>26-07-31</span></dd></dl><dl><dt><span class='cate'>[제품 소식]<a href='/_commonBase/board.php?bo_table=notice_pchange&wr_id=276'>+</a></span><span>환인아토목세틴정6함량 - 사용상의 주…</span></dt><dd>1. 대상 품목 :&nbsp;환인아토목세틴정6함량(아토목세틴염산염)2. 변경 사항 반영일 …<span>26-10-02</span></dd></dl><dl><dt><span class='cate'>[IR 자료]<a href='/_commonBase/board.php?bo_table=irm&wr_id=40'>+</a></span><span>제44기 결산공고</span></dt><dd>제44기 결산공고<span>26-03-20</span></dd></dl><dl><dt><span class='cate'>[환인소식]<a href='/_commonBase/board.php?bo_table=notice&wr_id=164'>+</a></span><span>환인제약, 테바(TEVA)로의 수출 …</span></dt><dd>환인제약, 테바(TEVA)로의
+수출 본격화…2028년 수출 100억 원 전망
+
+&nb…<span>26-06-17</span></dd></dl>						
+					</div>
+					<div>
+						<a href="/_commonBase/board.php?bo_table=notice" class='more_news'>소식더보기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<ul id="sec_menu">
+		<li data-menuanchor="firstPage" class="active"><a href="#firstPage"></a></li>
+		<li data-menuanchor="secondPage" class=""><a href="#secondPage"></a></li>
+		<li data-menuanchor="3rdPage" class=""><a href="#3rdPage"></a></li>
+		<li data-menuanchor="4thpage" class=""><a href="#4thpage"></a></li>
+		<li data-menuanchor="lastPage" class=""><a href="#lastPage"></a></li>
+	</ul>
+
+
+
+
+		<div id="footer" class='section fp-auto-height'>
+			<div class='f_info'>
+				<ul>
+					<li>
+						<span class='ft_icon'></span><span>대표이사</span>이원범
+					</li>
+					<li>
+						<span class='ft_icon'></span><span>고객센터</span>080.405.1238
+					</li>
+					<li>
+						<span class='ft_icon'></span><span>대표전화</span>02.405.3000
+					</li>
+					<li>
+						<span class='ft_icon'></span><span>팩스</span>02.404.2518
+					</li>
+				</ul>
+			</div>
+			<div class='site_link'>
+				<a href='/_commonBase/content.php?co_id=privacy1'>개인정보처리방침</a> | <a href='/_commonBase/content.php?co_id=location'>찾아오시는길</a>
+			</div>
+			<div class='addr'>
+				<p>서울특별시 송파구 법원로 6길 11 환인빌딩 8F-11F</p>
+				<p class='copyright'>&copy;Whan In Pharm. Co., Ltd. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class='f_logo'>
+				<a href="/"><img src="https://www.whanin.com/_theme/basic/img/ci.png" alt="환인제약 "></a>
+			</div>
+		</div>
+	</div>
+
+<!-- } 하단 끝 -->
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>

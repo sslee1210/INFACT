@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="건일제약">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>건일제약</title>
+  <link rel="icon" href="/images/favicon.png">
+  <!--
+  /////////////////////////////
+  [Web publishing]
+  Web Publisher : Jeong Sechan
+  Start Date : 201201
+  /////////////////////////////
+-->
+<!-- includeCSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" href="css/style.css?ver=1790922318">
+<link rel="stylesheet" href="css/m.style.css?ver=1790922318">
+
+<!-- end -->
+</head>
+<body>
+  
+<div class="search_area">
+  <div class="search_container">
+    <button class="close_btn" type="button" name="button"><img src="images/icons/search_close.png" alt=""></button>
+    <div class="search_header">
+      <div class="top_box">
+        <ul>
+          <li class="on " data-kind="product">제품검색</li>
+          <li class="" data-kind="notice">제품공지검색</li>
+          <li class="" data-kind="news">뉴스검색</li>
+        </ul>
+		<form name="sform" id="sform" method="get" action="./product_list.php">
+        <div class="search_box">
+          <input type="text" name="s_keyword" id="s_keyword" value=""  placeholder="궁금하신 제품 및 정보를 찾아보세요.">
+          <button class="search_del" type="button" name="button">
+            <img class="" src="images/icons/search_text_del.png" alt="">
+          </button>
+          <button class="search_btn" type="button" name="button" onclick="sform.submit()">
+            <img class="" src="images/icons/search_btn.png" alt="">
+          </button>
+        </div>
+		</form>
+      </div>
+      <div class="bottom_box">
+        <h5>추천 검색어</h5>
+        <ul class="keyword_product area_keyword">
+          <li onclick="location.href='product_list.php?s_keyword=로수메가 연질캡슐'">로수메가 연질캡슐</li>
+        </ul>
+
+
+        <ul style="display:none" class="keyword_notice area_keyword">
+        </ul>
+
+        <ul style="display:none" class="keyword_news area_keyword">
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+  <div class="blur_wrap">
+
+<header id="header">
+  <div class="header_top">
+    <div class="logo_box">
+      <a href="index.php"><img class="img-responsive" width="140" src="images/logo.svg" alt=""></a>
+      <p>마음이 건강한 사람들</p>
+    </div>
+    <div class="top_nav">
+      <ul>
+        <!-- <li><a href="#">애니멀센터</a></li> -->
+        <li><a href="inquiry.php">고객문의</a></li>
+        <li><a target="_blank" href="https://blog.naver.com/kuhnil_pharm">BLOG</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/kuhnil_pharm?igsh=MWJqaDVpYXN5amdieQ%3D%3D&utm_source=qr">Instagram</a></li>
+        <li><a target="_blank" href="https://portal.kuhnil.com">GROUPWARE</a></li>
+        <li><a class="lang" href="/en/index.php">ENGLISH</a></li>
+        <li><a href="#"><img class="search_icon" src="images/icons/search_icon.svg" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="m_top_nav">
+      <ul class="menu_on">
+        <li><a href="/en/index.php"><h6 class="m_lang_text">EN</h6></a></li>
+        <li><div class="m_menu_close"><img src="images/main/m_menu_close.png" alt=""></div></li>
+      </ul>
+      <ul class="menu_off on">
+        <li><a href="#"><img class="search_icon" src="images/icons/search_icon.svg" alt=""></a></li>
+        <li><div class="m_menu_btn"><img src="images/main/m_menu.png" alt=""></div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header_mid">
+    <!-- <img class="now_category" src="images/icons/header_mid_icon.png" alt=""> -->
+    <ul>
+      <li><a class="" href="company1.php">회사소개</a></li>
+      <li><a class="" href="product_list.php?prd_cate=metier">제품정보</a></li>
+      <li><a class="" href="rnd1.php">연구개발</a></li>
+      <li><a class="" href="news1.php">뉴스</a></li>
+      <li><a class="" target="_blank" href="https://kuhnil.ninehire.site/">채용정보</a></li>
+      <li><a class="" target="_blank" href="http://animalkuhnil.com">동물실험동</a></li>
+    </ul>
+  </div>
+  <div class="header_bottom">
+    <ul>
+      <li><a href="company1.php"><h3>회사소개</h3></a></li>
+      <li><a href="company1.php">기업소개</a></li>
+      <li><a href="company2.php">이념 및 비전</a></li>
+      <li><a href="company3.php">CI</a></li>
+      <li><a href="company4.php">윤리경영</a></li>
+      <li class="mt25"><a href="history.php"><h3>연혁</h3></a></li>
+      <li class="mt20"><a href="facility1.php"><h3>생산시설</h3></a></li>
+      <li><a href="facility1.php">글로벌 GMP 시스템</a></li>
+      <li><a href="facility2.php">품질관리 시스템</a></li>
+      <li><a href="facility3.php">생산설비</a></li>
+      <li class="mt25"><a href="directions1.php"><h3>오시는길</h3></a></li>
+      <li><a href="directions1.php">본사/연구소</a></li>
+      <li><a href="directions2.php">공장</a></li>
+      <li class="mt25"><a href="affiliates.php"><h3>관계사</h3></a></li>
+    </ul>
+    <ul>
+      <li><a href="product_list.php?prd_cate=metier"><h3>제품</h3></a></li>
+      <li><a href="product_list.php?prd_cate=metier">의약품</a></li>
+      <li><a href="product_list.php?prd_cate=etc">기타</a></li>
+      <li class="mt25"><a href="product_notice.php"><h3>제품공지</h3></a></li>
+    </ul>
+    <ul>
+      <li><a href="rnd1.php"><h3>연구개발 소개</h3></a></li>
+      <li><a href="rnd1.php">비전 및 연구분야</a></li>
+      <li><a href="rnd2.php">연구개발 조직현황</a></li>
+      <li class="mt25"><a href="rnd3.php"><h3>R&D비전 및 연구분야</h3></a></li>
+      <li class="mt20"><a href="rnd4.php"><h3>주요 연구 실적</h3></a></li>
+      <li class="mt20"><a href="rnd5.php"><h3>연구개발 현황</h3></a></li>
+      <li><a href="rnd5.php">제품개발 주요실적</a></li>
+      <li><a href="rnd6-1.php">국책과제 수행실적</a></li>
+      <li><a href="rnd7-1.php">특허출원 등록실적</a></li>
+      <li class="mt25"><a href="rnd8.php"><h3>사업제휴</h3></a></li>
+    </ul>
+    <ul>
+      <li><a href="news1.php"><h3>건일뉴스</h3></a></li>
+      <li class="mt20"><a href="news2.php"><h3>기업문화</h3></a></li>
+      <li class="mt20"><a href="news3.php"><h3>SNS</h3></a></li>
+      <li class="mt20"><a href="news4.php"><h3>사회공헌</h3></a></li>
+      <li><a href="news4.php">사랑개비 캠페인</a></li>
+      <li><a href="news5.php">자원봉사활동</a></li>
+      <li class="mt20"><a href="news6.php"><h3>비공개 게시판</h3></a></li>
+    </ul>
+    <ul>
+      <li><a target="_blank" href="https://kuhnil.ninehire.site/"><h3>채용정보</h3></a></li>
+    </ul>
+    <ul>
+      <li><a target="_blank" href="http://animalkuhnil.com"><h3>동물실험동</h3></a></li>
+    </ul>
+
+    <div class="line_group">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+</header>
+<div class="m_gnb">
+  <div class="m_gnb_wrap">
+    <div class="list">
+      <h5>회사소개 <img src="images/icons/sub_category_icon.png" alt=""></h5>
+      <ul>
+        <li><a href="company1.php">기업소개</a></li>
+        <li><a href="company2.php">이념 및 비전</a></li>
+        <li><a href="company3.php">CI</a></li>
+        <li><a href="company4.php">윤리경영</a></li>
+        <li><a href="history.php">연혁</a></li>
+        <li><a href="facility1.php">글로벌 GMP 시스템</a></li>
+        <li><a href="facility2.php">품질관리 시스템</a></li>
+        <li><a href="facility3.php">생산설비</a></li>
+        <li><a href="directions1.php">본사/연구소</a></li>
+        <li><a href="directions2.php">공장</a></li>
+        <li><a href="affiliates.php">관계사</a></li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h5>제품정보 <img src="images/icons/sub_category_icon.png" alt=""></h5>
+      <ul>
+        <li><a href="product_list.php?prd_cate=metier">의약품</a></li>
+        <li><a href="product_list.php?prd_cate=etc">기타</a></li>
+        <li><a href="product_notice.php">제품공지</a></li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h5>연구개발 <img src="images/icons/sub_category_icon.png" alt=""></h5>
+      <ul>
+        <li><a href="rnd1.php">비전 및 연구분야</a></li>
+        <li><a href="rnd2.php">연구개발 조직현황</a></li>
+        <li><a href="rnd3.php">R&D비전 및 연구분야</a></li>
+        <li><a href="rnd4.php">주요 연구 실적</a></li>
+        <li><a href="rnd5.php">제품개발 주요실적</a></li>
+        <li><a href="rnd6-1.php">국책과제 수행실적</a></li>
+        <li><a href="rnd7-1.php">특허출원 등록실적</a></li>
+        <li><a href="rnd8.php">사업제휴</a></li>
+      </ul>
+    </div>
+
+    <div class="list">
+      <h5>뉴스 <img src="images/icons/sub_category_icon.png" alt=""></h5>
+      <ul>
+        <li><a href="news1.php">건일뉴스</a></li>
+        <li><a href="news2.php">기업문화</a></li>
+        <li><a href="news3.php">SNS</a></li>
+        <li><a href="news4.php">사랑개비 캠페인</a></li>
+        <li><a href="news5.php">자원봉사활동</a></li>
+      <li><a href="news6.php">비공개 게시판</a></li>
+      </ul>
+    </div>
+
+    <!-- <div class="list">
+      <h5>채용정보 <img src="images/icons/sub_category_icon.png" alt=""></h5>
+      <ul>
+        <li><a target="_blank" href="http://g2016.digitree.co.kr/kuhnil_recruit/">채용정보</a></li>
+      </ul>
+    </div> -->
+
+    <div class="menu_etc">
+      <ul>
+        <li> <img src="images/main/menu_etc_icon1.png" alt=""> <a href="inquiry.php">고객문의</a></li>
+        <li> <img src="images/main/menu_etc_icon2.png" alt=""> <a target="_blank" href="https://blog.naver.com/kuhnil_pharm">SNS블로그</a></li>
+        <li> <img src="images/main/menu_etc_icon3.png" alt=""> <a target="_blank" href="https://portal.kuhnil.com">GROUPWARE</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="m_header_space"></div>
+
+<!-- 팝업요청시 아래 코드 생성 -->
+<!-- include_once("popup.php"); -->
+<section class="main_banner">
+  <div class="banner banner1"></div>
+  <div class="banner banner2"></div>
+  <div class="banner banner3"></div>
+</section>
+
+
+<section class="main_contents">
+  <div class="main_news">
+    <div class="title">
+      <h3><a href="/news1.php"><span>뉴스</span><img src="images/icons/title_arrow.png" alt=""></a></h3>
+      <ul class="page_btn">
+        <li><span class="now_page">1</span></li>
+        <li>/</li>
+        <li><span class="total_page">3</span></li>
+        <li class="left_btn main_news_left"><button type="button" name="button"></button></li>
+        <li class="right_btn main_news_right"><button type="button" name="button"></button></li>
+      </ul>
+    </div>
+    <div class="contents">
+      <div class="main_news_slide">
+        <ul class="">            <li><a href="./news1_view.php?idx=429"><span>건일제약, 부패방지경영시스템</span></a></li>
+                        <li><a href="./news1_view.php?idx=423"><span>건일제약, ‘CPhI Frankfurt 2025’ 참가</span></a></li>
+                        <li><a href="./news1_view.php?idx=421"><span>건일제약, 133명 CSO 영업 전문가 양성 완료</span></a></li>
+                        <li><a href="./news1_view.php?idx=415"><span>건일제약(주), 문희석 공동 대표이사 선임</span></a></li>
+                        <li><a href="./news1_view.php?idx=409"><span>건일제약-영진약품, 이상지질혈증 치료제 ‘로수메가’ 공동판매 계약 체결</span></a></li>
+                        <li><a href="./news1_view.php?idx=408"><span>슬리나이토 미니서방정, 유럽서 ADHD 동반 소아 불면증 치료까지 적응증 확대</span></a></li>
+             </ul><ul class="">            <li><a href="./news1_view.php?idx=406"><span>건일제약, 한지성 신임 메디칼본부장 영입</span></a></li>
+                        <li><a href="./news1_view.php?idx=400"><span>건일제약 · 펜믹스, 장애인 스포츠 채용 · 발전 기여로 도지사 표창 수상</span></a></li>
+                        <li><a href="./news1_view.php?idx=397"><span>건일제약㈜, 모치다제약과 고순도 EPA제제 ‘에파델’ 라이센싱 계약 체결</span></a></li>
+                        <li><a href="./news1_view.php?idx=387"><span>소아 불면증 치료제 ‘슬리나이토 미니서방정’ 적응증 확대 돌입</span></a></li>
+                        <li><a href="./news1_view.php?idx=386"><span>건일제약㈜, 'SWS(Sleep well with Slenyto)' 슬리나이토 런칭심포지엄 개최</span></a></li>
+                        <li><a href="./news1_view.php?idx=385"><span>건일제약㈜, 소아용 불면증 치료제 슬리나이토 미니서방정 정식 출시</span></a></li>
+             </ul><ul class="">            <li><a href="./news1_view.php?idx=373"><span>건일제약•펜믹스, 장애인 스포츠 선수 채용</span></a></li>
+                        <li><a href="./news1_view.php?idx=372"><span>건일제약, '공정거래 자율준수와 내부감사' 특강 진행</span></a></li>
+                        <li><a href="./news1_view.php?idx=367"><span>건일제약(주), 오인수 신임 마케팅본부장 영입</span></a></li>
+                        <li><a href="./news1_view.php?idx=364"><span>건일제약(주), 최충원 사업개발본부장 영입</span></a></li>
+                        <li><a href="./news1_view.php?idx=322"><span>건일제약㈜, 소아용 불면증 치료제 슬리나이토 미니서방정 허가완료</span></a></li>
+                        <li><a href="./news1_view.php?idx=311"><span>건일제약㈜-단국대학교 약학대학 업무협약 체결</span></a></li>
+             </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="main_products">
+    <div class="title">
+      <h3><a href="product_list.php"><span>제품정보</span><img src="images/icons/title_arrow.png" alt=""></a></h3>
+      <ul class="page_btn">
+        <li><span class="now_page"></span></li>
+        <li>/</li>
+        <li><span class="total_page"></span></li>
+        <li class="left_btn main_product_left"><button type="button" name="button"></button></li>
+        <li class="right_btn main_product_right"><button type="button" name="button"></button></li>
+      </ul>
+    </div>
+    <div class="main_product_slide">
+      <div class="slide slide1">
+        <a href="product_view.php?prd_idx=70">
+          <div class="img_box" style="background-image:url('./_upload/product/1609244872961430.png')"></div>
+
+          <div class="text_box">
+            <h4><span>의약품</span> • <span>순환기계</span></h4>
+            <h3>오마코연질캡슐</h3>
+          </div>
+        </a>
+      </div>
+      <div class="slide slide1">
+        <a href="product_view.php?prd_idx=56">
+          <div class="img_box" style="background-image:url('./_upload/product/160924506849996.png')"></div>
+
+          <div class="text_box">
+            <h4><span>의약품</span> • <span>순환기계</span></h4>
+            <h3>로수메가연질캡슐</h3>
+          </div>
+        </a>
+      </div>
+      <div class="slide slide1">
+        <a href="product_view.php?prd_idx=78">
+          <div class="img_box" style="background-image:url('./_upload/product/1609244802716896.png')"></div>
+
+          <div class="text_box">
+            <h4><span>의약품</span> • <span>신경/정신계</span></h4>
+            <h3>서카딘서방정 2mg</h3>
+          </div>
+        </a>
+      </div>
+      <div class="slide slide1">
+        <a href="product_view.php?prd_idx=110">
+          <div class="img_box" style="background-image:url('./_upload/product/1635146762360332.png')"></div>
+
+          <div class="text_box">
+            <h4><span>의약품</span> • <span>소화기계</span></h4>
+            <h3>비오플 250캡슐</h3>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<div class="product_popup">
+  <div class="inner">
+    <button class="close_btn" type="button" name="button">닫기</button>
+    <div class="top_box">
+      <div class="text_box">
+        <h2>의약품 등 회수에 관한 공표</h2>
+        <p class="sub_tit">(의약품, 2등급 위해성)</p>
+        <p class="sub_tit_01">약사법 제 72조의 규정에 의하여 아래의 의약품 등을 긴급 회수함을 공표합니다.</p>
+        <ul>
+          <li style="font-weight: bold">가. 제품명 : 아미듀오시럽 500mL</li>
+          <li style="font-weight: bold">나. 유효기한 : 22.12.09(20001), 23.02.03(21001)</li>
+          <li style="font-weight: bold">다. 제조번호 : 20001, 21001</li>
+          <li style="font-weight: bold">라. 회수사유 : 안전성 시험에서 함량 부족</li>
+          <li>마. 회수방법: 취급 판매업소 및 의료기관별 방문하여 제조·도매업소 수거</li>
+          <li style="font-weight: bold">바. 회수의무자 : 건일제약(주) (대표: 이한국)</li>
+          <li>사. 회수의무자소재지 : 충청남도 천안시 서북구 직산읍 거리막길 33</li>
+          <li style="font-weight: bold">아. 연락처 : Tel. 02-714-0091(공장: 041-580-5800), Fax. 02-719-0493</li>
+          <li>자. 자료작성연월일 : 2022.07.04</li>
+        </ul>
+
+        <p class="sub_tit_02">※ 당해 회수대상 의약품 등을 보관하고 있는 판매업자 및 약국, 의료기관 등에서는 즉시 판매를 중지하고 회수의무자에게 반품하여 주시기 바랍니다.</p>
+      </div>
+    </div>    
+  </div>
+</div>
+
+<footer>
+  <div class="footer_top">
+    <ul class="certificate">
+      <!-- <li>
+        <div class="img_box"><img class="img-responsive" src="images/main/footer_img1.png" alt=""></div>
+        <div class="text_box">
+          <h4>보건복지부 인증</h4>
+          <h3>혁신형 제약기업</h3>
+        </div>
+      </li> 
+      2024-08-28 삭제요청
+      -->
+      <!-- <li>
+        <div class="img_box"><img class="img-responsive" src="images/main/footer_img2.png" alt=""></div>
+        <div class="text_box">
+          <h4>ISO 인증</h4>
+          <h3>부패방지 경영시스템</h3>
+        </div>
+      </li> 
+      2025-12-02 업데이트
+      -->
+      <li>
+        <div class="img_box"><img class="img-responsive" src="images/main/footer_img5.png?ver=1" alt=""></div>        
+        <div class="text_box">
+          <h4>ISO 인증</h4>
+          <h3>부패방지 경영시스템</h3>
+        </div>
+      </li>
+      <li>
+        <div class="img_box"><img class="img-responsive" src="images/main/footer_img3.png" alt=""></div>
+        <div class="text_box">
+          <h4>공정거래위원회</h4>
+          <h3>공정거래 자율준수 프로그램</h3>
+        </div>
+      </li>
+      <li>
+        <div class="img_box"><img class="img-responsive" src="images/main/footer_img4.png" alt=""></div>
+        <div class="text_box">
+          <h4>고용노동부 인증</h4>
+          <h3>일터혁신우수기업</h3>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  <div class="footer_bottom">
+    <ul>
+      <li><h2>© KUHNIL Corp.</h2></li>
+      <li><a href="policy1.php">개인정보처리방침</a></li>
+      <li><a href="policy2.php">이메일무단수집거부</a></li>
+    </ul>
+    <ul class="site">
+      <li><a href="news6.php">비공개 게시판</a></li>
+      <li><a target="_blank" href="/policy/index.php">준법경영</a></li>
+      <li><p class="down_btn">관계사 사이트 <img src="images/icons/down_btn.png" alt=""></p>
+        <ul class="site_sub">
+          <li><a href="http://www.penmix.com/" target="_blank">펜믹스</a></li>
+          <li><a href="http://www.ohsongpharm.com/" target="_blank">오송팜</a></li>
+          <li><a href="http://www.kuhnilbiopharm.com/" target="_blank">건일바이오팜</a></li>
+          <!-- <li><a href="http://www.ikabreast.co.kr/">이케야마</a></li> -->
+        </ul>
+      </li>
+    </ul>
+    <p>
+      <b>사업자명</b><span>건일제약(주)</span>
+      <b>주소</b><span>(우 04516)서울특별시 중구 정동길 14 오송빌딩 건일제약(주)</span>
+      <b>Tel</b><span>02. 714. 0091</span>
+      <b>Fax</b><span>02. 719. 0493</span>
+      <!-- <b>대표이사</b><span>김영중</span> -->
+      <!-- <b>사업자등록번호</b><span>312. 81. 06060</span> -->
+    </p>
+  </div>
+  <div class="footer_bottom m_footer_bottom">
+    <ul>
+      <li><a href="policy1.php">개인정보처리방침</a></li>
+      <li><a href="policy2.php">이메일무단수집거부</a></li>
+    </ul>
+    <p>
+      <b>사업자명</b><span>건일제약(주)</span>
+      <b>주소</b><span>(우 04516)서울특별시 중구 정동길 14 오송빌딩 건일제약(주)</span>
+      <b>Tel</b><span>02. 714. 0091</span>
+      <b>Fax</b><span>02. 719. 0493</span>
+    </p>
+    <ul class="site">
+      <li><h2>© KUHNIL Corp.</h2></li>
+      <li><a href="news6.php">익명게시판</a></li>
+      <li><a target="_blank" href="/policy/index.php">준법경영</a></li>
+      <li><p class="down_btn">관계사 사이트 <img src="images/icons/down_btn.png" alt=""></p>
+        <ul class="site_sub">
+          <li><a href="http://www.penmix.com/">펜믹스</a></li>
+          <li><a href="http://www.ohsongpharm.com/kor/main.php">오송팜</a></li>
+          <li><a href="http://www.kuhnilbiopharm.com/">건일바이오팜</a></li>
+          <!-- <li><a href="http://www.ikabreast.co.kr/">이케야마</a></li> -->
+        </ul>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://kit.fontawesome.com/9e76a3b25e.js" crossorigin="anonymous"></script>
+<script src="js/jquery.scrollTo.js" charset="utf-8"></script>
+<script src="js/script.js?ver=8"></script>
+<script>
+  $(function() {
+    $(".top_btn").click(function(e) {
+      $.scrollTo(this.hash || 0, 500);
+      e.preventDefault();
+    });
+  });
+</script>
+</div>
+</body>
+</html>
+
+<script>
+
+  $(function(){
+      $(".product_popup .close_btn").click(function(){
+        $(".product_popup").fadeOut();
+        $("body").removeClass("no_scroll");
+      });
+  });
+
+  $(function(){
+  $("#main_popup_close2").click(function(){
+    $("#main_popup2").hide();
+  });
+});
+  
+</script>

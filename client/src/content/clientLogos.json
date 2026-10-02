@@ -1,0 +1,1584 @@
+[
+  {
+    "id": "donga-st",
+    "names": [
+      "동아ST",
+      "동아에스티",
+      "DONG-A ST"
+    ],
+    "src": "./images/clients/donga-st.png",
+    "background": "light",
+    "sourcePage": "https://www.donga-st.com/en/",
+    "sourceAsset": "https://www.donga-st.com/resources/img/eng_logo1.png",
+    "sha256": "6109f3b0585da233e5385900eb52e4a3b8688b6a1389e49b1f5248c532d46582"
+  },
+  {
+    "id": "gc-biopharma",
+    "names": [
+      "GC녹십자",
+      "녹십자",
+      "GC Biopharma"
+    ],
+    "src": "./images/clients/gc-biopharma.svg",
+    "background": "light",
+    "sourcePage": "https://www.gcbiopharma.com/kor/ci.do",
+    "sourceAsset": "https://www.gcbiopharma.com/kor/assets/img/logo.svg",
+    "sha256": "dc98a3e62e62d65f7f796088940bee0a09a5e1ed795a2fb681dfe0e208d8bfb7"
+  },
+  {
+    "id": "huons",
+    "names": [
+      "휴온스",
+      "휴온스제약",
+      "Huons"
+    ],
+    "src": "./images/clients/huons.png",
+    "background": "light",
+    "sourcePage": "https://huons.com/kor/home.php",
+    "sourceAsset": "https://huons.com/assets/front/images/logo/logo_bc.png",
+    "sha256": "ca48cb82bd6fcdd9b5cf4beb900cbf621cb5ed7685f5fb1e127d391efc3f79c5"
+  },
+  {
+    "id": "prestige-biologics",
+    "names": [
+      "프레스티지바이오로직스",
+      "Prestige Biologics"
+    ],
+    "src": "./images/clients/prestige-biologics.png",
+    "background": "light",
+    "sourcePage": "https://prestigebiologics.com/",
+    "sourceAsset": "https://prestigebiologics.com/wp-content/uploads/2023/07/homepage_main_logo_.png",
+    "sha256": "2b8ee3dc62e61a241405d7da401aedf4059cf68cac07d8b7fd1b101f826cf6c0"
+  },
+  {
+    "id": "lg-chem",
+    "names": [
+      "LG화학",
+      "LG Chem"
+    ],
+    "src": "./images/clients/lg-chem.svg",
+    "background": "light",
+    "sourcePage": "https://www.lgchem.com:443/main/index",
+    "sourceAsset": "https://www.lgchem.com:443/asset/images/common/main22/logo_en_basic.svg",
+    "sha256": "5b4627d6ca18d05bc798550c770e4e153e7e6b49ac15c5f62fa858f647214b74"
+  },
+  {
+    "id": "cj-cheiljedang",
+    "names": [
+      "CJ제일제당",
+      "CJ CheilJedang"
+    ],
+    "src": "./images/clients/cj-cheiljedang.svg",
+    "background": "light",
+    "sourcePage": "https://www.cj.co.kr/kr/index",
+    "sourceAsset": "https://www.cj.co.kr/resources/img/common/top_logo_light.svg",
+    "sha256": "0174dd597548425f1bd7f257caaefcb0248afd751714d95ba2600539c5fef766"
+  },
+  {
+    "id": "celltrion",
+    "names": [
+      "셀트리온"
+    ],
+    "src": "./images/clients/celltrion.png",
+    "background": "light",
+    "sourcePage": "https://www.celltrion.com/ko-kr",
+    "sourceAsset": "https://www.celltrion.com/front/assets/common/images/img_header_logo-419fea837abc03d84e05929fca178e6f.png",
+    "sha256": "78f30c114b703532ba7aa1149f6eeda638bdf87635474dcb39fc526522236698"
+  },
+  {
+    "id": "hanmi",
+    "names": [
+      "한미약품"
+    ],
+    "src": "./images/clients/hanmi.svg",
+    "background": "light",
+    "sourcePage": "https://www.hanmi.co.kr/",
+    "sourceAsset": "https://www.hanmi.co.kr/images/common/logo_gnb.svg",
+    "sha256": "2c748117099ac01a73523ff7bff4256ca6c477a6a71f4ef7910480b354a11339"
+  },
+  {
+    "id": "sk-bioscience",
+    "names": [
+      "SK바이오사이언스"
+    ],
+    "src": "./images/clients/sk-bioscience.svg",
+    "background": "light",
+    "sourcePage": "https://www.skbioscience.com/kr/main",
+    "sourceAsset": "https://www.skbioscience.com/images/common/sk-bioscience-logo-header.svg",
+    "sha256": "6050170ba08c91d13e8fa9555be27adeb30c0e27eba729de9cf5c98dc40d7aad"
+  },
+  {
+    "id": "boryung",
+    "names": [
+      "보령제약"
+    ],
+    "src": "./images/clients/boryung.png",
+    "background": "light",
+    "sourcePage": "https://www.boryung.co.kr/en/",
+    "sourceAsset": "https://www.boryung.co.kr/images/mo/logo.png",
+    "sha256": "0a926db380f29b0f278ea60355560235e249367efd97533c2f861f7291ae1df2"
+  },
+  {
+    "id": "inno-n",
+    "names": [
+      "HK이노엔",
+      "에이치케이이노엔"
+    ],
+    "src": "./images/clients/inno-n.svg",
+    "background": "light",
+    "sourcePage": "https://www.inno-n.com/",
+    "sourceAsset": "https://www.inno-n.com/assets/front/pc/img/common/logo_header.svg",
+    "sha256": "f1fb344708d15dfc670d07a05d0f02dae7e0aff277b1f162d77b3c94cc16391f"
+  },
+  {
+    "id": "donga-pharm",
+    "names": [
+      "동아제약"
+    ],
+    "src": "./images/clients/donga-pharm.png",
+    "background": "light",
+    "sourcePage": "https://www.dapharm.com/ko",
+    "sourceAsset": "https://www.dapharm.com/img/logo_color.png",
+    "sha256": "9c237ac0d518a86f6c9bd67e59dfe7743280606be8e25daef4cffcdb90d70a22"
+  },
+  {
+    "id": "jw-pharm",
+    "names": [
+      "jw중외제약"
+    ],
+    "src": "./images/clients/jw-pharm.png",
+    "background": "light",
+    "sourcePage": "https://www.jw-pharma.co.kr/pharma/ko/main.jsp",
+    "sourceAsset": "https://www.jw-pharma.co.kr/pharma/ko/asset/images/top_logo.png",
+    "sha256": "c7f142e99b98920aade1dfac96746253392b2c6e1c7adf558b8b8d8f6c41e24e"
+  },
+  {
+    "id": "ildong",
+    "names": [
+      "일동제약"
+    ],
+    "src": "./images/clients/ildong.png",
+    "background": "light",
+    "sourcePage": "https://www.ildong.com/kor/main/main.id",
+    "sourceAsset": "https://admin.ildong.com/static/img/ildong/layout/logo.png",
+    "sha256": "3ad7a142622990536eb22ded04f7d208e6143152f06cf1d37b0b5622cf0610ae"
+  },
+  {
+    "id": "dongkook",
+    "names": [
+      "동국제약"
+    ],
+    "src": "./images/clients/dongkook.png",
+    "background": "light",
+    "sourcePage": "https://www.dkpharm.co.kr/",
+    "sourceAsset": "https://www.dkpharm.co.kr/images/common/w-gnb-logo.png",
+    "sha256": "8d69db665f35c259307ab93bdf5c97cabdd31de0ce93e17e3c5d0531f72b3e4b"
+  },
+  {
+    "id": "kolmar",
+    "names": [
+      "한국콜마"
+    ],
+    "src": "./images/clients/kolmar.png",
+    "background": "light",
+    "sourcePage": "https://www.kolmar.co.kr/",
+    "sourceAsset": "https://www.kolmar.co.kr/img/common/logo_active.png",
+    "sha256": "0193d5a4be6c59164aa7c441d4b10c32c43d8cdc0864fc5a211224d36c822eff"
+  },
+  {
+    "id": "medytox",
+    "names": [
+      "메디톡스"
+    ],
+    "src": "./images/clients/medytox.png",
+    "background": "light",
+    "sourcePage": "https://www.medytox.com/",
+    "sourceAsset": "https://www.medytox.com/themeTemplateResource/getResource?id=MEDYTOX&revision=1&path=%2Fimg%2Fmedytox_logo.png",
+    "sha256": "b3baeb1f14cea809f65b4380e13c4f0f93fa12382b22c9aa9f26cd7d2552a20f"
+  },
+  {
+    "id": "taejoon",
+    "names": [
+      "태준제약"
+    ],
+    "src": "./images/clients/taejoon.png",
+    "background": "light",
+    "sourcePage": "https://www.taejoon.co.kr/",
+    "sourceAsset": "https://www.taejoon.co.kr/common/css/images/common/logo.png",
+    "sha256": "5fb4ff1140858c9c6a67d278757182833e2dbdf84ff70483ce58e7be6a1b1da0"
+  },
+  {
+    "id": "hanall",
+    "names": [
+      "한올바이오파마",
+      "한올바이오"
+    ],
+    "src": "./images/clients/hanall.svg",
+    "background": "light",
+    "sourcePage": "https://hanall.com/kr/",
+    "sourceAsset": "https://hanall.com/kr/#inline-logo",
+    "sha256": "8433234046d03de7617ee9e2b0118689e5d2ae9024043f355e08f0c19716bcdb"
+  },
+  {
+    "id": "hugel",
+    "names": [
+      "휴젤"
+    ],
+    "src": "./images/clients/hugel.svg",
+    "background": "light",
+    "sourcePage": "https://www.hugel-inc.com/kr/media/ci",
+    "sourceAsset": "https://cdn.prod.website-files.com/65b9b2e3db6617c1dec31db6/65ca8e85609365229b1296b9_hugel-logo.svg",
+    "sha256": "75f2645fb69fdea5e7fc6dac39b40d1759df4b7816e79a5ca55e8b8507e4061a"
+  },
+  {
+    "id": "lotte-bio",
+    "names": [
+      "롯데바이오로직스"
+    ],
+    "src": "./images/clients/lotte-bio.svg",
+    "background": "light",
+    "sourcePage": "https://www.lottebiologics.com/en",
+    "sourceAsset": "https://www.lottebiologics.com/company/logo-header.svg",
+    "sha256": "09ea555f5e5b238500fecc8f74d3444190415b3dda65943f492e00c43028b605"
+  },
+  {
+    "id": "bcworld",
+    "names": [
+      "비씨월드제약",
+      "비씨월드"
+    ],
+    "src": "./images/clients/bcworld.png",
+    "background": "light",
+    "sourcePage": "https://www.bcwp.co.kr/",
+    "sourceAsset": "https://www.bcwp.co.kr/html/_img/comm/logo_on.png",
+    "sha256": "4e434e3c30a1abdf5ff0f8330e9d76759ef9f800c5ce78d4d9c12cbc2b792b0a"
+  },
+  {
+    "id": "binex",
+    "names": [
+      "바이넥스"
+    ],
+    "src": "./images/clients/binex.png",
+    "background": "light",
+    "sourcePage": "https://www.bi-nex.com/",
+    "sourceAsset": "https://www.bi-nex.com/assets/images/binex_logo.png",
+    "sha256": "d04499f26252cd9aa35a77351077bd789df91e28b4c765e0dab580f436ef587c"
+  },
+  {
+    "id": "peptron",
+    "names": [
+      "펩트론"
+    ],
+    "src": "./images/clients/peptron.png",
+    "background": "light",
+    "sourcePage": "https://www.peptron.co.kr/",
+    "sourceAsset": "https://www.peptron.co.kr/ds_imgs/header/logo.png",
+    "sha256": "047278bf827b3250483b6cd3e5e6eba0e5f8a572b27fd8a833f86c23ddc86279"
+  },
+  {
+    "id": "boryung-bio",
+    "names": [
+      "보령바이오파마"
+    ],
+    "src": "./images/clients/boryung-bio.png",
+    "background": "light",
+    "sourcePage": "https://www.boryungbio.co.kr/",
+    "sourceAsset": "https://www.boryungbio.co.kr/assets/logo.png",
+    "sha256": "075f9647152cec588fc444efe8fe8b98f703ff6c18049527b9786141f3a0600a"
+  },
+  {
+    "id": "dongkwang",
+    "names": [
+      "동광제약"
+    ],
+    "src": "./images/clients/dongkwang.png",
+    "background": "light",
+    "sourcePage": "https://www.dkpco.co.kr/",
+    "sourceAsset": "https://www.dkpco.co.kr/images/common/h1_logo.png",
+    "sha256": "0f4abc69524eea39f43bed870bb8f08cafc5168ac7c63be185c55b58cdf096e0"
+  },
+  {
+    "id": "jeil",
+    "names": [
+      "제일약품"
+    ],
+    "src": "./images/clients/jeil.jpg",
+    "background": "light",
+    "sourcePage": "https://www.jeilpharm.co.kr/jeilpharm/intro.asp",
+    "sourceAsset": "https://www.jeilpharm.co.kr/jeilpharm/images/logo.jpg",
+    "sha256": "b2e9bb08a8836486898055ca732318098e2f36349c0e8b637e52e9270c532e52"
+  },
+  {
+    "id": "daewon",
+    "names": [
+      "대원제약"
+    ],
+    "src": "./images/clients/daewon.png",
+    "background": "light",
+    "sourcePage": "https://www.daewonpharm.com/main/index.jsp",
+    "sourceAsset": "https://www.daewonpharm.com/images/com/logo.png",
+    "sha256": "d95b7a97a29ef1c6de086678431334ceeefd62ca389ba9fc1db4bacdf923c1e2"
+  },
+  {
+    "id": "jw-life",
+    "names": [
+      "jw생명과학"
+    ],
+    "src": "./images/clients/jw-life.png",
+    "background": "light",
+    "sourcePage": "https://www.jw-lifescience.co.kr/lifescience/ko/main.jsp",
+    "sourceAsset": "https://www.jw-lifescience.co.kr/lifescience/ko/asset/images/logo_lifescience.png",
+    "sha256": "3ab1486f05ee98d588571e579727aea9a53663f0808f8a76ae0437d7fcde4ad6"
+  },
+  {
+    "id": "reyon",
+    "names": [
+      "이연제약"
+    ],
+    "src": "./images/clients/reyon.png",
+    "background": "light",
+    "sourcePage": "https://www.reyonpharm.co.kr/en/main/main.do",
+    "sourceAsset": "https://www.reyonpharm.co.kr/en/img/common/logo.png",
+    "sha256": "9e2289ade49cacae42da66bb9a38fefb834c14514a71c193567f4f601f184e54"
+  },
+  {
+    "id": "alvogen",
+    "names": [
+      "알보젠코리아",
+      "알보젠"
+    ],
+    "src": "./images/clients/alvogen.png",
+    "background": "light",
+    "sourcePage": "https://www.alvogenkorea.com/",
+    "sourceAsset": "https://api.alvogenkorea.com/storage/site/Alvogen_logo_yellow__1_-removebg-preview.png",
+    "sha256": "a5003c22a4a29826962bb4444d6044983fde3afd91d72912f1cfe7cad7a4bcb0"
+  },
+  {
+    "id": "daehwa",
+    "names": [
+      "대화제약"
+    ],
+    "src": "./images/clients/daehwa.png",
+    "background": "light",
+    "sourcePage": "https://www.dhpharm.co.kr/html/",
+    "sourceAsset": "https://www.dhpharm.co.kr/image/common/Daehwa_logo.png",
+    "sha256": "fea4df9672c96cb4d5d4ebbf200e17a9a16581f706176338ae5d07c33b2a9f07"
+  },
+  {
+    "id": "daihan",
+    "names": [
+      "대한약품",
+      "대한약품공업"
+    ],
+    "src": "./images/clients/daihan.png",
+    "background": "light",
+    "sourcePage": "https://www.daihan.com/main/main.php",
+    "sourceAsset": "https://www.daihan.com/images/inc/t_logo.png",
+    "sha256": "c6f27f94e0b0e97cdfe805b24d731fe0aaa66ccec4b4fd1838bf66f127a91f68"
+  },
+  {
+    "id": "dongkoo",
+    "names": [
+      "동구바이오"
+    ],
+    "src": "./images/clients/dongkoo.png",
+    "background": "light",
+    "sourcePage": "https://www.dongkoo.com/kor/",
+    "sourceAsset": "https://www.dongkoo.com/assets/kor/images/common/logo.png",
+    "sha256": "6f3c2018659de915faf84547e3d8814287c077d2a9d33a8a8679ff8f833a0535"
+  },
+  {
+    "id": "samyang-bio",
+    "names": [
+      "삼양바이오팜",
+      "삼양바이오팜 의약공장"
+    ],
+    "src": "./images/clients/samyang-bio.svg",
+    "background": "light",
+    "sourcePage": "https://www.samyangbiopharm.com/kr/index",
+    "sourceAsset": "https://www.samyangbiopharm.com/resources/kr/local/images/common/blue_logo.svg",
+    "sha256": "954a47fa55093236eda51b31dd18b26d9f5416f4cc81dc4b0fe3da925af7b302"
+  },
+  {
+    "id": "samyang",
+    "names": [
+      "삼양홀딩스",
+      "삼양홀딩스 의약공장"
+    ],
+    "src": "./images/clients/samyang.svg",
+    "background": "light",
+    "sourcePage": "https://www.samyang.com/kr/index",
+    "sourceAsset": "https://www.samyang.com/resources/kr/local/images/common/blue_logo_1924.svg",
+    "sha256": "fe5e58e1e405296cc3af841e305093f9da43ff9e8f167ce26e0e2f1a6ab969cd"
+  },
+  {
+    "id": "rp-bio",
+    "names": [
+      "RPBIO"
+    ],
+    "src": "./images/clients/rp-bio.png",
+    "background": "light",
+    "sourcePage": "https://www.rpbio.co.kr/html/ko/main.php",
+    "sourceAsset": "https://www.rpbio.co.kr/images/img_logo.png",
+    "sha256": "c8903b2709f546094ee1891961a8dc3bd5e814a988e26a6a9f689f6ac3ac08b5"
+  },
+  {
+    "id": "whanin",
+    "names": [
+      "환인제약"
+    ],
+    "src": "./images/clients/whanin.png",
+    "background": "light",
+    "sourcePage": "https://www.whanin.com/",
+    "sourceAsset": "https://www.whanin.com/_theme/basic/img/ci.png",
+    "sha256": "8caeb924b7751d26942bc67216dab024cbb9b6873987bb8f6792ac456868864f"
+  },
+  {
+    "id": "suheung",
+    "names": [
+      "서흥",
+      "서흥캅셀"
+    ],
+    "src": "./images/clients/suheung.png",
+    "background": "light",
+    "sourcePage": "https://www.suheung.com/",
+    "sourceAsset": "https://www.suheung.com/theme/suheung/img/logo_color2023.png",
+    "sha256": "d405319307d8540a215bc81a5b6b2177d7198fe231a4bbe780da0d9a1c9095e3"
+  },
+  {
+    "id": "kwangdong",
+    "names": [
+      "광동제약"
+    ],
+    "src": "./images/clients/kwangdong.png",
+    "background": "light",
+    "sourcePage": "https://www.ekdp.com/main.do",
+    "sourceAsset": "https://www.ekdp.com/static/cw/images/renewal/logo1.png",
+    "sha256": "01cf1eefbc144f3f2c5bab39644a6ab70f944cbfd07d7239a88cc2393008ebc6"
+  },
+  {
+    "id": "dongsung",
+    "names": [
+      "동성제약"
+    ],
+    "src": "./images/clients/dongsung.jpg",
+    "background": "light",
+    "sourcePage": "https://www.dongsung-pharm.com/",
+    "sourceAsset": "https://www.dongsung-pharm.com/user/image/top/logo.jpg",
+    "sha256": "edf5fc5bc6ec7899668b21f964184282214ccbc8a28d653c0e916e8bfa2081d0"
+  },
+  {
+    "id": "young-science",
+    "names": [
+      "영사이언스"
+    ],
+    "src": "./images/clients/young-science.svg",
+    "background": "light",
+    "sourcePage": "https://www.youngscience.com/",
+    "sourceAsset": "https://www.youngscience.com/asset/img/common/header_logo_on.svg",
+    "sha256": "d1ada15ef8bca04d20eb0a366fc483bfbf08af3ae717ef5e9b936fafede629c2"
+  },
+  {
+    "id": "hanwha",
+    "names": [
+      "한화제약"
+    ],
+    "src": "./images/clients/hanwha.svg",
+    "background": "light",
+    "sourcePage": "https://www.hwpharm.com/main/",
+    "sourceAsset": "https://www.hwpharm.com/images/inc/logo.svg?v=0.12112",
+    "sha256": "e5783862cb26e697c9f4b0f3d82eeeeb4ee61ab6bfa40af2b83a125f25663d20"
+  },
+  {
+    "id": "otsuka",
+    "names": [
+      "한국오츠카제약"
+    ],
+    "src": "./images/clients/otsuka.png",
+    "background": "light",
+    "sourcePage": "https://www.otsuka.co.kr/",
+    "sourceAsset": "https://www.otsuka.co.kr/img/user/main/logo.png",
+    "sha256": "87156f27104c65d8971b3be935916cbadd24e130cefd3198f9cf2689603348d0"
+  },
+  {
+    "id": "yu-young",
+    "names": [
+      "유영제약"
+    ],
+    "src": "./images/clients/yu-young.png",
+    "background": "light",
+    "sourcePage": "https://www.yypharm.co.kr/",
+    "sourceAsset": "https://markit-cdn.s3.ap-northeast-2.amazonaws.com/yy_official/ci_logo_mix.png",
+    "sha256": "e8210b37f668f396209d77b366b45c727b40391f09661c7fa141d39ef46ba8e1"
+  },
+  {
+    "id": "g2g",
+    "names": [
+      "G2G 바이오"
+    ],
+    "src": "./images/clients/g2g.png",
+    "background": "light",
+    "sourcePage": "https://www.g2gbio.com/",
+    "sourceAsset": "https://www.g2gbio.com/images/common/header_logo_color.png",
+    "sha256": "83f5350ed6c54e0ee29d5df29ff9a03665aa34c1a953fb2d8a5545ae8fb4b387"
+  },
+  {
+    "id": "merck",
+    "names": [
+      "머크"
+    ],
+    "src": "./images/clients/merck.svg",
+    "background": "light",
+    "sourcePage": "https://www.merckgroup.com/kr-ko",
+    "sourceAsset": "https://www.merckgroup.com/content/dam/web/corporate/images/general/global/logos/merck.svg",
+    "sha256": "568c28a59b29fcd66108eef174e65c9bb475d3423b686fa9481d06bdcb8d5ed1"
+  },
+  {
+    "id": "genuone",
+    "names": [
+      "제뉴원사이언스"
+    ],
+    "src": "./images/clients/genuone.png",
+    "background": "light",
+    "sourcePage": "https://www.genuonesciences.com/main/",
+    "sourceAsset": "https://www.genuonesciences.com/assets/images/logo_on.png",
+    "sha256": "dc13ac92c6994cb3c6b1509779569f96bd8d4a52647f8d0c0f11afc4c9babf60"
+  },
+  {
+    "id": "shinpoong",
+    "names": [
+      "신풍제약"
+    ],
+    "src": "./images/clients/shinpoong.png",
+    "background": "light",
+    "sourcePage": "https://www.shinpoong.co.kr/main/main.php",
+    "sourceAsset": "https://www.shinpoong.co.kr/images/inc/h_logo.png",
+    "sha256": "e5f4f4af505be6a4c972788e6c858db2fc8d0db8a883c6949a62d459b1c85a44"
+  },
+  {
+    "id": "pharmbio",
+    "names": [
+      "한국팜비오"
+    ],
+    "src": "./images/clients/pharmbio.svg",
+    "background": "light",
+    "sourcePage": "https://www.pharmbio.co.kr/",
+    "sourceAsset": "https://www.pharmbio.co.kr/images/default/main/logo_b.svg",
+    "sha256": "00c916e52e0144385c99492fae930529fc28a0d00be3fdd6e9b0bffb7724446e"
+  },
+  {
+    "id": "roche",
+    "names": [
+      "한국로슈"
+    ],
+    "src": "./images/clients/roche.svg",
+    "background": "light",
+    "sourcePage": "https://www.roche.co.kr/",
+    "sourceAsset": "https://www.roche.co.kr/#inline-logo",
+    "sha256": "bc224df5cd88928f84ef3cfb7ec799e7e53048d6820ffe3c4b07a1c660ec6e83"
+  },
+  {
+    "id": "yuhan",
+    "names": [
+      "유한양행"
+    ],
+    "src": "./images/clients/yuhan.png",
+    "background": "light",
+    "sourcePage": "https://www.yuhan.co.kr/Main/",
+    "sourceAsset": "https://www.yuhan.co.kr/common/images/main/hover_logo.png",
+    "sha256": "c740c0369b327ebd71ad2f75f0d78ad1c1e0ed26936e71f776524305a0c33959"
+  },
+  {
+    "id": "ckd-pharm",
+    "names": [
+      "종근당"
+    ],
+    "src": "./images/clients/ckd-pharm.png",
+    "background": "light",
+    "sourcePage": "https://www.ckdpharm.com/research/intro.do",
+    "sourceAsset": "https://www.ckdpharm.com/images/pc/logo/logo.png?ver=20261002",
+    "sha256": "f967cbf4feb8985eb97af839b6f1e5aa4603ecdf5d50c8002df9181019be61c1"
+  },
+  {
+    "id": "ckd-bio",
+    "names": [
+      "종근당바이오",
+      "CKD Bio",
+      "종근당바이오 안산공장",
+      "종근당바이오 예산공장"
+    ],
+    "src": "./images/clients/ckd-bio.png",
+    "background": "light",
+    "sourcePage": "https://www.ckdbio.com/facility/ansanFactory.do",
+    "sourceAsset": "https://www.ckdbio.com/images/pc/common/logo.png?ver=20261002",
+    "sha256": "a4e7b42fbb4290b9c78500c45507120ad4be0ea71c0082b87995e844aa397262"
+  },
+  {
+    "id": "samjin",
+    "names": [
+      "삼진제약"
+    ],
+    "src": "./images/clients/samjin.png",
+    "background": "light",
+    "sourcePage": "https://www.samjinpharm.co.kr/front/kr/main/index.asp",
+    "sourceAsset": "https://www.samjinpharm.co.kr/front/kr/resources/img/common/logo.png",
+    "sha256": "91d408ec3ae9eddba2c373ad24c4939441c777130559f88daebcfc9fb750bf07"
+  },
+  {
+    "id": "unimed",
+    "names": [
+      "유니메드제약"
+    ],
+    "src": "./images/clients/unimed.png",
+    "background": "light",
+    "sourcePage": "https://www.unimed.co.kr/index",
+    "sourceAsset": "https://www.unimed.co.kr/resource/img/logo.png",
+    "sha256": "86ae9f253a3bd4b4477b10050e161b9e1880a4ee4ca4a3825f742d1a2091a0a7"
+  },
+  {
+    "id": "isu",
+    "names": [
+      "이수앱지스"
+    ],
+    "src": "./images/clients/isu.png",
+    "background": "light",
+    "sourcePage": "https://www.abxis.com/kor/index.do",
+    "sourceAsset": "https://www.abxis.com/images/common/logo.png",
+    "sha256": "c31c4cc191f40aed1511e4c57f8f3558b48a8612efcfd1f6aa0fc7d2dd667f53"
+  },
+  {
+    "id": "dongwha",
+    "names": [
+      "동화약품"
+    ],
+    "src": "./images/clients/dongwha.png",
+    "background": "light",
+    "sourcePage": "https://www.dong-wha.co.kr/dw_main.asp",
+    "sourceAsset": "https://www.dong-wha.co.kr/images/logo.png?ver=202608a",
+    "sha256": "2a4892405f4c8e91ae9ffc3ba0a1d5ed1ad75261dd3a984b5eccd385a4fab372"
+  },
+  {
+    "id": "penmix",
+    "names": [
+      "펜믹스"
+    ],
+    "src": "./images/clients/penmix.png",
+    "background": "light",
+    "sourcePage": "http://www.penmix.co.kr/",
+    "sourceAsset": "http://www.penmix.co.kr/images/logo_01.png",
+    "sha256": "1dc5ae8262c3858b7c20135f7cd9ed88a493d22bfa270c03e5a946fd16850129"
+  },
+  {
+    "id": "prp-science",
+    "names": [
+      "피알피사이언스",
+      "피알피싸이언스"
+    ],
+    "src": "./images/clients/prp-science.png",
+    "background": "light",
+    "sourcePage": "https://www.prpscience.co.kr/",
+    "sourceAsset": "https://www.prpscience.co.kr/home_assets/img/header/PRPSCIENCE-LOGO.png",
+    "sha256": "129c76eadd22949eac58ddbba76346836a9fed13402052555d1886f8fea1bdfe"
+  },
+  {
+    "id": "youngjin",
+    "names": [
+      "영진약품"
+    ],
+    "src": "./images/clients/youngjin.svg",
+    "background": "light",
+    "sourcePage": "https://www.yungjin.co.kr/",
+    "sourceAsset": "https://www.yungjin.co.kr/common_kr/images/logo-bk.svg",
+    "sha256": "ae629afbed7d3c85ef115e624e1cafc94fff74faa0956ea882ddbb0ca1e2962b"
+  },
+  {
+    "id": "huons-meditech",
+    "names": [
+      "휴온스메디텍"
+    ],
+    "src": "./images/clients/huons-meditech.png",
+    "background": "light",
+    "sourcePage": "https://www.huonsmeditech.com/",
+    "sourceAsset": "https://huonsmeditech.com/layout/images/common/logo_og.png",
+    "sha256": "ee4d62c6a954592a5d916b8b2af348191a40e5e83c3251276b53588a343b5db5"
+  },
+  {
+    "id": "humedix",
+    "names": [
+      "휴메딕스"
+    ],
+    "src": "./images/clients/humedix.png",
+    "background": "light",
+    "sourcePage": "https://www.humedix.com/",
+    "sourceAsset": "http://humedix.com/web/images/common/logo_og.png",
+    "sha256": "ef6587a80658729fbce4e2c8deec55a7d7cbe75bab4b4bcc381c6283376869ec"
+  },
+  {
+    "id": "eaglevet",
+    "names": [
+      "이글벳"
+    ],
+    "src": "./images/clients/eaglevet.png",
+    "background": "light",
+    "sourcePage": "https://eaglevet.com/",
+    "sourceAsset": "https://eaglevet.com/wp-content/uploads/2021/12/1_logo-1-300x100.png",
+    "sha256": "f7459ac6a680b78c54ce1a4d616b70e254ec5b92680d4d89ad2f445499fa1418"
+  },
+  {
+    "id": "aju",
+    "names": [
+      "아주약품"
+    ],
+    "src": "./images/clients/aju.png",
+    "background": "light",
+    "sourcePage": "https://www.ajupharm.co.kr/",
+    "sourceAsset": "https://cdn.imweb.me/thumbnail/20260724/2a21e20c2ffc8.png",
+    "sha256": "503a5b626c1196d424d85dd2cba15a977be804e595d6e78eba614c2e9ee8faf4"
+  },
+  {
+    "id": "korea-vaccine",
+    "names": [
+      "한국백신",
+      "Korea Vaccine"
+    ],
+    "src": "./images/clients/korea-vaccine.png",
+    "background": "light",
+    "sourcePage": "https://www.koreavaccine.com/",
+    "sourceAsset": "https://cdn.imweb.me/thumbnail/20261002/ff659405860eb.png",
+    "sha256": "649d00c9be2b321de1558e2936168b1acfff010255b23d86ad4ab9d1cc2a8c43"
+  },
+  {
+    "id": "samil",
+    "names": [
+      "삼일제약"
+    ],
+    "src": "./images/clients/samil.png",
+    "background": "light",
+    "sourcePage": "https://www.samil-pharm.com/",
+    "sourceAsset": "https://www.samil-pharm.com/assets/user/KR/img/logo2.png",
+    "sha256": "d2e3684f6bda450eea68907d2032489350bd411f61d308ae5f1c8945df5ba127"
+  },
+  {
+    "id": "icure",
+    "names": [
+      "아이큐어"
+    ],
+    "src": "./images/clients/icure.png",
+    "background": "light",
+    "sourcePage": "https://www.icure.co.kr/",
+    "sourceAsset": "https://www.icure.co.kr:443/theme/icure01/images/layout/hd_logo2.png",
+    "sha256": "0b4aa7064ac6f3b69af13981794fd4227379315fc2d2459378dd7ecd3e626beb"
+  },
+  {
+    "id": "boston-scientific",
+    "names": [
+      "보스톤싸이언티픽"
+    ],
+    "src": "./images/clients/boston-scientific.svg",
+    "background": "light",
+    "sourcePage": "https://www.bostonscientific.com/en-US/home.html",
+    "sourceAsset": "https://www.bostonscientific.com/content/dam/logo-bsc.svg",
+    "sha256": "0f1b4e3b812170bbc61a6b03b5cfccdd0254c9920415cff4a51fd9aedc0665c1"
+  },
+  {
+    "id": "myungin",
+    "names": [
+      "명인제약"
+    ],
+    "src": "./images/clients/myungin.png",
+    "background": "light",
+    "sourcePage": "https://myunginph.co.kr/main/ko/index.html",
+    "sourceAsset": "https://myunginph.co.kr/design/ko/images/default/logo.png",
+    "sha256": "172932a69674fd7f6f6d0d1c3b13ddec09806ba2c748eb17e3b219f41c4884de"
+  },
+  {
+    "id": "mirae-cell",
+    "names": [
+      "미래셀바이오"
+    ],
+    "src": "./images/clients/mirae-cell.svg",
+    "background": "light",
+    "sourcePage": "http://miraecellbio.com/",
+    "sourceAsset": "http://miraecellbio.com/#inline-logo",
+    "sha256": "8a3b3f85c3992607cc1c77e52f3744bba6031a19ca8172f5ef9b3c59fcce7e6d"
+  },
+  {
+    "id": "yoosung",
+    "names": [
+      "유성에프에스"
+    ],
+    "src": "./images/clients/yoosung.png",
+    "background": "light",
+    "sourcePage": "http://yoosungfs.com/",
+    "sourceAsset": "http://yoosungfs.com/wp/wp-content/uploads/2021/01/유성로고-300x67.png",
+    "sha256": "c3f61188e827dd4daff3237bec0c6526be97a1e4bee8ed73f43e9408f92be776"
+  },
+  {
+    "id": "curable",
+    "names": [
+      "큐러블"
+    ],
+    "src": "./images/clients/curable.jpg",
+    "background": "light",
+    "sourcePage": "https://www.curablent.com/",
+    "sourceAsset": "https://lh3.googleusercontent.com/NmDfIh4MZm8EJyZErpPLw2bvrabcbwjJE-4o6nLT9HABpvLhgrUtig1_RJqUE0co13u6G-cgBaY9IdfMUQvc2fXNOFNiTfBzmXSPhEGWSyeNijqTtJswWA",
+    "sha256": "41ee57e850902e462803767fbd8ead67b0f7f5b7a4bf239464428dbece2023e0"
+  },
+  {
+    "id": "alico",
+    "names": [
+      "알리코제약"
+    ],
+    "src": "./images/clients/alico.png",
+    "background": "light",
+    "sourcePage": "https://www.arlico.co.kr/main/main.php",
+    "sourceAsset": "https://www.arlico.co.kr/images/inc/logo.png",
+    "sha256": "97c90c2c3f0b5a30fb9a1403787c325cb21d5231c90a2c7bfc7898484ce8d57f"
+  },
+  {
+    "id": "vivozon",
+    "names": [
+      "비보존제약"
+    ],
+    "src": "./images/clients/vivozon.png",
+    "background": "light",
+    "sourcePage": "https://www.vivozonpharm.com/",
+    "sourceAsset": "https://www.vivozonpharm.com/images/common/h1_logo.png",
+    "sha256": "601ff3285fd6d93fc9fb4b45f42ece10fb8ee292e60448f86f44315123e30ede"
+  },
+  {
+    "id": "cgbio",
+    "names": [
+      "CG바이오",
+      "시지바이오"
+    ],
+    "src": "./images/clients/cgbio.png",
+    "background": "light",
+    "sourcePage": "https://www.cgbio.co.kr/",
+    "sourceAsset": "https://www.cgbio.co.kr/wp-content/themes/wpex-corporate/images/common/logo_btm.png",
+    "sha256": "0370f24d0332671c182addc76b7cbdd95e40affb8ecc7fa3bd8631c624c3ac38"
+  },
+  {
+    "id": "bmi",
+    "names": [
+      "한국BMI",
+      "한국비엠아이"
+    ],
+    "src": "./images/clients/bmi.svg",
+    "background": "light",
+    "sourcePage": "https://bmikr.co.kr/",
+    "sourceAsset": "https://bmikr.co.kr/wp-content/uploads/2022/05/logo_org.svg",
+    "sha256": "9f0dff015dda3df91004ea8adbd9b04c2a5cd078841b3f4d8eb6fdb9448ef25e"
+  },
+  {
+    "id": "daehan-new",
+    "names": [
+      "대한뉴팜"
+    ],
+    "src": "./images/clients/daehan-new.png",
+    "background": "light",
+    "sourcePage": "https://www.dhnp.co.kr/",
+    "sourceAsset": "https://www.dhnp.co.kr/images/common/allmenu_logo.png",
+    "sha256": "2ffd6ab3075f5c2862d5941a4cd01de06e308e8688e4d48563d1f18cde87bfc4"
+  },
+  {
+    "id": "cellontech",
+    "names": [
+      "셀론텍"
+    ],
+    "src": "./images/clients/cellontech.png",
+    "background": "light",
+    "sourcePage": "https://www.cellontech.com/",
+    "sourceAsset": "https://www.cellontech.com/assets/imgs/logo_blue_large.png",
+    "sha256": "487ca55a45abd81a1fe0deeca9b6b14e320d435edd17cabf255ffac1aa342e9d"
+  },
+  {
+    "id": "organoid",
+    "names": [
+      "오가노이드사이언스"
+    ],
+    "src": "./images/clients/organoid.webp",
+    "background": "light",
+    "sourcePage": "https://organoidrx.com/",
+    "sourceAsset": "https://organoidrx.com/wp-content/uploads/2026/01/os-logo.webp",
+    "sha256": "2f6a7878e135579aface780235329811d80456cf84a83410511ca3e8af96a9d9"
+  },
+  {
+    "id": "kolon",
+    "names": [
+      "코오롱제약"
+    ],
+    "src": "./images/clients/kolon.png",
+    "background": "light",
+    "sourcePage": "https://www.kolonpharm.co.kr/",
+    "sourceAsset": "https://www.kolonpharma.co.kr/theme/basic/img/logo.png",
+    "sha256": "092677c485994d8c7398abbe844d571db3e658ab0cfef2458e8401db6236b521"
+  },
+  {
+    "id": "shinil",
+    "names": [
+      "신일제약"
+    ],
+    "src": "./images/clients/shinil.png",
+    "background": "light",
+    "sourcePage": "https://www.sinilpharm.com/",
+    "sourceAsset": "https://www.sinilpharm.com/images/ci.png",
+    "sha256": "647c1ae944d5f389829e38daec2512336e2567249b1d615ed32ba3f6212d412f"
+  },
+  {
+    "id": "samsung-pharm",
+    "names": [
+      "삼성제약"
+    ],
+    "src": "./images/clients/samsung-pharm.png",
+    "background": "light",
+    "sourcePage": "https://www.sspharm.co.kr/new/main/main.php",
+    "sourceAsset": "https://www.sspharm.co.kr/new/images/inc/logo.png?v=2.9",
+    "sha256": "d6bcddc310946d09747b185998835cc630f6f24897f05b160be17af6e16c3374"
+  },
+  {
+    "id": "curatis",
+    "names": [
+      "큐라티스"
+    ],
+    "src": "./images/clients/curatis.png",
+    "background": "light",
+    "sourcePage": "https://www.quratis.com/ko/",
+    "sourceAsset": "https://www.quratis.com/ko/images/common/logo_on.png",
+    "sha256": "eaa39ec928faf5835b2a35559df455861c4e4a95ca77e7e6d16d79ba7cc5b8a6"
+  },
+  {
+    "id": "komipharm",
+    "names": [
+      "코미팜"
+    ],
+    "src": "./images/clients/komipharm.svg",
+    "background": "light",
+    "sourcePage": "https://www.komipharm.co.kr/",
+    "sourceAsset": "https://www.komipharm.co.kr/core/images/logo-sticky.svg",
+    "sha256": "13b5690d9dba9a7742fca67891e6beff1d0bea5a7828e0a25634fbe9ba49b5f1"
+  },
+  {
+    "id": "cellumed",
+    "names": [
+      "셀루메드"
+    ],
+    "src": "./images/clients/cellumed.svg",
+    "background": "light",
+    "sourcePage": "https://www.cellumed.co.kr/",
+    "sourceAsset": "https://www.cellumed.co.kr/theme/basic/img/common/logo_c.svg",
+    "sha256": "473163b8fedf181026d05036694591ad3d8a760b2b2423377fe427c8f5740c5a"
+  },
+  {
+    "id": "sk-ecoplant",
+    "names": [
+      "SK에코플랜트"
+    ],
+    "src": "./images/clients/sk-ecoplant.png",
+    "background": "light",
+    "sourcePage": "https://www.skecoplant.com/",
+    "sourceAsset": "https://www.skecoplant.com/img/common/logo_color.png",
+    "sha256": "d835488630cda9d527021d2b3fa8c66ffd3b036033f9474d39daf594cfd03469"
+  },
+  {
+    "id": "quantamatrix",
+    "names": [
+      "퀀타매트릭스"
+    ],
+    "src": "./images/clients/quantamatrix.svg",
+    "background": "light",
+    "sourcePage": "https://www.quantamatrix.com/",
+    "sourceAsset": "https://www.quantamatrix.com/wp-content/themes/quantamatrix/images/logo.svg",
+    "sha256": "70eb5f54ac1e5cf3881c76adb2a031a014af3d3f795ea3a81a53579749c166c7"
+  },
+  {
+    "id": "genoss",
+    "names": [
+      "제노스"
+    ],
+    "src": "./images/clients/genoss.png",
+    "background": "light",
+    "sourcePage": "https://www.genoss.com/",
+    "sourceAsset": "https://www.genoss.com/new/img/logo_active.png",
+    "sha256": "8b5df11bfa6b7afd24ee8052aed8ab471797c4e08df475a7c864fa179e5bb3b8"
+  },
+  {
+    "id": "sunjin",
+    "names": [
+      "선진뷰티사이언스"
+    ],
+    "src": "./images/clients/sunjin.png",
+    "background": "light",
+    "sourcePage": "https://www.sunjinbs.com/en/main/",
+    "sourceAsset": "https://www.sunjinbs.com/en/images/comm/logo.png",
+    "sha256": "1f06db95ff0c449a1a423059da9656c67270e510dfdcd567e9886bb47d279cff"
+  },
+  {
+    "id": "caregen",
+    "names": [
+      "케어젠"
+    ],
+    "src": "./images/clients/caregen.png",
+    "background": "light",
+    "sourcePage": "https://www.caregen.co.kr/",
+    "sourceAsset": "https://cdn.imweb.me/thumbnail/20260902/2cdb72367cceb.png",
+    "sha256": "35f5658b5cb994a21db6845bb178723e677286237806b18ede6981b648cf26c9"
+  },
+  {
+    "id": "youngil",
+    "names": [
+      "영일제약"
+    ],
+    "src": "./images/clients/youngil.png",
+    "background": "light",
+    "sourcePage": "http://www.youngilpharm.co.kr/html/main.php",
+    "sourceAsset": "http://www.youngilpharm.co.kr/images/main/h_logo.png",
+    "sha256": "1c5384835f35c16666ef18848576c7b97fcfaf27a4fac24956b572a91c8e0f97"
+  },
+  {
+    "id": "jaseng",
+    "names": [
+      "자생한방병원"
+    ],
+    "src": "./images/clients/jaseng.svg",
+    "background": "light",
+    "sourcePage": "https://www.jaseng.co.kr/",
+    "sourceAsset": "https://www.jaseng.co.kr/opti/Upload/Branch/logo_10001.svg?width=320",
+    "sha256": "8e3406e9b24f1882ab24982f43276286828a245b56882961bcae6a2792b2ba52"
+  },
+  {
+    "id": "withus",
+    "names": [
+      "위더스제약"
+    ],
+    "src": "./images/clients/withus.jpg",
+    "background": "light",
+    "sourcePage": "https://www.withuspharm.com/mastart/mastart.php",
+    "sourceAsset": "https://www.withuspharm.com/sp_images/sp_include/logo.jpg",
+    "sha256": "859fe133c4e56401d99027d4bd557248247ca0d9df77472efd6add331899e90e"
+  },
+  {
+    "id": "dermafirm",
+    "names": [
+      "더마펌"
+    ],
+    "src": "./images/clients/dermafirm.png",
+    "background": "light",
+    "sourcePage": "https://www.dermafirm.com/",
+    "sourceAsset": "https://cdn-pro-web-250-115.cdn-nhncommerce.com/namuon0110_godomall_com/data/skin/front/dbook_20230303/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_94112.png",
+    "sha256": "cda52007c3ee8540cf75ffcc77d5d6de67ebc2afa5c1d1208092554ed62799c2"
+  },
+  {
+    "id": "firson",
+    "names": [
+      "퍼슨"
+    ],
+    "src": "./images/clients/firson.png",
+    "background": "light",
+    "sourcePage": "https://www.firson.co.kr/main/main.php",
+    "sourceAsset": "https://www.firson.co.kr/images/inc/logo_new.png",
+    "sha256": "5c7491490f188912f5838bb10c2d1d36ac889535e6e18d110eb91c08c1f18a3f"
+  },
+  {
+    "id": "jin-yang",
+    "names": [
+      "진양제약"
+    ],
+    "src": "./images/clients/jin-yang.png",
+    "background": "light",
+    "sourcePage": "https://www.jinyangpharm.com/",
+    "sourceAsset": "https://www.jinyangpharm.com/theme/102114/kr/images/main/header_logo.png",
+    "sha256": "f720e019b9579b39bd1576554acc6ffe19a031d52f6993e7624d18a9b6717a30"
+  },
+  {
+    "id": "cellbion",
+    "names": [
+      "셀비온"
+    ],
+    "src": "./images/clients/cellbion.png",
+    "background": "light",
+    "sourcePage": "https://www.cellbion.co.kr/",
+    "sourceAsset": "https://www.cellbion.co.kr/layouts/default_re_kr/_var/logo.png",
+    "sha256": "f76067c89c8a20411136ffc2b38d45624f8ea2d0c68138d3d4fdb0a5ddfd3928"
+  },
+  {
+    "id": "korus",
+    "names": [
+      "코러스"
+    ],
+    "src": "./images/clients/korus.png",
+    "background": "light",
+    "sourcePage": "https://www.koruspharm.co.kr/",
+    "sourceAsset": "http://www.koruspharm.co.kr/images/logo.jpg",
+    "sha256": "559bea423d778d15fde012059a219026db85387c02e75c113213eded793f5a6c"
+  },
+  {
+    "id": "kookje",
+    "names": [
+      "국제약품"
+    ],
+    "src": "./images/clients/kookje.png",
+    "background": "light",
+    "sourcePage": "https://www.kukjepharm.co.kr/",
+    "sourceAsset": "https://www.kukjepharm.co.kr/images/layout/ft_logo.png",
+    "sha256": "7e8604ef8e05853e129981ea3f3f8bfcf8048ec5f4cc5dc08dfe146bf2c7bb83"
+  },
+  {
+    "id": "dmbio",
+    "names": [
+      "DMBIO",
+      "DM Bio",
+      "DM바이오",
+      "디엠바이오"
+    ],
+    "src": "./images/clients/dmbio.jpg",
+    "background": "light",
+    "sourcePage": "https://www.etnews.com/20191031000125",
+    "sourceAsset": "https://img.etnews.com/photonews/1910/1238822_20191031114755_605_0001.jpg",
+    "sha256": "f7eb6f5b406160ee8d9dbde277d6e503950647708d283ee669d8eea761769d17"
+  },
+  {
+    "id": "st-pharm",
+    "names": [
+      "ST Pharm"
+    ],
+    "src": "./images/clients/st-pharm.svg",
+    "background": "light",
+    "sourcePage": "https://www.stpharm.co.kr/ko/ci",
+    "sourceAsset": "https://www.stpharm.co.kr/img/logo.svg?v=5",
+    "sha256": "87e12794bf8e4a4ae785d4a5ef2c1907e1b2bdf5f66562adbbfbe150a95aa88d"
+  },
+  {
+    "id": "scd-pharm",
+    "names": [
+      "삼천당제약",
+      "Samchundang Pharm"
+    ],
+    "src": "./images/clients/scd-pharm.jpg",
+    "background": "light",
+    "sourcePage": "./documents/infact-company-profile-2026-10.pdf#page=14",
+    "sourceAsset": "./documents/infact-company-profile-2026-10.pdf#page=14",
+    "sha256": "055849c69e604307b592e1986f5fbdcd0ddfae79fd045edb24a7ac3c068dfd09"
+  },
+  {
+    "id": "lnc-bio",
+    "names": [
+      "엘앤씨바이오"
+    ],
+    "src": "./images/clients/lnc-bio.svg",
+    "background": "light",
+    "sourcePage": "https://www.lncbio.co.kr/",
+    "sourceAsset": "https://www.lncbio.co.kr/#inline-logo",
+    "sha256": "403ad198455923eaea3cdbd7607d205cdb9ab69d301f79b74312afda35b63c71"
+  },
+  {
+    "id": "bukwang",
+    "names": [
+      "부광약품"
+    ],
+    "src": "./images/clients/bukwang.png",
+    "background": "light",
+    "sourcePage": "https://www.bukwang.co.kr/",
+    "sourceAsset": "https://www.bukwang.co.kr/images/common/logo2.png",
+    "sha256": "fbba0833eeb3d23b2f1b8683e4f911880a602ee1c4e6d68bebefb1c0b9c53ec7"
+  },
+  {
+    "id": "cosmax-bio",
+    "names": [
+      "코스맥스바이오"
+    ],
+    "src": "./images/clients/cosmax-bio.svg",
+    "background": "light",
+    "sourcePage": "https://www.cosmaxbio.com/",
+    "sourceAsset": "https://www.cosmaxbio.com/images/top_logo_dark.svg",
+    "sha256": "5f8854ca5d4214a8676b15b2961cded686d4efef41aa59a5201d2f8ec3a7ea6d"
+  },
+  {
+    "id": "kyongbo",
+    "names": [
+      "경보제약"
+    ],
+    "src": "./images/clients/kyongbo.png",
+    "background": "light",
+    "sourcePage": "https://www.kbpharma.co.kr/company/summary_kbp.do",
+    "sourceAsset": "https://www.kbpharma.co.kr/images/pc/common/logo.png?ver=20261002",
+    "sha256": "c564cacf2c223e27753ca3f75c02121265be697c569f66f29edaa8f351e682b3"
+  },
+  {
+    "id": "hanlim",
+    "names": [
+      "한림제약"
+    ],
+    "src": "./images/clients/hanlim.jpg",
+    "background": "light",
+    "sourcePage": "https://www.hanlim.com:49324/index.php",
+    "sourceAsset": "https://www.hanlim.com:49324/images/sub02_logo.jpg",
+    "sha256": "f8077f657fb1a14f3e6edacf875fc4efe4943685be756717378f4df9d5bf341c"
+  },
+  {
+    "id": "celltasquare",
+    "names": [
+      "셀타스퀘어"
+    ],
+    "src": "./images/clients/celltasquare.png",
+    "background": "light",
+    "sourcePage": "https://seltaglobal.com/bbs/board.php?bo_table=0401_kr",
+    "sourceAsset": "https://seltaglobal.com/theme/shane/img/logo.png",
+    "sha256": "0cc21b0594a52ccb8f38207ab9354f44a26b54b283e30e9906e3fd2a1bb0af08"
+  },
+  {
+    "id": "kuhnil",
+    "names": [
+      "건일제약"
+    ],
+    "src": "./images/clients/kuhnil.svg",
+    "background": "light",
+    "sourcePage": "http://www.kuhnil.com/",
+    "sourceAsset": "http://www.kuhnil.com/images/logo.svg",
+    "sha256": "d5f6ca93d65d3150f28598e741f12a04bf175440cedaf9e7110bdb9c1e3a8478"
+  },
+  {
+    "id": "huons-biopharma",
+    "names": [
+      "휴온스바이오파마"
+    ],
+    "src": "./images/clients/huons-biopharma.png",
+    "background": "light",
+    "sourcePage": "https://huonsbiopharma.com/web/home.php",
+    "sourceAsset": "https://huonsbiopharma.com/images/common/logo.png",
+    "sha256": "d347c6e07d16d181a9a64fdd478ffbbe3181be912ee0be68613999fcb65ecc48"
+  },
+  {
+    "id": "jw-holdings",
+    "names": [
+      "jw홀딩스"
+    ],
+    "src": "./images/clients/jw-holdings.gif",
+    "background": "light",
+    "sourcePage": "https://www.jw-holdings.co.kr/holdings/ko/intro/ci.jsp",
+    "sourceAsset": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/ci_img_02_1.gif",
+    "sha256": "82b5704f6b79694a5030f0ca2c784f47df10bc7b02415a8a033c7b37f178becd"
+  },
+  {
+    "id": "mujin",
+    "names": [
+      "무진메디"
+    ],
+    "src": "./images/clients/mujin.png",
+    "background": "light",
+    "sourcePage": "https://www.moogene.com/",
+    "sourceAsset": "https://cdn.imweb.me/thumbnail/20260923/576f278167eff.png",
+    "sha256": "34ab7fb3f625363b876b1d1e4ba6e09126b8721101a4cfa6e505c2e25177b0e5"
+  },
+  {
+    "id": "aprogen",
+    "names": [
+      "에이프로젠"
+    ],
+    "src": "./images/clients/aprogen.png",
+    "background": "light",
+    "sourcePage": "https://aprogen.com/ko/v.do?a=Main",
+    "sourceAsset": "https://aprogen.com/i/aprogen/logo_up.png",
+    "sha256": "41b7ca5b412e692739f7a6bb90e7d989ee151838728da059a15408d3b6dd071a"
+  },
+  {
+    "id": "pan-gen",
+    "names": [
+      "팬젠"
+    ],
+    "src": "./images/clients/pan-gen.png",
+    "background": "light",
+    "sourcePage": "https://pangen.com/layout/kor/home.php?go=main&",
+    "sourceAsset": "https://pangen.com/layout/images/common/logo_on.png",
+    "sha256": "87bdcfd87f266484e89697a1b6cf426091c82345314c667423fe7adfec75b66b"
+  },
+  {
+    "id": "samsung-biologics",
+    "names": [
+      "삼성바이오로직스"
+    ],
+    "src": "./images/clients/samsung-biologics.svg",
+    "background": "light",
+    "sourcePage": "https://samsungbiologics.com/kr",
+    "sourceAsset": "https://samsungbiologics.com/resources/front/en/images/logo.svg",
+    "sha256": "20b5b2a8b5cef24ac732b25fb7f223ce3bcd8f4c001758c406cf84837981ab14"
+  },
+  {
+    "id": "united",
+    "names": [
+      "한국유나이티드제약",
+      "한국유나이티드",
+      "유나이티드제약"
+    ],
+    "src": "./images/clients/united.png",
+    "background": "light",
+    "sourcePage": "https://www.kup.co.kr/main.do",
+    "sourceAsset": "https://www.kup.co.kr/resources/images/common/logo_black.png",
+    "sha256": "850da1599cd32989db2ad139ea01397e3caa0aa6343a7c4a33942a5c9f5f564f"
+  },
+  {
+    "id": "daewoong",
+    "names": [
+      "대웅제약"
+    ],
+    "src": "./images/clients/daewoong.svg",
+    "background": "light",
+    "sourcePage": "https://www.daewoong.co.kr/ko",
+    "sourceAsset": "https://www.daewoong.co.kr/images/daewoong-logo-basic.svg",
+    "sha256": "0b05491758527c891aaa175fa9c3d9b23453b322590b17ee25ecb8a483b6000b"
+  },
+  {
+    "id": "daewoong-bio",
+    "names": [
+      "대웅바이오"
+    ],
+    "src": "./images/clients/daewoong-bio.png",
+    "background": "light",
+    "sourcePage": "https://www.daewoongbio.co.kr/ko",
+    "sourceAsset": "https://daewoongbio.co.kr/images/og-default.png",
+    "sha256": "3e5be2e88c59c03e0a439aa8ecaad197153aa5746e8d01930162e743efe32fe4"
+  },
+  {
+    "id": "the-u",
+    "names": [
+      "더유제약"
+    ],
+    "src": "./images/clients/the-u.png",
+    "background": "light",
+    "sourcePage": "https://www.theu.co.kr/?sc_web=y",
+    "sourceAsset": "https://www.theu.co.kr/web/images/common/logo.png",
+    "sha256": "96cc2ecddf0f34d9beaa06090efc450306fedf38e39710348250d0dff438fec7"
+  },
+  {
+    "id": "kukjeon",
+    "names": [
+      "국전약품"
+    ],
+    "src": "./images/clients/kukjeon.jpg",
+    "background": "light",
+    "sourcePage": "https://www.kukjeon.co.kr/",
+    "sourceAsset": "https://cdn.imweb.me/thumbnail/20260813/587bd5852c98f.jpg",
+    "sha256": "28fb737628e0219427fbd192df9b2b749715ec02adbb4e80c5afc897f43a2fd2"
+  },
+  {
+    "id": "jnj",
+    "names": [
+      "존슨앤존슨"
+    ],
+    "src": "./images/clients/jnj.svg",
+    "background": "light",
+    "sourcePage": "https://www.jnj.com/",
+    "sourceAsset": "https://jnj-content-lab2.brightspotcdn.com/ac/25/bd2078f54d5992dd486ed26140ce/johnson-johnson-logo.svg",
+    "sha256": "f3f08c93ca7404ea061ae2581918b2d9bf4327d9cc9b70f28ecc753637ef98e4"
+  },
+  {
+    "id": "seoul-pharma",
+    "names": [
+      "서울제약"
+    ],
+    "src": "./images/clients/seoul-pharma.gif",
+    "background": "light",
+    "sourcePage": "http://www.seoulpharma.com/",
+    "sourceAsset": "http://www.seoulpharma.com/img/main_logo.gif",
+    "sha256": "acc38ab9d635cf1042c4437d584e04b571fe39fbcfb47fb3ec30465bde3a6664"
+  },
+  {
+    "id": "domino",
+    "names": [
+      "도미노코리아"
+    ],
+    "src": "./images/clients/domino.svg",
+    "background": "light",
+    "sourcePage": "https://www.domino-printing.com/ko-kr/home.aspx",
+    "sourceAsset": "https://www.domino-printing.com/site-elements/images/logo.svg",
+    "sha256": "3c6c5e0693b1da59f01043c38ee3fb0e3030d6a98b83a91033915bf0675cf1cb"
+  },
+  {
+    "id": "enzychem",
+    "names": [
+      "엔지켐생명과학"
+    ],
+    "src": "./images/clients/enzychem.png",
+    "background": "light",
+    "sourcePage": "https://www.enzychem.co.kr/",
+    "sourceAsset": "https://www.enzychem.co.kr/child/img/ci.png",
+    "sha256": "3d4d5510f673c501d3bcaecdde7e822f56d9c4885178119fc67d066a7c854754"
+  },
+  {
+    "id": "kolmar-bnh",
+    "names": [
+      "콜마비앤에이치",
+      "콜마 BNH"
+    ],
+    "src": "./images/clients/kolmar-bnh.png",
+    "background": "light",
+    "sourcePage": "https://kolmarbnh.co.kr/",
+    "sourceAsset": "https://d1kv469isxhbtb.cloudfront.net/wp-content/uploads/2024/07/%EB%A1%9C%EA%B3%A0%EC%95%95%EC%B6%95.png",
+    "sha256": "18a8eae9dcfdee11dca0d01ed5273df7c46e95acd7277c710b1f1a6d591ec9ea"
+  },
+  {
+    "id": "union",
+    "names": [
+      "한국유니온제약"
+    ],
+    "src": "./images/clients/union.png",
+    "background": "light",
+    "sourcePage": "https://www.ukp.co.kr/kor/company/index.php",
+    "sourceAsset": "https://www.ukp.co.kr/kor/images/common/logo.png",
+    "sha256": "bbc1b54b14497103d7e564f5c4869e664494f2b364349ab66cc54aa2756da5e2"
+  },
+  {
+    "id": "prime",
+    "names": [
+      "한국프라임제약"
+    ],
+    "src": "./images/clients/prime.gif",
+    "background": "light",
+    "sourcePage": "https://koreaprime.co.kr",
+    "sourceAsset": "https://www.koreaprime.co.kr//images/main/logo.gif",
+    "sha256": "71aaa034b114de6804c790deeb00d998e521ec19b365a6b5a7e4189ea7c2b60c"
+  },
+  {
+    "id": "guju",
+    "names": [
+      "구주제약"
+    ],
+    "src": "./images/clients/guju.jpg",
+    "background": "light",
+    "sourcePage": "https://www.guju.co.kr/e_product/list.php",
+    "sourceAsset": "https://www.guju.co.kr/e_images/main/logo.jpg",
+    "sha256": "e97c226f204f4f1c016542a77739282dbdf8a981d5151aafb55509da842062af"
+  },
+  {
+    "id": "pharmaresearch",
+    "names": [
+      "파마리서치"
+    ],
+    "src": "./images/clients/pharmaresearch.svg",
+    "background": "light",
+    "sourcePage": "https://pharmaresearch.com/",
+    "sourceAsset": "https://pharmaresearch.com/#inline-logo",
+    "sha256": "ac64c9c03615a2bd4f1d454838c825c4696b557228e008d9f540b3bd93c9a8b5"
+  },
+  {
+    "id": "genewel",
+    "names": [
+      "제네웰"
+    ],
+    "src": "./images/clients/genewel.svg",
+    "background": "dark",
+    "sourcePage": "https://www.genewel.com/kr/sub/company/overview.php",
+    "sourceAsset": "https://www.genewel.com/img/svg/img_logo.svg",
+    "sha256": "67b287f3d416465859272da5eb6bc85bf7f609552650e8a710ef8a2483c9ae50"
+  },
+  {
+    "id": "amore",
+    "names": [
+      "아모레퍼시픽"
+    ],
+    "src": "./images/clients/amore.png",
+    "background": "dark",
+    "sourcePage": "https://www.apgroup.com/int/ko/",
+    "sourceAsset": "https://www.apgroup.com/int/ko/resource/images/a/amorepacific.png",
+    "sha256": "5c0214cf536217ffdd06238aec2b4ebc777cdb5ba00e286d3399d0aa41d787f7"
+  },
+  {
+    "id": "inventage",
+    "names": [
+      "인벤티지랩"
+    ],
+    "src": "./images/clients/inventage.png",
+    "background": "dark",
+    "sourcePage": "https://inventagelab.com/en",
+    "sourceAsset": "https://inventagelab.com/_next/image?url=%2Flogo.png&w=384&q=75&dpl=dpl_594NKjfViTNFW2vxs2jVHYMbHRQq",
+    "sha256": "f4032c7b9de1ca853a36408d6613a0644e72a84f0d57431f8b3fe6043de05c7d"
+  },
+  {
+    "id": "eubiologics",
+    "names": [
+      "유바이오로직스"
+    ],
+    "src": "./images/clients/eubiologics.png",
+    "background": "light",
+    "sourcePage": "http://www.eubiologics.com/kor/",
+    "sourceAsset": "http://www.eubiologics.com/images/logo.png",
+    "sha256": "c6857174606cf164dfd02f9b8c2775c76a51f321ecc45d16680018b8570f14d1"
+  },
+  {
+    "id": "3m",
+    "names": [
+      "한국쓰리엠"
+    ],
+    "src": "./images/clients/3m.svg",
+    "background": "light",
+    "sourcePage": "https://www.3m.co.kr/3M/ko_KR/company-kr/",
+    "sourceAsset": "https://www.3m.co.kr/3m_theme_assets/themes/3MTheme/assets/images/unicorn/Logo.svg",
+    "sha256": "b0182c10ca5694444ceb639d3c744265447d3eba4814ebf4d3fe09ddbdf3049b"
+  },
+  {
+    "id": "taiguk",
+    "names": [
+      "태극제약"
+    ],
+    "src": "./images/clients/taiguk.png",
+    "background": "dark",
+    "sourcePage": "https://www.taiguk.co.kr/index.jsp",
+    "sourceAsset": "https://www.taiguk.co.kr/assets/images/common/logotype1.png",
+    "sha256": "4d74ac6feccf6ec9b71821ee7c84c5e4e2721d8e92ed2ceeadd67bf32b5ef9eb"
+  },
+  {
+    "id": "aprogen-biologics",
+    "names": [
+      "에이프로젠바이오로직스"
+    ],
+    "src": "./images/clients/aprogen-biologics.jpg",
+    "background": "light",
+    "sourcePage": "https://www.aprogen-biologics.com/",
+    "sourceAsset": "https://www.aprogen-biologics.com/image/kor/00main/schnell_logo.jpg",
+    "sha256": "c847b92c9e2c728f08d72b8065ecb16c7cedf11841b97619716f61a05741f06e"
+  },
+  {
+    "id": "lg-life-historical",
+    "names": [
+      "LG생명과학"
+    ],
+    "src": "./images/clients/lg-life-historical.png",
+    "background": "light",
+    "sourcePage": "https://chem.ulsan.ac.kr/chem/1749",
+    "sourceAsset": "https://chem.ulsan.ac.kr/upload/281/images/000001/20220808135936527_WG3HRXQG.png",
+    "sha256": "6deeb12f62556f88258f4302015825a073b6150a72430f901f212d0e5e97d4bd"
+  },
+  {
+    "id": "cj-health-historical",
+    "names": [
+      "CJ헬스케어"
+    ],
+    "src": "./images/clients/cj-health-historical.jpg",
+    "background": "light",
+    "sourcePage": "https://www.khanews.com/news/articleView.html?idxno=99565",
+    "sourceAsset": "https://www.khanews.com/news/photo/201403/99565_25007_323.jpg",
+    "sha256": "e296745dcc38d18284c6ee6fd217fbb29f5219e34309dc91bcec3edbfce2788e"
+  },
+  {
+    "id": "bnc",
+    "names": [
+      "한국비엔씨"
+    ],
+    "src": "./images/clients/bnc.png",
+    "background": "dark",
+    "sourcePage": "http://www.bnckorea.co.kr/web/?urlkeyword=BNC+KOREA",
+    "sourceAsset": "http://www.bnckorea.co.kr/web/asset/images/logo.png",
+    "sha256": "1093d59b501e22c6255f641985e14f4000630f07f82d12be9e42ea67128bfeaf"
+  },
+  {
+    "id": "huons-medicare-historical",
+    "names": [
+      "휴온스메디케어"
+    ],
+    "src": "./images/clients/huons-medicare-historical.jpg",
+    "background": "light",
+    "sourcePage": "https://www.etnews.com/20190703000025",
+    "sourceAsset": "https://img.etnews.com/photonews/1907/1201795_20190703092324_543_0001.jpg",
+    "sha256": "3201616755f3d3399373537fe8f1c9c7b649315042a6d7b688bac479997f2b3c"
+  }
+]

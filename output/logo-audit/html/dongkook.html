@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="동국제약㈜">
+    <meta property="og:url" content="http://dkpharm.co.kr">
+    <meta property="og:description" content="Our passion, your health">
+    <meta property="og:image" content="/images/common/img-share.png">
+
+    <title>동국제약㈜</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/pc.css?v=1790920524"> -->
+    <link rel="stylesheet" type="text/css" href="/css/pc.css?v=1790920524">
+
+    <link rel="shortcut icon" href="/images/common/favicon2.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/common/favicon2.png">
+
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <!-- <script type="text/javascript" src="/js/common.js?v=1790920524"></script> -->
+    <script type="text/javascript" src="/js/common.js?v=1790920524"></script>
+
+    <!-- 사이트 연관 채널 -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "동국제약 기업사이트",
+        "url": "http://www.dkpharm.co.kr",
+        "sameAs": [
+            "https://blog.naver.com/dkdkpad",
+            "https://www.youtube.com/channel/UC3JMzIAhPNmbCQFyfalZstg",
+            "https://www.facebook.com/dkdkpad",
+            "https://brand.naver.com/centellian24",
+            "https://www.edkshop.com"
+        ]
+    }
+    </script>
+    <!-- 사이트 연관 채널 -->
+    <style>
+    .gnb-menu-ul li {
+        width: 144px;
+    }
+
+    .gnb-menu-ul {
+        margin-left: 190px;
+    }
+
+    .gnb-submenu-ul {
+        width: 144px;
+    }
+
+    .gnb-submenu-ul li a.more:after {
+        right: -22px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="overlay" class="white"><img src="/images/common/loading.gif" alt="loading" class="loading" /></div>
+
+    <div id="wrap">
+
+        <header class="">
+            <div class="header-underline"></div>
+            <!-- <div class="contents-wrap">
+			<a href="/"><img src="/images/common/w-gnb-logo-white.png" alt="" class="gnb-logo-img" /></a>
+		</div> -->
+
+            <div class="gnb-wrap">
+                <div class="contents-wrap">
+                    <a href="/" class="gnb-logo"></a>
+
+                    <ul class="gnb-menu-ul clear">
+                        <li><a href="/company/overview.php" class="">기업소개<span class="gnb-border"></span></a></li>
+                        <li><a href="/product/list.php" class="">제품정보<span class="gnb-border"></span></a></li>
+                        <li><a href="/ir/finance_1.php" class="">IR자료<span class="gnb-border"></span></a></li>
+                        <li><a href="/rnd/institute.php" class="">연구개발<span class="gnb-border"></span></a></li>
+                        <!-- <li><a href="/rnd/institute_total.php" class="">연구개발<span class="gnb-border"></span></a></li> -->
+                        <li><a href="/esg/esg.php" class=" ">ESG<span class="gnb-border"></span></a></li>
+
+                        <li><a href="/hr/people.php" class="">채용안내<span class="gnb-border"></span></a></li>
+                        <li><a href="/boards/list.php?btype=news" class="">고객센터<span class="gnb-border"></span></a></li>
+                    </ul>
+                </div>
+
+                <div class="gnb-submenu-wrap">
+                    <div class="contents-wrap clear gnb-submenu-con">
+                        <ul class="gnb-submenu-ul">
+                            <li>
+                                <a href="javascript:;" class="more ">기업개요</a>
+                                <ul class="gnb-subsubmenu-ul">
+                                    <li><a href="/company/overview.php" class="">기업이념</a></li>
+                                    <li><a href="/company/greetings.php" class="">인사말</a></li>
+                                    <li><a href="/company/network.php" class="">글로벌 네트워크</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/company/history.php" class="">50주년 역사관</a></li>
+                            <li><a href="/company/ci.php" class="">CI</a></li>
+                            <li><a href="/company/brand.php" class="">대표브랜드</a></li>
+                            <li><a href="/company/factory.php" class="">공장소개</a></li>
+                            <li>
+                                <a href="javascript:;" class="more ">오시는 길</a>
+                                <ul class="gnb-subsubmenu-ul ">
+                                    <li><a href="/company/contact.php" class="">본사/연구소</a></li>
+                                    <li><a href="/company/contact_2.php" class="">사무소</a></li>
+                                    <li><a href="/company/contact_3.php" class="">공장</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <li><a href="/product/list.php" class="">제품검색</a></li>
+                            <li><a href="/boards/list.php?btype=product" class="">제품소식</a></li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <li>
+                                <a href="javascript:;" class="more ">재무정보</a>
+                                <ul class="gnb-subsubmenu-ul ">
+                                    <li><a href="/ir/finance_1.php" class="">재무상태표</a></li>
+                                    <li><a href="/ir/finance_2.php" class="">손익계산서 </a></li>
+                                    <li><a href="/ir/finance_3.php" class="">배당지표 </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/ir/dart.php" class="">공시</a></li>
+                            <li><a href="/boards/list.php?btype=ir" class="">IR 게시판</a></li>
+                            <li><a href="/boards/list.php?btype=ir_report" class="">사업/감사보고서</a></li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <!-- <li><a href="/rnd/institute_total.php" class="">중앙연구소</a></li>
+						<li><a href="/rnd/dk_total.php" class="">DK의약연구소</a></li> -->
+                            <li><a href="/rnd/institute.php" class="">중앙연구소 소개</a></li>
+                            <li><a href="/rnd/dk_info.php" class="">DK의약연구소 소개</a></li>
+                            <li><a href="/rnd/rnd.php" class="">R&D 전략</a></li>
+                            <li><a href="/rnd/research.php" class="">연구활동</a></li>
+                            <li><a href="/rnd/pipeline.php" class="">파이프라인</a></li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <li><a href="/esg/esg_direction.php" class="">ESG 지향점</a></li>
+                            <li>
+                                <a href="javascript:;" class="more ">ESG 성과</a>
+                                <ul class="gnb-subsubmenu-ul">
+                                    <li><a href="/esg/esg_result.php" class="">ENVIRONMENT</a></li>
+                                    <li><a href="/esg/esg_result2.php" class="">SOCIAL</a></li>
+                                    <li><a href="/esg/esg_result3.php" class="">GOVERNANCE</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/company/contrib.php" class="">사회공헌</a></li>
+                            <li>
+                                <a href="javascript:;" class="more ">윤리경영&부패방지</a>
+                                <ul class="gnb-subsubmenu-ul">
+                                    <li><a href="/company/ethic.php" class="">윤리강령</a></li>
+                                    <li><a href="/company/iso.php" class="">ISO 37001 인증서</a></li>
+                                    <li><a href="/company/regret.php" class="">부패방지 방침</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="more ">공정거래 <br>자율준수프로그램</a>
+                                <ul class="gnb-subsubmenu-ul">
+                                    <li><a href="/company/cp.php" class="">CP 운영 원칙</a></li>
+                                    <li><a href="/company/cp_1_1.php" class="">CP 운영 방침</a></li>
+                                    <li><a href="/company/cp_2.php" class="">대표이사 인사말</a></li>
+                                    <li><a href="/company/cp_3.php" class="">CP조직도</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/company/cp_4.php" class="">사이버신문고</a></li>
+                            <li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <li><a href="/hr/people.php" class="">인재상</a></li>
+                            <li><a href="/hr/welfare.php" class="">인사 및 복리후생</a></li>
+                            <li><a href="https://dkpharm.recruiter.co.kr/appsite/company/index" target="_blank" class="">채용공고</a></li>
+                        </ul>
+                        <ul class="gnb-submenu-ul">
+                            <li><a href="/boards/list.php?btype=news" class="">뉴스&공지</a></li>
+                            <li><a href="/cs/cscenter.php" class="">전화상담</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gnb-lang-wrap">
+                    <ul class="gnb-lang-ul">
+                        <li><a href="/">한국어</a></li>
+                        <li><a href="/en">English</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <div id="contents"><!-- 인사돌 팝업 -->
+<div class="insadol_pop_layer">
+    <button type="button" name="button" class="i_pop_close">
+        <img src="/images/common/btn_close.jpg" alt="">
+    </button>
+    <div class="i_pop_wrap">
+        <div class="i_pop_hd"><span>인사돌 소식</span></div>
+        <div class="i_pop_content">
+            <div class="box_wrap">
+                <div class="box">
+                    <div class="tit">
+                        <p>
+                            인사돌/인사돌플러스 '2026 국가산업대상' <br class="only_768">잇몸약 부문 대상 수상
+                    </div>
+                    <div class="img">
+                        <img src="/images/main/insadol_pop_img3.png" alt="">
+                    </div>
+                    <div class="txt">
+                        동국제약의 대표 브랜드 '인사돌'과 '인사돌플러스'가<br><b>
+                            <2026 국가산업대상>
+                        </b> 시상식에서 <b>잇몸약 부문 대상</b>을 받았다.
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="tit">
+                        <p>인사돌, ‘스위스 의약품청’ 품목허가, <br class="only_768"> 유럽 수출 본격화!</p>
+                    </div>
+                    <div class="img">
+                        <img src="/images/main/insadol_pop_img1.png" alt="">
+                    </div>
+
+                    <div class="txt">
+                        인사돌이 <b>스위스 의약품청(Swissmedic)</b>으로부터 일반의약품으로 품목허가를 획득하며, 본격적인 유럽 수출이 가능해졌다.
+                    </div>
+                </div>
+            </div>
+            <div class="i_pop_info">
+                부작용이 있을 수 있으니 첨부된 ‘사용상의 주의사항’을 잘 읽고, [치과]의사·약사와 상의하십시오 ㅣ 광고심의필: 2026-1803-003500
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 인사돌 팝업 -->
+<script type="text/javascript">
+$(".i_pop_close").click(function() {
+    $(".insadol_pop_layer").hide();
+})
+</script>
+<div class="main-section section-1">
+    <div class="contents-wrap">
+
+        <!-- 의약외품dd회수 -->
+        <div class="layer-popup-wrap layer-popup">
+
+
+            <!-- <div class="layer-3" id="layer-popup-20260317" data-idx="20260317">
+                    <a href="javascript:;" class="layer-close layer-popup-close" data-idx="20260317"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+                    <a href="#n"><img src="/images/main/layer-popup-20260317.png" alt="" /></a>
+            </div> -->
+            <div class="layer-2" id="layer-popup-20260120" data-idx="20260120">
+                <a href="javascript:;" class="layer-close layer-popup-close" data-idx="20260120"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+                <a href="#n"><img src="/images/main/layer-popup-20260120.png" alt="" /></a>
+            </div>
+            <div class="layer-2" id="layer-popup-20260402" data-idx="20260402">
+                <a href="javascript:;" class="layer-close layer-popup-close" data-idx="20260402"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+                <a href="#n"><img src="/images/main/layer-popup-20260402.jpg" alt="" /></a>
+            </div>
+            <!-- <div class=" layer-2" id="layer-popup-231011" data-idx="231011">
+                <a href="javascript:;" class="layer-close layer-popup-close" data-idx="231011"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+                <a href="#n"><img src="/images/main/layer-popup-231011.jpg" alt="" /></a>
+            </div> -->
+            <!--
+            <div class=" layer-2" id="layer-popup-230821" data-idx="230821">
+                <a href="javascript:;" class="layer-close layer-popup-close" data-idx="230821"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+                <a href="#n"><img src="/images/main/layer-230821.jpg" alt="" /></a>
+            </div> -->
+
+        </div>
+
+
+        <!-- 2022-05-12<div class="layer-popup layer-1" id="layer-popup-220307" data-idx="220307" style="width: 450px; left: 0; top: 100px;">
+				<a href="javascript:;" class="layer-close layer-popup-close" data-idx="220307"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+				<img src="/images/main/layer-220307.jpg" alt="" usemap="#layer-img-220307" />
+				<map id="layer-img-220307" name="layer-img-220307"><area shape="rect" alt="" title="" coords="160,501,284,542" href="/company/contact.php" target="" /></map>
+			</div> -->
+
+        <!-- 2021-10-06<div class="layer-popup layer-1" id="layer-popup-210709" data-idx="210709" style="width: 450px; left: 0; top: 100px;">
+				<a href="javascript:;" class="layer-close layer-popup-close" data-idx="210709"><img src="/images/common/btn_close.jpg" alt="닫기" /></a>
+				<a href="http://dkbrand.co.kr/brand/insadolplus/parent.php" target="_blank"><img src="http://dkbrand.co.kr/images/main/layer_210709.jpg" alt="" /></a>
+			</div> -->
+
+        <div class="main-text-wrap">
+            <div class="main-text-1">Our passion, your health</div>
+            <div class="main-text-2">고객을 향한 변치 않는 우리의 열정으로 더 건강한 내일을 만들어 갑니다.</div>
+        </div>
+    </div>
+</div>
+
+<div class="main-section section-2">
+    <div class="contents-wrap">
+        <ul class="main-banner-ul clear">
+            <li>
+                <a href="/product/list.php">
+                    <div class="main-text-3">Products</div>
+                    <div class="main-text-4">제품검색</div>
+                </a>
+            </li>
+            <li>
+                <a href="/hr/people.php">
+                    <div class="main-text-3">Recruit</div>
+                    <div class="main-text-4">인재상</div>
+                </a>
+            </li>
+            <li>
+                <a href="/esg/esg.php">
+                    <div class="main-text-3">ESG</div>
+                    <div class="main-text-4">사회공헌</div>
+                </a>
+            </li>
+            <li>
+                <a href="/cs/cscenter.php">
+                    <div class="main-text-3">CS Center</div>
+                    <div class="main-text-4">고객센터</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- <div class="main-section section-video">
+    <div class="contents-wrap">
+        <div class="video">
+            <video controls playsinline>
+                <source src="/images/main/dk_video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div> -->
+<div class="main-section section-3">
+    <div class="main-slider-bg">
+        <div class="contents-wrap">
+            <div class="main-slider-arrows-wrap"></div>
+        </div>
+    </div>
+
+    <div class="main-slider">
+
+        <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-feraminq-260319.png" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">훼라민Q</div>
+                    <div class="main-slider-text-3">FeraminQ</div>
+                    <div class="main-slider-text-4">갱년기를 편안하게, <br> 훼라민Q</div>
+                    <!-- <div class="main-slider-text-5">2009~2021년 여성갱년기증상치료제 부문(IQVIA 데이터 기준)</div> -->
+                    <a href="http://dkbrand.co.kr/brand/feraminq/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-madecassol-231107.png" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">센텔리안24 마데카 프라임</div>
+                    <div class="main-slider-text-3">Centellian24+ Madeca Prime</div>
+                    <div class="main-slider-text-4">Beauty FULL<br>마데카 프라임</div>
+                    <div class="main-slider-text-5">마데카 프라임 하나로 매일 뷰티가 가득한 아름다움을 만나보세요. </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-myfit-260811.jpg" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">마이핏</div>
+                    <div class="main-slider-text-3">myfit</div>
+                    <div class="main-slider-text-4">내 건강을 위한 fit한 맞춤 설계!<br>마이핏</div>
+                    <!--<a href="http://dkbrand.co.kr/brand/pansidil/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>-->
+                </div>
+            </div>
+        </div>
+
+        <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-cheesen-260319.png" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">치센</div>
+                    <div class="main-slider-text-3">Cheesen</div>
+                    <div class="main-slider-text-4">치질엔<br>먹는 약 치센</div>
+                    <a href="http://dkbrand.co.kr/brand/cheesen.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-pansidil-260811.png" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">판시딜</div>
+                    <div class="main-slider-text-3">Pansidil</div>
+                    <div class="main-slider-text-4">안에서 부터<br> 굵어지게!<br><br> 탈모엔 역시 판시딜</div>
+                    <a href="http://dkbrand.co.kr/brand/pansidil.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-slider-item">
+            <div class="contents-wrap">
+                <div class="left"><img src="/images/main/w-main-insadol-260319.png" alt="" /></div>
+                <div class="right">
+                    <div class="main-slider-text-1">대표 브랜드</div>
+                    <div class="main-slider-text-2">인사돌</div>
+                    <div class="main-slider-text-3">Insadol</div>
+                    <div class="main-slider-text-4">꼭꼭 씹는 행복<br>인사돌</div>
+                    <a href="http://dkbrand.co.kr/brand/insadolplus.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+                </div>
+            </div>
+        </div>
+        <!--
+			<div class="main-slider-item">
+				<div class="contents-wrap">
+					<div class="left"><img src="/images/main/w-main-madecassol-220623.png" alt="" /></div>
+					<div class="right">
+						<div class="main-slider-text-1">대표 브랜드</div>
+						<div class="main-slider-text-2">마데카솔</div>
+						<div class="main-slider-text-3">Madecassol</div>
+						<div class="main-slider-text-4">마데카솔로<br>상처엔 마법처럼</div>
+						<a href="http://dkbrand.co.kr/brand/madecassol/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="main-slider-item">
+				<div class="contents-wrap">
+					<div class="left"><img src="/images/main/censia_img_2.png" alt="" /></div>
+					<div class="right">
+						<div class="main-slider-text-1">대표 브랜드</div>
+						<div class="main-slider-text-2">센시아</div>
+						<div class="main-slider-text-3">Censia</div>
+						<div class="main-slider-text-4">가볍고 편안한 다리<br>센시아</div>
+						<a href="http://dkbrand.co.kr/brand/censia/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="main-slider-item">
+				<div class="contents-wrap">
+					<div class="left"><img src="/images/main/w-main-oramedy-220216.png" alt="" /></div>
+					<div class="right">
+						<div class="main-slider-text-1">대표 브랜드</div>
+						<div class="main-slider-text-2">오라메디</div>
+						<div class="main-slider-text-3">Oramedy</div>
+						<div class="main-slider-text-4">혓바늘, 입안헌데<br>오라메디</div>
+						<a href="http://dkbrand.co.kr/brand/oramedy/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-slider-item">
+				<div class="contents-wrap">
+					<div class="left"><img src="/images/main/w-main-carito-220920.png" alt="" /></div>
+					<div class="right">
+						<div class="main-slider-text-1">대표 브랜드</div>
+						<div class="main-slider-text-2">카리토포텐</div>
+						<div class="main-slider-text-3">Caritopoten</div>
+						<div class="main-slider-text-4">전립선비대증 배뇨장애<br>카리토포텐</div>
+						<a href="http://dkbrand.co.kr/brand/caritopoten/story.php" target="_blank" class="main-slider-text-6">자세히보기</a>
+					</div>
+				</div>
+			</div>
+			-->
+
+    </div>
+</div>
+
+<div class="main-section section-4">
+    <div class="contents-wrap">
+        <div class="main-text-5">Since 1968</div>
+        <div class="main-text-6">‘HUMAN & LIFE’라는 기업이념 아래 지난 50년간 생명의 존중, 건강한 국민생활을 이어온 동국제약의 발자취</div>
+
+        <ul class="main-history-ul clear">
+            <li>
+                <div class="main-text-7">1989. 05</div>
+                <div class="main-text-8">중앙연구소 설립</div>
+            </li>
+            <li>
+                <div class="main-text-7">1999. 12</div>
+                <div class="main-text-8">백만불 수출탑 수상</div>
+            </li>
+            <li>
+                <div class="main-text-7">2005. 11</div>
+                <div class="main-text-8">2005 올해의 브랜드 대상 (인사돌)</div>
+            </li>
+            <li>
+                <div class="main-text-7">2017. 12</div>
+                <div class="main-text-8">한국 소비자 만족도 평가 대상(KCSGE)</div>
+            </li>
+        </ul>
+
+        <a href="/company/history.php" class="main-history-btn">50주년 역사관 바로가기</a>
+    </div>
+</div>
+
+<div class="main-section section-5">
+    <div class="contents-wrap">
+        <div class="main-banner2-wrap item-1">
+            <div>
+                <div class="main-banner2-text">
+                    <div class="main-text-9">IR</div>
+                    <div class="main-text-10">
+                        투명한 경영으로 주주가치 극대화를 <br>
+                        실현하는 동국제약의 사업성과와 <br>
+                        투자정보를 알려드립니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-banner2-wrap item-2">
+            <div>
+                <div class="main-banner2-text">
+                    <div class="main-text-9">R&D Center</div>
+                    <div class="main-text-10">
+                        끊임없는 신제품 개발과 R&D <br>
+                        기술혁신으로 생명 존중 및 건강한<br>
+                        국민생활을 실현합니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-latest-warp">
+            <dl class="main-latest-dl clear">
+                                <dt>보도자료</dt>
+                                <dd>
+                    <div class="main-text-11">‘DK Life Store’ 인기, 전국 5개 지점에서 팝업...</div>
+                    <div class="main-text-12">(2026-09-30)&nbsp;동국제약(대표이사 송준호)은 ...</div>
+                    <div class="main-text-13">2026.09.30</div>
+
+                    <a href="/boards/view.php?btype=news&stype=news&idx=1143" class="main-latest-more-btn"></a>
+                </dd>
+                                <dd>
+                    <div class="main-text-11">배우 이성민과 함께한 ‘치센’ 신규 TV-CF 공...</div>
+                    <div class="main-text-12">(2026-09-28)&nbsp;동국제약(대표이사 송준호)은 ...</div>
+                    <div class="main-text-13">2026.09.28</div>
+
+                    <a href="/boards/view.php?btype=news&stype=news&idx=1142" class="main-latest-more-btn"></a>
+                </dd>
+                            </dl>
+            <dl class="main-latest-dl clear">
+                                <dt>공지사항</dt>
+                                <dd>
+                    <div class="main-text-11">회사 사칭 관련 안내 공지문</div>
+                    <div class="main-text-12"><p style="text-align: center;"><img alt="" src="/upload/cked...</div>
+                    <div class="main-text-13">2026.01.16</div>
+
+                    <a href="/boards/view.php?btype=news&stype=notice&idx=1057" class="main-latest-more-btn"></a>
+                </dd>
+                                <dd>
+                    <div class="main-text-11">동국제약 사칭 문자메시지 주의 안내문</div>
+                    <div class="main-text-12"><div style="text-align: center;"><img alt="" src="/upload/ck...</div>
+                    <div class="main-text-13">2020.10.28</div>
+
+                    <a href="/boards/view.php?btype=news&stype=notice&idx=576" class="main-latest-more-btn"></a>
+                </dd>
+                            </dl>
+        </div>
+
+
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="/css/slick.css" />
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/main.js?v=200923"></script>
+
+
+	</div>
+
+	<!-- #contents -->
+
+
+	<footer>
+	    <div class="contents-wrap">
+	        <img src="/images/common/w-footer-logo.png" alt="동국제약 로고" class="footer-logo-img" />
+
+	        <div class="footer-contents-wrap">
+	            <div class="footer-link-wrap">
+	                <ul class="footer-link-ul clear">
+	                    <li><a href="https://dkpharm.recruiter.co.kr/appsite/company/index" target="_blank">인재채용</a></li>
+	                    <li><a href="/sitemap.php">사이트맵</a></li>
+	                    <li><a href="/company/contact.php">오시는길</a></li>
+	                    <li><a href="/policy/service.php">이용약관</a></li>
+	                    <li><a href="/policy/privacy.php">개인정보처리방침</a></li>
+	                    <li><a href="/policy/video.php">고정형 영상정보처리기기 운영 관리 방침</a></li>
+	                </ul>
+	            </div>
+
+	            <div class="footer-text-1">
+	                동국제약㈜ 서울특별시 강남구 영동대로 715(청담동, 동국제약 청담빌딩)&nbsp;&nbsp;&nbsp;TEL 02-2191-9800&nbsp;&nbsp;&nbsp;FAX 02-6234-0483&nbsp;&nbsp;&nbsp;사업자등록번호 : 120-81-22608
+	            </div>
+
+	            <div class="isms_wrap">
+	                <div class="isms_logo">
+	                    <img src="/images/common/isms_icon.png" alt="isms">
+	                </div>
+	                <div class="desc">
+	                    <p>[인증범위] <b>동국제약 서비스</b><br>
+	                        <b>(대표홈페이지, 헬스케어몰(웹/앱), 건강식품몰, 도매주문, 브랜드소개, 채용, 의학정보도서관)</b>
+	                    </p>
+	                    <p>[유효기간] <b>2026.07.01~2029.06.30</b></p>
+	                </div>
+	            </div>
+
+	            <div class="footer-text-2">
+	                Copyright © 2019 DONGKOOK. All Rights Reserved.
+	            </div>
+
+	            <div class="footer-family-wrap">
+	                <a href="javascript:;" class="footer-family-btn slideup-menu-btn">패밀리 사이트</a>
+	                <ul class="footer-family-ul slide-menu-ul">
+	                    <li><a href="http://dkbrand.co.kr/" target="_blank">동국 브랜드 (제약)</a></li>
+	                    <li><a href="https://www.edkshop.com/main/index.php" target="_blank">동국 헬스케어몰</a></li>
+	                    <li><a href="http://dkls.co.kr/" target="_blank">동국생명과학</a></li>
+	                </ul>
+	            </div>
+
+	            <div class="footer-blog-wrap">
+	                <a href="https://blog.naver.com/dkdkpad" target="_blank"><img src="/images/common/w-footer-blog.png" alt="동국제약 블로그 바로가기" /></a>
+	                <a href="https://www.youtube.com/channel/UC3JMzIAhPNmbCQFyfalZstg" target="_blank"><img src="/images/common/w-footer-youtube.png" alt="동국제약 유튜브 바로가기" /></a>
+	                <a href="https://www.instagram.com/dongkook_official/" target="_blank"><img src="/images/common/w-footer-insta.png" alt="동국제약 인스타그램 바로가기" /></a>
+	            </div>
+
+	            <div class="footer-number">
+	                광고심의필 : 2022-1642-004500
+	            </div>
+	        </div>
+
+	        <a href="javascript:;" class="go-top-btn" id="go-top-btn">TOP</a>
+	    </div>
+
+	</footer>
+
+	</div><!-- #wrap -->
+
+	<input type="hidden" id="_group" value="" />
+	<input type="hidden" id="_page" value="" />
+
+	<script>
+(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-31520398-17', 'dkpharm.co.kr');
+ga('send', 'pageview');
+	</script>
+
+	</body>
+
+	</html>

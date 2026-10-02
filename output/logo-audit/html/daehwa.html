@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>대화제약</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="robots" content="index,follow">
+
+    <meta name="google-site-verification" content="GAaRogBqnazUXtyvrUdmFKYi8moXn-0JPHP_j5-tY_U"/>
+		<meta name="description" content="제약회사, 전문/일반의약품, 건강기능식품, 아말리안 필러등 제품소개">
+		<meta property="og:description" content="제약회사, 전문/일반의약품, 건강기능식품, 아말리안 필러등 제품소개">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="대화제약">
+
+		<meta property="og:image" content="https://dhpharm.co.kr/_data/file/2f002e398f2011a481c50b2a6ff406ed.jpg">		<meta property="og:url" content="https://dhpharm.co.kr">
+		<meta name="url" content="https://dhpharm.co.kr">
+		<link rel="canonical" href="https://dhpharm.co.kr" />
+
+		
+		
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="/css/DH_common.css?ver=20250120" type="text/css">
+    <link rel="stylesheet" href="/css/DH_develop.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_fair.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_font.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_help.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_hepl_mail.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_hiring.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_intro.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_invest.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_main_flexible.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_main_visual.css?ver=20231114" type="text/css">
+    <link rel="stylesheet" href="/css/DH_notice.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_product.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_sitemap.css" type="text/css">
+    <link rel="stylesheet" href="/css/slick.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/stock.css" type="text/css">
+    <link rel="stylesheet" href="/css/DH_esg.css" type="text/css">
+    <link type="text/css" rel="stylesheet" media="screen and (max-width: 1199px)" href="/css/sub_m.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/js/slick.min.js"></script>
+		<script type="text/javascript" src="/_data/js/form.js"></script>
+		<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+function sample6_execDaumPostcode() {
+	new daum.Postcode({
+		oncomplete: function(data) {
+			// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+			// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+			var fullAddr = ''; // 최종 주소 변수
+			var extraAddr = ''; // 조합형 주소 변수
+
+			// 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+			if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+				fullAddr = data.roadAddress;
+			} else { // 사용자가 지번 주소를 선택했을 경우(J)
+				fullAddr = data.jibunAddress;
+			}
+
+			// 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+			if(data.userSelectedType === 'R'){
+				//법정동명이 있을 경우 추가한다.
+				if(data.bname !== ''){
+					extraAddr += data.bname;
+				}
+				// 건물명이 있을 경우 추가한다.
+				if(data.buildingName !== ''){
+					extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+				}
+				// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+				fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+			}
+
+			// 우편번호와 주소 정보를 해당 필드에 넣는다.
+			if(data.zonecode){
+				document.getElementById("zipcode1").value = data.zonecode;
+			}else{
+				document.getElementById("zipcode1").value = data.postcode1+data.postcode2;
+			}
+
+			document.getElementById("address1").value = fullAddr;
+
+			// 커서를 상세주소 필드로 이동한다.
+			document.getElementById("address2").value='';
+			document.getElementById("address2").focus();
+		}
+	}).open();
+}
+
+
+
+    //SNS 연동
+    function SNS_Send(val, subject, content, idx)
+    {
+				var DocSummary = encodeURIComponent(content);
+				var DocImage = "";
+        var snsTitle = encodeURIComponent(subject);
+
+        //var naverURL   = encodeURIComponent('http://www.dhpharm.co.kr/html/naver_ret.php?bbs_idx='+idx+'&mode=view');
+        var snsURL   = encodeURIComponent('http://www.dhpharm.co.kr/html/');
+				var faceURL = encodeURIComponent('http://www.dhpharm.co.kr/html/dh/facebook_ret?url=/html/&subject='+snsTitle+'&content='+DocSummary);
+
+        if (val == 'tw')
+        {
+            window.open("http://twitter.com/home?status=" + snsTitle + " - "+ DocSummary +"("+snsURL+")",val,'');
+        }
+
+        if (val == 'face')
+        {
+						window.open("http://www.facebook.com/sharer/sharer.php?u=" + faceURL,val,'width=700,height=350');
+        }
+
+        if (val == 'naver')
+        {
+						window.open("http://share.naver.com/web/shareView.nhn?url="+naverURL+"&title="+snsTitle,val,'width=410px,height=500px,scrollbars=no');
+        }
+
+    }
+
+</script>
+
+
+</head>
+
+<body >
+
+    <body >
+
+        <body >
+				
+<!-- 각 메인/서브 메뉴 타이틀명 -->
+
+
+<!--Header-->
+<!-- main menu -->
+<nav class="w3-sidebar2 left_menu_bg w3-collapse w3-top w3-large w3-padding"
+    style="z-index:3; width:200px; font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()"
+        class="w3-button w3-hide-large w3-display-topleft close_menu">창닫기</a>
+    <div class="left_logo">
+        <h1><a href="/"><img src="/image/common/Daehwa_logo.png" width="153" height="41" class=""></a></h1>
+    </div>
+    <div class="language">
+        <span><a href="/_en/">ENGLISH</a></span>
+        <span class="bar"><a href="/">KOREAN</a></span>
+    </div>
+
+    <div class="gnb">
+        <ul>
+            <li>
+                <a href="#" class="on">회사소개</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position1"><a href="/html/dh/DH_intro_ceo">CEO인사말</a></li>
+                        <li><a href="/html/dh/DH_intro_history">회사연혁</a></li>
+                        <li><a href="/html/dh/DH_intro_group">회사조직도</a></li>
+                        <li><a href="/html/dh/DH_intro_vision">사업내용</a></li>
+                        <li><a href="/html/dh/DH_intro_2030">Vision 2030</a></li>
+                        <li><a href="/html/dh/DH_intro_ci">CI 소개</a></li>
+                        <li><a href="/html/dh/DH_font">대화나눔서체</a></li>
+                        <li><a href="/html/dh/DH_intro_contact">사옥 안내</a></li>
+                        <li><a href="/html/dh/DH_intro_contact02">영업소 안내</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">연구개발</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position2"><a href="/html/dh/DH_develop">연구개발</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">제품정보</a>
+                <div class="gnb_bar">
+                    <ul>
+																										<li class="position3"><a href="/html/dh/DH_product?cate_no=1">전문의약품</a></li>
+																												<li ><a href="/html/dh/DH_product?cate_no=2">일반의약품</a></li>
+																												<li ><a href="/html/dh/DH_product?cate_no=3">에스테틱</a></li>
+																												<li ><a href="/html/dh/DH_product?cate_no=6">건강기능식품</a></li>
+																										                        <li><a href="/html/dh_board/lists/DH_product_permission">허가변경사항</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">투자정보</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <!-- <li class="position4"><a href="/html/dh/DH_invest_info">주가정보</a></li> -->
+                        <li class="position4"><a href="/html/dh_board/lists/DH_invest_announcement">공시사항</a></li>
+                        <li><a href="/html/dh/DH_invest_financial">재무정보</a></li>
+                        <li><a href="/html/dh_board/lists/DH_invest_accounts">결산공고</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">인재채용</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position5"><a href="/html/dh/DH_hiring_info">채용 안내</a></li>
+                        <li><a href="/html/dh_board/lists/DH_hiring_notice">채용 공고</a></li>
+                        <li><a href="https://nebula-tapir-d6a.notion.site/20d7ba89e7c980d4a9ebe68fa77b1a44" target="_blank" rel="noopener noreferrer">직무 소개</a></li>
+                        <li><a href="/html/dh/DH_hiring_people">대화 인재상</a></li>
+                        <li><a href="/html/dh/DH_hiring_welfare">복리후생</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">공지&뉴스</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position6"><a href="/html/dh_board/lists/DH_notice">공지&뉴스</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">고객센터</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position7"><a href="/html/dh/DH_help">고객센터</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="on">지속가능경영</a>
+                <div class="gnb_bar">
+                    <ul>
+                        <li class="position8"><a href="/html/dh/DH_intro_esg">ESG 경영</a></li>
+                        <li><a href="/html/dh/DH_safe_health_environment">환경안전보건경영 </a></li>
+                        <li><a href="/html/dh/DH_fair_management">윤리경영</a></li>
+						<li><a href="/html/dh/DH_fair_notify">비윤리신고센터</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <div>
+            <!-- <input type="button" value="팝업창500*600" onclick="showPopup();" /> -->
+            <p class="footer_text1"><a href="/html/dh/etc">▫︎ 개인정보처리방침</a></p>
+            <p class="footer_text1 sitemap__btn"><a href="javascript:location.href='/html/dh/DH_sitemap';">▫︎ 사이트맵</a></p>
+        </div>
+        <div class="footer_line"></div>
+        <address class="mt10">대화제약(주)<br>서울 : 서울특별시 서초구 남부순환로 2145 대화빌딩<br>본사 : 강원특별자치도 횡성군 횡성읍 한우로 495
+            <br>전화 : 02-586-6451<br>팩스 : 02-587-0566
+            <br>사업자번호 : 133-81-22322<br>대표자명 : 김은석</address>
+        <div class="footer_line"></div>
+        <p class="footer_text2">Copyright (C) 2024<br>DAEHWA. All Rights Reserved.</p>
+    </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="left_logo w3-top w3-hide-large w3-white w3-xlarge w3-padding mo--header">
+    <a href="javascript:void(0)" class="w3-button w3-white w3-margin-right" onclick="w3_open()">☰</a>
+    <span><a href="/"><img src="/image/common/Daehwa_logo.png" width="150" height="40"
+                class=""></a></span>
+</header>
+
+<script>
+    $(function(){
+        var sitemapBtn = $('.sitemap__btn');
+        var sitemap = $('.sitemap');
+        var sitemapClose = $('.sitemap .close_btn');
+
+        sitemapBtn.on('click', function(){
+            sitemap.show();
+        })
+
+        sitemapClose.on('click', function(){
+            sitemap.hide();
+        })
+    })
+</script>
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+</script>
+
+<script>
+    function showPopup() {
+        window.open("/html/DH_popup01.html", "a", "width=500, height=600, left=220, top=150");
+    }
+    
+</script>
+
+
+
+<!--END Header-->
+
+
+<!-- main page -->
+<div id="visual">
+				<div class="items">
+				<img src="/_data/file/banner/de2a3a07348a2f56abcf359c1c7ccfb1.png" alt="">
+									<p class="real-time"></p>
+					
+			</div>
+						<div class="items">
+				<img src="/_data/file/banner/576a99ba9e1418690aed74056c291e20.png" alt="">
+				
+			</div>
+				</div>
+
+<!-- mainpage right block -->
+<div id="banner">
+  <div class="box_m">
+  
+    <p class="dh_mall"><img src="/image/main/dh_mall.png"></p>
+    <h2>약사들을 위한 대화제약 이커머스</h2>
+    <p class="click"><a href="http://mall.dhpharm.co.kr" target="_blank"><img src="/image/main/quick_click.png"></a></p>
+  </div>
+  <div class="box_m2">
+    <img src="/image/main/amalian_20231108.png" width="170" height="37">
+    <h3>독일제조 히알루론산<br>필러 아말리안</h3>
+     
+    <p class="click"><a href="https://www.amalian.co.kr" target="_blank"><img src="/image/main/quick_click.png"></a></p>
+  </div>
+  
+  <div class="box_m6">
+    
+  <p class="dh_mall"><p class="sub_title_head">ABOUT</p><h2 class="sub_title_menu"><p> DAEHWA</p></h2><!--img src="/image/main/dh_mall.png" --></p>
+    <p class="sharp" >Dispensee in Handy</h2>
+    <p class="click2"><a href="/html/dh/DH_intro_ceo"><img src="/image/main/moreview.png"></a>
+    </p>
+  </div>
+
+  <div class="box_m7">
+
+  <p class="dh_mall"><p class="sub_title_head">ABOUT </p><h2> <p class="sub_title_menu">ESG</p> <p class="sub_title_submenu">경영</p> </h2><!--img src="/image/main/dh_mall.png" -->
+  <p class="sharp" >대화제약 ESG소식</h2>
+    <p class="click2"><a href="/html/dh/DH_intro_esg"><img src="/image/main/moreview.png"></a>
+    </p>
+    
+  </div>
+
+  <div class="box_m4">
+    <p class="box4_img"><h2 class="sub_title_menu">LOXONA</h2><!--img src="/image/main/loxona_logo.png" width="147" height="27" ;--></p>
+    <p class="sub_padding"></p>
+    <!--h3 class>록소나 홈페이지</h3-->
+    <p class="box4_text">국내 최초 붙이는<br>록소프로펜 첩부제 록소나</p>
+    <p class="click2"><a href="/loxona/loxona_main.html" target="_blank"><img
+          src="/image/main/quick_click.png"></a>
+    </p>
+  </div>
+  <div class="box_m5">
+    <p class="box5_img"><img src="/image/main/wooahan_20231108.png" width="126" height="59" ;></p>
+    <!-- <p class="box5_text">장건강을 우아하게,<br>우아한 포스트바이오틱스</p> -->
+    <p class="box5_text">인체유래 비피더스<br>장건강 유산균</p>
+    <p class="click2">
+	<!--	<a href="http://splusdh.dothome.co.kr/wooahan.html" target="_blank"> -->
+       <!-- <a href="https://blog.naver.com/wooahan__official" target="_blank"> -->
+       <a href="https://dhhealth.co.kr" target="_blank">
+			<img src="/image/main/quick_click.png">
+		</a>
+    </p>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+  id="myOverlay"></div>
+
+<script>
+  $(function () {
+    var mv = $('#visual')
+    mv.slick({
+      dots: true,
+      arrows: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      fade: true,
+      cssEase: 'linear',
+      slide: '.items'
+    })
+
+
+    setInterval(realTime, 1000)
+
+    function realTime(){
+      var date = new Date();
+      var hours = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+      var minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+      var seconds = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+
+      var timeStr = hours + ':' + minutes + ':' + seconds;
+      $('.real-time').text(timeStr)
+    }
+
+    realTime();
+  })
+</script>
+<!-- 모바일 팝업스타일 -->
+<style type="text/css">
+.dh-popup {
+	position:absolute;
+	left:4.6875%; top:15px;
+	max-width:90.625%;
+	z-index:99999999;
+	display:none;
+}
+
+.popup__tit{
+  background-color: #000;
+  line-height: 40px;
+  padding-left: 25px;
+  color: #fff;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+.popup__tit::before{
+  content: "";
+    width: 4px;
+    height: 15px;
+    background-color: #f7b500;
+    border-radius: 3px;
+    position: absolute;
+    left: 13px;
+    top: 12px;
+}
+
+.dh-popup-img {
+	padding:5px;
+	background:#fff;
+	border:1px solid #202020;
+}
+.dh-popup-img a,
+.dh-popup-img img {
+	display:block;
+	max-width:100%;
+}
+.dh-popup-chk {
+	padding:5px 10px;
+	text-align:right;
+	background:#202020;
+	color:#fff;
+	font-size:12px;
+}
+.dh-popup-chk button {
+	background:none;
+	border:0;
+	padding:0;
+	outline:0;
+	cursor:pointer;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	color:#fff;
+}
+
+@media all and (max-width:767px) {
+	.dh-popup {display:block;}
+	.dh-pc-popup {display:none;}
+  .popup__tit{
+  background-color: #000;
+  line-height: 30px;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+}
+.popup__tit::before{
+  content: "";
+    width: 3px;
+    height: 12px;
+    background-color: #f7b500;
+    border-radius: 3px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+}
+</style>
+
+
+	<!--레이어팝업-->
+	<script language="JavaScript">
+		function setCookie1( name, value, expiredays )
+		{
+			var todayDate = new Date();
+			todayDate.setDate( todayDate.getDate() + expiredays );
+			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+		}
+
+				function closeWin1(){
+			if ( $(".popup_end1").is(':checked') == true ) {
+				setCookie1( 'POPUP_COOKIE_16', 'NO', 1 );//쿠기 저장 기간은 1일로 한다.
+			}
+
+			//window.close();
+			$(".pc_pop1").hide();
+			$(".m_pop1").hide();
+		}
+			</script>
+
+	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+
+	<!--popup-->
+	<div style="position:absolute; left:150px; top:110px; z-index:1000;" class="dh-pc-popup pc_pop1">
+    <p class="popup__tit">대화와르파린나트륨정 5mg 성상 변경 안내</p>
+		<table width=700 height=584 cellpadding=2 cellspacing=0 style="margin-top: 0;">
+			<tr>
+				<td align="left" height="564" style="line-height:20px; background:#FFFFFF;word-break:break-all;border:1px solid #DEDEDE" valign="top">
+					<p style="clear: none; float: none;">						<img src='/_data/file/designImages/afb102e31b5d6f9ad18629bee377d7b9.png' border='0'  >
+											</p>
+				</td>
+			</tr>
+			<tr>
+				<td align=right bgcolor=#555555 height="20">
+					<input type=checkbox class="popup_end1">
+					<font color=#FFFFFF>
+										오늘 하루 이창을 열지 않음.
+										</font>
+
+					<a href="javascript:closeWin1();"><B><font color=#FFFFFF>[닫기]</font></B></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".dh-pc-popup").draggable();
+		});
+	</script>
+
+	<!-- 모바일 팝업의 위치는 Container 내부의 마지막에 위치합니다. -->
+	<div class="dh-popup m_pop1">
+    <p class="popup__tit">뉴스레터 OPEN!</p>
+		<div class="dh-popup-img">
+			
+									<img src='/_data/file/designImages/afb102e31b5d6f9ad18629bee377d7b9.png'>
+				
+					</div>
+		<div class="dh-popup-chk">
+			<input type="checkbox" class="popup_end1" id="popup-chk1" value="Y"> <label for="popup-chk1">오늘 하루 이창을 열지 않음</label>
+			<button type="button" onclick="closeWin1()">[닫기]</button>
+		</div>
+	</div>
+	

@@ -1,0 +1,1193 @@
+
+
+<!-- HTML5 선언문 -->
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!--  하위버전의 호환성 문제때문에 현재쓰는 브라우저 기준으로만 셋팅 -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8 ">
+
+<link rel="icon" href="/favicon.ico?v=2" sizes="16x16" type="image/x-icon"/> 
+<link rel="shortcut icon" href="/favicon.ico?v=2" sizes="16x16" type="image/x-icon"/>
+
+<meta name="robots" content="index,follow"> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=device-dpi">
+
+<title>유니메드</title>
+<link rel="stylesheet" href="../resource/css/reset.css" type="text/css">
+<link rel="stylesheet" href="../resource/css/common.css" type="text/css"> 
+<link rel="stylesheet" href="../resource/css/style.css" type="text/css"> 
+<!-- swiper -->
+<script src="../resource/js/jquery.min.js"></script>
+<script src="../resource/js/swiper.min.js"></script>
+<script src="../resource/js/common.js"></script>
+<script src="../resource/js/main.js"></script>
+<script src="../resource/js/radio.js"></script>
+<script src="../resource/js/radio_url.js"></script>
+<link rel="stylesheet" href="../resource/css/swiper.min.css">
+<!--awsome font-->
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<!--동영상 팝업-->
+<script src='../resource/js/jquery.fancybox.min.js'></script>
+<link rel='stylesheet' href='../resource/css/jquery.fancybox.min.css'>
+
+
+<script>
+//마스크 배너
+$(document).ready(function(){
+	$('.mask_pop_close').click(function(){
+		$('.mask_pop').css('display','none');		
+	});
+	
+	//의약품 회수
+	$('.return_close').click(function(){
+		$('.return_pop').css('display','none');		
+	});
+
+	//의약품 회수
+	$('.return_close2').click(function(){
+		$('.return_pop2').css('display','none');		
+	});
+	//신년인사
+	$('.return_close3').click(function(){
+		$('.return_pop3').css('display','none');		
+	});
+	
+});
+</script>
+
+
+<style>
+/*201117 메인비주얼*/
+.play_button_ifr {display:none;}
+
+/*201012 마스크배너*/
+.mask_pop { position:fixed; left:30px; top:30px; z-index:2000; text-align:center; width:500px;}
+.mask_pop img {max-width:100%;}
+.mask_pop_close {width:54px; height:54px; position:absolute; right:20px; top:20px; cursor:pointer}
+.return_view {position:absolute; bottom:25px; left:0; right:0; margin:0 auto; text-align:center;}
+.mask_btn {position:absolute; bottom:0; left:0; right:0; width:100%; background:#212e50;  font-size:0;}
+.mask_btn:after {content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:1px; height:60%; background:#9fb5a6;}
+.mask_btn span {display:inline-block; width:50%; height:60px; text-align:center;  font-size:20px}
+.mask_btn span a {line-height:60px; display:block; color:#fff;}
+
+.return_pop3 { position:fixed; left:550px; top:30px; z-index:2000; text-align:center;}
+.return_pop3 img {max-width:100%;}
+.return_pop3 a {position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%;}
+.return_pop2 { position:fixed; left:550px; top:30px; z-index:2000; text-align:center;}
+.return_pop2 img {max-width:100%;}
+.return_pop2 a {position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%;}
+.return_close2 {width:32px; height:32px; position:absolute; right:10px; top:10px; cursor:pointer; z-index:9999}
+.return_close3 {width:32px; height:32px; position:absolute; right:0px; top:9px; cursor:pointer; z-index:9999}
+.return_view {position:absolute; bottom:25px; left:0; right:0; margin:0 auto; text-align:center;}
+
+.return_pop3 { position:fixed; left:550px; top:30px; z-index:2000; text-align:center;}
+.return_pop3 img {max-width:100%;}
+.return_pop3 a {position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%;}
+.return_pop2 { position:fixed; left:550px; top:30px; z-index:2000; text-align:center;}
+.return_pop2 img {max-width:100%;}
+.return_pop2 a {position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%;}
+.return_close2 {width:54px; height:54px; position:absolute; right:20px; top:20px; cursor:pointer; z-index:9999}
+.return_close3 {width:54px; height:54px; position:absolute; right:20px; top:20px; cursor:pointer; z-index:9999}
+.return_view {position:absolute; bottom:25px; left:0; right:0; margin:0 auto; text-align:center;}
+
+
+.return_pop { position:fixed; left:340px; bottom:60px; z-index:2000; text-align:center;}
+.return_pop img {max-width:100%;}
+.return_pop a {position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%;}
+.return_close {width:54px; height:54px; position:absolute; right:20px; top:20px; cursor:pointer; z-index:9999}
+.return_view {position:absolute; bottom:30px; left:0; right:0; margin:0 auto; text-align:center;}
+
+
+@media screen and (max-width:1100px){
+	.return_pop2 { position:fixed; left:550px; top:30px; z-index:2000;}
+	.return_pop3 { position:fixed; left:550px; top:30px; z-index:2000;}
+	.return_pop { position:fixed; left:340px; bottom:60px; z-index:2000;}	
+}
+
+@media screen and (max-width:650px){
+	.return_view {width:58vw; }
+	.return_close {width:10vw;right:3%; top:3%; }
+	.return_close2 {width:10vw;right:3%; top:3%; }
+	.return_close3 {width:10vw;right:3%; top:3%; }
+	.return_view {bottom:4%;}
+	
+	.mask_btn span {height:11vw; font-size:4.5vw}
+	.mask_btn span a {line-height:11vw; font-size:3.5vw;}
+	
+	
+}
+
+@media screen and (max-width:500px){
+	.mask_pop {left:0; right:0; margin:0 auto; width:calc(100% - 4%);}
+	.mask_pop img {width:100%}
+	.mask_pop_close {width:10vw;right:3%; top:3%;}
+	.mask_pop {left:0; margin:0 auto; width:70% !important;}
+	
+	.return_pop3 {left:0; right:0; margin:0 auto; width:calc(100% - 4%);}
+	.return_pop3 img {width:100%;}
+	.return_pop2 {left:0; right:0; margin:0 auto; width:calc(100% - 4%);}
+	.return_pop2 img {width:100%;}
+	
+	.return_pop {left:0; right:0; margin:0 auto; width:calc(100% - 4%);}
+	.return_pop {left:0; right:0; margin:0 auto; width:60%; bottom:30px;}
+	.return_pop img {width:100%;}
+	
+}
+</style>
+ 
+
+</head>
+<body>
+
+
+<!--=========HEADER START=========-->
+
+
+<!-- 전체메뉴 -->
+<div id="site_map">
+	<span class="all_close"><img src="../resource/img/site_map_close.jpg"></span>
+	<div class="site_map_inner">
+		<ul>
+			<!--1-->
+			<li>
+				<dl>
+					<dt style="">기업</dt>
+					<dd>
+						<span><a href="/company">기업소개</a></span>
+						<span><a href="/ceo">CEO 인사말</a></span>
+						<span><a href="/history">연혁</a></span>
+						<span><a href="/cp">CP</a></span>
+						<span><a href="/directions">오시는 길</a></span>
+					</dd>
+				</dl>
+			</li>
+			<!--2-->
+			<li>
+				<dl>
+					<dt>제품</dt>
+					<dd>
+						<span><a href="/products">제품정보</a></span>
+						<span><a href="/permission">허가변경사항</a></span>
+						<span><a href="/introduction">헬스케어제품</a></span>
+					</dd>
+				</dl>
+			</li>
+			<!--3-->
+			<li>
+				<dl>
+					<dt>IR</dt> 
+					<dd>
+						<span><a href="/financial_information">재무정보</a></span>
+						<span><a href="/notice">공고</a></span>
+					</dd>
+				</dl>
+			</li>
+			<!--4-->
+			<li>
+				<dl>
+					<dt>연구개발</dt>
+					<dd>
+						<span><a href="/laboratory">연구소 소개</a></span>
+						<span><a href="/field_research">연구분야</a></span>
+						<span><a href="/research_result">연구성과</a></span>
+						<span><a href="/development">개발현황</a></span>
+					</dd>
+				</dl>
+			</li>
+			<!--5-->
+			<li>
+				<dl>
+					<dt>홍보센터</dt>
+					<dd>
+						<span><a href="/promotion_video">홍보미디어</a></span>
+						<span><a href="/news">NEWS</a></span>
+					</dd>
+				</dl>
+			</li>
+			<!--6-->
+			<li>
+				<dl>
+					<dt>채용</dt>
+					<dd>
+						<span><a href="/recruitment">채용안내</a></span>
+						<span><a href="/announcement">채용공고</a></span>
+						<span><a href="/personnel_system">인사제도</a></span>
+					</dd>
+				</dl>
+			</li>
+		<ul>
+	</div>
+</div>
+
+ 
+<!-- 배너 퀵메뉴 -->
+<!--
+<div id="pop_banner">
+	<button class="quick_close" alt="닫기버튼" ></button>
+	<button class="quick_close2"><i class="fas fa-times"></i></button>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="pop_list">
+					<video autoplay width="760" controls="" class="unidentalvideo">
+                     <source src="http://erp.unimed.co.kr/AndroidERP/video/v_unidental_cm.mp4" type="video/mp4" controls="" poster="http://unimed.co.kr/resource/img/video_unidental.jpg">
+                     <source src="http://erp.unimed.co.kr/AndroidERP/video/v_unidental_cm.mp4" type="video/mp4" controls="" poster="http://unimed.co.kr/resource/img/video_unidental.jpg">
+					</video>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+-->
+
+<!--header-->
+<div id="header">	
+	<h1 style=""><a href="/index"></a></h1>
+	<div class="gnb">
+		<div>
+			<ul>
+				<li>
+					<a href="/company">기업</a>
+					<ul class="depth">
+						<li><a href="/company">기업소개</a></li>
+						<li><a href="/ceo">CEO 인사말</a></li>
+						<li><a href="/history">연혁</a></li>
+						<li><a href="/cp">CP</a></li>
+						<li><a href="/directions">오시는 길</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/products">제품</a>
+					<ul class="depth">
+						<li><a href="/products">제품정보</a></li>
+						<li><a href="/permission">허가변경사항</a></li>
+						<li><a href="/introduction">헬스케어제품</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="financial_information">IR</a>
+					<ul class="depth">
+						<li><a href="/financial_information">재무정보</a></li>
+						<li><a href="/notice">공고</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/laboratory">연구개발</a>
+					<ul class="depth">
+						<li><a href="/laboratory">연구소 소개</a></li>
+						<li><a href="/field_research">연구분야</a></li>
+						<li><a href="/research_result">연구성과</a></li>
+						<li><a href="/development">개발현황</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/promotion_video">홍보센터</a>
+					<ul class="depth">
+						<li><a href="/promotion_video">홍보미디어</a></li>
+						<li><a href="/news">NEWS</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/recruitment">채용</a>
+					<ul class="depth">
+						<li><a href="/recruitment">채용안내</a></li>
+						<li><a href="/announcement">채용공고</a></li>
+						<li><a href="/personnel_system">인사제도</a></li>
+					</ul>
+				</li>
+			</ul>
+			<span class="bg"></span>
+		</div>
+	</div>
+	<ul class="top_icon">
+		<li class="lang"><a href="/en_index"><p>ENG</p></a></li>
+		<li class="search"><i class="fas fa-search"></i></li>
+		<li class="all">
+			<span></span>
+			<span></span>
+			<span></span>
+		</li>
+	</ul>
+	<div class="top_menu">
+		<span><a href="javascript:favorite()" >즐겨찾기추가</a></span>
+		<span><a href="tel:080-500-5100"><i class="fas fa-phone"></i>080-500-5100(고객상담)</a></span>
+		<span><a href="//www.marketunimed.com/" target="_blank">마켓유니메드</a></span>
+		<span><a href="//unicenta.co.kr/" target="_blank">유니쎈타</a></span>
+	</div>
+</div>
+<!--header END-->
+
+
+<!--검색-->
+<div id="search_con">
+	<div class="search_close"><img src="../resource/img/search_close.png"></div>
+	<div class="search_inner">
+		<h3>제품검색</h3>
+		<div class="search_bar">
+			<input type="text" name="headertext"  id="headertext" placeholder="검색어를 입력하세요"   onkeydown="handleKeyPressHead(event)">
+			<button onclick="headerProd()" alt="돋보기"></button>
+		</div>
+		<ul class="tag">
+			<li onclick="headerGubun(10)">#전문의약품</li>
+			<li onclick="headerGubun(11)">#일반의약품</li>
+			<li onclick="headerGubun(31)">#의료기기</li>
+			<li onclick="headerGubun(34)">#건강기능식품</li>
+			<li onclick="headerGubun(33)">#화장품</li>
+			<li onclick="headerGubun(35)">#기타&의약외품</li>
+		</ul>
+	</div>
+</div>       
+<span class="search_bg"></span>
+
+
+<script type="text/javascript"> 
+
+
+function headerGubun(Gubun){
+	location.href="/products?pageNo=1&gubunCode=" + Gubun  + "&effectCode=&settext="	
+}
+ 
+
+function headerProd(){
+	location.href="/products?pageNo=&gubunCode=&effectCode=&settext=" + $('#headertext').val() ; 
+}
+
+
+
+function favorite(){
+    var bookmarkURL = 'https://unimed.co.kr';
+    var bookmarkTitle = '유니메드제약';
+
+    if ('addToHomescreen' in window && window.addToHomescreen.isCompatible) {
+      // Mobile browsers
+      addToHomescreen({ autostart: false, startDelay: 0 }).show(true);
+    } else if (window.sidebar && window.sidebar.addPanel) {
+      // Firefox version < 23
+      window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+    } else if ((window.sidebar && /Firefox/i.test(navigator.userAgent)) || (window.opera && window.print)) {
+      // Firefox version >= 23 and Opera Hotlist
+      $(this).attr({
+        href: bookmarkURL,
+        title: bookmarkTitle,
+        rel: 'sidebar'
+      }).off(e);
+      return true;
+    } else if (window.external && ('AddFavorite' in window.external)) {
+        // IE Favorite
+        window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+      } else {
+        // Other browsers (mainly WebKit - Chrome/Safari)
+        alert('해당 브라우저는 즐겨찾기를 추가하기 위해서는 \nCrtl + D 를 눌러서 즐겨찾기를 추가하시기 바랍니다.');
+      }  
+  }
+
+
+function handleKeyPressHead(event) {
+    if (event.key === 'Enter') {
+    	headerProd();
+    }
+}
+
+</script>
+ 
+
+<!--검색 END-->
+<!--=========HEADER END=========-->
+
+
+<!-- 메인 레이어팝업 START -->
+<div class="mask_pop">
+	<a href="//www.marketunimed.com/" target="_blank"><img src="../resource/img/toothpaste_pop2.jpg"></a>
+	<span class="mask_pop_close"><img src="../resource/img/mask_pop_close.png"></span>
+	<div class="mask_btn" style="background-color:#2f543c;">
+		<span><a href="/products_view?prodNo=739" style="color:#fafafa;">제품보기</a></span>
+		<span><a href="#" onclick="window.open('/pharmlocation','unicenta_cust_new','scrollbars=no,toolbar=no,location=no,status=no,menubar=no,resizable=no,width=600,height=900')" style="color:#fafafa;">약국찾기</a></span>
+	</div>
+</div>
+<!--
+<div class="return_pop3">
+		<img src="../resource/img/221230_pop.jpg">
+		<span class="return_close3"><img src="../resource/img/mask_pop_close.png" style="background="#fff"></span>
+
+</div>
+-->
+<div class="return_pop2">
+		<img src="../resource/img/221220_pop.jpg">
+		<span class="return_close2"><img src="../resource/img/close_white.png" style="background="#fff"></span>
+		 <a href="/products_view?prodNo=193" target="_blank"></a>
+
+</div>
+<div class="return_pop3" style="width:40em; left:82em;">
+		<img src="../resource/img/250604_pop.jpg" >
+		<span class="return_close3"><img src="../resource/img/close_white.png" style="background="#fff"></span>
+</div>
+<!-- 
+<div class="return_pop2">
+		<img src="../resource/img/221230_pop.jpg">
+		<span class="return_close2"><img src="../resource/img/mask_pop_close.png" style="background="#fff"></span>
+
+</div>
+-->
+<!--
+<div class="return_pop">
+		<img src="../resource/img/return_pop.jpg">
+		<span class="return_close"><img src="../resource/img/return_close2.png"></span>
+	  <a href="//www.unimed.co.kr/news_view?idx=1254" ></a>
+
+</div>
+-->
+<!-- 행정처분 팝업
+<div class="return_pop2">
+		<img src="../resource/img/220125_pop.jpg">
+		<span class="return_close2"><img src="../resource/img/close_white.png" style="background="#fff"></span>
+		 <a href="../resource/pdf/mask_report.pdf" target="_blank"></a>
+
+</div>
+ -->
+
+<!-- 
+<div class="return_pop2">
+		<img src="../resource/img/return_pop2.jpg">
+		<span class="return_close2"><img src="../resource/img/return_close2.png"></span>
+
+</div>
+ -->
+ 
+<!-- 메인 레이어팝업 END -->
+
+
+<!-- 메인BGM 200305 START-->
+<div class="play_button" >
+	<div class="button_inner"><i class="fa fa-pause"></i></div>
+</div>
+<audio id="playAudio" src="/resource/home_track01.mp3" autoplay loop></audio>
+
+<div class="play_button_ifr" id="play_button_ifr" onclick="vid_play_pause()">
+   <div class="button_inner_ifr"><i class="fas fa-bell-slash"></i></div>
+</div>
+<video id="iframeAudio" src="/resource/home_track01.mp3" loop></video>
+<!-- 메인BGM 200305 END-->
+
+<script>
+var filter = "win16|win32|win64|mac|macintel"; 
+	if ( navigator.platform ) { 
+	
+	if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+		//mobile 
+		$('.play_button').css('display','none');
+		$('.play_button_ifr').css('display','none');
+	} else { 
+		//pc 
+		//alert('pc 접속'); 
+	} 
+}
+
+</script>
+
+<script>
+//BGM 오디오 - 익스
+var button = document.querySelector('.play_button'),
+icon = document.querySelector('.button_inner'),
+audio = document.querySelector('audio'),
+play = true;
+audio.volume = 0.5; //0 ~ 1까지
+
+	button.addEventListener('click', function () {
+	if (!play) {
+	  audio.play();
+	  icon.innerHTML = '<i class="fa fa-pause"></i>';
+	
+	} else {
+	  audio.pause();
+	  icon.innerHTML = '<i class="fa fa-play"></i>';
+	}
+	
+	play = !play;
+	}, true);
+	
+//BGM 비디오 - 크롬
+function vid_play_pause() { 
+	var myVideo = document.getElementById("iframeAudio"); 
+	if (myVideo.paused) { myVideo.play(); 
+	} else { 
+		myVideo.pause(); 
+		} 
+	}
+
+$("#iframeAudio").prop('muted', true);
+
+	$(".play_button_ifr").click(function () {
+		if ($('#iframeAudio').prop('muted')) {
+			$("#iframeAudio").prop('muted', false);
+			$('.button_inner_ifr').html('<i class="fas fa-bell"></i>');	
+		} else {
+			$('#iframeAudio').prop('muted', true);
+			$('.button_inner_ifr').html('<i class="fas fa-bell-slash"></i>');
+		}
+		console.log($("#iframeAudio").prop('muted'))
+}); 
+	
+//BGM 브라우저 구분
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+	if (!isChrome){ //익스일 때
+		$('#iframeAudio').remove();
+		$('.play_button_ifr').remove();
+	}
+	else { //크롬일 때
+		$('#playAudio').remove(); // just to make sure that it will not have 2x audio in the background 
+		$('.play_button').remove();	
+	};
+</script>
+
+<a href="#" class="go-top"><i class="fas fa-chevron-up"></i></a>
+
+<!--[2020-10-22 추가] 좌측 하단 미니 동영상 START-->
+<div id="placent_v">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!-- 01 
+			<div class="swiper-slide" >
+				<div class="placent_v_list">
+
+						<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/placenta_01.mp4">
+						<span>클릭하여 영상을 확인하세요.</span>
+							<img src="../resource/img/left_banner_01.jpg" class="video_link">
+						</a>
+
+				</div>
+			</div>-->
+			<!-- 02 -->
+			<div class="swiper-slide" >
+				<div class="placent_v_list">
+
+						<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/placenta_02.mp4">
+							<span>클릭하여 영상을 확인하세요.</span>
+							<img src="../resource/img/left_banner_02.jpg" class="video_link">
+						</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+		<span class="return_close3">
+	    <a href="#" onclick="this.parentNode.parentNode.style.display = 'none'"><img src="../resource/img/220921_swiper_close.png"></a>
+	    </span>
+	</div>
+	
+</div>
+<!--[2020-10-22 추가] 좌측 하단 미니 동영상 END-->
+
+<!-- 메인비주얼 -->
+<div id="visual">
+	<a class="mouse-scroll" href="#"> 
+		<span class="mouse">
+			<span class="mouse-movement"> 
+			</span>
+		</span>
+		<span class="mouse-message fadeIn">scroll</span> 
+	</a>
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">	
+		    <!-- 비디오 소스
+			<div class="swiper-slide swiper_video_wrap" id="swiper_video_wrap" data-swiper-autoplay="16800">
+				<div class="title text_shadow">
+					<span>플라센타 전문 제약사 유니메드 제약</span>
+					<p>Placenta specialis<br>UNIMED PHARM INC.</p>
+				</div>
+				<div class="swiper_video">
+					<video autoplay="" loop="" muted="" id="main_video">
+						<source src="//erp.unimed.co.kr/AndroidERP/video/main_video.mp4">
+					</video>
+				</div>
+			</div>
+			-->  
+			
+			<div class="swiper-slide swiper_video_wrap" id="swiper_video_wrap" data-swiper-autoplay="16800">
+				<div class="title">
+					<span>Placenta Specialis Unimed Pharm Inc</span>
+					<p style="text-transform: capitalize;">플라센타 전문 제약사<br>유니메드제약</p>
+				</div>
+				<img src="../resource/img/220929_vis_01.jpg">
+				<div class="bg00"></div>
+			</div>
+			
+			<div class="swiper-slide"  >
+				<div class="title bk">
+					<span>Healthy Life And Happiness</span>
+					<p style="text-transform: capitalize;">건강하고 행복한 삶을 위해<br>끊임없이 연구, 개발하는 기업</p>
+				</div>
+				<img src="../resource/img/220929_vis_02.jpg">
+				<div class="bg01"></div> 
+			</div>
+			<div class="swiper-slide" >
+				<img src="../resource/img/220929_vis_03.jpg">
+				<div class="bg02"></div>
+				<div class="title bk">
+					<span>Creating A Healthy Everyday Life</span>
+					<p style="text-transform: capitalize;">생활속에 건강을 위해<br>꾸준히 노력하는 기업</p>
+				</div>
+			</div>
+			<div class="swiper-slide" data-swiper-autoplay="7800">
+				<div class="title">
+					<span>No.1 Challenge Global New Medicine</span>
+					<p style="text-transform: capitalize;">글로벌 신약개발에 매진하고<br>있는 R&D중심 제약기업</p>
+				</div>
+				<img src="../resource/img/220929_vis_04.jpg">
+				<div class="bg03"></div>
+			</div>
+
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+<!-- 메인비주얼 END -->
+
+
+<!--홍보미디어 -->
+<div id="media" >
+	<h2>홍보미디어</h2>
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!--1-->
+			<div class="swiper-slide" >
+				<div class="media_list">
+					<dl>
+						<dt>유니메드</dt>
+						<dd>유니메드 홍보영상<br>&nbsp;</dd>
+						<dd class="lang_ver">
+							<span>
+								<!-- //www.youtube.com/watch?v=RftUzH9Xs0I; autoplay=1&amp; rel=0&amp; controls=0&amp; showinfo=0 -->
+								<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unimed.mp4">
+								 <img src="../resource/img/kr.jpg"></a>
+							 </span>
+							<span>
+								<!-- //www.youtube.com/watch?v=KHBW3wBbvt4; autoplay=1&amp; rel=0&amp; controls=0&amp; showinfo=0 -->
+								<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unimed_en.mp4">
+									<img src="../resource/img/en.jpg">
+								 </a>
+							 </span>
+							<span>
+								<!-- //www.youtube.com/watch?v=sE6Gex2kkvw; autoplay=1&amp; rel=0&amp; controls=0&amp; showinfo=0 -->
+								<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unimed_ch.mp4">
+								 <img src="../resource/img/ch.jpg"></a>
+							 </span>
+							<span>
+								<!-- //www.youtube.com/watch?v=ReaRhMXfUfE; autoplay=1&amp; rel=0&amp; controls=0&amp; showinfo=0 -->
+								<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unimed_jp.mp4">
+								<img src="../resource/img/jp.jpg"></a>
+							</span>
+						 </dd>
+					</dl>
+					<div></div>
+					<div>
+						<span>
+							<!-- //www.youtube.com/watch?v=RftUzH9Xs0I; autoplay=1&amp; rel=0&amp; controls=0&amp; showinfo=0 -->
+							<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unimed.mp4"><img src="../resource/img/video01.jpg"></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--2-->
+			<div class="swiper-slide" >
+				<div class="media_list">
+					<dl>
+						<dt>유니덴탈올케어치약</dt>
+						<dd>쑥과 유황의 만남!<br>시린이, 치은염, 치주염 예방 프리미엄 치약</dd>
+					</dl>
+					<div><a href="//www.marketunimed.com/" target="_balnk" class="link">마켓유니메드 ></a></div>
+					<div>
+						<span>
+							<!--<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unidental_cm.mp4">--><img src="../resource/img/video_unidental.jpg" class="video_link"></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--3-->
+			<div class="swiper-slide" >
+				<div class="media_list">
+					<dl>
+						<dt>태양수</dt>
+						<dd>안티에이징을 위한 습관!<br>고농도 플라센타 화장품</dd>
+					</dl>
+					<div><a href="//www.marketunimed.com/" target="_balnk" class="link">마켓유니메드 ></a></div>
+					<div>
+						<span>
+							<!-- //www.youtube.com/watch?v=dHNtkgLLPK0&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0 -->
+							<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_taeyangsoo.mp4"><img src="../resource/img/video02.jpg" class="video_link"></a>
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--4-->
+			<div class="swiper-slide" >
+				<div class="media_list">
+					<dl>
+						<dt>유니쎈타</dt>
+						<dd>태반을 주원료로 하는<br>유니메드제약 제품입니다.</dd>
+					</dl>
+					<div><a href="//unicenta.co.kr/" target="_balnk"  class="link">유니쎈타 ></a></div>
+					<div>
+						<span>
+							<!-- //www.youtube.com/watch?v=LWT8N1RpUwg&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0 -->
+							<a data-fancybox href="//erp.unimed.co.kr/AndroidERP/video/v_unicenta.mp4">
+							<img src="../resource/img/video03.jpg" class="video_link"></a>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+
+
+<div id="radio_con">
+	<div class="radio">
+		<p>라디오 광고</p>
+		<ul>
+			<li class="radio_one">
+				<i class="fas fa-play"  onClick="audio_company.play();" value="PLAY"></i>
+				<i class="fas fa-pause" onClick="audio_company.pause();" value="PAUSE"></i>
+				<em>기업PR - 칭찬편</em>
+				<div id="loader_off">
+				  <ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				  </ul>
+				</div>
+				</li>
+			<li class="radio_two">
+				<i class="fas fa-play"  onClick="audio_centa.play();" value="PLAY"></i>
+				<i class="fas fa-pause" onClick="audio_centa.pause();" value="PAUSE"></i>
+				<!--<input type="number" onChange="audio.currentTime=this.value" alt="음악의 현재 위치(초 단위)"/>
+			    <input type="number" onChange="audio.volume=this.value" alt="볼륨조절_소수점가능"/>-->
+				<em>유니쎈타PR</em>
+				<div id="loader_off">
+				  <ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				  </ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div id="product" >
+	<h2>주요제품정보</h2>
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+		 
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=664">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/유니알 0.15.png"class="pharm" >
+								<img src="//erp.unimed.co.kr/ProdImage/유니알 0.15.png"class="pharm_hover" > 
+								
+							</span>
+							<div>
+								  	<strong class="professional">
+								 
+								 
+								 
+								 
+								 전문의약품</strong>
+								<dl>
+									<dt>유니알디스포점안액 0.15% 0.45mL</dt>
+									<dd>강력한 각막 보습 및 증상 완화, 오염우려가 없는 순수 1회용 점안제</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=436">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/유니쎈타액-세트2.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/홈페이지-유니쎈타액-병.png"class="pharm_hover" > 
+							</span>
+							<div>
+								 
+								  	<strong class="general">
+								 
+								 
+								 
+								 일반의약품</strong>
+								<dl>
+									<dt>유니쎈타액</dt>
+									<dd>인태반 자하거엑스 함유제제</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=654">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/콜힐업 3ml.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/홈페이지_콜힐업3ml-시린지.png"class="pharm_hover" > 
+							</span>
+							<div>
+								 
+								 
+								  	<strong class="medical">
+								 
+								 
+								 의료기기</strong>
+								<dl>
+									<dt>콜힐업 3mL</dt>
+									<dd>콜라겐조직보충재로 항원성을 띄는 Telopeptide를 제거하여 면역반응을 최소화한 TypeⅠ콜라겐</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=621">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/노시셉톨 이미지(1).png"class="pharm" >
+								<img src="//erp.unimed.co.kr/ProdImage/노시셉톨 이미지(1).png"class="pharm_hover" > 
+								
+							</span>
+							<div>
+								 
+								 
+								 
+								 
+								  	<strong class="cosmetics">
+								 화장품류</strong>
+								<dl>
+									<dt>노시셉톨겔</dt>
+									<dd>프랑스 수입 완제품</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=657">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/1_200129_thumb.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/2_200129_thumb.png"class="pharm_hover" > 
+							</span>
+							<div>
+								 
+								 
+								 
+								 
+								  	<strong class="cosmetics">
+								 화장품류</strong>
+								<dl>
+									<dt>태반영양 프라비탈 클렌징 비누 1SET(90gx2EA)</dt>
+									<dd>플라센타추출농축액과 피부에 필요한 다양한 영양성분을 함유하고 있는 비누</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=321">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/세레나데정.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/팝업세레나데정알약.png"class="pharm_hover" > 
+							</span>
+							<div>
+								  	<strong class="professional">
+								 
+								 
+								 
+								 
+								 전문의약품</strong>
+								<dl>
+									<dt>세레나데정</dt>
+									<dd>최고의 항혈소판제인 클로피도그렐을 국내 최초국산화! 경제적으로 환자에게 투여 할 수 있도록 하였습니다</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=637">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/홈페이지-퍼스크린액_GD.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/홈페이지-퍼스크린액_스틱_GD.png"class="pharm_hover" > 
+							</span>
+							<div>
+								 
+								  	<strong class="general">
+								 
+								 
+								 
+								 일반의약품</strong>
+								<dl>
+									<dt>퍼스크린액 0.12%</dt>
+									<dd>1회용 구강 살균소독제</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+				<div class="swiper-slide">
+					<li class="product_list">
+						<a href="/products_view?prodNo=547">
+							
+							<span >
+								<img src="//erp.unimed.co.kr/ProdImage/유니쎈타-패키지 9.png"class="pharm" >
+								
+								<img src="//erp.unimed.co.kr/ProdImage/유니쎈타앰플.png"class="pharm_hover" > 
+							</span>
+							<div>
+								  	<strong class="professional">
+								 
+								 
+								 
+								 
+								 전문의약품</strong>
+								<dl>
+									<dt>유니쎈타주</dt>
+									<dd>갱년기 증상에 효과적인 인태반 자하거엑스 함유 주사제</dd>
+								</dl>
+							</div> 
+						</a>
+					</li>
+				</div>
+			
+			
+		</div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+	</div>
+</div>
+
+<div id="new_container">
+	<h2>유니메드소식</h2>
+	<ul>
+		<li>
+			<h3>유니메드 뉴스</h3>
+				
+
+						
+					<span class="news_default"><img src="../resource/img/news_default.png"></span>	
+				
+				
+				<div class="scale">
+					<a href="/news_view?idx=252"></a>
+					<dl>
+						<dt>2026 유니메드제약 하계휴가 안내</dt>
+						<dd><SPAN style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial''>안녕하십니까? 유니메드제약입니다.</SPAN><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><SPAN style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial''>2026년 유니메드제약 하계휴가를 아래와 같이 안내해드립니다.</SPAN><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><SPAN style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial''>- 아 래 -</SPAN><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><SPAN style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial''>* 휴가 기간 : <STRONG>2026년 08월 03일(월) ~ 08월 07일(금)</STRONG></SPAN><BR style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; text-size-adjust: none''><SPAN style=''FONT-SIZE: 13px; FONT-FAMILY: Montserrat, "Noto Sans KR", Exo, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(125,125,125); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial''>이용에 불편을 끼쳐드려 죄송합니다. 감사합니다.</SPAN></dd>
+					</dl>
+				</div>
+			  
+			<a href="/news">MORE +</a>
+		</li>
+		<li>
+			<h3>사회공헌 뉴스</h3>
+			 
+			<a href="/news_social">MORE +</a>
+		</li>
+	</ul>
+</div>
+
+<div id="customer">
+	<ul>
+		<li>
+			<div>
+				<h3>IR</h3>
+				<p>투자정보</p>
+			</div>
+			<ul>
+				
+					<li><a href="/notice_view?idx=244">제35기 결산공고 - 재무상태표</a></li>
+				
+					<li><a href="/notice_view?idx=243">제34기 결산공고 - 재무상태표</a></li>
+				
+					<li><a href="/notice_view?idx=237"> 제33기 결산공고 - 재무상태표</a></li>
+				 
+			</ul>
+		</li>
+		<li>
+			<div>
+				<h3>PRECAUTIONS</h3>
+				<p>의약품 허가 변경</p>
+			</div>
+			<ul>
+				
+					<li><a href="/permission_view?idx=548">두타시아정 0.5밀리그램 허가변경명령(사용상의 주의사항) 알림의 건</a></li>
+				
+					<li><a href="/permission_view?idx=547">자비아엠정 5/1000, 5/850, 5/500 밀리그램 허가변경명령(사용상의 주의사항) 알림의 건</a></li>
+				
+					<li><a href="/permission_view?idx=546">유닉심캡슐, 유닉심캡슐200밀리그람 허가변경명령(사용상의주의사항) 알림의 건</a></li>
+				 
+			</ul>
+		</li>
+	</ul>
+</div>
+
+
+<!--제품배너-->
+<div class="wrap">
+	<div class="swiper-button-next swiper-button-white"></div>
+	<div class="swiper-button-prev swiper-button-white"></div>
+
+	<!-- 배너 이미지 -->
+	<div class="product_banner" id="product_banner">
+		<div class="swiper-container gallery-top" id="gallery">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide product_bg01">
+					<div class="txt_box">
+						<p>태양수 프라비탈<br>(PLAVITAL)</p>
+						<span>고농도 플라쎈타 프리미엄 화장품</span>
+						<a href="//www.marketunimed.com/goods/goods_view.php?goodsNo=1000000038" target="_blank" class="detail">자세히보기<i class="fas fa-angle-right"></i></a>
+					</div>
+				</div>
+				<div class="swiper-slide product_bg02">
+					<div class="txt_box">
+						<p>유니쎈타</p>
+						<span>간편하게 마시는 인태반 의약품</span>
+						<a href="//unicenta.co.kr/"  target="_blank" class="detail">자세히보기<i class="fas fa-angle-right"></i></a>
+					</div>
+				</div>
+				<!--
+				<div class="swiper-slide product_bg03">
+					<div class="txt_box">
+						<p>노시셉톨</p>
+						<span>뭉치고, 결리고, 다친 부위에!</span>
+						<a href="//www.marketunimed.com/goods/goods_view.php?goodsNo=1000000004"  target="_blank" class="detail">자세히보기<i class="fas fa-angle-right"></i></a>
+					</div>
+				</div>
+				-->
+				<div class="swiper-slide product_bg03">
+					<div class="txt_box">
+						<p>유니알 디스포</p>
+						<span>순수 1회용 점안제</span>
+						<a href="/products_view?prodNo=664"  class="detail">자세히보기<i class="fas fa-angle-right"></i></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!-- 썸네일 -->
+	<div class="tumb_warp">
+		<div class="swiper-container gallery-thumbs" id="thumbs">
+			<div class="swiper-wrapper" >
+				<div class="swiper-slide"><img src="../resource/img/thumb01.png"></div>
+				<div class="swiper-slide"><img src="../resource/img/thumb02.png"></div>
+				<!--
+
+				<div class="swiper-slide"><img src="../resource/img/thumb03.png"></div>
+				-->
+				<div class="swiper-slide"><img src="../resource/img/thumb04.png"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+<!--=========footer START=========-->
+
+<!-- footer -->
+<footer>
+	<div class="foot_inner">
+	 <div class="related_link box">
+		<div class="family_site">
+			<span>패밀리 사이트</span>
+			<ul>
+				<li><a href="//unicenta.co.kr/" target="_blank">유니쎈타</a></li>
+				<li><a href="//www.marketunimed.com/" target="_blank">마켓유니메드</a></li>
+			</ul>
+		</div>
+		<div class="link_list">    
+			<ul>
+				<li><a href="/company">회사소개</a></li>
+				<!-- <li><a href="/etc/guide.do?gubun=2">오시는길</a></li> -->
+				<li><a href="/erpdown" target="_blank">다운로드</a></li>
+				
+				<li><a onclick="window.open('/perpri','','left=100,top=100,width=720,height=700,resizable=no,scrollbars=yes,status=0')">개인정보처리방침</a></li>
+			</ul>
+		</div>        
+		</div>
+			
+		<div class="footer_info">
+			<div class="box">
+				<div class="footer_logo">
+					<a href="#"><img src="../resource/img/logo_wh.png" alt="로고"></a>
+				</div>
+				<address>
+					<span>주소 : 서울시 송파구 삼전로 69(잠실동) 유니메드빌딩</span><span>대표이사 : 김건남</span><span>Tel : 02-2240-5100</span><span>Fax : 02-2240-5115<span>
+					<p>UNIMED Bldg. 69, Samjeon-ro, Songpa-Gu, Seoul, Korea (05567)</p>
+				</address>
+			</div>
+		</div>    
+	</div>    
+</footer>
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "396aa169ead11";
+wcs_do();
+</script>
+
+<!-- //footer -->
+
+
+
+</body>
+</html>
+
+

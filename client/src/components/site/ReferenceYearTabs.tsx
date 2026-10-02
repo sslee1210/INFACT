@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { prioritizeReferenceCompanies } from "@/content/references/referencePriority";
+import { getCompanyLogo } from "@/content/clientLogos";
 
 export type ReferenceClient = {
   client: string;
@@ -29,12 +30,18 @@ function collectCompanies(records: ReferenceClient[]) {
   return Array.from(companies.values());
 }
 
-function CompanyLogo({ client, logoSrc }: ReferenceClient) {
+function CompanyLogo({ client, logoSrc: suppliedLogoSrc }: ReferenceClient) {
+  const registeredLogo = getCompanyLogo(client);
+  const logoSrc = suppliedLogoSrc || registeredLogo?.src;
   const [failed, setFailed] = useState(false);
   useEffect(() => setFailed(false), [logoSrc]);
   const hasLogo = Boolean(logoSrc && !failed);
   return (
-    <div className="reference-company__logo" data-placeholder={!hasLogo || undefined}>
+    <div
+      className="reference-company__logo"
+      data-placeholder={!hasLogo || undefined}
+      data-surface={hasLogo && !suppliedLogoSrc ? registeredLogo?.background : undefined}
+    >
       {hasLogo ? (
         <img
           src={logoSrc}
@@ -45,7 +52,7 @@ function CompanyLogo({ client, logoSrc }: ReferenceClient) {
           decoding="async"
           onError={() => setFailed(true)}
         />
-      ) : <span>{client}<small>로고 등록 예정</small></span>}
+      ) : <span>{client}</span>}
     </div>
   );
 }

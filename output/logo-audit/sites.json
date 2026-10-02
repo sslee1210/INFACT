@@ -1,0 +1,1356 @@
+[
+  {
+    "key": "donga-st",
+    "names": [
+      "동아ST",
+      "동아에스티",
+      "DONG-A ST"
+    ],
+    "page": "https://www.donga-st.com/en/"
+  },
+  {
+    "key": "gc-biopharma",
+    "names": [
+      "GC녹십자",
+      "녹십자",
+      "GC Biopharma"
+    ],
+    "page": "https://www.gcbiopharma.com/kor/ci.do"
+  },
+  {
+    "key": "huons",
+    "names": [
+      "휴온스",
+      "휴온스제약",
+      "Huons"
+    ],
+    "page": "https://huons.com/kor/home.php"
+  },
+  {
+    "key": "prestige-biologics",
+    "names": [
+      "프레스티지바이오로직스",
+      "Prestige Biologics"
+    ],
+    "page": "https://www.prestigebiologics.com"
+  },
+  {
+    "key": "lg-chem",
+    "names": [
+      "LG화학",
+      "LG Chem"
+    ],
+    "page": "https://www.lgchem.com"
+  },
+  {
+    "key": "scd-pharm",
+    "names": [
+      "삼천당제약",
+      "Samchundang Pharm"
+    ],
+    "page": "https://www.scd.co.kr"
+  },
+  {
+    "key": "st-pharm",
+    "names": [
+      "ST Pharm"
+    ],
+    "page": "https://www.stpharm.co.kr/ko/ci"
+  },
+  {
+    "key": "cj-cheiljedang",
+    "names": [
+      "CJ제일제당",
+      "CJ CheilJedang"
+    ],
+    "page": "https://www.cj.co.kr/kr/index"
+  },
+  {
+    "key": "korea-vaccine",
+    "names": [
+      "한국백신",
+      "Korea Vaccine"
+    ],
+    "page": "https://www.koreavaccine.com"
+  },
+  {
+    "key": "dmbio",
+    "names": [
+      "DM Bio",
+      "DM바이오",
+      "DMBIO"
+    ],
+    "page": "https://stgenbio.com"
+  },
+  {
+    "key": "samsung-biologics",
+    "names": [
+      "삼성바이오로직스"
+    ],
+    "page": "https://samsungbiologics.com/kr"
+  },
+  {
+    "key": "celltrion",
+    "names": [
+      "셀트리온"
+    ],
+    "page": "https://www.celltrion.com/ko-kr"
+  },
+  {
+    "key": "yuhan",
+    "names": [
+      "유한양행"
+    ],
+    "page": "https://www.yuhan.co.kr/Main/"
+  },
+  {
+    "key": "hanmi",
+    "names": [
+      "한미약품"
+    ],
+    "page": "https://www.hanmi.co.kr"
+  },
+  {
+    "key": "daewoong",
+    "names": [
+      "대웅제약"
+    ],
+    "page": "https://www.daewoong.co.kr"
+  },
+  {
+    "key": "ckd-pharm",
+    "names": [
+      "종근당"
+    ],
+    "page": "https://www.ckdpharm.com/research/intro.do"
+  },
+  {
+    "key": "ckd-bio",
+    "names": [
+      "종근당바이오",
+      "CKD Bio",
+      "종근당바이오 안산공장",
+      "종근당바이오 예산공장"
+    ],
+    "page": "https://www.ckdbio.com/facility/ansanFactory.do"
+  },
+  {
+    "key": "sk-bioscience",
+    "names": [
+      "SK바이오사이언스"
+    ],
+    "page": "https://www.skbioscience.com"
+  },
+  {
+    "key": "boryung",
+    "names": [
+      "보령제약"
+    ],
+    "page": "https://www.boryung.co.kr"
+  },
+  {
+    "key": "inno-n",
+    "names": [
+      "HK이노엔",
+      "에이치케이이노엔"
+    ],
+    "page": "https://www.inno-n.com"
+  },
+  {
+    "key": "donga-pharm",
+    "names": [
+      "동아제약"
+    ],
+    "page": "https://www.dapharm.com"
+  },
+  {
+    "key": "jw-pharm",
+    "names": [
+      "jw중외제약"
+    ],
+    "page": "https://www.jw-pharma.co.kr"
+  },
+  {
+    "key": "ildong",
+    "names": [
+      "일동제약"
+    ],
+    "page": "https://www.ildong.com"
+  },
+  {
+    "key": "dongkook",
+    "names": [
+      "동국제약"
+    ],
+    "page": "https://www.dkpharm.co.kr"
+  },
+  {
+    "key": "kolmar",
+    "names": [
+      "한국콜마"
+    ],
+    "page": "https://www.kolmar.co.kr"
+  },
+  {
+    "key": "hanall",
+    "names": [
+      "한올바이오파마",
+      "한올바이오"
+    ],
+    "page": "https://hanall.com/kr/"
+  },
+  {
+    "key": "medytox",
+    "names": [
+      "메디톡스"
+    ],
+    "page": "https://www.medytox.com"
+  },
+  {
+    "key": "hugel",
+    "names": [
+      "휴젤"
+    ],
+    "page": "https://www.hugel-inc.com/kr/media/ci"
+  },
+  {
+    "key": "samjin",
+    "names": [
+      "삼진제약"
+    ],
+    "page": "https://www.samjinpharm.co.kr/front/kr/main/index.asp"
+  },
+  {
+    "key": "hanlim",
+    "names": [
+      "한림제약"
+    ],
+    "page": "https://www.hanlim.com:49324/index.php"
+  },
+  {
+    "key": "taejoon",
+    "names": [
+      "태준제약"
+    ],
+    "page": "https://www.taejoon.co.kr"
+  },
+  {
+    "key": "united",
+    "names": [
+      "한국유나이티드제약",
+      "한국유나이티드",
+      "유나이티드제약"
+    ],
+    "page": "https://www.kup.co.kr/main.do"
+  },
+  {
+    "key": "lotte-bio",
+    "names": [
+      "롯데바이오로직스"
+    ],
+    "page": "https://www.lottebiologics.com"
+  },
+  {
+    "key": "bcworld",
+    "names": [
+      "비씨월드제약",
+      "비씨월드"
+    ],
+    "page": "https://www.bcwp.co.kr"
+  },
+  {
+    "key": "binex",
+    "names": [
+      "바이넥스"
+    ],
+    "page": "https://www.bi-nex.com"
+  },
+  {
+    "key": "peptron",
+    "names": [
+      "펩트론"
+    ],
+    "page": "https://www.peptron.co.kr"
+  },
+  {
+    "key": "lnc-bio",
+    "names": [
+      "엘앤씨바이오"
+    ],
+    "page": "https://www.lncbio.co.kr"
+  },
+  {
+    "key": "boryung-bio",
+    "names": [
+      "보령바이오파마"
+    ],
+    "page": "https://www.boryungbio.co.kr"
+  },
+  {
+    "key": "youngjin",
+    "names": [
+      "영진약품"
+    ],
+    "page": "https://www.yungjin.co.kr"
+  },
+  {
+    "key": "kuhnil",
+    "names": [
+      "건일제약"
+    ],
+    "page": "http://www.kuhnil.com"
+  },
+  {
+    "key": "dongkwang",
+    "names": [
+      "동광제약"
+    ],
+    "page": "https://www.dkpco.co.kr"
+  },
+  {
+    "key": "genewel",
+    "names": [
+      "제네웰"
+    ],
+    "page": "https://www.genewel.com/kr/sub/company/overview.php"
+  },
+  {
+    "key": "unimed",
+    "names": [
+      "유니메드제약"
+    ],
+    "page": "https://www.unimed.co.kr/index"
+  },
+  {
+    "key": "jeil",
+    "names": [
+      "제일약품"
+    ],
+    "page": "https://www.jeilpharm.co.kr"
+  },
+  {
+    "key": "daewon",
+    "names": [
+      "대원제약"
+    ],
+    "page": "https://www.daewonpharm.com"
+  },
+  {
+    "key": "jw-life",
+    "names": [
+      "jw생명과학"
+    ],
+    "page": "https://www.jw-lifescience.co.kr"
+  },
+  {
+    "key": "reyon",
+    "names": [
+      "이연제약"
+    ],
+    "page": "https://www.reyonpharm.co.kr"
+  },
+  {
+    "key": "kyongbo",
+    "names": [
+      "경보제약"
+    ],
+    "page": "https://www.kbpharma.co.kr/company/summary_kbp.do"
+  },
+  {
+    "key": "alvogen",
+    "names": [
+      "알보젠코리아",
+      "알보젠"
+    ],
+    "page": "https://www.alvogenkorea.com"
+  },
+  {
+    "key": "pharmaresearch",
+    "names": [
+      "파마리서치"
+    ],
+    "page": "https://pharmaresearch.com"
+  },
+  {
+    "key": "kolmar-bnh",
+    "names": [
+      "콜마비앤에이치",
+      "콜마 BNH"
+    ],
+    "page": "http://www.kolmarbnh.co.kr/"
+  },
+  {
+    "key": "daehwa",
+    "names": [
+      "대화제약"
+    ],
+    "page": "https://www.dhpharm.co.kr"
+  },
+  {
+    "key": "daihan",
+    "names": [
+      "대한약품",
+      "대한약품공업"
+    ],
+    "page": "https://www.daihan.com"
+  },
+  {
+    "key": "bnc",
+    "names": [
+      "한국비엔씨"
+    ],
+    "page": "http://www.bnckorea.co.kr/web/?urlkeyword=BNC+KOREA"
+  },
+  {
+    "key": "dongkoo",
+    "names": [
+      "동구바이오"
+    ],
+    "page": "https://www.dongkoo.com"
+  },
+  {
+    "key": "huons-meditech",
+    "names": [
+      "휴온스메디텍"
+    ],
+    "page": "https://www.huonsmeditech.com"
+  },
+  {
+    "key": "huons-biopharma",
+    "names": [
+      "휴온스바이오파마"
+    ],
+    "page": "https://huonsbiopharma.com/web/home.php"
+  },
+  {
+    "key": "samyang-bio",
+    "names": [
+      "삼양바이오팜",
+      "삼양바이오팜 의약공장"
+    ],
+    "page": "https://www.samyangbiopharm.com"
+  },
+  {
+    "key": "samyang",
+    "names": [
+      "삼양홀딩스",
+      "삼양홀딩스 의약공장"
+    ],
+    "page": "https://www.samyang.com"
+  },
+  {
+    "key": "rp-bio",
+    "names": [
+      "RPBIO"
+    ],
+    "page": "https://www.rpbio.co.kr"
+  },
+  {
+    "key": "whanin",
+    "names": [
+      "환인제약"
+    ],
+    "page": "https://www.whanin.com"
+  },
+  {
+    "key": "suheung",
+    "names": [
+      "서흥",
+      "서흥캅셀"
+    ],
+    "page": "https://www.suheung.com"
+  },
+  {
+    "key": "taiguk",
+    "names": [
+      "태극제약"
+    ],
+    "page": "https://www.taiguk.co.kr/index.jsp"
+  },
+  {
+    "key": "union",
+    "names": [
+      "한국유니온제약"
+    ],
+    "page": "https://www.ukp.co.kr/kor/company/index.php"
+  },
+  {
+    "key": "seoul-pharma",
+    "names": [
+      "서울제약"
+    ],
+    "page": "http://www.seoulpharma.com/"
+  },
+  {
+    "key": "the-u",
+    "names": [
+      "더유제약"
+    ],
+    "page": "https://www.theu.co.kr/?sc_web=y"
+  },
+  {
+    "key": "jnj",
+    "names": [
+      "존슨앤존슨"
+    ],
+    "page": "https://www.jnj.com/"
+  },
+  {
+    "key": "kwangdong",
+    "names": [
+      "광동제약"
+    ],
+    "page": "https://www.ekdp.com"
+  },
+  {
+    "key": "apro-gen",
+    "names": [
+      "에이프로젠"
+    ],
+    "page": "https://www.aprogen.com"
+  },
+  {
+    "key": "apro-bio",
+    "names": [
+      "에이프로젠바이오로직스"
+    ],
+    "page": "https://www.aprogen-biologics.com"
+  },
+  {
+    "key": "humedix",
+    "names": [
+      "휴메딕스"
+    ],
+    "page": "https://www.humedix.com"
+  },
+  {
+    "key": "samil",
+    "names": [
+      "삼일제약"
+    ],
+    "page": "https://www.samil-pharm.com"
+  },
+  {
+    "key": "dongsung",
+    "names": [
+      "동성제약"
+    ],
+    "page": "https://www.dongsung-pharm.com"
+  },
+  {
+    "key": "prime",
+    "names": [
+      "한국프라임제약"
+    ],
+    "page": "http://www.koreaprime.co.kr/"
+  },
+  {
+    "key": "jw-holdings",
+    "names": [
+      "jw홀딩스"
+    ],
+    "page": "https://www.jw-holdings.co.kr/holdings/ko/intro/ci.jsp"
+  },
+  {
+    "key": "bukwang",
+    "names": [
+      "부광약품"
+    ],
+    "page": "https://www.bukwang.co.kr"
+  },
+  {
+    "key": "icure",
+    "names": [
+      "아이큐어"
+    ],
+    "page": "https://www.icure.co.kr"
+  },
+  {
+    "key": "aju",
+    "names": [
+      "아주약품"
+    ],
+    "page": "https://www.ajupharm.co.kr"
+  },
+  {
+    "key": "young-science",
+    "names": [
+      "영사이언스"
+    ],
+    "page": "https://www.youngscience.com"
+  },
+  {
+    "key": "domino",
+    "names": [
+      "도미노코리아"
+    ],
+    "page": "https://www.domino-printing.com/ko-kr/home.aspx"
+  },
+  {
+    "key": "hanwha",
+    "names": [
+      "한화제약"
+    ],
+    "page": "https://www.hwpharm.com"
+  },
+  {
+    "key": "otsuka",
+    "names": [
+      "한국오츠카제약"
+    ],
+    "page": "https://www.otsuka.co.kr"
+  },
+  {
+    "key": "yu-young",
+    "names": [
+      "유영제약"
+    ],
+    "page": "https://www.yypharm.co.kr"
+  },
+  {
+    "key": "g2g",
+    "names": [
+      "G2G 바이오"
+    ],
+    "page": "https://www.g2gbio.com"
+  },
+  {
+    "key": "isu",
+    "names": [
+      "이수앱지스"
+    ],
+    "page": "https://www.abxis.com/kor/index.do"
+  },
+  {
+    "key": "woojung",
+    "names": [
+      "우정바이오",
+      "우정BSC"
+    ],
+    "page": "https://www.woojungbio.kr"
+  },
+  {
+    "key": "merck",
+    "names": [
+      "머크"
+    ],
+    "page": "https://www.merckgroup.com/kr-ko"
+  },
+  {
+    "key": "genuone",
+    "names": [
+      "제뉴원사이언스"
+    ],
+    "page": "https://www.genuonesciences.com"
+  },
+  {
+    "key": "eubiologics",
+    "names": [
+      "유바이오로직스"
+    ],
+    "page": "http://www.eubiologics.com/kor/"
+  },
+  {
+    "key": "shinpoong",
+    "names": [
+      "신풍제약"
+    ],
+    "page": "https://www.shinpoong.co.kr"
+  },
+  {
+    "key": "pharmbio",
+    "names": [
+      "한국팜비오"
+    ],
+    "page": "https://www.pharmbio.co.kr"
+  },
+  {
+    "key": "kukjeon",
+    "names": [
+      "국전약품"
+    ],
+    "page": "https://www.kukjeon.co.kr"
+  },
+  {
+    "key": "3m",
+    "names": [
+      "한국쓰리엠"
+    ],
+    "page": "https://www.3m.co.kr/3M/ko_KR/company-kr/"
+  },
+  {
+    "key": "amore",
+    "names": [
+      "아모레퍼시픽"
+    ],
+    "page": "https://www.apgroup.com/int/ko/"
+  },
+  {
+    "key": "roche",
+    "names": [
+      "한국로슈"
+    ],
+    "page": "https://www.roche.co.kr"
+  },
+  {
+    "key": "boston",
+    "names": [
+      "보스톤싸이언티픽"
+    ],
+    "page": "https://www.bostonscientific.com/ko-KR/home.html"
+  },
+  {
+    "key": "guju",
+    "names": [
+      "구주제약"
+    ],
+    "page": "https://www.guju.co.kr/e_product/list.php"
+  },
+  {
+    "key": "myungin",
+    "names": [
+      "명인제약"
+    ],
+    "page": "https://myunginph.co.kr/main/ko/index.html"
+  },
+  {
+    "key": "daewoong-bio",
+    "names": [
+      "대웅바이오"
+    ],
+    "page": "https://www.daewoongbio.co.kr"
+  },
+  {
+    "key": "dongwha",
+    "names": [
+      "동화약품"
+    ],
+    "page": "https://www.dong-wha.co.kr/dw_main.asp"
+  },
+  {
+    "key": "penmix",
+    "names": [
+      "펜믹스"
+    ],
+    "page": "http://www.penmix.co.kr"
+  },
+  {
+    "key": "eaglevet",
+    "names": [
+      "이글벳"
+    ],
+    "page": "https://www.eaglevet.com"
+  },
+  {
+    "key": "enzychem",
+    "names": [
+      "엔지켐생명과학"
+    ],
+    "page": "https://www.enzychem.co.kr"
+  },
+  {
+    "key": "snpg",
+    "names": [
+      "에스엔피제네틱스"
+    ],
+    "page": "https://www.snp-genetics.com"
+  },
+  {
+    "key": "mujin",
+    "names": [
+      "무진메디"
+    ],
+    "page": "https://www.moogene.com/"
+  },
+  {
+    "key": "prp-science",
+    "names": [
+      "피알피사이언스",
+      "피알피싸이언스"
+    ],
+    "page": "http://www.prpscience.co.kr"
+  },
+  {
+    "key": "celltasquare",
+    "names": [
+      "셀타스퀘어"
+    ],
+    "page": "https://seltaglobal.com/bbs/board.php?bo_table=0401_kr"
+  },
+  {
+    "key": "ysc",
+    "names": [
+      "연성정밀화학"
+    ],
+    "page": "http://www.yonsungchem.co.kr"
+  },
+  {
+    "key": "seowon",
+    "names": [
+      "서원엠에프지"
+    ],
+    "page": "http://www.seowonmfg.com"
+  },
+  {
+    "key": "optus",
+    "names": [
+      "옵투스제약"
+    ],
+    "page": "https://www.optuspharm.com"
+  },
+  {
+    "key": "fortnova",
+    "names": [
+      "포트노바"
+    ],
+    "page": "http://www.fortnova.co.kr/"
+  },
+  {
+    "key": "medystern",
+    "names": [
+      "메디스턴"
+    ],
+    "page": "https://www.medystern.com"
+  },
+  {
+    "key": "han-eol",
+    "names": [
+      "한얼이엔씨"
+    ],
+    "page": "http://www.haneng.net"
+  },
+  {
+    "key": "dk-consultants",
+    "names": [
+      "디케이컨설턴츠"
+    ],
+    "page": "http://www.dk-consultant.com"
+  },
+  {
+    "key": "boston-scientific",
+    "names": [
+      "보스톤싸이언티픽"
+    ],
+    "page": "https://www.bostonscientific.com/en-US/Home.html"
+  },
+  {
+    "key": "aprogen",
+    "names": [
+      "에이프로젠"
+    ],
+    "page": "https://aprogen.com/ko/v.do?a=Main"
+  },
+  {
+    "key": "aprogen-biologics",
+    "names": [
+      "에이프로젠바이오로직스"
+    ],
+    "page": "https://www.aprogen-biologics.com/"
+  },
+  {
+    "key": "theu",
+    "names": [
+      "더유제약"
+    ],
+    "page": "https://www.theupharma.com/"
+  },
+  {
+    "key": "mirae-cell",
+    "names": [
+      "미래셀바이오"
+    ],
+    "page": "http://miraecellbio.com/"
+  },
+  {
+    "key": "yoosung",
+    "names": [
+      "유성에프에스"
+    ],
+    "page": "http://www.yoosungfs.com/"
+  },
+  {
+    "key": "curable",
+    "names": [
+      "큐러블"
+    ],
+    "page": "http://www.curablent.com/"
+  },
+  {
+    "key": "anguk",
+    "names": [
+      "안국약품"
+    ],
+    "page": "https://www.ahn-gook.com/"
+  },
+  {
+    "key": "alico",
+    "names": [
+      "알리코제약"
+    ],
+    "page": "https://www.arlico.co.kr/"
+  },
+  {
+    "key": "myungmoon",
+    "names": [
+      "명문제약"
+    ],
+    "page": "https://www.mmpharm.co.kr/"
+  },
+  {
+    "key": "vivozon",
+    "names": [
+      "비보존제약"
+    ],
+    "page": "https://www.vivozonpharm.com/"
+  },
+  {
+    "key": "pan-gen",
+    "names": [
+      "팬젠"
+    ],
+    "page": "https://www.pangen.com/"
+  },
+  {
+    "key": "inventage",
+    "names": [
+      "인벤티지랩"
+    ],
+    "page": "https://www.inventagelab.com/"
+  },
+  {
+    "key": "cgbio",
+    "names": [
+      "CG바이오",
+      "시지바이오"
+    ],
+    "page": "https://www.cgbio.co.kr/"
+  },
+  {
+    "key": "anygen",
+    "names": [
+      "애니젠"
+    ],
+    "page": "http://www.anygen.com/"
+  },
+  {
+    "key": "inibio",
+    "names": [
+      "이니바이오"
+    ],
+    "page": "https://www.inibio.com/"
+  },
+  {
+    "key": "bmi",
+    "names": [
+      "한국BMI",
+      "한국비엠아이"
+    ],
+    "page": "https://www.bmikr.co.kr/"
+  },
+  {
+    "key": "daehan-new",
+    "names": [
+      "대한뉴팜"
+    ],
+    "page": "https://www.dhnp.co.kr/"
+  },
+  {
+    "key": "cellontech",
+    "names": [
+      "셀론텍"
+    ],
+    "page": "https://www.cellontech.com/"
+  },
+  {
+    "key": "organoid",
+    "names": [
+      "오가노이드사이언스"
+    ],
+    "page": "https://organoidrx.com/"
+  },
+  {
+    "key": "itchem",
+    "names": [
+      "아이티켐"
+    ],
+    "page": "https://www.itchem.co.kr/"
+  },
+  {
+    "key": "kolon",
+    "names": [
+      "코오롱제약"
+    ],
+    "page": "https://www.kolonpharm.co.kr/"
+  },
+  {
+    "key": "shinil",
+    "names": [
+      "신일제약"
+    ],
+    "page": "https://www.sinilpharm.com/"
+  },
+  {
+    "key": "samsung-pharm",
+    "names": [
+      "삼성제약"
+    ],
+    "page": "https://www.sspharm.co.kr/"
+  },
+  {
+    "key": "curatis",
+    "names": [
+      "큐라티스"
+    ],
+    "page": "https://www.quratis.com/"
+  },
+  {
+    "key": "komipharm",
+    "names": [
+      "코미팜"
+    ],
+    "page": "https://www.komipharm.co.kr/"
+  },
+  {
+    "key": "dsmbio",
+    "names": [
+      "대성미생물"
+    ],
+    "page": "http://www.dsmbio.com/"
+  },
+  {
+    "key": "osstem",
+    "names": [
+      "오스템파마"
+    ],
+    "page": "https://www.osstempharma.com/"
+  },
+  {
+    "key": "genetox",
+    "names": [
+      "제네톡스"
+    ],
+    "page": "https://www.genetox.co.kr/"
+  },
+  {
+    "key": "cellumed",
+    "names": [
+      "셀루메드"
+    ],
+    "page": "https://www.cellumed.co.kr/"
+  },
+  {
+    "key": "glpharma",
+    "names": [
+      "지엘파마"
+    ],
+    "page": "https://www.gl-pharma.co.kr/"
+  },
+  {
+    "key": "enterobiome",
+    "names": [
+      "엔테로바이옴"
+    ],
+    "page": "https://www.enterobiome.co.kr/"
+  },
+  {
+    "key": "sk-ecoplant",
+    "names": [
+      "SK에코플랜트"
+    ],
+    "page": "https://www.skecoplant.com/"
+  },
+  {
+    "key": "sama",
+    "names": [
+      "삼아제약"
+    ],
+    "page": "https://www.samapharm.co.kr/"
+  },
+  {
+    "key": "jw-shinyak",
+    "names": [
+      "JW중외신약"
+    ],
+    "page": "https://www.jw-shinyak.co.kr/"
+  },
+  {
+    "key": "quantamatrix",
+    "names": [
+      "퀀타매트릭스"
+    ],
+    "page": "https://www.quantamatrix.com/"
+  },
+  {
+    "key": "genoss",
+    "names": [
+      "제노스"
+    ],
+    "page": "https://www.genoss.com/"
+  },
+  {
+    "key": "sunjin",
+    "names": [
+      "선진뷰티사이언스"
+    ],
+    "page": "https://www.sunjinbs.com/"
+  },
+  {
+    "key": "quadmedicine",
+    "names": [
+      "쿼드메디슨"
+    ],
+    "page": "https://www.quadmedicine.com/"
+  },
+  {
+    "key": "hwail",
+    "names": [
+      "화일약품"
+    ],
+    "page": "https://www.hwail.com/"
+  },
+  {
+    "key": "caregen",
+    "names": [
+      "케어젠"
+    ],
+    "page": "https://www.caregen.co.kr/"
+  },
+  {
+    "key": "dongkook-life",
+    "names": [
+      "동국생명과학"
+    ],
+    "page": "https://www.dkls.co.kr/"
+  },
+  {
+    "key": "youngil",
+    "names": [
+      "영일제약"
+    ],
+    "page": "http://www.youngilpharm.co.kr/"
+  },
+  {
+    "key": "genu-pharm",
+    "names": [
+      "제뉴파마"
+    ],
+    "page": "https://www.genupharm.com/"
+  },
+  {
+    "key": "jaseng",
+    "names": [
+      "자생한방병원"
+    ],
+    "page": "https://www.jaseng.co.kr/"
+  },
+  {
+    "key": "kgc",
+    "names": [
+      "인삼공사"
+    ],
+    "page": "https://www.kgc.co.kr/"
+  },
+  {
+    "key": "samnam",
+    "names": [
+      "삼남제약"
+    ],
+    "page": "http://www.samnam.com/"
+  },
+  {
+    "key": "nexpharm",
+    "names": [
+      "넥스팜코리아"
+    ],
+    "page": "http://www.nexpharm.co.kr/"
+  },
+  {
+    "key": "qbest",
+    "names": [
+      "큐베스트바이오"
+    ],
+    "page": "https://www.qbestbio.com/"
+  },
+  {
+    "key": "cosmax-bio",
+    "names": [
+      "코스맥스바이오"
+    ],
+    "page": "https://www.cosmaxbio.com/"
+  },
+  {
+    "key": "hana",
+    "names": [
+      "하나제약"
+    ],
+    "page": "https://www.hanaph.co.kr/"
+  },
+  {
+    "key": "endoderma",
+    "names": [
+      "엔도더마"
+    ],
+    "page": "https://www.endoderma.com/"
+  },
+  {
+    "key": "celltrion-pharm",
+    "names": [
+      "셀트리온제약"
+    ],
+    "page": "https://www.celltrionph.com/"
+  },
+  {
+    "key": "sgmedical",
+    "names": [
+      "SG 메디칼"
+    ],
+    "page": "https://www.sgmedical.co.kr/"
+  },
+  {
+    "key": "bascane",
+    "names": [
+      "바스칸바이오제약"
+    ],
+    "page": "https://www.bascane.com/"
+  },
+  {
+    "key": "withus",
+    "names": [
+      "위더스제약"
+    ],
+    "page": "https://www.withuspharm.com/"
+  },
+  {
+    "key": "hpnc",
+    "names": [
+      "에이치피앤씨"
+    ],
+    "page": "https://www.hpnc.co.kr/"
+  },
+  {
+    "key": "dermafirm",
+    "names": [
+      "더마펌"
+    ],
+    "page": "https://www.dermafirm.com/"
+  },
+  {
+    "key": "mirae-pharm",
+    "names": [
+      "미래제약"
+    ],
+    "page": "https://www.mirae-pharma.com/"
+  },
+  {
+    "key": "hanmi-fine",
+    "names": [
+      "한미정밀화학"
+    ],
+    "page": "https://www.hanmifc.co.kr/"
+  },
+  {
+    "key": "firson",
+    "names": [
+      "퍼슨"
+    ],
+    "page": "https://www.firson.co.kr/"
+  },
+  {
+    "key": "srtechnopack",
+    "names": [
+      "SR테크노팩"
+    ],
+    "page": "https://www.srtechno.co.kr/"
+  },
+  {
+    "key": "hitechpharm",
+    "names": [
+      "하이텍팜"
+    ],
+    "page": "https://www.htpharm.com/"
+  },
+  {
+    "key": "woogene",
+    "names": [
+      "우진비앤지"
+    ],
+    "page": "https://www.woogenebng.com/"
+  },
+  {
+    "key": "jin-yang",
+    "names": [
+      "진양제약"
+    ],
+    "page": "https://www.jinyangpharm.com/"
+  },
+  {
+    "key": "cellbion",
+    "names": [
+      "셀비온"
+    ],
+    "page": "https://www.cellbion.co.kr/"
+  },
+  {
+    "key": "across",
+    "names": [
+      "아크로스"
+    ],
+    "page": "https://www.across.co.kr/"
+  },
+  {
+    "key": "korus",
+    "names": [
+      "코러스"
+    ],
+    "page": "https://www.koruspharm.co.kr/"
+  },
+  {
+    "key": "kookje",
+    "names": [
+      "국제약품"
+    ],
+    "page": "https://www.kukjepharm.co.kr/"
+  },
+  {
+    "key": "chameditech",
+    "names": [
+      "차메디텍"
+    ],
+    "page": "https://www.chameditech.com/"
+  },
+  {
+    "key": "apvs",
+    "names": [
+      "에이피브이에스"
+    ],
+    "page": "https://www.apvs.co.kr/"
+  },
+  {
+    "key": "prostemics",
+    "names": [
+      "프로스테믹스"
+    ],
+    "page": "https://www.prostemics.com/"
+  },
+  {
+    "key": "mediinfra",
+    "names": [
+      "메디인프라"
+    ],
+    "page": "https://www.ahealthzcare.com/"
+  },
+  {
+    "key": "lg-life-historical",
+    "names": [
+      "LG생명과학"
+    ],
+    "page": "https://chem.ulsan.ac.kr/chem/1749"
+  },
+  {
+    "key": "cj-health-historical",
+    "names": [
+      "CJ헬스케어"
+    ],
+    "page": "https://www.khanews.com/news/articleView.html?idxno=99565"
+  }
+]

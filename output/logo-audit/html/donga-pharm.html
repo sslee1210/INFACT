@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<title>동아제약 | 합병 및 사명 변경 안내</title>
+<style type="text/css">
+/* =========================================================
+   RESET
+========================================================= */
+*, *::before, *::after {box-sizing: border-box;}
+html, body {margin: 0; padding: 0; width: 100%; min-height: 100%; background: #FFFFFF;}
+body {font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR', '맑은 고딕', sans-serif; color: #242020; word-break: keep-all; -webkit-font-smoothing: antialiased;}
+a {color: inherit; text-decoration: none;}
+img {display: block; max-width: 100%;}
+/* =========================================================
+   ANIMATION
+========================================================= */
+@keyframes enter {
+    from {opacity: 0; transform: translateY(12px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+/* =========================================================
+   LAYOUT
+========================================================= */
+.landing {position: relative; width: 100%; min-height: 100vh; display: grid; grid-template-columns: 1.2fr 1fr; overflow: hidden; background: #FFFFFF;}
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+.landing-info {position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 56px; padding:72px clamp(32px, 5vw, 80px) 64px; overflow: hidden;}
+.landing-main {position: relative; z-index: 1;}
+.landing-logo {margin-bottom: 64px;}
+.landing-logo img {display: block; width: auto; height: 34px;}
+/* 배경 그라데이션 */
+.landing-info::before {content: ''; position: absolute; top: -25%; left: -15%; width: 900px; height: 900px; background: radial-gradient(ellipse at center, rgba(248, 232, 231, 0.86) 0%, rgba(253, 252, 252, 0) 68%); pointer-events: none;}
+.landing-content {position: relative; z-index: 1; animation: enter 1.5s cubic-bezier(.2, .7, .3, 1) both;}
+.landing-intro {margin: 0; font-size: 20px; line-height: 1.7; letter-spacing: -0.01em;}
+.landing-title {margin: 16px 0 0; font-size: clamp(46px, 4.1vw, 62px); font-weight: 800; line-height: 1.28; letter-spacing: -0.045em;}
+.landing-title em {color: #CF655E; font-style: normal;}
+.landing-subtitle {margin: 22px 0 0; color: #CF655E; font-size: 20px; font-weight: 600; line-height: 1.7; letter-spacing: -0.02em;}
+.landing-description {max-width: 520px; margin: 32px 0 0; font-size: 19px; line-height: 1.85; letter-spacing: -0.01em;}
+.landing-description strong {font-weight: 600;}
+.landing-notice {margin: 34px 0 0; font-size: 16px; line-height: 1.7; letter-spacing: -0.01em;}
+.landing-notice b {font-weight: 600;}
+/* =========================================================
+   LEFT BOTTOM
+========================================================= */
+.landing-footer {position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 18px;}
+.landing-footer-text {font-size: 16px; line-height: 1.7; letter-spacing: -0.01em;}
+.notice-link {flex: none; display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border: 1px solid #D7D3D3; font-size: 16px; font-weight: 600; letter-spacing: -0.02em; transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;}
+.notice-link img {width: 18px; height: 18px; flex: none;}
+.notice-link:hover { background: rgba(207, 101, 94, 0.08); border-color: #CF655E;}
+/* =========================================================
+   RIGHT GATE
+========================================================= */
+.landing-gates {position: relative; display: grid; grid-template-rows: 1fr 1fr; border-left: 1px solid #D7D3D3; overflow: hidden;}
+.gate {position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 18px; padding: 56px clamp(28px, 3.5vw, 52px); background-repeat: no-repeat; background-position: center; background-size: cover; overflow: hidden;}
+.gate-business {background-image: url('/img/img_business.jpg');}
+.gate-holding {background-image: url('/img/img_holding.jpg');}
+.gate:first-child {border-bottom: 1px solid #D7D3D3;}
+.gate::before {content: ''; position: absolute; inset: 0; z-index: 0; transition: background-color 0.3s ease;}
+.gate > * {position: relative; z-index: 1;}
+.gate-icon {width: 64px; height: 64px; transition: filter 0.3s ease, transform 0.3s ease;}
+.gate-title {display: block; font-size: clamp(32px, 2.5vw, 38px); font-weight: 800; letter-spacing: -0.04em; transition: color 0.3s ease;}
+.gate-description {display: block; max-width: 400px; font-size: 18px; line-height: 1.65; letter-spacing: -0.01em; transition: color 0.3s ease;}
+.gate:hover::before {background: rgba(207, 101, 94, 0.90);}
+.gate:hover .gate-title, .gate:hover .gate-description {color: #FFFFFF;}
+.gate:hover .gate-icon {filter: brightness(0) invert(1); transform: translate(4px, -4px);}
+/* =========================================================
+   TABLET / SMALL PC
+   769px 이상은 PC 레이아웃 유지하되
+   좁아질수록 간격과 폰트 자동 축소
+========================================================= */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .landing {grid-template-columns: 1.1fr 0.9fr;}
+    .landing-info {gap: 40px; padding: 48px 40px 42px;}
+    .landing-title {font-size: 44px;}
+    .landing-intro, .landing-subtitle {font-size: 18px;}
+    .landing-description {max-width: 470px; font-size: 17px; line-height: 1.75;}
+    .gate {padding: 40px 34px;}
+    .gate-icon {width: 52px; height: 52px;}
+    .gate-title {font-size: 32px;}
+    .gate-description {font-size: 16px;}
+}
+/* =========================================================
+   MOBILE
+   768px 이하
+========================================================= */
+@media (max-width: 768px) {
+    html, body {min-height: 100%;}
+    .landing {display: block; min-height: auto; overflow: visible;}
+    /* LEFT */
+    .landing-info {display: block; padding: 48px 24px 36px; overflow: hidden;}
+    .landing-info::before {top: -180px; left: -280px; width: 700px; height: 700px;}
+    .landing-logo {margin-bottom: 48px;}
+    .landing-logo img {height: 28px;}
+    .landing-content {animation-duration: 0.55s;}
+    .landing-intro {font-size: 16px; line-height: 1.65;}
+    .landing-title {margin-top: 14px; font-size: clamp(36px, 10vw, 46px); line-height: 1.25; letter-spacing: -0.045em;}
+    .landing-subtitle {margin-top: 18px; font-size: 17px; line-height: 1.6;}
+    .landing-description {max-width: none; margin-top: 26px; font-size: 16px; line-height: 1.8;}
+    .landing-notice {margin-top: 26px; font-size: 14px; line-height: 1.65;}
+    /* BOTTOM INFO */
+    .landing-footer {display: block; margin-top: 42px;}
+    .landing-footer-text {display: block; font-size: 14px; line-height: 1.7;}
+    .notice-link {width: 100%; justify-content: space-between; margin-top: 18px; padding: 14px 16px; font-size: 15px;}
+    /* RIGHT → 아래로 배치 */
+    .landing-gates {display: block; border-top: 1px solid #D7D3D3; border-left: 0;}
+    .gate {min-height: 240px; gap: 14px; padding: 36px 24px;}
+    .gate:first-child {border-bottom: 1px solid #D7D3D3;}
+    .gate-icon {width: 46px; height: 46px;}
+    .gate-title {font-size: 30px;}
+    .gate-description {font-size: 16px; line-height: 1.6;}
+    .gate:hover::before {background: rgba(255, 255, 255, 0.72);}
+    .gate:hover .gate-title, .gate:hover .gate-description {color: #242020;}
+    .gate:hover .gate-icon {filter: none; transform: none;}
+    .gate:active::before {background: rgba(207, 101, 94, 0.90);}
+    .gate:active .gate-title, .gate:active .gate-description {color: #FFFFFF;}
+    .gate:active .gate-icon {filter: brightness(0) invert(1);}
+}
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 420px) {
+    .landing-info {padding: 40px 20px 32px;}
+    .landing-title {font-size: 36px;}
+    .landing-subtitle {font-size: 16px;}
+    .landing-description {font-size: 15px;}
+    .gate {min-height: 220px; padding: 32px 20px;}
+    .gate-title {font-size: 28px;}
+    .gate-description {font-size: 15px;}
+}
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {animation: none !important; transition: none !important; scroll-behavior: auto !important;}
+}
+</style>
+</head>
+<body>
+<main class="landing">
+    <!-- LEFT -->
+    <section class="landing-info">
+    	<div class="landing-main">
+			<div class="landing-logo"><img src="/img/logo_color.png" alt="동아제약"></div>
+			<div class="landing-content">
+	            <p class="landing-intro">동아쏘시오홀딩스는 2026년 10월 1일,<br>자회사인 동아제약(주)을 흡수합병합니다.</p>
+	            <h1 class="landing-title">사명을 <em>동아제약</em>으로<br>변경합니다</h1>
+	            <p class="landing-subtitle">사업형 지주회사로서 새로운 도약을 준비하겠습니다.</p>
+	            <p class="landing-description">
+	                합병 이후 동아제약은 그룹 전체를 아우르는
+	                <strong>지주기능</strong>과,
+	                컨슈머 헬스케어 사업을 담당하는
+	                <strong>사업기능</strong>으로 나누어 운영됩니다.
+	                오른쪽에서 원하시는 기능을 선택해 주세요.
+	            </p>
+	            <p class="landing-notice">지주기능과 사업기능의 <b>통합 홈페이지</b>는 곧 만나보실 수 있습니다.</p>
+	        </div>
+    	</div>
+        <div class="landing-footer">
+            <span class="landing-footer-text">공고 등과 관련된 사항은 지주기능 재무정보에서 확인하실 수 있습니다.</span>
+            <a href="https://www.donga.co.kr/investment/notice" class="notice-link" aria-label="공고페이지 바로가기">
+                <span>공고페이지 바로가기</span>
+                <img src="/img/icon-arrow.svg" alt="우측대각선 화살표" aria-hidden="true">
+            </a>
+        </div>
+    </section>
+    <!-- RIGHT -->
+    <nav class="landing-gates" aria-label="홈페이지 기능 선택">
+        <!-- 사업기능 -->
+        <a href="https://www.dapharm.com/ko/main" class="gate gate-business" aria-label="사업기능 홈페이지 바로가기">
+            <img src="/img/icon-arrow.svg" class="gate-icon" alt="우측대각선 화살표" aria-hidden="true">
+            <span class="gate-title">사업기능</span>
+            <span class="gate-description">컨슈머 헬스케어 제품과 브랜드,<br>고객 서비스를 만나보실 수 있습니다.</span>
+        </a>
+        <!-- 지주기능 -->
+        <a href="https://www.donga.co.kr/main/main" class="gate gate-holding" aria-label="지주기능 홈페이지 바로가기">
+            <img src="/img/icon-arrow.svg" class="gate-icon" alt="우측대각선 화살표" aria-hidden="true">
+            <span class="gate-title">지주기능</span>
+            <span class="gate-description">그룹 지배구조, 경영이념, 계열사 현황과<br>IR정보를 확인하실 수 있습니다.</span>
+        </a>
+    </nav>
+</main>
+</body>
+</html>

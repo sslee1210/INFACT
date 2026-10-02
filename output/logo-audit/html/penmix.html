@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10">
+<!--[if lte IE 8]>
+<script src="http://www.penmix.co.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "http://www.penmix.co.kr";
+var g5_bbs_url   = "http://www.penmix.co.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="http://www.penmix.co.kr/js/jquery-1.8.3.min.js"></script>
+<script src="http://www.penmix.co.kr/js/jquery.menu.js?ver=171222"></script>
+<script src="http://www.penmix.co.kr/js/common.js?ver=171222"></script>
+<script src="http://www.penmix.co.kr/js/wrest.js?ver=171222"></script>
+<script src="http://www.penmix.co.kr/js/placeholders.min.js"></script>
+<link rel="stylesheet" href="http://www.penmix.co.kr/js/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript" src="/js/mobile.js"></script>
+<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="/js/jquery.superscrollorama.js"></script>
+<script type="text/javascript" src="/js/chosen.jquery.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/common.css" type="text/css">
+<link rel="stylesheet" href="/css/main1.css" type="text/css">
+<link rel="stylesheet" type="text/css"href="/css/mobile.css" />
+<link rel="stylesheet" type="text/css"href="/css/chosen.css" />
+<title>PENMIX</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131407767-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131407767-1');
+</script>
+</head>
+<body >
+<div id="skipnavi">
+	<ul>
+		<li><a href="#sub_container">본문 바로가기</a></li>
+		<li><a href="#container">본문 바로가기</a></li>
+		<li><a href="#topmenu">주메뉴 바로가기</a></li>
+		<li><a href="#footer">하단정보 바로가기</a></li>
+	</ul>
+</div>	
+	<div id="header">
+
+<!-- 팝업레이어 시작 { -->
+<div id="hd_pop">
+    <h2>팝업레이어 알림</h2>
+
+</div>
+
+<script>
+$(function() {
+    $(".hd_pops_reject").click(function() {
+        var id = $(this).attr('class').split(' ');
+        var ck_name = id[1];
+        var exp_time = parseInt(id[2]);
+        $("#"+id[1]).css("display", "none");
+        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+    });
+    $('.hd_pops_close').click(function() {
+        var idb = $(this).attr('class').split(' ');
+        $('#'+idb[1]).css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+});
+</script>
+<!-- } 팝업레이어 끝 -->
+	  <div id="header_wrap">
+           <h1 id="header_logo"><a href="./index.php"><img src="../images/logo_01.png" alt="PENMIX"></a></h1>
+		   <!--------------------------네비게이션---------------------->
+		   <div id="header_nav">
+			 <div class="gnb_cont">
+				  <div id="nav_bar"></div><!--네비게이션바-->
+				  <ul class="gnb">
+					<li class="menu menu1"><a href="./cdmo/cdmo011.php">CDMO</a></li>
+					<li class="menu menu2"><a href="./about/ceo.php">About US</a></li>
+					<li class="menu menu3"><a href="./recruitment/recruitment01.php">Careers</a></li>
+					<li class="menu menu4"><a href="./client/contact.php">Contact</a></li>
+				   </ul>
+			   </div>
+			</div>
+			<!--------------------------end---------------------->
+			<div id="header_right_lang">
+				<ul id="header_right_nav">
+					<li><a href="javascript:;">SITEMAP</a></li>
+				</ul>
+				<div class="leng_selt"><!-------------------------- 셀렉트 박스------------------------->
+					<select onchange="window.open(value,'_self');" class="chosen-select">
+						<option selected="LANGUAGE" style="display:none;">LANGUAGE</option>
+						<option value="./index.php">KOREAN</option>
+						<option value="/eng/index.php">ENGLISH</option>
+					</select>
+				</div>
+			</div>
+	  </div>
+	
+	  <div id="nav_list" style="background:rgba(255,255,255,0.9); color:white;">
+		<div class="dep_inner">
+			<div class="dep_lists dep_lists1">
+				<div class="dep_top">
+					<dl>
+						<dt>사업소개</dt>
+						<dd><a href="./cdmo/cdmo011.php">CDMO소개</a></dd>
+						<dd><a href="./cdmo/current-situation.php">CDMO현황</a></dd>
+						<dd><a href="./cdmo/cdmo033.php">제공서비스</a></dd>
+					</dl>
+					<dl>
+						<dt>PRODUCTS</dt>
+						<dd><a href="/bbs/board.php?bo_table=product&sca=페니실린">페니실린</a></dd>
+						<dd><a href="./bbs/board.php?bo_table=product&sca=주사제">주사제</a></dd>
+						<dd><a href="/bbs/board.php?bo_table=permission">허가변경사항</a></dd>
+					</dl>
+					<dl>
+						<dt>R&D</dt>
+						<dd><a href="./cdmo/development.php">소개</a></dd>
+						<dd><a href="./cdmo/development-service.php">연구개발 서비스</a></dd>
+						<dd><a href="./cdmo/development-skill.php">핵심기술</a></dd>
+					</dl>
+					<dl>
+						<dt>PLANTS</dt>
+						<dd><a href="./cdmo/syringe.php">페니실린공장</a></dd>
+						<dd><a href="./cdmo/annual-production-capacity.php">일반주사제공장</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="dep_lists dep_lists2 clear_g">
+				<ul class="clear_g about_lists">
+					<li><a href="./about/ceo.php">CEO 인사말</a></li>
+					<li><a href="./about/about_penmix.php">About Penmix</a></li>
+					<li><a href="./about/history.php">회사연혁</a></li>
+					<li><a href="./about/organization.php">조직도</a></li>
+					<li><a href="./about/affiliate.php">관계사</a></li>
+					<li><a href="/bbs/board.php?bo_table=news">새소식</a></li>
+				</ul>
+			</div>
+			<div class="dep_lists dep_lists3">
+				<ul class="clear_g careers_lists">
+					<li><a href="./recruitment/recruitment01.php">인재상</a></li>
+					<li><a href="./recruitment/talented.php">인사제도</a></li>
+					<li><a href="./recruitment/procedure.php">채용절차</a></li>
+					<li><a href="https://kuhnil.ninehire.site/" target="_blank">채용공지</a></li>
+					<li><a href="http://www.penmix.co.kr/bbs/board.php?bo_table=notice&wr_id=12">입사지원</a></li>
+				</ul>
+			</div>
+			<div class="dep_lists dep_lists4 clear_g">
+				<ul class="clear_g contact_lists">
+					<li><a href="./client/contact.php">연락처</a></li>
+					<li><a href="./client/location.php">오시는길</a></li>
+					<li><a href="/bbs/faq.php?fm_id=1">FAQ</a></li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-------------------------- 모바일용 메뉴 ------------------------->
+	<div class="nav_btn"><!--모바일 버튼-->
+		<a href="javascript:;" class="btn_nav2 open"><img src="./images/main/btn_nav.png" alt="네비 버튼"></a>
+	</div>
+	<div class="all_menu2" id="scroller">
+		<div>
+			<div class="mobild_leng_box">
+				<span class="mobile_leng">LANGUAGE</span>
+				<ul class="util_nav clear_g">
+					<li><a href="/eng/index.php">- ENGLISH</a></li>
+				</ul>
+			</div>
+			<ul class="all_menu2_con cl">
+				<li>
+				<a href='javascript:;'>CDMO</a>
+					<ul class="menu_sub">
+						<li>
+							<a href="javascript:;">사업소개</a>
+							<ul class="mobile_dep">
+								<li><a href="./cdmo/cdmo011.php">CDMO소개</a></li>
+								<li><a href="./cdmo/current-situation.php">CDMO현황</a></li>
+								<li>
+									<a href="javascript:;" class="dep_link">제공서비스 <img src="./images/sub/mobild_dep_icon.jpg" alt="" class="dep_icon"></a>
+									<ul class="mobile_dep2">
+										<li><a href="./cdmo/cdmo033.php">제공서비스</a></li>
+										<li><a href="./cdmo/cdmo033-1.php">제품</a></li>
+										<li><a href="./cdmo/cdmo033-2.php">제조공정</a></li>
+										<li><a href="./cdmo/cdmo033-3.php">연구/개발</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">제품</a>
+							<ul class="mobile_dep">
+								<li><a href="/bbs/board.php?bo_table=product&sca=페니실린">페니실린</a></li>
+								<li><a href="./bbs/board.php?bo_table=product&sca=주사제">주사제</a></li>
+								<li><a href="/bbs/board.php?bo_table=permission">허가변경사항</a></li>
+							</ul>	
+						</li>
+						<li>
+							<a href="javascript:;">연구개발</a>
+							<ul class="mobile_dep">
+								<li><a href="./cdmo/development.php">소개</a></li>
+								<li><a href="./cdmo/development-service.php">연구개발서비스</a></li>
+								<li><a href="./cdmo/development-skill.php">핵심기술</a></li>
+							</ul>	
+						</li>
+						<li>
+							<a href="javascript:;">제조공정</a>
+							<ul class="mobile_dep">
+								<li>
+									<a href="javascript:;" class="dep_link">패니실린공장<img src="./images/sub/mobild_dep_icon.jpg" alt="" class="dep_icon"></a>
+									<ul class="mobile_dep2">
+										<li><a href="./cdmo/syringe.php">Annual production Capacity</a></li>
+										<li><a href="./cdmo/penicillin01-facilities.php">제형별 설비</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;" class="dep_link">주사제 공장<img src="./images/sub/mobild_dep_icon.jpg" alt="" class="dep_icon"></a>
+									<ul class="mobile_dep2">
+										<li><a href="./cdmo/annual-production-capacity.php">Annual production Capacity</a></li>
+										<li><a href="./cdmo/injection01-facilities.php">제형별 설비</a></li>
+									</ul>	
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+				<a href='javascript:;'>About us</a>
+					<ul class="menu_sub">
+						<li><a href="./about/ceo.php">CEO 인사말</a></li>
+						<li><a href="./about/about_penmix.php">About Penmix</a></li>
+						<li><a href="./about/history.php">회사연혁</a></li>
+						<li><a href="./about/organization.php">조직도</a></li>
+						<li><a href="./about/affiliate.php">관계사</a></li>
+						<li><a href="/bbs/board.php?bo_table=news">새소식</a></li>
+					</ul>
+				</li>
+				<li>
+				<a href='javascript:;'>Careers</a>
+					<ul class="menu_sub">
+						<li><a href="./recruitment/recruitment01.php">인재상</a></li>
+						<li><a href="./recruitment/talented.php">인사제도</a></li>
+						<li><a href="./recruitment/procedure.php">채용절차</a></li>
+						<li><a href="https://kuhnil.ninehire.site/" target="_blank">채용공지</a></li>
+						<li><a href="http://www.penmix.co.kr/bbs/board.php?bo_table=notice&wr_id=12">입사지원</a></li>
+					</ul>
+				</li>
+				<li>
+				<a href='./support/support01.php'>Contact</a>
+					<ul class="menu_sub">
+						<li><a href="./client/contact.php">연락처</a></li>
+						<li><a href="./client/location.php">오시는길</a></li>
+						<li><a href="/bbs/faq.php?fm_id=1">FAQ</a></li>
+					</ul>
+				</li>
+			</ul><!--// all_menu2_con -->
+		</div>
+	</div><!--// all_menu2 -->
+	<!--------------------------end---------------------->
+
+
+
+	<div class="site_wrap">
+		<div class="site_cont">
+			<a href="javascript:;" class="site_close">X</a>
+			<h2>사이트맵</h2>
+			<h3>CDMO</h3>
+			<ul class="site_lists first_site">
+				<li>
+					<dl class="site_dep common_lists02">
+						<dt>사업소개</dt>
+						<dd><a href="./cdmo/cdmo011.php">CDMO소개</a></dd>
+						<dd><a href="./cdmo/current-situation.php">CDMO현황</a></dd>
+						<dd><a href="javascript:;" class="dep_icon">제공서비스<img src="./images/sub/site_icon.jpg" alt="" class="site_icon"></a>
+							<ul class="site_dep2">
+								<li><a href="./cdmo/cdmo033-1.php">제품</a></li>
+								<li><a href="./cdmo/cdmo033-2.php">제조공정</a></li>
+								<li><a href="./cdmo/cdmo033-3.php">연구/개발</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="site_dep  common_lists02">
+						<dt>제품</dt>
+						<dd><a href="/bbs/board.php?bo_table=product&sca=페니실린">페니실린</a></dd>
+						<dd><a href="./bbs/board.php?bo_table=product&sca=주사제">주사제</a></dd>
+						<dd><a href="/bbs/board.php?bo_table=permission">허가변경사항</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="site_dep common_lists02">
+						<dt>연구개발</dt>
+						<dd><a href="./cdmo/development.php">소개</a></dd>
+						<dd><a href="./cdmo/development-service.php">연구개발서비스</a></dd>
+						<dd><a href="./cdmo/development-skill.php">핵심기술</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl class="site_dep  common_lists02">
+						<dt>제조공정</dt>
+						<dd>
+							<a href="javascript:;" class="dep_icon">페니실린공장<img src="./images/sub/site_icon.jpg" alt="" class="site_icon"></a>
+							<ul class="site_dep2">
+								<li><a href="./cdmo/syringe.php">Annual production Capacity</a></li>
+								<li><a href="./cdmo/penicillin01-facilities.php">제형별설비</a></li>
+							</ul>
+						</dd>
+						<dd>
+							<a href="javascript:;" class="dep_icon">주사제 공장<img src="./images/sub/site_icon.jpg" alt="" class="site_icon"></a>
+							<ul class="site_dep2">
+								<li><a href="./cdmo/annual-production-capacity.php">Annual production Capacity</a></li>
+								<li><a href="./cdmo/injection01-facilities.php">제형별설비</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+			<h3>About US</h3>
+			<ul class="site_lists">
+				<li><a href="./about/ceo.php">CEO 인사말</a></li>
+				<li><a href="./about/about_penmix.php">About Penmix</a></li>
+				<li><a href="./about/history.php">회사연혁</a></li>
+				<li><a href="./about/organization.php">조직도</a></li>
+				<li><a href="./about/affiliate.php">관계사</a></li>
+				<li><a href="/bbs/board.php?bo_table=news">새소식</a></li>
+			</ul>
+			<h3>Careers</h3>
+			<ul class="site_lists">
+				<li><a href="./recruitment/recruitment01.php">인재상</a></li>
+				<li><a href="./recruitment/talented.php">인사제도</a></li>
+				<li><a href="./recruitment/procedure.php">채용절차</a></li>
+				<li><a href="https://kuhnil.ninehire.site/" target="_blank">채용공지</a></li>
+				<li><a href="http://www.penmix.co.kr/bbs/board.php?bo_table=notice&wr_id=12">입사지원</a></li>
+			</ul>
+			<h3>Contact</h3>
+			<ul class="site_lists">
+				<li><a href="./client/contact.php">연락처</a></li>
+				<li><a href="./client/location.php">오시는길</a></li>
+				<li><a href="/bbs/faq.php?fm_id=1">FAQ</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<ul class="quick_lists">
+		<li><a href="./file/CMO_LIST01.pdf" target="_blank">CMO품목<br/>리스트</a><span class="quick_top">TOP</span><span class="quick_close">X</span></li>
+	</ul>
+
+
+<style>
+.popup_box{position:absolute; max-width:1196px; height:100%; margin:0 auto; left:213px; top:68px; z-index:99999;}
+.popup_cont{z-index:30000; width:500px;height:520px; position:absolute; left:0%; top:40px; border: 1px solid #ccc; background:#fff; display:non;}
+.popup_cont p {}
+.close_box{padding-right:10px; text-align:right; font-size:12px; color:#ffffff; background:#333;}
+.close_popup{cursor:pointer;}
+.close_cont{display:block; height:25px; padding:5px 10px 0 0 ; text-align:right; border-bottom:1px solid #ccc;}
+.close_cont img{cursor:pointer;}
+.popup_img{vertical-align:bottom;}
+.popup_24{position:relative; text-align:right; padding:9px; background:#fff; font-size:13px;}
+.popup_text{position: static; height:32px; padding:15px; background:#fff; border-bottom:1px solid #ddd;}
+.colse_text{cursor:pointer;}
+.inner1200 {max-width:1200px;}
+.sec01btn {display:inline-block; width:88px; height:27px; border-radius:5px; font-weight:bold; color:#fff; border:solid 1px #fff; line-height:27px; text-align:center; margin-top:9px; margin-right:4px;}
+.sec01btn:hover {color:#ed7935; background-color:#fff;}
+.pc_popup {max-width:inherit !important;}
+@media screen and (max-width: 768px) {
+.popup_box {display:block; width:auto !important;}
+.popup_cont {width:100% !important;}
+.popup_box {left:5%; right:5%;}
+.popup_24 {font-size:12px;}
+.pc_popup {max-width:100% !important;}
+.popup_cont {height:auto;}
+}
+</style>
+<div class="popup_box">
+	<div id="showimage" class="popup_cont">
+		 <div summary="팝업창" id="popup">
+			<a href="http://penm.winko.net/bbs/board.php?bo_table=news&wr_id=31" target="_blank"><img src="./images/main/pop01_kr.jpg" alt="" class="popup_img pc_popup"></a>
+			<p class="popup_24"><a class="colse_text"> [close]</a></p>
+		 </div>
+	</div>
+</div>
+<script>
+     $(function(){
+         $(".colse_text").click(function() {
+             $('.popup_box').css('display','none');
+         });
+     });
+</script>
+
+
+
+
+<div id="container">
+	<!------------------------------------------------메인 슬라이드--------------------------------------->
+	<div class="visual">
+		<ul class="visual_act">
+			<!-- -->
+			<li style="background:url('./images/main/re3_img033.jpg') 50% 50% no-repeat; background-size:cover;">
+				<a href="./cdmo/cdmo011.php">
+					<div class="vi_wrap">
+						<div class="vi_inner">
+							<h3>CDMO</h3>
+							<p>한국 제약산업의 세계화와 우수약품 개발이라는<br/>목표를 향해 쉼 없이 노력하는 국내 최대 CDMO 전문기업입니다.</p>
+						</div>
+					</div>
+					<img src="./images/clear.gif" alt="">
+				</a>
+			</li>
+			<li style="background:url('./images/main/re3_img0222.jpg') 50% 50% no-repeat; background-size:cover;">
+				<a href="./bbs/board.php?bo_table=product&sca=페니실린">
+					<div class="vi_wrap">
+						<div class="vi_inner">
+							<h3>PRODUCTS</h3>
+							<p>국내 최대 페니실린 의약품 공급업체로서 국내외 약 70개<br/>업체에 우수한 품질의 의약품을 공급하고 있습니다.</p>
+						</div>
+					</div>
+					<img src="./images/clear.gif" alt="">
+				</a>
+			</li>
+			<li style="background:url('./images/main/re4_img666.jpg') 50% 50% no-repeat; background-size:cover;">
+				<a href="./cdmo/syringe.php">
+					<div class="vi_wrap">
+						<div class="vi_inner">
+							<h3>PLANTS</h3>
+							<p>한국 제약산업의 세계화와 우수약품 개발이라는<br/>목표를 향해 쉼 없이 노력하는 국내 최대 CDMO 전문기업입니다.</p>
+						</div>
+					</div>
+					<img src="./images/clear.gif" alt="">
+				</a>
+			</li>
+			<li style="background:url('./images/main/re4_img0555.jpg') 50% 50% no-repeat; background-size:cover;">
+				<a href="./cdmo/development.php">
+					<div class="vi_wrap">
+						<div class="vi_inner">
+							<h3>R&D</h3>
+							<p>한국 제약산업의 세계화와 우수약품 개발이라는<br/>목표를 향해 쉼 없이 노력하는 국내 최대 CDMO 전문기업입니다.</p>
+						</div>
+					</div>
+					<img src="./images/clear.gif" alt="">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--------------------------end---------------------->
+	<div class="section03">
+    <div class="sec03_box01" style="background:#3fb9d1;">
+	  <a href="./bbs/board.php?bo_table=product&sca=페니실린">
+		  <img src="./images/box07_img.png" class="sec03_img01" alt="">
+		  <h3>제품</h3>
+		  <p>최첨단 설비와 최고의 연구진을 통해 높은 수준의 페니실린 및 <span class="m_line">일반주사제 완제품을 개발, 제조하고 있습니다.</span></p>
+	  </a>
+	 </div>
+	  <div class="sec03_box03">
+	  <a href="./cdmo/syringe.php">
+		  <img src="./images/box02_img.png" class="sec03_img02" alt="">
+		  <h3>제조공정</h3>
+		  <p>국내를 비롯한 선진시장 진출을 위해 cGMP를 목표로 하고 있으며,<span class="m_line">페니실린 및 일반주사제 CMO 제조서비스를 제공하고 있습니다.</span></p>
+	  </a>
+	</div>
+    <div class="sec03_box02">
+	  <a href="./cdmo/development.php">
+		  <img src="./images/box06_img.png" class="sec03_img03" alt="">
+		  <h3>연구개발</h3>
+		  <p>연구기획, 제품개발, 연구 및 허가까지 원스톱으로<span class="m_line">진행하여 업무의 효율성을 극대화하고 있습니다.</span></p>
+	  </a>
+	</div>
+
+  </div>
+    <!------------------------------------------------------숫자 타이머------------------------------------------------------------->
+	<!----------------------------------------------------이미지 효과 스크립트------------------------------------------------------>
+	<div class="section06">
+		<div style="text-align:center;" class="section06_bg"></div>
+		<div class="section06_inner">
+			<h3>펜믹스 ANALYSIS</h3>
+			<ul class="set06_lists clear_g">
+				<li class="set06_bg01">
+					<h4>설립년도</h4>
+					<strong class="counting2">0</strong>
+					<span>년</span>
+				</li>
+				<li class="set06_bg02">
+					<h4>CMO국내계약</h4>
+					<strong  class="counting">0</strong>
+					<span>개 업체</span>
+				</li>
+				<li class="set06_bg04">
+					<h4>사원수</h4>
+					<strong  class="counting2">0</strong>
+					<span>명</span>
+				</li>
+				<li class="set06_bg05">
+					<h4>관계사</h4>
+					<strong  class="counting">0</strong>
+					<span>개</span>
+				</li>
+				<li class="set06_bg07">
+					<h4>페니실린 고형제</h4>
+					<strong class="counting1 set06_lists_unit">0</strong> <span>천 정</span><br/>
+					<strong class="counting1 set06_lists_unit">0</strong> <span>천 병</span>
+				</li>
+				<li class="set06_bg08">
+					<h4>페니실린 주사제</h4>
+					<strong class="counting1 set06_lists_unit">0</strong> <span>천</span><br/><span>바이알</span>
+				</li>
+				<li class="set06_bg07">
+					<h4>일반주사제 바이알</h4>
+					<strong class="counting1 set06_lists_unit">0</strong> <span>천</span><br><span>바이알</span>
+				</li>
+				<li class="set06_bg08">
+					<h4>일반주사제 PFS</h4>
+					<strong  class="counting1 set06_lists_unit">0</strong> <span>천</span><br><span>시린지</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	 <!----------------------------------------------------이미지 효과 스크립트 end-------------------------------------------------->
+	 <!------------------------------------------------------숫자 타이머 end--------------------------------------------------------->
+<div class="section05">
+	<div class="inner">
+		<div class="set_txt set05_txt">
+			<h3>국내 최대 CDMO 전문기업</h3>
+			<p>삶의 질 개선에 공헌하는 글로벌 제약기업 펜믹스는 생명의 소중함을 먼저 생각합니다.</p>
+		</div>
+		<ul class="set02_lists">
+			<li><a href="./client/contact.php" class="btn-5">문의하기</a></li>
+		</ul>
+	</div>
+</div>
+<div class="section07">
+	<div class="inner">
+		<div class="video_wrap">
+			<div class="txt_box">
+				<strong>PENMIX<br>OFFICIAL VIDEO</strong>
+				<p>펜믹스는 글로벌 수준의<br> 페니실린과 주사제에 특화된<br> 서비스를 제공하고 있는<br> CDMO 전문 제약기업입니다.</p>
+				<a href="https://youtu.be/9kVGB48UPZA?si=t5fnm1RQuK-xX_Ea" target="_blank">
+					<img src="images/sub/youtube_arrow.png" alt="펜믹스 유튜브 바로가기">
+				</a>
+			</div>
+			<div class="video_box">
+				<div class="box_inner">
+					<iframe src="https://www.youtube.com/embed/9kVGB48UPZA?si=vjsEgHLqi6PgFN6W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section04">
+	<div class="set04_inner">
+		<div class="set04_layl">
+			<h3>허가변경사항</h3>
+			<div class="notice_box">
+				
+    			<ul class="notice_lists">
+			<li><a href="http://62ishsniy27aj15o.penmix.com/bbs/board.php?bo_table=permission&amp;wr_id=35"> &lt;타박신주2.25그램(피페라실린나트륨.타조박탐나트륨)&gt; 및 &lt;타박신주4.5그램(피페라실린나…</a></li>
+			</ul>
+			<span class="data">2025-05-26</span>
+
+    
+			</div>
+			<a href="/bbs/board.php?bo_table=permission" class="more"><img src="./images/more.jpg" alt=""></a>
+		</div>
+		<div class="set04_layr">
+			<h3>새소식</h3>
+			<div class="notice_box">
+				
+    			<ul class="notice_lists">
+			<li><a href="http://62ishsniy27aj15o.penmix.com/bbs/board.php?bo_table=news&amp;wr_id=36"> (주) 펜믹스, 충청남도 모범납세자 선정   -  성실한 납세로 지역사회 기여</a></li>
+			</ul>
+			<span class="data">2025-03-11</span>
+
+    
+			</div>
+			<a href="/bbs/board.php?bo_table=news" class="more"><img src="./images/more.jpg" alt=""></a>
+		</div>
+	</div>
+</div>
+</div>
+<footer class="footer" id="footer">
+  <div id="footer_box">
+     <p class="foot_fr_p">(우:04516) 서울특별시 중구 정동길 14 오송빌딩 펜믹스 / TEL. 02-714-0091 / FAX. 02-703-8236 / E-MAIL. <a href="mailTo:syhong@penmix.com">syhong@penmix.com</a></p>
+	 <p>COPYRIGHT(C) 2017 PENMIX ALL RIGHTS RESERVED.</p>
+	 <div class="foot_btn">
+		<a href="#"><img src="./images/foot_btn2.png" alt="TOP"></a>
+	 </div>
+  </div>
+</footer>
+<div id="mask"></div>
+
+
+<!-- } 하단 끝 -->
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Not Found</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Not Found</h2>
+<hr><p>HTTP Error 404. The requested resource is not found.</p>
+</BODY></HTML>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Not Found</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Not Found</h2>
+<hr><p>HTTP Error 404. The requested resource is not found.</p>
+</BODY></HTML>
+</body>
+</html>
+
+
+<script>
+	$(document).ready(function(){
+		var slider = $('.visual_act').bxSlider({
+			mode: 'fade',
+			pager: true,
+			controls: false,
+			auto: true,
+			autoControls:false,
+			speed: 1000,
+			pause: 3000,
+				onSlideAfter: function() {
+					slider.stopAuto();
+					slider.startAuto();
+			}
+		});
+	});
+
+	$(document).ready(function() {
+		var controller = $.superscrollorama({
+			triggerAtCenter: true,
+			playoutAnimations: true
+		});
+		var windowWidth = $(window).width();
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img01'), 1, {css:{top:-20, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img01'), 1, {css:{top:195, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img02'), 1.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img02'), 1.5, {css:{top:195, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img03'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img03'), 2.5, {css:{top:195, opacity:1}}));
+
+			controller.addTween('.section05', TweenMax.from($('.section05 .set05_txt'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section05', TweenMax.to($('.section05 .set05_txt'), 2.5, {css:{top:110, opacity:1}}));
+
+		if(windowWidth < 1024 && windowWidth > 768){
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img01'), 1, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img01'), 1, {css:{top:290, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img02'), 1.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img02'), 1.5, {css:{top:290, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img03'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img03'), 2.5, {css:{top:290, opacity:1}}));
+
+			controller.addTween('.section05', TweenMax.from($('.section05 .set05_txt'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section05', TweenMax.to($('.section05 .set05_txt'), 2.5, {css:{top:90, opacity:1}}));
+		}else if(windowWidth < 768){
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img01'), 1, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img01'), 1, {css:{top:20, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img02'), 1.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img02'), 1.5, {css:{top:20, opacity:1}}));
+
+			controller.addTween('.section03', TweenMax.from($('.section03 .sec03_img03'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section03', TweenMax.to($('.section03 .sec03_img03'), 2.5, {css:{top:25, opacity:1}}));
+
+			controller.addTween('.section05', TweenMax.from($('.section05 .set05_txt'), 2.5, {css:{top:-40, opacity:0}}));
+			controller.addTween('.section05', TweenMax.to($('.section05 .set05_txt'), 2.5, {css:{top:80, opacity:1}}));
+		}
+	});
+/*-----------------------------스크롤 숫자 타이머 스크립트------------------------------*/
+var st;
+var isCounting = false;
+var set06 = $('.section06').offset().top;
+$(window).scroll(function(){
+	st = $(window).scrollTop();
+	if(st > set06 && isCounting == false){
+		counting();
+		counting1();
+		counting2();
+		isCounting = true;
+	}
+});
+var countingValue = [71,3,10];
+var countingValue1 = [125000,10000,40910,29200,10000];
+var countingValue2 = [2002,196,125];
+function counting(){
+	var idx = 0;
+	var countInterval = setInterval(function(){
+		if(idx > 23){
+			clearInterval(countInterval);
+		}else{
+			for(var i = 0; i < countingValue.length; i++){
+				var value = Math.floor((countingValue[i] / 23) * idx);
+				value = comma_num2(value);
+				$('.counting').eq(i).text(value);
+			}
+		}
+		idx++;
+	},100);
+}
+function counting1(){
+	var idx = 1;
+	var countInterval = setInterval(function(){
+		if(idx > 23){
+			clearInterval(countInterval);
+		}else{
+			for(var i = 0; i < countingValue2.length; i++){
+				var value = Math.floor((countingValue2[i] / 23) * idx);
+				$('.counting2').eq(i).text(value);
+			}
+		}
+		idx++;
+	},100);
+}
+function counting2(){
+	var idx = 1;
+	var countInterval = setInterval(function(){
+		if(idx > 24){
+			clearInterval(countInterval);
+		}else{
+			for(var i = 0; i < countingValue1.length; i++){
+				var value = Math.floor((countingValue1[i] / 24) * idx);
+				value = comma_num1(value);
+				$('.counting1').eq(i).text(value);
+			}
+		}
+		idx++;
+	},100);
+}
+function comma_num1(num){
+	var len, point, str;
+	num = num + "";
+	point = num.length % 3 ;
+	len = num.length;
+	str = num.substring(0, point);
+	while (point < len) {
+		if (str != "") str += ",";
+		str += num.substring(point, point + 3);
+		point += 3;
+	}
+	return str;
+}
+function comma_num2(num){
+	var len, point, str;
+	num = num + "";
+	point = num.length % 2 ;
+	len = num.length;
+	str = num.substring(0, point);
+	while (point < len) {
+		if (str != "") str += ",";
+		str += num.substring(point, point + 2);
+		point += 2;
+	}
+	return str;
+}
+
+$(".chosen-select").chosen({disable_search_threshold: 10});
+
+/*-----------------------------스크롤 이미지 확대 스크립트------------------------------*/
+$(window).scroll(function(){
+	var top = $(window).scrollTop();
+	var set06 = $('.section06').offset().top;
+	if(!$('.section06').hasClass('on')){
+		$('.section06').addClass('on');
+		if(top > set06){
+			$('.section06_img,.section06_bg').css({
+				'transform': 'scale(1.1)',
+				'transition' : 'transform 3s ease',
+			});
+
+		}else{
+			$('.section06_img,.section06_bg').css({
+				'transform': 'scale(1.0)',
+			});
+
+		}
+	}else{
+		$('.section06').removeClass('on');
+	}
+});
+
+$('.mobile_leng').click(function(){
+	$('.util_nav').slideToggle();
+});
+
+	/*---------------------글로벌 네비게이션 바----------------------------*/
+		var w = $('.menu').width();
+		$('#nav_bar').width(w);
+		$('.menu').hover(function(){
+		var hoverIndex = $(this).index();
+		var bar = $(this).width();
+		var left = 0;
+		$('.menu').each(function(){
+			if($(this).index() < hoverIndex){
+				left += $(this).width();
+			}
+		});
+		$('#nav_bar').show();
+		$('#nav_bar').animate({
+			'left':left,
+			'width' : bar,
+		},200);
+	},function(){
+
+	});
+		$('.menu').hover(function() {
+		var hoverIndex = $(this).index();
+		$('.dep_lists').hide();
+		$('#nav_list').slideDown();
+		$('.dep_lists.dep_lists'+(hoverIndex+1)).show().css('opacity',0);
+		$('.dep_lists.dep_lists'+(hoverIndex+1)).stop().animate({
+			opacity : 1
+		},400);
+
+		var listHeight = $('.dep_lists.dep_lists'+(hoverIndex+1)).height();
+		$('#nav_list').stop().animate({
+			'height' : listHeight + 40
+		},400);
+	},function(){
+
+	});
+
+	$('#nav_list').hover(function(){
+
+	},function(){
+
+		$(this).slideUp();
+
+	});
+	/*-------------------------퀵메뉴-------------------*/
+	$('.quick_top,.foot_btn').click(function(){
+		var top = $('#header').offset().top;
+		$('html,body').animate({
+			'scrollTop' : top
+		},500);
+	});
+	$('.quick_close').click(function(){
+		$('.quick_lists').hide();
+	});
+
+
+	$('#header_right_nav li a').click(function(){
+		$('.site_wrap').show();
+		$('#mask').show();
+	});
+	$('#mask,.site_close').click(function(){
+		$('.site_wrap').hide();
+		$('#mask').hide();
+	});
+	$('.dep_icon,.dep_link').click(function(){
+		$(this).next('ul').slideToggle();
+	});
+</script>

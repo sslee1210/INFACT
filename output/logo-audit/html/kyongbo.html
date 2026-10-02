@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147154793-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-147154793-4');
+	</script>
+<title>경보제약</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/images/pc/common/favicon.ico">
+
+    <meta name="_csrf" content="f3612c10-5b04-41e4-9061-423612b48cea"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="X-XSRF-TOKEN"/>
+
+    
+
+<script src="/webjars/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js" charset="utf-8"></script>
+<script src="/webjars/jquery-mask-plugin/1.14.15/dist/jquery.mask.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-form/4.2.2/dist/jquery.form.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-blockui/2.70/jquery.blockUI.js" charset="utf-8"></script>
+<script src="/webjars/autonumeric/4.2.15/dist/autoNumeric.min.js" charset="utf-8"></script>
+
+
+<script src="/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/webjars/jquery-ui/1.12.1/jquery-ui.min.css" />
+
+
+<script src="/js/lib/jquery.validate.min.js" charset="utf-8"></script>
+<script src="/js/lib/jquery.validate-messages_ko.js" charset="utf-8"></script>
+
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="/js/lib/html5shiv.printshiv.js"></script>
+    <script type="text/javascript" src="/js/lib/IE9.js"></script>
+<![endif]-->
+<!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/js/lib/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+
+<!-- 20220311 Edge 브라우저 이슈 재수정 -->
+
+<link rel="stylesheet" type="text/css" href="/css/pc/common.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/company.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/product.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/research.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/header.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/footer.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/pharmacy.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/reset_renew.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/common_renew.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/csm.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/swiper.min.css?ver=20261002" media="all">
+
+
+<script src="/js/lib/jquery.bxslider.min.js" charset="utf-8"></script>
+<script src="/js/lib/jquery.fitvids.js" charset="utf-8"></script>
+<script src="/js/pc/common/style.js?ver=20261002" charset="utf-8"></script>
+<script src="/js/pc/common/ssl.js?ver=20261002" charset="utf-8"></script>
+<script>
+var ContextPath = '';
+var ContextPathWithLocale = '';
+var CommonMsg = {};
+var CurrentDevice = 'PC'; // PC,MOBILE,TABLET
+var Lang = 'ko'; // ko,en,zh
+</script>
+
+
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script>
+
+    var Constant = {
+        file : {
+            maxSize : +'2199023255552' ? +'2199023255552' : 100000
+        },
+        alert : {
+          title: {
+              DEFAULT: '알림',
+              S: '알림',
+              U: '알림',
+              D: '알림',
+              E: '알림'
+          },
+          text: {
+              DEFAULT: '',
+              S: '저장되었습니다.',
+              U: '수정되었습니다.',
+              D: '삭제되었습니다.',
+              E: '처리중 오류가 발생하였습니다.'
+          }
+        },
+        confirm : {
+          title: {
+            DEFAULT: '확인',
+            S: '확인',
+            U: '확인',
+            D: '확인'
+          },
+          text: {
+            DEFAULT: '',
+            S: '저장하시겠습니까?',
+            U: 'confirm.modify',
+            D: '삭제하시겠습니까?',
+          }
+        }
+    };
+</script><link rel="stylesheet" href="../css/pc/jquery.bxslider.css"></head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <!-- dHead -->
+    <div class="header" style="height:auto;">
+        <style>
+    .utility_menu li {
+        float: left;
+        margin-left: -27px;
+        margin-right: 45px;
+    }
+</style>
+
+<div class="header-wrap">
+	<div class="depth_bg" style="display: none;"></div>
+	<div class="gnb-line"></div>
+	<div class="header_area">
+		<a href="/home" class="logo-kb"><img src="../images/pc/common/logo.png?ver=20261002" alt="logo"></a>
+		<div class="header_L_area">
+			<div class="gnb_wrap">
+				<div class="hd_gnb">
+					<!-- 1레벨 메뉴 -->
+					<ul class="menu"></ul>
+					<!-- // 1레벨 메뉴 -->
+				</div>
+			</div>
+        </div>
+        <div class="header_R_area">
+            <!-- 유틸리티 -->
+				<ul class="utility_menu">
+					<li>
+                        <a href="https://kyongbo.recruiter.co.kr/appsite/company/index" style="font-size: 18px" target="_blank" rel="noopener noreferrer">인재채용</a>
+                    </li>
+                    <li>
+                        <a href="/en/home" style=" font-size: 18px" target="_blank" rel="noopener noreferrer">ENG</a>
+                    </li>
+				</ul>
+            <!-- // 유틸리티 -->
+        </div>
+    </div>
+    <div class="header_area2">
+        <div class="header_img">
+            <div class="top_cover">
+                <!-- 커버 -->
+                <span class="img_txt1"></span>
+                <span class="img_txt2"></span>
+                <span class="img_txt3"></span>
+                <!-- // 커버 -->
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="container">
+                <ul class="nav-ul">
+                    <li><a href="/home" class="icon_home">home</a></li>
+                    <!-- 2레벨 ~ -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/pc/apps/com/header.js?ver=20261002"></script></div>
+    <!-- //dHead -->
+
+    <!-- contents -->
+    <div class="contents">
+        <div class="tit-sub-wrap">
+			<h1>경보제약 소개</h1>
+		</div>
+		<section class="section kbp">
+			<div class="container">
+				<div class="tit-kbp-wrap">
+					<h1>경보제약 소개</h1>
+					<h2>경보제약은<br />다가 올 미래를 생각합니다.</h2>
+				</div>
+				<div class="slide_kbp">
+					<div class="bxslider bx-wrapper">
+						<div><img src="../../../images/pc/company/img_summary_ckd1.jpg" alt="" /></div>
+						<div><img src="../../../images/pc/company/img_summary_ckd2.jpg" alt="" /></div>
+					</div>
+				</div>
+				<!-- 설명 -->
+				<div class="row desc-cont">
+					<div class="col-6">
+						<div class="tit-sec-wrap">
+							<h3 class="type02">
+								Better Life Through<br />Better Medicine,<br />KyongBo
+								Pharmaceutical Co.,Ltd
+							</h3>
+						</div>
+					</div>
+					<div class="col-6">
+						<p class="desc">경보제약은 인류의 건강과 생명에 기여하는 사명으로 1987년에 설립되었습니다.
+							고품질 원료 개발을 최고의 목표로 제조 기술의 혁신과 우수한 품질로 국내 최초 Cefaclor 개발에 성공하였습니다.
+							의약품 제조 및 품질관리기준의 선진화 노력으로 미국(FDA), 유럽(EDQM), 일본(PMDA),
+							중국(CFDA)으로부터 무균주사제 원료 및 1st Generic 의약품을 생산할 수 있는 cGMP 인증을 받은
+							원료의약품 제조 선도기업 입니다. 지속적인 시설 투자 및 연구 개발로 세파로스포린계 항생제, 고지혈증 치료제, 항암제
+							등을 세계 30여 개국에 8,500만불을 수출하는 글로벌 기업으로 도약하고 있습니다.</p>
+					</div>
+				</div>
+				<hr class="hr02" />
+				<!-- 설명 -->
+				<div class="row desc-cont">
+					<div class="col-6">
+						<div class="tit-sec-wrap">
+							<h3 class="type02">
+								Better Life Through<br />Better Medicine
+							</h3>
+						</div>
+					</div>
+					<div class="col-6">
+						<p class="desc">인류의 건강과 보다 나은 삶을 위해 우수한 품질의 의약품을 공급하는 일류기업으로
+							발전할 것입니다. 2001년부터 완제의약품 사업에 진출하여, 마취통증, 순환기계, 소화기계, 항생제 등 다양한 제품을
+							출시하고 있습니다.</p>
+					</div>
+				</div>
+				<div class="board board-row">
+					<table>
+						<caption></caption>
+						<colgroup>
+							<col style="width: 165px">
+							<col style="width: auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>기업명</th>
+								<td>(주)경보제약</td>
+							</tr>
+							<tr>
+								<th>대표자</th>
+								<td>김태영</td>
+							</tr>
+							<tr>
+								<th>설립일</th>
+								<td>1987.03.31</td>
+							</tr>
+							<tr>
+								<th>상장일</th>
+								<td>2015.06.29</td>
+							</tr>
+							<tr>
+								<th>업종</th>
+								<td>원료의약품 제조/판매, 완제의약품 제조/판매</td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td>충청남도 아산시 실옥로 174</td>
+							</tr>
+							<tr>
+								<th>홈페이지</th>
+								<td>www.kbpharma.co.kr</td>
+							</tr>
+							<tr>
+								<th>전화 / 팩스</th>
+								<td>041) 420-0500 / 041) 546-8427</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section></div>
+    <!-- //contents -->
+
+    <!-- dFoot -->
+    <div class="footer">
+        
+
+<div class="wrap" style="margin-top: 160px !important;">
+	<div id="footer">
+		<div class="footer_area">
+			<div class="fo_logo_wrap">
+				<img src="../images/pc/common/fo_logo.png?ver=20261002" alt="footer logo">
+			</div>
+			<div class="fo_con_wrap">
+				<div class="fo_con">
+					<ul class="fo_menu">
+						<li><a href="/etc/privacyPolicy.do">개인정보처리방침</a></li>
+						<li><a href="/etc/nomail.do">이메일무단수집거부</a></li>
+						<li><a href="/etc/agreement.do">이용약관</a></li>
+						<li><a href="/etc/contactUs.do">Contact Us</a></li>
+					</ul>
+					<ul class="footer_address">
+						<li><span>(주)경보제약</span></li>
+						<li><span>충청남도 아산시 실옥로 174</span></li>
+						<li><span>대표자명: 김태영</span><span>사업자번호 : 312-81-04567</span></li>
+						<li><span>Tel: 041-420-0500</span></li>
+					</ul>
+					<div class="copyright">Copyright 2019 by Kyongbo Pharm All Rights Reserved</div>
+				</div>
+			</div>
+			<div class="fo_select_wrap">
+				<div class="select-group" style="border-bottom: none; margin-bottom: 30px;">
+					<div class="select_wrap_type02">
+						<div class="select-ui li-slt">
+							<h3>
+								<a href="#select-list1">Family Site</a>
+							</h3>
+							<ul id="select-list1" style="overflow-y:auto;">
+                                <li><a class="active" href="#!">홀딩스</a></li>
+                                <li><a class="s-list" href="http://www.ckd-holdings.com" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당홀딩스</a></li>
+                                <li><a href="#!">헬스케어</a></li>
+                                <li><a class="s-list" href="http://www.ckdpharm.com" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당</a></li>
+                                <li><a class="s-list" href="http://www.ckdbio.com" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당바이오</a></li>
+                                <li><a class="s-list" href="http://www.kbpharma.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 경보제약</a></li>
+                                <li><a class="s-list" href="https://www.ckdhc.com" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당건강</a></li>
+                                <li><a href="#!">부동산임대</a></li>
+                                <li><a class="s-list" href="http://www.ckdi.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당산업</a></li>
+                                <li><a href="#!">건설/환경</a></li>
+                                <li><a class="s-list" href="http://bellenc.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨이앤씨</a></li>
+                                <li><a href="#!">용역/운송</a></li>
+                                <li><a class="s-list" href="http://www.bellsm.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨에스엠</a></li>
+                                <li><a href="#!">마케팅솔루션</a></li>
+                                <li><a class="s-list" href="http://www.bellcomm.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨컴</a></li>
+                                <li><a href="#!">IT</a></li>
+                                <li><a class="s-list" href="http://www.bellins.net" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨아이앤에스</a></li>
+                                <li><a href="#!">언론</a></li>
+                                <li><a class="s-list" href="https://ddaily.co.kr/" title="새창 열림" target="_blank" rel="noopener noreferrer">- 디지털데일리</a></li>
+                            </ul>
+						</div>
+					</div>
+				</div>
+				<div class="select-group">
+					<div class="select_wrap_type01">
+						
+					</div>
+					<br>
+					<div class="select_wrap_type01">
+						<div class="select-ui li-slt" style="padding-top: 16px; !important;">
+							<h3>
+								<a href="#select-list3">공공기관</a>
+							</h3>
+							<ul id="select-list3">
+								<li><a href="http://www.mohw.go.kr" target="_blank" rel="noopener noreferrer">보건복지부</a></li>
+								<li><a href="http://www.kfda.go.kr" target="_blank" rel="noopener noreferrer">식품의약품안전처</a></li>
+								<li><a href="http://www.nih.go.kr" target="_blank" rel="noopener noreferrer">국립보건연구원</a></li>
+								<li><a href="http://www.redcross.or.kr" target="_blank" rel="noopener noreferrer">대한적십자사</a></li>
+								<li><a href="http://www.kihasa.re.kr" target="_blank" rel="noopener noreferrer">한국보건사회연구원</a></li>
+								<li><a href="http://www.nhic.or.kr" target="_blank" rel="noopener noreferrer">국민건강보험공단</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="select_wrap_type01">
+						<div class="select-ui li-slt">
+							<h3>
+								<a href="#select-list4">단체</a>
+							</h3>
+							<ul id="select-list4">
+								<li><a href="http://www.kpanet.or.kr" target="_blank" rel="noopener noreferrer">대한약사회</a></li>
+								<li><a href="http://www.psk.or.kr" target="_blank" rel="noopener noreferrer">대한약학회</a></li>
+								<li><a href="http://www.kpma.or.kr" target="_blank" rel="noopener noreferrer">한국제약협회</a></li>
+								<li><a href="http://www.kma.org" target="_blank" rel="noopener noreferrer">대한의사협회</a></li>
+								<li><a href="http://www.kmda.or.kr" target="_blank" rel="noopener noreferrer">한국근육장애인협회</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="select_wrap_type02 last">
+					<div class="select-ui li-slt">
+						<h3>
+							<a href="#select-list5">의약계 전문지</a>
+						</h3>
+						<ul id="select-list5">
+							<li><a href="http://www.kosna.or.kr" target="_blank" rel="noopener noreferrer">한국전문신문협회</a></li>
+							<li><a href="http://www.yakup.com" target="_blank" rel="noopener noreferrer">약업신문</a></li>
+							<li><a href="http://www.nursenews.co.kr" target="_blank" rel="noopener noreferrer">간호신문</a></li>
+							<li><a href="http://www.medicalobserver.co.kr" target="_blank" rel="noopener noreferrer">메디칼업저버</a></li>
+							<li><a href="http://www.mjmedi.com" target="_blank" rel="noopener noreferrer">민족의학신문</a></li>
+							<li><a href="http://www.bokuen.co.kr" target="_blank" rel="noopener noreferrer">보건신문</a></li>
+							<li><a href="http://www.medicast.co.kr" target="_blank" rel="noopener noreferrer">황실비방</a></li>
+							<li><a href="http://www.kpanews.co.kr" target="_blank" rel="noopener noreferrer">약사공론</a></li>
+							<li><a href="http://www.mednews.co.kr" target="_blank" rel="noopener noreferrer">의계신문</a></li>
+							<li><a href="http://www.dailymedi.com" target="_blank" rel="noopener noreferrer">데일리메디</a></li>
+							<li><a href="http://www.dreamdrug.com" target="_blank" rel="noopener noreferrer">데일리팜</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/pc/apps/com/footer.js" charset="utf-8"></script></div>
+    <!-- //dFoot -->
+
+</div>
+<!-- //wrap -->
+
+<script src="/js/pc/apps/company/summary_kbp.js" charset="utf-8"></script>
+</body>
+</html>

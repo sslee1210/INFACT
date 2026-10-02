@@ -1,0 +1,1000 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>팬젠</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+				<meta name="publisher" content="(주)신비웹,신비웹,sinbiweb,sinbiweb.com,www.sinbiweb.com,webmaster@sinbiweb.com" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/hamburgers.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/animatable.css">
+		<link rel="stylesheet" type="text/css" href="../css/slick.css" />
+		<link rel="stylesheet" type="text/css" href="../css/slick-theme.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.css">
+		<link rel="stylesheet" type="text/css" href="../css/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" type="text/css" href="../css/jquery.fullpage.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="../js/ScrollTrigger.min.js"></script>
+		<script type="text/javascript" src="../js/TweenMax.js"></script>
+		<script type="text/javascript" src="../js/ui.js"></script>
+		<script type="text/javascript" src="../js/slick.min.js"></script>
+		<script type="text/javascript" src="../js/swiper.js"></script>
+		<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script type="text/javascript" src="../js/scrolloverflow.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.fullpage.js"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+		</style>
+
+		<link rel="stylesheet" type="text/css" href="../css/board_reaction.css">
+		<script type="text/javascript" src="../../core/res/common.js"></script>
+		<script type="text/javascript" src="../../core/js/board.js"></script>
+		<script type="text/javascript" src="../../core/js/zipcode.js"></script>
+		<script type="text/javascript" src="../../cheditor/cheditor.js"></script>
+
+		<!--[if IE 7]>
+			<link rel="stylesheet" type="text/css" href="../css/ie7.css" media="all" />
+		<![endif]-->
+		<!--[if lte IE 8]>
+			<script src="./js/lib/respond.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="./js/lib/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+	</head>
+
+	<!-- 달력 -->
+    <div id=popCal  style='position:absolute; left:-400px; top:0px; width:0; height=0; z-index:1; VISIBILITY:hidden;'>
+    <iframe name='pop_frame_cal' src='' frameborder='0' scrolling='no' width='300' height='320'></iframe>
+    </div>
+
+	<!-- submit 사용시 -->
+	<div style='position:absolute'>
+	<iframe src='' name='ifr_ok'  width=0 height=0 frameborder=0 scrolling=no></iframe>
+	</div>
+	<body>
+		<div id="wrap">
+			<dl id="skip">
+				<dt class="hide">메뉴 바로가기</dt>
+				<dd><a href="#self">주메뉴 바로가기</a></dd>
+				<dd><a href="#self">컨텐츠 바로가기</a></dd>
+			</dl>
+
+			<header>
+				<div id="header">
+					<div class="h_top">
+						<div class="in_Layer">
+							<ul class="huons_link">
+								<li><a href="https://huonsglobal.com" target="_blank">Huons Global</a></li>
+								<li><a href="https://huons.com" target="_blank">Huons</a></li>
+								<li><a href="https://humedix.com" target="_blank">Humedix</a></li>
+								<li><a href="https://humnc.com" target="_blank">HuM&amp;C</a></li>
+								<li><a href="https://huonsbiopharma.com" target="_blank">Huons BioPharma</a></li>
+								<li><a href="https://huonsmeditech.com" target="_blank">Huons Meditech</a></li>
+								<li><a href="https://huonslab.com" target="_blank">Huonslab</a></li>
+								<li><a href="https://foodasb.co.kr/" target="_blank">HU&VIE</a></li>
+								<li><a href="https://huonsusa.com" target="_blank">Huons USA</a></li>
+								<li><a href="https://huonsjapan.com" target="_blank">Huons Japan</a></li>
+								<!-- <li><a href="https://huonslifesciences.com/layout/kor/home.php" target="_blank">HuonsLifeSciences</a></li> -->
+								<li><a href="https://huons-n.com/" target="_blank">Huons N</a></li>
+								<!-- <li><a href="http://www.biorosette.com/" target="_blank">Bio Rosette</a></li> -->
+							</ul>
+						</div>
+					</div>
+					<div class="h_bot">
+						<div class="in_Layer">
+							<h1 class="logo">
+								<a href="home.php" class="off">
+									<img src="../images/common/logo.png" class="default" >
+									<img src="../images/common/logo_on.png" class="active">
+								</a>
+							</h1>
+							<div class="gnbLayer">
+								<h2 class="hide">주메뉴</h2>
+								<ul class="gnb" id="gnb">
+													<li><a href="home.php?go=company">기업</a>
+									<div class="subDepth subDepth01">
+										<ul class="sub">
+																			<li  class='none' ><a href="home.php?go=company"><span>회사개요</span></a></li>
+																			<li ><a href="home.php?go=company1"><span>회사연혁</span></a></li>
+																			<li ><a href="home.php?go=company2"><span>CI</span></a></li>
+																			<li ><a href="home.php?go=company3"><span>경영진</span></a></li>
+																			<li ><a href="home.php?go=company4"><span>회사비전</span></a></li>
+																			<li ><a href="home.php?go=company5"><span>찾아오시는길</span></a></li>
+																		</ul>
+									</div>
+								</li>
+													<li><a href="home.php?go=product">제품</a>
+									<div class="subDepth subDepth02">
+										<ul class="sub">
+																			<li  class='none' ><a href="home.php?go=product"><span>바이오 의약품</span></a></li>
+																			<li ><a href="home.php?go=product1"><span>CDMO 서비스</span></a></li>
+																			<li ><a href="home.php?go=product2"><span>연구용시약/kit/상품</span></a></li>
+																		</ul>
+									</div>
+								</li>
+													<li><a href="home.php?go=research">연구</a>
+									<div class="subDepth subDepth03">
+										<ul class="sub">
+																			<li  class='none' ><a href="home.php?go=research"><span>핵심기술</span></a></li>
+																			<li ><a href="home.php?go=research1"><span>파이프라인</span></a></li>
+																			<li ><a href="home.php?go=research2"><span>주요성과</span></a></li>
+																		</ul>
+									</div>
+								</li>
+													<li><a href="home.php?go=finance">투자</a>
+									<div class="subDepth subDepth04">
+										<ul class="sub">
+																			<li  class='none' ><a href="home.php?go=finance"><span>주가정보</span></a></li>
+																			<li ><a href="home.php?go=finance1"><span>공시정보</span></a></li>
+																			<li ><a href="home.php?go=finance2"><span>재무정보</span></a></li>
+																			<li ><a href="home.php?go=pds.list&pds_type=1"><span>IR News</span></a></li>
+																		</ul>
+									</div>
+								</li>
+													<li><a href="home.php?go=customer">고객</a>
+									<div class="subDepth subDepth05">
+										<ul class="sub">
+																			<li  class='none' ><a href="home.php?go=customer"><span>고객상담안내</span></a></li>
+																			<li ><a href="home.php?go=contact.make"><span>온라인문의</span></a></li>
+																		</ul>
+									</div>
+								</li>
+													
+								</ul>
+							</div><!-- end : class : gnbLayer -->
+							<div class="languageBox kor">
+								<span class="over">언어선택</span>
+								<a href="../kor/home.php" class="kor on">KOR</a>
+								<a href="../eng/home.php" class="eng">ENG</a>
+							</div>
+							<div class="ham_btn">
+								<div class="sm_btn">
+									<img class="default" src="../images/ico/ham_btn.png">
+									<img class="active" src="../images/ico/ham_btn_on.png">
+								</div>
+								<div class="m_menu">
+									<img class="default" src="../images/ico/ham_btn.png">
+									<img class="active" src="../images/ico/ham_btn_on.png">
+								</div>
+							</div><!--ham_btn-->
+						</div><!--in_Layer-->
+						<div class="subDepth_Layer"></div>
+					</div><!--h_bot-->
+				</div><!-- end : id : header -->
+			</header><!-- end : header -->
+
+			<div class="sitemap h_map flex-box ">
+				<div class="close_wrap">
+					<div class="close_in">
+						<div class="site_close">
+							<span></span>
+							<span></span>
+						</div><!--close-->
+					</div><!--site_close-->
+				</div><!--close_wrap-->
+				<div class="site_bg"></div><!--site_bg-->
+				<div class="site_wrap cf">
+					<div class="site_box">
+									<dl>
+							<dt>
+								<a href="home.php?go=company"><span>기업</span></a>
+							</dt>
+							<dd>
+								<ul>
+															<li  class='none' ><a href="home.php?go=company">회사개요</a></li>
+															<li ><a href="home.php?go=company1">회사연혁</a></li>
+															<li ><a href="home.php?go=company2">CI</a></li>
+															<li ><a href="home.php?go=company3">경영진</a></li>
+															<li ><a href="home.php?go=company4">회사비전</a></li>
+															<li ><a href="home.php?go=company5">찾아오시는길</a></li>
+														</ul>
+							</dd>
+						</dl>
+									<dl>
+							<dt>
+								<a href="home.php?go=product"><span>제품</span></a>
+							</dt>
+							<dd>
+								<ul>
+															<li  class='none' ><a href="home.php?go=product">바이오 의약품</a></li>
+															<li ><a href="home.php?go=product1">CDMO 서비스</a></li>
+															<li ><a href="home.php?go=product2">연구용시약/kit/상품</a></li>
+														</ul>
+							</dd>
+						</dl>
+									<dl>
+							<dt>
+								<a href="home.php?go=research"><span>연구</span></a>
+							</dt>
+							<dd>
+								<ul>
+															<li  class='none' ><a href="home.php?go=research">핵심기술</a></li>
+															<li ><a href="home.php?go=research1">파이프라인</a></li>
+															<li ><a href="home.php?go=research2">주요성과</a></li>
+														</ul>
+							</dd>
+						</dl>
+									<dl>
+							<dt>
+								<a href="home.php?go=finance"><span>투자</span></a>
+							</dt>
+							<dd>
+								<ul>
+															<li  class='none' ><a href="home.php?go=finance">주가정보</a></li>
+															<li ><a href="home.php?go=finance1">공시정보</a></li>
+															<li ><a href="home.php?go=finance2">재무정보</a></li>
+															<li ><a href="home.php?go=pds.list&pds_type=1">IR News</a></li>
+														</ul>
+							</dd>
+						</dl>
+									<dl>
+							<dt>
+								<a href="home.php?go=customer"><span>고객</span></a>
+							</dt>
+							<dd>
+								<ul>
+															<li  class='none' ><a href="home.php?go=customer">고객상담안내</a></li>
+															<li ><a href="home.php?go=contact.make">온라인문의</a></li>
+														</ul>
+							</dd>
+						</dl>
+				
+					</div><!--site_box-->
+				</div><!--site_wrap-->
+			</div><!--sitemap-->
+
+			<nav class="left_Box">
+				<div class="nav_top">
+					<h1 class="logo ab-cen">
+						<a href="home.php"><img src="../images/common/logo_on.png"></a>
+					</h1>
+				</div><!--nav_top-->
+				<div class="nav_mid">
+					<ul class="h_util">
+						<li>
+							<em>
+								<img class="active" src="../images/ico/fu_ico01_big.png">
+							</em>
+							<div class="global">
+								<span><a class="on" href="../kor/home.php">KOR</a></span>
+								<span><a href="../eng/home.php">ENG</a></span>
+							</div>
+						</li>
+					</ul>
+				</div><!--nav_mid-->
+				<div class="nav_in">
+					<ul class="m_gnb">
+									<li><a href="#self">기업</a>
+							<ul class="depth">
+															<li  class='none' ><a href="home.php?go=company">회사개요</a></li>
+															<li ><a href="home.php?go=company1">회사연혁</a></li>
+															<li ><a href="home.php?go=company2">CI</a></li>
+															<li ><a href="home.php?go=company3">경영진</a></li>
+															<li ><a href="home.php?go=company4">회사비전</a></li>
+															<li ><a href="home.php?go=company5">찾아오시는길</a></li>
+													</ul>
+						</li>
+									<li><a href="#self">제품</a>
+							<ul class="depth">
+															<li  class='none' ><a href="home.php?go=product">바이오 의약품</a></li>
+															<li ><a href="home.php?go=product1">CDMO 서비스</a></li>
+															<li ><a href="home.php?go=product2">연구용시약/kit/상품</a></li>
+													</ul>
+						</li>
+									<li><a href="#self">연구</a>
+							<ul class="depth">
+															<li  class='none' ><a href="home.php?go=research">핵심기술</a></li>
+															<li ><a href="home.php?go=research1">파이프라인</a></li>
+															<li ><a href="home.php?go=research2">주요성과</a></li>
+													</ul>
+						</li>
+									<li><a href="#self">투자</a>
+							<ul class="depth">
+															<li  class='none' ><a href="home.php?go=finance">주가정보</a></li>
+															<li ><a href="home.php?go=finance1">공시정보</a></li>
+															<li ><a href="home.php?go=finance2">재무정보</a></li>
+															<li ><a href="home.php?go=pds.list&pds_type=1">IR News</a></li>
+													</ul>
+						</li>
+									<li><a href="#self">고객</a>
+							<ul class="depth">
+															<li  class='none' ><a href="home.php?go=customer">고객상담안내</a></li>
+															<li ><a href="home.php?go=contact.make">온라인문의</a></li>
+													</ul>
+						</li>
+				
+					</ul><!--m_gnb-->
+				</div>
+			</nav>
+			<div class="wrap_bg"></div>
+			<div id="visual">
+				<div class="main_visual">
+					<div class="video-container swiper-container" id="mainVisual">
+						<div class="video-loop swiper-wrapper">
+							<div class="swiper-slide video-container video-loop-item" data-swiper-autoplay="58000" data-type="video" data-num="1">
+								<div class="slogan">
+									<h2>
+										<span><strong>PANGEN BIOTECH</strong><br></span>
+									</h2>
+									<p><span>글로벌 바이오의약품 전문기업 팬젠이 앞장서겠습니다.</span></p>
+								</div><!--slogan-->
+								<div class="pic">
+									<video class="bgvid" id="vid0" autoplay="" loop="" muted="" playsinline="" data-keepplaying>
+										<source src="../video/visual.mp4" type="video/mp4">
+									</video>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				<!--<div class="main_arr main_prev"><img src="../images/ico/main_prev.png"></div>-->
+				<!--<div class="main_arr main_next"><img src="../images/ico/main_next.png"></div>-->
+					<div class="main-pagination"></div>
+					<div class="scroll_wrap ">
+						<p>SCROLL DOWN</p>
+						<div>
+							<span></span>
+						</div>
+					</div><!--scroll_wrap-->
+				</div><!--main_visual-->
+			</div><!-- end : id : visual -->
+			<script src="../js/slick-video-slider2.js"></script>
+			<link rel="stylesheet" type="text/css" href="../css/aos.css">
+			<script type="text/javascript" src="../js/aos.js"></script>
+			<script>
+				AOS.init({
+					offset: 200,
+					once : false,
+					throttleDelay : 200,
+					duration: 600,
+				});
+			</script>
+			<div id="contents">
+				<div class="main_contents">
+					<div class="section01">
+						<div class="in_Layer2">
+							<div class="mc_tit">
+								<h2 data-aos="fade-down">
+									끊임없는 도전과 적극적인 투자로 <br>
+									인류의 건강한 삶을 구현하는 기업으로 성장할 것 입니다
+								</h2>
+							</div><!--mc_tit-->
+							<div class="mc01_wrap" data-aos="zoom-in">
+								<ul class="mc01_list flex-box">
+									<li class="mc01_box" data-img-src="mc01_img01" data-aos="flip-left">
+										<a href="home.php?go=company">
+											<div class="mc01_text">
+												<h2>팬젠소개<img src="../images/ico/mc_arr.png"></h2>
+												<p>원천특허 기술 기반, 안정성과 성장성을 갖춘<br> 바이오의약품 전문 기업</p>
+											</div><!--mc01_text-->
+										</a>
+									</li>
+									<li class="mc01_box" data-img-src="mc01_img02" data-aos="flip-left">
+										<a href="home.php?go=research">
+											<div class="mc01_text">
+												<h2>연구소개<img src="../images/ico/mc_arr.png"></h2>
+												<p>생산용 세포주 확립 원천 특허 기술과 바이오의약품 제품화<br> 기술을 활용하여 글로벌 바이오시밀러 제품을 개발</p>
+											</div><!--mc01_text-->
+										</a>
+									</li>
+									<li class="mc01_box" data-img-src="mc01_img03" data-aos="flip-left">
+										<a href="home.php?go=research2">
+											<div class="mc01_text">
+												<h2>주요성과<img src="../images/ico/mc_arr.png"></h2>
+												<p>바이오시밀러 EPO 품목허가<br>바이오의약품 제조소 GMP 재인증</p>
+											</div><!--mc01_text-->
+										</a>
+									</li>
+								</ul>
+								<img src="../images/contents/mc01_img01.jpg" class="mc01_bg mc01_img01 active">
+								<img src="../images/contents/mc01_img02.jpg" class="mc01_bg mc01_img02">
+								<img src="../images/contents/mc01_img03.jpg" class="mc01_bg mc01_img03">
+							</div><!--mc01_wrap-->
+							<h1 data-aos="zoom-in">PanGen Biotech</h1>
+						</div><!--in_Layer-->
+						</div> <!-- section01 끝 -->
+						<script>
+							document.addEventListener("DOMContentLoaded", function () {
+								console.log("스크립트 실행됨!"); 
+								const listItems = document.querySelectorAll(".mc01_box");
+								const bgImages = document.querySelectorAll(".mc01_bg");
+
+								listItems.forEach(item => {
+									item.addEventListener("mouseover", function () {
+										let imgClass = item.getAttribute("data-img-src"); // 예: mc01_img01
+										
+										// 모든 배경 이미지에서 active 제거
+										bgImages.forEach(img => img.classList.remove("active"));
+
+										// 해당 클래스만 active 추가
+										let targetImage = document.querySelector(`.mc01_bg.${imgClass}`);
+										if (targetImage) {
+											targetImage.classList.add("active");
+											console.log("active 추가됨:", targetImage);
+										}
+									});
+								});
+							});
+						</script>
+						
+					</div><!--section01-->
+					<div class="section02">
+						<div class="in_Layer2  flex-box">
+							<div class="mc02_left">
+								<div class="mc_tit w" data-aos="fade-up">
+									<p >Product Introduction</p>
+									<h2>
+										팬젠만의 독보적인 <br>
+										제품을 소개합니다
+									</h2>
+									<ul>
+										<li><a href="home.php?go=product">바이오 의약품<img src="../images/ico/mc_arr.png"></a></li>
+										<li><a href="home.php?go=product1">CDMO 서비스<img src="../images/ico/mc_arr.png"></a></li>
+										<li><a href="home.php?go=product2">연구용시약/KT/상품<img src="../images/ico/mc_arr.png"></a></li>
+									</ul>
+								</div><!--mc_tit-->
+							</div><!--mc02_left-->
+						
+							<div class="mc02_right">
+								<ul class="flex-box">
+									<li data-aos="flip-left">
+										<a href="home.php?go=product">
+											<div class="mc01_wrap">
+												<div class="mc01_tit">
+													<p>바이오 의약품</p>
+													<h1>
+														<strong>바이오시밀러 EPO</strong>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</h1>
+												</div><!--mc01_tit-->
+												<img src="../images/contents/mc02_img01.jpg">
+											</div><!--mc01_wrap-->
+										</a>
+									</li>
+									<li data-aos="flip-right">
+										<a href="home.php?go=product.2">
+											<div class="mc01_wrap">
+												<div class="mc01_tit">
+													<p>바이오 의약품</p>
+													<h1>
+														<strong>바이오시밀러</strong>
+													</h1>
+													<h1>
+														<strong>Aflibercept</strong>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</h1>
+												</div><!--mc01_tit-->
+												<img src="../images/contents/mc02_img02.jpg">
+											</div><!--mc01_wrap-->
+										</a>
+									</li>
+									<li data-aos="flip-left">
+										<a href="home.php?go=product1">
+											<div class="mc01_wrap">
+												<div class="mc01_tit">
+													<p>CDMO 서비스</p>
+													<h1>
+														<strong>CHO 세포주</strong>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</h1>
+												</div><!--mc01_tit-->
+												<img src="../images/contents/mc02_img03.jpg">
+											</div><!--mc01_wrap-->
+										</a>
+									</li>
+									<li data-aos="flip-right">
+										<a href="home.php?go=product2">
+											<div class="mc01_wrap">
+												<div class="mc01_tit">
+													<p>연구용시약/KIT/상품</p>
+													<h1>
+														<strong>연구용시약/KIT/상품</strong>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</h1>
+												</div><!--mc01_tit-->
+												<img src="../images/contents/mc02_img04.jpg">
+											</div><!--mc01_wrap-->
+										</a>
+									</li>
+								</ul><!--flex-box-->
+							</div><!--mc02_right-->
+						</div><!--in_Layer-->
+					</div><!--section02-->
+					<div class="section03">
+						<div class="in_Layer2">
+							<div class="mc_tit">
+							
+								<p data-aos="fade-down">Disclosures &  ir news</p>
+								<h2 data-aos="fade-down">팬젠의 공시 및 주가정보를  <br>지금 바로 한눈에 보실 수 있습니다</h2>
+							</div><!--mc_tit-->
+							<div class="mc03_wrap flex-box"  data-aos="zoom-in">
+								<div class="mc03_left">
+									<a class="on" data-tab="tab_1">
+										<div class="tit">
+											<img src="../images/contents/mc03_ico01.png">
+											<h1>
+												<strong>공시정보</strong>
+												<span><img src="../images/ico/mc_arr.png"></span>
+											</h1>
+										</div>
+									</a>
+									<a data-tab="tab_2">
+										<div class="tit">
+											<img src="../images/contents/mc03_ico02.png">
+											<h1>
+												<strong>IR News</strong>
+												<span><img src="../images/ico/mc_arr.png"></span>
+											</h1>
+										</div>
+									</a>
+								</div><!--mc03_left-->
+								<div class="mc03_right_wrap">
+									<div class="mc03_right tab_1 on">
+										<ul class="flex-box">
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260813000839" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>반기보고서(일반법인)</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.08.13</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260622000231" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>단일판매ㆍ공급계약체결</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.06.22</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260527000329" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>투자판단 관련 주요경영사항(질병관리청 국립보건연구원 중증열성혈소판감소증후군(SFTS) 치료용 항체 비임상 시료 생산체계 고도화 및 평가과제 협상대상자 선정 )</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.05.27</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260514000295" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>분기보고서(일반법인)</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.05.14</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260506000761" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>추가상장(국내사모 CB전환)</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.05.06</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																			<li>
+												<a href="http://kind.krx.co.kr/common/disclsviewer.do?method=search&acptno=20260424000566" target=_blank>
+													<div class="tit">
+														<span>공시정보</span>
+														<h2>임원ㆍ주요주주특정증권등소유상황보고서</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.04.24</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																		</ul><!--flex-box-->
+									</div><!--mc03_right-->
+									<div class="mc03_right tab_2">
+										<ul class="flex-box">
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=25">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>팬젠, 2분기 매출 39.6억원...전년 동기 대비 13.5%↑</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.08.13</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=23">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>팬젠, 질병청 국립보건연구원 ‘SFTS 치료용 항체’ 연구용역과제 수주</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.06.22</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=22">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>팬젠, 1분기 매출 37.3억원∙영업이익 4.8억원 기록</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.05.14</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=21">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>팬젠, 전환사채 10억원 조기 상환 및 전량 소각</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.04.22</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=19">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>팬젠, 세포기반 활성분석 서비스 사업 확장…경쟁력 높인다</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.04.01</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																	
+											<li>
+												<a href="home.php?go=pds.list&pds_type=1&num=18">
+													<div class="tit">
+														<span>공지사항</span>
+														<h2>제16 사업보고서 및 감사보고서 등 공지</h2>
+													</div><!--tit-->
+													<div class="day flex-box">
+														<p>2026.03.23</p>
+														<span><img src="../images/ico/mc02_more.png"></span>
+													</div><!--day-->
+												</a>
+											</li>
+																		</ul><!--flex-box-->
+									</div><!--mc03_right-->
+								</div><!--mc03_right-->
+							</div><!--mc03_wrap-->
+						</div><!--in_Layer-->
+						<script>
+							$(document).ready(function(){
+								$('.mc03_left> a').click(function(){
+									var tab_class = $(this).attr('data-tab');
+
+									$('.mc03_left a').removeClass('on');
+									$('.mc03_right').removeClass('on');
+
+									$(this).addClass('on');
+									$("."+tab_class).addClass('on');
+
+								});
+							});
+					   </script>
+
+					</div><!--section03-->
+					<div class="section04">
+						<div class="in_Layer">
+							<div class="mc_tit">
+								<p data-aos="fade-down">Promotional video</p>
+								<h2 data-aos="fade-down">인류건강을 위해 의학적 해결책을 제시하는 <br>글로벌 토탈 헬스케어기업 휴온스</h2>
+							</div><!--mc_tit-->
+							<div class="video_box" data-aos="zoom-in">
+								<div class="video_wrap">
+									<iframe  src="https://www.youtube.com/embed/HtprNMLl-sU?si=LLfLJGG_eSV9xCeO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+								</div><!--video_wrap-->
+							</div><!--video_box-->
+						</div><!--in_Layer-->
+					</div><!--section04-->
+					
+					<div class="banner_box" data-aos="fade-up">
+						<div class="banner_slide">
+							<div class="banner">
+								<a href="https://www.huonsmall.com/goods/goods_view.php?goodsNo=1000000027" target="_blank">
+									<img src="../images/contents/elruby3_banner_kor.jpg" alt="엘루비" class="pc">
+									<img src="../images/contents/elruby3_banner_kor_m.jpg" alt="엘루비" class="m">
+								</a>
+							</div><!--banner-->
+							<div class="banner">
+								<a href="http://nizoral.huons.com/web/home.php" target="_blank">
+									<img src="../images/contents/nizoral.jpg" alt="니조랄" class="pc">
+									<img src="../images/contents/m_nizoral.jpg" alt="니조랄" class="m">
+								</a>
+							</div><!--banner-->
+
+							<div class="banner">
+								<a href="https://brand.naver.com/huons" target="_blank">
+									<img src="../images/contents/innerset_banner5.jpg" alt="유산균" class="pc">
+									<img src="../images/contents/m_innerset_banner5.jpg" alt="유산균" class="m">
+								</a>
+							</div><!--banner-->
+
+							<div class="banner">
+								<a href="https://www.elraviecos.com/" target="_blank">
+									<img src="../images/contents/elravie_banner.jpg" alt="엘라비에" class="pc">
+									<img src="../images/contents/m_elravie_banner.jpg" alt="엘라비에" class="m">
+								</a>
+							</div><!--banner-->
+						</div>
+					</div><!--banner_box-->
+					<script>
+						banner_slide()
+					</script>
+					<div class="section05" data-aos="fade">
+						<div class="in_Layer">
+							<div class="mc_tit w">
+								<p data-aos="fade-down">CS CENTER</p>
+								<h2 data-aos="fade-down">궁금하신 사항 및 제품 문의는 <br>상담안내센터로 연락주시면 상담해 드리겠습니다</h2>
+							</div><!--mc_tit-->
+							<div class="call">
+								<a href="tel:031-733-9165" class="flex-box"  data-aos="flip-left">
+									<span>문의전화</span>
+									<p>031-733-9165</p>
+								</a>
+								<a href="tel:031-733-9165"class="flex-box"  data-aos="flip-right">
+									<span>소비자 상담</span>
+									<p>031-733-9165</p>
+								</a>
+							</div><!--call-->
+							<ul class="sec05_btn">
+								<li data-aos="flip-left">
+									<a href="home.php?go=customer">
+										<h2>고객상담안내</h2>
+										<div class="sec05_arr"><img src="../images/ico/mc02_more.png"></div>
+									</a>
+								</li>
+								<li data-aos="flip-right">
+									<a href="home.php?go=contact.make">
+										<h2>온라인문의</h2>
+										<div class="sec05_arr"><img src="../images/ico/mc02_more.png"></div>
+									</a>
+								</li>
+							</ul><!--sec05_btn-->
+						</div><!--in_Layer-->
+					</div><!--section05-->
+				</div><!--main_contents-->
+			</div><!-- end : id : contents -->
+
+		<script type="text/javascript" src="../js/main.js"></script><!--메인에만 사용될 스크립트-->			<footer>
+				<div id="footer" class="section fp-auto-height">
+					<div class="f_area">
+						<div class="in_Layer2 cf">
+							<div class="f_logo">
+								<a href="home.php?go=main"><img src="../images/common/f_logo.png"></a>
+							</div>
+							<div class="f_text">
+								<div class="f_cont cf">
+									<div class="right cf">
+										
+										<div class="select_D">
+											<p class="name">Brand Page</p>
+											<ul class="select_list">
+												<li><a href="https://www.facebook.com/huons" target="_blank">휴온스 그룹 페이스북</a></li>
+												<li><a href="https://www.youtube.com/channel/UC211PAceLoNC5QZNb4nuKWw" target="_blank">휴온스 그룹 유튜브</a></li>
+												<li><a href="https://blog.naver.com/huonsad" target="_blank">휴온스 블로그</a></li>
+												<li><a href="https://kr.linkedin.com/company/huonsglobal" target="_blank">휴온스 글로벌 링크드인</a></li>
+												<li><a href="https://www.linkedin.com/company/huons/" target="_blank">휴온스 링크드인</a></li>
+												<li><a href="http://www.alloon.co.kr" target="_blank">알룬 홈페이지</a></li>
+												<li><a href="https://blog.naver.com/alloongirl" target="_blank">알룬 블로그</a></li>
+												<li><a href=" https://www.instagram.com/huonsn_official" target="_blank">휴온스N 인스타그램</a></li>
+												<li><a href="http://www.cgms.co.kr" target="_blank">휴온당뇨케어 홈페이지</a></li>
+												<!--<li><a href="https://pf.kakao.com/_xgrnjj" target="_blank">휴온당뇨케어 플러스친구</a></li>-->
+												<li><a href="https://elraviecos.com" target="_blank">더마 엘라비에 쇼핑몰</a></li>
+												<li><a href="https://www.instagram.com/derma_elravie_cosmetic" target="_blank">더마 엘라비에 인스타그램</a></li>
+												<li><a href="http://www.elravie.com" target="_blank">엘라비에 필러 홈페이지</a></li>
+												<li><a href="https://smartstore.naver.com/huons" target="_blank">휴온스N 공식스토어</a></li>
+												<li><a href="https://blog.naver.com/nizoral_" target="_blank">니조랄 블로그</a></li>
+												<li><a href="http://www.nizoral.huons.com/web/home.php" target="_blank">니조랄 홈페이지</a></li>
+												<li><a href="http://www.varrerderm.com/web/home.php" target="_blank">베러덤</a></li>
+												<li><a href="https://huonsmall.com/" target="_blank">휴온스N몰</a></li>
+											</ul>
+												
+										</div>
+										<div class="select_D">
+											<p class="name">Family Site</p>
+											<ul class="select_list">
+												<li><a href="https://huonsglobal.com/web/home_.php" target="_blank">휴온스글로벌</a></li>
+												<li><a href="https://huons.com" target="_blank">휴온스</a></li>
+												<li><a href="https://www.humedix.com/" target="_blank">휴메딕스</a></li>
+												<li><a href="https://humnc.com/" target="_blank">휴엠앤씨</a></li>
+												<li><a href="https://huonsbiopharma.com/" target="_blank">휴온스바이오파마</a></li>
+												<li><a href="https://huonslab.com" target="_blank">휴온스랩</a></li>
+												<li><a href="https://foodasb.co.kr/" target="_blank">휴엔비</a></li>
+												<li><a href="https://huonsusa.com/" target="_blank">휴온스 USA</a></li>
+												<li><a href="https://huonsjapan.com/" target="_blank">휴온스 Japan</a></li>
+												<!-- <li><a href="https://www.huonslifesciences.com/" target="_blank">휴온스생명과학</a></li> -->
+												<li><a href="https://huons-n.com/" target="_blank">휴온스엔</a></li>
+												<!-- <li><a href="http://www.hubena.com" target="_blank">휴베나</a></li> -->
+												<!-- <li><a href="http://www.biorosette.com/en/ " target="_blank">바이오로제트</a></li> -->
+											</ul>
+										</div>
+										<div class="policy"><a href="home.php?go=privacy">개인정보 처리방침</a></div>
+									</div>
+									<div class="left">
+										<ul>
+											<li>업체명 : 팬젠</li>
+										</ul>
+										<ul>
+											<li>주소 : 경기도 수원시 영통구 신원로 306 (원천동, 영통 이노플렉스 2동 4층) (우 16675)</li>
+										</ul>
+										<ul>
+											<li>전화 : 031-733-9165</li>
+											<li>팩스 : 031-733-9167</li>
+										</ul>
+									</div>
+								</div>
+								<p class="copy">(주)팬젠에서 운영하는 모든 사이트의 콘텐츠는 저작권의 보호를 받는 바, 무단 전재, 복사, 배포 등을 금합니다.<br/>
+								COPYRIGHT 팬젠 ALL RIGHT RESERVED. DESIGNED BY  <a href="http://sinbiweb.co.kr?s_url=huonsmeditech.com" target=_blank>SINBIWEB</a></p>
+							</div><!--f_cont-->
+						</div><!--in_Layer-->
+					</div><!--f_area-->
+				</div><!-- end : id : footer -->
+			</footer><!-- end : footer -->
+		</div><!-- end : id : wrap -->
+
+	</body>
+</html>
+<style>
+/* 팝업 */
+.popup_bottom1 {  vertical-align:middle;  padding:0px 0px 0px 5px;  font-size:8pt;}
+.popup_bottom2 {  vertical-align:middle; text-align:right; padding:0px 10px 0px 0px; font-size:8pt;}
+</style>
+
+<script>
+function cookieSet(dayNum,num,domain) {
+	var oDate, expiresDate;
+	oDate = new Date();
+	oDate.setDate(oDate.getDate() + dayNum);
+	expiresDate = oDate.toGMTString();
+
+	document.cookie = 'cookie_flag_'+num+'=Y;  expires=' + expiresDate + '; path=/';
+
+	fun_lay_close(num);
+}
+
+// 새창
+function url_new(url) {
+	window.open(url,'_blank','');
+}
+
+// 부모창(현재창)
+function url_parent(url) {
+	location.href = url;
+}
+</script>
+
+<script>
+/***************************************************************************************
+******************************** 팝업 드래그 레이어 *************************************
+****************************************************************************************/
+// 브라우저 버전별 체크
+var ns4=document.layers
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+// 넷스케이프 계열의 낮은 버전 브라우저를 위한....
+var dragswitch=0;
+var nsx;
+var nsy;
+var nstemp;
+
+function drag_dropns(name){
+	if (!ns4)
+		return;
+	temp=eval(name);
+	temp.captureEvents(Event.MOUSEDOWN | Event.MOUSEUP);
+	temp.onmousedown=gons;
+	temp.onmousemove=dragns;
+	temp.onmouseup=stopns;
+}
+
+function gons(e){
+	temp.captureEvents(Event.MOUSEMOVE);
+	nsx=e.x;
+	nsy=e.y;
+}
+
+function dragns(e){
+	if (dragswitch==1){
+		temp.moveBy(e.x-nsx,e.y-nsy);
+		return false;
+	}
+}
+
+function stopns(){
+	temp.releaseEvents(Event.MOUSEMOVE);
+}
+// 넷스케이프 계열 낮은 버전 브라우저를 위한.... 끝
+
+// 크로스브라우저의 높은 버전을 위한 변수 정의
+var crossobj;
+var tempx;
+var tempy;
+var offsetx;
+var offsety;
+
+// 마우스 드래그에 의한 레이어 움직임 통제
+function drag_drop(e){
+	if (ie4&&dragapproved){
+		crossobj.style.left=tempx+event.clientX-offsetx;
+		// 움직인레이어의 왼쪽  = 원래위치 + 현재마우스위치 - 눌렀을당시 마우스위치  즉 원래레이어위치에서 마우스가 움직인만큼만 더해라
+		crossobj.style.top=tempy+event.clientY-offsety;
+		return false;
+	}
+	else if (ns6&&dragapproved){
+		crossobj.style.left=tempx+e.clientX-offsetx+"px";
+		crossobj.style.top=tempy+e.clientY-offsety+"px";
+		return false;
+	}
+}
+
+//크로스브라우징을 위해 각 변수가 정의
+function initializedrag(e,num){
+	var popup_lay = "popup_lay_" + num;
+	var dragbar = "dragbar_" + num;
+
+	// 크로스브라우징을 위한 오브젝트 선택 getElementById를 쓸것인지 all.아이디명을 쓸건인지
+	crossobj=ns6? document.getElementById(popup_lay) : eval("document.all."+popup_lay);
+
+	// 이벤트가 일어난 오브젝트 선택
+	var firedobj=ns6? e.target : event.srcElement;
+
+	// 브라우저별 최상위 오브젝트 이름과 DTD 정의에 따라 body, documentElement의 차이
+	var topelement=ns6? "html" : document.compatMode && document.compatMode!="BackCompat"? "documentElement" : "body";
+
+	// while 과 if 문은 어떤 효용이 있는지 잘 모르겠다. 팝업을 움직이는데는 꼭 필요하지는 않다.
+	// while문 전체와 if의 조건을 제거해도 효과에 이상은 없다
+	while (firedobj.tagName!=topelement.toUpperCase() && firedobj.id!=dragbar){
+		firedobj=ns6? firedobj.parentNode : firedobj.parentElement;
+	}
+
+	if (firedobj.id==dragbar) {
+		offsetx=ie4? event.clientX : e.clientX;
+		offsety=ie4? event.clientY : e.clientY;
+		tempx=parseInt(crossobj.style.left);
+		tempy=parseInt(crossobj.style.top);
+
+		dragapproved=true;
+		document.onmousemove=drag_drop;
+	}
+}
+
+// 문서어디에서 마우스를 떼도 더이상 드레그 되지 않도록
+document.onmouseup=new Function("dragapproved=false");
+</script>

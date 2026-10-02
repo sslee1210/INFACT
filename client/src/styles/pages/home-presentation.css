@@ -766,7 +766,8 @@
   border-top: 1px solid #eef0f3 !important;
 }
 .home-main .home-experience__client-track {
-  gap: 56px !important;
+  --home-client-gap: 56px;
+  gap: var(--home-client-gap) !important;
   align-items: center !important;
 }
 .home-main .home-experience__client {
@@ -774,6 +775,12 @@
   font-weight: 500 !important;
   letter-spacing: -0.015em !important;
   color: #6b7688 !important;
+}
+.home-main .home-experience__client img {
+  display: block;
+  width: 168px;
+  height: 48px;
+  object-fit: contain;
 }
 @media (min-width: 768px) and (max-width: 1100px) {
   .home-main .home-experience {
@@ -858,7 +865,7 @@
     word-break: keep-all !important;
   }
   .home-main .home-experience__client-track {
-    gap: 32px !important;
+    --home-client-gap: 32px;
   }
   .home-main .home-experience__client {
     font-size: 15px !important;

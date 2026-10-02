@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>동화약품</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="pragma" content="no-store"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="Expires" content="-1"/>
+
+<link rel="stylesheet" type="text/css" href="/include/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/include/css/style_dw.css?ver=202608a" />
+<link rel="stylesheet" type="text/css" href="dw_main.css?ver=202608a" />
+
+<script src="/include/js/jquery-1.10.0.min.js"></script>
+<script src="/include/js/chkBrowser.js?ver=202608a"></script>
+<script src="/include/js/gnb.js?ver=202608a"></script>
+<script src="/include/js/mainVisual.js?ver=202608a"></script>
+<script src="/include/js/common.js?ver=202608a"></script>
+<script>
+
+	$(window).load(function(){
+
+		// 모바일 버전으로 보기
+		if (getCookie("mobile") == "m")
+			$("#mobileVersion").show();
+
+		// 팝업창
+		popup();
+	});
+
+	// 동화뉴스
+	function view(f_idx){
+		document.location.href = '/mediaCenter/dnews/content.asp?t_idx=' + f_idx;
+	}
+
+	// 동화뉴스
+	function goPage(f_idx)
+	{
+		// 채용
+		//document.location.href = '/recruit/board/content.asp?t_idx=' + f_idx;
+
+		// 제품공지
+		document.location.href = '/product/content_safeInfo.asp?t_idx=' + f_idx;
+	}
+
+	// 그룹웨어
+	function goGW()
+	{
+		var v_config = $("#hid_config").val();
+
+		if (v_config == "")
+			document.location.href = "https://www.dwgw.co.kr/";
+		else
+		{
+			alert(v_config);
+		}
+
+	}
+
+	// 제품소개
+	/*
+	function view_product(f_idx, f_b, f_s){
+
+		// 화장품의 경우, 더마 코스메틱 사이트로 이동
+		if (f_b == "50")
+			window.open("http://www.dwpharm-dc.com","_blank","")
+		else
+			document.location.href = '/product/content.asp?t_idx=' + f_idx + '&b=' + f_b + '&s=' + f_s;
+	}
+	*/
+
+	// 팝업창
+	function popup(){
+
+				setPopup();
+
+	}
+
+	// 팝업창 설정
+	function setPopup()
+	{
+		if(getCookie("dwPopupA") != "no") {
+			callPopup("202607A", "522", "558", -280);
+		}
+
+		if(getCookie("dwPopupB") != "no") {
+			callPopup("202607B", "522", "558", 252);
+		}
+	}
+
+	// 팝업창 실행 (창이름, 창가로길이, 창세로길이, 창가로위치이동)
+	function callPopup(f_name, f_width, f_height, f_move)
+	{
+		var v_left = (window.screen.width / 2) - (f_width / 2);
+		//var v_top = (window.screen.height / 2) - (f_height / 2);
+		
+		//v_left += window.screenLeft;
+		//v_top += window.screenTop;
+
+		var v_top = 120;
+		v_left = v_left + window.screenLeft + f_move;
+
+		var v_params = 'width=' + f_width + ',height=' + f_height + 'location=no,toolbar=no,menubar=no,status=no,scrollbars=auto,resizable=no,left=' + v_left + ',top=' + v_top;
+		var v_url = '/popup/popup_' + f_name + '.asp';
+		var v_popup = window.open(v_url, f_name, v_params);
+
+		v_popup.focus();
+	}
+
+</script>
+<script type="text/javascript" src="/include/js/google.js"></script>
+</head>
+
+<body>
+
+<form name="form1" onsubmit="search_check();return false;">
+
+<div class="directBtn"><a href="#mainArea">본문바로가기</a></div>
+
+<!-- 상단 -->
+<div id="topArea">
+
+	<div class="topBox">
+
+		<div class="logoBox"><a href="/"><img src="/images/ci.png?ver=202608a" alt="동화약품" /></a></div>
+		<div class="topMenuBox">
+
+			<ul class="topMenu">
+				<li><a href="/customer/customerIdea.asp" class="customer" title="고객지원"><i class="fa fa-microphone" aria-hidden="true"></i> 고객지원</a></li>
+				<li class="bar"><a href="/customer/siteMap.asp" title="사이트맵">SITE MAP</a></li>
+				<li class="bar"><a href="https://dw1897.co.kr/ws/" target="_blank" title="온라인 도매시스템">WHOLESALE</a></li>
+				<li class="bar"><a href="javascript:goGW();" title="그룹웨어">GROUPWARE</a></li>
+				<li class="bar"><a href="/english/" class="eng" title="영문 홈페이지">ENGLISH</a></li>
+			</ul>
+
+			<div class="pSearch">
+				<a href="javascript:search_click();" id="pSearchBtn" title="Search"><i class="fa fa-search" aria-hidden="true"></i></a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 검색 배경 -->
+	<div class="searchAreaBack" id="searchAreaBack_id"></div>
+
+	<!-- 검색창 -->
+	<div class="searchAreaWin" id="searchAreaWin_id">
+
+		<div class="searchBox">
+
+			<fieldset>
+				<legend>
+					<a href="javascript:search_mode('p');" class="on">제품검색</a>
+					<a href="javascript:search_mode('n');">뉴스검색</a>
+				</legend>
+
+				<div class="inputBox">
+					<input type="text" maxlength="12" id="sText1" name="sText1" title="검색어" value="" placeholder="" />
+					<input type="text" id="hid_sText1" name="hid_sText1" value="" style="display:none;" />
+					<a href="javascript:h_search();"><i class="fa fa-search" aria-hidden="true"></i></a>
+				</div>
+
+				<div id="h_suggestArea"></div>
+			</fieldset>
+
+		</div>
+
+	</div>
+
+	<div class="menuBox"><!-- 메인메뉴 시작 -->
+<div class="gnbArea" style="height:40px;">
+
+	<div class="gnbBox">
+
+		<div class="gnb">
+
+			<ul>
+				<li>
+					<p class="mMenu"><a href="/company/ceo.asp">회사소개</a></p>
+					<p class="sMenu">
+						<a href="/company/ceo.asp">인사말</a>
+						<a href="/company/ci.asp">C.I</a>
+						<a href="/company/history.asp">연혁</a>
+						<a href="/company/dw-song.asp">사가</a>
+						<!--<a href="/company/brochure.asp">광고북/브로슈어</a>-->
+						<a href="/company/facility.asp">연구소/공장</a>
+						<a href="/company/bestFamily.asp">가족친화우수기업</a>
+						<a href="/company/location.asp">오시는길</a>
+						<a href="/company/affiliate_1.asp">가족회사</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/rnd/introduction.asp">연구개발</a></p>
+					<p class="sMenu">
+						<a href="/rnd/introduction.asp">R&amp;D 소개</a>
+						<a href="/rnd/achievement.asp">연구성과</a>
+						<a href="/rnd/organization.asp">조직 및 업무</a>
+						<a href="/rnd/mainareas.asp">중점 연구분야</a>
+						<a href="/rnd/projects.asp">주요 연구과제</a>
+						<a href="/rnd/cooperation.asp">기술혁신 네트워크</a>
+						<a href="/rnd/partnership.asp">글로벌 동화</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/product/list_new.asp">제품정보</a></p>
+					<p class="sMenu">
+						<a href="/product/list_safeInfo.asp">제품 공지사항</a>
+						<a href="/product/list_new.asp">신제품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=10">전문의약품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=70">의료기기</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=20">일반의약품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=30">의약외품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=50">화장품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=45">건강기능식품</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=46">식품ㆍ음료</a>
+						<a href="/product/list_sub.asp?search=kindb_code&b=60">공산품ㆍ기타</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/esg/philosophy/introduction.asp">ESG경영</a></p>
+					<p class="sMenu">
+						<a href="/esg/philosophy/introduction.asp">ESG철학</a>
+						<a href="/esg/environment/policy.asp">환경경영</a>
+						<a href="/esg/safety/policy.asp">안전보건경영</a>
+						<a href="/esg/rights/ideal.asp">인권경영</a>
+						<a href="/esg/ethics/message.asp">윤리경영</a>
+						<a href="/esg/ethics/cyber.asp">사이버제보센터</a>
+						<a href="/esg/information/privacy.asp">정보보호</a>
+						<a href="/esg/csr/livingCampaign/list_living.asp">사회공헌</a>
+						<a href="/esg/governance/overview.asp">지배구조</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/recruit/board/list.asp">채용정보</a></p>
+					<p class="sMenu">
+						<a href="/recruit/board/list.asp">공지사항</a>
+						<a href="/recruit/recruit05.asp">채용안내</a>
+						<a href="/recruit/apply/sj_index.asp">상시채용</a>
+						<a href="/recruit/recruit06.asp">지원결과 확인</a>
+						<a href="/recruit/recruit07.asp">자주하는 질문</a>
+						<a href="/recruit/question/write.asp">채용 Q&amp;A</a>
+						<a href="/recruit/recruit08.asp">채용서류 반환 고지</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/mediaCenter/dnews/list.asp">미디어센터</a></p>
+					<p class="sMenu">
+						<a href="/mediaCenter/dnews/list.asp">동화뉴스</a>
+						<a href="/mediaCenter/adGallery/list_tv.asp">광고갤러리</a>
+						<a href="/mediaCenter/newsLetter/list.asp">뉴스레터</a>
+						<a href="/mediaCenter/character/character.asp">동화캐릭터</a>
+					</p>
+				</li>
+
+				<li>
+					<p class="mMenu"><a href="/ir/announcement_1.asp">IR자료실</a></p>
+					<p class="sMenu">
+						<a href="/ir/announcement_1.asp">공시</a>
+						<a href="/ir/announcement_2.asp">사업보고서</a>
+						<a href="/ir/list.asp">전자공고</a>
+					</p>
+				</li>
+
+			</ul>
+
+		</div>
+	  
+	</div>
+	<div class="gnbBack"></div>
+
+</div>
+<!-- 메인메뉴 끝 --></div>
+
+</div>
+
+<script type="text/javascript">
+
+	h_delayTimer = null;	// 초성검색창 오픈시 딜레이
+	h_selRow = -1;				// 초성검색창 선택라인
+
+	$(document).ready(function() {
+
+		// 회색바탕 클릭시 검색창 닫기
+		$("#searchAreaBack_id").on('click', function (e) {
+			searchWin_close();
+		});
+
+		// 검색란에 키입력시
+		$("#sText1").on("keydown", function(e){
+
+			switch(e.keyCode)
+			{
+				case 38:
+					h_focusUp();
+					break;
+				case 40:
+					h_focusDown();
+					break;
+			}
+		}).on("keyup", function(e){
+
+			switch(e.keyCode)
+			{
+				case 13:
+					h_search();
+					break;
+				case 38:
+				case 40:
+					break;
+				default:
+					h_selRow = -1;
+					h_suggest_start();
+					break;
+			}
+		});
+	});
+
+	// 상단 검색아이콘 클릭
+	function search_click()
+	{
+		if ($("#pSearchBtn i").hasClass('fa-search'))
+			searchWin_open();	// 검색창 열기
+		else
+			searchWin_close();	// 검색창 닫기
+	}
+
+	// 검색창 열기
+	function searchWin_open()
+	{
+		$("#pSearchBtn i").removeClass('fa-search').addClass('fa-times');
+		$("#searchAreaBack_id").show();
+		$("#searchAreaWin_id").show();
+
+		$("#sText1").attr("placeholder", "제품명 또는 성분명 입력");
+
+		// 검색창 포커스
+		searchInput_focus();
+	}
+
+	// 검색창 포커스
+	function searchInput_focus()
+	{
+		setTimeout(function() {
+			$("#sText1").val("");
+			$("#sText1").attr("placeholder", "");
+			$('#sText1').focus();
+		}, 1500);
+	}
+
+	// 검색종류 변경에 따라 문구 표시 달라짐
+	function search_mode(f_mode)
+	{
+		var v_guide = "";
+
+		if (f_mode == "p")
+		{
+			// 제품검색
+			$("fieldset legend a:eq(0)").addClass("on");
+			$("fieldset legend a:eq(1)").removeClass("on");
+
+			v_guide = "제품명 또는 성분명 입력";
+		}
+		else
+		{
+			// 초성검색창 닫기
+			h_closeResult();
+
+			// 뉴스검색
+			$("fieldset legend a:eq(0)").removeClass("on");
+			$("fieldset legend a:eq(1)").addClass("on");
+
+			v_guide = "검색어 입력";
+		}
+
+		if ($('#sText1').val() == "")
+		{
+			$("#sText1").attr("placeholder", v_guide);
+
+			searchInput_focus();	// 검색창 포커스
+		}
+	}
+
+	// 초성검색 시작
+	function h_suggest_start()
+	{
+		// 제품검색 모드인 경우만 실행
+		if ($("fieldset legend a:eq(0)").hasClass('on'))
+		{
+			if ($("#sText1").val() == "")
+			{
+				h_closeResult();	// 초성검색창 닫기
+			}
+			else
+			{
+				if (h_delayTimer)
+					window.clearTimeout(h_delayTimer);
+
+				h_delayTimer = window.setTimeout(h_suggest_get, 200);
+			}
+		}
+		else
+		{
+			h_closeResult();	// 초성검색창 닫기
+		}
+	}
+
+	// 초성검색 조회
+	function h_suggest_get()
+	{
+		$.getJSON('/product/list_search_ajax.asp?s_text=' + escape($('#sText1').val()), h_suggest_result).fail(function() {
+			h_closeResult();	// 초성검색창 닫기
+		});
+
+		h_delayTimer = null;
+	}
+
+	// 초성검색 결과
+	function h_suggest_result(f_data)
+	{
+		$('#h_suggestArea').empty();
+
+		if ($.isArray(f_data))
+		{
+			var html = "";
+
+			$.each(f_data, function(index, item) {
+				html += '<li onclick="javascript:view_product(' + item.t_idx + ',' + item.t_b + ',' + item.t_s + ');">' + item.t_value + '</li>';
+			});
+
+			html = "<ul>" + html + "</ul><p onclick='javascript:h_closeResult();'><i class='fa fa-arrow-up'></i> 검색결과 닫기</p>"
+
+			$('#h_suggestArea').append(html);
+		}
+	}
+
+	// 아래 화살표
+	function h_focusDown()
+	{
+		if ($('#h_suggestArea').text() != "")
+		{
+			if ($('#h_suggestArea li').length > h_selRow + 1)
+			{
+				if (h_selRow != -1)
+					$('#h_suggestArea li').removeClass('on');
+
+				h_selRow++;
+
+				$('#h_suggestArea li:eq(' + h_selRow + ')').addClass('on');
+
+				$("#sText1").val($('#h_suggestArea li:eq(' + h_selRow + ')').text());
+			}
+		}
+	}
+
+	// 위화살표
+	function h_focusUp()
+	{
+		if ($('#h_suggestArea').text() != "")
+		{
+			if (h_selRow > 0)
+			{
+				$('#h_suggestArea li:eq(' + h_selRow + ')').removeClass('on');
+
+				h_selRow--;
+
+				$('#h_suggestArea li:eq(' + h_selRow + ')').addClass('on');
+
+				$("#sText1").val($('#h_suggestArea li:eq(' + h_selRow + ')').text());
+			}
+		}
+	}
+
+	// 초성검색창 닫기
+	function h_closeResult()
+	{
+		$('#h_suggestArea').empty();
+	}
+
+	// 검색시작 (검색란 버튼, 초성검색 엔터)
+	function h_search()
+	{
+		if ($("fieldset legend a:eq(0)").hasClass('on'))
+			search_check('p', 'topSearch');	// 제품검색
+		else if ($("fieldset legend a:eq(1)").hasClass('on'))
+			search_check('n', 'topSearch');	// 뉴스검색
+	}
+
+	// 검색창 닫기
+	function searchWin_close()
+	{
+		$("#pSearchBtn i").removeClass('fa-times').addClass('fa-search');
+		$("#searchAreaBack_id").hide();
+		$("#searchAreaWin_id").hide();
+		$("#sText1").val("");
+		h_closeResult();	// 초성검색창 닫기
+	}
+
+	// 제품보기
+	function view_product(f_idx, f_b, f_s)
+	{
+		document.location.href = '/product/content.asp?t_idx=' + f_idx + '&b=' + f_b + '&s=' + f_s;
+	}
+</script>
+
+
+<!-- 메인 비주얼 -->
+<div id="visualArea">
+
+	<div class="visualBox">
+
+		<div class="controls" style="display:none;">
+			<a href="#"></a>
+		</div>
+
+		<div class="points" style="display:none;">
+			<a href="#"></a>
+		</div>
+
+		
+		<ul class="visuals">
+			<li class="v01">신사옥</li>
+		</ul>
+
+	</div>
+
+</div>
+
+<!-- 콘텐츠 -->
+<div id="mainArea">
+
+	<!-- 동화뉴스 -->
+	<div class="newsArea">
+
+		<div class="titleBox">
+			<h2>동화뉴스</h2>
+			<p><a href="/mediaCenter/dnews/list.asp">더보기 <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+		</div>
+
+		<ul>
+<li><a href='javascript:view(1588);'>장진혁 글로벌부문장 선임</a></li><li><a href='javascript:view(1587);'>창립 129주년 기념식 개최</a></li><li><a href='javascript:view(1586);'>가마치통닭과 ‘소다 활’ 공동 마케팅 업무협약(MOU) 체결</a></li><li><a href='javascript:view(1585);'>국민생활건강 캠페인, 이제 온라인 광고서 만난다</a></li><li><a href='javascript:view(1584);'>활명수 광고 QR 스캔하니 ‘코르티스’ 목소리가 들렸다</a></li><li><a href='javascript:view(1577);'>활명수 128주년 기념판 판매수익금 대한적십자사 기부</a></li>
+		</ul>		
+
+	</div>
+
+	<!-- 신제품 -->
+	<div class="productArea">
+
+		<div class="titleBox">
+			<h2>신제품</h2>
+			<p><a href="/product/">더보기 <i class="fa fa-angle-right" aria-hidden="true"></i></a></p>
+		</div>
+
+		<div class="slider-container" id="sliderContainer">
+
+			<div class="slider-wrapper" id="sliderWrapper">
+<div class='slide-item'><div class='pImage'><a href='javascript:view_product(797);'><img src='https://www.dong-wha.co.kr/product/pimage/20260827122846_kod_200.jpg' alt='활명수1897(K.O.D)' /></a></div><div class='pTitle' onclick='view_product(797);'><p class='pCate'>의약외품</p><p class='pName'>활명수1897(K.O.D)</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(796);'><img src='https://www.dong-wha.co.kr/product/pimage/20260818104206_비타천 멀티비타 200.png' alt='비타천 멀티비타' /></a></div><div class='pTitle' onclick='view_product(796);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>비타천 멀티비타</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(776);'><img src='https://www.dong-wha.co.kr/product/pimage/20260601014752_20260529113306_다이소_브랜드관_200.jpg' alt='다이소 후시덤 베리어 리페어 라인' /></a></div><div class='pTitle' onclick='view_product(776);'><p class='pCate'>화장품</p><p class='pName'>다이소 후시덤 베리어 리페어 라인</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(767);'><img src='https://www.dong-wha.co.kr/product/pimage/20260701092635_1400.jpg' alt='편안활' /></a></div><div class='pTitle' onclick='view_product(767);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>편안활</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(766);'><img src='https://www.dong-wha.co.kr/product/pimage/20260626091826_200 (2).jpg' alt='소다활' /></a></div><div class='pTitle' onclick='view_product(766);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>소다활</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(765);'><img src='https://www.dong-wha.co.kr/product/pimage/20260408050338_다이소제품_홈페이지 등록_200_200.png' alt='다이소 전용 제품' /></a></div><div class='pTitle' onclick='view_product(765);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>다이소 전용 제품</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(761);'><img src='https://www.dong-wha.co.kr/product/pimage/20260203033424_침향홍삼쌍화200.jpg' alt='쌍화원 침향홍삼쌍화' /></a></div><div class='pTitle' onclick='view_product(761);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>쌍화원 침향홍삼쌍화</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(760);'><img src='https://www.dong-wha.co.kr/product/pimage/20260203032609_알부민홍삼200.jpg' alt='홍삼온(紅蔘蘊) 알부민 홍삼' /></a></div><div class='pTitle' onclick='view_product(760);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>홍삼온(紅蔘蘊) 알부민 홍삼</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(758);'><img src='https://www.dong-wha.co.kr/product/pimage/20260129111614_EmfidiemMet XR Tab. img 200px.jpg' alt='엠플디엠메트서방정 10/1000mg, 25/1000mg' /></a></div><div class='pTitle' onclick='view_product(758);'><p class='pCate'>전문의약품</p><p class='pName'>엠플디엠메트서방정 10/1000mg, 25/1000mg</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(757);'><img src='https://www.dong-wha.co.kr/product/pimage/20260129111038_EmfidiemMet IR Tab. img 200px.jpg' alt='엠플디엠메트정 12.5/850mg, 12.5/1000mg' /></a></div><div class='pTitle' onclick='view_product(757);'><p class='pCate'>전문의약품</p><p class='pName'>엠플디엠메트정 12.5/850mg, 12.5/1000mg</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(756);'><img src='https://www.dong-wha.co.kr/product/pimage/20260129110257_Emfldiem Tab. img 200px.jpg' alt='엠플디엠정 10mg, 25mg' /></a></div><div class='pTitle' onclick='view_product(756);'><p class='pCate'>전문의약품</p><p class='pName'>엠플디엠정 10mg, 25mg</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(754);'><img src='https://www.dong-wha.co.kr/product/pimage/20260126055632_더맥스에너지드링크 중.jpg' alt='더맥스에너지드링크' /></a></div><div class='pTitle' onclick='view_product(754);'><p class='pCate'>식품ㆍ음료</p><p class='pName'>더맥스에너지드링크</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(753);'><img src='https://www.dong-wha.co.kr/product/pimage/20260119030404_ecclock_M.jpeg' alt='에크락겔5% 40g (소프피로니움브롬화물)' /></a></div><div class='pTitle' onclick='view_product(753);'><p class='pCate'>전문의약품</p><p class='pName'>에크락겔5% 40g (소프피로니움브롬화물)</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(741);'><img src='https://www.dong-wha.co.kr/product/pimage/20250424031349_화이투벤 나잘-200px.jpg' alt='화이투벤 나잘스프레이' /></a></div><div class='pTitle' onclick='view_product(741);'><p class='pCate'>일반의약품</p><p class='pName'>화이투벤 나잘스프레이</p></div></div><div class='slide-item'><div class='pImage'><a href='javascript:view_product(740);'><img src='https://www.dong-wha.co.kr/product/pimage/20250331113715_1_알보칠_200px.jpg' alt='동화 알보칠' /></a></div><div class='pTitle' onclick='view_product(740);'><p class='pCate'>일반의약품</p><p class='pName'>동화 알보칠</p></div></div>
+			</div>
+
+			<div class="dots" id="dots"></div>
+			<button class="nav-btn prev" id="prevBtn">&#10094;</button>
+			<button class="nav-btn next" id="nextBtn">&#10095;</button>
+
+		</div>
+
+		<script src="/include/js/mainProduct.js?ver=202608a"></script>
+
+	</div>
+
+</div>
+
+<!-- 하단 -->
+<div id="footerArea">
+
+	<div class="logo">
+
+		<table>
+			<tr>
+				<td>
+					
+					<ul>
+						<li><a href="/company/bestFamily.asp"><img src="/images/logo_bestfamily1.png" height="32" /></a></li>
+						<li><a href="/esg/ethics/compliance.asp?t_page=cp02"><img src="/images/logo_CP3.png" height="32" /></a></li>
+						<li><a href="/esg/csr/livingCampaign/list_living.asp"><img src="/images/logo_campaign.png" height="32" /></a></li>
+					</ul>
+
+				</td>
+				<td>
+				
+					<ul>
+						<li><a href="http://www.whalmyungsu.co.kr/" target="_blank"><img src="/images/brand_whalmyungsu1.jpg" alt="활명수 홈페이지" /></a></li>
+						<li><a href="http://www.myeach.co.kr/" target="_blank"><img src="/images/brand_each1.jpg" alt="잇치 홈페이지" /></a></li>
+						<li><a href="https://culip.co.kr/" target="_blank"><img src="/images/brand_culip.jpg" alt="큐립 홈페이지" /></a></li>
+						<!--
+						<li><a href="http://www.fucidin.co.kr/" target="_blank"><img src="/images/brand_fucidin1.jpg" alt="후시딘 홈페이지" /></a></li>
+						<li><a href="https://www.dryan.kr/" target="_blank"><img src="/images/brand_dryan.jpg" alt="드라이언 홈페이지" /></a></li>
+						<li><a href="http://www.dwpharm-dc.com/" target="_blank"><img src="/images/brand_dermacosmetic1.jpg" alt="더마 코스메틱 사이트" /></a></li>
+						-->
+					</ul>
+				
+				</td>
+				<td>
+
+					<ul class="brandSite">
+						<li style="margin-left:20px;"><a href="https://www.dw1897.co.kr/" target="_blank"><img src="/images/brand_dwemall3.jpg" alt="동화eMall 사이트" /></a></li>
+					</ul>
+				
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<div class="copyRight">
+		<div class="copyBox">
+
+			<div class="dwLogo"><img src="/images/logo.png?ver=202608a" alt="동화약품" /></div>
+			<div class="dwInfo">
+				<p>04516 서울특별시 중구 서소문로9길 20, 빌딩1897 <span style="margin-left:10px;">대표이사 : 유준하, 윤인호</span></p>
+				<p>Tel : 02-2021-9300 &nbsp;Mail : dongwha@dong-wha.co.kr <span style="margin-left:10px;">사업자등록번호 : 110-81-00102</span></p>
+			</div>
+			<div class="dwEtc">
+				<p><a href="/esg/information/privacy.asp">개인정보 처리방침</a></p>
+				<p class="eng">Copyright(c) DONG WHA PHARM. CO., LTD.</p>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<div id="mobileVersion"><a href="javascript:goMobile();">모바일 버전</a></div>
+
+<input type="hidden" name="hid_config" id="hid_config" value="" />
+
+</form>
+
+</body>
+</html>

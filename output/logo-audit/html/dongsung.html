@@ -1,0 +1,1204 @@
+<script>
+
+function getCookie(c_name)
+{
+//alert(c_name);
+	var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1)
+    {
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1)
+    {
+        c_value = null;
+    }
+    else
+    {
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1)
+        {
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+
+// 모바일 환경 감지
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function isIOSSafari() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && /Safari/.test(navigator.userAgent) && !/CriOS|FxiOS|OPiOS|mercury/.test(navigator.userAgent);
+}
+
+// 모바일용 모달 팝업 생성
+function createMobileModal(url, width, height, popupId) {
+    // 기존 모달이 있으면 제거
+    var existingModal = document.getElementById('mobileModal_' + popupId);
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // 모달 배경
+    var modalOverlay = document.createElement('div');
+    modalOverlay.id = 'mobileModal_' + popupId;
+    modalOverlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:9999;display:flex;justify-content:center;align-items:center;';
+    
+    // 팝업 컨테이너 - 세로 크기 줄이기
+    var modalContent = document.createElement('div');
+    var modalWidth = Math.min(width, window.innerWidth - 40);
+    // 세로 크기를 더 작게 조정
+    var modalHeight = Math.min(height * 0.8, window.innerHeight - 150); // 기존보다 20% 작게, 여백도 더 크게
+    
+    modalContent.style.cssText = 'width:' + modalWidth + 'px;height:' + modalHeight + 'px;background:white;border-radius:10px;overflow:auto;position:relative;box-shadow:0 4px 20px rgba(0,0,0,0.3);';
+    
+    // X 닫기 버튼
+    var closeButton = document.createElement('button');
+    closeButton.innerHTML = '×';
+    closeButton.style.cssText = 'position:absolute;top:10px;right:15px;z-index:10001;background:rgba(0,0,0,0.7);color:white;border:none;border-radius:50%;width:30px;height:30px;font-size:20px;font-weight:bold;cursor:pointer;display:flex;align-items:center;justify-content:center;';
+    
+    // X 버튼 호버 효과
+    closeButton.onmouseover = function() {
+        this.style.background = 'rgba(0,0,0,0.9)';
+    };
+    closeButton.onmouseout = function() {
+        this.style.background = 'rgba(0,0,0,0.7)';
+    };
+    
+    // X 버튼 클릭시 닫기
+    closeButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        modalOverlay.remove();
+    });
+    
+    // iframe으로 팝업 내용 로드
+    var iframe = document.createElement('iframe');
+    iframe.src = url;
+    iframe.style.cssText = 'width:100%;height:100%;border:none;display:block;';
+    iframe.frameBorder = '0';
+    iframe.scrolling = 'auto'; // 스크롤 허용해서 체크박스 보이게
+    
+    // iframe 로드 완료 후 이미지 최적화
+    iframe.onload = function() {
+        try {
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            if (iframeDoc && iframeDoc.body) {
+                // CSS 스타일 주입으로 이미지를 모달에 맞게 최적화
+                var style = iframeDoc.createElement('style');
+                style.textContent = `
+                    html, body { 
+                        margin: 0 !important; 
+                        padding: 0 !important; 
+                        overflow-x: hidden !important;
+                        overflow-y: auto !important;
+                        width: 100% !important;
+                        height: auto !important;
+                        min-height: 100% !important;
+                        background: transparent !important;
+                    }
+                    
+                    table { 
+                        width: 100% !important; 
+                        border-collapse: collapse !important;
+                        table-layout: fixed !important;
+                    }
+                    
+                    td {
+                        width: 100% !important;
+                        vertical-align: top !important;
+                        padding: 0 !important;
+                    }
+                    
+                    img { 
+                        width: 100% !important;
+                        height: auto !important;
+                        max-width: 100% !important;
+                        object-fit: contain !important;
+                        display: block !important;
+                    }
+                    
+                    /* 팝업 내용이 이미지인 경우 최적화 */
+                    body > table > tbody > tr > td {
+                        background-size: contain !important;
+                        background-repeat: no-repeat !important;
+                        background-position: center !important;
+                    }
+                    
+                    /* 폼 요소들 크기 조정 */
+                    form {
+                        width: 100% !important;
+                        margin: 0 !important;
+                        padding: 15px !important;
+                        box-sizing: border-box !important;
+                        background: #f5f5f5 !important;
+                        border-top: 1px solid #ddd !important;
+                    }
+                    
+                    /* 체크박스 영역 보이게 하기 */
+                    form table {
+                        background: #f5f5f5 !important;
+                        width: 100% !important;
+                    }
+                    
+                    input[type="checkbox"] {
+                        width: 18px !important;
+                        height: 18px !important;
+                        margin-right: 8px !important;
+                        vertical-align: middle !important;
+                    }
+                    
+                    font {
+                        font-size: 14px !important;
+                        line-height: 1.4 !important;
+                        color: #333 !important;
+                    }
+                    
+                    label {
+                        font-size: 14px !important;
+                        color: #333 !important;
+                        cursor: pointer !important;
+                    }
+                    
+                    /* 체크박스 div 영역 강조 */
+                    div[style*="text-align:center"] {
+                        padding: 15px !important;
+                        background: #f5f5f5 !important;
+                        border-top: 1px solid #ddd !important;
+                    }
+                `;
+                iframeDoc.head.appendChild(style);
+                
+                // 이미지가 있는 경우 추가 최적화
+                var images = iframeDoc.querySelectorAll('img');
+                images.forEach(function(img) {
+                    img.style.width = '100%';
+                    img.style.height = 'auto';
+                    img.style.maxWidth = '100%';
+                    img.style.objectFit = 'contain';
+                });
+            }
+        } catch(e) {
+            // 크로스 도메인 오류 시 기본 처리
+            console.log('iframe 내용 접근 제한');
+        }
+    };
+    
+    modalContent.appendChild(iframe);
+    modalContent.appendChild(closeButton);
+    modalOverlay.appendChild(modalContent);
+    
+    // 배경 클릭시 닫기
+    modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) {
+            modalOverlay.remove();
+        }
+    });
+    
+    // ESC 키로 닫기
+    var escHandler = function(e) {
+        if (e.key === 'Escape') {
+            modalOverlay.remove();
+            document.removeEventListener('keydown', escHandler);
+        }
+    };
+    document.addEventListener('keydown', escHandler);
+    
+    document.body.appendChild(modalOverlay);
+    
+    return modalOverlay;
+}
+
+// 통합 팝업 오픈 함수
+function openCompatiblePopup(url, name, width, height, top, left) {
+    try {
+        if (isMobile()) {
+            // 모바일: 모달 방식 사용
+            createMobileModal(url, width, height, name);
+        } else {
+            // 데스크톱: 기존 window.open 방식
+            var options = "width=" + width + ",height=" + height + ",top=" + top + ",left=" + left + ",scrollbars=no,resizable=no,toolbar=no,menubar=no,status=no";
+            var popup = window.open(url, name, options);
+            
+            if (popup && !popup.closed) {
+                popup.focus();
+            }
+        }
+    } catch (e) {
+        console.log("팝업 오픈 실패:", e);
+        // 실패 시 새 탭으로
+        window.open(url, '_blank');
+    }
+}
+
+// 오늘 하루 이 창 띄우지 않음 체크했으면 팝업뜨기 않음.
+
+</script>
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="canonical" href="https://www.dongsung-pharm.com/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+	<meta name="apple-mobile-web-app-title" content="DONGSUNG BIO PHARM" />
+	<meta name="robots" content="index,follow" />
+	<meta name="description" content="Health From Nature 국민생활건강파트너 동성제약입니다." />
+	<meta property="og:title" content="동성제약">
+	<meta property="og:description" content="Health From Nature 국민생활건강파트너 동성제약입니다.">
+	<meta property="og:image" content="http://www.dongsung-pharm.com/user/image/top/logo.jpg">
+	<meta property="og:url" content="https://www.dongsung-pharm.com/">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="동성제약">
+	<meta name="twitter:url" content="https://www.dongsung-pharm.com/">
+	<meta name="twitter:image" content="http://www.dongsung-pharm.com/user/image/top/logo.jpg">
+	<meta name="twitter:description" content="Health From Nature 국민생활건강파트너 동성제약입니다." />
+	<title>동성제약주식회사</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+	<link rel="stylesheet" type="text/css" href="/user/css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="/user/css/DSUstyle.css" />
+	<link rel="stylesheet" type="text/css" href="/user/css/lightslider8.css" />
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="/user/js/jquery.reslider.js"></script>
+	<script src="/user/js/DSUcommon.js"></script>
+	<script src="/user/js/DSjquerymenu.js"></script>
+	<script src="/user/js/lightslider8.js"></script>
+	<script src="/user/js/DSscript.js"></script>
+	<script language="javascript" src="/common/js/js_lib.js"></script>
+	<script language="javascript" src="/common/js/common.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#content-slider2").lightSlider({
+				loop: true,
+				item: 1,
+				pager: false,
+				auto: true,
+				speed: 500,
+				pause: 7000,
+				slideMargin: 0,
+				keyPress: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<header>
+			<!--380px 이하 전체메뉴시작-->
+			﻿     <!--380px 이하 전체메뉴시작-->
+     <div class="m_header">
+        <div class="mheader_logo"><a href="/"><img src="/user/image/top/logo_m.jpg" alt="동성제약 홈바로가기" /></a></div>
+     	<div class="mTnav">
+     		<ul class="mtnavEleul">
+     			<li><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26&onClass1=_on">고객</a></li>
+     			<li><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></li>
+     			<li class="mselectLi">
+     				<form><select class="tnavSelect69" title="동성제약 사이트 언어선택" onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value" style="margin-top:-1px;">
+     						<option value="">언어</option>
+                                <option value="/">Korea</option>
+     						<option value="/user-english/index.php">English</option>
+     					</select></form>
+     			</li>
+     			<li class="mtnavlast"><span class="btn btn_search" id="mBtnSea"><span>검색</span></span></li>
+     		</ul>
+     	</div>
+     	<div class="mAllnav"><span class="btn btn_open" id="mBtnMenu"><span>전체메뉴 열기</span></span></div>
+     </div>
+     <!--380px이하 전체메뉴-->
+     <!--380px이하 검색-->
+     <div class="m_search" id="m_search">
+     	<fieldset>
+     		<legend>검색</legend>
+     		<div>
+     			<form name="searchForm1" method="post" action="/user/etc/search_result.php">
+     				<input type="hidden" name="act_Flag" value="search">
+     				<input type="hidden" name="sCountry" value="kr">
+     				<input type="hidden" name="mcate1" value="36">
+     				<input type="text" name="tSearchStr" title="통합검색 키워드 입력란" class="inputTs105" /><button class="TotalS"><img src="/user/image/top/searchbtn.jpg" alt="검색하기" /></button>
+     			</form>
+     		</div>
+
+     	</fieldset>
+     </div>
+     <!--380px이하 sub메뉴 시작-->
+     <div class="submenu">
+     	<div class="mtotalNav">
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/user/company/company1.php?mcate1=1">회사소개</a></div>
+     			<div class="mTmenuul">
+     				<span><a href="/user/company/company1.php?mcate1=1">CEO 인사말</a></span>
+     				<span><a href="/user/company/company2.php?mcate1=1">기업소개</a></span>
+     				<span><a href="/user/company/company3.php?mcate1=1">동성연혁</a></span>
+     				<!--			<span><a href="/user/company/company3.php?mcate1=1">PDD/PDT</a></span> -->
+     				<span><a href="/user/company/company4.php?mcate1=1">공장소개</a></span><br />
+     				<span><a href="/user/company/company00.php?mcate1=1">암센터소개</a></span>
+     				<span><a href="/user/company/company5.php?mcate1=1">지점안내</a></span>
+     				<span><a href="/user/company/company6.php?mcate1=1">오시는 길</a></span>
+					<span><a href="/customer/board/company_notice.php?leftType=board&board_id=cnotice&mcate1=1">공지사항</a></span>
+     			</div>
+     		</div>
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">제품정보</a></div>
+     			<div class="mTmenuul">
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">일반의약품</a></span>
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr&mcate1=2">전문의약품</a></span>
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=72&sCountry=kr&mcate1=2">염모제/펌제</a></span>
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr&mcate1=2">화장품</a></span><br />
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=74&sCountry=kr&mcate1=2">건강기능식품</a></span>
+					<span><a href="/user/product/product_list.php?parent_cate_idx=222&sCountry=kr&mcate1=2">식품</a></span>
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=75&sCountry=kr&mcate1=2">의료기기</a></span>
+     				<span><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr&mcate1=2">의약외품/기타</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=mediNoti&mcate1=2">의약품공지사항</a></span>
+     			</div>
+     		</div>
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/user/investment/investment_list1.php?mcate1=3">투자정보</a></div>
+     			<div class="mTmenuul">
+     				<span><a href="/user/investment/investment_list1.php?mcate1=3">주가정보</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=gongsi&mcate1=3">공시정보</a></span>
+     				<!--				<span><a href="/user/investment/investment_list3.php?mcate1=2">IR자료실</a></span> -->
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=auditRT&mcate1=3">감사보고서</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=businessRt&mcate1=3">사업보고서</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=notice&mcate1=3">결산공고</a></span>
+     			</div>
+     		</div>
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">기업홍보</a></div>
+     			<div class="mTmenuul">
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">보도자료</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=gallery&mcate1=4&onClass1=_on">광고자료</a></span>
+     				<span><a href="/customer/board/boards.php?page_type=view&idx=29&leftType=board&board_id=outmov&bGubun=&page=1&search_key=&search_word=&mcate1=4">홍보동영상</a></span>
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=goodnews&mcate1=4">동성굿뉴스</a></span><br />
+     				<span><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4&onClass1=_on">사회공헌활동</a></span>
+     			</div>
+     		</div>
+			<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/user/company/company102.php?mcate1=39">지속가능경영</a></div>
+     			<div class="mTmenuul">
+     				<span><a href="/user/company/company102.php?mcate1=39">윤리준법경영</a></span>
+     			</div>
+     		</div>
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26&onClass1=_on">고객</a></div>
+     			<div class="mTmenuul">
+     				<!--	        <span><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26&onClass1=_on">자주 묻는 질문</a></span> -->
+     				<!--			<span><a href="/customer/board/boards.php?leftType=board&board_id=counsel&mcate1=26">1대1 문의</a></span>  -->
+     				<span><a href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a></span><br />
+     				<span><a href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></span>
+     			</div>
+     		</div>
+     		<div class="mTmenubox">
+     			<div class="mTmenuh3"><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></div>
+     			<div class="mTmenuul_last">
+     				<span><a href="/user/recruit/recruit1.php?mcate1=27">인재상</a></span>
+     				<span><a href="/user/recruit/recruit2.php?mcate1=27">인사제도</a></span>
+     				<span><a href="/user/recruit/recruit3.php?mcate1=27">채용정보</a></span>
+     			</div>
+     		</div>
+
+     	</div>
+     	<!--//380px이하 sub메뉴 끝-->
+     	<!--380px이하 검색
+	   <div class="m_search" id="m_search">
+	       <!--검색 start-
+			<fieldset>
+				<legend>검색</legend>
+					<div>
+						<input type="text" title="검색어 입력" value="검색어 입력" class="inputTS114" tabindex="1"/>
+					</div>
+				<button class="toTbtn" onclick="">검색</button>
+			</fieldset>
+			<!--//검색 end
+        </div>
+		<!--//380px이하 검색-->
+     </div>
+			<!--380px이하 전체메뉴-->
+			<!-- 일반모드일 경우 시작 -->
+			     <div class="header_warp">
+	   <div class="tnav">
+	     <!--고객/채용/언어/검색-->
+	     <div class="tnav_elebox">
+		   <ul class="tnavEleul">
+             <li><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26&onClass1=_on">고객</a></li>
+			 <li><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></li>
+			 <li class="selectLi"><form><select class="tnavSelect69" title="동성제약 사이트 언어선택" onChange="if(this.selectedIndex!=0) self.location=this.options[this.selectedIndex].value">
+			       <option value="">언어</option>
+				   <option value="/">Korea</option>
+				   <option value="/user-english/index.php">English</option>
+				 </select></form>
+			 </li>
+			 <li class="tnavlist">통합검색</li>
+			 <li class="tnavlast">
+				   <form name="searchForm1" method="post" action="/user/etc/search_result.php">
+					   <input type="hidden" name="act_Flag" value="search">
+					   <input type="hidden" name="sCountry" value="kr">
+   					   <input type="hidden" name="mcate1" value="36">
+					   <input type="text" name="tSearchStr" title="통합검색 키워드 입력란" class="inputTs105"/><button class="TotalS"><img src="/user/image/top/searchbtn.jpg" alt="검색하기" /></button>
+				   </form>
+			</li>
+		   </ul>
+         </div>
+		 <!--//고객/채용/언어/검색-->
+	   </div>
+	   <div class="header_logoNav">
+         <div class="header_logo"><a href="/"><img src="/user/image/top/logo.jpg" alt="동성제약 홈바로가기"/></a></div>
+		 <div class="gnb DSnav">
+		   <ul class="DSnavul">
+		     <li><a href="/user/company/company1.php?mcate1=1">회사소개</a></li>
+			 <li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">제품정보</a></li>
+			 <li><a href="/user/investment/investment_list1.php?mcate1=3">투자정보</a></li>
+			 <li><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">기업홍보</a></li>
+		     <li><a href="/user/company/company102.php?mcate1=39">지속가능경영</a></li>
+		   </ul>
+		 </div>
+	   </div>
+	 </div>
+			<!-- 일반모드일 경우 끝 -->
+		</header>
+		<!--네비게이션 와이드풀다운-->
+		<div class="snb WidefullMenuWrap">
+			<div class="WMWrap">
+				<!--회사소개-->
+				<div class="IntroM1">
+					<div class="IntroMTitle">회사소개</div>
+					<div class="IntroMExp">60년에 이르는 동성제약은<br />
+						화장품에서 완제의약품까지<br />
+						미래지향적인 마케팅과<br />
+						고객지향의 토탈 서비스를<br />
+						제공합니다.
+					</div>
+				</div>
+				<!--//회사소개-->
+				<!--제품정보-->
+				<div class="IntroM2" style="display:none;">
+					<div>제품정보</div>
+					<div>60년에 이르는 동성제약은<br />
+						화장품에서 완제의약품까지<br />
+						미래지향적인 마케팅과<br />
+						고객지향의 토탈 서비스를<br />
+						제공합니다.
+					</div>
+				</div>
+				<!--//제품정보-->
+				<!--투자정보-->
+				<div class="IntroM3" style="display:none;">
+					<div>투자정보</div>
+					<div>60년에 이르는 동성제약은<br />
+						화장품에서 완제의약품까지<br />
+						미래지향적인 마케팅과<br />
+						고객지향의 토탈 서비스를<br />
+						제공합니다.
+					</div>
+				</div>
+				<!--//투자정보-->
+				<!--기업홍보-->
+				<div class="IntroM4" style="display:none;">
+					<div>기업홍보</div>
+					<div>60년에 이르는 동성제약은<br />
+						화장품에서 완제의약품까지<br />
+						미래지향적인 마케팅과<br />
+						고객지향의 토탈 서비스를<br />
+						제공합니다.
+					</div>
+				</div>
+				
+				<div class="IntroM5" style="display:none;">
+ 				<div>지속가능경영</div>
+ 				<div>60년에 이르는 동성제약은<br />
+ 					화장품에서 완제의약품까지<br />
+ 					미래지향적인 마케팅과<br />
+ 					고객지향의 토탈 서비스를<br />
+ 					제공합니다.
+ 				</div>
+				</div>
+			
+				<!--//기업홍보-->
+				<!--sub navigation-->
+				<div class="WTMenuWrap">
+					<ul class="WTMenu1ul">
+						<li><a href="/user/company/company1.php?mcate1=1">CEO인사말</a></li>
+						<li><a href="/user/company/company2.php?mcate1=1">기업소개</a></li>
+						<li><a href="/user/company/company3.php?mcate1=1">동성연혁</a></li>
+						<!--		  <li><a href="/user/company/company3.php?mcate1=1">PDD/PDT</a></li> -->
+						<li><a href="/user/company/company4.php?mcate1=1">공장소개</a></li>
+						<li><a href="/user/company/company00.php?mcate1=1">암센터소개</a></li>
+						<li><a href="/user/company/company5.php?mcate1=1">지점안내</a></li>
+						<li><a href="/user/company/company6.php?mcate1=1">오시는 길</a></li>
+						<li><a href="/customer/board/company_notice.php?leftType=board&board_id=cnotice&mcate1=1">공지사항</a></li>
+					</ul>
+					<ul class="WTMenu2ul">
+						<li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">일반의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr&mcate1=2">전문의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=72&sCountry=kr&mcate1=2">염모제/펌제</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr&mcate1=2">화장품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=74&sCountry=kr&mcate1=2">건강기능식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=222&sCountry=kr&mcate1=2">식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=75&sCountry=kr&mcate1=2">의료기기</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr&mcate1=2">의약외품/기타</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=mediNoti&mcate1=2">의약품공지사항</a></li>
+					</ul>
+					<ul class="WTMenu3ul">
+						<li><a href="/user/investment/investment_list1.php?mcate1=3">주가정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=gongsi&mcate1=3">공시정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=auditRT&mcate1=3">감사보고서</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=businessRt&mcate1=3">사업보고서</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=notice&mcate1=3">결산공고</a></li>
+						<!--			  <li><a href="/user/investment/investment_list3.php?mcate1=3">IR자료실</a></li> -->
+					</ul>
+					<ul class="WTMenu4ul">
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">보도자료</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=gallery&mcate1=4&onClass1=_on">광고자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=29&leftType=board&board_id=outmov&bGubun=&page=1&search_key=&search_word=&mcate1=4">홍보동영상</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=goodnews&mcate1=4">동성굿뉴스</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4">사회공헌활동</a></li>
+					</ul>
+					<ul class="WTMenu5ul">
+						<li><a href="/user/company/company102.php?mcate1=39">윤리준법경영</a></li>
+					</ul>
+				</div>
+				<!--//sub navigation-->
+			</div>
+		</div>
+		<!--//네비게이션 와이드풀다운-->
+		<div id="section">
+<script language="javascript">
+	function search1() {
+		var frm = document.productForm;
+
+		if (checkValue(frm.searchWD3, "제품명을")) return;
+
+		frm.submit();
+	}
+
+	function search2() {
+		var frm = document.searchForm2;
+
+		if (frm.searchWD1.value == "지역명" || frm.searchWD1.value == "") {
+			alert("지역명을 입력하세요");
+			frm.searchWD1.value = "";
+			frm.searchWD1.focus();
+			return;
+		}
+
+		if (frm.searchWD2.value == "제품명" || frm.searchWD2.value == "") {
+			alert("제품명을 입력하세요");
+			frm.searchWD2.value = "";
+			frm.searchWD2.focus();
+			return;
+		}
+
+		frm.submit();
+	}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+  $(document).ready(function() {
+	$(".heroSlider").bxSlider({
+		mode: "fade",
+		auto: true,
+		pause: 7500,
+		speed: 700,
+		controls: false,
+		autoControls: false,
+		stopAutoOnClick: true,
+		pager: true,
+		adaptiveHeight: false,
+		preloadImages: "all",
+		touchEnabled: (navigator.maxTouchPoints > 0)
+	});
+  });
+</script>
+<!--동성 슬라이드배너-->
+<div id="visual">
+    <div class="heroSlider">
+	  <div class="heroSlide"><a href="https://dongsung-azero.com"><img src="/user/image/main/visual24022.jpg" width="1900" height="499" alt="dongsung awesome" /></a></div>
+      <div class="heroSlide"><img src="/user/image/main/visual0001.jpg" width="1900" height="499" alt="동성은 건강과 안전으로 내일의 행복을 추구합니다." /></div>
+      <div class="heroSlide"><img src="/user/image/main/visual02.jpg" width="1900" height="499" alt="더불어사는세상 - 변치않은 당신의 지킴이가 되겠습니다." /></div>
+      <div class="heroSlide"><img src="/user/image/main/visual04.jpg" width="1900" height="499" alt="100년을 향한 힘찬 도약, 국민건강을 생각하는 기업 - 인류가 건강하고 행복해지는 세상, 동성이 꿈꾸는 미래입니다." /></div>
+      <div class="heroSlide"><img src="/user/image/main/visual05.jpg" width="1900" height="499" alt="당신에게 선물합니다. - 오늘도 수고하고 지친 당신을 위한 '쉼'입니다." /></div>
+    </div>
+</div>
+<!--//동성 슬라이드배너-->
+<div id="contents">
+	<!--제품소개/제품검색/약국검색-->
+	<div class="m_con_div1">
+		<!--제품소개-->
+		<div class="m_con_product">
+			<div class="mcpTitle">제품소개</div>
+			<div class="mcpdiv">
+				<div class="item">
+					<ul id="content-slider2" class="content-slider2">
+														<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=146&mcate1=2">
+										<img src=/upload/product/146_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동성미녹시딜5%</h3>
+										<p>보습제 덱스판테놀 함유</p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1658&mcate1=2">
+										<img src=/upload/product/1658_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동의 갈근탕액</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1607&mcate1=2">
+										<img src=/upload/product/1607_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>랑스씨씨정</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt의약외품/기타&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=167&mcate1=2">
+										<img src=/upload/product/167_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동성비오킬</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt염모제/펌제&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=170&mcate1=2">
+										<img src=/upload/product/170_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>세븐에이트 무향료 칼라크림</h3>
+										<p>냄새없이 빠른 염색약</p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1598&mcate1=2">
+										<img src=/upload/product/1598_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>메코이에프정</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt의약외품/기타&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1655&mcate1=2">
+										<img src=/upload/product/1655_1.png border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동성 핫팩</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1652&mcate1=2">
+										<img src=/upload/product/1652_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>디퓨탭서방정(10T)</h3>
+										<p></p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1186&mcate1=2">
+										<img src=/upload/product/1186_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동성 정로환 에프정</h3>
+										<p>체하거나 설사에는 처음부터~</p>
+									</a>
+								</li>
+															<li>
+									<h4>&lt일반의약품&gt</h4>
+									<!--이미지사이즈 230*230px-->
+									<a href="/user/product/product_detail.php?idx=1345&mcate1=2">
+										<img src=/upload/product/1345_1.jpg border="0" style="width:230px;height:230px;" alt="제품소개 이미지"/>										<h3>동성 정로환 에프환</h3>
+										<p></p>
+									</a>
+								</li>
+												</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--//제품소개-->
+		<!--제품검색/약국검색-->
+		<div class="m_con_pSearch">
+			<!--제품검색-->
+			<form name="productForm" id="searchForm1" method="post" action="/user/product/product_list.php">
+				<input type="hidden" name="act_Flag" value="search">
+				<input type="hidden" name="parent_cate_idx" value="">
+				<input type="hidden" name="sCountry" value="kr">
+				<input type="hidden" name="mcate1" value="2">
+				<div class="mcproductS">
+					<div class="mcpSTitle"><span class="f22 skyBlue">제품</span>검색</div>
+					<div class="m_prodSbox"><input type="text" name="searchWD3" id="searchWD3" title="제품검색 키워드 입력란" class="inputwg269" /><a class="mSBbtn" onclick="search1()">검색</a></div>
+					<ul class="pr2D">
+						<li><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr&mcate1=2"><img src="/user/image/main/productbanner1.jpg" alt="전문의약품" /></a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2"><img src="/user/image/main/productbanner2.jpg" alt="일반의약품" /></a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=72&product_parent_idx=111&sCountry=kr&mcate1=2"><img src="/user/image/main/productbanner3.jpg" alt="염모제" /></a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr&mcate1=2"><img src="/user/image/main/productbanner4.jpg" alt="화장품" /></a></li>
+						<li class="last"><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr&mcate1=2"><img src="/user/image/main/productbanner5.jpg" alt="기타" /></a></li>
+					</ul>
+				</div>
+			</form>
+			<form name="searchForm2" method="post" action="/user/product/product_Pharmsearchlist.php">
+				<input type="hidden" name="act_Flag" value="search">
+				<input type="hidden" name="parent_cate_idx" value="">
+				<input type="hidden" name="sCountry" value="kr">
+				<input type="hidden" name="mcate1" value="2">
+				<!--//제품검색-->
+				<!--약국검색-->
+				<div class="mcpharmS">
+					<div class="mcpharmTitle"><span class="f22 skyBlue">약국(판매처)</span>검색</div>
+					<div class="m_pharmSbox"><input type="text" title="약국 지역명 입력란" name="searchWD1" value="지역명" class="inputwg122" onClick="this.value='';" onBlur="fnChangValue('A');" /><input type="text" name="searchWD2" value="제품명" title="제품명 키워드 입력란" class="inputwg142" onClick="this.value='';" onBlur="fnChangValue('B');" /><a class="mSBbtn" onclick="search2()">검색</a></div>
+				</div>
+				<!--//약국검색-->
+			</form>
+		</div>
+		<!--//제품검색/약국검색-->
+	</div>
+	<!--//제품소개/제품검색/약국검색-->
+	<!--동성제약뉴스/사회공헌/홍보영상-->
+	<div class="m_con_div2">
+		<!--뉴스-->
+		<div class="m_con_news">
+			<div class="mNewsTitle">동성제약뉴스</div>
+			<ul class="dsNewsul">
+										<li><img src="/user/image/main/bullet_arrow.jpg" alt="" /><a href="/customer/board/boards.php?page_type=view&idx=2233&board_id=bodo&leftType=board&mcate1=4&page=&" class="noti">미녹시딜, 머리에 뿌리고 발라 탈모 치료</a></li>
+											<li><img src="/user/image/main/bullet_arrow.jpg" alt="" /><a href="/customer/board/boards.php?page_type=view&idx=2232&board_id=bodo&leftType=board&mcate1=4&page=&" class="noti">정로환, 오랜 신뢰로 소비자가 선택한 지사제..</a></li>
+											<li><img src="/user/image/main/bullet_arrow.jpg" alt="" /><a href="/customer/board/boards.php?page_type=view&idx=2231&board_id=bodo&leftType=board&mcate1=4&page=&" class="noti">[포토] 동성 미녹시딜, 2026 올해의 브..</a></li>
+											<li><img src="/user/image/main/bullet_arrow.jpg" alt="" /><a href="/customer/board/boards.php?page_type=view&idx=2230&board_id=bodo&leftType=board&mcate1=4&page=&" class="noti">[포토] 동성 정로환, 2026 올해의 브랜..</a></li>
+								</ul>
+		</div>
+		<!--//뉴스-->
+		<!--사회공헌-->
+		<div class="m_con_publicR">
+			<div class="mpublicRTitle">사회공헌</div>
+			<div class="m_publicRbox">
+				<div class="publicRKeywords">
+					<span>나눔</span>
+					<span>건강</span>
+					<span>지역사회</span>
+				</div>
+				<ul class="publicRul">
+					<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4">염색봉사단<i class="fa fa-arrow-right lightGray1" aria-hidden="true"></i></a></li>
+					<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=76&mcate1=4">송음의약학상<i class="fa fa-arrow-right lightGray1" aria-hidden="true"></i></a></li>
+					<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=77&mcate1=4">재능기부<i class="fa fa-arrow-right lightGray1" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<!--//사회공헌-->
+		<!--홍보영상-->
+		<div class="m_con_pr">
+			<div class="mprTitle">홍보영상</div>
+			<div class="m_prAdbox">
+										<div class="m_prAdbox">
+						<video src="/upload/outmov/27_26.mp4" poster="" controls muted autoplay width="268" height="145"></video>
+                    <!--<video src="/upload/outmov/29_2.mp4" poster="" controls muted autoplay width="268" height="145"></video> -->
+						</div>
+								</div>
+		</div>
+		<!--//홍보영상-->
+	</div>
+	<!--//동성제약뉴스/사회공헌/홍보영상-->
+	<!--동성브랜드사이트:시작-->
+	<div class="m_con_div3">
+		<div class="mbrandBox">
+			<ul class="brandBul">
+				<li><a href="https://dseshop.co.kr/category/%EC%84%B8%EB%B8%90%EC%97%90%EC%9D%B4%ED%8A%B8/31/" target="_blank"><img src="/user/image/main/ad_brand01.jpg" style="height:24px;" alt="세븐에이트 브랜드사이트 바로가기" /></a></li>
+				<li><a href="http://www.eznstyle.co.kr" target="_blank"><img src="/user/image/main/ad_brand02.jpg" style="height:24px;" alt="이지엔 브랜드사이트 바로가기" /></a></li>
+				<li><a href="http://www.dseshop.co.kr" target="_blank"><img src="/user/image/main/ad_brand08.png" style="height:24px;" alt="e-shop 사이트 바로가기" /></a></li>
+				<li><a href="https://www.dspmall.kr" target="_blank"><img src="/user/image/main/dspmall_thum.jpg" style="height:24px;" alt="DSPMALL 사이트 바로가기" /></a></li>
+				<li><a href="https://dongsung-azero.com" target="_blank"><img src="/user/image/main/a_zero.png" style="height:24px;" alt="동성 a-zero 사이트 바로가기" /></a></li>
+			</ul>
+		</div>
+	</div>
+	<!--//동성브랜드사이트:끝-->
+	<!--380px 이하:동성브랜드사이트-->
+	<div class="m_con_div32" style="display:none;">
+		<div class="mbrandTitle2"><button class="FDSbrandbtn" id="mBrandMenu"> 패밀리사이트 <p style="float:right;"><img src="/user/image/main/arrow_down.jpg" alt="" /></p></button></div>
+		<div class="mbrand380" style="display:none;">
+			<ul class="brandSul">
+				<li><a href="http://www.seveneight.co.kr" target="_blank">세븐에이트</a></li>
+				<li><a href="http://www.eznstyle.co.kr" target="_blank">이지엔</a></li>
+				<li><a href="https://www.dspmall.kr" target="_blank">DSPMALL</a></li>
+				<li><a href="http://www.dseshop.co.kr" target="_blank">동성이샵</a></li>
+				<li><a href="https://dongsung-azero.com" target="_blank">동성a-zero</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<!--//380px 이하:동성브랜드사이트-->
+</div>
+<!--footer-->
+<div id="DSfooter">
+	<div class="m_f_wrapdiv">
+		<!--동성 로고/주소/카피라이트-->
+		<div class="m_footer_address">
+			<div class="m_footer_logo"><a href="/" style="color:#fff;">동성제약 주식회사</a></div>
+			<div class="m_footer_addR">서울특별시 도봉구 도봉로 683 (방학동 동성빌딩)<br />
+				대표 : 최용석<br />
+				사업자번호 : 211-81-25288<br />
+				TEL : 02-6911-3600<br />
+				<a class="footer_policy" href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a>
+				&nbsp;&nbsp;<a class="footer_policy" href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></div>
+			<div class="m_footer_copyright">
+				COPYRIGHTⓒ DONGSUNG BIO PHARM. CO., LTD. ALL RIGHT RESERVED.
+			</div>
+		</div>
+		<!--//동성 로고/주소/카피라이트-->
+		<!--footer menu/sns-->
+		<div class="m_footer_menu">
+			<!--footer menu-->
+			<div class="m_footer_M">
+				<div class="footer_Branddiv2">
+					<!--<a href="#" class="Brandtt" onclick="layer_open('layer1');return false;">브랜드사이트<img src="/user/image/footer/arrow_up.png" alt="" /></a>-->&nbsp;
+				</div>
+				<div class="footer_Sitediv"><a href="#" class="Sitett" onmouseover="layer_open('layer2');return false;">메뉴전체보기<img src="/user/image/footer/arrow_up.png" alt="" /></a></div>
+				<!--<div class="footer_BrandWrap" id="test_div" style="display:none;">-->
+				<div id="layer1" class="footer_BrandWrap" style="display:none;">
+					<div class="footer_BrandClose"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_Brandul">
+						<li><a href="http://www.seveneight.co.kr" target="_blank">세븐에이트</a></li>
+						<li><a href="http://www.eznstyle.co.kr" target="_blank">이지엔</a></li>
+						<li><a href="http://www.heystyle.co.kr" target="_blank">헤이</a></li>
+						<li><a href="https://www.dspmall.kr" target="_blank">DSPMALL</a></li>
+						<li><a href="http://www.dseshop.co.kr" target="_blank">동성이샵</a></li>
+						<li><a href="https://ezn.tmall.hk/shop/view_shop.htm?spm=a220o.1000855.1997427721.d4918089.3226179be1OwYc" target="_blank">이지엔 TMALL</a></li>
+						<!--	<li><a href="http://www.bubble-b.kr" target="_blank">버블비</a></li> -->
+					</ul>
+				</div>
+				<div id="layer2" class="footer_BrandWrap2" style="display:none;" onmouseleave="layer_out('layer2');return false;">
+					<div class="footer_BrandClose2"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_AllMul1">
+						<li class="DepTli"><a href="/user/company/company1.php?mcate1=1">회사소개</a></li>
+						<li><a href="/user/company/company1.php?mcate1=1">CEO인사말</a></li>
+						<li><a href="/user/company/company2.php?mcate1=1">기업소개</a></li>
+						<li><a href="/user/company/company3.php?mcate1=1">동성연혁</a></li>
+						<li><a href="/user/company/company4.php?mcate1=1">공장소개</a></li>
+						<li><a href="/user/company/company00.php?mcate1=1">암센터소개</a></li>
+						<li><a href="/user/company/company5.php?mcate1=1">지점안내</a></li>
+						<li><a href="/user/company/company6.php?mcate1=1">오시는 길</a></li>
+					</ul>
+					<ul class="footer_AllMul2">
+						<li class="DepTli"><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">제품정보</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">일반의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr&mcate1=2">전문의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=72&sCountry=kr&mcate1=2">의약외품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr&mcate1=2">화장품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=74&sCountry=kr&mcate1=2">건강기능식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=222&sCountry=kr&mcate1=2">식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=75&sCountry=kr&mcate1=2">의료기기</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr&mcate1=2">의약외품ㆍ기타</a></li>
+					</ul>
+					<ul class="footer_AllMul3">
+						<li class="DepTli"><a href="/user/investment/investment_list1.php?mcate1=3">투자정보</a></li>
+						<li><a href="/user/investment/investment_list1.php?mcate1=3">주가정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=gongsi&mcate1=3">공시정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=auditRT&mcate1=3">감사보고서</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=businessRt&mcate1=3">사업보고서</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=notice&mcate1=3">결산공고</a></li>
+
+						<!--						<li><a href="/user/investment/investment_list3.php?mcate1=3">IR자료실</a></li> -->
+					</ul>
+					<ul class="footer_AllMul4">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">기업홍보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">보도자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=&leftType=board&board_id=gallery&bGubun=&page=1&search_key=&search_word=&mcate1=4">광고자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=29&leftType=board&board_id=outmov&bGubun=&page=1&search_key=&search_word=&mcate1=4">홍보동영상</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=goodnews&mcate1=4">동성굿뉴스</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4">사회공헌활동</a></li>
+					</ul>
+					<ul class="footer_AllMul5">
+						<li class="DepTli"><a href="/user/company/company102.php?mcate1=5">지속가능경영</a></li>
+						<li><a href="/user/company/company102.php?mcate1=5">윤리준법경영</a></li>
+					</ul>
+					<ul class="footer_AllMul6">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26">고객</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate1=26">자주묻는질문</a></li>
+						<!--			<li><a href="/customer/board/boards.php?leftType=board&board_id=counsel&mcate1=26">1대1문의</a></li> 20181004 주석처리 -->
+						<li><a href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a></li>
+						<li><a href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></li>
+					</ul>
+					<ul class="footer_AllMul7">
+						<li class="DepTli"><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></li>
+						<li><a href="/user/recruit/recruit1.php?mcate1=27">인재상</a></li>
+						<li><a href="/user/recruit/recruit2.php?mcate1=27">인사제도</a></li>
+						<li><a href="/user/recruit/recruit3.php?mcate1=27">채용정보</a></li>
+					</ul>
+
+				</div>
+			</div>
+			<!--//footer menu-->
+			<!--footer sns-->
+			<div class="m_footer_sns">동성제약SNS
+				<a href="https://www.youtube.com/user/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_youtube.jpg" alt="동성제약 유튜브" /></a>
+				<a href="https://www.instagram.com/dongsung_healthcare/" target="_blank"><img src="/user/image/footer/insta.jpg" alt="동성제약 인스타그램"/></a>
+				<a href="http://blog.naver.com/dspharmstory" target="_blank"><img src="/user/image/footer/ico_f_naver.jpg" alt="동성제약 블로그" /></a>
+			
+				<!--	<a href="https://story.kakao.com/ch/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_kakao.jpg" alt="동성제약 카카오스토리"/></a> 20200130 윤경미 요청-->
+			</div>
+			<!--//footer sns-->
+			<!--소비자센터 전화:2017-01-17 추가-->
+
+			<div class="m_footer_callcenter">
+				소비자 상담 전화번호<br />
+				의약품/외품 080-001-0921, 건강기능식품 080-856-3300<br />
+				화장품 080-020-2500, 염모제 080-547-3571
+			</div>
+			<!--소비자센터 전화:2017-01-17 추가-->
+
+		</div>
+		<!--//footer menu/sns-->
+	</div>
+	<!--768px이하 푸터-->
+	<div class="m_f_wrapdiv2">
+		<!--footer menu/sns-->
+		<div class="m_footer_menu">
+			<!--footer menu-->
+			<div class="m_footer_M">
+				<div class="footer_Branddiv"><a href="#" class="Brandtt" onclick="layer_open('layer3');return false;">브랜드사이트<img src="/user/image/footer/arrow_up.png" alt="" /></a></div>
+				<div class="footer_Sitediv"><a href="#" class="Sitett" onclick="layer_open('layer4');return false;">메뉴전체보기<img src="/user/image/footer/arrow_up.png" alt="" /></a></div>
+				<!--<div class="footer_BrandWrap" id="test_div" style="display:none;">-->
+				<div id="layer3" style="display:none;" class="footer_BrandWrap">
+					<div class="footer_BrandClose"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_Brandul">
+						<li><a href="http://www.seveneight.co.kr" target="_blank">세븐에이트</a></li>
+						<li><a href="http://www.eznstyle.co.kr" target="_blank">이지엔</a></li>
+						<li><a href="http://www.heystyle.co.kr" target="_blank">헤이</a></li>
+						<li><a href="https://www.dspmall.kr" target="_blank">DSPMALL</a></li>
+						<li><a href="http://www.dseshop.co.kr" target="_blank">동성이샵</a></li>
+						<li><a href="https://ezn.tmall.hk/shop/view_shop.htm?spm=a220o.1000855.1997427721.d4918089.3226179be1OwYc" target="_blank">이지엔 TMALL</a></li>
+						<!--	<li><a href="http://www.bubble-b.kr" target="_blank">버블비</a></li> -->
+					</ul>
+				</div>
+				<div id="layer4" style="display:none;" class="footer_BrandWrap2">
+					<div class="footer_BrandClose2"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_AllMul1">
+						<li class="DepTli"><a href="/user/company/company1.php?mcate1=1">회사소개</a></li>
+						<li><a href="/user/company/company1.php">CEO인사말</a></li>
+						<li><a href="/user/company/company2.php">기업소개</a></li>
+						<li><a href="/user/company/company3.php">동성연혁</a></li>
+						<li><a href="/user/company/company4.php">공장소개</a></li>
+						<li><a href="/user/company/company5.php">지점안내</a></li>
+						<li><a href="/user/company/company6.php">오시는 길</a></li>
+					</ul>
+					<ul class="footer_AllMul2">
+						<li class="DepTli"><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">제품정보</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr">일반의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr">전문의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=72&sCountry=kr">의약외품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr">화장품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=74&sCountry=kr">건강기능식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=222&sCountry=kr">식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=75&sCountry=kr">의료기기</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr">의약외품ㆍ기타</a></li>
+					</ul>
+					<ul class="footer_AllMul3">
+						<li class="DepTli"><a href="/user/investment/investment_list1.php?mcate1=3">투자정보</a></li>
+						<li><a href="/user/investment/investment_list1.php">주가정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=gongsi&mcate1=3">공시정보</a></li>
+						<li><a href="/user/investment/investment_list3.php">IR자료실</a></li>
+					</ul>
+					<ul class="footer_AllMul4">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">기업홍보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">보도자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=&leftType=board&board_id=gallery&bGubun=&page=1&search_key=&search_word=&mcate1=4">광고자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=29&leftType=board&board_id=outmov&bGubun=&page=1&search_key=&search_word=&mcate1=4">홍보동영상</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=goodnews&mcate1=4">동성굿뉴스</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4">사회공헌활동</a></li>
+					</ul>
+					<ul class="footer_AllMul5">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate=26">고객</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate=26">자주묻는질문</a></li>
+						<!--		<li><a href="/user/customer/customer_list2.php">1대1문의</a></li>  20181004 주석처리 -->
+						<li><a href="/user/customer/customer_list3.php">개인정보취급방침</a></li>
+						<li><a href="/user/customer/customer_list4.php">영상정보처리방침</a></li>
+					</ul>
+					<ul class="footer_AllMul6">
+						<li class="DepTli"><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></li>
+						<li><a href="/user/recruit/recruit1.php">인재상</a></li>
+						<li><a href="/user/recruit/recruit2.php">인사제도</a></li>
+						<li><a href="/user/recruit/recruit3.php">채용정보</a></li>
+					</ul>
+					<ul class="footer_AllMul7">
+						<li class="DepTli"><a href="/user/company/company102.php?mcate1=5">지속가능경영</a></li>
+						<li><a href="/user/company/company102.php">윤리준법경영</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--//footer menu-->
+			<!--footer sns-->
+			<div class="m_footer_sns">동성제약SNS
+				<a href="https://www.youtube.com/user/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_youtube.jpg" alt="동성제약 유튜브" /></a>
+				<a href="https://www.instagram.com/dongsung_healthcare/" target="_blank"><img src="/user/image/footer/insta.jpg" alt="동성제약 인스타그램"/></a>
+				<a href="http://blog.naver.com/dspharmstory" target="_blank"><img src="/user/image/footer/ico_f_naver.jpg" alt="동성제약 블로그" /></a>
+				
+				<!--	<a href="https://story.kakao.com/ch/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_kakao.jpg" alt="동성제약 카카오스토리"/></a> 20200130 윤경미 요청-->
+			</div>
+
+			<!--//footer sns-->
+			<!--소비자센터 전화:2017-01-17 추가-->
+			<div class="m_footer_callcenter">
+				소비자 상담 전화번호<br />
+				의약품/외품 080-001-0921, 건강기능식품 080-856-3300<br />
+				화장품 080-020-2500, 염모제 080-547-3571
+			</div>
+			<!--소비자센터 전화:2017-01-17 추가-->
+		</div>
+		<!--//footer menu/sns-->
+		<!--동성 로고/주소/카피라이트-->
+		<div class="m_footer_address">
+			<div class="m_footer_logo"><a href="/" style="color:#fff;">동성제약 주식회사</a></div>
+			<div class="m_footer_addR">서울특별시 도봉구 도봉로 683 (방학동 동성빌딩)<br />
+				대표 : 최용석&nbsp;&nbsp;&nbsp;
+				사업자번호 : 211-81-25288&nbsp;&nbsp;&nbsp;
+				TEL : 02-6911-3600<br />
+				<a class="footer_policy" href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a>
+				&nbsp;&nbsp;<a class="footer_policy" href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></div>
+			<div class="m_footer_copyright">
+				COPYRIGHTⓒ DONGSUNG BIO PHARM. CO., LTD. ALL RIGHT RESERVED.
+			</div>
+		</div>
+		<!--//동성 로고/주소/카피라이트-->
+	</div>
+	<!--//768px이하 푸터-->
+	<!--380px이하 푸터-->
+	<div class="m_f_wrapdiv3">
+		<!--footer menu/sns-->
+		<div class="m_footer_menu">
+			<!--footer menu-->
+			<div class="m_footer_M">
+				<div class="footer_Branddiv"><a href="#" class="Brandtt" onclick="layer_open('layer5');return false;">브랜드사이트<img src="/user/image/footer/arrow_up.png" alt="" /></a></div>
+				<div class="footer_Sitediv"><a href="#" class="Sitett" onclick="layer_open('layer6');return false;">메뉴전체보기<img src="/user/image/footer/arrow_up.png" alt="" /></a></div>
+				<!--<div class="footer_BrandWrap" id="test_div" style="display:none;">-->
+				<div id="layer5" style="display:none;" class="footer_BrandWrap">
+					<div class="footer_BrandClose"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_Brandul">
+						<li><a href="http://www.seveneight.co.kr" target="_blank">세븐에이트</a></li> 
+						<li><a href="http://www.eznstyle.co.kr" target="_blank">이지엔</a></li>
+						<li><a href="http://www.heystyle.co.kr" target="_blank">헤이</a></li>
+						<li><a href="https://www.dspmall.kr" target="_blank">DSPMALL</a></li>
+						<li><a href="http://www.dseshop.co.kr" target="_blank">동성이샵</a></li>
+						<li><a href="https://ezn.tmall.hk/shop/view_shop.htm?spm=a220o.1000855.1997427721.d4918089.3226179be1OwYc" target="_blank">이지엔 TMALL</a></li>
+						<!--	<li><a href="http://www.bubble-b.kr" target="_blank">버블비</a></li> -->
+					</ul>
+				</div>
+				<div id="layer6" style="display:none;" class="footer_BrandWrap2">
+					<div class="footer_BrandClose2"><a href="#" id="cbtn"><img src="/user/image/footer/arrow_down.png" alt="닫기" /></a></div>
+					<ul class="footer_AllMul1">
+						<li class="DepTli"><a href="/user/company/company1.php?mcate1=1">회사소개</a></li>
+						<li><a href="/user/company/company1.php?mcate1=1">CEO인사말</a></li>
+						<li><a href="/user/company/company2.php?mcate1=1">기업소개</a></li>
+						<li><a href="/user/company/company3.php?mcate1=1">동성연혁</a></li>
+						<li><a href="/user/company/company4.php?mcate1=1">공장소개</a></li>
+						<li><a href="/user/company/company5.php?mcate1=1">지점안내</a></li>
+						<li><a href="/user/company/company6.php?mcate1=1">오시는 길</a></li>
+					</ul>
+					<ul class="footer_AllMul2">
+						<li class="DepTli"><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">제품정보</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=70&sCountry=kr&mcate1=2">일반의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=71&sCountry=kr&mcate1=2">전문의약품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=72&sCountry=kr&mcate1=2">의약외품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=73&sCountry=kr&mcate1=2">화장품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=74&sCountry=kr&mcate1=2">건강기능식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=222&sCountry=kr&mcate1=2">식품</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=75&sCountry=kr&mcate1=2">의료기기</a></li>
+						<li><a href="/user/product/product_list.php?parent_cate_idx=140&sCountry=kr&mcate1=2">의약외품ㆍ기타</a></li>
+					</ul>
+					<ul class="footer_AllMul3">
+						<li class="DepTli"><a href="/user/investment/investment_list1.php?mcate1=3">투자정보</a></li>
+						<li><a href="/user/investment/investment_list1.php?mcate1=3">주가정보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=gongsi&mcate1=3">공시정보</a></li>
+						<li><a href="/user/investment/investment_list3.php?mcate1=3">IR자료실</a></li>
+					</ul>
+					<ul class="footer_AllMul4">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">기업홍보</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=bodo&mcate1=4">보도자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=&leftType=board&board_id=gallery&bGubun=&page=1&search_key=&search_word=&mcate1=4">광고자료</a></li>
+						<li><a href="/customer/board/boards.php?page_type=view&idx=29&leftType=board&board_id=outmov&bGubun=&page=1&search_key=&search_word=&mcate1=4">홍보동영상</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=goodnews&mcate1=4">동성굿뉴스</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=social&category=75&mcate1=4">사회공헌활동</a></li>
+					</ul>
+					<ul class="footer_AllMul5">
+						<li class="DepTli"><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate=26">고객</a></li>
+						<li><a href="/customer/board/boards.php?leftType=board&board_id=qna&mcate=26">자주묻는질문</a></li>
+						<!--		<li><a href="/customer/board/boards.php?leftType=board&board_id=counsel&mcate1=26">1대1문의</a></li>  20181004 주석처리 -->
+						<li><a href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a></li>
+						<li><a href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></li>
+					</ul>
+					<ul class="footer_AllMul6">
+						<li class="DepTli"><a href="/user/recruit/recruit1.php?mcate1=27">채용</a></li>
+						<li><a href="/user/recruit/recruit1.php?mcate1=27">인재상</a></li>
+						<li><a href="/user/recruit/recruit2.php?mcate1=27">인사제도</a></li>
+						<li><a href="/user/recruit/recruit3.php?mcate1=27">채용정보</a></li>
+					</ul>
+					<ul class="footer_AllMul7">
+						<li class="DepTli"><a href="/user/company/company102.php?mcate1=5">지속가능경영</a></li>
+						<li><a href="/user/company/company102.php?mcate1=5">윤리준법경영</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--//footer menu-->
+			<!--footer sns-->
+			<div class="m_footer_sns">동성제약SNS
+				<a href="https://www.youtube.com/user/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_youtube.jpg" alt="동성제약 유튜브" /></a>
+				<a href="https://www.instagram.com/dongsung_healthcare/" target="_blank"><img src="/user/image/footer/insta.jpg" alt="동성제약 인스타그램" /></a>
+				<a href="http://blog.naver.com/dspharmstory" target="_blank"><img src="/user/image/footer/ico_f_naver.jpg" alt="동성제약 블로그" /></a>
+			
+				<!--	<a href="https://story.kakao.com/ch/dongsungpharm" target="_blank"><img src="/user/image/footer/ico_f_kakao.jpg" alt="동성제약 카카오스토리"/></a> 20200130 윤경미 요청 -->
+			</div>
+			<!--//footer sns-->
+			<!--소비자센터 전화:2017-01-17 추가-->
+			<div class="m_footer_callcenter">
+				소비자 상담 전화번호<br />
+				의약품/외품 080-001-0921, 건강기능식품 080-856-3300<br />
+				화장품 080-020-2500, 염모제 080-547-3571
+			</div>
+			<!--소비자센터 전화:2017-01-17 추가-->
+		</div>
+		<!--//footer menu/sns-->
+		<!--동성 로고/주소/카피라이트-->
+		<div class="m_footer_address">
+			<div class="m_footer_logo"><a href="/" style="color:#fff;">동성제약 주식회사</a></div>
+			<div class="m_footer_addR">서울특별시 도봉구 도봉로 683 (방학동 동성빌딩)<br />
+				대표 : 최용석&nbsp;&nbsp;&nbsp;
+				사업자번호 : 211-81-25288<br />
+				TEL : 02-6911-3600<br />
+				<a class="footer_policy" href="/user/customer/customer_list3.php?mcate1=26">개인정보취급방침</a>
+				&nbsp;&nbsp;<a class="footer_policy" href="/user/customer/customer_list4.php?mcate1=26">영상정보처리방침</a></div>
+			<div class="m_footer_copyright">
+				COPYRIGHTⓒ DONGSUNG BIO PHARM. CO., LTD. ALL RIGHT RESERVED.
+			</div>
+		</div>
+		<!--//동성 로고/주소/카피라이트-->
+	</div>
+	<!--//380px이하 푸터-->
+</div>
+</div>
+</div>
+<script>
+	$(function() {
+		$('.jquery-reslider').reSlider({
+			speed: 1000, //페이드속도
+			delay: 7000, //자동전환 속도
+			imgCount: 5, //이미지갯수
+			dots: false, //하단 페이지 버튼
+			autoPlay: true //자동재생
+		})
+	})
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97007973-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-97007973-1');
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>명인제약</title>
+
+
+<link rel="stylesheet" href="/design/ko/css/style.css?ver=1790921924" type="text/css" />
+<link rel="stylesheet" href="/design/ko/css/fullpage.css">
+<link rel="stylesheet" href="/design/ko/css/slick-theme.css">
+<link rel="stylesheet" href="/design/ko/css/slick.css">
+<!-- javascript -->
+<!-- <script type="text/javascript" src="/common/js/prototype-1.6.0.2.js"></script> -->
+<script type="text/javascript" src="/common/js/cadal.js"></script>
+<script type="text/javascript" src="/common/js/ajaxCommon.js"></script>
+<script type="text/javascript" src="/common/js/dom-drag.js"></script>
+<script type="text/javascript" src="/common/js/dragndrop.js"></script>
+<script type="text/javascript" src="/common/js/spamFree.js"></script>
+<script type="text/javascript" src="/common/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/common/js/jquery.bxslider.min.js"></script>
+<!-- <script type="text/javascript" src="/fullpage/js/html5shiv.js"></script>
+<script type="text/javascript" src="/fullpage/js/selectivizr.js"></script> -->
+<script type="text/javascript" src="/common/js/basic.js"></script>
+<!-- <script type="text/javascript" src="/fullpage/js/respond.src.js"></script> -->
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<!-- 네비게이션/탭/슬라이드메뉴 기능
+<script type="text/javascript" src="/common/js/sh-lib.js"></script> -->
+<!--slider/fade
+<script type="text/javascript" src="/common/js/sh-slider.1.0.js"></script>-->
+
+<script src="/common/js/slick.js"></script>
+
+
+<!-- 게시판 관련 -->
+<script type="text/javascript" src="/common/js/public.js?ver=1790921924"></script><!-- 국문 -->
+<!-- <script type="text/javascript" src="/common/js/basic.js"></script> --><!-- 국문 -->
+
+
+<script src="/common/js/fullpage.js"></script>
+<!-- 
+javascript end -->
+
+<script>
+	$(function(){
+/*상단 검색창 보이기*/
+		$("#toggle_search").click(function(){
+			$("#search_box").stop().slideToggle();
+		});
+
+/*상단 전체메뉴 보이기*/
+
+		$("#toggle_Allmenu").click(function(){
+			$("#AllgnbOpen").stop().slideToggle();
+		});
+
+
+		$("#btn_close").click(function(){		
+			$("#AllgnbOpen").stop().slideUp();
+		});
+
+/* 상단 네비게이션 처리*/
+		$(".gnb > li").each(function(k){
+			$(".gnb > li:eq("+k+")").hover(function(){
+				$(".gnb > li:eq("+k+")").addClass("on").siblings("li").removeClass("on");
+				//$(".gnb > li:eq("+k+")").removeClass("ov");
+				$(".gnb > li:eq("+k+") .sgnb").slideDown(200);
+			},
+			function(){
+				$(".gnb > li:eq("+k+") .sgnb").slideUp(200);	
+				$(".gnb > li:eq("+k+")").removeClass("on");	
+			
+			})
+		})
+
+
+	/* 메인 비주얼 아이콘 박스  처리 */ 
+		$(".ctrol_box > ul > li").each(function(i){
+			$(".ctrol_box > ul > li:eq("+i+") > a").hover(function(){
+				$(".ctrol_box > ul > li:eq("+i+") > a > div > img").attr("src","https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_"+(i+1)+"on.png");
+			},
+			function(){
+				$(".ctrol_box > ul > li:eq("+i+") > a > div > img").attr("src","https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_"+(i+1)+".png");		
+			})
+		})
+
+/*  상품 슬라이드 마우스 오버 처리 */
+
+		$(".pr_slide .slick-list > div").each(function(m){
+			
+			$(".pr_slide .slick-list > div:eq("+m+")").hover(function(){
+				$(".pr_slide .slick-list > div:eq("+m+")").addClass("on").siblings("div").removeClass("on");
+			},
+			function(){
+				$(".pr_slide .slick-list > div:eq("+m+")").removeClass("on");							
+			})
+			
+			
+		})
+
+/* 명인홍보영상 마우스 오버 처리 */
+
+		$(".m_movie_box > ul > li").each(function(m){
+			$(".m_movie_box > ul > li:eq("+m+")").hover(function(){
+				$(".m_movie_box > ul > li:eq("+m+")").addClass("on").siblings("li").removeClass("on");
+			},
+			function(){
+				$(".m_movie_box > ul > li:eq("+m+")").removeClass("on");							
+			})
+		})
+
+	/*  페이지 스크롤 기능 추가 */
+	/*
+		var myFullpage = new fullpage('#fullpage', {
+			menu: '#sec_menu',
+			anchors: ['Page1', 'Page2', 'Page3', 'Page4', 'Page5'],        
+			lazyLoad: true,
+			responsiveWidth: 1200,
+			scrollBar: true,
+			loopHorizontal: false,
+			fixedElements: '#wrap'	
+		});
+*/
+	
+		/*회사연혁*/
+		$(".box_tab_wrap li").each(function(i){
+			$(".box_tab_wrap li:eq("+i+")").click(function(){
+				$(".box_tab_wrap li:eq("+i+")").addClass("on").siblings("li").removeClass("on");
+				$(".sb_content_who > ul:eq("+i+")").addClass("on").siblings("ul").removeClass("on");
+				$(".sb_content_map > div:eq("+i+")").addClass("on").siblings("div").removeClass("on");
+			})
+		})
+
+		/*오시는길*/
+		$(".box_tabs_wrap li").each(function(i){
+			$(".box_tabs_wrap li:eq("+i+")").click(function(){
+				$(".box_tabs_wrap li:eq("+i+")").addClass("on").siblings("li").removeClass("on");
+				/*$(".box_tabs_wrap li:eq("+i+") .box_tab_box li").addClass("on").siblings("li").removeClass("on");*/
+			})
+		})
+
+		//입사지원서 탭
+		$(".recruit_tab > ul >li").each(function(n){
+			$(".recruit_tab > ul >li:eq("+n+")").click(function(){
+				$(".recruit_tab > ul >li:eq("+n+")").addClass("on").siblings("li").removeClass("on");
+			});
+		})
+
+
+		//입사지원서 탭
+		$(".ir_box_tab_wrap li").each(function(n){
+			$(".ir_box_tab_wrap li:eq("+n+")").click(function(){
+				$(".ir_box_tab_wrap li").removeClass("on");
+				$(".ir_box_tab_wrap li:eq("+n+")").addClass("on");
+				$(".sb_content_ir .s104_list").removeClass("on");
+				$(".sb_content_ir .s104_list:eq("+n+")").addClass("on");
+			});
+		})
+
+
+	})
+
+
+</script>
+
+</head>
+
+<body >
+
+
+
+<div id="wrap">
+
+	<!-- 상단 처리 -->
+	<div id="header">
+		<div id="top">
+			<h1>
+				<a href="/"><img src="https://myunginph.co.kr/design/ko/images/default/logo.png" alt=""></a>
+			</h1>
+			<div id="navi">
+				<ul class="ut ut_2">
+					<li><a href="javascript:;" onclick="return false;" id="toggle_search"></a></li>
+					<li><a href="javascript:;" onclick="return false;" id="toggle_Allmenu"></a></li>
+				</ul>
+				<ul class="ut ut_1">
+					<li><a href="/main/en"><img src="https://myunginph.co.kr/design/ko/images/default/icon_earth.png" alt=""> English</a>&nbsp;&nbsp;</li>
+					<li><a href="/main/jp"><img src="https://myunginph.co.kr/design/en/images/default/icon_earth.png" alt=""> Japanese</a></li>
+				</ul>
+				<ul class="gnb">
+					<li>
+						<a href="javascript:menu('sub1_1');">기업정보</a>
+						<hr class="gnb_line">
+						<ul class="sgnb sgnbV2">
+							<li><a href="javascript:menu('sub1_1');">인사말</a></li>
+							<li><a href="javascript:menu('sub1_2');">회사연혁</a></li>
+							<li><a href="javascript:menu('sub1_3');">오시는 길</a></li>
+							<!-- <li><a href="javascript:menu('sub1_4');">IR</a></li> -->
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub2_1');">제품정보</a>
+						<hr class="gnb_line">
+						<ul class="sgnb">
+							<li><a href="javascript:menu('sub2_1');">제품검색</a></li>
+							<li><a href="javascript:menu('sub2_2');">제품뉴스</a></li>
+							<li><a href="javascript:menu('sub2_3');">API</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub3_1');">연구개발</a>
+						<hr class="gnb_line">
+						<ul class="sgnb">
+							<li><a href="javascript:menu('sub3_1');">R&D</a></li>
+							<li><a href="javascript:menu('sub3_2');">연구소 소개</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub4_1');">윤리경영</a>
+						<hr class="gnb_line">
+						<ul class="sgnb">
+							<li><a href="javascript:menu('sub4_1');">부패방지방침</a></li>
+							<li><a href="javascript:menu('sub4_2');">소통함</a></li>
+							<li><a href="javascript:menu('sub4_3');">ISO37001</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub5_1');">홍보센터</a>
+						<hr class="gnb_line">
+						<ul class="sgnb">
+							<li><a href="javascript:menu('sub5_1');">명인뉴스</a></li>
+							<li><a href="javascript:menu('sub5_2');">홍보영상</a></li>
+							<li><a href="javascript:menu('sub5_3');">고객센터</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub6_1');">인재채용</a>
+						<hr class="gnb_line">
+						<ul class="sgnb sgnbV1">
+							<li><a href="javascript:menu('sub6_1');">인재상</a></li>
+							<li><a href="javascript:menu('sub6_2');">채용안내</a></li>
+							<li><a href="javascript:menu('sub6_3');">채용문의</a></li>
+							<li><a href="javascript:menu('sub6_4');">채용공고</a></li>
+							<li><a href="javascript:menu('sub6_6');">급여수준</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:menu('sub9_1');">투자정보</a>
+						<hr class="gnb_line">
+						<ul class="sgnb sgnbV1">
+							<li><a href="javascript:menu('sub9_1');">재무정보</a></li>
+							<li><a href="javascript:menu('sub9_3');">IR</a></li>
+						</ul>
+					</li>
+					<!-- <li>
+						<a href="https://myunginph.irpage.co.kr" target="_blank">IR</a>
+					</li> -->					
+				</ul>
+
+			</div>
+			<!-- navi end -->
+		</div>	
+		<!-- top end -->
+		<!-- search open -->
+		<div id="search_box" style="display: none;">
+			<div>
+				<form method="post" action="/modules/bbs/?page=&code=bbs_product">
+					<input type="hidden" name="subject" value="subject">
+					<input type="text" name="sword"><input type="submit" value="검색">
+				</form>
+			</div>
+		</div>
+		<!-- search end -->
+
+
+		<!-- All menu open -->
+		<div id="AllgnbOpen" style="display:none;">
+			<div class="All_header">
+				<a href="javascript:;" id="btn_close"><img src="https://myunginph.co.kr/design/ko/images/default/btn_close.png" alt=""></a>
+			</div>
+			<div class="All_lang">
+				<ul>
+					<li><a href="/main/jp">JAPANESE</a></li>
+					<li><a href="/main/en">ENGLISH</a></li>
+				</ul>
+			</div>
+			<ul class="Allgnb_Wrap">
+				<li><a href="javascript:menu('sub1_1');">- 기업정보</a><br>
+					<ul>
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub1_1');">인사말</a></li>
+						<li><a href="javascript:menu('sub1_2');">회사연혁</a></li>
+						<li><a href="javascript:menu('sub1_3');">오시는 길</a></li>
+						<!-- <li><a href="javascript:menu('sub1_4');">명인제약 IR</a></li> -->
+					</ul>
+					<hr>
+				</li>
+				<li><a href="javascript:menu('sub2_1');">- 제품정보</a><br>
+					<ul>
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub2_1');">제품검색</a></li>
+						<li><a href="javascript:menu('sub2_2');">제품뉴스</a></li>
+						<li><a href="javascript:menu('sub2_3');">API</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:menu('sub3_1');">- 연구개발</a><br>
+					<ul class="sgnb">
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub3_1');">R&D</a></li>
+						<li><a href="javascript:menu('sub3_2');">연구소 소개</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:menu('sub4_1');">- 윤리경영</a><br>
+					<ul class="sgnb">
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub4_1');">부패방지방침</a></li>
+						<li><a href="javascript:menu('sub4_2');">소통함</a></li>
+						<li><a href="javascript:menu('sub4_3');">ISO37001</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:menu('sub5_1');">- 홍보센터</a><br>
+					<ul class="sgnb">
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub5_1');">명인뉴스</a></li>
+						<li><a href="javascript:menu('sub5_2');">홍보영상</a></li>
+						<li><a href="javascript:menu('sub5_3');">고객센터</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:menu('sub6_1');">- 인재채용</a><br>
+					<ul class="sgnb">
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub6_1');">인재상</a></li>
+						<li><a href="javascript:menu('sub6_2');">채용안내</a></li>
+						<li><a href="javascript:menu('sub6_3');">채용문의</a></li>
+						<li><a href="javascript:menu('sub6_4');">채용공고</a></li>
+						<li><a href="javascript:menu('sub6_6');">급여수준</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:menu('sub9_1');">- 투자정보</a><br>
+					<ul class="sgnb">
+						<li>&nbsp;&nbsp;&nbsp;<a href="javascript:menu('sub9_1');">재무정보</a></li>
+						<li><a href="javascript:menu('sub9_3');">IR</a></li>
+					</ul>
+				</li>				
+				<!-- <li>
+					<a href="https://myunginph.irpage.co.kr" target="_blank">- IR</a><br>
+				</li>	 -->			
+			</ul>
+		</div>
+		<!-- All menu end  -->
+	</div>
+	<!-- header end -->
+
+
+
+<script>
+		$(window).load(function  () {
+			var $slick_carousel = $(".slider");
+
+			$slick_carousel.on('init', function(event, slick) {
+				$(".visual-item").eq(0).addClass("active");
+			});
+			$slick_carousel.on('afterChange', function(event, slick, currentSlide){
+				$(".visual-item").removeClass("active");
+				$(this).find(".visual-item").eq(currentSlide).addClass("active")
+			});
+			// 메인 비주얼 롤링
+			$slick_carousel.slick({
+				dots: false,
+				infinite: true,
+				arrows:false,
+				pauseOnHover:false,
+				autoplay:true,
+				fade:true,
+				autoplaySpeed: 5000,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		});
+</script>
+	<div id="fullpage">
+		<div class="section section1 fp-auto-height-responsive">
+		<!-- 메인 비주얼 처리 -->
+			<div id="visual">
+				<div class="slider" id="slider">
+					<div class="visual-item visual-ittem1"></div>
+					<div class="visual-item visual-ittem2"></div>
+					<div class="visual-item visual-ittem3"></div>
+				</div>
+				<div class='visual_content'>
+					<div class='cb_slide_text' style='z-index:5'>
+						<div class='title_div'>
+							<p class='main_p'>좋은 치료제, 넘치는 건강</p>
+							<p class='sub_p'>Better quality medicine</p>
+							<p class='sub_p sub_p2'><span class="sub_sp">&</span> Better Public health</p>
+						</div>
+						<div class="ctrol_box">
+							<ul>
+								<li>
+									<a href="javascript:menu('sub2_1');">
+										<div><img src="https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_1.png" alt=""></div>	
+										<p>제품정보</p>											
+									</a>
+								</li>
+								<li>
+									<a href="javascript:menu('sub5_2');">
+										<div><img src="https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_2.png" alt=""></div>	
+										<p>홍보영상</p>											
+									</a>
+								</li>
+								<li>
+									<a href="javascript:menu('sub6_2');">
+										<div><img src="https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_3.png" alt=""></div>	
+										<p>인재채용</p>											
+									</a>
+								</li>
+								<li>
+									<a href="javascript:menu('sub5_3');">
+										<div><img src="https://myunginph.co.kr/design/ko/images/default/icon_ut_visual_4.png" alt=""></div>	
+										<p>고객센터</p>											
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- visual -->
+		<script>
+			function productOver(str,id){
+				$("#slide_num_"+id).css("display","block");
+			}
+			function productOut(str,id){
+				$("#slide_num_"+id).css("display","none");			
+			}
+		</script>
+		<div class="section section2 fp-auto-height-responsive " style="">
+			<div class="mid_product_search_view">
+				<div class="title_box">
+					<p class="head_tit">좋은 치료제, 넘치는 건강</p>
+					<p class="mid_tit">PRODUCT</p>
+					<hr class="tit_line">
+					<p class="btm_tit">명인제약의 주요 제품들을 소개합니다.</p>
+				</div>
+				<!-- 제품 슬라이드 -->
+				<div class="pr_slide">
+					<div class="pr_slide_div" onmouseover='productOver(this,27);'  onmouseout='productOut(this,27);'><img src="/modules/bbs/u_files/bbs_product/1675988117.jpg" alt=""><div class="slide_pro_title" id='slide_num_27'>
+							<ul>
+								<li class="slide_pro_tit1">일반의약품</li>
+								<li class="slide_pro_tit2">이가탄에프캡슐</li>
+								<li class="slide_pro_tit3">잇몸질환 치료제</li>
+								<li class="slide_pro_img"><a href="/modules/bbs/bbsView.php?id=27&bbs_id=1&code=bbs_product"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_plus_on.png" alt=""></a></li>								
+							</ul>
+						</div></div><div class="pr_slide_div" onmouseover='productOver(this,104);'  onmouseout='productOut(this,104);'><img src="/modules/bbs/u_files/bbs_product/1719969844.jpg" alt=""><div class="slide_pro_title" id='slide_num_104'>
+							<ul>
+								<li class="slide_pro_tit1">전문의약품</li>
+								<li class="slide_pro_tit2">슈퍼피린캡슐</li>
+								<li class="slide_pro_tit3">혈전증 및 항혈소판제</li>
+								<li class="slide_pro_img"><a href="/modules/bbs/bbsView.php?id=104&bbs_id=2&code=bbs_product"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_plus_on.png" alt=""></a></li>								
+							</ul>
+						</div></div><div class="pr_slide_div" onmouseover='productOver(this,102);'  onmouseout='productOut(this,102);'><img src="/modules/bbs/u_files/bbs_product/1635493307.jpg" alt=""><div class="slide_pro_title" id='slide_num_102'>
+							<ul>
+								<li class="slide_pro_tit1">전문의약품</li>
+								<li class="slide_pro_tit2">명인디스그렌캡슐</li>
+								<li class="slide_pro_tit3">혈전증 및 항혈소판제</li>
+								<li class="slide_pro_img"><a href="/modules/bbs/bbsView.php?id=102&bbs_id=2&code=bbs_product"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_plus_on.png" alt=""></a></li>								
+							</ul>
+						</div></div><div class="pr_slide_div" onmouseover='productOver(this,38);'  onmouseout='productOut(this,38);'><img src="/modules/bbs/u_files/bbs_product/1751606878.jpg" alt=""><div class="slide_pro_title" id='slide_num_38'>
+							<ul>
+								<li class="slide_pro_tit1">일반의약품</li>
+								<li class="slide_pro_tit2">메이킨큐장용정</li>
+								<li class="slide_pro_tit3">소화기관 치료제</li>
+								<li class="slide_pro_img"><a href="/modules/bbs/bbsView.php?id=38&bbs_id=1&code=bbs_product"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_plus_on.png" alt=""></a></li>								
+							</ul>
+						</div></div>				</div>
+				<!-- 제품 검색 -->
+				<div class="mid_search_wrap">
+					<p class="mid_product_tit"><em class="mptit">제품검색</em> 명인제약의 다양한 제품들을 검색하실 수 있습니다.</p>
+					<div class="mid_search_box">
+						<form method="post" name="fnSearch" action="/modules/bbs/?page=&code=bbs_product">
+							<input type="text" name="sword" id="mid_search_input_i" placeholder="제품명 검색 가능합니다."><a href="javascript:fnSearchit();" class="mid_search_btn"></a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function fnSearchit(){
+				var fn = document.fnSearch;
+				if(fn.sword.value == ""){
+					alert('검색어를 입력해주시기 바랍니다.');
+					fn.sword.focus();
+					return false;
+				}
+
+				fn.submit();
+				return true;
+			}
+		</script>
+		<!-- 명인홍보영상 -->
+		<div class="section section3 fp-auto-height-responsive"  style="">
+			<div class="mid_movie_view"> 
+				<div class="title_box title_top_size">
+					<p class="head_tit">좋은 치료제, 넘치는 건강</p>
+					<p class="mid_tit">명인홍보영상</p>
+					<hr class="tit_line">
+					<p class="btm_tit">명인제약의 기업홍보영상을 지금 만나보세요.</p>
+				</div>	
+				<div class="m_movie_box">
+					<ul>
+						<li>
+							<div class="m_movie_box_img"><img src="https://myunginph.co.kr/design/ko/images/default/main_hongbo01.jpg" alt="">
+								<div class="m_movie_box_ov">
+									<ul>
+										<li class="m_mov_ttl1">홍보영상</li>
+										<li class="m_mov_ttl2">팔탄 1공장</li>
+										<li class="m_mov_ttl3">완제품/연구개발</li>
+										<li class="m_mov_img"><a href="javascript:menu('sub5_2');"><img src="https://myunginph.co.kr/design/ko/images/default/icon_hongbo_playbtn.png" alt=""></a></li>	
+									</ul>
+								</div>
+							</div>
+							<div class="m_movie_ttl">
+								<span>팔탄 1공장(완제품)</span>
+								<span>주소 : 경기도 화성시 만세구 팔탄면 노하길 361-12</span>
+							</div>
+						</li>
+						<li>
+							<div class="m_movie_box_img"><img src="https://myunginph.co.kr/design/ko/images/default/main_hongbo02.jpg" alt="">
+								<div class="m_movie_box_ov">
+									<ul>
+										<li class="m_mov_ttl1">홍보영상</li>
+										<li class="m_mov_ttl2">발안 2공장/중앙연구소</li>
+										<li class="m_mov_ttl3">원료/연구개발</li>
+										<li class="m_mov_img"><a href="javascript:menu('sub5_4');"><img src="https://myunginph.co.kr/design/ko/images/default/icon_hongbo_playbtn.png" alt=""></a></li>	
+									</ul>								
+								</div>							
+							</div>
+							<div class="m_movie_ttl">
+								<span>발안 2공장(원료) / 중앙연구소</span>
+								<span>주소 : 경기도 화성시 만세구 향남읍 발안공단로 17</span>
+							</div>						
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 명인 뉴스 / 제품 뉴스 -->
+		<div class="section section4 fp-auto-height-responsive" style="">
+			<div class="mid_board_view">
+				<div class="title_box title_top_size_nt">
+					<p class="head_tit">좋은 치료제, 넘치는 건강</p>
+					<p class="mid_tit">NEWS CENTER</p>
+					<hr class="tit_line">
+					<p class="btm_tit">명인제약의 새로운 소식들을 알려드립니다.</p>
+				</div>	
+				<div class="mid_board_box">
+<div>
+	<ul>
+	<li>
+					<p class="bd_tit bd_tit_news">명인뉴스</p>
+					<p class="bd_sub"><a href='/modules/bbs/bbsView.php?id=465&code=bbs_notice' style='color:#010101;'>명인다문화장학재단, 장학증서 수여‥4년차 맞아 한층 견고한 결실 / 메디파나뉴스</a></p>
+					<p class="bd_date">2026.06.23</p>
+				</li><li>
+					<p class="bd_tit bd_tit_news">명인뉴스</p>
+					<p class="bd_sub"><a href='/modules/bbs/bbsView.php?id=464&code=bbs_notice' style='color:#010101;'><팍스로야캡슐> 글로벌 IP 무형자산 권리 체계 일원화</a></p>
+					<p class="bd_date">2026.01.26</p>
+				</li>	</ul>
+	<a href="javascript:menu('sub5_1');" class="nc_moreBtn more_news">명인뉴스 더보기</a>
+</div>
+
+<div class="product_box">
+	<ul>
+	<li>
+					<p class="bd_tit bd_tit_news">제품뉴스</p>
+					<p class="bd_sub"><a href='/modules/bbs/bbsView.php?id=549&code=bbs_news' style='color:#010101;'>프로막정 3함량, 올트릴주 허가사항 변경알림</a></p>
+					<p class="bd_date">2026.07.20</p>
+				</li><li>
+					<p class="bd_tit bd_tit_news">제품뉴스</p>
+					<p class="bd_sub"><a href='/modules/bbs/bbsView.php?id=548&code=bbs_news' style='color:#010101;'>수마트란정 허가사항 변경알림</a></p>
+					<p class="bd_date">2026.05.11</p>
+				</li>	</ul>	
+	<a href="javascript:menu('sub2_2');" class="nc_moreBtn more_product">제품뉴스 더보기</a>						
+</div>
+				</div>
+			</div>
+		</div> 
+<script>
+		$(window).load(function  () {
+			var $slick_carousel = $(".slider");
+
+			$slick_carousel.on('init', function(event, slick) {
+				$(".visual-item").eq(0).addClass("active");
+			});
+			$slick_carousel.on('afterChange', function(event, slick, currentSlide){
+				$(".visual-item").removeClass("active");
+				$(this).find(".visual-item").eq(currentSlide).addClass("active")
+			});
+			// ���� ���־� �Ѹ�
+			$slick_carousel.slick({
+				dots: false,
+				infinite: true,
+				arrows:false,
+				pauseOnHover:false,
+				autoplay:true,
+				fade:true,
+				autoplaySpeed: 5000,
+				slidesToShow: 1,
+				slidesToScroll: 1
+			});
+		});
+</script>
+
+<script type="text/javascript">
+
+		$(function(){
+
+			$(".pr_slide").slick({	
+				slide: 'div',
+				infinite: true,
+				speed:1000, // �����̵� ���ǵ�
+				autoplay: true, 
+				autoplaySpeed: 4000, // �ڵ��÷��� ���ǵ�
+				slidesToShow: 3, //�� ȭ�鿡 ������ �����ۼ�
+				slidesToScroll: 1, // �ѹ��� �����̵� ��ų ������ ����
+				
+				centerMode: true,
+				centerPadding: '0',
+				centermargin:'30px',
+				pauseOnHover : true, 
+				draggable : true, 
+				focusOnSelect: true,
+				arrows: true,
+				variableWidth: true,
+				prevArrow: '<div class="slick-arrow slick-prev"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_slide_prev.png" alt=""></div>',
+                nextArrow: '<div class="slick-arrow slick-next"><img src="https://myunginph.co.kr/design/ko/images/default/icon_product_slide_next.png" alt=""></div>',
+			
+				responsive: [
+					{
+						breakpoint: 1200,
+							settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '30px',
+							slidesToShow: 3,
+							speed:2500, // �����̵� ���ǵ�
+							autoplay: true, //�ڵ��÷��� ����( false�� �ڵ��÷��� �ȵ� )
+							autoplaySpeed: 7000, // �ڵ��÷��� ���ǵ�
+							variableWidth: false,
+						}
+					},
+					{
+						breakpoint: 840,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '20px',
+							variableWidth: false,
+							speed:2500, // �����̵� ���ǵ�
+							autoplay: true, //�ڵ��÷��� ����( false�� �ڵ��÷��� �ȵ� )
+							autoplaySpeed: 7000, // �ڵ��÷��� ���ǵ�
+							slidesToShow: 2
+						}
+					},
+					{
+						breakpoint: 640,
+						settings: {
+							arrows: true,
+							centerMode: true,
+							centerPadding: '10px',
+							variableWidth: false,
+							slidesToShow: 1
+						}
+					},
+				]
+			
+			});
+		});
+	  </script>
+
+
+
+		<div class="section section5 fp-auto-height-responsive" style="">
+			<div class="footer">
+				<div class="f_info">
+					<ul>
+						<li><a href="javascript:menu('sub10_1');">개인정보처리방침</a></li>					
+						<li><a href="javascript:menu('sub7_1');">사이트맵</a></li>
+						<li><a href="javascript:menu('sub1_3');">오시는길</a></li>
+						<!-- <li><a href="">이용약관</a></li> -->
+						<li><a href="https://myungfoundation.or.kr/" target="_blank">명인다문화장학재단</a></li>
+						<li><a href="http://igatan.co.kr/" target="_blank">이가탄홈</a></li>
+						<li><a href="http://mayqueenq.co.kr/" target="_blank">메이킨홈</a></li>
+					</ul>
+				</div>
+				<div class="addr_box">
+					<div class="addr">
+						<p>경기도 화성시 만세구 팔탄면 노하길 361-12 <em class="tel"> 대표전화 02)587-9060</em></p>
+						<p>대표이사 이관순(공동대표),차봉권(공동대표) <em class="cpnum">사업자등록번호 124-81-18673</em></p>
+						<p>Copyright ⓒ 2021 MYUNG-IN PHARM. All Right Reserved</p>
+					</div>
+					<div class="f_logo">
+						<a href="/main/ko/"><img src="https://myunginph.co.kr/design/ko/images/default/f_logo.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+
+	</div><!-- fullpage  -->
+	<div class="m_gnb_bg" style="display:none;"></div>
+</div><!-- wrap -->
+
+
+
+<!-- Total Program Operation Time : 0.0049-->

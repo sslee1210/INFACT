@@ -1,0 +1,288 @@
+{
+  "yearTabs": [
+    {
+      "route": "references-design",
+      "year": "2026",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 0,
+      "overflow": false,
+      "selected": "2026"
+    },
+    {
+      "route": "references-design",
+      "year": "2025",
+      "broken": [],
+      "fallbacks": 2,
+      "logoCount": 1,
+      "overflow": false,
+      "selected": "2025"
+    },
+    {
+      "route": "references-design",
+      "year": "2023",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 0,
+      "overflow": false,
+      "selected": "2023"
+    },
+    {
+      "route": "references-design",
+      "year": "2022",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 1,
+      "overflow": false,
+      "selected": "2022"
+    },
+    {
+      "route": "references-design",
+      "year": "2021",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 5,
+      "overflow": false,
+      "selected": "2021"
+    },
+    {
+      "route": "references-design",
+      "year": "2020",
+      "broken": [],
+      "fallbacks": 3,
+      "logoCount": 0,
+      "overflow": false,
+      "selected": "2020"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2026",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2026"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2025",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2025"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2024",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2024"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2023",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2023"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2022",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2022"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2021",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2021"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2020",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2020"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2019",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2019"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2018",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2018"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2017",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2017"
+    },
+    {
+      "route": "references-gmp",
+      "year": "2016",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2016"
+    },
+    {
+      "route": "references-csv",
+      "year": "2026",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2026"
+    },
+    {
+      "route": "references-csv",
+      "year": "2025",
+      "broken": [],
+      "fallbacks": 0,
+      "logoCount": 20,
+      "overflow": false,
+      "selected": "2025"
+    },
+    {
+      "route": "references-csv",
+      "year": "2024",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2024"
+    },
+    {
+      "route": "references-csv",
+      "year": "2023",
+      "broken": [],
+      "fallbacks": 3,
+      "logoCount": 17,
+      "overflow": false,
+      "selected": "2023"
+    },
+    {
+      "route": "references-csv",
+      "year": "2022",
+      "broken": [],
+      "fallbacks": 2,
+      "logoCount": 16,
+      "overflow": false,
+      "selected": "2022"
+    },
+    {
+      "route": "references-csv",
+      "year": "2021",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 19,
+      "overflow": false,
+      "selected": "2021"
+    },
+    {
+      "route": "references-csv",
+      "year": "2020",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 16,
+      "overflow": false,
+      "selected": "2020"
+    },
+    {
+      "route": "references-csv",
+      "year": "2019",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 11,
+      "overflow": false,
+      "selected": "2019"
+    },
+    {
+      "route": "references-csv",
+      "year": "2017",
+      "broken": [],
+      "fallbacks": 1,
+      "logoCount": 0,
+      "overflow": false,
+      "selected": "2017"
+    }
+  ],
+  "viewports": [
+    {
+      "width": 390,
+      "route": "references-design",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "references-gmp",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "references-csv",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "route": "home",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "route": "references-design",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "route": "references-gmp",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "route": "references-csv",
+      "broken": [],
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "route": "home",
+      "broken": [],
+      "overflow": false
+    }
+  ]
+}

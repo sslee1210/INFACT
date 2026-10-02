@@ -1,0 +1,967 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
+
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<meta name="author" content="비씨월드제약">
+
+	<meta property="og:title" content=" 비씨월드제약" />
+	<meta property="og:url" content="http://bcwp.mraon.com/" /><!-- 사이트도메인 -->
+	<!-- <meta property="og:image" content="/html/images/op_logo.png" />-->
+	<!-- 공유이미지 (페이스북 카카오톡 네이트온등에도 사용됨) -->
+	<meta property="og:description" content="" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content=" 비씨월드제약" />
+	<meta name="twitter:url" content="http://bcwp.mraon.com/" /><!-- 사이트도메인 -->
+	<!-- <meta name="twitter:image" content="/html/images/op_logo.png" />--><!-- 트위터 공유이미지 -->
+	<meta name="twitter:description" content="" />
+
+	<title>비씨월드제약</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="/html/_img/comm/favicon.png" /><!-- 파비콘 -->
+	    <link rel="canonical" href="https://www.bcwp.co.kr"><!-- 대표페이지 정의 -->
+
+	<!-- style -->
+	<link rel="stylesheet" href="/_css/bootstrap.min.css?ver=1623909933" />
+	<!-- <link rel="stylesheet" href="/html/_css/basic_website.css" /> -->
+	<link rel="stylesheet" href="/html/_css/default.css?ver=1781857105" />
+		<link rel="stylesheet" href="/html/_css/main.css?ver=1781853063" />
+	
+	<!-- icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css">
+
+	<!-- js -->
+	<script src="/_js/jquery.min.js"></script>
+	<script src="/_js/jquery.easing.min.js"></script>
+	<script src="/_js/gsap.min.js"></script>
+	<script src="/_js/plugins/jquery.cookie.min.js"></script>
+	<script src="/_js/plugins/jquery.lazyload.min.js"></script>
+	<script src="/_js/plugins/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="/_js/plugins/sweetalert.css" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	// 자바스크립트에서 사용하는 전역변수 선언
+	var s_lang = "KOR";
+	var raon_url       = "https://www.bcwp.co.kr/board";
+	var raon_bbs_url   = "https://www.bcwp.co.kr/board/bbs";
+	var raon_is_member = "";
+	var raon_is_admin  = "";
+	var raon_is_mobile = "";
+	var raon_bo_table  = "";
+	var raon_sca       = "";
+	var raon_editor    = "";
+	var raon_cookie_domain = "";
+	var raon_shop_url = "https://www.bcwp.co.kr/board/shop";
+		</script>
+
+
+</head>
+<!-- loading -->
+<div id="page_loading">
+	<div id="loading_motion">
+	<p class="circle">
+		<span></span>
+		<span></span>
+		<span></span> 
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</p>
+</div></div>
+
+<style>
+.pop_content_editor img{height:auto !important;}
+</style>
+<script>
+var setCookie = function(name, value, exp) {
+    var date = new Date();
+    date.setTime(date.getTime() + exp*24*60*60*1000);
+    document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';path=/';
+};
+
+$(function() {
+    $('.hd_pops_new_close').click(function() {
+        var exp_time = "24";
+        var idb = $(this).attr('class').split(' ');
+
+        if($("#"+idb[1]+"_check").is(":checked")==true){
+
+            setCookie(idb[1],true,exp_time);
+        }
+        $('#'+idb[1]).css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+});
+</script>
+<!-- 신규 팝업 2021 아이디값은 각 팝업의 고유값 -->
+<!-- <div id="popup_new001" class="popop_wrap" style="left:50px; top:50px; width:500px">
+	<div class="poppup_body" style="background-color:#fff;">
+
+		<div class="owl-carousel owl-theme">
+			<div class="item"><img src="http://newboard.mraon.com/_Admin_/img/sample_3.jpg" alt=""></div>
+			<div class="item"><img src="http://newboard.mraon.com/_Admin_/img/sample_3.jpg" alt=""></div>
+			<div class="item"><img src="http://newboard.mraon.com/_Admin_/img/sample_3.jpg" alt=""></div>
+			<div class="item"><img src="http://newboard.mraon.com/_Admin_/img/sample_3.jpg" alt=""></div>
+		</div>
+
+
+	</div>
+	<div class="poppup_footer" style="background-color:#000; color:#fff;">
+		<p class="day_check"><input type="checkbox" id="popup_check001"> <label for="popup_check001">오늘 하루 열지 않음</label></p>
+		<p class="pop_close"><a href="#."><i class="xi-close"></i> 닫기</a></p>
+	</div>
+</div> -->
+<!-- //신규 팝업 2021 -->
+<!-- //loading -->
+<script>
+$(function(){
+	if($(".popop_wrap .owl-carousel").length > 0){
+		$(".popop_wrap .owl-carousel").owlCarousel({
+			loop:true,
+			margin:1,
+			nav:false,
+			items:1,
+			autoplay:true,
+			smartSpeed:700,
+			autoplayTimeout:7000,
+		});
+
+	}
+});
+</script>
+
+<body>
+<!-- wrapper -->
+<div id="Wrap">
+
+	<!-- header -->
+	<header id="header">
+	<!-- 글로벌 메뉴 -->
+	<link rel="stylesheet" href="/html/_css/gnb_respon.css?ver=1781846939" />
+<div class="">
+		<h1 class="logo">
+			<a href="/"><img src="/html/_img/comm/logo.png" alt="" /></a>
+		</h1>
+		
+		<!-- 메뉴 -->
+		<div class="flxed_gnb" >
+			<div class="gnb_container">
+				<ul class="list-unstyled clearfix">
+										<li class="dp1-box sub0 ">
+						<a class="animate03" data-url="/company/1" href="#." title="회사소개">회사소개</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></p> -->
+							<li><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></li>
+														<!-- <p><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></p> -->
+							<li><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></li>
+														<!-- <p><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></p> -->
+							<li><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></li>
+														<!-- <p><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></p> -->
+							<li><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></li>
+														<!-- <p><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></p> -->
+							<li><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></li>
+														<!-- <p><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></p> -->
+							<li><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></li>
+														<!-- <p><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></p> -->
+							<li><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></li>
+														<!-- <p><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></p> -->
+							<li><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub1 ">
+						<a class="animate03" data-url="/rnd/1" href="#." title="연구개발">연구개발</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></p> -->
+							<li><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></li>
+														<!-- <p><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></p> -->
+							<li><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></li>
+														<!-- <p><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></p> -->
+							<li><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub2 ">
+						<a class="animate03" data-url="/pro/1" href="#." title="제품소개">제품소개</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/product/1"  target=''  title="신제품">신제품 </a></p> -->
+							<li><a  href="/product/1"  target=''  title="신제품">신제품 </a></li>
+														<!-- <p><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></p> -->
+							<li><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></li>
+														<!-- <p><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></p> -->
+							<li><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub3 ">
+						<a class="animate03" data-url="/board/ir1" href="#." title="IR센터">IR센터</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></p> -->
+							<li><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></li>
+														<!-- <p><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></p> -->
+							<li><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></li>
+														<!-- <p><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></p> -->
+							<li><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></li>
+														<!-- <p><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></p> -->
+							<li><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub4 ">
+						<a class="animate03" data-url="/customer/1" href="#." title="고객센터">고객센터</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></p> -->
+							<li><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></li>
+														<!-- <p><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></p> -->
+							<li><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></li>
+														<!-- <p><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></p> -->
+							<li><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub5 ">
+						<a class="animate03" data-url="/board/notice" href="#." title="뉴스룸">뉴스룸</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></p> -->
+							<li><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></li>
+														<!-- <p><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></p> -->
+							<li><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></li>
+														<!-- <p><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></p> -->
+							<li><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub6 ">
+						<a class="animate03" data-url="https://bcwp.recruiter.co.kr/appsite/company/index" href="#." title="채용정보">채용정보</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></p> -->
+							<li><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></li>
+													</ul>
+					</li>
+
+									</ul>
+			</div>
+		</div>
+		<!-- //메뉴 -->
+
+
+		<!-- 메뉴 -->
+		<nav class="nav_all_menu" >
+			<div class="all_menu_inner">
+				
+				<div class="all_menu_box">
+					<div class="menu_visual" style="background:url(html/_img/comm/menu_visual_1.jpg) no-repeat center center / cover;"></div>
+
+					<ul class="list-unstyled clearfix">
+												<li class="dp1-box sub7 ">
+							<a class="animate03" data-title="ABOUT US" data-url="/company/1" href="#." title="회사소개">회사소개</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></p> -->
+									<li><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></li>
+																		<!-- <p><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></p> -->
+									<li><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></li>
+																		<!-- <p><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></p> -->
+									<li><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></li>
+																		<!-- <p><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></p> -->
+									<li><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></li>
+																		<!-- <p><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></p> -->
+									<li><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></li>
+																		<!-- <p><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></p> -->
+									<li><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></li>
+																		<!-- <p><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></p> -->
+									<li><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></li>
+																		<!-- <p><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></p> -->
+									<li><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub8 ">
+							<a class="animate03" data-title="R&D" data-url="/rnd/1" href="#." title="연구개발">연구개발</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></p> -->
+									<li><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></li>
+																		<!-- <p><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></p> -->
+									<li><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></li>
+																		<!-- <p><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></p> -->
+									<li><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub9 ">
+							<a class="animate03" data-title="PRODUCT" data-url="/pro/1" href="#." title="제품소개">제품소개</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/product/1"  target=''  title="신제품">신제품 </a></p> -->
+									<li><a  href="/product/1"  target=''  title="신제품">신제품 </a></li>
+																		<!-- <p><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></p> -->
+									<li><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></li>
+																		<!-- <p><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></p> -->
+									<li><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub10 ">
+							<a class="animate03" data-title="IR CENTER" data-url="/board/ir1" href="#." title="IR센터">IR센터</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></p> -->
+									<li><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></li>
+																		<!-- <p><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></p> -->
+									<li><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></li>
+																		<!-- <p><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></p> -->
+									<li><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></li>
+																		<!-- <p><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></p> -->
+									<li><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub11 ">
+							<a class="animate03" data-title="CS CENTER" data-url="/customer/1" href="#." title="고객센터">고객센터</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></p> -->
+									<li><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></li>
+																		<!-- <p><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></p> -->
+									<li><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></li>
+																		<!-- <p><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></p> -->
+									<li><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub12 ">
+							<a class="animate03" data-title="뉴스룸" data-url="/board/notice" href="#." title="뉴스룸">뉴스룸</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></p> -->
+									<li><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></li>
+																		<!-- <p><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></p> -->
+									<li><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></li>
+																		<!-- <p><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></p> -->
+									<li><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+												<li class="dp1-box sub13 ">
+							<a class="animate03" data-title="RECRUIT" data-url="https://bcwp.recruiter.co.kr/appsite/company/index" href="#." title="채용정보">채용정보</a>
+							<div class="dp2-box">
+								<p class="desc">DDS 기술을 선도하는<br /> 존경받는 <strong class="fw500">글로벌 헬스케어 그룹</strong></p>
+								<ul class="list-unstyled ">
+																		<!-- <p><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></p> -->
+									<li><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></li>
+																	</ul>
+							</div>
+						</li>
+
+											</ul>
+				</div>
+				<p class="over_menu_text">ABOUT US</p>
+			</div>
+		</nav>
+		<!-- //메뉴 -->
+
+		<!-- 메뉴 -->
+		<nav class="gnb" >
+			<div class="gnb_container">
+				<ul class="list-unstyled clearfix">
+										<li class="dp1-box sub14 ">
+						<a class="animate03" data-url="/company/1" href="#." title="회사소개">회사소개</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></p> -->
+							<li><a  href="/company/1"  target=''  title="미션/비전/핵심가치">미션/비전/핵심가치 </a></li>
+														<!-- <p><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></p> -->
+							<li><a  href="/company/2"  target=''  title="CEO 인사말">CEO 인사말 </a></li>
+														<!-- <p><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></p> -->
+							<li><a  href="/company/3"  target=''  title="회사연혁">회사연혁 </a></li>
+														<!-- <p><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></p> -->
+							<li><a  href="/company/4"  target=''  title="윤리경영">윤리경영 </a></li>
+														<!-- <p><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></p> -->
+							<li><a  href="/company/8"  target=''  title="품질선언">품질선언 </a></li>
+														<!-- <p><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></p> -->
+							<li><a  href="/company/5"  target=''  title="생산시설">생산시설 </a></li>
+														<!-- <p><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></p> -->
+							<li><a  href="/company/7"  target=''  title="비씨월드헬스케어">비씨월드헬스케어 </a></li>
+														<!-- <p><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></p> -->
+							<li><a  href="/company/9"  target=''  title="CI소개">CI소개 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub15 ">
+						<a class="animate03" data-url="/rnd/1" href="#." title="연구개발">연구개발</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></p> -->
+							<li><a  href="/rnd/1"  target=''  title="연구소소개">연구소소개 </a></li>
+														<!-- <p><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></p> -->
+							<li><a  href="/rnd/2"  target=''  title="원천기술">원천기술 </a></li>
+														<!-- <p><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></p> -->
+							<li><a  href="/rnd/3"  target=''  title="R&D 성과">R&D 성과 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub16 ">
+						<a class="animate03" data-url="/pro/1" href="#." title="제품소개">제품소개</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/product/1"  target=''  title="신제품">신제품 </a></p> -->
+							<li><a  href="/product/1"  target=''  title="신제품">신제품 </a></li>
+														<!-- <p><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></p> -->
+							<li><a  href="/product/82"  target=''  title="전문의약품">전문의약품 </a></li>
+														<!-- <p><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></p> -->
+							<li><a  href="/board/product_change"  target=''  title="제품변경소식">제품변경소식 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub17 ">
+						<a class="animate03" data-url="/board/ir1" href="#." title="IR센터">IR센터</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></p> -->
+							<li><a  href="/ir/1"  target=''  title="공시정보">공시정보 </a></li>
+														<!-- <p><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></p> -->
+							<li><a  href="/ir/3"  target=''  title="재무정보">재무정보 </a></li>
+														<!-- <p><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></p> -->
+							<li><a  href="/board/ir_news"  target=''  title="IR news">IR news </a></li>
+														<!-- <p><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></p> -->
+							<li><a  href="/ir/5"  target=''  title="내부정보관리규정">내부정보관리규정 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub18 ">
+						<a class="animate03" data-url="/customer/1" href="#." title="고객센터">고객센터</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></p> -->
+							<li><a  href="/customer/1"  target=''  title="문의안내">문의안내 </a></li>
+														<!-- <p><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></p> -->
+							<li><a  href="/company/6"  target=''  title="오시는 길">오시는 길 </a></li>
+														<!-- <p><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></p> -->
+							<li><a  href="/inquiry/support"  target=''  title="온라인문의">온라인문의 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub19 ">
+						<a class="animate03" data-url="/board/notice" href="#." title="뉴스룸">뉴스룸</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></p> -->
+							<li><a  href="/board/notice"  target=''  title="알립니다">알립니다 </a></li>
+														<!-- <p><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></p> -->
+							<li><a  href="/board/news"  target=''  title="보도자료">보도자료 </a></li>
+														<!-- <p><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></p> -->
+							<li><a  href="/board/gallery"  target=''  title="사내소식">사내소식 </a></li>
+													</ul>
+					</li>
+
+										<li class="dp1-box sub20 ">
+						<a class="animate03" data-url="https://bcwp.recruiter.co.kr/appsite/company/index" href="#." title="채용정보">채용정보</a>
+						<ul class="list-unstyled dp2-box">
+														<!-- <p><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></p> -->
+							<li><a  href="https://bcwp.recruiter.co.kr/appsite/company/index"  target='_blank'  title="채용정보">채용정보 </a></li>
+													</ul>
+					</li>
+
+									</ul>
+			</div>
+		</nav>
+		<!-- //메뉴 -->
+
+		<div class="gnb_side clearfix">
+			<div  class="lan">
+				<a href="#."> KOR <i class="xi-caret-down-min"></i></a>
+				<p>
+<!-- 					<a href="/">KOR</a> -->
+					<a href="/eng">ENG</a>
+				</p>
+			</div>
+			<div class="burger">
+				<div class="x"></div>
+				<div class="y"></div>
+				<div class="z"></div>
+			</div>
+		</div>
+		<div class="circle"></div>
+</div>
+
+<script>
+	$(function(){
+		//$(".burger").trigger("click");
+		$(".nav_all_menu .dp1-box").each(function(index){
+			$(this).hover(function(){
+				
+				$(".menu_visual").attr("style", "background:url(/html/_img/comm/menu_visual_"+index+".jpg) no-repeat center center / cover;");
+				$(".over_menu_text").text($(this).children("a").data("title"));
+
+			}, function(){
+			
+			
+			});
+		});
+
+	});
+</script> 
+			<!-- //글로벌 메뉴 -->
+
+
+</header>	<!-- //header -->
+
+	<!-- main_visual -->
+	<section id="main_visual">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide visual-swiper-slide">
+					<p class="scroll"><img src="html/_img/main/scroll.png" alt=""></p>
+					<video  autoplay loop name="media" muted width="100%">
+						<!-- <source src="html/_img/main/visual_video.mp4" type="video/mp4"> -->
+						<source src="html/_file/main0.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="swiper-slide visual-swiper-slide">
+					<div class="visual_txt" >
+						<dl>
+							<dt id="visual_txt_dt" class="fsr3_6 fcWhite fw300 mb20"><span class="fw600">환자</span>의 더 나은 미래를 만들기 위해 <span class="fw600">진심</span>을 다하는</dt>
+							<dd id="visual_txt_dd" class="fsr6_4 fcWhite fw700">비씨월드제약</dd>
+						<dl>
+					</div>
+					<p class="scroll"><img src="html/_img/main/scroll.png" alt=""></p>
+					<video  autoplay loop name="media" muted width="100%">
+						<!-- <source src="html/_img/main/visual_video.mp4" type="video/mp4"> -->
+						<source src="html/_file/main.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="swiper-slide visual-swiper-slide">
+					<div class="visual_txt" >
+						<dl>
+							<dt id="visual_txt_dt" class="fsr3_6 fcWhite fw300 mb20"><span class="fw600">환자</span>의 더 나은 미래를 만들기 위해 <span class="fw600">진심</span>을 다하는</dt>
+							<dd id="visual_txt_dd" class="fsr6_4 fcWhite fw700">비씨월드제약</dd>
+						<dl>
+					</div>
+					<p class="scroll"><img src="html/_img/main/scroll.png" alt=""></p>
+					<video  autoplay loop name="media" muted width="100%">
+						<!-- <source src="html/_img/main/visual_video.mp4" type="video/mp4"> -->
+						<source src="html/_file/main2.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			<div class="slide-btn-prev main-prev"><i class="xi-angle-left fsr2"></i></div>
+			<div class="slide-btn-next main-next"><i class="xi-angle-right fsr2"></i></div>
+		</div>
+	</section>
+	<!-- //main_visual -->
+
+	<!-- 본문 시작 -->
+	<main role="main">
+	<!-- main_container -->
+	<div id="main_container">
+
+		<!-- sec01 -->
+		<section class="sec01">
+			<div><h3 class="eng3 fsr5 text-center mb20"><strong>제품</strong></h3></div>
+<!-- 			<div class="fsr3 fw300 text-center mb25">
+			글로벌 헬스케어 그룹<br />(주)비씨월드제약의 <strong class="fw500">제품을 소개합니다.</strong>
+			</div> -->
+			<!-- <div class="board_search">
+				<fieldset class="bo_sch">
+					<h3 class="s_only">검색</h3>
+					<form name="fsearch" method="get">
+						<input type="hidden" name="bo_table" value="news">
+						<input type="hidden" name="sca" value="">
+						<input type="hidden" name="sop" value="and">
+						<div class="box">
+							<div>
+								<select name="sfl" id="sfl">
+									<option value="wr_subject">제품분류</option>
+								</select>
+							</div>
+							<div>
+								<input type="text" name="stx" value="" required="" id="stx" class="sch_input" size="15" maxlength="20" placeholder="제품명을 입력해 주세요.">
+							</div>
+							<div>
+								<button type="submit" value="검색" class="sch_btn"><i class="xi-search"></i><span class="s_only">검색</span></button>
+							</div>
+						</div>
+					</form>
+				</fieldset>
+			</div> -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+										<div class="swiper-slide">
+						<a href="product/82?viewType=view&amp;it_id=1648709496">
+							<div class="thumb">
+								<span class="eng3">01</span>
+								<img src="https://www.bcwp.co.kr/board/data/product/main/product_img03.png" alt="그라트릴주1ml">								<div class="name">
+									<p class="fsr2_4 mb10">그라트릴주1ml</p>
+									<p class="fsr1_8 fw300">무색투명한 앰플에 든 무색투명한 주사액<br />
+화학요법, 방사선요법 및 수술 후 구역 및 구토에 효과</p>
+								</div>
+							</div>
+						</a>
+					</div>
+										<div class="swiper-slide">
+						<a href="product/82?viewType=view&amp;it_id=1648701098">
+							<div class="thumb">
+								<span class="eng3">02</span>
+								<img src="https://www.bcwp.co.kr/board/data/product/main/product_img02.png" alt="멀티포텐9주">								<div class="name">
+									<p class="fsr2_4 mb10">멀티포텐9주</p>
+									<p class="fsr1_8 fw300">거의 무색의 투명한 용액이 무색투명한 바이알에 들어있는 주사제<br />
+정맥 영양 공급시 미량원소 보급</p>
+								</div>
+							</div>
+						</a>
+					</div>
+										<div class="swiper-slide">
+						<a href="product/82?viewType=view&amp;it_id=1648695859">
+							<div class="thumb">
+								<span class="eng3">03</span>
+								<img src="https://www.bcwp.co.kr/board/data/product/main/product_img01.png" alt="말린다주">								<div class="name">
+									<p class="fsr2_4 mb10">말린다주</p>
+									<p class="fsr1_8 fw300">피하주사나 근육주사, 국소마취제 및 피하주입 시 침투력 증가<br />
+조직 내에 과다하게 존재하는 체액 및 혈액의 재흡수 촉진</p>
+								</div>
+							</div>
+						</a>
+					</div>
+														</div>
+				<div class="slide-btn-prev"><i class="xi-angle-left fsr2"></i></div>
+				<div class="slide-btn-next"><i class="xi-angle-right fsr2"></i></div>
+			</div>
+			<span class="line-set">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</span>
+		</section>
+		<!-- //sec01 -->
+
+		<!-- sec02 -->
+		<section class="sec02">
+			<div class="row row-none">
+				<div class="col-sm-3">
+					<a  href="company/1" class="box">
+						<div>
+							<p class="eng3 fsr3_6 fw600">01</p>
+							<p class="fsr3 fw600 mb10">회사소개.</p>
+							<p class="fsr1_8 eng3">ABOUT US</p>
+							<p class="fsr1_8 mt20">진정한 생명존중의 가치를<br />실현해 가는 기업입니다.</p>
+							<p class="eng3 more">MORE +</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a  href="rnd/1" class="box">
+						<div>
+							<p class="eng3 fsr3_6 fw600">02</p>
+							<p class="fsr3 fw600 mb10">연구개발.</p>
+							<p class="fsr1_8 eng3">RESEARCH & DEVELOPMENT</p>
+							<p class="fsr1_8 mt20">글로벌 기준에 적합한<br />생산시설을 보유하고 있습니다.</p>
+							<p class="eng3 more">MORE +</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-3">
+					<a  href="product/82" class="box">
+						<div>
+							<p class="eng3 fsr3_6 fw600">03</p>
+							<p class="fsr3 fw600 mb10">제품소개.</p>
+							<p class="fsr1_8 eng3">PRODUCT</p>
+							<p class="fsr1_8 mt20">비씨월드 제약의<br />제품을 소개합니다.</p>
+							<p class="eng3 more">MORE +</p>
+						</div>
+					</a>
+				</div>
+			<div class="col-sm-3">
+					<a  href="https://bcwp.recruiter.co.kr/career/home" class="box">
+						<div>
+							<p class="eng3 fsr3_6 fw600">04</p>
+							<p class="fsr3 fw600 mb10">채용정보.</p>
+							<p class="fsr1_8 eng3">RECRUITING</p>
+							<p class="fsr1_8 mt20">열정적이고 진취적이며,<br />창조적인 비씨월드 가족인</p>
+							<p class="eng3 more">MORE +</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="bg" style="background:url(/html/_img/main/main_sec02_bg1.jpg) no-repeat "></div>
+		</section>
+		<!-- sec02 -->
+
+		<!-- sec03 -->
+		<section class="sec03">
+			<div class="container">
+				<div class="row">
+					<div class="titBx col-md-5">
+						<h3 class="fsr5 text-center eng3 mb30 fcWhite"><strong>News.</strong></h3>
+						<p class="fsr1_8 text-center fw500 fcWhite">(주) 비씨월드제약의 <br/><strong class="fw500">새로운 소식</strong>을 만나보세요.</p>
+					</div>
+					<div class="col-md-7">
+						<div class="mt20 mb30">
+							<ul class="sec_tab list-unstyled clearfix">
+								<li class="on"><a href="#.">전체</a></li>
+								<li><a href="#.">보도자료</a></li>
+								<li><a href="#.">제품소식</a></li>
+								<li><a href="#.">IR News</a></li>
+							</ul>
+						</div>
+
+						<div class="tab_cont_wrap">
+							<div class="tab_container">
+								<div class="list nt_s1">
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/312">(2026-09-28 보도) 비씨월드제약, 임직원 칭찬 캠페인으로 여주 …</a>
+											</p>
+											<p class="eng2 date">2026-09-28</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/311">(2026-09-22 보도) 비씨월드제약, 이상지질혈증 복합제 '스타피노…</a>
+											</p>
+											<p class="eng2 date">2026-09-22</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/310">(2026-09-01 보도) 비씨월드제약, AI·양자기술로 항생제 내성 …</a>
+											</p>
+											<p class="eng2 date">2026-09-01</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/309">(2026-08-03 보도) 비씨월드제약, '암바로오디정' 출시…순환기 …</a>
+											</p>
+											<p class="eng2 date">2026-08-03</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/308">(2026-07-30 보도) 비씨월드제약, 미래 인재와 손잡다…약대생들 …</a>
+											</p>
+											<p class="eng2 date">2026-07-30</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/news/307">(2026-07-25 보도) 이충우 시장, ㈜비씨월드제약 기업체 현장 방…</a>
+											</p>
+											<p class="eng2 date">2026-07-28</p>
+										</div>
+																										</div>
+							</div>
+							<div class="tab_container" >
+								<div class="list nt_s2">
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/486">페티딘 성분 제제 허가 사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-08-14</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/485">메로페넴 성분 제제 허가 사항 변경 알림 [비씨월드헬스케어]</a>
+											</p>
+											<p class="eng2 date">2026-07-27</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/484">메로페넴 성분 제제 허가 사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-07-27</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/483">발프로산 성분 제제 허가 사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-07-27</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/482">슈가마덱스 성분 제제 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-07-27</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/481">코데인 성분 제제 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-07-21</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/480">펜타닐시트르산염 단일제(설하정) 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-07-21</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/479">리팜피신 함유 제제 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-02-27</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/478">발프로산 성분 제제 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2026-02-11</p>
+										</div>
+																			<div class="info clearfix">
+											<p class="cate">보도자료</p>
+											<p class="title">
+												<a href="https://www.bcwp.co.kr/board/product_change/477">플루오로퀴놀론 계열 제제 허가사항 변경 알림</a>
+											</p>
+											<p class="eng2 date">2025-12-30</p>
+										</div>
+																										</div>
+							</div>
+							<div class="tab_container">
+								<div class="list nt_s3">
+																												 <div class="info" style="width:100%;">게시글이 없습니다.</div>
+																	</div>
+							</div>
+							<div class="tab_container" >
+								<div class="list nt_s4">
+																												<div class="info" style="width:100%;">게시글이 없습니다.</div>
+																	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- sec03 -->
+
+		<!-- sec04 -->
+		<section class="sec04 text-center">
+			<h4 class="fsr4 mb10 fw600">고객센터.</h4>
+			<p class="fsr2 mb80">비씨월드 제약은 고객님과 늘 함께합니다. <br id="mo">궁금한 사항은 언제든지 문의하세요</p>
+			<p class="more">
+				<a href="customer/1" class="eng3 fcBlack fw600">MORE<i class="xi-plus-min"></i></a>
+			</p>
+		</section>
+		<!-- sec04 -->
+
+	</div>
+	<!-- //main_container -->
+	</main>
+	<!-- //본문 끝 -->
+
+
+
+<!-- 푸터 시작 -->
+<footer id="footer">
+	
+	<div class="f_menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-12">
+					<a href="html/etc/privacy">개인정보처리방침</a>
+					<a href="html/etc/agreement">이용약관</a>
+					<a href="html/etc/email">이메일무단수집거부</a>
+					<a href="html/customer/1">Contact Us</a>
+					<a href="html/etc/sitemap">Sitemap</a>
+				</div>
+<!-- 				<div class="col-md-5 col-12 copy">All Rights Reserved ⓒ bcwp.N Corp.</div> -->
+<!-- 			<div class="col-md-5 col-12 copy">All Rights Reserved ⓒ bcwp.N Corp.</div> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="container f_info">
+		<div class="row">
+			<div class="col-xl-3 col-lg-3 col-12"><img src="html/_img/comm/logo_on.png" style="max-width:258px;"alt=""></div>
+			<div class="col-xl-6 col-lg-6 col-12">
+				<div>
+					<p><span>주소</span>경기도 성남시 수정구 금토로40번길 22 (우)13453</p>					<p><span>대표이사</span>홍성한</p>				</div>
+				<div>
+					<p><span>고객센터</span>031-5178-3300</p>					<p><span>팩스</span>02-574-5073</p>					<p><span>사업자번호</span>139-81-11269</p>				</div>
+			</div>
+			<div class="col-xl-3 col-lg-3 col-12 copy">All Rights Reserved ⓒ bcwp.N Corp.</div>
+<!-- 			<div class="col-md-5 col-12 copy">All Rights Reserved ⓒ bcwp.N Corp.</div> -->
+		</div>
+	</div>
+<!-- 	<div class="f_menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-12">
+					<a href="html/etc/privacy">개인정보처리방침</a>
+					<a href="html/etc/agreement">이용약관</a>
+					<a href="html/etc/email">이메일무단수집거부</a>
+					<a href="html/customer/1">Contact Us</a>
+					<a href="html/etc/sitemap">Sitemap</a>
+				</div>
+				<div class="col-md-5 col-12 copy">All Rights Reserved ⓒ bcwp.N Corp.</div>
+			</div>
+		</div>
+	</div> -->
+
+
+</footer>
+<!-- //푸터 끝 -->
+
+<!-- JavaScript Files -->
+<script src="/_js/popper.min.js"></script>
+<script src="/_js/bootstrap.min.js"></script>
+<script src="/_js/bootstrap.modal.remote.js"></script>
+<script src="/_js/moment.min.js" type="text/javascript"></script>
+<script src="/_js/plugins/jquery.dotdotdot.min.js"></script>
+<script src="/_js/plugins/sweetalert.min.js"></script>
+<link rel="stylesheet" href="/_js/plugins/sweetalert.css" />
+<!-- 부트스트랩 달력 -->
+<!-- <script src="/_js/plugins/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="/_js/plugins/bootstrap-datepicker.css" /> -->
+<script src="/_js/plugins/bootstrap-datetimepicker.ko.js"></script>
+<script src="/_js/plugins/bootstrap-datetimepicker.min4.js"></script>
+<link rel="stylesheet" href="/_js/plugins/bootstrap-datetimepicker4.css" />
+<!-- 이미지 슬라이더 -->
+<!-- <script src="/_js/plugins/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="/_js/plugins/owl.carousel.css" /> -->
+<script src="/_js/plugins/swiper.min.js"></script>
+<link rel="stylesheet" href="/_js/plugins/swiper.min.css" />
+<!-- 페이지 스크롤로딩 -->
+<link rel="stylesheet" href="/_js/plugins/aos.css" />
+<script src="/_js/plugins/aos.js"></script>
+<link rel="stylesheet" href="/_js/plugins/animate.css" />
+<!--  -->
+<script src="html/_js/ui.js"></script>
+
+</div>
+<!-- //wrapper -->
+</body>
+</html>

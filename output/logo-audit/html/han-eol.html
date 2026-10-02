@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>广东悍能信息科技有限公司</title>
+    <link rel="icon" href="image/logo.png">
+    <meta charset="utf-8">
+    <meta name="keywords" content="权益平台,整合营销,灵活用工,数字采购">
+    <meta name="description" content="软件开发;信息技术咨询服务;互联网销售等">
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="plugins/revolution/css/settings.css" rel="stylesheet" type="text/css">
+    <!-- REVOLUTION SETTINGS STYLES -->
+    <link href="plugins/revolution/css/layers.css" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+    <link href="plugins/revolution/css/navigation.css" rel="stylesheet" type="text/css">
+    <!-- REVOLUTION NAVIGATION STYLES -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Color Themes-->
+    <!--<link href="css/color-themes/default-theme.css" rel="stylesheet">-->
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header-->
+        <header class="main-header" id="header">
+        </header>
+        <!--End Main Header-->
+
+        <!-- about us -->
+        <section class="team-section">
+            <img src="image/index.jpg">
+        </section>
+
+        <section class="team-section sp-six">
+            <div class="container">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="banner-section">
+            <div class="swiper mySwiper " id="banner">
+                <div class="swiper-wrapper">
+                    <div class='swiper-slide'>
+                        <div class="banner-img-warp" style="align-items: center;"> 
+                            <a href="http://www.tiancaibaoxian.com/">
+                                <img src="image/tiancai.jpeg" alt="img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    	</section> -->
+
+
+        <!--Main Footer-->
+        <footer class="main-footer" id="footer">
+        </footer>
+        <!--Main Footer-->
+    </div>
+    <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-arrow-up"></span></div>
+    <script src="js/jquery.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/jquery.fancybox-media.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.get('header.html', function (data) {
+                $("#header").html(data);
+            })
+            $.get('footer.html', function (data) {
+                $("#footer").html(data)
+            })
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: 2000,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+            });
+        })
+    </script>
+</body>
+
+</html>

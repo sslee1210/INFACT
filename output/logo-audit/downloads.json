@@ -1,0 +1,4915 @@
+[
+  {
+    "url": "https://www.donga-st.com/resources/img/eng_logo1.png",
+    "alt": "",
+    "key": "donga-st",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\donga-st-0.png",
+    "bytes": 4785,
+    "size": [
+      353,
+      51
+    ],
+    "sha256": "6109f3b0585da233e5385900eb52e4a3b8688b6a1389e49b1f5248c532d46582"
+  },
+  {
+    "url": "https://www.donga-st.com/resources/img/logo.png",
+    "alt": "",
+    "key": "donga-st",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\donga-st-2.png",
+    "bytes": 4750,
+    "size": [
+      99,
+      24
+    ],
+    "sha256": "2ecb4c96af2e15fa8eff0674724f073d80f84684b9800dcb04fc411b7690cf72"
+  },
+  {
+    "url": "https://www.donga-st.com/data/footer/3",
+    "alt": "",
+    "key": "donga-st",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\donga-st-1.png",
+    "bytes": 4785,
+    "size": [
+      353,
+      51
+    ],
+    "sha256": "6109f3b0585da233e5385900eb52e4a3b8688b6a1389e49b1f5248c532d46582"
+  },
+  {
+    "url": "https://www.gcbiopharma.com/kor/assets/img/logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.gcbiopharma.com/kor/assets/css/common.css",
+    "key": "gc-biopharma",
+    "index": 8,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\gc-biopharma-8.svg",
+    "bytes": 15292,
+    "size": null,
+    "sha256": "dc98a3e62e62d65f7f796088940bee0a09a5e1ed795a2fb681dfe0e208d8bfb7"
+  },
+  {
+    "url": "https://www.gcbiopharma.com/kor/assets/img/ci-kr-img-mo.svg",
+    "alt": "",
+    "key": "gc-biopharma",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\gc-biopharma-0.svg",
+    "bytes": 66691,
+    "size": null,
+    "sha256": "bbf44dd705c7ec313a37fc04c5bb4aff8b9f0fabbcc2d0b5ad0802409c3acb01"
+  },
+  {
+    "url": "https://www.gcbiopharma.com/kor/assets/img/ci-kr-img.svg",
+    "alt": "심볼 (Symbol): 그라데이션 색의 심자가 모양 심볼 / 로고타입 (Logotype): GC 녹십자",
+    "key": "gc-biopharma",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\gc-biopharma-1.svg",
+    "bytes": 63748,
+    "size": null,
+    "sha256": "0d0e1f95b9b77bd467644386343f6a51de870f600c27a37df9b341e1410f1053"
+  },
+  {
+    "url": "https://www.gcbiopharma.com/kor/assets/img/ci-en-img-mo.svg",
+    "alt": "",
+    "key": "gc-biopharma",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\gc-biopharma-2.svg",
+    "bytes": 68501,
+    "size": null,
+    "sha256": "a6ac3bae70822b9d320731b8c2a369bd57f2089e597d5d7a8afaed8cd3a3010e"
+  },
+  {
+    "url": "https://huons.com/assets/front/images/logo/logo_bc.png",
+    "alt": "",
+    "key": "huons",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-0.png",
+    "bytes": 19300,
+    "size": [
+      990,
+      312
+    ],
+    "sha256": "ca48cb82bd6fcdd9b5cf4beb900cbf621cb5ed7685f5fb1e127d391efc3f79c5"
+  },
+  {
+    "url": "https://huons.com/images/common/logo_dc.png",
+    "alt": "",
+    "key": "huons",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-2.png",
+    "bytes": 2285,
+    "size": [
+      110,
+      35
+    ],
+    "sha256": "429bcffad0d12deeaa0cdb0b88b7079c5513fbe9f5885256b04da2ec022b5c08"
+  },
+  {
+    "url": "http://huons.com/images/common/logo_og.png",
+    "alt": "",
+    "key": "huons",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-3.png",
+    "bytes": 12919,
+    "size": [
+      800,
+      800
+    ],
+    "sha256": "caadc5a64b598d35f43b6ea69274fb8d9b3d1eff9514f3d03d5721fde8cc44b8"
+  },
+  {
+    "url": "https://huons.com/images/ico/toggle_arrow_down.png",
+    "alt": "",
+    "key": "huons",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-1.png",
+    "bytes": 168,
+    "size": [
+      11,
+      6
+    ],
+    "sha256": "12eebc988cc146e6d6bd53dfbdc6b24cd486c746229c2e11c297e73232bb49ad"
+  },
+  {
+    "url": "https://prestigebiologics.com/wp-content/plugins/ameliabooking/extensions/divi_amelia/includes/images/amelia-logo-admin-icon.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://prestigebiologics.com/wp-content/plugins/ameliabooking/extensions/divi_amelia/styles/divi-amelia.css",
+    "key": "prestige-biologics",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prestige-biologics-6.svg",
+    "bytes": 2038,
+    "size": null,
+    "sha256": "3303b1e3c1d5d1fdcf8a9b6807b239c5589004a48f9a1a404a4e0d0af842449c"
+  },
+  {
+    "url": "https://prestigebiologics.com/wp-content/plugins/ameliabooking/extensions/divi_amelia/includes/images/amelia-logo-beta-divi.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://prestigebiologics.com/wp-content/plugins/ameliabooking/extensions/divi_amelia/styles/divi-amelia.css",
+    "key": "prestige-biologics",
+    "index": 7,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prestige-biologics-7.svg",
+    "bytes": 3697,
+    "size": null,
+    "sha256": "dc34a23442cb6cc90e5237dade0d782c0d033a668f635759860ea35065841f24"
+  },
+  {
+    "url": "https://prestigebiologics.com/wp-content/uploads/2023/07/homepage_main_logo_.png",
+    "alt": "",
+    "key": "prestige-biologics",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prestige-biologics-0.png",
+    "bytes": 4175,
+    "size": [
+      225,
+      60
+    ],
+    "sha256": "2b8ee3dc62e61a241405d7da401aedf4059cf68cac07d8b7fd1b101f826cf6c0"
+  },
+  {
+    "url": "https://prestigebiologics.com/wp-content/uploads/2023/02/PBP_Logo_투명_Large.png",
+    "alt": "",
+    "key": "prestige-biologics",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prestige-biologics-1.png",
+    "bytes": 42872,
+    "size": [
+      1405,
+      376
+    ],
+    "sha256": "a122c38e99ba8426c13b2e511c5208c4dad4bbd6fa8b75620e2a88054acc0601"
+  },
+  {
+    "url": "https://www.lgchem.com:443/asset/images/common/main22/logo_basic.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.lgchem.com:443/asset/css/en/gnb_renewal.css?v=20240813",
+    "key": "lg-chem",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-chem-6.svg",
+    "bytes": 3753,
+    "size": null,
+    "sha256": "a6210bf30ea495d552676216c34986dc157e2dffcddcb8bd35b7124dcacaac5c"
+  },
+  {
+    "url": "https://www.lgchem.com:443/asset/images/common/main22/logo_en_basic.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.lgchem.com:443/asset/css/en/gnb_renewal.css?v=20240813",
+    "key": "lg-chem",
+    "index": 7,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-chem-7.svg",
+    "bytes": 3789,
+    "size": null,
+    "sha256": "5b4627d6ca18d05bc798550c770e4e153e7e6b49ac15c5f62fa858f647214b74"
+  },
+  {
+    "url": "https://www.lgchem.com:443/asset/images/common/main22/logo_china_basic.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.lgchem.com:443/asset/css/en/gnb_renewal.css?v=20240813",
+    "key": "lg-chem",
+    "index": 8,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-chem-8.svg",
+    "bytes": 3767,
+    "size": null,
+    "sha256": "152f3915b8fd5562f8fb58367884f0db78b649bbf02132bd21c158931c3cd6b6"
+  },
+  {
+    "url": "https://www.lgchem.com/asset/images/en/default/logo_en.png",
+    "alt": "",
+    "key": "lg-chem",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-chem-1.png",
+    "bytes": 4360,
+    "size": [
+      179,
+      39
+    ],
+    "sha256": "1eb0f8cb647eedd3da2def0d611b7d19faa4c0f099d2c73650e3ac5cb97e0389"
+  },
+  {
+    "url": "https://www.cj.co.kr/resources/img/common/top_logo_dark.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cj.co.kr/resources/css/additional.css?ver=2026100214",
+    "key": "cj-cheiljedang",
+    "index": 32,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-cheiljedang-32.svg",
+    "bytes": 6731,
+    "size": null,
+    "sha256": "ef3c8e3c0af8e1326e6d09813263c799bb2f974a38b3d5d6c9fb6c49124828ef"
+  },
+  {
+    "url": "https://www.cj.co.kr/resources/img/common/top_logo_light.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cj.co.kr/resources/css/additional.css?ver=2026100214",
+    "key": "cj-cheiljedang",
+    "index": 33,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-cheiljedang-33.svg",
+    "bytes": 6731,
+    "size": null,
+    "sha256": "0174dd597548425f1bd7f257caaefcb0248afd751714d95ba2600539c5fef766"
+  },
+  {
+    "url": "https://www.cj.co.kr/resources/img/common/top_logo_dark.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cj.co.kr/resources/css/style_main_190820_min.css?ver=2026100214",
+    "key": "cj-cheiljedang",
+    "index": 30,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-cheiljedang-30.png",
+    "bytes": 2681,
+    "size": [
+      190,
+      80
+    ],
+    "sha256": "84e9bd4026083b9d19a3b4b11ec02f01ff8a470e007526ca5196fc457da3525c"
+  },
+  {
+    "url": "https://www.cj.co.kr/resources/img/common/top_logo_light.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cj.co.kr/resources/css/style_main_190820_min.css?ver=2026100214",
+    "key": "cj-cheiljedang",
+    "index": 31,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-cheiljedang-31.png",
+    "bytes": 2679,
+    "size": [
+      190,
+      80
+    ],
+    "sha256": "d5a43baf8d4c269d64b6b44aaec54bf7b4b53040cf1f998aa6ee70aa1d29c731"
+  },
+  {
+    "url": "https://samsungbiologics.com/resources/front/en/images/logo.svg",
+    "alt": "",
+    "key": "samsung-biologics",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-biologics-1.svg",
+    "bytes": 7659,
+    "size": null,
+    "sha256": "34b40d2e015f005f8bdda485ac4b520542172d725b4e9090644c1c1526b0a8e4"
+  },
+  {
+    "url": "https://samsungbiologics.com/resources/front/common/logo_sbl.png",
+    "alt": "",
+    "key": "samsung-biologics",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-biologics-0.png",
+    "bytes": 15819,
+    "size": [
+      500,
+      500
+    ],
+    "sha256": "7f3cf6a4408212bf7f029abf9539b8e6c86b187a4a2f3310a77baa8d6e4e1383"
+  },
+  {
+    "url": "https://samsungbiologics.com/resources/front/en/images/common/logo@x2_.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://samsungbiologics.com/resources/front/en/css/compile/common_kr.min.css?version=prd321284",
+    "key": "samsung-biologics",
+    "index": 2,
+    "error": "404 Client Error: Not Found for url: https://samsungbiologics.com/resources/front/en/images/common/logo@x2_.png"
+  },
+  {
+    "url": "https://samsungbiologics.com/resources/front/en/images/common/logo@x2.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://samsungbiologics.com/resources/front/en/css/compile/common_kr.min.css?version=prd321284",
+    "key": "samsung-biologics",
+    "index": 23,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-biologics-23.png",
+    "bytes": 13343,
+    "size": [
+      250,
+      180
+    ],
+    "sha256": "37ab64fad17031960f0b429b8d19e845049b021453b7573dc8b50aaf2b4967a3"
+  },
+  {
+    "url": "https://www.celltrion.com/front/assets/common/images/img_header_logo-419fea837abc03d84e05929fca178e6f.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.celltrion.com/front/assets/common/css/common.css",
+    "key": "celltrion",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltrion-0.png",
+    "bytes": 3420,
+    "size": [
+      150,
+      38
+    ],
+    "sha256": "78f30c114b703532ba7aa1149f6eeda638bdf87635474dcb39fc526522236698"
+  },
+  {
+    "url": "https://www.celltrion.com/front/assets/common/images/mainNew/main-global-logo-stein-c45866162cb970f9cd8bc6cd39542f94.webp",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.celltrion.com/front/assets/common/css/common.css",
+    "key": "celltrion",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltrion-2.webp",
+    "bytes": 4930,
+    "size": [
+      148,
+      46
+    ],
+    "sha256": "98d0c5bc72ae270b2e23703886d10c77ff0e62c826dc7ee91d1661b2f40b94cf"
+  },
+  {
+    "url": "https://www.celltrion.com/front/assets/common/images/mainNew/main-global-logo-pfizer-a9c5d11cd7acfe67c3aa1cb186b6ca7d.webp",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.celltrion.com/front/assets/common/css/common.css",
+    "key": "celltrion",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltrion-3.webp",
+    "bytes": 3394,
+    "size": [
+      128,
+      56
+    ],
+    "sha256": "6a1103c1fdff8da307d18b93dca8527ea444d73fef0add2a9f6bcf30090f24e1"
+  },
+  {
+    "url": "https://www.celltrion.com/front/assets/common/images/mainNew/main-global-logo-hikma-62c720c497701d3210a35d1ab8ed45d7.webp",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.celltrion.com/front/assets/common/css/common.css",
+    "key": "celltrion",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltrion-4.webp",
+    "bytes": 1850,
+    "size": [
+      120,
+      34
+    ],
+    "sha256": "20d8447c024d5bae3568c21ad925158a89c5ab266b51f4c19fc9882f3162a4f2"
+  },
+  {
+    "url": "https://www.hanmi.co.kr/images/common/logo_gnb.svg",
+    "alt": "",
+    "key": "hanmi",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanmi-0.svg",
+    "bytes": 4687,
+    "size": null,
+    "sha256": "2c748117099ac01a73523ff7bff4256ca6c477a6a71f4ef7910480b354a11339"
+  },
+  {
+    "url": "https://www.ckdpharm.com/index/images/logo.png?ver=20261002",
+    "alt": "CKD HEALTHCARE GROUP",
+    "key": "ckd-pharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-pharm-0.png",
+    "bytes": 3081,
+    "size": [
+      120,
+      45
+    ],
+    "sha256": "f1017a0113609a1a782eafa0fefa9e5783a871cd189c4cade5f7f22ec06f9149"
+  },
+  {
+    "url": "https://www.ckdpharm.com/upload/images/2020/02/18/70e493561391eab65ea2f19ca300a786c769640ded598681947a80d8b1da7887",
+    "alt": "",
+    "key": "ckd-pharm",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-pharm-1.jpg",
+    "bytes": 54759,
+    "size": [
+      364,
+      364
+    ],
+    "sha256": "9f6a23d10f522898d11dcf0351a1889918438eeba568b1e6836aa9bf1feefc3b"
+  },
+  {
+    "url": "https://www.ckdbio.com/index/images/logo.png?ver=20261002",
+    "alt": "CKD HEALTHCARE GROUP",
+    "key": "ckd-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-bio-0.png",
+    "bytes": 3081,
+    "size": [
+      120,
+      45
+    ],
+    "sha256": "f1017a0113609a1a782eafa0fefa9e5783a871cd189c4cade5f7f22ec06f9149"
+  },
+  {
+    "url": "https://www.ckdbio.com/upload/images/2020/02/18/70e493561391eab65ea2f19ca300a786c769640ded598681947a80d8b1da7887",
+    "alt": "",
+    "key": "ckd-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-bio-1.jpg",
+    "bytes": 54759,
+    "size": [
+      364,
+      364
+    ],
+    "sha256": "9f6a23d10f522898d11dcf0351a1889918438eeba568b1e6836aa9bf1feefc3b"
+  },
+  {
+    "url": "https://www.skbioscience.com/images/common/sk-bioscience-logo-header.svg",
+    "alt": "",
+    "key": "sk-bioscience",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\sk-bioscience-0.svg",
+    "bytes": 7916,
+    "size": null,
+    "sha256": "6050170ba08c91d13e8fa9555be27adeb30c0e27eba729de9cf5c98dc40d7aad"
+  },
+  {
+    "url": "https://www.skbioscience.com/images/main/footer-logo.svg",
+    "alt": "",
+    "key": "sk-bioscience",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\sk-bioscience-1.svg",
+    "bytes": 7903,
+    "size": null,
+    "sha256": "d768dde57f445a16d988b3d96705877238dfe7236e00e7a3b15740238e3e2c38"
+  },
+  {
+    "url": "https://www.boryung.co.kr/images/mo/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.boryung.co.kr/css/main.5e5980b6.css",
+    "key": "boryung",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boryung-0.png",
+    "bytes": 4153,
+    "size": [
+      207,
+      31
+    ],
+    "sha256": "0a926db380f29b0f278ea60355560235e249367efd97533c2f861f7291ae1df2"
+  },
+  {
+    "url": "https://www.inno-n.com/assets/front/pc/img/common/logo_header.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.inno-n.com/assets/front/pc/css/common.css?ver=20261002145522",
+    "key": "inno-n",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inno-n-0.svg",
+    "bytes": 1408,
+    "size": null,
+    "sha256": "f1fb344708d15dfc670d07a05d0f02dae7e0aff277b1f162d77b3c94cc16391f"
+  },
+  {
+    "url": "https://www.inno-n.com/assets/front/pc/img/common/board_nametag_logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.inno-n.com/assets/front/pc/css/common.css?ver=20261002145522",
+    "key": "inno-n",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inno-n-2.svg",
+    "bytes": 1408,
+    "size": null,
+    "sha256": "f1fb344708d15dfc670d07a05d0f02dae7e0aff277b1f162d77b3c94cc16391f"
+  },
+  {
+    "url": "https://www.inno-n.com/assets/front/pc/img/common/logo_footer.svg?ver=250620",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.inno-n.com/assets/front/pc/css/common.css?ver=20261002145522",
+    "key": "inno-n",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inno-n-1.svg",
+    "bytes": 2212,
+    "size": null,
+    "sha256": "3c5608eaacb238b48ff913f3d90a2c0b1a518006cbcb49bd60bb1ffb1ab82ac0"
+  },
+  {
+    "url": "https://www.dapharm.com/img/logo_color.png",
+    "alt": "",
+    "key": "donga-pharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\donga-pharm-0.png",
+    "bytes": 11829,
+    "size": [
+      822,
+      186
+    ],
+    "sha256": "9c237ac0d518a86f6c9bd67e59dfe7743280606be8e25daef4cffcdb90d70a22"
+  },
+  {
+    "url": "https://www.jw-pharma.co.kr/pharma/ko/asset/images/top_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-pharma.co.kr/pharma/ko/asset/css/common.css",
+    "key": "jw-pharm",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-pharm-1.png",
+    "bytes": 5116,
+    "size": [
+      153,
+      44
+    ],
+    "sha256": "c7f142e99b98920aade1dfac96746253392b2c6e1c7adf558b8b8d8f6c41e24e"
+  },
+  {
+    "url": "https://www.jw-pharma.co.kr/pharma/ko/asset/images/corruption_pop_logo.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-pharma.co.kr/pharma/ko/asset/css/content.css",
+    "key": "jw-pharm",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-pharm-3.gif",
+    "bytes": 1683,
+    "size": [
+      81,
+      56
+    ],
+    "sha256": "294173084b18d9792c6d14c14c1bba6f34a2e95c0b67642f2bf5a12d0c811f5f"
+  },
+  {
+    "url": "https://www.jw-pharma.co.kr/cmm/FileDown.jsp?fileId=260930101323424CCWF8",
+    "alt": "",
+    "key": "jw-pharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-pharm-0.png",
+    "bytes": 69383,
+    "size": [
+      832,
+      494
+    ],
+    "sha256": "b637017761d4ac6615bce1feb9e4bf2d11c7ffd1f17ba27377dd0bcac1ad7a68"
+  },
+  {
+    "url": "https://www.jw-pharma.co.kr/pharma/ko/asset/images/logo_footer.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-pharma.co.kr/pharma/ko/asset/css/common.css",
+    "key": "jw-pharm",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-pharm-2.gif",
+    "bytes": 2086,
+    "size": [
+      120,
+      34
+    ],
+    "sha256": "e1574b63d02a8a0fafc8a81218779725041cfa3261cc4a688f6119cfcbf13224"
+  },
+  {
+    "url": "https://admin.ildong.com/static/img/ildong/layout/logo.png",
+    "alt": "",
+    "key": "ildong",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ildong-0.png",
+    "bytes": 4134,
+    "size": [
+      187,
+      25
+    ],
+    "sha256": "3ad7a142622990536eb22ded04f7d208e6143152f06cf1d37b0b5622cf0610ae"
+  },
+  {
+    "url": "https://www.ildong.com/resources/img/ildong/layout/logo.png",
+    "alt": "",
+    "key": "ildong",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ildong-2.png",
+    "bytes": 4134,
+    "size": [
+      187,
+      25
+    ],
+    "sha256": "3ad7a142622990536eb22ded04f7d208e6143152f06cf1d37b0b5622cf0610ae"
+  },
+  {
+    "url": "https://www.ildong.com/resources/img/ildong/common/w_ico.png",
+    "alt": "일동제약",
+    "key": "ildong",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ildong-1.png",
+    "bytes": 992,
+    "size": [
+      10,
+      10
+    ],
+    "sha256": "83c7c667faa64dea60b3f531639c4003a58d8af98401977f1a80ee130edb43cc"
+  },
+  {
+    "url": "https://www.dkpharm.co.kr/images/common/w-gnb-logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dkpharm.co.kr/css/pc.css?v=1790920524",
+    "key": "dongkook",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkook-3.png",
+    "bytes": 19279,
+    "size": [
+      131,
+      48
+    ],
+    "sha256": "8d69db665f35c259307ab93bdf5c97cabdd31de0ce93e17e3c5d0531f72b3e4b"
+  },
+  {
+    "url": "https://www.dkpharm.co.kr/images/company/w-brand-logo-1.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dkpharm.co.kr/css/pc.css?v=1790920524",
+    "key": "dongkook",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkook-4.png",
+    "bytes": 7055,
+    "size": [
+      185,
+      56
+    ],
+    "sha256": "d9458bb93282639650c926adec7b503d66bf9ec6daa774aa3b50226a25b7fc27"
+  },
+  {
+    "url": "https://www.dkpharm.co.kr/images/company/w-brand-logo-2.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dkpharm.co.kr/css/pc.css?v=1790920524",
+    "key": "dongkook",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkook-5.png",
+    "bytes": 2743,
+    "size": [
+      150,
+      35
+    ],
+    "sha256": "6a95bf31f0d6566f364068c75fd30484552ff255032a2727648de83695fbd8fc"
+  },
+  {
+    "url": "https://www.dkpharm.co.kr/images/company/w-brand-logo-3.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dkpharm.co.kr/css/pc.css?v=1790920524",
+    "key": "dongkook",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkook-6.png",
+    "bytes": 5787,
+    "size": [
+      175,
+      45
+    ],
+    "sha256": "fcc99d128cbc280bed484e4ab26a9a30bc07f28efe812f2d947340ec51bf9bcb"
+  },
+  {
+    "url": "https://www.kolmar.co.kr/img/common/logo_active.png",
+    "alt": "",
+    "key": "kolmar",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kolmar-0.png",
+    "bytes": 2133,
+    "size": [
+      150,
+      32
+    ],
+    "sha256": "0193d5a4be6c59164aa7c441d4b10c32c43d8cdc0864fc5a211224d36c822eff"
+  },
+  {
+    "url": "https://www.kolmar.co.kr/img/common/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.kolmar.co.kr/css/layout0730.css",
+    "key": "kolmar",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kolmar-1.png",
+    "bytes": 2125,
+    "size": [
+      150,
+      32
+    ],
+    "sha256": "d7e53c2074d61a5793e75659c544881c0ae139e7a7a30058cbfcf2b525fd61fd"
+  },
+  {
+    "url": "https://www.medytox.com/themeTemplateResource/getResource?id=MEDYTOX&revision=1&path=%2Fimg%2Fmedytox_logo.png",
+    "alt": "",
+    "key": "medytox",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\medytox-0.png",
+    "bytes": 2841,
+    "size": [
+      134,
+      25
+    ],
+    "sha256": "b3baeb1f14cea809f65b4380e13c4f0f93fa12382b22c9aa9f26cd7d2552a20f"
+  },
+  {
+    "url": "https://www.medytox.com/themeTemplateResource/getResource?id=MEDYTOX&revision=1&path=%2Fimg%2Ffooter_logo.png",
+    "alt": "",
+    "key": "medytox",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\medytox-1.png",
+    "bytes": 2770,
+    "size": [
+      146,
+      28
+    ],
+    "sha256": "e85c0cc3546cb215da913b2c214fd62434de079afb6d051258e3c32e246fc74e"
+  },
+  {
+    "url": "https://www.taejoon.co.kr/common/css/images/common/logo.png",
+    "alt": "",
+    "key": "taejoon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\taejoon-0.png",
+    "bytes": 2299,
+    "size": [
+      229,
+      35
+    ],
+    "sha256": "5fb4ff1140858c9c6a67d278757182833e2dbdf84ff70483ce58e7be6a1b1da0"
+  },
+  {
+    "url": "https://www.taejoon.co.kr/common/css/images/common/foot_logo.gif",
+    "alt": "",
+    "key": "taejoon",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\taejoon-1.gif",
+    "bytes": 2106,
+    "size": [
+      108,
+      28
+    ],
+    "sha256": "c3b52c95b30dc1b20a60ed5e93ee428a63510e3849e81c207e509637b5e5d281"
+  },
+  {
+    "url": "https://www.taejoon.co.kr/common/css/images/common/thawte_logo.png",
+    "alt": "",
+    "key": "taejoon",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\taejoon-2.png",
+    "bytes": 5322,
+    "size": [
+      90,
+      22
+    ],
+    "sha256": "235bc9f3859dfbd3b7547b32f33b2dee7d8070389cebe77b617a2e9954f71fbe"
+  },
+  {
+    "url": "https://btgen.co.kr/theme/stgenbio/assets/img/logo_en_hor.svg",
+    "alt": "",
+    "key": "dmbio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dmbio-0.svg",
+    "bytes": 3017,
+    "size": null,
+    "sha256": "b2b60f3a7b50ac6ea14cd3d3d68232f928b40704b5e463477d5ac7ff65ce9ae5"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanall-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "hanall",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanall-inline-0.svg",
+    "sha256": "09fd6f68fde19cdf1fddec4b8fba5c0a277790208fde62976473c3ed4f57ff79"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanall-inline-3.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "hanall",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanall-inline-3.svg",
+    "sha256": "09fd6f68fde19cdf1fddec4b8fba5c0a277790208fde62976473c3ed4f57ff79"
+  },
+  {
+    "url": "https://cdn.prod.website-files.com/65b9b2e3db6617c1dec31db6/65ca8e85609365229b1296b9_hugel-logo.svg",
+    "alt": "",
+    "key": "hugel",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hugel-0.svg",
+    "bytes": 1810,
+    "size": null,
+    "sha256": "75f2645fb69fdea5e7fc6dac39b40d1759df4b7816e79a5ca55e8b8507e4061a"
+  },
+  {
+    "url": "https://cdn.prod.website-files.com/65b9b2e3db6617c1dec31db6/65d59b42a56cff489e7cea4d_hugel-logo-black.svg",
+    "alt": "",
+    "key": "hugel",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hugel-2.svg",
+    "bytes": 1812,
+    "size": null,
+    "sha256": "5ae0e3466cb3b4bacf5379a19024c521e9b12a6a1da37b6fb9c283815f8493ae"
+  },
+  {
+    "url": "https://cdn.prod.website-files.com/65b9b2e3db6617c1dec31db6/65ca8e85aab936144823010e_jworld-logo.svg",
+    "alt": "",
+    "key": "hugel",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hugel-4.svg",
+    "bytes": 7349,
+    "size": null,
+    "sha256": "f928c7a6b23e2ef2a5c9360ae3e512f5e9c71ca446d15ada12fcc7dd7a7d831d"
+  },
+  {
+    "url": "https://cdn.prod.website-files.com/65b9b2e3db6617c1dec31db6/65d5a24b353f56c3bd776ba1_HUGEL-Logo-basic-rgb.png",
+    "alt": "",
+    "key": "hugel",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hugel-5.png",
+    "bytes": 16285,
+    "size": [
+      726,
+      164
+    ],
+    "sha256": "6497c5aacb45d0e601a4f4a4d3ff4d5797fdc1630ad0de5cf28e7ff8db4eebb7"
+  },
+  {
+    "url": "https://www.lottebiologics.com/company/logo-header.svg",
+    "alt": "",
+    "key": "lotte-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lotte-bio-0.svg",
+    "bytes": 15565,
+    "size": null,
+    "sha256": "09ea555f5e5b238500fecc8f74d3444190415b3dda65943f492e00c43028b605"
+  },
+  {
+    "url": "https://www.lottebiologics.com/icon-logo-s.svg",
+    "alt": "",
+    "key": "lotte-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lotte-bio-1.svg",
+    "bytes": 572,
+    "size": null,
+    "sha256": "4016309b4733503f9580c2b1eac9175f9c5dd591f862e628147293fbf5222c8a"
+  },
+  {
+    "url": "https://www.lottebiologics.com/_next/image?url=%2Fcompany%2Flogo-footer.png&w=640&q=75",
+    "alt": "LOTTE BIOLOGICS",
+    "key": "lotte-bio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lotte-bio-2.png",
+    "bytes": 7277,
+    "size": [
+      640,
+      93
+    ],
+    "sha256": "678ab3e5fc5eae910dafd99da34ebe4a861471d06f40d50b3adf7e8857e00158"
+  },
+  {
+    "url": "https://www.bcwp.co.kr/html/_img/comm/logo.png",
+    "alt": "",
+    "key": "bcworld",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bcworld-0.png",
+    "bytes": 9540,
+    "size": [
+      257,
+      42
+    ],
+    "sha256": "1d12c411956581680346d50ef2f269a27496159f7b85ac806ce8f83653d29f25"
+  },
+  {
+    "url": "https://www.bcwp.co.kr/html/_img/comm/logo_on.png",
+    "alt": "",
+    "key": "bcworld",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bcworld-1.png",
+    "bytes": 9745,
+    "size": [
+      257,
+      42
+    ],
+    "sha256": "4e434e3c30a1abdf5ff0f8330e9d76759ef9f800c5ce78d4d9c12cbc2b792b0a"
+  },
+  {
+    "url": "https://www.bcwp.co.kr/html/images/op_logo.png",
+    "alt": "",
+    "key": "bcworld",
+    "index": 2,
+    "error": "404 Client Error: Not Found for url: https://www.bcwp.co.kr/html/images/op_logo.png"
+  },
+  {
+    "url": "https://www.bi-nex.com/logo192.png",
+    "alt": "",
+    "key": "binex",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\binex-0.png",
+    "bytes": 5347,
+    "size": [
+      192,
+      192
+    ],
+    "sha256": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00"
+  },
+  {
+    "url": "https://www.bi-nex.com/assets/images/binex_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bi-nex.com/assets/css/global.css",
+    "key": "binex",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\binex-1.png",
+    "bytes": 6854,
+    "size": [
+      134,
+      54
+    ],
+    "sha256": "d04499f26252cd9aa35a77351077bd789df91e28b4c765e0dab580f436ef587c"
+  },
+  {
+    "url": "https://www.bi-nex.com/assets/images/hyundaiN_logo_active.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bi-nex.com/assets/css/global.css",
+    "key": "binex",
+    "index": 2,
+    "error": "cannot identify image file <_io.BytesIO object at 0x0000027337EBFB50>"
+  },
+  {
+    "url": "https://www.bi-nex.com/assets/images/liebherr_logo_active.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bi-nex.com/assets/css/global.css",
+    "key": "binex",
+    "index": 3,
+    "error": "cannot identify image file <_io.BytesIO object at 0x0000027337EBE480>"
+  },
+  {
+    "url": "https://www.peptron.co.kr/ds_imgs/header/logo.png",
+    "alt": "",
+    "key": "peptron",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\peptron-0.png",
+    "bytes": 4550,
+    "size": [
+      170,
+      98
+    ],
+    "sha256": "047278bf827b3250483b6cd3e5e6eba0e5f8a572b27fd8a833f86c23ddc86279"
+  },
+  {
+    "url": "https://www.peptron.co.kr/ds_imgs/footer/logo.png",
+    "alt": "",
+    "key": "peptron",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\peptron-1.png",
+    "bytes": 2835,
+    "size": [
+      132,
+      89
+    ],
+    "sha256": "0b68ed6f83e251c4e9e15a199188d7692b166218cd1bdde8effff42eb744451c"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "lnc-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-0.svg",
+    "sha256": "68335cfca3bd7dc5c2392336a8240b75c330fe8df2d861a4376322f7fee2c45d"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-1.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "lnc-bio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-1.svg",
+    "sha256": "68335cfca3bd7dc5c2392336a8240b75c330fe8df2d861a4376322f7fee2c45d"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-2.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "lnc-bio",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-inline-2.svg",
+    "sha256": "68335cfca3bd7dc5c2392336a8240b75c330fe8df2d861a4376322f7fee2c45d"
+  },
+  {
+    "url": "https://www.lncbio.co.kr/theme/basic/images/common/footer_right_con_logo.png",
+    "alt": "",
+    "key": "lnc-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lnc-bio-0.png",
+    "bytes": 4376,
+    "size": [
+      94,
+      46
+    ],
+    "sha256": "68531889a79933c7886de3debd0d7d427194534c6f234f157595224b9a60af06"
+  },
+  {
+    "url": "https://www.boryungbio.co.kr/assets/logo.png",
+    "alt": "",
+    "key": "boryung-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boryung-bio-0.png",
+    "bytes": 4480,
+    "size": [
+      160,
+      46
+    ],
+    "sha256": "075f9647152cec588fc444efe8fe8b98f703ff6c18049527b9786141f3a0600a"
+  },
+  {
+    "url": "https://www.dkpco.co.kr/images/common/h1_logo.png",
+    "alt": "",
+    "key": "dongkwang",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkwang-0.png",
+    "bytes": 2941,
+    "size": [
+      145,
+      27
+    ],
+    "sha256": "0f4abc69524eea39f43bed870bb8f08cafc5168ac7c63be185c55b58cdf096e0"
+  },
+  {
+    "url": "https://www.dkpco.co.kr/images/common/logo_bottom.gif",
+    "alt": "",
+    "key": "dongkwang",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkwang-1.gif",
+    "bytes": 2590,
+    "size": [
+      134,
+      26
+    ],
+    "sha256": "9686a55796f33c3b3449f0cc0be65ac33b13e97f1240420a805528009a170fe0"
+  },
+  {
+    "url": "https://www.genewel.com/img/svg/img_logo.svg",
+    "alt": "",
+    "key": "genewel",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genewel-0.svg",
+    "bytes": 3777,
+    "size": null,
+    "sha256": "67b287f3d416465859272da5eb6bc85bf7f609552650e8a710ef8a2483c9ae50"
+  },
+  {
+    "url": "https://www.genewel.com/img/svg/quick_logo1.svg",
+    "alt": "",
+    "key": "genewel",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genewel-1.svg",
+    "bytes": 7809,
+    "size": null,
+    "sha256": "a4699af9790f039abc18f61c2e80ab1bc9f8623db876d7b0e94c591839ea567a"
+  },
+  {
+    "url": "https://www.genewel.com/img/svg/quick_logo2.svg",
+    "alt": "",
+    "key": "genewel",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genewel-2.svg",
+    "bytes": 6746,
+    "size": null,
+    "sha256": "68fc709ee63f0e958b2f38c33bb7cb604247fa13fc143806cb914dd1764bace9"
+  },
+  {
+    "url": "https://www.genewel.com/img/svg/best_logo.svg",
+    "alt": "",
+    "key": "genewel",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genewel-3.svg",
+    "bytes": 36363,
+    "size": null,
+    "sha256": "238810a793268dc19c9861b5622e8fcaf9f346dde011764862c13636f35f42ae"
+  },
+  {
+    "url": "https://www.jeilpharm.co.kr/jeilpharm/images/logo.jpg",
+    "alt": "",
+    "key": "jeil",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jeil-0.jpg",
+    "bytes": 7315,
+    "size": [
+      160,
+      100
+    ],
+    "sha256": "b2e9bb08a8836486898055ca732318098e2f36349c0e8b637e52e9270c532e52"
+  },
+  {
+    "url": "https://www.daewonpharm.com/images/com/logo_new.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.daewonpharm.com/css/layout.css?ver=20230524",
+    "key": "daewon",
+    "index": 19,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewon-19.png",
+    "bytes": 7725,
+    "size": [
+      360,
+      160
+    ],
+    "sha256": "0688e0439a62ec1d2db685f098dbae080c230d661ff59147cd473d7ef579da04"
+  },
+  {
+    "url": "https://www.daewonpharm.com/images/com/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.daewonpharm.com/css/layout.css?ver=20230524",
+    "key": "daewon",
+    "index": 20,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewon-20.png",
+    "bytes": 12986,
+    "size": [
+      1539,
+      304
+    ],
+    "sha256": "d95b7a97a29ef1c6de086678431334ceeefd62ca389ba9fc1db4bacdf923c1e2"
+  },
+  {
+    "url": "https://www.daewonpharm.com/images/main/brand/A_BG_01_Calldaewon.png",
+    "alt": "",
+    "key": "daewon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewon-0.png",
+    "bytes": 76655,
+    "size": [
+      310,
+      570
+    ],
+    "sha256": "8ddc8b71ed45a24da6120b7f9edd946d1f4dac2cbfe1ad6acd5f02f8e4f46d60"
+  },
+  {
+    "url": "https://www.daewonpharm.com/images/main/brand/A_BG_01_Callkids.png",
+    "alt": "",
+    "key": "daewon",
+    "index": 1,
+    "error": "('Connection aborted.', ConnectionResetError(10054, '현재 연결은 원격 호스트에 의해 강제로 끊겼습니다', None, 10054, None))"
+  },
+  {
+    "url": "https://www.jw-lifescience.co.kr/lifescience/ko/asset/images/logo_lifescience.png",
+    "alt": "",
+    "key": "jw-life",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-life-0.png",
+    "bytes": 3691,
+    "size": [
+      142,
+      40
+    ],
+    "sha256": "3ab1486f05ee98d588571e579727aea9a53663f0808f8a76ae0437d7fcde4ad6"
+  },
+  {
+    "url": "https://www.jw-lifescience.co.kr/commonsite/ko/asset/images/logo_holdings_footer.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-lifescience.co.kr/global/css/common.css",
+    "key": "jw-life",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-life-1.png",
+    "bytes": 2781,
+    "size": [
+      99,
+      32
+    ],
+    "sha256": "6e33eaf47a75145f44586f8c2d0b7fba2fcb432c2c2472c9f2c37a3b75914c33"
+  },
+  {
+    "url": "https://www.reyonpharm.co.kr/en/img/common/logo.png",
+    "alt": "",
+    "key": "reyon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\reyon-0.png",
+    "bytes": 1545,
+    "size": [
+      109,
+      24
+    ],
+    "sha256": "9e2289ade49cacae42da66bb9a38fefb834c14514a71c193567f4f601f184e54"
+  },
+  {
+    "url": "https://www.reyonpharm.co.kr/en/img/common/f_logo.png",
+    "alt": "",
+    "key": "reyon",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\reyon-2.png",
+    "bytes": 1532,
+    "size": [
+      109,
+      24
+    ],
+    "sha256": "d4ad9c9e90a3823e4064a6ae27ee5a9691cd1c094122d2e416a36d87aee6f293"
+  },
+  {
+    "url": "https://www.reyonpharm.co.kr/en/img/common/logo_w.png",
+    "alt": "",
+    "key": "reyon",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\reyon-1.png",
+    "bytes": 1464,
+    "size": [
+      109,
+      24
+    ],
+    "sha256": "ca78ace17c5c4a99f8e0d5945ab1f702918267cc15209f8b6876207c336f619e"
+  },
+  {
+    "url": "https://www.kbpharma.co.kr/index/images/logo.png?ver=20261002",
+    "alt": "CKD HEALTHCARE GROUP",
+    "key": "kyongbo",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kyongbo-0.png",
+    "bytes": 3081,
+    "size": [
+      120,
+      45
+    ],
+    "sha256": "f1017a0113609a1a782eafa0fefa9e5783a871cd189c4cade5f7f22ec06f9149"
+  },
+  {
+    "url": "https://www.kbpharma.co.kr/upload/images/2020/02/18/70e493561391eab65ea2f19ca300a786c769640ded598681947a80d8b1da7887",
+    "alt": "",
+    "key": "kyongbo",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kyongbo-1.jpg",
+    "bytes": 54759,
+    "size": [
+      364,
+      364
+    ],
+    "sha256": "9f6a23d10f522898d11dcf0351a1889918438eeba568b1e6836aa9bf1feefc3b"
+  },
+  {
+    "url": "https://api.alvogenkorea.com/storage/site/Alvogen_logo_yellow__1_-removebg-preview.png",
+    "alt": "",
+    "key": "alvogen",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\alvogen-0.png",
+    "bytes": 102363,
+    "size": [
+      937,
+      265
+    ],
+    "sha256": "a5003c22a4a29826962bb4444d6044983fde3afd91d72912f1cfe7cad7a4bcb0"
+  },
+  {
+    "url": "https://api.alvogenkorea.com/storage/site/Alvogen%20logo%20black%20-%20transparent.png",
+    "alt": "",
+    "key": "alvogen",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\alvogen-6.png",
+    "bytes": 16764,
+    "size": [
+      1458,
+      373
+    ],
+    "sha256": "ed52aef0917e546d84975b6de259662afa407663355c320554287b5d8a75a927"
+  },
+  {
+    "url": "https://www.alvogenkorea.com/\\u002F\\u002Fapi.alvogenkorea.com\\u002Fstorage\\u002Fsite\\u002FAlvogen_logo_yellow__1_-removebg-preview.png",
+    "alt": "",
+    "key": "alvogen",
+    "index": 7,
+    "error": "cannot identify image file <_io.BytesIO object at 0x0000027337EBC810>"
+  },
+  {
+    "url": "https://api.alvogenkorea.com/storage/sections/home/featured-section/01KE19684S0NNMG4X2ST236E02.svg",
+    "alt": "logo",
+    "key": "alvogen",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\alvogen-2.svg",
+    "bytes": 36450,
+    "size": null,
+    "sha256": "a050a02b908f75b1760d41a9949d31d0132bb362c690a41041aac856daf89f41"
+  },
+  {
+    "url": "https://www.dhpharm.co.kr/image/common/Daehwa_logo.png",
+    "alt": "",
+    "key": "daehwa",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehwa-0.png",
+    "bytes": 13846,
+    "size": [
+      479,
+      127
+    ],
+    "sha256": "fea4df9672c96cb4d5d4ebbf200e17a9a16581f706176338ae5d07c33b2a9f07"
+  },
+  {
+    "url": "https://www.dhpharm.co.kr/image/main/loxona_logo.png",
+    "alt": "",
+    "key": "daehwa",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehwa-1.png",
+    "bytes": 1434,
+    "size": [
+      147,
+      27
+    ],
+    "sha256": "1fd2de0e3b8d8ba7acc8bc18e8e9c2c6f539a6fc2fa60d03fccdd4975289aee0"
+  },
+  {
+    "url": "https://www.daihan.com/images/inc/t_logo.png",
+    "alt": "",
+    "key": "daihan",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daihan-0.png",
+    "bytes": 4943,
+    "size": [
+      262,
+      27
+    ],
+    "sha256": "c6f27f94e0b0e97cdfe805b24d731fe0aaa66ccec4b4fd1838bf66f127a91f68"
+  },
+  {
+    "url": "https://www.dongkoo.com/assets/kor/images/common/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dongkoo.com/assets/kor/css/common.css",
+    "key": "dongkoo",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkoo-0.png",
+    "bytes": 4216,
+    "size": [
+      211,
+      38
+    ],
+    "sha256": "6f3c2018659de915faf84547e3d8814287c077d2a9d33a8a8679ff8f833a0535"
+  },
+  {
+    "url": "https://www.dongkoo.com/assets/kor/images/common/f_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.dongkoo.com/assets/kor/css/common.css",
+    "key": "dongkoo",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongkoo-1.png",
+    "bytes": 4361,
+    "size": [
+      146,
+      39
+    ],
+    "sha256": "6e4dbf06c425c25be1d67066e7ab3f927f538b98ba66ca33dd1dab9869274484"
+  },
+  {
+    "url": "https://www.samyangbiopharm.com/resources/kr/local/images/common/logo.svg",
+    "alt": "",
+    "key": "samyang-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-bio-0.svg",
+    "bytes": 3159,
+    "size": null,
+    "sha256": "a2e1fa9b14e9e20f127df51b270f76c2cc33d43c52b7cb74d543a7c990f5017a"
+  },
+  {
+    "url": "https://www.samyangbiopharm.com/resources/kr/local/images/common/blue_logo.svg",
+    "alt": "",
+    "key": "samyang-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-bio-1.svg",
+    "bytes": 3181,
+    "size": null,
+    "sha256": "954a47fa55093236eda51b31dd18b26d9f5416f4cc81dc4b0fe3da925af7b302"
+  },
+  {
+    "url": "https://www.samyangbiopharm.com/resources/kr/global/images/company/logo_samsyang.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.samyangbiopharm.com/resources/kr/global/css/style.css",
+    "key": "samyang-bio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-bio-2.svg",
+    "bytes": 1966,
+    "size": null,
+    "sha256": "213e351163d4c5d13573e6e89b2dfcea37f6ccd078c7077aee52a42706af671e"
+  },
+  {
+    "url": "https://www.samyangbiopharm.com/resources/kr/global/images/business/logo_qone.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.samyangbiopharm.com/resources/kr/global/css/style.css",
+    "key": "samyang-bio",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-bio-3.svg",
+    "bytes": 69459,
+    "size": null,
+    "sha256": "a0ad6383c2ae6a28dc4de89f78646a65e91bba5c21b60ea427af0de4f13e032a"
+  },
+  {
+    "url": "https://www.samyang.com/resources/kr/local/images/common/logo_1924.svg",
+    "alt": "",
+    "key": "samyang",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-0.svg",
+    "bytes": 3965,
+    "size": null,
+    "sha256": "01c273d6367a656fcdcad4f91fd58e5bc695f3f1571529fd781f907ebcfb6fd8"
+  },
+  {
+    "url": "https://www.samyang.com/resources/kr/local/images/common/blue_logo_1924.svg",
+    "alt": "",
+    "key": "samyang",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-1.svg",
+    "bytes": 3965,
+    "size": null,
+    "sha256": "fe5e58e1e405296cc3af841e305093f9da43ff9e8f167ce26e0e2f1a6ab969cd"
+  },
+  {
+    "url": "https://www.samyang.com/resources/kr/global/images/main/logo_100th.svg",
+    "alt": "",
+    "key": "samyang",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-2.svg",
+    "bytes": 11027,
+    "size": null,
+    "sha256": "fb9fa6b4191111f49da247a64532d51c9615612cf79d3c740b9062b64a6d65a7"
+  },
+  {
+    "url": "https://www.samyang.com/resources/kr/global/images/company/logo_samsyang.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.samyang.com/resources/kr/global/css/style.css",
+    "key": "samyang",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samyang-3.svg",
+    "bytes": 1966,
+    "size": null,
+    "sha256": "213e351163d4c5d13573e6e89b2dfcea37f6ccd078c7077aee52a42706af671e"
+  },
+  {
+    "url": "https://www.rpbio.co.kr/images/img_logo.png",
+    "alt": "",
+    "key": "rp-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\rp-bio-0.png",
+    "bytes": 4260,
+    "size": [
+      114,
+      56
+    ],
+    "sha256": "c8903b2709f546094ee1891961a8dc3bd5e814a988e26a6a9f689f6ac3ac08b5"
+  },
+  {
+    "url": "https://www.rpbio.co.kr/images/img_logo2.png",
+    "alt": "",
+    "key": "rp-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\rp-bio-1.png",
+    "bytes": 4254,
+    "size": [
+      114,
+      57
+    ],
+    "sha256": "c706a24748d29aaeec98ef85e8299bc546c73922ce6e5ae40f3baa6ef1013f44"
+  },
+  {
+    "url": "https://www.whanin.com/_theme/basic/img/ci.png",
+    "alt": "환인제약 ",
+    "key": "whanin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\whanin-0.png",
+    "bytes": 7968,
+    "size": [
+      143,
+      50
+    ],
+    "sha256": "8caeb924b7751d26942bc67216dab024cbb9b6873987bb8f6792ac456868864f"
+  },
+  {
+    "url": "https://www.suheung.com/theme/suheung/img/logo_color2023.png",
+    "alt": "",
+    "key": "suheung",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\suheung-0.png",
+    "bytes": 3287,
+    "size": [
+      177,
+      40
+    ],
+    "sha256": "d405319307d8540a215bc81a5b6b2177d7198fe231a4bbe780da0d9a1c9095e3"
+  },
+  {
+    "url": "https://www.suheung.com/theme/suheung/img/logo_white2023.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.suheung.com/theme/suheung/css/custom.css?20230515",
+    "key": "suheung",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\suheung-1.png",
+    "bytes": 2973,
+    "size": [
+      177,
+      40
+    ],
+    "sha256": "3732b0bd5d3f29a571082c1a5758cf5ae730b5dc61536c6f40f01455e530f7b6"
+  },
+  {
+    "url": "https://www.ekdp.com/static/cw/images/renewal/logo1.png",
+    "alt": "",
+    "key": "kwangdong",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kwangdong-0.png",
+    "bytes": 4111,
+    "size": [
+      150,
+      100
+    ],
+    "sha256": "01cf1eefbc144f3f2c5bab39644a6ab70f944cbfd07d7239a88cc2393008ebc6"
+  },
+  {
+    "url": "https://www.ekdp.com/static/cw/images/renewal/logo2.png",
+    "alt": "",
+    "key": "kwangdong",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kwangdong-1.png",
+    "bytes": 6736,
+    "size": [
+      150,
+      100
+    ],
+    "sha256": "b5c1388ec8035b493947843e794f19ec3b51be30cec29e3e95f3b3b307aaeb97"
+  },
+  {
+    "url": "https://www.ekdp.com/static/cw/images/renewal/logo_gray.png",
+    "alt": "",
+    "key": "kwangdong",
+    "index": 14,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kwangdong-14.png",
+    "bytes": 2699,
+    "size": [
+      146,
+      35
+    ],
+    "sha256": "7ce19dca0582a28abd617b81c83a3f8b7612628dee7cfdb12eba57fedc782303"
+  },
+  {
+    "url": "https://www.ekdp.com/static/cw/asset/img/common/og_logo.jpg",
+    "alt": "",
+    "key": "kwangdong",
+    "index": 15,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kwangdong-15.jpg",
+    "bytes": 20107,
+    "size": [
+      800,
+      400
+    ],
+    "sha256": "18ab7c684e2f202c972b199c7355d33157e774b9696af555f89b29423d83e555"
+  },
+  {
+    "url": "https://www.dongsung-pharm.com/user/image/top/logo_m.jpg",
+    "alt": "",
+    "key": "dongsung",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongsung-0.jpg",
+    "bytes": 6257,
+    "size": [
+      188,
+      60
+    ],
+    "sha256": "3bd22d63a4ffff65f653c5200343762e0bf23973eceacf99965f1a8911f83d49"
+  },
+  {
+    "url": "https://www.dongsung-pharm.com/user/image/top/logo.jpg",
+    "alt": "",
+    "key": "dongsung",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongsung-1.jpg",
+    "bytes": 41269,
+    "size": [
+      437,
+      93
+    ],
+    "sha256": "edf5fc5bc6ec7899668b21f964184282214ccbc8a28d653c0e916e8bfa2081d0"
+  },
+  {
+    "url": "http://www.dongsung-pharm.com/user/image/top/logo.jpg",
+    "alt": "",
+    "key": "dongsung",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongsung-6.jpg",
+    "bytes": 41269,
+    "size": [
+      437,
+      93
+    ],
+    "sha256": "edf5fc5bc6ec7899668b21f964184282214ccbc8a28d653c0e916e8bfa2081d0"
+  },
+  {
+    "url": "https://www.dongsung-pharm.com/user/image/main/ad_brand01.jpg",
+    "alt": "세븐에이트 브랜드사이트 바로가기",
+    "key": "dongsung",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongsung-2.jpg",
+    "bytes": 11322,
+    "size": [
+      90,
+      27
+    ],
+    "sha256": "820b1353e1f8e2886040322741cda449589fa67ca28541876460ec9bd9afb2d6"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-holdings.co.kr/holdings/ko/asset/css/common.css",
+    "key": "jw-holdings",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-0.png",
+    "bytes": 3047,
+    "size": [
+      171,
+      43
+    ],
+    "sha256": "8a18028f5832eb33dc57c08fa821ace75a292314eb8e154ecb8e58e9f251cb41"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/directorate_logo.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-holdings.co.kr/holdings/ko/asset/css/common.css",
+    "key": "jw-holdings",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-1.gif",
+    "bytes": 1652,
+    "size": [
+      64,
+      46
+    ],
+    "sha256": "71c553b0acbfb96f9f3856702a35ed4210700155c5ed56b7d10cf0775d16caa1"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/corruption_pop_logo.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-holdings.co.kr/holdings/ko/asset/css/common.css",
+    "key": "jw-holdings",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-2.gif",
+    "bytes": 1683,
+    "size": [
+      81,
+      56
+    ],
+    "sha256": "294173084b18d9792c6d14c14c1bba6f34a2e95c0b67642f2bf5a12d0c811f5f"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/top_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-holdings.co.kr/holdings/ko/asset/css/renew_2020.css",
+    "key": "jw-holdings",
+    "index": 3,
+    "error": "404 Client Error: Not Found for url: https://www.jw-holdings.co.kr/holdings/ko/asset/images/top_logo.png"
+  },
+  {
+    "url": "https://www.bukwang.co.kr/images/common/all_logo.png",
+    "alt": "",
+    "key": "bukwang",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bukwang-0.png",
+    "bytes": 3399,
+    "size": [
+      174,
+      43
+    ],
+    "sha256": "84a5900457071d3378052d76ad773c5f0d26b9f03f1f59e3e15f9e7ffead6040"
+  },
+  {
+    "url": "https://www.bukwang.co.kr/images/common/foot_logo.jpg",
+    "alt": "",
+    "key": "bukwang",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bukwang-1.jpg",
+    "bytes": 4336,
+    "size": [
+      145,
+      36
+    ],
+    "sha256": "0d9c0bb1082fed9b6a77eb0e0b7589ccca8249984e2c6963144548dc4f4f8782"
+  },
+  {
+    "url": "https://www.bukwang.co.kr/images/common/logo1.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bukwang.co.kr/css/common.css",
+    "key": "bukwang",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bukwang-2.png",
+    "bytes": 3029,
+    "size": [
+      145,
+      36
+    ],
+    "sha256": "805a30acc3b8303bfba98877fabcad28fc6f113d4039c22e5e17acd1a4c37f9c"
+  },
+  {
+    "url": "https://www.bukwang.co.kr/images/common/logo2.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bukwang.co.kr/css/common.css",
+    "key": "bukwang",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bukwang-3.png",
+    "bytes": 3183,
+    "size": [
+      145,
+      36
+    ],
+    "sha256": "fbba0833eeb3d23b2f1b8683e4f911880a602ee1c4e6d68bebefb1c0b9c53ec7"
+  },
+  {
+    "url": "https://vendor-cdn.imweb.me/images/kakao_payment_logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://vendor-cdn.imweb.me/css/site/site2.css?1789727692",
+    "key": "aju",
+    "index": 7,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-7.svg",
+    "bytes": 2011,
+    "size": null,
+    "sha256": "9bc6027220ad98a5619be7528f41b8fd60971395b51082d8e7f66f656e311ed0"
+  },
+  {
+    "url": "https://vendor-cdn.imweb.me/images/site/nav-logout-off.png?1215745",
+    "alt": "CSS logo",
+    "stylesheet": "https://vendor-cdn.imweb.me/css/site/site.css?1779923336",
+    "key": "aju",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-3.png",
+    "bytes": 567,
+    "size": [
+      40,
+      40
+    ],
+    "sha256": "9acc52c3f302b88fd24095f7978c59b9a33d398f4b4134b53bc4158c2b80c487"
+  },
+  {
+    "url": "https://vendor-cdn.imweb.me/images/site/nav-logout.png?4844563",
+    "alt": "CSS logo",
+    "stylesheet": "https://vendor-cdn.imweb.me/css/site/site.css?1779923336",
+    "key": "aju",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-4.png",
+    "bytes": 465,
+    "size": [
+      40,
+      40
+    ],
+    "sha256": "2639ff0070e978fcfd86b7b4c64d98b37517def7bfe2891e0b0c0b92077c18c6"
+  },
+  {
+    "url": "https://vendor-cdn.imweb.me/images/site/logo_doznut.png?4154568",
+    "alt": "CSS logo",
+    "stylesheet": "https://vendor-cdn.imweb.me/css/site/site.css?1779923336",
+    "key": "aju",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-5.png",
+    "bytes": 4788,
+    "size": [
+      76,
+      78
+    ],
+    "sha256": "ac4f080b53bc51a1c75e18b2a16cf38c95ab2c3125c6105627612e904668af05"
+  },
+  {
+    "url": "https://www.youngscience.com/asset/img/common/header_logo_on.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.youngscience.com/asset/css/common.css",
+    "key": "young-science",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\young-science-1.svg",
+    "bytes": 14782,
+    "size": null,
+    "sha256": "d1ada15ef8bca04d20eb0a366fc483bfbf08af3ae717ef5e9b936fafede629c2"
+  },
+  {
+    "url": "https://www.youngscience.com/asset/img/common/header_logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.youngscience.com/asset/css/common.css",
+    "key": "young-science",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\young-science-2.svg",
+    "bytes": 14724,
+    "size": null,
+    "sha256": "617f3ffdbdd8439fe2dc7ad65a4e620a91d9118a333da584cc3f15aea4652157"
+  },
+  {
+    "url": "https://www.youngscience.com/child/img/inc/wrap-sub-logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.youngscience.com/asset/css/common.css",
+    "key": "young-science",
+    "index": 3,
+    "error": "cannot identify image file <_io.BytesIO object at 0x0000027337EBFD80>"
+  },
+  {
+    "url": "https://www.youngscience.com/asset/img/main/sec02_logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.youngscience.com/asset/css/main.css",
+    "key": "young-science",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\young-science-4.svg",
+    "bytes": 1640,
+    "size": null,
+    "sha256": "b2bd5112de90c8cbefeaf164c3e87170b61d8ec037ef8f71292084c31c8878ab"
+  },
+  {
+    "url": "https://www.hwpharm.com/images/inc/logo.svg?v=0.12112",
+    "alt": "",
+    "key": "hanwha",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanwha-0.svg",
+    "bytes": 5233,
+    "size": null,
+    "sha256": "e5783862cb26e697c9f4b0f3d82eeeeb4ee61ab6bfa40af2b83a125f25663d20"
+  },
+  {
+    "url": "https://www.otsuka.co.kr/img/user/main/logo.png",
+    "alt": "",
+    "key": "otsuka",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\otsuka-1.png",
+    "bytes": 12590,
+    "size": [
+      187,
+      72
+    ],
+    "sha256": "87156f27104c65d8971b3be935916cbadd24e130cefd3198f9cf2689603348d0"
+  },
+  {
+    "url": "https://www.otsuka.co.kr/img/user/main/olos_logo.jpg",
+    "alt": "",
+    "key": "otsuka",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\otsuka-2.jpg",
+    "bytes": 12127,
+    "size": [
+      640,
+      268
+    ],
+    "sha256": "3f2244fbf556c1ed8dc351f87c3f18a519e924d8bfc4cbf2740e095e0beecf65"
+  },
+  {
+    "url": "https://www.otsuka.co.kr/img/user/main/inner_logo.jpg",
+    "alt": "",
+    "key": "otsuka",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\otsuka-3.jpg",
+    "bytes": 8630,
+    "size": [
+      640,
+      268
+    ],
+    "sha256": "b822365c87d3396717379edb453f6240a9ba465bb52fccef4972e20dae1e23c5"
+  },
+  {
+    "url": "https://www.otsuka.co.kr/img/user/main/nature_made_logo.jpg",
+    "alt": "",
+    "key": "otsuka",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\otsuka-4.jpg",
+    "bytes": 25595,
+    "size": [
+      640,
+      268
+    ],
+    "sha256": "d31f7997256766c074b58ea71878f9256d16461e6d916e8b0eb256a4c8980a98"
+  },
+  {
+    "url": "https://www.yypharm.co.kr/img/logo3.png",
+    "alt": "",
+    "key": "yu-young",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yu-young-0.png",
+    "bytes": 476,
+    "size": [
+      41,
+      50
+    ],
+    "sha256": "31c7b958cad5b6dc6265527da8221e0f87c457d2f6774a4b0fd814d972dcb706"
+  },
+  {
+    "url": "https://www.yypharm.co.kr/img/logo3_1.png",
+    "alt": "",
+    "key": "yu-young",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yu-young-1.png",
+    "bytes": 1949,
+    "size": [
+      41,
+      50
+    ],
+    "sha256": "3d40b3fe39819bfc2d6b46f22d41092bee6dd5e36cc1454935ec74eb78a0de2f"
+  },
+  {
+    "url": "https://www.yypharm.co.kr/img/logo1.png",
+    "alt": "",
+    "key": "yu-young",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yu-young-2.png",
+    "bytes": 1987,
+    "size": [
+      156,
+      52
+    ],
+    "sha256": "8f17b3c789eaf88b5dedcee10afb74390efe356709c11d4ed22fbb95d0c4e880"
+  },
+  {
+    "url": "https://markit-cdn.s3.ap-northeast-2.amazonaws.com/yy_official/ci_logo_mix.png",
+    "alt": "",
+    "key": "yu-young",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yu-young-3.png",
+    "bytes": 6620,
+    "size": [
+      225,
+      92
+    ],
+    "sha256": "e8210b37f668f396209d77b366b45c727b40391f09661c7fa141d39ef46ba8e1"
+  },
+  {
+    "url": "https://www.g2gbio.com/images/common/header_logo_color.png",
+    "alt": "",
+    "key": "g2g",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\g2g-1.png",
+    "bytes": 4276,
+    "size": [
+      153,
+      41
+    ],
+    "sha256": "83f5350ed6c54e0ee29d5df29ff9a03665aa34c1a953fb2d8a5545ae8fb4b387"
+  },
+  {
+    "url": "https://www.g2gbio.com/images/common/header_logo_white.png",
+    "alt": "",
+    "key": "g2g",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\g2g-0.png",
+    "bytes": 3798,
+    "size": [
+      153,
+      41
+    ],
+    "sha256": "0e0db0ee465b991e8a01eef575d9d2a6ba50a09af6dbed1cf226014577156da3"
+  },
+  {
+    "url": "https://www.g2gbio.com/images/common/footer_logo.png",
+    "alt": "",
+    "key": "g2g",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\g2g-2.png",
+    "bytes": 4014,
+    "size": [
+      153,
+      41
+    ],
+    "sha256": "35deeeb3ef5c9345fedb02c5be08da269bd5e1d4166f1fa13dcdc61b7cd7dd97"
+  },
+  {
+    "url": "https://kolmarbiotech.com/common/img/footer_logo.png",
+    "alt": "",
+    "key": "woojung",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\woojung-0.png",
+    "bytes": 5149,
+    "size": [
+      380,
+      45
+    ],
+    "sha256": "dcdfc6a25842b04c620252a2bbc620b1a889363e8e183cf9dde22ffce410e3f5"
+  },
+  {
+    "url": "https://www.merckgroup.com/content/dam/web/corporate/images/general/global/logos/merck.svg",
+    "alt": "",
+    "key": "merck",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\merck-0.svg",
+    "bytes": 4637,
+    "size": null,
+    "sha256": "568c28a59b29fcd66108eef174e65c9bb475d3423b686fa9481d06bdcb8d5ed1"
+  },
+  {
+    "url": "https://www.genuonesciences.com/assets/images/logo.png",
+    "alt": "",
+    "key": "genuone",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genuone-0.png",
+    "bytes": 9316,
+    "size": [
+      200,
+      60
+    ],
+    "sha256": "238c6e80ce6ef8a583b01a380e47a57cb24cdaa93bca1cf1dc6f8b032cb12eec"
+  },
+  {
+    "url": "https://www.genuonesciences.com/assets/images/logo_on.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.genuonesciences.com/assets/css/style.css?v=36",
+    "key": "genuone",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genuone-1.png",
+    "bytes": 9302,
+    "size": [
+      200,
+      60
+    ],
+    "sha256": "dc13ac92c6994cb3c6b1509779569f96bd8d4a52647f8d0c0f11afc4c9babf60"
+  },
+  {
+    "url": "https://www.shinpoong.co.kr/images/inc/h_logo.png",
+    "alt": "",
+    "key": "shinpoong",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\shinpoong-0.png",
+    "bytes": 14914,
+    "size": [
+      197,
+      42
+    ],
+    "sha256": "e5f4f4af505be6a4c972788e6c858db2fc8d0db8a883c6949a62d459b1c85a44"
+  },
+  {
+    "url": "https://www.shinpoong.co.kr/images/inc/f_logo.png",
+    "alt": "",
+    "key": "shinpoong",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\shinpoong-1.png",
+    "bytes": 7931,
+    "size": [
+      205,
+      41
+    ],
+    "sha256": "0dd3b4e6077f83eaf2ad56bbcafed1d741b36c21a34a10464e7ceca790e9311a"
+  },
+  {
+    "url": "https://www.shinpoong.co.kr/images/inc/ham_logo.png",
+    "alt": "",
+    "key": "shinpoong",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\shinpoong-2.png",
+    "bytes": 5129,
+    "size": [
+      150,
+      30
+    ],
+    "sha256": "3cdfad7e4768392deda6ee6e931864297cb238191594449eb7bc945a6ea93d25"
+  },
+  {
+    "url": "https://www.pharmbio.co.kr/images/default/main/ft_logo.svg",
+    "alt": "",
+    "key": "pharmbio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmbio-0.svg",
+    "bytes": 11616,
+    "size": null,
+    "sha256": "057af58893fbb78029ded8b97c4286f8f91c13d5b7c606d055305d83753c86f9"
+  },
+  {
+    "url": "https://www.pharmbio.co.kr/images/default/main/logo_b.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.pharmbio.co.kr/css/default/index.css?v=1",
+    "key": "pharmbio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmbio-1.svg",
+    "bytes": 12140,
+    "size": null,
+    "sha256": "00c916e52e0144385c99492fae930529fc28a0d00be3fdd6e9b0bffb7724446e"
+  },
+  {
+    "url": "https://www.pharmbio.co.kr/images/default/main/logo_w.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.pharmbio.co.kr/css/default/layout.css?v=1",
+    "key": "pharmbio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmbio-2.svg",
+    "bytes": 12084,
+    "size": null,
+    "sha256": "4f9d90fb3f9eadd118fd38a844f68edc3fb92206ed3909639251792da8fbfe66"
+  },
+  {
+    "url": "https://www.apgroup.com/int/ko/brands/__icsFiles/afieldfile/2026/07/07/logo_main_3.png",
+    "alt": "",
+    "key": "amore",
+    "index": 8,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\amore-8.png",
+    "bytes": 2194,
+    "size": [
+      170,
+      22
+    ],
+    "sha256": "b52456679fa37086678bc2a1bcd758655df33d2993f0e21e73c838aa4e05d84a"
+  },
+  {
+    "url": "https://www.apgroup.com/int/ko/brands/__icsFiles/afieldfile/2024/04/02/Main_logo_prmr.png",
+    "alt": "",
+    "key": "amore",
+    "index": 10,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\amore-10.png",
+    "bytes": 2450,
+    "size": [
+      64,
+      26
+    ],
+    "sha256": "f69dbd3595a7ed459404237c1faac714e3ed928e645c0ec278d5647b30e4292b"
+  },
+  {
+    "url": "https://www.apgroup.com/int/ko/brands/__icsFiles/afieldfile/2024/04/02/Main_logo_mamonde.png",
+    "alt": "",
+    "key": "amore",
+    "index": 12,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\amore-12.png",
+    "bytes": 5420,
+    "size": [
+      200,
+      26
+    ],
+    "sha256": "8a86c84a769deada983c74f543bcacbde6bafb11fc61b2e4b185e795260f5b08"
+  },
+  {
+    "url": "https://www.apgroup.com/int/ko/brands/__icsFiles/afieldfile/2024/04/02/Main_logo_hanyul_ko.png",
+    "alt": "",
+    "key": "amore",
+    "index": 14,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\amore-14.png",
+    "bytes": 4155,
+    "size": [
+      56,
+      26
+    ],
+    "sha256": "c250233050e1181cd453a670a2aec31e06de9993f765b667e2d20d06f1d2f72c"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\roche-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "roche",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\roche-inline-0.svg"
+  },
+  {
+    "url": "https://www.daewoongbio.co.kr/images/ko-daewoongbio-logo-white.png",
+    "alt": "",
+    "key": "daewoong-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewoong-bio-0.png",
+    "bytes": 55076,
+    "size": [
+      1000,
+      240
+    ],
+    "sha256": "d05d0a6b34c4e3a407bc7e6512a8580d60592ca60ce09996c7ebe4aeeb5b5f03"
+  },
+  {
+    "url": "https://www.enzychem.co.kr/child/img/sub/common/icon-logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.enzychem.co.kr/child/css/common.css",
+    "key": "enzychem",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\enzychem-1.png",
+    "bytes": 821,
+    "size": [
+      22,
+      25
+    ],
+    "sha256": "747e0c2ab8d0f55847a889389a348d896af177511266f30f51544f5d1455d649"
+  },
+  {
+    "url": "https://www.enzychem.co.kr/child/img/sub/common/icon-logo-xl.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.enzychem.co.kr/child/css/common.css",
+    "key": "enzychem",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\enzychem-2.png",
+    "bytes": 3495,
+    "size": [
+      62,
+      71
+    ],
+    "sha256": "20c40dbbf990ba8d05bf464dca1dd70c1e95e3208a527b5639f8e4150bf18581"
+  },
+  {
+    "url": "https://www.yuhan.co.kr/common/images/main/hover_logo.png",
+    "alt": "",
+    "key": "yuhan",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yuhan-0-8f8089dc.png",
+    "bytes": 8320,
+    "size": [
+      176,
+      42
+    ],
+    "sha256": "c740c0369b327ebd71ad2f75f0d78ad1c1e0ed26936e71f776524305a0c33959"
+  },
+  {
+    "url": "https://www.yuhan.co.kr/common/images/main/visual_logo1.png",
+    "alt": "",
+    "key": "yuhan",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yuhan-1-0a3e97bc.png",
+    "bytes": 139104,
+    "size": [
+      2220,
+      1951
+    ],
+    "sha256": "5b9ddacac90461badf47bbfd69ad0f02992802e517b77c7c48e35729e0edf00f"
+  },
+  {
+    "url": "https://www.ckdpharm.com/images/pc/logo/logo.png?ver=20261002",
+    "alt": "logo",
+    "key": "ckd-pharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-pharm-0-1f33db92.png",
+    "bytes": 3533,
+    "size": [
+      152,
+      37
+    ],
+    "sha256": "f967cbf4feb8985eb97af839b6f1e5aa4603ecdf5d50c8002df9181019be61c1"
+  },
+  {
+    "url": "https://www.ckdpharm.com/images/pc/logo/fo_logo.png?ver=20261002",
+    "alt": "footer logo",
+    "key": "ckd-pharm",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-pharm-1-e4f8744e.png",
+    "bytes": 2840,
+    "size": [
+      173,
+      42
+    ],
+    "sha256": "be54e9d7cdb12ba66c75edaf5948e5481a2bbb4fbf81885f7667b19aea2addb5"
+  },
+  {
+    "url": "https://www.ckdbio.com/images/pc/common/logo.png?ver=20261002",
+    "alt": "logo",
+    "key": "ckd-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-bio-0-11420897.png",
+    "bytes": 4934,
+    "size": [
+      258,
+      37
+    ],
+    "sha256": "a4e7b42fbb4290b9c78500c45507120ad4be0ea71c0082b87995e844aa397262"
+  },
+  {
+    "url": "https://www.ckdbio.com/images/pc/footer/fo_logo_bio.png?ver=20261002",
+    "alt": "footer logo",
+    "key": "ckd-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\ckd-bio-1-284dc25d.png",
+    "bytes": 3961,
+    "size": [
+      293,
+      42
+    ],
+    "sha256": "3b35b11a8a40716d5fd090badd41446ea36b8ce1b628f922c85175cc8053d492"
+  },
+  {
+    "url": "https://www.samjinpharm.co.kr/front/kr/resources/img/common/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.samjinpharm.co.kr/front/kr/resources/css/style.css?ver=1790953430",
+    "key": "samjin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samjin-0-8f1d4b51.png",
+    "bytes": 5842,
+    "size": [
+      282,
+      60
+    ],
+    "sha256": "91d408ec3ae9eddba2c373ad24c4939441c777130559f88daebcfc9fb750bf07"
+  },
+  {
+    "url": "https://www.unimed.co.kr/resource/img/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.unimed.co.kr/resource/css/common.css",
+    "key": "unimed",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\unimed-1-77853bb8.png",
+    "bytes": 6133,
+    "size": [
+      137,
+      48
+    ],
+    "sha256": "86ae9f253a3bd4b4477b10050e161b9e1880a4ee4ca4a3825f742d1a2091a0a7"
+  },
+  {
+    "url": "https://www.unimed.co.kr/resource/img/logo_wh.png",
+    "alt": "",
+    "key": "unimed",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\unimed-0-eb6e36bf.png",
+    "bytes": 3828,
+    "size": [
+      137,
+      48
+    ],
+    "sha256": "358ce4016679c77cdbadc33726ebdf36526fbe857ab0c2274125d36af18058fa"
+  },
+  {
+    "url": "https://www.abxis.com/images/common/logo.png",
+    "alt": "",
+    "key": "isu",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\isu-0-69dca9db.png",
+    "bytes": 9265,
+    "size": [
+      178,
+      46
+    ],
+    "sha256": "c31c4cc191f40aed1511e4c57f8f3558b48a8612efcfd1f6aa0fc7d2dd667f53"
+  },
+  {
+    "url": "https://www.dong-wha.co.kr/images/logo_bestfamily1.png",
+    "alt": "",
+    "key": "dongwha",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongwha-1-72daf244.png",
+    "bytes": 9188,
+    "size": [
+      131,
+      32
+    ],
+    "sha256": "0bb680b56e7c4486750ad807ba1134a137e40ba9865dadad7a05e32fd337e196"
+  },
+  {
+    "url": "https://www.dong-wha.co.kr/images/logo_CP3.png",
+    "alt": "",
+    "key": "dongwha",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongwha-2-b415893f.png",
+    "bytes": 6845,
+    "size": [
+      104,
+      32
+    ],
+    "sha256": "49768d121f3644e531cf538813eb51d29f073905f406a2e79209160963a35ddd"
+  },
+  {
+    "url": "https://www.dong-wha.co.kr/images/logo_campaign.png",
+    "alt": "",
+    "key": "dongwha",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongwha-3-9ad820ab.png",
+    "bytes": 6583,
+    "size": [
+      146,
+      32
+    ],
+    "sha256": "a4f88c7cbb9cd18b09532389ec798018410527d88b57db3e8b6c7409d1e7b99d"
+  },
+  {
+    "url": "https://www.dong-wha.co.kr/images/logo.png?ver=202608a",
+    "alt": "동화약품",
+    "key": "dongwha",
+    "index": 8,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dongwha-8-08b6f7ff.png",
+    "bytes": 6541,
+    "size": [
+      127,
+      32
+    ],
+    "sha256": "2a4892405f4c8e91ae9ffc3ba0a1d5ed1ad75261dd3a984b5eccd385a4fab372"
+  },
+  {
+    "url": "http://www.penmix.co.kr/images/logo_01.png",
+    "alt": "",
+    "key": "penmix",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\penmix-0-43c2cb2b.png",
+    "bytes": 7961,
+    "size": [
+      186,
+      40
+    ],
+    "sha256": "1dc5ae8262c3858b7c20135f7cd9ed88a493d22bfa270c03e5a946fd16850129"
+  },
+  {
+    "url": "https://www.prpscience.co.kr/home_assets/img/header/PRPSCIENCE-LOGO.png",
+    "alt": "",
+    "key": "prp-science",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prp-science-0-56e94fd2.png",
+    "bytes": 12308,
+    "size": [
+      246,
+      104
+    ],
+    "sha256": "129c76eadd22949eac58ddbba76346836a9fed13402052555d1886f8fea1bdfe"
+  },
+  {
+    "url": "https://www.prpscience.co.kr/home_assets/img/header/prp-logo-white.png",
+    "alt": "",
+    "key": "prp-science",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prp-science-1-f86af2c5.png",
+    "bytes": 10357,
+    "size": [
+      266,
+      106
+    ],
+    "sha256": "92cf78efd35d66965cd63fecb086ed45d4e26c133d8b03abfeef7d8396e9b3a0"
+  },
+  {
+    "url": "https://www.prpscience.co.kr/admin_assets/img/favicon/faviconlogo.png",
+    "alt": "",
+    "key": "prp-science",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prp-science-2-667ea9ba.png",
+    "bytes": 12308,
+    "size": [
+      246,
+      104
+    ],
+    "sha256": "129c76eadd22949eac58ddbba76346836a9fed13402052555d1886f8fea1bdfe"
+  },
+  {
+    "url": "https://www.yungjin.co.kr/common_kr/images/logo-bk.svg",
+    "alt": "",
+    "key": "youngjin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\youngjin-0-dc9e241a.svg",
+    "bytes": 5857,
+    "size": null,
+    "sha256": "ae629afbed7d3c85ef115e624e1cafc94fff74faa0956ea882ddbb0ca1e2962b"
+  },
+  {
+    "url": "https://pharmaresearch.com/img/main/product_logo01.svg",
+    "alt": "",
+    "key": "pharmaresearch",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmaresearch-0-5f12eae0.svg",
+    "bytes": 3956,
+    "size": null,
+    "sha256": "72e9d7f523b89300c1574596f4b81db31c7d5991943ff1e77be26c616498768a"
+  },
+  {
+    "url": "https://pharmaresearch.com/img/main/product_logo02.svg",
+    "alt": "",
+    "key": "pharmaresearch",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmaresearch-1-50f20728.svg",
+    "bytes": 5999,
+    "size": null,
+    "sha256": "0ae29a0ed15528588546970bb4101c2dd8fda64d84cb17583fa563942085c8ac"
+  },
+  {
+    "url": "https://pharmaresearch.com/img/main/product_logo03.svg",
+    "alt": "",
+    "key": "pharmaresearch",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmaresearch-2-d4dde7ef.svg",
+    "bytes": 4611,
+    "size": null,
+    "sha256": "5aa6bdb153df3d87795b6106b9e6130acbbbfe24e8d628e40b045927544ca724"
+  },
+  {
+    "url": "https://pharmaresearch.com/img/main/product_logo04.svg",
+    "alt": "",
+    "key": "pharmaresearch",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pharmaresearch-3-3dc0f16f.svg",
+    "bytes": 2406,
+    "size": null,
+    "sha256": "1080d6e254d2074efe7802d1328d78b102972098b94221efac3d5847e65abcd0"
+  },
+  {
+    "url": "https://huonsmeditech.com/layout/images/common/logo_og.png",
+    "alt": "",
+    "key": "huons-meditech",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-meditech-0-a0196a5d.png",
+    "bytes": 16363,
+    "size": [
+      800,
+      800
+    ],
+    "sha256": "ee4d62c6a954592a5d916b8b2af348191a40e5e83c3251276b53588a343b5db5"
+  },
+  {
+    "url": "http://humedix.com/web/images/common/logo_og.png",
+    "alt": "",
+    "key": "humedix",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\humedix-0-82924ac5.png",
+    "bytes": 12793,
+    "size": [
+      800,
+      800
+    ],
+    "sha256": "ef6587a80658729fbce4e2c8deec55a7d7cbe75bab4b4bcc381c6283376869ec"
+  },
+  {
+    "url": "https://www.samil-pharm.com/assets/user/KR/img/logo.png",
+    "alt": "",
+    "key": "samil",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samil-0-bb7c1aac.png",
+    "bytes": 3008,
+    "size": [
+      130,
+      45
+    ],
+    "sha256": "e0e5b52bddcd08c75248c0bb11e6d9a88dc4c26815b7f281bacd955457cda55b"
+  },
+  {
+    "url": "https://eaglevet.com/wp-content/uploads/2021/12/1_logo-1-300x100.png",
+    "alt": "",
+    "key": "eaglevet",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eaglevet-0-b55941d7.png",
+    "bytes": 4140,
+    "size": [
+      300,
+      100
+    ],
+    "sha256": "f7459ac6a680b78c54ce1a4d616b70e254ec5b92680d4d89ad2f445499fa1418"
+  },
+  {
+    "url": "https://eaglevet.com/wp-content/uploads/2022/03/logo.png",
+    "alt": "",
+    "key": "eaglevet",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eaglevet-1-9e2ee0f8.png",
+    "bytes": 2526,
+    "size": [
+      618,
+      106
+    ],
+    "sha256": "fbb3dc5f8e2f8dd05336fc2af61e67447fbcb950628f2ef6e66aa7c3daaab461"
+  },
+  {
+    "url": "https://eaglevet.com/wp-content/uploads/2022/03/02.jpg",
+    "alt": "02",
+    "key": "eaglevet",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eaglevet-2-3cd78a14.jpg",
+    "bytes": 50060,
+    "size": [
+      1920,
+      862
+    ],
+    "sha256": "f68c2294993e2538fffd014274f11ccdbdf738cba1d0bf8173a1b60c9a9e6ae2"
+  },
+  {
+    "url": "https://eaglevet.com/wp-content/uploads/2022/03/03.jpg",
+    "alt": "03",
+    "key": "eaglevet",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eaglevet-3-a3f8e139.jpg",
+    "bytes": 290580,
+    "size": [
+      1920,
+      862
+    ],
+    "sha256": "4fa2ef21a8999ae1e4f7fabb6c289e9c8154c225d80c6eaa1cc1ab8c625855ba"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260724/2a21e20c2ffc8.png",
+    "alt": "아주약품(주)",
+    "key": "aju",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-0-3aeaf17a.png",
+    "bytes": 7470,
+    "size": [
+      335,
+      81
+    ],
+    "sha256": "503a5b626c1196d424d85dd2cba15a977be804e595d6e78eba614c2e9ee8faf4"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260724/7a8a51660878b.png",
+    "alt": "아주약품(주)",
+    "key": "aju",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-1-5919744e.png",
+    "bytes": 13294,
+    "size": [
+      547,
+      132
+    ],
+    "sha256": "fa97dd2194ffc052ddf63a73d9157e7f5f14f50b017713955a82ae26f9bc5b67"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260724/b891ae5d1ca71.png",
+    "alt": "아주약품(주)",
+    "key": "aju",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aju-2-9aeb5362.png",
+    "bytes": 10713,
+    "size": [
+      460,
+      111
+    ],
+    "sha256": "b35a4c8fdcbfb3bf51a93522b4e5b517ad8c3e681f65fa9686ecb22b51e26070"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20261002/ff659405860eb.png",
+    "alt": "(주)한국백신",
+    "key": "korea-vaccine",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\korea-vaccine-0-8c4a69c5.png",
+    "bytes": 11310,
+    "size": [
+      564,
+      147
+    ],
+    "sha256": "649d00c9be2b321de1558e2936168b1acfff010255b23d86ad4ab9d1cc2a8c43"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20261002/8d902434beeee.png",
+    "alt": "(주)한국백신",
+    "key": "korea-vaccine",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\korea-vaccine-1-06c585b2.png",
+    "bytes": 9124,
+    "size": [
+      461,
+      120
+    ],
+    "sha256": "c09e7760da28ec3b0f8c5f5d413dcefaaf97b4137f7181387347f8daba152ebe"
+  },
+  {
+    "url": "https://www.samil-pharm.com/assets/user/KR/img/logo2.png",
+    "alt": "Official logo stylesheet",
+    "key": "samil",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samil-1-efe34a00.png",
+    "bytes": 5590,
+    "size": [
+      243,
+      76
+    ],
+    "sha256": "d2e3684f6bda450eea68907d2032489350bd411f61d308ae5f1c8945df5ba127"
+  },
+  {
+    "url": "https://www.icure.co.kr:443/theme/icure01/images/layout/hd_logo2.png",
+    "alt": "Official logo stylesheet",
+    "key": "icure",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\icure-0-ca64eb84.png",
+    "bytes": 40927,
+    "size": [
+      559,
+      126
+    ],
+    "sha256": "0b4aa7064ac6f3b69af13981794fd4227379315fc2d2459378dd7ecd3e626beb"
+  },
+  {
+    "url": "https://www.icure.co.kr:443/theme/icure01/images/layout/hd_logo.png",
+    "alt": "Official logo stylesheet",
+    "key": "icure",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\icure-1-ee80b212.png",
+    "bytes": 14477,
+    "size": [
+      181,
+      31
+    ],
+    "sha256": "2c15393af086494ab71594d037fd9cc9e08453c83cd96fbb8c547cc5f35a62af"
+  },
+  {
+    "url": "https://www.hanlim.com:49324/images/sub02_logo.jpg",
+    "alt": "",
+    "key": "hanlim",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanlim-0-d28d2b1e.jpg",
+    "bytes": 5370,
+    "size": [
+      253,
+      30
+    ],
+    "sha256": "f8077f657fb1a14f3e6edacf875fc4efe4943685be756717378f4df9d5bf341c"
+  },
+  {
+    "url": "https://www.kbpharma.co.kr/images/pc/common/logo.png?ver=20261002",
+    "alt": "logo",
+    "key": "kyongbo",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kyongbo-0-a0119d9d.png",
+    "bytes": 2341,
+    "size": [
+      120,
+      37
+    ],
+    "sha256": "c564cacf2c223e27753ca3f75c02121265be697c569f66f29edaa8f351e682b3"
+  },
+  {
+    "url": "https://www.kbpharma.co.kr/images/pc/common/fo_logo.png?ver=20261002",
+    "alt": "footer logo",
+    "key": "kyongbo",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kyongbo-1-ea1f1699.png",
+    "bytes": 1720,
+    "size": [
+      137,
+      42
+    ],
+    "sha256": "e2de37ccbaca8fb4afa4270dad2fbbc695a35cbe338e62d42ef389debc7ec4d0"
+  },
+  {
+    "url": "https://seltaglobal.com/theme/shane/img/logo.png",
+    "alt": "",
+    "key": "celltasquare",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltasquare-0-64116f50.png",
+    "bytes": 2776,
+    "size": [
+      165,
+      28
+    ],
+    "sha256": "0cc21b0594a52ccb8f38207ab9354f44a26b54b283e30e9906e3fd2a1bb0af08"
+  },
+  {
+    "url": "https://seltaglobal.com/theme/shane/img/0401_01.png",
+    "alt": "",
+    "key": "celltasquare",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltasquare-1-4fee2807.png",
+    "bytes": 65575,
+    "size": [
+      560,
+      560
+    ],
+    "sha256": "f58ab92c453b355ee487d06fd2b013995d50c75fc84c023aaf6cbece14791280"
+  },
+  {
+    "url": "https://seltaglobal.com/theme/shane/img/0401_02.png",
+    "alt": "",
+    "key": "celltasquare",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltasquare-2-34df1b74.png",
+    "bytes": 13832,
+    "size": [
+      560,
+      560
+    ],
+    "sha256": "88359e447e2a96b215e8e7753e498cc23d66cc14e0c99e9e63be14aa83371d04"
+  },
+  {
+    "url": "https://seltaglobal.com/theme/shane/img/linkedin.png",
+    "alt": "LinkedIn",
+    "key": "celltasquare",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\celltasquare-3-ad3b5f3d.png",
+    "bytes": 2560,
+    "size": [
+      110,
+      27
+    ],
+    "sha256": "18430789672f5b3d0460d6a651bed55c8a56d92cd1d8439a2cf50f659f5187e3"
+  },
+  {
+    "url": "http://www.haneng.net/image/logo.png",
+    "alt": "",
+    "key": "han-eol",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\han-eol-0-6a87d996.png",
+    "bytes": 69252,
+    "size": [
+      2000,
+      2000
+    ],
+    "sha256": "2625c263d9713d9dae3d23fca34d7e0238d0210c60aaa9f3a561805bc86a2b30"
+  },
+  {
+    "url": "https://www.bostonscientific.com/content/dam/logo-bsc.svg",
+    "alt": "",
+    "key": "boston-scientific",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-0-742e9299.svg",
+    "bytes": 10553,
+    "size": null,
+    "sha256": "0f1b4e3b812170bbc61a6b03b5cfccdd0254c9920415cff4a51fd9aedc0665c1"
+  },
+  {
+    "url": "https://www.bostonscientific.com/adobe/dynamicmedia/deliver/dm-aid--3e9e07ec-0fba-4fdf-877c-bb66fa38079d/boston-scientific-logo-on-building-wall.jpg?quality=85&preferwebp=true",
+    "alt": "Boston Scientific corporate wall signage.",
+    "key": "boston-scientific",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-1-62ff4fc3.jpg",
+    "bytes": 129535,
+    "size": [
+      1280,
+      720
+    ],
+    "sha256": "b123b5c94052988767753d9308744f76879f028e2a6faf5686165070cf3d5f7c"
+  },
+  {
+    "url": "https://www.bostonscientific.com/content/dam/bostonscientific/corporate/Homepage/Boston-Scientific-logo-on-building-wall.jpg",
+    "alt": "",
+    "key": "boston-scientific",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-2-3bdb028c.jpg",
+    "bytes": 655548,
+    "size": [
+      1280,
+      720
+    ],
+    "sha256": "f708813ade70b859cdeef2a5e988807624a2351f56064149e2341de12bef6927"
+  },
+  {
+    "url": "https://myunginph.co.kr/design/ko/images/default/logo.png",
+    "alt": "",
+    "key": "myungin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\myungin-0-e1c6b8e6.png",
+    "bytes": 4139,
+    "size": [
+      150,
+      45
+    ],
+    "sha256": "172932a69674fd7f6f6d0d1c3b13ddec09806ba2c748eb17e3b219f41c4884de"
+  },
+  {
+    "url": "https://myunginph.co.kr/design/ko/images/default/f_logo.png",
+    "alt": "",
+    "key": "myungin",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\myungin-1-d0dfe0a9.png",
+    "bytes": 3799,
+    "size": [
+      150,
+      46
+    ],
+    "sha256": "28b8a71357180f7900a9c2ace696545edaca512a6cc970e948eabc6eba38deef"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "mirae-cell",
+    "index": 7,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-0.svg"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-1.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "mirae-cell",
+    "index": 8,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-1.svg"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-18.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "mirae-cell",
+    "index": 9,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-inline-18.svg"
+  },
+  {
+    "url": "http://miraecellbio.com/images/common/shop_logo.png",
+    "alt": "",
+    "key": "mirae-cell",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mirae-cell-0-9c4c9aae.png",
+    "bytes": 816,
+    "size": [
+      29,
+      30
+    ],
+    "sha256": "1ab71bc552eb6e53c51af5011c9a5956763ff003dc116806e62ec565b6a43634"
+  },
+  {
+    "url": "http://yoosungfs.com/wp/wp-content/uploads/2021/01/유성로고-300x67.png",
+    "alt": "",
+    "key": "yoosung",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yoosung-0-6868e1f4.png",
+    "bytes": 11821,
+    "size": [
+      300,
+      67
+    ],
+    "sha256": "c3f61188e827dd4daff3237bec0c6526be97a1e4bee8ed73f43e9408f92be776"
+  },
+  {
+    "url": "http://yoosungfs.com/wp/wp-content/uploads/2021/01/유성로고.png",
+    "alt": "",
+    "key": "yoosung",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\yoosung-1-9427f82d.png",
+    "bytes": 19565,
+    "size": [
+      808,
+      181
+    ],
+    "sha256": "77918784bcc49b946613d535b645f45401cf68268f1e9e6f74550302452f302b"
+  },
+  {
+    "url": "https://lh3.googleusercontent.com/NmDfIh4MZm8EJyZErpPLw2bvrabcbwjJE-4o6nLT9HABpvLhgrUtig1_RJqUE0co13u6G-cgBaY9IdfMUQvc2fXNOFNiTfBzmXSPhEGWSyeNijqTtJswWA",
+    "alt": "큐러블로고.jpg",
+    "key": "curable",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\curable-0-930f3068.jpg",
+    "bytes": 20661,
+    "size": [
+      512,
+      145
+    ],
+    "sha256": "41ee57e850902e462803767fbd8ead67b0f7f5b7a4bf239464428dbece2023e0"
+  },
+  {
+    "url": "https://www.arlico.co.kr/images/inc/logo.png",
+    "alt": "",
+    "key": "alico",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\alico-0-9b01d9e8.png",
+    "bytes": 7789,
+    "size": [
+      237,
+      69
+    ],
+    "sha256": "97c90c2c3f0b5a30fb9a1403787c325cb21d5231c90a2c7bfc7898484ce8d57f"
+  },
+  {
+    "url": "https://www.vivozonpharm.com/images/common/h1_logo.png",
+    "alt": "",
+    "key": "vivozon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\vivozon-0-2fd67033.png",
+    "bytes": 7123,
+    "size": [
+      147,
+      36
+    ],
+    "sha256": "601ff3285fd6d93fc9fb4b45f42ece10fb8ee292e60448f86f44315123e30ede"
+  },
+  {
+    "url": "https://www.vivozonpharm.com/images/common/h1_logo_en.png",
+    "alt": "",
+    "key": "vivozon",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\vivozon-1-b1b4efee.png",
+    "bytes": 7448,
+    "size": [
+      147,
+      36
+    ],
+    "sha256": "bc0bd221d0e61e7a554c7a1bacd38f1125e0f76112d13515b0cecdc088e372ba"
+  },
+  {
+    "url": "https://inventagelab.com/_next/image?url=%2Flogo.png&w=384&q=75&dpl=dpl_594NKjfViTNFW2vxs2jVHYMbHRQq",
+    "alt": "Inventage Lab",
+    "key": "inventage",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inventage-0-bb29e8b3.png",
+    "bytes": 2728,
+    "size": [
+      167,
+      36
+    ],
+    "sha256": "f4032c7b9de1ca853a36408d6613a0644e72a84f0d57431f8b3fe6043de05c7d"
+  },
+  {
+    "url": "https://www.cgbio.co.kr/wp-content/themes/wpex-corporate/images/common/logo_btm.png",
+    "alt": "",
+    "key": "cgbio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cgbio-0-4227f514.png",
+    "bytes": 2840,
+    "size": [
+      119,
+      21
+    ],
+    "sha256": "0370f24d0332671c182addc76b7cbdd95e40affb8ecc7fa3bd8631c624c3ac38"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "inibio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-0.svg",
+    "sha256": "27e61f20666273cc999b6ea2dff7c4b368af8ad2a252b48fdf3dba8bb2cd04bc"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-2.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "inibio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-2.svg",
+    "sha256": "27e61f20666273cc999b6ea2dff7c4b368af8ad2a252b48fdf3dba8bb2cd04bc"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-15.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "inibio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\inibio-inline-15.svg",
+    "sha256": "27e61f20666273cc999b6ea2dff7c4b368af8ad2a252b48fdf3dba8bb2cd04bc"
+  },
+  {
+    "url": "https://bmikr.co.kr/wp-content/uploads/2022/05/logo_org.svg",
+    "alt": "",
+    "key": "bmi",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-0-1f7bf88b.svg",
+    "bytes": 5469,
+    "size": null,
+    "sha256": "9f0dff015dda3df91004ea8adbd9b04c2a5cd078841b3f4d8eb6fdb9448ef25e"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-inline-0.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "bmi",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-inline-0.svg"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-inline-1.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "bmi",
+    "index": 7,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-inline-1.svg"
+  },
+  {
+    "url": "https://bmikr.co.kr/wp-content/uploads/2022/07/logo_01-1.png",
+    "alt": "",
+    "key": "bmi",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bmi-1-840020fa.png",
+    "bytes": 7930,
+    "size": [
+      300,
+      150
+    ],
+    "sha256": "1a4f9f9c14ca687eade188f14a812cbf358f27c7ecb3c74a8561c4f130ea3d59"
+  },
+  {
+    "url": "https://www.dhnp.co.kr/images/common/float_logo1.png",
+    "alt": "",
+    "key": "daehan-new",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehan-new-0-5b484366.png",
+    "bytes": 610,
+    "size": [
+      46,
+      10
+    ],
+    "sha256": "50e5aa2a4ea4111d593b98067b1f07cf0adb24ac210f68ec9fd01b259faacac4"
+  },
+  {
+    "url": "https://www.dhnp.co.kr/images/common/float_logo2.png",
+    "alt": "",
+    "key": "daehan-new",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehan-new-1-b4664f84.png",
+    "bytes": 3403,
+    "size": [
+      63,
+      33
+    ],
+    "sha256": "602ee9b791734edbe937def32fec5ca08aba992520549d7120133241caf0e75e"
+  },
+  {
+    "url": "https://www.dhnp.co.kr/images/common/allmenu_logo.png",
+    "alt": "",
+    "key": "daehan-new",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehan-new-2-0c6fca66.png",
+    "bytes": 3796,
+    "size": [
+      209,
+      40
+    ],
+    "sha256": "2ffd6ab3075f5c2862d5941a4cd01de06e308e8688e4d48563d1f18cde87bfc4"
+  },
+  {
+    "url": "https://www.dhnp.co.kr/images/common/ft_logo.png",
+    "alt": "",
+    "key": "daehan-new",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daehan-new-3-4a148aa2.png",
+    "bytes": 1949,
+    "size": [
+      174,
+      34
+    ],
+    "sha256": "c6db7ea282fb5ce4138b3536a35702684bb9370664266a0f917de87ea1a16150"
+  },
+  {
+    "url": "https://www.cellontech.com/assets/imgs/logo_blue_large.png",
+    "alt": "",
+    "key": "cellontech",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellontech-0-bea65254.png",
+    "bytes": 5263,
+    "size": [
+      238,
+      70
+    ],
+    "sha256": "487ca55a45abd81a1fe0deeca9b6b14e320d435edd17cabf255ffac1aa342e9d"
+  },
+  {
+    "url": "https://www.cellontech.com/imgs/cellontech_logo.png",
+    "alt": "",
+    "key": "cellontech",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellontech-1-c357f042.png",
+    "bytes": 6512,
+    "size": [
+      244,
+      62
+    ],
+    "sha256": "2f717434d7323a63508db57b9465ef0dacfe9cc895f31fd19b0c6e55d0739625"
+  },
+  {
+    "url": "https://organoidrx.com/wp-content/uploads/2026/01/os-logo.webp",
+    "alt": "",
+    "key": "organoid",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\organoid-0-3152826f.webp",
+    "bytes": 12490,
+    "size": [
+      529,
+      99
+    ],
+    "sha256": "2f6a7878e135579aface780235329811d80456cf84a83410511ca3e8af96a9d9"
+  },
+  {
+    "url": "https://organoidrx.com/wp-content/uploads/2025/03/Group-17-1.svg",
+    "alt": "logo-4",
+    "key": "organoid",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\organoid-1-44711862.svg",
+    "bytes": 26936,
+    "size": null,
+    "sha256": "6f86b767f1c756954b69ef9e48f0036b5055088e48842a062f918260abcc2972"
+  },
+  {
+    "url": "https://organoidrx.com/wp-content/uploads/2025/03/Group-29.svg",
+    "alt": "logo-2",
+    "key": "organoid",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\organoid-2-1a9e2f57.svg",
+    "bytes": 9549,
+    "size": null,
+    "sha256": "12c6225366e056b900d60837d91a861b9c41f37eb19125e68f41a0e1c5a9c526"
+  },
+  {
+    "url": "https://organoidrx.com/wp-content/uploads/2025/03/Group-7.svg",
+    "alt": "logo-brand",
+    "key": "organoid",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\organoid-3-7084d218.svg",
+    "bytes": 5537,
+    "size": null,
+    "sha256": "1f8ab6451094876940e119eeb86c8c5faa2123470dcb4b8b719c424d0fca8262"
+  },
+  {
+    "url": "https://www.kolonpharma.co.kr/theme/basic/img/logo.png",
+    "alt": "",
+    "key": "kolon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kolon-0-edb04354.png",
+    "bytes": 8241,
+    "size": [
+      500,
+      46
+    ],
+    "sha256": "092677c485994d8c7398abbe844d571db3e658ab0cfef2458e8401db6236b521"
+  },
+  {
+    "url": "https://www.sinilpharm.com/images/ci.png",
+    "alt": "코스닥상장 신일제약(주)",
+    "key": "shinil",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\shinil-0-6340f238.png",
+    "bytes": 9434,
+    "size": [
+      212,
+      53
+    ],
+    "sha256": "647c1ae944d5f389829e38daec2512336e2567249b1d615ed32ba3f6212d412f"
+  },
+  {
+    "url": "https://www.sspharm.co.kr/new/images/inc/logo.png?v=2.9",
+    "alt": "",
+    "key": "samsung-pharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-pharm-0-b29fca97.png",
+    "bytes": 8463,
+    "size": [
+      200,
+      40
+    ],
+    "sha256": "d6bcddc310946d09747b185998835cc630f6f24897f05b160be17af6e16c3374"
+  },
+  {
+    "url": "https://www.sspharm.co.kr/new/images/inc/logo_w.png?v=2.9",
+    "alt": "삼성제약(주)",
+    "key": "samsung-pharm",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-pharm-1-0d1d430f.png",
+    "bytes": 7632,
+    "size": [
+      200,
+      40
+    ],
+    "sha256": "cf8842a5c71e23187fa2a68db48e50661aedd1604282210ca3203c3bea3a27cd"
+  },
+  {
+    "url": "https://www.quratis.com/ko/images/common/logo.png",
+    "alt": "",
+    "key": "curatis",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\curatis-0-8235ce6b.png",
+    "bytes": 2799,
+    "size": [
+      140,
+      55
+    ],
+    "sha256": "e5a0bef8dd5f9359616680e57e14aac55822b39607ddf63c50c7ee8603e50cca"
+  },
+  {
+    "url": "https://www.quratis.com/ko/images/common/logo_on.png",
+    "alt": "",
+    "key": "curatis",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\curatis-1-54c64b9e.png",
+    "bytes": 3233,
+    "size": [
+      140,
+      55
+    ],
+    "sha256": "eaa39ec928faf5835b2a35559df455861c4e4a95ca77e7e6d16d79ba7cc5b8a6"
+  },
+  {
+    "url": "https://www.quratis.com/ko/images/common/logo_bg.png",
+    "alt": "",
+    "key": "curatis",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\curatis-2-a8c9b6be.png",
+    "bytes": 8083,
+    "size": [
+      164,
+      632
+    ],
+    "sha256": "75d64de965a8936cbae2730ba16e1816bd9e8266b56058f8393de8b57343ff7b"
+  },
+  {
+    "url": "https://www.quratis.com/ko/images/common/f_logo.png",
+    "alt": "",
+    "key": "curatis",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\curatis-3-acc1be49.png",
+    "bytes": 2715,
+    "size": [
+      99,
+      42
+    ],
+    "sha256": "67f690c3d7b4d89c632bc0f926218cce81c3994af251835f911770da88cbe943"
+  },
+  {
+    "url": "https://www.komipharm.co.kr/core/images/logo.svg",
+    "alt": "",
+    "key": "komipharm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\komipharm-0-6620a199.svg",
+    "bytes": 5567,
+    "size": null,
+    "sha256": "7f6fccdbb78afe055a3068b69c29cbaa0bc90c65c976a10f8ed9592661d3537d"
+  },
+  {
+    "url": "https://www.komipharm.co.kr/core/images/logo-sticky.svg",
+    "alt": "",
+    "key": "komipharm",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\komipharm-1-f5c5001e.svg",
+    "bytes": 4003,
+    "size": null,
+    "sha256": "13b5690d9dba9a7742fca67891e6beff1d0bea5a7828e0a25634fbe9ba49b5f1"
+  },
+  {
+    "url": "https://www.komipharm.co.kr/core/images/logo-mobile.svg",
+    "alt": "",
+    "key": "komipharm",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\komipharm-2-5adc5c5b.svg",
+    "bytes": 5448,
+    "size": null,
+    "sha256": "09c29f79164e55a52f23e6776a799e7a694e1d41be70454e620e20aa3e7a64d7"
+  },
+  {
+    "url": "https://www.komipharm.co.kr/core/images/logo-kr-white.svg",
+    "alt": "",
+    "key": "komipharm",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\komipharm-3-cc743469.svg",
+    "bytes": 3776,
+    "size": null,
+    "sha256": "4cce98dbbaf886d6cfa7f1faf03aaa157853f41cb2b65a695a4b940e088b630d"
+  },
+  {
+    "url": "https://dsmbio.com/wp-content/uploads/2026/07/DS-w-logo.svg",
+    "alt": "",
+    "key": "dsmbio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-0-8ad6ab15.svg",
+    "bytes": 5940,
+    "size": null,
+    "sha256": "9215180bef6f94d4dbcfe410238027179bfd695b5e2f4655ebc41e3d09f156d7"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-18.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "dsmbio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-18.svg"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-23.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "dsmbio",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-23.svg"
+  },
+  {
+    "url": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-24.svg",
+    "alt": "inline logo",
+    "inline": true,
+    "key": "dsmbio",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dsmbio-inline-24.svg"
+  },
+  {
+    "url": "https://www.cellumed.co.kr/theme/basic/img/common/logo_f.svg",
+    "alt": "",
+    "key": "cellumed",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellumed-0-2f906412.svg",
+    "bytes": 7456,
+    "size": null,
+    "sha256": "8517f87538a9a893a81aa6ab648b3748f921e7ed771d73bc8a8dd7614281f658"
+  },
+  {
+    "url": "https://www.cellumed.co.kr/theme/basic/img/common/logo_c.svg",
+    "alt": "",
+    "key": "cellumed",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellumed-1-5cbed3d6.svg",
+    "bytes": 7313,
+    "size": null,
+    "sha256": "473163b8fedf181026d05036694591ad3d8a760b2b2423377fe427c8f5740c5a"
+  },
+  {
+    "url": "https://www.skecoplant.com/img/common/logo_color.png",
+    "alt": "",
+    "key": "sk-ecoplant",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\sk-ecoplant-0-1fc5e136.png",
+    "bytes": 6382,
+    "size": [
+      236,
+      100
+    ],
+    "sha256": "d835488630cda9d527021d2b3fa8c66ffd3b036033f9474d39daf594cfd03469"
+  },
+  {
+    "url": "https://www.quantamatrix.com/wp-content/themes/quantamatrix/images/logo.svg",
+    "alt": "",
+    "key": "quantamatrix",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\quantamatrix-0-b1e3efc6.svg",
+    "bytes": 6092,
+    "size": null,
+    "sha256": "70eb5f54ac1e5cf3881c76adb2a031a014af3d3f795ea3a81a53579749c166c7"
+  },
+  {
+    "url": "https://www.quantamatrix.com/wp-content/themes/quantamatrix/images/kosdaq.jpg",
+    "alt": "Kosdaq logo",
+    "key": "quantamatrix",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\quantamatrix-2-6e8f09fa.jpg",
+    "bytes": 6673,
+    "size": [
+      92,
+      33
+    ],
+    "sha256": "24a0f94033b1895c9312a90bef832dbc97c02b12ff8cbd6b0193162c677b0488"
+  },
+  {
+    "url": "https://www.quantamatrix.com/wp-content/themes/quantamatrix/images/youtube.jpg",
+    "alt": "YouTube logo",
+    "key": "quantamatrix",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\quantamatrix-3-e89736e7.jpg",
+    "bytes": 2005,
+    "size": [
+      34,
+      25
+    ],
+    "sha256": "760225291d99fd9962404bf5dab893cf407c45bd2870c26b0c7ec9e1028ba2a2"
+  },
+  {
+    "url": "https://www.quantamatrix.com/wp-content/themes/quantamatrix/images/linkedin.jpg",
+    "alt": "Linkedin logo",
+    "key": "quantamatrix",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\quantamatrix-4-8e8d37c9.jpg",
+    "bytes": 1228,
+    "size": [
+      25,
+      25
+    ],
+    "sha256": "0eaf35d4e559258c47a8ba7163d70ef42de1c8b8bcf0f562fdcd863f7a6b3d6a"
+  },
+  {
+    "url": "https://www.genoss.com/new/img/logo_active.png",
+    "alt": "",
+    "key": "genoss",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genoss-0-9d7ada03.png",
+    "bytes": 31346,
+    "size": [
+      1967,
+      542
+    ],
+    "sha256": "8b5df11bfa6b7afd24ee8052aed8ab471797c4e08df475a7c864fa179e5bb3b8"
+  },
+  {
+    "url": "https://www.genoss.com/new/img/logo.png",
+    "alt": "",
+    "key": "genoss",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genoss-1-601b81f2.png",
+    "bytes": 28319,
+    "size": [
+      1967,
+      542
+    ],
+    "sha256": "97ca938e684cbea632d6849962dc927c0da0f9b62ee8c93b370acea3aa113f14"
+  },
+  {
+    "url": "https://www.sunjinbs.com/en/images/comm/logo.png",
+    "alt": "",
+    "key": "sunjin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\sunjin-0-146f8451.png",
+    "bytes": 10497,
+    "size": [
+      433,
+      301
+    ],
+    "sha256": "1f06db95ff0c449a1a423059da9656c67270e510dfdcd567e9886bb47d279cff"
+  },
+  {
+    "url": "https://www.sunjinbs.com/en/images/comm/w-logo.png",
+    "alt": "",
+    "key": "sunjin",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\sunjin-1-203d12ae.png",
+    "bytes": 9827,
+    "size": [
+      433,
+      301
+    ],
+    "sha256": "30c9c62038c7e43d4dc858457a6bc7be5fa4c30bb31a5e6478a407d9375bc8d8"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260902/2cdb72367cceb.png",
+    "alt": "(주)케어젠 | 바이오미메틱 펩타이드 연구 및 제조",
+    "key": "caregen",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\caregen-0-f77e294b.png",
+    "bytes": 12390,
+    "size": [
+      596,
+      108
+    ],
+    "sha256": "35f5658b5cb994a21db6845bb178723e677286237806b18ede6981b648cf26c9"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260902/d609e9aca6ca4.jpg",
+    "alt": "(주)케어젠 | 바이오미메틱 펩타이드 연구 및 제조",
+    "key": "caregen",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\caregen-1-f7679070.jpg",
+    "bytes": 24132,
+    "size": [
+      412,
+      81
+    ],
+    "sha256": "e33dd361f76f4f23161d886a5b1f14f823675c401efaa89a6bd96f39795ea03e"
+  },
+  {
+    "url": "http://www.youngilpharm.co.kr/images/main/h_logo.png",
+    "alt": "",
+    "key": "youngil",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\youngil-0-5a12a4b0.png",
+    "bytes": 7737,
+    "size": [
+      207,
+      48
+    ],
+    "sha256": "1c5384835f35c16666ef18848576c7b97fcfaf27a4fac24956b572a91c8e0f97"
+  },
+  {
+    "url": "http://www.youngilpharm.co.kr/images/main/f_logo.png",
+    "alt": "",
+    "key": "youngil",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\youngil-1-13b049ba.png",
+    "bytes": 5159,
+    "size": [
+      196,
+      45
+    ],
+    "sha256": "136c19f8567e2e460c71b918b3e216e55f6f49acfc6717b52d9226d66e23824f"
+  },
+  {
+    "url": "https://www.jaseng.co.kr/opti/Upload/Branch/logo_10001.svg?width=320",
+    "alt": "",
+    "key": "jaseng",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jaseng-2-d29bedd9.svg",
+    "bytes": 1978,
+    "size": null,
+    "sha256": "8e3406e9b24f1882ab24982f43276286828a245b56882961bcae6a2792b2ba52"
+  },
+  {
+    "url": "https://www.jaseng.co.kr/opti/Upload/Branch/logo_10002.svg?width=320",
+    "alt": "",
+    "key": "jaseng",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jaseng-4-66466d48.svg",
+    "bytes": 2497,
+    "size": null,
+    "sha256": "1b2ef7136c387872fd93a0d841cdbc1688e874c62e598d061ca843271a66b4a9"
+  },
+  {
+    "url": "https://www.jaseng.co.kr/opti/Upload/Branch/logo_10019.svg?width=320",
+    "alt": "",
+    "key": "jaseng",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jaseng-5-0afb2f46.svg",
+    "bytes": 2320,
+    "size": null,
+    "sha256": "af2159dbdcf018e5dabe63871243de1fa6483c0e4a083f08dc73828e93c61076"
+  },
+  {
+    "url": "https://www.jaseng.co.kr/opti/Upload/Branch/logo_10012.svg?width=320",
+    "alt": "",
+    "key": "jaseng",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jaseng-6-bf06e5a7.svg",
+    "bytes": 2499,
+    "size": null,
+    "sha256": "e4295a64f894f3f72a79a00959635bc936827b0b5780c5d04f706c29660c289c"
+  },
+  {
+    "url": "https://www.cosmaxbio.com/images/foot_logo.svg",
+    "alt": "",
+    "key": "cosmax-bio",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cosmax-bio-0-6535af1e.svg",
+    "bytes": 2456,
+    "size": null,
+    "sha256": "5b71a1125d6c741f11eb6a490b76dfa1343d4e697ceccef83c0dff2917bf0918"
+  },
+  {
+    "url": "https://www.withuspharm.com/sp_images/sp_include/logo.jpg",
+    "alt": "",
+    "key": "withus",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\withus-0-5cf7f81b.jpg",
+    "bytes": 8184,
+    "size": [
+      200,
+      65
+    ],
+    "sha256": "859fe133c4e56401d99027d4bd557248247ca0d9df77472efd6add331899e90e"
+  },
+  {
+    "url": "https://www.withuspharm.com/sp_images/sp_include/c_logo.jpg",
+    "alt": "",
+    "key": "withus",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\withus-1-a1c773a2.jpg",
+    "bytes": 3236,
+    "size": [
+      120,
+      80
+    ],
+    "sha256": "1d700d8a1f11b7ceb77b77fe591f705da3257181d9c3828c561e9aceedd226cb"
+  },
+  {
+    "url": "https://cdn-pro-web-250-115.cdn-nhncommerce.com/namuon0110_godomall_com/data/skin/front/dbook_20230303/img/banner/1bb87d41d15fe27b500a4bfcde01bb0e_94112.png",
+    "alt": "상단 로고",
+    "key": "dermafirm",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\dermafirm-0-11557d99.png",
+    "bytes": 2915,
+    "size": [
+      172,
+      29
+    ],
+    "sha256": "cda52007c3ee8540cf75ffcc77d5d6de67ebc2afa5c1d1208092554ed62799c2"
+  },
+  {
+    "url": "https://www.firson.co.kr/images/inc/logo_new.png",
+    "alt": "",
+    "key": "firson",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\firson-0-91dfa656.png",
+    "bytes": 20455,
+    "size": [
+      948,
+      297
+    ],
+    "sha256": "5c7491490f188912f5838bb10c2d1d36ac889535e6e18d110eb91c08c1f18a3f"
+  },
+  {
+    "url": "https://www.jinyangpharm.com/theme/102114/kr/images/main/header_logo.png",
+    "alt": "",
+    "key": "jin-yang",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jin-yang-0-029f62fe.png",
+    "bytes": 2480,
+    "size": [
+      124,
+      38
+    ],
+    "sha256": "f720e019b9579b39bd1576554acc6ffe19a031d52f6993e7624d18a9b6717a30"
+  },
+  {
+    "url": "https://www.jinyangpharm.com/theme/102114/kr/images/main/footer_logo.png",
+    "alt": "",
+    "key": "jin-yang",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jin-yang-1-df7efd3a.png",
+    "bytes": 2774,
+    "size": [
+      140,
+      42
+    ],
+    "sha256": "4c071216372ce113c8848c48abb40b77266e25f128d979e59b2586ff237c8564"
+  },
+  {
+    "url": "https://www.cellbion.co.kr/layouts/default_re_kr/_var/logo.png",
+    "alt": "",
+    "key": "cellbion",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellbion-0-dbd5cbee.png",
+    "bytes": 2588,
+    "size": [
+      150,
+      33
+    ],
+    "sha256": "f76067c89c8a20411136ffc2b38d45624f8ea2d0c68138d3d4fdb0a5ddfd3928"
+  },
+  {
+    "url": "https://www.cellbion.co.kr/layouts/default_re_kr/image/logo.png",
+    "alt": "",
+    "key": "cellbion",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellbion-1-87796046.png",
+    "bytes": 2588,
+    "size": [
+      150,
+      33
+    ],
+    "sha256": "f76067c89c8a20411136ffc2b38d45624f8ea2d0c68138d3d4fdb0a5ddfd3928"
+  },
+  {
+    "url": "http://cbo2018.cafe24.com/layouts/default/_var/logo.png",
+    "alt": "",
+    "key": "cellbion",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellbion-2-bf561a01.png",
+    "bytes": 3941,
+    "size": [
+      190,
+      100
+    ],
+    "sha256": "28e5a1daadd16a9fbab40d6fc6a8e9a113c99d7e2332ad0145235208bbc3d11c"
+  },
+  {
+    "url": "http://www.koruspharm.co.kr/images/logo.jpg",
+    "alt": "",
+    "key": "korus",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\korus-0-06a4f0f4.png",
+    "bytes": 6222,
+    "size": [
+      180,
+      34
+    ],
+    "sha256": "559bea423d778d15fde012059a219026db85387c02e75c113213eded793f5a6c"
+  },
+  {
+    "url": "https://www.kukjepharm.co.kr/images/main/main_company_logo.png",
+    "alt": "",
+    "key": "kookje",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kookje-0-a5a2a8aa.png",
+    "bytes": 2997,
+    "size": [
+      47,
+      92
+    ],
+    "sha256": "51f1a6c49020a3e13ae8e9b041958bc9dc29ef2857aec3cdf9298968e3c567fc"
+  },
+  {
+    "url": "https://www.kukjepharm.co.kr/images/layout/ft_logo.png",
+    "alt": "",
+    "key": "kookje",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kookje-1-9db2b7ba.png",
+    "bytes": 4310,
+    "size": [
+      253,
+      47
+    ],
+    "sha256": "7e8604ef8e05853e129981ea3f3f8bfcf8048ec5f4cc5dc08dfe146bf2c7bb83"
+  },
+  {
+    "key": "st-pharm",
+    "index": 0,
+    "url": "https://www.stpharm.co.kr/img/logo.svg?v=5",
+    "file": "output\\logo-audit\\raw\\st-pharm-official.svg",
+    "sha256": "87e12794bf8e4a4ae785d4a5ef2c1907e1b2bdf5f66562adbbfbe150a95aa88d"
+  },
+  {
+    "key": "scd-pharm",
+    "index": 0,
+    "url": "./documents/infact-company-profile-2026-10.pdf#page=14",
+    "file": "output\\logo-audit\\pdf\\14-Image8.jpg",
+    "sha256": "055849c69e604307b592e1986f5fbdcd0ddfae79fd045edb24a7ac3c068dfd09"
+  },
+  {
+    "url": "https://www.yungjin.co.kr/common_kr/images/logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.yungjin.co.kr/common_kr/css/common.css?bust=20261002150635",
+    "key": "youngjin",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\youngjin-1-0bb4044f.svg",
+    "bytes": 5842,
+    "size": null,
+    "sha256": "d0515fc3ce4973e16c62584d36e69280fed58f96872e370afc6d6fdd06baffb9"
+  },
+  {
+    "url": "https://www.icure.co.kr/theme/icure01/images/layout/hd_logo2.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.icure.co.kr:443/theme/icure01/css/mobile/layout.css",
+    "key": "icure",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\icure-2-00d20804.png",
+    "bytes": 40927,
+    "size": [
+      559,
+      126
+    ],
+    "sha256": "0b4aa7064ac6f3b69af13981794fd4227379315fc2d2459378dd7ecd3e626beb"
+  },
+  {
+    "url": "https://www.icure.co.kr/theme/icure01/images/layout/hd_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.icure.co.kr:443/theme/icure01/css/mobile/layout.css",
+    "key": "icure",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\icure-3-40124870.png",
+    "bytes": 14477,
+    "size": [
+      181,
+      31
+    ],
+    "sha256": "2c15393af086494ab71594d037fd9cc9e08453c83cd96fbb8c547cc5f35a62af"
+  },
+  {
+    "url": "https://eaglevet.com/img/logo_eagle_vet.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://eaglevet.com/wp-content/themes/musign/css/new_main.css",
+    "key": "eaglevet",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eaglevet-5-8762308f.png",
+    "bytes": 1139,
+    "size": [
+      244,
+      42
+    ],
+    "sha256": "d17839010f749ceb3d2b65f9e72b29f1abb55535c7c318b3eac0e21bbba529f3"
+  },
+  {
+    "url": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-default/resources/images/interstitial-logo-chooseyou.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-corporate.lc-24bdbfe28c81f270841845c1e8ffaf31-lc.min.css",
+    "key": "boston-scientific",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-3-b22222a1.svg",
+    "bytes": 4726,
+    "size": null,
+    "sha256": "c9bc324ccece6e914f6d7761bfc0dade4234cb7b326f0eaf5edb428210de10d5"
+  },
+  {
+    "url": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-default/resources/images/edcure-logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-corporate.lc-24bdbfe28c81f270841845c1e8ffaf31-lc.min.css",
+    "key": "boston-scientific",
+    "index": 5,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-5-b369a476.svg",
+    "bytes": 2972,
+    "size": null,
+    "sha256": "2fbb185f295b1809f14fd313a83074e644eec9b257afc6d4f04bb33b5aa2b94d"
+  },
+  {
+    "url": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-default/resources/images/FixIncontinence-Logo.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.bostonscientific.com/etc.clientlibs/ewp/clientlibs/clientlib-corporate.lc-24bdbfe28c81f270841845c1e8ffaf31-lc.min.css",
+    "key": "boston-scientific",
+    "index": 6,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\boston-scientific-6-a35aff0b.svg",
+    "bytes": 4989,
+    "size": null,
+    "sha256": "a4db6b12d14db708269013475afe20dc56575ac4d6ba660c4e5ee2153b23c0a6"
+  },
+  {
+    "url": "https://www.arlico.co.kr/images/inc/logo_w.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.arlico.co.kr/css/style.css?v=0.11115",
+    "key": "alico",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\alico-1-108c9109.png",
+    "bytes": 7789,
+    "size": [
+      237,
+      69
+    ],
+    "sha256": "97c90c2c3f0b5a30fb9a1403787c325cb21d5231c90a2c7bfc7898484ce8d57f"
+  },
+  {
+    "url": "https://www.vivozonpharm.com/images/common/logo_otollo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.vivozonpharm.com/css/common.css?v=20261002",
+    "key": "vivozon",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\vivozon-2-3353bad7.png",
+    "bytes": 1785,
+    "size": [
+      69,
+      15
+    ],
+    "sha256": "2035c885a0b820075ef178a708afe04a44a6ce04ff78d8454b9cb9283b21c646"
+  },
+  {
+    "url": "https://www.vivozonpharm.com/images/common/logo_otollo_gray.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.vivozonpharm.com/css/common.css?v=20261002",
+    "key": "vivozon",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\vivozon-3-79ff4c2e.png",
+    "bytes": 1838,
+    "size": [
+      69,
+      15
+    ],
+    "sha256": "7d6a54a8c33d03b8c5b53e5e2c0a34de9ab35bde21808e2db94d20883e12168d"
+  },
+  {
+    "url": "https://www.cgbio.co.kr/wp-content/themes/wpex-corporate/images/common/cgbio_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cgbio.co.kr/wp-content/themes/wpex-corporate/css/common.css?v=1772069053",
+    "key": "cgbio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cgbio-1-bc7ac866.png",
+    "bytes": 3464,
+    "size": [
+      130,
+      69
+    ],
+    "sha256": "234c3205ac993598ae43f41bb3ce74e7f6b3292b2d390bc4c9c22289105dcb20"
+  },
+  {
+    "url": "https://www.cellontech.com/assets/imgs/ci_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cellontech.com/styles/common.css",
+    "key": "cellontech",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellontech-2-bbcdd585.png",
+    "bytes": 6639,
+    "size": [
+      378,
+      61
+    ],
+    "sha256": "428acde10ad181df85445fa8efe556805b4a0c7740d9530727e35821ce5a3817"
+  },
+  {
+    "url": "https://www.cellontech.com/assets/imgs/ci_logo_kr.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cellontech.com/styles/common.css",
+    "key": "cellontech",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cellontech-3-ef7285c1.png",
+    "bytes": 4614,
+    "size": [
+      286,
+      101
+    ],
+    "sha256": "709592665e93c6d4ebf8879d7bc8c73ee59e18fd3632646e7e482d006b2988ff"
+  },
+  {
+    "url": "https://www.kolonpharma.co.kr/theme/basic/img/b_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.kolonpharma.co.kr/theme/basic/css/default.css?ver=191202",
+    "key": "kolon",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kolon-1-224f9ff2.png",
+    "bytes": 6668,
+    "size": [
+      239,
+      220
+    ],
+    "sha256": "d25ae12d6d89e84b1633dace43e64c3628e06335279a2f7ad92f8c212aa755b6"
+  },
+  {
+    "url": "https://www.sspharm.co.kr/new/images/inc/logo.png?v=2",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.sspharm.co.kr/new/css/style.css?v=2.9",
+    "key": "samsung-pharm",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-pharm-3-33e35db5.png",
+    "bytes": 8463,
+    "size": [
+      200,
+      40
+    ],
+    "sha256": "d6bcddc310946d09747b185998835cc630f6f24897f05b160be17af6e16c3374"
+  },
+  {
+    "url": "https://www.sspharm.co.kr/new/images/inc/logo_w.png?v=2",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.sspharm.co.kr/new/css/style.css?v=2.9",
+    "key": "samsung-pharm",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\samsung-pharm-2-24b3a5dd.png",
+    "bytes": 7632,
+    "size": [
+      200,
+      40
+    ],
+    "sha256": "cf8842a5c71e23187fa2a68db48e50661aedd1604282210ca3203c3bea3a27cd"
+  },
+  {
+    "url": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/images/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/css/common.css?2610021518518108Y40W",
+    "key": "jw-shinyak",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-shinyak-1-310c3b3b.png",
+    "bytes": 3463,
+    "size": [
+      340,
+      119
+    ],
+    "sha256": "fb1e8c5f6a8ea4300b26b27047c1e27e81e0479a55907913ff364a1783e52b41"
+  },
+  {
+    "url": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/images/corruption_pop_logo.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/css/content.css?2610021518518108Y40W",
+    "key": "jw-shinyak",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-shinyak-2-93e73c88.gif",
+    "bytes": 1683,
+    "size": [
+      81,
+      56
+    ],
+    "sha256": "294173084b18d9792c6d14c14c1bba6f34a2e95c0b67642f2bf5a12d0c811f5f"
+  },
+  {
+    "url": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/images/top_logo_white.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jw-shinyak.co.kr/shinyak/ko/asset/css/common.css?2610021518518108Y40W",
+    "key": "jw-shinyak",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-shinyak-0-9f54be79.png",
+    "bytes": 3395,
+    "size": [
+      109,
+      44
+    ],
+    "sha256": "35be0d1cc64f19c2efa0c5c1475c64c37497973438ad65a15236870cf2cbf558"
+  },
+  {
+    "url": "https://www.cosmaxbio.com/images/top_logo_dark.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.cosmaxbio.com/css/header_menu.css",
+    "key": "cosmax-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cosmax-bio-1-f6be1e2b.svg",
+    "bytes": 7395,
+    "size": null,
+    "sha256": "5f8854ca5d4214a8676b15b2961cded686d4efef41aa59a5201d2f8ec3a7ea6d"
+  },
+  {
+    "url": "https://www.firson.co.kr/images/inc/logo_w.svg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.firson.co.kr/css/style.css?v=1.15",
+    "key": "firson",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\firson-1-a0b6292c.svg",
+    "bytes": 5590,
+    "size": null,
+    "sha256": "29039460ab6cd893c60ba778ec9460eb79b26859af2f3729740843d848ab5c8b"
+  },
+  {
+    "url": "https://www.jinyangpharm.com/theme/102114/kr/images/main/section4_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.jinyangpharm.com/theme/102114/kr/common/css/layout.css",
+    "key": "jin-yang",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jin-yang-2-836f1f84.png",
+    "bytes": 25614,
+    "size": [
+      1600,
+      800
+    ],
+    "sha256": "800573183888d8c188ba5b3543c3daed6fed5363655f327db799d7350485e076"
+  },
+  {
+    "url": "https://www.koruspharm.co.kr/images/logo.jpg",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.koruspharm.co.kr/css/global.css",
+    "key": "korus",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\korus-1-134948c2.png",
+    "bytes": 6222,
+    "size": [
+      180,
+      34
+    ],
+    "sha256": "559bea423d778d15fde012059a219026db85387c02e75c113213eded793f5a6c"
+  },
+  {
+    "url": "https://www.koruspharm.co.kr/images/footer_logo.gif",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.koruspharm.co.kr/css/global.css",
+    "key": "korus",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\korus-2-fcee29ff.jpg",
+    "bytes": 4004,
+    "size": [
+      144,
+      28
+    ],
+    "sha256": "3411bbf4d9b5ca5b790a6b5a65abfd5223cb13165a7be080225671ffed6e9756"
+  },
+  {
+    "url": "https://www.kukjepharm.co.kr/images/main/main_news_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.kukjepharm.co.kr/css/global.css?20261002",
+    "key": "kookje",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kookje-2-afc77ff9.png",
+    "bytes": 16892,
+    "size": [
+      263,
+      534
+    ],
+    "sha256": "ca2f744ff813e813977bbdbbae53a9903af840ebccce6f5dedb44be3f76fd4e4"
+  },
+  {
+    "key": "dmbio",
+    "index": 1,
+    "url": "https://img.etnews.com/photonews/1910/1238822_20191031114755_605_0001.jpg",
+    "file": "output\\logo-audit\\raw\\dmbio-historical.jpg"
+  },
+  {
+    "url": "https://www.apgroup.com/int/ko/resource/images/a/amorepacific.png",
+    "alt": "Amorepacific official wordmark",
+    "key": "amore",
+    "index": 30,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\amore-30-1125f267.png",
+    "bytes": 1589,
+    "size": [
+      250,
+      25
+    ],
+    "sha256": "5c0214cf536217ffdd06238aec2b4ebc777cdb5ba00e286d3399d0aa41d787f7"
+  },
+  {
+    "url": "https://www.enzychem.co.kr/child/img/text_logo.png",
+    "alt": "",
+    "key": "enzychem",
+    "index": 0,
+    "error": "Asset exceeds 10MB review limit"
+  },
+  {
+    "url": "http://www.kuhnil.com/images/logo.svg",
+    "alt": "",
+    "key": "kuhnil",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kuhnil-0-ea1888fb.svg",
+    "bytes": 5224,
+    "size": null,
+    "sha256": "d5f6ca93d65d3150f28598e741f12a04bf175440cedaf9e7110bdb9c1e3a8478"
+  },
+  {
+    "url": "https://www.genewel.com/img/sub/company/LifeCentricScienceSolutions.png",
+    "alt": "Life-Centric Science & Solutions",
+    "key": "genewel",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\genewel-1-4e694fad.png",
+    "bytes": 13686,
+    "size": [
+      660,
+      92
+    ],
+    "sha256": "e0b599318549ec4797779c08f3f4cf6721bcccb114173bc50d3b45b49ab39a10"
+  },
+  {
+    "url": "https://huonsbiopharma.com/images/common/logo.png",
+    "alt": "",
+    "key": "huons-biopharma",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-biopharma-0-9257c2f4.png",
+    "bytes": 3702,
+    "size": [
+      197,
+      31
+    ],
+    "sha256": "d347c6e07d16d181a9a64fdd478ffbbe3181be912ee0be68613999fcb65ecc48"
+  },
+  {
+    "url": "https://huonsbiopharma.com/images/common/f_logo.png",
+    "alt": "",
+    "key": "huons-biopharma",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-biopharma-2-b930c81c.png",
+    "bytes": 3075,
+    "size": [
+      195,
+      31
+    ],
+    "sha256": "bc523651d7eef9829cb39c8a73e5721adcda7be76b4e63e4dafd9f4de25d911f"
+  },
+  {
+    "url": "https://huonsbiopharma.com/images/common/logo_og.png",
+    "alt": "",
+    "key": "huons-biopharma",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-biopharma-3-a25fd1a9.png",
+    "bytes": 17610,
+    "size": [
+      800,
+      800
+    ],
+    "sha256": "2597266f649d8f5e970d587f139e28a3a9808296dd9addcc8ab15f5829af1f3f"
+  },
+  {
+    "url": "https://huonsbiopharma.com/images/contents/innerset_banner5.jpg",
+    "alt": "유산균",
+    "key": "huons-biopharma",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-biopharma-1-6a1ad938.jpg",
+    "bytes": 221072,
+    "size": [
+      1920,
+      297
+    ],
+    "sha256": "d68eeed8509adbe964ade6fb819593b5627cb990be082d09bfee6817544ca39c"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/ci_img_02_1.gif",
+    "alt": "JW홀딩스",
+    "key": "jw-holdings",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-0-8ae8b007.gif",
+    "bytes": 2101,
+    "size": [
+      120,
+      40
+    ],
+    "sha256": "82b5704f6b79694a5030f0ca2c784f47df10bc7b02415a8a033c7b37f178becd"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/ci_img_02_2.gif",
+    "alt": "JW holdings",
+    "key": "jw-holdings",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-1-9719e522.gif",
+    "bytes": 2421,
+    "size": [
+      157,
+      40
+    ],
+    "sha256": "bfe3ac8b869e2574e7e1b0a7dca0e1e1bfb5a7d1e373365068c4015e823ac5d2"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/ci_img_03_1.gif",
+    "alt": "JW중외제약",
+    "key": "jw-holdings",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-2-81130414.gif",
+    "bytes": 2344,
+    "size": [
+      143,
+      40
+    ],
+    "sha256": "d1ef367887418ec435558f56ba800c8cf775369f289f92ef3d2c6c164d56fc26"
+  },
+  {
+    "url": "https://www.jw-holdings.co.kr/holdings/ko/asset/images/ci_img_03_2.gif",
+    "alt": "JW Pharmaceutical",
+    "key": "jw-holdings",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jw-holdings-3-04db1f6a.gif",
+    "bytes": 2989,
+    "size": [
+      231,
+      40
+    ],
+    "sha256": "bab182aa635507bf3b128737e1a765ef86a7e0527ab3e4c303fada0d08207d07"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260923/576f278167eff.png",
+    "alt": "무진메디",
+    "key": "mujin",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mujin-0-a22fbca0.png",
+    "bytes": 7396,
+    "size": [
+      360,
+      62
+    ],
+    "sha256": "34ab7fb3f625363b876b1d1e4ba6e09126b8721101a4cfa6e505c2e25177b0e5"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260923/174ed3ae8fead.png",
+    "alt": "무진메디",
+    "key": "mujin",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mujin-1-48807e3b.png",
+    "bytes": 7396,
+    "size": [
+      360,
+      62
+    ],
+    "sha256": "34ab7fb3f625363b876b1d1e4ba6e09126b8721101a4cfa6e505c2e25177b0e5"
+  },
+  {
+    "url": "https://cdn.imweb.me/upload/S2026072738aecaa657c89/4d9eb033c6617.png",
+    "alt": "MOOGENE MEDI",
+    "key": "mujin",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\mujin-2-ecf96a0d.png",
+    "bytes": 5628,
+    "size": [
+      360,
+      50
+    ],
+    "sha256": "52c77e06c3fa3cefe1fe533e70874c17db27b34b27e46e3c509c7f5db4f9c0a0"
+  },
+  {
+    "url": "https://aprogen.com/i/aprogen/logo_up.png",
+    "alt": "",
+    "key": "aprogen",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aprogen-0-9e2db118.png",
+    "bytes": 5518,
+    "size": [
+      202,
+      33
+    ],
+    "sha256": "41b7ca5b412e692739f7a6bb90e7d989ee151838728da059a15408d3b6dd071a"
+  },
+  {
+    "url": "https://aprogen.com/i/aprogen/logo.png",
+    "alt": "",
+    "key": "aprogen",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aprogen-1-b29fca59.png",
+    "bytes": 3860,
+    "size": [
+      202,
+      33
+    ],
+    "sha256": "75e3f1b5805a6d52c55957787b76d52922543c58cad53096d636703a911c80a7"
+  },
+  {
+    "url": "https://pangen.com/layout/images/common/logo.png",
+    "alt": "",
+    "key": "pan-gen",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pan-gen-0-2da6f9b1.png",
+    "bytes": 3682,
+    "size": [
+      88,
+      34
+    ],
+    "sha256": "53480cc58c9cc79ecc75e99108b964ea3a5fc8ee8df61fddd7d205da6ea38f06"
+  },
+  {
+    "url": "https://pangen.com/layout/images/common/logo_on.png",
+    "alt": "",
+    "key": "pan-gen",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pan-gen-1-47dad608.png",
+    "bytes": 3787,
+    "size": [
+      88,
+      34
+    ],
+    "sha256": "87bdcfd87f266484e89697a1b6cf426091c82345314c667423fe7adfec75b66b"
+  },
+  {
+    "url": "https://pangen.com/layout/images/common/f_logo.png",
+    "alt": "",
+    "key": "pan-gen",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pan-gen-4-e81dbe04.png",
+    "bytes": 2437,
+    "size": [
+      88,
+      35
+    ],
+    "sha256": "a9795599c610589300050ee6219b4ee5de506cc706b5cefbd2cc8da0e0483e45"
+  },
+  {
+    "url": "https://pangen.com/layout/images/contents/innerset_banner5.jpg",
+    "alt": "유산균",
+    "key": "pan-gen",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\pan-gen-2-72e63192.jpg",
+    "bytes": 221072,
+    "size": [
+      1920,
+      297
+    ],
+    "sha256": "d68eeed8509adbe964ade6fb819593b5627cb990be082d09bfee6817544ca39c"
+  },
+  {
+    "url": "https://www.daewoong.co.kr/images/daewoong-logo-basic.svg",
+    "alt": "Official rendered logo",
+    "key": "daewoong",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewoong-0-b7c1de4a.svg",
+    "bytes": 11015,
+    "size": null,
+    "sha256": "0b05491758527c891aaa175fa9c3d9b23453b322590b17ee25ecb8a483b6000b"
+  },
+  {
+    "url": "https://daewoongbio.co.kr/images/og-default.png",
+    "alt": "Official rendered logo",
+    "key": "daewoong-bio",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\daewoong-bio-1-76eafcae.png",
+    "bytes": 24226,
+    "size": [
+      1200,
+      630
+    ],
+    "sha256": "3e5be2e88c59c03e0a439aa8ecaad197153aa5746e8d01930162e743efe32fe4"
+  },
+  {
+    "url": "https://www.kup.co.kr/resources/images/common/logo_black.png",
+    "alt": "Official rendered logo",
+    "key": "united",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\united-0-21dfadcf.png",
+    "bytes": 4931,
+    "size": [
+      226,
+      79
+    ],
+    "sha256": "850da1599cd32989db2ad139ea01397e3caa0aa6343a7c4a33942a5c9f5f564f"
+  },
+  {
+    "url": "https://www.theu.co.kr/web/images/common/logo.png",
+    "alt": "",
+    "key": "the-u",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\the-u-0-64d8ea54.png",
+    "bytes": 8037,
+    "size": [
+      320,
+      90
+    ],
+    "sha256": "96cc2ecddf0f34d9beaa06090efc450306fedf38e39710348250d0dff438fec7"
+  },
+  {
+    "url": "https://www.theu.co.kr/web/images/common/cert_logo1.png",
+    "alt": "",
+    "key": "the-u",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\the-u-2-058e19b5.png",
+    "bytes": 22866,
+    "size": [
+      314,
+      77
+    ],
+    "sha256": "3ba29571e2953b49e1b2e48001601b9c6ae0b88becfb3a65597c5ba94d59c707"
+  },
+  {
+    "url": "https://www.theu.co.kr/wp-content/uploads/2017/05/LOGO_Original.png",
+    "alt": "",
+    "key": "the-u",
+    "index": 3,
+    "error": "404 Client Error: Not Found for url: https://www.theu.co.kr/wp-content/uploads/2017/05/LOGO_Original.png"
+  },
+  {
+    "url": "https://www.theu.co.kr/web/images/main/mid_banner_mymonic.png",
+    "alt": "민감하고 약한 피부를 위한 저자극성 피부질환 치료제 순앤로션",
+    "key": "the-u",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\the-u-1-4f790b12.png",
+    "bytes": 490905,
+    "size": [
+      1080,
+      370
+    ],
+    "sha256": "98be3c445246898827203b48cf27cd792a6b84a1063120cf834a337c733e6389"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260813/587bd5852c98f.jpg",
+    "alt": "국전",
+    "key": "kukjeon",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kukjeon-0-1be21a05.jpg",
+    "bytes": 14824,
+    "size": [
+      569,
+      172
+    ],
+    "sha256": "28fb737628e0219427fbd192df9b2b749715ec02adbb4e80c5afc897f43a2fd2"
+  },
+  {
+    "url": "https://cdn.imweb.me/thumbnail/20260825/7d9d37eaf8c19.jpg",
+    "alt": "국전",
+    "key": "kukjeon",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kukjeon-1-2bc2c89a.jpg",
+    "bytes": 4105,
+    "size": [
+      248,
+      75
+    ],
+    "sha256": "d4782da01cc05df4bd76f9fff99a16941f5a74ac4bf92c7a66081bfa92c922f2"
+  },
+  {
+    "url": "https://cdn-optimized.imweb.me/v2/brand/S20260804a6787442797db/e0bb2977-4830-416b-9197-fd6577a620ce",
+    "alt": "반도체 기판 솔루션",
+    "key": "kukjeon",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kukjeon-2-54449b63.webp",
+    "bytes": 578582,
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "78eaf91e86936b964cee8f6c060c6d2a7063bb2f139657f7787b48a7dad36672"
+  },
+  {
+    "url": "https://cdn-optimized.imweb.me/v2/brand/S20260804a6787442797db/7f0fc030-ead5-404d-95df-1e00d533c739",
+    "alt": "코팅 솔루션",
+    "key": "kukjeon",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kukjeon-3-a7428c72.webp",
+    "bytes": 310820,
+    "size": [
+      1329,
+      768
+    ],
+    "sha256": "202f483f4541c593c1888c9dee4628d9ae7674d5d279b7dc436389614cf137d5"
+  },
+  {
+    "url": "https://jnj-content-lab2.brightspotcdn.com/ac/25/bd2078f54d5992dd486ed26140ce/johnson-johnson-logo.svg",
+    "alt": "Johnson & Johnson logo",
+    "key": "jnj",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\jnj-0-537a29a9.svg",
+    "bytes": 6412,
+    "size": null,
+    "sha256": "f3f08c93ca7404ea061ae2581918b2d9bf4327d9cc9b70f28ecc753637ef98e4"
+  },
+  {
+    "url": "http://www.seoulpharma.com/img/main_logo.gif",
+    "alt": "",
+    "key": "seoul-pharma",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\seoul-pharma-0-62224a29.gif",
+    "bytes": 4349,
+    "size": [
+      433,
+      73
+    ],
+    "sha256": "acc38ab9d635cf1042c4437d584e04b571fe39fbcfb47fb3ec30465bde3a6664"
+  },
+  {
+    "url": "https://www.guju.co.kr/e_images/main/logo.jpg",
+    "alt": "",
+    "key": "guju",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\guju-0-c4abbaf4.jpg",
+    "bytes": 21948,
+    "size": [
+      221,
+      95
+    ],
+    "sha256": "e97c226f204f4f1c016542a77739282dbdf8a981d5151aafb55509da842062af"
+  },
+  {
+    "url": "https://www.guju.co.kr/e_images/main/logo_mob.png",
+    "alt": "",
+    "key": "guju",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\guju-1-bd711540.png",
+    "bytes": 2589,
+    "size": [
+      347,
+      103
+    ],
+    "sha256": "f5f8e265d71f36984dcc6b863235d7541c0272f9294b5c62ce3ae9621dc29f93"
+  },
+  {
+    "url": "http://www.gamgak.com/images/main/logo_naver.jpg",
+    "alt": "",
+    "key": "guju",
+    "index": 2,
+    "error": "cannot identify image file <_io.BytesIO object at 0x000002683906F420>"
+  },
+  {
+    "url": "https://www.domino-printing.com/site-elements/images/logo.svg",
+    "alt": "Official rendered logo",
+    "key": "domino",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\domino-0-7bea22fd.svg",
+    "bytes": 3364,
+    "size": null,
+    "sha256": "3c6c5e0693b1da59f01043c38ee3fb0e3030d6a98b83a91033915bf0675cf1cb"
+  },
+  {
+    "url": "https://www.enzychem.co.kr/child/img/ci.png",
+    "alt": "Official rendered logo",
+    "key": "enzychem",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\enzychem-3-57d357e0.png",
+    "bytes": 10881,
+    "size": [
+      181,
+      50
+    ],
+    "sha256": "3d4d5510f673c501d3bcaecdde7e822f56d9c4885178119fc67d066a7c854754"
+  },
+  {
+    "url": "output\\logo-audit\\raw\\pharmaresearch-official.svg",
+    "inline": true,
+    "alt": "Official header logo",
+    "key": "pharmaresearch",
+    "index": 6,
+    "file": "output\\logo-audit\\raw\\pharmaresearch-official.svg"
+  },
+  {
+    "url": "https://d1kv469isxhbtb.cloudfront.net/wp-content/uploads/2024/07/%EB%A1%9C%EA%B3%A0%EC%95%95%EC%B6%95.png",
+    "alt": "Official rendered logo",
+    "key": "kolmar-bnh",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\kolmar-bnh-0-b1731d27.png",
+    "bytes": 2630,
+    "size": [
+      659,
+      96
+    ],
+    "sha256": "18a8eae9dcfdee11dca0d01ed5273df7c46e95acd7277c710b1f1a6d591ec9ea"
+  },
+  {
+    "url": "https://www.ukp.co.kr/kor/images/common/logo.png",
+    "alt": "Official rendered logo",
+    "key": "union",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\union-0-2c241c68.png",
+    "bytes": 15349,
+    "size": [
+      218,
+      56
+    ],
+    "sha256": "bbc1b54b14497103d7e564f5c4869e664494f2b364349ab66cc54aa2756da5e2"
+  },
+  {
+    "url": "https://www.koreaprime.co.kr//images/main/logo.gif",
+    "alt": "Official rendered logo",
+    "key": "prime",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\prime-0-c2f8f793.gif",
+    "bytes": 7258,
+    "size": [
+      320,
+      50
+    ],
+    "sha256": "71aaa034b114de6804c790deeb00d998e521ec19b365a6b5a7e4189ea7c2b60c"
+  },
+  {
+    "url": "output\\logo-audit\\raw\\pharmaresearch-header.svg",
+    "inline": true,
+    "alt": "Official header company logo",
+    "key": "pharmaresearch",
+    "index": 7,
+    "file": "output\\logo-audit\\raw\\pharmaresearch-header.svg"
+  },
+  {
+    "url": "https://www.hanmifc.co.kr/images/pc/common/logo_on.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.hanmifc.co.kr/css/common.css?version=20260901",
+    "key": "hanmi-fine",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanmi-fine-0-4ff1cd21.png",
+    "bytes": 4156,
+    "size": [
+      170,
+      24
+    ],
+    "sha256": "5b050948e2196413d4cc89d226158d5b1c9165276af6c52f6845009de1f2969c"
+  },
+  {
+    "url": "https://www.hanmifc.co.kr/images/pc/common/logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.hanmifc.co.kr/css/common.css?version=20260901",
+    "key": "hanmi-fine",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanmi-fine-1-a59e1107.png",
+    "bytes": 4060,
+    "size": [
+      170,
+      24
+    ],
+    "sha256": "fcf084535d295940b286a51f3bd9748f239ea7aec22b5f242ffbf805a840a609"
+  },
+  {
+    "url": "https://www.hanmifc.co.kr/images/pc/common/en_logo_on.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.hanmifc.co.kr/css/common.css?version=20260901",
+    "key": "hanmi-fine",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanmi-fine-2-b675221e.png",
+    "bytes": 8329,
+    "size": [
+      400,
+      42
+    ],
+    "sha256": "9e0649308748c01241c72fee16a0f3a14efb6c7992446610f7171936c4a52344"
+  },
+  {
+    "url": "https://www.hanmifc.co.kr/images/pc/common/en_logo.png",
+    "alt": "CSS logo",
+    "stylesheet": "https://www.hanmifc.co.kr/css/common.css?version=20260901",
+    "key": "hanmi-fine",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\hanmi-fine-3-3b7d8087.png",
+    "bytes": 8087,
+    "size": [
+      400,
+      42
+    ],
+    "sha256": "85bae1094e9ffd435d68666129f913d4f9875599f9bbcf405e7db82a4f60d246"
+  },
+  {
+    "url": "http://www.bnckorea.co.kr/web/asset/images/main_brand.png",
+    "alt": "",
+    "key": "bnc",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bnc-0-5c559508.png",
+    "bytes": 1958,
+    "size": [
+      143,
+      27
+    ],
+    "sha256": "5e31a32cb36e49cd6b3879f1a48c07b6924232f014fdbaa22e814c0e4ce647c4"
+  },
+  {
+    "url": "http://www.bnckorea.co.kr/web/asset/images/main_brand01.jpg",
+    "alt": "",
+    "key": "bnc",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bnc-1-29ea21ed.jpg",
+    "bytes": 216827,
+    "size": [
+      580,
+      580
+    ],
+    "sha256": "16d610cac8454298227121d2810b855b0559ed0ac2da0393f1003f281118855f"
+  },
+  {
+    "url": "http://www.bnckorea.co.kr/web/asset/images/main_brand02.jpg",
+    "alt": "",
+    "key": "bnc",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bnc-2-7b51fd41.jpg",
+    "bytes": 23872,
+    "size": [
+      580,
+      580
+    ],
+    "sha256": "837875a292c23b63ccb2264b1a40cd64a961c2542b208e980f830bcd7ca59814"
+  },
+  {
+    "url": "http://www.bnckorea.co.kr/web/asset/images/main_brand03.jpg",
+    "alt": "",
+    "key": "bnc",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bnc-3-7b45f9cb.jpg",
+    "bytes": 33277,
+    "size": [
+      580,
+      580
+    ],
+    "sha256": "675c0cceeecaebf9a1b78ed231765e7832bc5a7eaea11f546b4e3d6aa1c8f1b1"
+  },
+  {
+    "url": "http://www.eubiologics.com/images/logo.png",
+    "alt": "",
+    "key": "eubiologics",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eubiologics-0-426c741b.png",
+    "bytes": 5534,
+    "size": [
+      193,
+      40
+    ],
+    "sha256": "c6857174606cf164dfd02f9b8c2775c76a51f321ecc45d16680018b8570f14d1"
+  },
+  {
+    "url": "http://www.eubiologics.com/images/b_logo.png",
+    "alt": "",
+    "key": "eubiologics",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eubiologics-1-e68c6925.png",
+    "bytes": 3964,
+    "size": [
+      181,
+      38
+    ],
+    "sha256": "ee5a0366490e29ee3412485ae89f3d58161b00a65f37e5185aef45e333ae55e0"
+  },
+  {
+    "url": "http://www.eubiologics.com/images/k_logo.png",
+    "alt": "",
+    "key": "eubiologics",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\eubiologics-2-10c9933c.png",
+    "bytes": 8592,
+    "size": [
+      512,
+      512
+    ],
+    "sha256": "2603fffa93702da40486898055373bcec73f72ecacfd2c191dc88ce77dc2e954"
+  },
+  {
+    "url": "https://chem.ulsan.ac.kr/upload//281/logo/2023/05/16/961f33e8-c8d0-48f5-b627-7f6d6166c911.png",
+    "alt": "",
+    "key": "lg-life-historical",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-life-historical-0-d83437a3.png",
+    "bytes": 9043,
+    "size": [
+      800,
+      124
+    ],
+    "sha256": "52b0260d1b94f114225ad1e6ddf307761bc7582769ebeebc2aec258758f4e5db"
+  },
+  {
+    "url": "https://chem.ulsan.ac.kr/images/front/main_temp/footer/footer001/footer-logo.png",
+    "alt": "",
+    "key": "lg-life-historical",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-life-historical-1-25cf01e7.png",
+    "bytes": 4495,
+    "size": [
+      180,
+      100
+    ],
+    "sha256": "86cf6609197dbe7f234b19ba4ff7bdcf1bc19f407c9f215945a89547d66ddc21"
+  },
+  {
+    "url": "https://www.khanews.com/image/logo/toplogo_20191211013042.png",
+    "alt": "",
+    "key": "cj-health-historical",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-health-historical-0-eb71439a.png",
+    "bytes": 6598,
+    "size": [
+      297,
+      65
+    ],
+    "sha256": "3114e548ea2521589ce9e5b613581c706430d9c952c85bfb3ad3ea08248ef463"
+  },
+  {
+    "url": "https://www.khanews.com/image/logo/printlogo_20191211013255.png",
+    "alt": "",
+    "key": "cj-health-historical",
+    "index": 1,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-health-historical-1-c6846707.png",
+    "bytes": 3271,
+    "size": [
+      130,
+      29
+    ],
+    "sha256": "0f4c59a38704fc882a9f097d821a70102a74191b591920037ccf10113f906acd"
+  },
+  {
+    "url": "https://www.khanews.com/image/logo/downlogo_20191211013255.png",
+    "alt": "",
+    "key": "cj-health-historical",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-health-historical-2-3386bf9b.png",
+    "bytes": 3733,
+    "size": [
+      150,
+      33
+    ],
+    "sha256": "271c5fbeeb388a65ef0fa191c66f112b7469dfc8f99564e1f420ce9effceb743"
+  },
+  {
+    "url": "https://www.khanews.com/image/logo/favicon.png",
+    "alt": "",
+    "key": "cj-health-historical",
+    "index": 3,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-health-historical-3-f8b69fa0.png",
+    "bytes": 4319,
+    "size": [
+      48,
+      48
+    ],
+    "sha256": "e82977adcb840579d16521fef4d35ebd881ad36d78c10922f8aad4e1acc7b32d"
+  },
+  {
+    "key": "3m",
+    "index": 0,
+    "url": "https://www.3m.co.kr/3m_theme_assets/themes/3MTheme/assets/images/unicorn/Logo.svg",
+    "file": "output\\logo-audit\\raw\\3m-official.svg"
+  },
+  {
+    "url": "https://www.taiguk.co.kr/assets/images/common/logotype1.png",
+    "alt": "Verified company logo",
+    "key": "taiguk",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\taiguk-0-d7cbe148.png",
+    "bytes": 5842,
+    "size": [
+      294,
+      53
+    ],
+    "sha256": "4d74ac6feccf6ec9b71821ee7c84c5e4e2721d8e92ed2ceeadd67bf32b5ef9eb"
+  },
+  {
+    "url": "https://www.aprogen-biologics.com/image/kor/00main/schnell_logo.jpg",
+    "alt": "Verified company logo",
+    "key": "aprogen-biologics",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\aprogen-biologics-0-039f21a5.jpg",
+    "bytes": 7230,
+    "size": [
+      150,
+      50
+    ],
+    "sha256": "c847b92c9e2c728f08d72b8065ecb16c7cedf11841b97619716f61a05741f06e"
+  },
+  {
+    "url": "https://chem.ulsan.ac.kr/upload/281/images/000001/20220808135936527_WG3HRXQG.png",
+    "alt": "Verified company logo",
+    "key": "lg-life-historical",
+    "index": 2,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\lg-life-historical-2-0786d68e.png",
+    "bytes": 5846,
+    "size": [
+      83,
+      66
+    ],
+    "sha256": "6deeb12f62556f88258f4302015825a073b6150a72430f901f212d0e5e97d4bd"
+  },
+  {
+    "url": "https://www.khanews.com/news/photo/201403/99565_25007_323.jpg",
+    "alt": "CJ healthcare new logo, captioned 2014 article",
+    "key": "cj-health-historical",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\cj-health-historical-4-47317c19.jpg",
+    "bytes": 9161,
+    "size": [
+      250,
+      205
+    ],
+    "sha256": "e296745dcc38d18284c6ee6fd217fbb29f5219e34309dc91bcec3edbfce2788e"
+  },
+  {
+    "url": "http://www.bnckorea.co.kr/web/asset/images/logo.png",
+    "alt": "Official header logo",
+    "key": "bnc",
+    "index": 4,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\bnc-4-cd16d0d1.png",
+    "bytes": 2792,
+    "size": [
+      93,
+      42
+    ],
+    "sha256": "1093d59b501e22c6255f641985e14f4000630f07f82d12be9e42ea67128bfeaf"
+  },
+  {
+    "url": "https://img.etnews.com/photonews/1907/1201795_20190703092324_543_0001.jpg",
+    "alt": "Huons Medicare logo",
+    "key": "huons-medicare-historical",
+    "index": 0,
+    "file": "C:\\Users\\sslee\\Desktop\\INFACT\\output\\logo-audit\\raw\\huons-medicare-historical-0-1112a5ff.jpg",
+    "bytes": 13144,
+    "size": [
+      700,
+      95
+    ],
+    "sha256": "3201616755f3d3399373537fe8f1c9c7b649315042a6d7b688bac479997f2b3c"
+  }
+]

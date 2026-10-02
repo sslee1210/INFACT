@@ -1,6 +1,7 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { Building2, ClipboardCheck, UsersRound } from "lucide-react";
 import { CountUpValue } from "@/components/site/CountUpValue";
+import { getCompanyLogo } from "@/content/clientLogos";
 import {
   homeAbout,
   homeExperienceClients,
@@ -280,15 +281,26 @@ export function HomeExperienceSection() {
 
       <div className="home-experience__client-marquee" aria-label="주요 수행 고객사">
         <div className="home-experience__client-track">
-          {[...homeExperienceClients, ...homeExperienceClients].map((client, index) => (
-            <span
-              className="home-experience__client"
-              key={`${client}-${index}`}
-              aria-hidden={index >= homeExperienceClients.length}
-            >
-              {client}
-            </span>
-          ))}
+          {[...homeExperienceClients, ...homeExperienceClients].map((client, index) => {
+            const logo = getCompanyLogo(client);
+            return (
+              <span
+                className="home-experience__client"
+                key={`${client}-${index}`}
+                aria-hidden={index >= homeExperienceClients.length}
+              >
+                {logo ? (
+                  <img
+                    src={logo.src}
+                    alt={client}
+                    width={168}
+                    height={48}
+                    decoding="async"
+                  />
+                ) : client}
+              </span>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,0 +1,535 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<title>JW홀딩스</title>
+	<link rel="shortcut icon" href="/holdings/jw.ico">
+	<meta name="keywords" content="JW, JW홀딩스, 홀딩스" />
+	<meta name="description" content="IV 수액 및 의약품 제조업체인 JW홀딩스는 고품질 의약품을 생산합니다." />
+	<script type="text/javascript">
+		var scriptDateFormat = "yyyy-MM-dd";
+		var loginPage = "/user/default.jsp";
+		
+		
+		  // 허용된 페이지 목록
+		  const allowedPaths = [
+			"/holdings/ko/main.jsp",
+			"/holdings/ko/intro/chairman.jsp",
+			"/holdings/ko/intro/holdings.jsp",
+			"/holdings/ko/intro/operating_company.jsp",
+			"/holdings/ko/intro/mission.jsp",
+			"/holdings/ko/intro/mission1.jsp",
+			"/holdings/ko/intro/jw_way.jsp",
+			"/holdings/ko/intro/change.jsp",
+			"/holdings/ko/intro/ci.jsp",
+			"/holdings/ko/esg/environment.jsp",
+			"/holdings/ko/esg/social.jsp",
+			"/holdings/ko/esg/governance.jsp",
+			"/holdings/ko/esg/governance2.jsp",
+			"/holdings/ko/esg/esg_list.jsp",
+			"/holdings/ko/esg/esgstory_list.jsp",
+			"/holdings/ko/esg/compliance_news_list.jsp",
+			"/holdings/ko/esg/compliance_news_view.jsp",
+			"/holdings/ko/esg/pressIR_list.jsp",
+			"/holdings/ko/esg/pressIR_view.jsp",
+			"/holdings/ko/business/export01.jsp",
+			"/holdings/ko/business/export02.jsp",
+			"/holdings/ko/business/export03.jsp",
+			"/holdings/ko/business/export04.jsp",
+			"/holdings/ko/business/exporting_country.jsp",
+			"/holdings/ko/business/factory.jsp",
+			"/holdings/ko/business/partners.jsp",
+			"/holdings/ko/rnd/rnd.jsp",
+			"/holdings/ko/rnd/technology01.jsp",
+			"/holdings/ko/rnd/technology02.jsp",
+			"/holdings/ko/rnd/technology03.jsp",
+			"/holdings/ko/rnd/pipeline.jsp",
+			"/holdings/ko/rnd/pipeline02.jsp",
+			"/holdings/ko/rnd/pipeline03.jsp",
+			"/holdings/ko/rnd/open_innovation01.jsp",
+			"/holdings/ko/rnd/open_innovation02.jsp",
+			"/holdings/ko/rnd/open_innovation03.jsp",
+			"/holdings/ko/investor/summary.jsp",
+			"/holdings/ko/investor/income_statement.jsp",
+			"/holdings/ko/investor/stock.jsp",
+			"/holdings/ko/investor/disclosure.jsp",
+			"/holdings/ko/investor/announce_list.jsp",
+			"/holdings/ko/investor/announce_view.jsp",
+			"/holdings/ko/investor/annual_report.jsp",
+			"/holdings/ko/prcenter/all_list.jsp",
+			"/holdings/ko/prcenter/all_view.jsp",
+			"http://www.jw-pharma.co.kr/pharma/ko/main.jsp",
+			"/holdings/ko/prcenter/public_contribution.jsp",
+			"/holdings/ko/util/privacy.jsp",
+			"/holdings/ko/util/sitemap.jsp",
+			"/holdings/ko/social/cyber_info_agree.jsp",
+			"/holdings/ko/social/cyber_info_send.jsp",
+			"/holdings/ko/social/cyber_inform.jsp",
+			"/holdings/ko/social/declaration.jsp",
+			"/holdings/ko/investor/directorate.jsp",
+			"/holdings/ko/social/info_writeexe.jsp",
+			"/holdings/ko/social/info_send.jsp",
+			"/holdings/ko/customer/map.jsp",
+			"/holdings/ko/customer/qanda_agree.jsp",
+			"/holdings/ko/customer/qanda_write.jsp",
+			"/holdings/ko/customer/qanda_writeexe.jsp",
+			"/holdings/ko/customer/contact.jsp"
+			];
+
+		  // 현재 경로 확인
+		  const currentPath = window.location.pathname;
+
+		  // 특정 경로로 접근 시 강제 이동
+		  if (currentPath === "/holdings/ko/investor/directorate.jsp") {
+				window.location.href = "/holdings/ko/esg/governance.jsp#tab2";
+		  }
+		  // 허용되지 않은 경로면 메인으로 이동
+		  else if (!allowedPaths.includes(currentPath)) {
+				window.location.href = "/holdings/ko/main.jsp"; 
+		  }
+		  
+		  
+	</script>
+	<link rel="stylesheet" type="text/css" href="/holdings/ko/asset/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/holdings/ko/asset/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/holdings/ko/asset/css/slick.css"/> <!-- 2017.11.26 추가 -->
+	<link rel="stylesheet" type="text/css" href="/holdings/ko/asset/css/renew_2020.css" /> <!-- 2020.10.18 리뉴얼 css 추가 --> <!-- 2017.11.26 추가 -->
+	<script src="/global/js/jquery-1.9.1.js"></script>
+	<script src="/global/js/hd_common.js"></script>
+
+	<script type="text/javascript" src="/js/plugin/jquery-ui-1.10.4/js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="/js/plugin/tinymce/jscripts/tiny_mce/jquery.tinymce.js"></script>
+	<script type="text/javascript" src="/js/page-util-1.0.js?2610021525206729CUUH"></script>
+	<script type="text/javascript" src="/js/editor-util-1.0.js?2610021525206729CUUH"></script>
+	<script type="text/javascript" src="/js/file-util-1.0.js?2610021525206729CUUH"></script>
+	<script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+	<link type="text/css" href="/js/plugin/jquery-ui-1.10.4/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=u4saxlbmkb"></script>
+	<script type="text/javascript" src="https://wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript" src="/holdings/ko/asset/js/popup.js"></script> <!-- 2020.03.02 추가 -->
+
+	<script type="text/javascript">
+	if(!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "1f9c4cc7b770bd";
+
+	if(window.wcs){
+	  wcs_do();
+	}
+	</script>
+</head>
+<body>
+
+
+	<div class="skipNavi"><a href="#container">본문 바로가기</a></div>
+	<header id="header" class="sub">
+
+<!-- header -->
+	<div class="header_top">
+		<div class="top">
+			<a href="https://nextory.jwhealthcare.com/" target="_blank">온라인역사관</a>
+			<a href="/holdings/ko/social/cyber_inform.jsp" >사이버신문고</a>
+			<a href="/holdings/ko/util/sitemap.jsp" >사이트맵</a>
+			<a href="/holdings/ko/customer/map.jsp" >Contact</a>
+			<a href="https://jwholdings.recruiter.co.kr" target="_blank">채용정보</a>
+		</div>
+	</div>
+	<div class="header_gnb">
+		<div class="gnb_wrap">
+			<h1><a href="/holdings/ko/main.jsp">JW홀딩스</a></h1>
+			<ul class="gnb">
+				<li>
+					<a href="/holdings/ko/intro/holdings.jsp">기업</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/intro/chairman.jsp">인사말</a></li>
+						<li><a href="/holdings/ko/intro/holdings.jsp">회사소개</a></li>
+						<li><a href="/holdings/ko/intro/operating_company.jsp">사업회사 소개</a></li>
+						<li><a href="/holdings/ko/intro/mission.jsp">JW Promise</a></li>
+						<li><a href="/holdings/ko/intro/jw_way.jsp">JW WAY</a></li>
+						<li><a href="/holdings/ko/intro/change.jsp">연혁</a></li>
+						<li><a href="/holdings/ko/intro/ci.jsp">CI소개</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/holdings/ko/esg/environment.jsp">지속가능경영</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/esg/environment.jsp">환경적 지속가능성</a>
+						<li><a href="/holdings/ko/esg/social.jsp">사회적 지속가능성</a>
+						<li><a href="/holdings/ko/esg/governance.jsp">지배구조</a>
+						<li><a href="/holdings/ko/esg/esg_list.jsp?category=esgpress">ESG News</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/holdings/ko/business/export01.jsp">사업</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/business/export01.jsp">수출품목</a></li>
+						<li><a href="/holdings/ko/business/exporting_country.jsp">수출국가</a></li>
+						<li><a href="/holdings/ko/business/factory.jsp">생산시설</a></li>
+						<li><a href="/holdings/ko/business/partners.jsp">파트너사</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/holdings/ko/rnd/rnd.jsp">연구</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/rnd/rnd.jsp">연구정책</a></li>
+						<li><a href="/holdings/ko/rnd/technology01.jsp">기반기술</a></li>
+						<li><a href="/holdings/ko/rnd/pipeline.jsp">파이프라인</a></li>
+						<li><a href="/holdings/ko/rnd/open_innovation01.jsp">연구 네트워크</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="/holdings/ko/investor/summary.jsp">투자</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/investor/summary.jsp">재무정보</a>
+							<ul>
+								<li><a href="/holdings/ko/investor/summary.jsp">재무상태표</a></li>
+								<li><a href="/holdings/ko/investor/income_statement.jsp">손익계산서</a></li>
+							</ul>
+						</li>
+						<li><a href="/holdings/ko/investor/disclosure.jsp">IR 센터</a>
+
+							<ul>
+								<li><a href="/holdings/ko/investor/disclosure.jsp">공시정보</a></li>
+								<li><a href="/holdings/ko/investor/announce_list.jsp">IR 게시판</a></li>
+								<li><a href="/holdings/ko/investor/annual_report.jsp">Annual Report</a></li>
+							</ul>
+						</li>
+						<li><a href="/pharma/ko/customer/qanda_agree.jsp">IR 문의하기</a>
+					</ul>
+				</li>
+				<li>
+					<a href="/holdings/ko/prcenter/all_list.jsp">홍보</a>
+					<ul class="menu_depth2">
+						<li><a href="/holdings/ko/prcenter/all_list.jsp">프레스룸</a></li>
+						<li><a href="http://www.jw-pharma.co.kr/pharma/ko/main.jsp">JW 미디어 채널</a></li>
+                        <li><a href="/holdings/ko/prcenter/public_contribution.jsp">공공기여시설</a></li>
+					</ul>
+				</li>
+			</ul>
+			<div class="lang">
+				<a href="/holdings/ko/main.jsp" class="on"><span>Korean</span></a>
+				<a href="https://www.jw-holdings.com/main.jsp" ><span>English</span></a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- //header -->
+
+<div id="darkness"></div><!-- dimmed layer -->
+<!-- sub_visual -->
+<div id="sub_visual" class="company">
+	<div>기업
+		<span>인류의 건강과 미래를 지켜가는 JW</span>
+	</div>
+</div>
+<!-- //sub_visual -->
+
+
+<!-- container -->
+<article class="sub">
+  <div class="title_section tab">
+    <!-- location (LNB) -->
+    
+<div class="location">
+	<div class="inner">
+		<a href="/holdings/ko/main.jsp" class="home">Home</a>
+		<ul>
+			
+<li><div class="depth1">Home</div>
+	<ul class="depth2">
+		<li><a href="/holdings/ko/intro/holdings.jsp">기업</a></li>
+		<li><a href="/holdings/ko/business/environment.jsp">지속가능경영</a></li>
+		<li><a href="/holdings/ko/business/export01.jsp">사업</a></li>
+		<li><a href="/holdings/ko/rnd/directivity.jsp">연구</a></li>
+		<li><a href="/holdings/ko/investor/summary.jsp">투자</a></li>
+		
+		<li><a href="/holdings/ko/prcenter/all_list.jsp">홍보</a></li>
+		<li><a href="/holdings/ko/customer/map.jsp">Contact</a></li>
+	</ul>
+</li>
+
+			<li><div class="depth1">CI소개</div>
+				<ul class="depth2">
+					<li><a href="/holdings/ko/intro/chairman.jsp">인사말</a></li>
+					<li><a href="/holdings/ko/intro/holdings.jsp">회사소개</a></li>
+					<li><a href="/holdings/ko/intro/operating_company.jsp">사업회사 소개</a></li><!-- 
+					<li><a href="/holdings/ko/intro/foreign.jsp">해외법인 소개</a></li> -->
+					<li><a href="/holdings/ko/intro/mission.jsp">JW's Promise</a></li>
+					<li><a href="/holdings/ko/intro/jw_way.jsp">JW WAY</a></li>
+					<li><a href="/holdings/ko/intro/change.jsp">연혁</a></li>
+					<li><a href="/holdings/ko/intro/ci.jsp">CI소개</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+    <!-- //location -->
+    <div class="cont_top">
+      <!-- 페이지 타이틀 -->
+      <div class="cont_tit_sildeup">
+        <h2>CI 소개</h2>
+      </div>
+    </div>
+  </div>
+  <div id="container" class="cont_container intro">
+    <!-- 컨텐츠 -->
+    <div class="content wd1142 ci ac">
+      <h3><span class="title blue mt0">워드마크</span></h3>
+      <b class="stit">JW Health Ribbon</b>
+      <p class="mt20 mb50">
+        건강한 선물을 의미하는 ‘JW Health Ribbon’은 인류의 건강한 삶을 위해 쉼
+        없이 노력하는 헬스케어 전문기업으로서의 정성스러운 마음을 의미합니다.
+        <br />Vital Sign과 사람의 형상을 합해놓은 듯한 전체적인 조형은 JW가
+        추구하는 최상의 가치, 즉 ‘생명존중’의 정신과 변화를 통해 지속적으로
+        성장해가는 역동성을 의미합니다. <br />물 흘러가는 듯한 동적인 이미지는
+        세계로 뻗어가며 끊임없이 변화하는 JW의 기상을 표현합니다
+      </p>
+      <img src="../asset/images/ci01.gif" alt="JW" class="mb50" />
+      <h3><span class="title blue mt50">컬러</span></h3>
+      <b class="stit">JW Blue</b>
+      <p class="mt20 mb50">
+        기업 상징 컬러인 ‘JW Blue’는 맑고 깨끗한 환경을 추구하고 투명경영을
+        실현하려는 기업의 굳은 정신을 담고 있으며<br />나아가 첨단 의약기술을
+        선도하는 미래지향적인 글로벌 기업임을 상징합니다.
+      </p>
+      <div class="ci_color">
+        <div>
+          <div class="tit">JW BLUE</div>
+          <span class="color blue"></span>
+          <ul>
+            <li>R0 / G117 / B197</li>
+            <li>Pantone 300C</li>
+            <li>Process C100 M50</li>
+          </ul>
+        </div>
+        <div>
+          <div class="tit">JW LIGHT BLUE</div>
+          <span class="color light_blue"></span>
+          <ul>
+            <li>R0 / G169 / B229</li>
+            <li>Pantone 2925C</li>
+            <li>Process C75 M10</li>
+          </ul>
+        </div>
+        <div>
+          <div class="tit">JW DEEP BLUE</div>
+          <span class="color deep_blue"></span>
+          <ul>
+            <li>R0 / G67 / B142</li>
+            <li>Pantone 288C</li>
+            <li>Process C100 M70 K20</li>
+          </ul>
+        </div>
+      </div>
+      <h3><span class="title blue mt50">다운로드</span></h3>
+      <!-- <img src="../asset/images/ci02.jpg" alt="JW" class="mb50" />
+      <div class="ci_down">
+				<div>JW</div>
+				<div><img src="../asset/images/ci_img_01_1.gif" alt="JW"></div>
+				<div><img src="../asset/images/ci_img_01_2.gif" alt="JW group"></div>
+				<a href="/ci/new/JWgroup.zip">CI 다운로드</a>
+			</div> -->
+      <div class="ci_down">
+        <div>JW</div>
+        <div><img src="../asset/images/ci02.jpg" alt="JW" style="height: 48px;"/></div>
+        <div>
+        </div>
+        <a href="/ci/new/JW.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW홀딩스</div>
+        <div><img src="../asset/images/ci_img_02_1.gif" alt="JW홀딩스" /></div>
+        <div>
+          <img src="../asset/images/ci_img_02_2.gif" alt="JW holdings" />
+        </div>
+        <a href="/ci/new/JWholdings.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW중외제약</div>
+        <div>
+          <img src="../asset/images/ci_img_03_1.gif" alt="JW중외제약" />
+        </div>
+        <div>
+          <img src="../asset/images/ci_img_03_2.gif" alt="JW Pharmaceutical" />
+        </div>
+        <a href="/ci/new/JWpharma.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW신약</div>
+        <div><img src="../asset/images/ci_img_04_1.gif" alt="JW신약" /></div>
+        <div>
+          <img src="../asset/images/ci_img_04_2.gif" alt="JW shinyak" />
+        </div>
+        <a href="/ci/new/JWshinyak.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW생명과학</div>
+        <div>
+          <img src="../asset/images/ci_img_05_1.gif" alt="JW생명과학" />
+        </div>
+        <div>
+          <img src="../asset/images/ci_img_05_2.gif" alt="JW life science" />
+        </div>
+        <a href="/ci/new/JWlife.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW메디칼</div>
+        <div><img src="../asset/images/ci_img_06_1.gif" alt="JW메디칼" /></div>
+        <div>
+          <img src="../asset/images/ci_img_06_2.gif" alt="JW medical" />
+        </div>
+        <a href="/ci/new/JWmedical.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW생활건강</div>
+        <div>
+          <img src="../asset/images/ci_img_07_1.gif" alt="JW생활건강" />
+        </div>
+        <div>
+          <img
+            src="../asset/images/ci_img_07_2.gif"
+            alt="JW Living Healthcare"
+          />
+        </div>
+        <a href="/ci/new/JWLiving.zip">CI 다운로드</a>
+      </div>
+<!--       <div class="ci_down">
+        <div>JW크레아젠</div>
+        <div>
+          <img src="../asset/images/ci_img_08_1.gif" alt="JW크레아젠" />
+        </div>
+        <div>
+          <img src="../asset/images/ci_img_08_2.gif" alt="JW creagene" />
+        </div>
+        <a href="/ci/new/JWcreagene.zip">CI 다운로드</a>
+      </div> -->
+      <div class="ci_down">
+        <div>JW케미타운</div>
+        <div>
+          <img src="../asset/images/ci_img_09_1.gif" alt="JW케미타운" />
+        </div>
+        <div>
+          <img src="../asset/images/ci_img_09_2.gif" alt="JW chemi town" />
+        </div>
+        <a href="/ci/new/JWchemi.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>JW바이오사이언스</div>
+        <div>
+          <img src="../asset/images/ci_img_10_1.gif" alt="JW바이오사이언스" />
+        </div>
+        <div>
+          <img src="../asset/images/ci_img_10_2.gif" alt="JW bio science" />
+        </div>
+        <a href="/ci/new/JWBioscience.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down">
+        <div>C&amp;C신약연구소</div>
+        <div>
+          <img src="../asset/images/ci_img_11_1.gif" alt="C&amp;C신약연구소" />
+        </div>
+        <div>
+          <img
+            src="../asset/images/ci_img_11_2.gif"
+            alt="c&amp;c research laboratories"
+          />
+        </div>
+        <a href="/ci/new/JWresearch.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down one">
+        <div>JWTheriac</div>
+        <div><img src="../asset/images/ci_img_12_1.gif" alt="JWTheriac" /></div>
+        <a href="/ci/new/JWTheriac.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down one">
+        <div>JW헬스케어필리핀</div>
+        <div>
+          <img
+            src="../asset/images/ci_img_13_1.gif"
+            alt="JW healthcare philippines"
+          />
+        </div>
+        <a href="/ci/new/JWhealthcarephilippines.zip">CI 다운로드</a>
+      </div>
+      <div class="ci_down one">
+        <div>JW헬스케어베트남</div>
+        <div>
+          <img
+            src="../asset/images/ci_img_14_1.gif"
+            alt="JW healthcare vietnam"
+          />
+        </div>
+        <a href="/ci/new/JWhealthcarevietnam.zip">CI 다운로드</a>
+      </div>
+    </div>
+    <!-- //컨텐츠 -->
+  </div>
+</article>
+<!-- //container -->
+
+<!-- footer -->
+<footer class="sub">
+  <div class="footer_wrap">
+    <!-- link -->
+    <div class="link">
+      <div class="family_site">
+        <div class="title">그룹사 바로가기</div>
+			<ul class="familyList">
+				<li><a href="https://www.jw-pharma.co.kr" target="_blank" title="새창열림">JW중외제약</a></li>
+				<li><a href="https://www.jw-shinyak.co.kr" target="_blank" title="새창열림">JW신약</a></li>
+				<li><a href="https://www.jw-lifescience.co.kr" target="_blank" title="새창열림">JW생명과학</a></li>
+				<li><a href="https://www.jw-medical.co.kr" target="_blank" title="새창열림">JW메디칼</a></li>
+				<li><a href="https://www.jw-bioscience.co.kr" target="_blank" title="새창열림">JW바이오사이언스</a></li>
+				<li><a href="https://www.chemitown.co.kr" target="_blank" title="새창열림">JW케미타운</a></li>
+				<li><a href="https://www.jw-on.com/" target="_blank" title="새창열림">JW생활건강</a></li>
+				<li><a href="https://www.cnclab.co.kr" target="_blank" title="새창열림">C&amp;C신약연구소</a></li>
+				<li><a href="https://jw-theriac.com" target="_blank" title="새창열림">JW Theriac</a></li>
+				<li><a href="https://www.jw-euvipharm.com" target="_blank" title="새창열림">JW Euvipharm</a></li>
+				<li><a href="https://www.jw-foundation.or.kr/" target="_blank" title="새창열림">JW이종호재단</a></li>
+			</ul>
+      </div>
+      <div class="info_link">
+        <a href="/holdings/ko/util/privacy.jsp" class="bold">개인정보처리방침</a>
+        <a href="http://ebid.jw-pharma.co.kr/" target="_blank">전자입찰 시스템</a>
+      </div>
+      <span class="top">Top</span>
+    </div><!-- //link -->
+    <!-- info -->
+    <div class="info">
+      <address>
+		  JW홀딩스 | 대표자명 : 차성남<br>경기도 과천시 과천대로 7길 38 (갈현동) JW사옥 | 대표번호 : 02-840-6777 | 제품상담 : 1588-2675<br>Copyright © JW홀딩스 All rights reserved
+	  </address>
+    </div><!-- //info -->
+  </div>
+</footer>
+<!-- //footer -->
+
+
+<script type="text/javascript" src="/holdings/ko/asset/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/holdings/ko/asset/js/slick.js"></script> <!-- 2017.11.26 추가 -->
+<script type="text/javascript" src="/holdings/ko/asset/js/common.js"></script>
+<script type="text/javascript" src="/holdings/ko/asset/js/jquery.scrollTo.js"></script>
+</body>
+</html>
+
+
+
+
+
+

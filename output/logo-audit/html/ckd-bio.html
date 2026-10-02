@@ -1,0 +1,431 @@
+<link rel="stylesheet" href="/css/pc/jquery.bxslider.css">
+
+<!doctype html>
+<html lang="ko">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147154793-3"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-147154793-3');
+	</script>
+<title>종근당바이오</title>
+    <meta name="description" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="/images/pc/common/favicon.ico">
+
+    <meta name="_csrf" content="89288c70-e96e-4587-87e4-c718b9de38e9"/>
+    <!-- default header name is X-CSRF-TOKEN -->
+    <meta name="_csrf_header" content="X-XSRF-TOKEN"/>
+
+    
+
+<script src="/webjars/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-cookie/1.4.1-1/jquery.cookie.js" charset="utf-8"></script>
+<script src="/webjars/jquery-mask-plugin/1.14.15/dist/jquery.mask.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-form/4.2.2/dist/jquery.form.min.js" charset="utf-8"></script>
+<script src="/webjars/jquery-blockui/2.70/jquery.blockUI.js" charset="utf-8"></script>
+<script src="/webjars/autonumeric/4.2.15/dist/autoNumeric.min.js" charset="utf-8"></script>
+
+
+<script src="/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="/webjars/jquery-ui/1.12.1/jquery-ui.min.css" />
+
+
+<script src="/js/lib/jquery.validate.min.js" charset="utf-8"></script>
+<script src="/js/lib/jquery.validate-messages_ko.js" charset="utf-8"></script>
+
+
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/js/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="/js/lib/html5shiv.printshiv.js"></script>
+    <script type="text/javascript" src="/js/lib/IE9.js"></script>
+<![endif]-->
+<!--[if (gte IE 6)&(lte IE 8)]>
+    <script type="text/javascript" src="/js/lib/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
+
+<!-- 20220304 Edge 브라우저 이슈로 수정 -->
+
+<link rel="stylesheet" type="text/css" href="/css/pc/common.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/company.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/investment.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/product.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/research.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/header.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/footer.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/pharmacy.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/reset_renew.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/common_renew.css?ver=20261002" media="all">
+<link rel="stylesheet" type="text/css" href="/css/pc/csm.css?ver=20261002" media="all">
+
+<script src="/js/lib/jquery.bxslider.min.js" charset="utf-8"></script>
+<script src="/js/lib/jquery.fitvids.js" charset="utf-8"></script>
+<script src="/js/pc/common/style.js?ver=20261002" charset="utf-8"></script>
+<script src="/js/pc/common/ssl.js?ver=20261002" charset="utf-8"></script>
+<script>
+var ContextPath = '';
+var ContextPathWithLocale = '';
+var CommonMsg = {};
+var CurrentDevice = 'PC'; // PC,MOBILE,TABLET
+var Lang = 'ko'; // ko,en,zh
+</script>
+
+
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script>
+
+    var Constant = {
+        file : {
+            maxSize : +'2199023255552' ? +'2199023255552' : 100000
+        },
+        alert : {
+          title: {
+              DEFAULT: '알림',
+              S: '알림',
+              U: '알림',
+              D: '알림',
+              E: '알림'
+          },
+          text: {
+              DEFAULT: '',
+              S: '저장되었습니다.',
+              U: '수정되었습니다.',
+              D: '삭제되었습니다.',
+              E: '처리중 오류가 발생하였습니다.'
+          }
+        },
+        confirm : {
+          title: {
+            DEFAULT: '확인',
+            S: '확인',
+            U: '확인',
+            D: '확인'
+          },
+          text: {
+            DEFAULT: '',
+            S: '저장하시겠습니까?',
+            U: 'confirm.modify',
+            D: '삭제하시겠습니까?',
+          }
+        }
+    };
+</script></head>
+<body>
+<!-- wrap -->
+<div id="wrap">
+
+    <!-- dHead -->
+    <div class="header" style="height:auto;">
+        
+
+<input type="hidden" id="viewMode" name="viewMode" value="" />
+<div class="header-wrap">
+    <div class="depth_bg" style="display: none;"></div>
+    <div class="gnb-line"></div>
+    <div class="header_area">
+        <div class="logo"><a href="/home"><img src="/images/pc/common/logo.png?ver=20261002" alt="logo"></a></div>
+        <div class="header_L_area">
+            <div class="gnb_wrap">
+                <div class="hd_gnb">
+                    <!-- 1 레벨 메뉴 -->
+                    <ul class="menu">
+
+                    </ul>
+                    <!-- // 1 레벨 메뉴 -->
+                </div>
+            </div>
+        </div>
+        <div class="header_R_area">
+            <!-- 유틸리티 -->
+            <ul class="utility_menu">
+            	<li><a href="/utility/contactUsOffice.do" style="color:#004a99;" id="contactUs">Contact Us</a></li>
+					<li>
+					   
+                        <a href="/en/home" target="_blank" rel="noopener noreferrer">ENG</a>
+					</li>
+
+			</ul>
+            <!-- // 유틸리티 -->
+        </div>
+    </div>
+    <div class="header_area2">
+        <div class="header_img">
+            <div class="top_cover">
+                <!-- 커버 -->
+                <span class="img_txt1"></span>
+                <span class="img_txt2"></span>
+                <span class="img_txt3"></span>
+                <!-- // 커버 -->
+            </div>
+        </div>
+
+        <div class="header-nav">
+            <div class="container">
+                <ul class="nav-ul">
+                    <li><a href="/home" class="icon_home">home</a></li>
+                    <!-- 2레벨 ~ -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/pc/apps/com/header.js?ver=20261002"></script>
+</div>
+    <!-- //dHead -->
+
+    <!-- contents -->
+    <div class="contents">
+        <script>
+  $(document).ready(function(){
+	$('.bxslider').bxSlider({
+		auto: false,
+		speed: 600,
+		pause: 4000,
+		mode:'fade', //'horizontal' 'horizontal' 'vertical' 'fade'
+		//autoControls: true,
+		//stopAutoOnClick: true,
+		pager:false,
+		//captions: true,
+		touchEnabled:false,
+		slideWidth: 285,
+    	controls:true,
+	}); 
+  });
+</script>
+<div class="tit-sub-wrap">
+ <h1>안산공장</h1>
+</div>
+<section class="section">
+	<div class="container">
+		<ul class="tlt_tab">
+			<li class="active"><a href="#!">안산공장</a></li>
+			<li><a href="/facility/yesanFactory.do">예산공장</a></li>
+			<li><a href="/facility/osongFactory.do">오송공장</a></li>
+		</ul>
+  <div class="tab-con">
+    <div class="tit-sec-wrap">
+        <h2>엄격한 품질경영관리로 글로벌 GMP 기준에 적합한<br />원료의약품, 중간체 및 프로바이오틱스를 생산합니다.</h2>
+        <p class="cont_txt4">
+            최신 GMP 기준에 적합한 제조시설 및 품질관리로 미국 FDA, 유럽 이탈리아 AIFA, 일본 PMDA, 호주 TGA 등<br />
+            전 세계 주요 보건당국의 GMP 승인을 획득한 4개의 생산 공장을 가동하고 있습니다.
+        </p>
+    </div>
+    <div class="row col-12 bio-factory-ansan">
+      <div class="list-slider">
+        <div class="bxslider">
+          <div><img src="/images/pc/facility/img_ansan1-1.png"></div>
+          <div><img src="/images/pc/facility/img_ansan1-2.png"></div>
+        </div>
+        <div class="cont">
+          <p class="tit">A 공장동</p>
+          <p class="small">다목적 생산시설</p>
+        </div>
+        <p class="capacity">건물 면적 : 5,593m<sup>2</sup><br/>Fermentor : over 900m<sup>3</sup></p>                
+      </div>
+      <div class="list-slider">
+        <div class="bxslider">
+          <div><img src="/images/pc/facility/img_ansan2-1.png"></div>
+          <div><img src="/images/pc/facility/img_ansan2-2.png"></div>
+        </div>
+        <div class="cont">
+          <p class="tit">B 공장동</p>
+          <p class="small">전용 생산시설</p>
+        </div>
+        <p class="capacity">건물 면적 : 6,136m<sup>2</sup><br />Fermentor : over 600m<sup>3</sup></p>
+      </div>
+      <div class="list-slider">
+        <div class="bxslider">
+          <div><img src="/images/pc/facility/img_ansan3-1.png"></div>
+          <div><img src="/images/pc/facility/img_ansan3-2.png"></div>
+        </div>
+        <div class="cont">
+          <p class="tit">C 공장동</p>
+          <p class="small">다목적 생산시설</p>
+        </div>
+        <p class="capacity">건물 면적 : 1,445m<sup>2</sup></p>
+      </div>
+      <div class="list-slider">
+        <div class="bxslider">
+          <div><img src="/images/pc/facility/img_ansan4-1.png"></div>
+          <div><img src="/images/pc/facility/img_ansan4-2.png"></div>
+        </div>
+        <div class="cont">
+          <p class="tit">D 공장동</p>
+          <p class="small">전용 생산시설</p>
+        </div>
+        <p class="capacity">건물 면적 : 640.1m<sup>2</sup><br />Fermentor : over 6.35m<sup>3</sup></p>
+      </div>
+      <div class="list-slider">
+        <div class="bxslider">
+          <div><img src="../../../images/pc/facility/img_ansan5-1.png"></div>
+        </div>
+        <div class="cont">
+          <p class="tit">E 공장동</p>
+          <p class="small">전용 생산시설</p>
+        </div>
+        <p class="capacity">건물 면적 :  1,136m<sup>2</sup><br />Fermentor : over 20m<sup>3</sup></p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+	</div>
+</section></div>
+    <!-- //contents -->
+
+    <!-- dFoot -->
+    <div class="footer">
+        <div class="wrap" style="margin-top: 50px">
+        <div id="footer">
+            <div class="footer_area">
+                <div class="fo_logo_wrap"><img src="/images/pc/footer/fo_logo_bio.png?ver=20261002" alt="footer logo"></div>
+                
+				<div class="fo_con_wrap">
+					<div class="fo_con">
+						<ul class="fo_menu">
+							<li class="popup"><a href="/footer/agreement.do">이용약관</a></li>
+				            <li class="popup"><a href="/footer/privacyPolicy.do">개인정보처리방침</a></li>
+				            <li class="popup"><a href="/footer/nomail.do">이메일무단수집거부</a></li>
+						</ul>
+						<ul class="footer_address">
+							<li><span>(주)종근당바이오</span></li>
+				            <li><span>서울본사</span><span>서울특별시 서대문구 충정로 8 종근당빌딩</span><span>TEL : 02) 2194-0555</span><span>FAX : 02) 2194-0556</span><span>E-mail : intl@ckdbio.com</span></li>
+				            <li><span>안산공장</span><span>경기도 안산시 단원구 신원로 292</span><span>TEL : 031) 489-1000</span></li>
+				            <li><span>오송공장</span><span>충청북도 청주시 흥덕구 오송읍 오송생명4로 22</span><span>TEL : 043) 290-9400</span></li>
+				            <li><span>예산공장</span><span>충남 예산군 삽교읍 산단3길 226</span><span>TEL : 041) 330-3900</span></li>
+				        </ul>
+						<div class="copyright_bio">
+							Ⓒ Copyright 2019 CKD BiO Corp. All Rights Reserved
+						</div>
+					</div>
+                </div>
+
+              <div class="fo_select_wrap_bio">
+				<div class="select-group">
+					<div class="select_wrap_type02">
+						<div class="select-ui li-slt">
+							<h3><a href="#select-list">Family Site</a></h3>
+							<ul id="select-list01" style="overflow-y:auto;">
+                                <li><a class="active" href="#!">홀딩스</a></li>
+                                <li><a class="s-list" href="///www.ckd-holdings.com/home" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당홀딩스</a></li>
+                                <li><a href="#!">헬스케어</a></li>
+                                <li><a class="s-list" href="//www.ckdpharm.com/home" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당</a></li>
+                                <li><a class="s-list" href="//www.ckdbio.com/home" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당바이오</a></li>
+                                <li><a class="s-list" href="//www.kbpharma.co.kr/home" title="새창 열림" target="_blank" rel="noopener noreferrer">- 경보제약</a></li>
+                                <li><a class="s-list" href="//www.ckdhc.com/home" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당건강</a></li>
+                                <li><a href="#!">부동산임대</a></li>
+                                <li><a class="s-list" href="//www.ckdi.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 종근당산업</a></li>
+                                <li><a href="#!">건설/환경</a></li>
+                                <li><a class="s-list" href="//bellenc.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨이앤씨</a></li>
+                                <li><a href="#!">용역/운송</a></li>
+                                <li><a class="s-list" href="//www.bellsm.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨에스엠</a></li>
+                                <li><a href="#!">마케팅솔루션</a></li>
+                                <li><a class="s-list" href="//www.bellcomm.co.kr" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨컴</a></li>
+                                <li><a href="#!">IT</a></li>
+                                <li><a class="s-list" href="//www.bellins.net" title="새창 열림" target="_blank" rel="noopener noreferrer">- 벨아이앤에스</a></li>
+                                <li><a href="#!">언론</a></li>
+                                <li><a class="s-list" href="https://ddaily.co.kr/" title="새창 열림" target="_blank" rel="noopener noreferrer">- 디지털데일리</a></li>
+                            </ul>
+						</div>
+					</div>
+					<!--
+					<div class="select_wrap_type01">
+						<div class="select-ui li-slt">
+							<h3><a href="#select-list">브랜드 스토리</a></h3>
+							<ul id="select-list01">
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+							</ul>
+						</div>
+					</div>
+					-->
+				</div>
+				<!-- 
+				<div class="select-group">
+					<div class="select_wrap_type01">
+						<div class="select-ui li-slt">
+							<h3><a href="#select-list">윤리경영</a></h3>
+							<ul id="select-list">
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+								<li><a href="#none" title="새창 열림">content</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="select_wrap_type01">
+						<div class="select-ui li-slt">
+							<h3><a href="#select-list">자율준수프로그램</a></h3>
+							<ul id="select-list">
+								<li><a href="#none" title="새창 열림">CP 소개</a></li>
+								<li><a class="active" href="#none" title="새창 열림">CP 선언문</a></li>
+								<li><a class="s-list active" href="#none" title="새창 열림">- 2020년</a></li>
+								<li><a class="s-list" href="#none" title="새창 열림">- 2019년</a></li>
+								<li><a class="s-list" href="#none" title="새창 열림">- 2018년</a></li>
+								<li><a href="#none" title="새창 열림">부패방지 방침</a></li>
+								<li><a href="#none" title="새창 열림">CP 조직도</a></li>
+								<li><a href="#none" title="새창 열림">CKD CP</a></li>
+								<li><a href="#none" title="새창 열림">CP 활동</a></li>
+								<li><a href="#none" title="새창 열림">사이버신문고</a></li>
+								<li><a href="#none" title="새창 열림">지출보고서 신청</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+ 				-->
+ 				
+ 				<!-- 
+					<div class="select_wrap_type02 last">
+						<div class="select-ui li-slt">
+							<h3><a href="#select-list">Group ware</a></h3>
+							<ul id="select-list">
+								<li><a class="active" href="#none" title="새창 열림">00000</a></li>
+								<li><a href="#none" title="새창 열림">11111</a></li>
+								<li><a href="#none" title="새창 열림">22222</a></li>
+								<li><a href="#none" title="새창 열림">33333</a></li>
+								<li><a href="#none" title="새창 열림">44444</a></li>
+								<li><a href="#none" title="새창 열림">55555</a></li>
+								<li><a href="#none" title="새창 열림">66666</a></li>
+							</ul>
+						</div>
+					</div>
+				-->
+
+                    <!--<div>
+                        <div class="sle_tlt" style="text-align:center;">브랜드스토리</div>
+                        <ul class="sle_txt">
+                            <li>리스트1</li>
+                            <li>리스트2</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="sle_tlt last">브랜드스토리</div>
+                        <ul class="sle_txt">
+                            <li>리스트1</li>
+                            <li>리스트2</li>
+                        </ul>
+                    </div>-->
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+<script src="/js/pc/apps/com/footer.js" charset="utf-8"></script>
+</div>
+    <!-- //dFoot -->
+
+</div>
+<!-- //wrap -->
+
+</body>
+</html>

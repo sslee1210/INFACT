@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+<title>한국프라임제약</title>
+<link rel="stylesheet" href="https://9f.co.kr/cdn/icon/XEIcon-master/xeicon.min.css">
+<link rel="stylesheet" href="https://9f.co.kr/cdn/icon/fontawesom/css/all.min.css">
+<script src="https://9f.co.kr/cdn/icon/fontawesom/js/all.js"></script>
+<link rel="stylesheet" href="https://www.koreaprime.co.kr//css/default.css">
+<!--[if lte IE 8]>
+<script src="https://www.koreaprime.co.kr//js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.koreaprime.co.kr/";
+var g5_bbs_url   = "https://www.koreaprime.co.kr//bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "";
+var g5_sca       = "";
+var g5_editor    = "";
+var g5_cookie_domain = "";
+</script>
+<script src="https://www.koreaprime.co.kr//js/jquery-1.8.3.min.js"></script>
+<script src="https://www.koreaprime.co.kr//js/jquery.menu.js"></script>
+<script src="https://www.koreaprime.co.kr//js/common.js"></script>
+<script src="https://www.koreaprime.co.kr//js/wrest.js"></script>
+
+</head>
+<body>
+
+<!-- 팝업레이어 시작 { -->
+<div id="hd_pop">
+    <h2>팝업레이어 알림</h2>
+
+<span class="sound_only">팝업레이어 알림이 없습니다.</span></div>
+
+<script>
+$(function() {
+    $(".hd_pops_reject").click(function() {
+        var id = $(this).attr('class').split(' ');
+        var ck_name = id[1];
+        var exp_time = parseInt(id[2]);
+        $("#"+id[1]).css("display", "none");
+        set_cookie(ck_name, 1, exp_time, g5_cookie_domain);
+    });
+    $('.hd_pops_close').click(function() {
+        var idb = $(this).attr('class').split(' ');
+        $('#'+idb[1]).css('display','none');
+    });
+    $("#hd").css("z-index", 1000);
+});
+</script>
+<!-- } 팝업레이어 끝 -->
+<div class="intro-bg">
+	<div class="intro-button">
+		<ul>
+			<li class="intro_korean"><a href="/main/main.php"><img src="https://www.koreaprime.co.kr//images/main/intro-korean.gif" border="0" /></a></li>
+			<li class="intro_korean"><a href="/vol2/eng-main/eng-main.php"><img src="https://www.koreaprime.co.kr//images/main/intro-english.gif" /></a></li>
+			<li class="prime_clear">&nbsp;</li><!-- Clear -->
+		</ul>
+	</div>
+</div>
+
+<div class="intor-address"><img src="https://www.koreaprime.co.kr//images/main/intro-address.gif" /></div>
+
+<script>
+	$(function() {
+		$("#hd_pop").css("display","none");
+	})
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+</body>
+</html>

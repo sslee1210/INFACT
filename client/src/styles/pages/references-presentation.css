@@ -145,11 +145,10 @@
   line-height: 1.5;
   padding: 8px;
 }
-.references-page .reference-company__logo small {
-  display: block;
-  margin-top: 4px;
-  font-size: 11px;
-  font-weight: 400;
+.references-page .reference-company__logo[data-surface="dark"] {
+  padding: 10px;
+  border-radius: 6px;
+  background: #243441;
 }
 .references-page .reference-company__logo img {
   display: block;
