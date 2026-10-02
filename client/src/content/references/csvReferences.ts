@@ -685,7 +685,7 @@ export const csvReferenceYears: ReferenceYear[] = [
     "year": 2024,
     "clients": [
       {
-        "client": "프레스티지바이오",
+        "client": "프레스티지바이오파마",
         "logo": "",
         "projects": [
           "1공장 생산설비 10ea CSV",
@@ -1136,7 +1136,7 @@ export const csvReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "프레스티지바이오",
+        "client": "프레스티지바이오파마",
         "logo": "",
         "projects": [
           "제1캠퍼스에 구축하는 LIMS에 대한 CSV 수행",
@@ -1395,7 +1395,7 @@ export const csvReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "에스엔피제네틱스",
+        "client": "큐러블",
         "logo": "",
         "projects": [
           "BMS에 대한 CSV 수행"
@@ -1991,7 +1991,7 @@ export const csvReferenceYears: ReferenceYear[] = [
     "year": 2017,
     "clients": [
       {
-        "client": "우정BSC",
+        "client": "콜마바이오텍",
         "logo": "",
         "projects": [
           "Isolator CSV"

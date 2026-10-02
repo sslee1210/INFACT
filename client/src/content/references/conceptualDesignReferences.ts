@@ -74,7 +74,7 @@ export const conceptualDesignReferenceYears: ReferenceYear[] = [
     "year": 2022,
     "clients": [
       {
-        "client": "에스엔피제네틱스",
+        "client": "큐러블",
         "logo": "",
         "projects": [
           "RNA 합성 GMP시설 개념설계 및 적격성평가"

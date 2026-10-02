@@ -816,12 +816,13 @@
   {
     "id": "curable",
     "names": [
-      "큐러블"
+      "큐러블",
+      "에스엔피제네틱스"
     ],
     "src": "./images/clients/curable.jpg",
     "background": "light",
     "sourcePage": "https://www.curablent.com/",
-    "sourceAsset": "https://lh3.googleusercontent.com/NmDfIh4MZm8EJyZErpPLw2bvrabcbwjJE-4o6nLT9HABpvLhgrUtig1_RJqUE0co13u6G-cgBaY9IdfMUQvc2fXNOFNiTfBzmXSPhEGWSyeNijqTtJswWA",
+    "sourceAsset": "User-provided unnamed.jpg",
     "sha256": "41ee57e850902e462803767fbd8ead67b0f7f5b7a4bf239464428dbece2023e0"
   },
   {
@@ -1580,5 +1581,94 @@
     "sourcePage": "https://www.etnews.com/20190703000025",
     "sourceAsset": "https://img.etnews.com/photonews/1907/1201795_20190703092324_543_0001.jpg",
     "sha256": "3201616755f3d3399373537fe8f1c9c7b649315042a6d7b688bac479997f2b3c"
+  },
+  {
+    "id": "prestige-biopharma",
+    "names": [
+      "프레스티지바이오파마",
+      "프레스티지바이오"
+    ],
+    "src": "./images/clients/prestige-biopharma.png",
+    "background": "light",
+    "sourcePage": "https://prestigebiopharma.com/ko/",
+    "sourceAsset": "https://prestigebiopharma.com/wp-content/uploads/2023/02/cropped-PBP_Logo_투명_M.png",
+    "sha256": "b8d8a799328230c29e7f12fba6139f38e643f5dce7e792b07bac0d194516831d"
+  },
+  {
+    "id": "dk-consultants",
+    "names": [
+      "디케이컨설턴츠"
+    ],
+    "src": "./images/clients/dk-consultants.png",
+    "background": "light",
+    "sourcePage": "https://www.dk-consultant.com/",
+    "sourceAsset": "User-provided logo (1).png",
+    "sha256": "4d7e1f925f8239d72c3009da03fa2614e93754f693365b119f6fbc3977a84257"
+  },
+  {
+    "id": "oreon",
+    "names": [
+      "오레온"
+    ],
+    "src": "./images/clients/oreon.jpg",
+    "background": "light",
+    "sourcePage": "User-provided 다운로드.jpg",
+    "sourceAsset": "User-provided 다운로드.jpg",
+    "sha256": "305fc13163ebb3b9d3ca401121b426285a57b02d1be9b55fc2fe1ed40177ef99"
+  },
+  {
+    "id": "mediinfra",
+    "names": [
+      "메디인프라"
+    ],
+    "src": "./images/clients/mediinfra.png",
+    "background": "light",
+    "sourcePage": "User-provided 스크린샷 2026-10-02 164730.png",
+    "sourceAsset": "User-provided 스크린샷 2026-10-02 164730.png",
+    "sha256": "77e54979b00f046c2a76c0a3cdef25d952df7a328769fe32fb90c7f1e7161d61"
+  },
+  {
+    "id": "prostemics",
+    "names": [
+      "프로스테믹스"
+    ],
+    "src": "./images/clients/prostemics.jpg",
+    "background": "light",
+    "sourcePage": "User-provided 4762312861.jpg",
+    "sourceAsset": "User-provided 4762312861.jpg",
+    "sha256": "c49f102daaf2ea0e9bb1395899702c7b85844179b0c497604be88e9e4b31b105"
+  },
+  {
+    "id": "ys-life-science",
+    "names": [
+      "YS생명과학",
+      "연성정밀화학"
+    ],
+    "src": "./images/clients/ys-life-science.png",
+    "background": "light",
+    "sourcePage": "https://www.ysls.co.kr/",
+    "sourceAsset": "User-provided logo (3).png",
+    "sha256": "31dda47b2c0ba9ef0cd3c6b71f33979fe8cf8fb1897c4e30faec140c82f95ca9"
+  },
+  {
+    "id": "kolmar-biotech",
+    "names": [
+      "콜마바이오텍",
+      "우정BSC"
+    ],
+    "src": "./images/clients/kolmar-biotech.png",
+    "background": "light",
+    "sourcePage": "User-provided codex-clipboard-85dae35f-9a5c-4b3d-a580-592031e47dfa.png",
+    "sourceAsset": "User-provided codex-clipboard-85dae35f-9a5c-4b3d-a580-592031e47dfa.png",
+    "sha256": "48b1e00fdf4bae746c9e724489f24641ace1601a679da92f2389fb1b78767de8"
+  },
+  {
+    "id": "seowon-mfg",
+    "names": ["서원엠에프지"],
+    "src": "./images/clients/seowon-mfg.png",
+    "background": "light",
+    "sourcePage": "https://seowon55251.cafe24.com/",
+    "sourceAsset": "User-provided logo (2).png",
+    "sha256": "f78abe89f34a94aaae073dbd671fa439095649ca2f84d09437b38664d9fed5f1"
   }
 ]

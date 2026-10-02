@@ -973,7 +973,7 @@ export const gmpReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "프레스티지바이오",
+        "client": "프레스티지바이오파마",
         "logo": "",
         "projects": [
           "Mpower 인터페이스에 따른 변경 관리"
@@ -1781,7 +1781,7 @@ export const gmpReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "프레스티지바이오",
+        "client": "프레스티지바이오파마",
         "logo": "",
         "projects": [
           "1공장 Mixer에 대한 재 적격성평가"
@@ -1967,7 +1967,7 @@ export const gmpReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "에스엔피제네틱스",
+        "client": "큐러블",
         "logo": "",
         "projects": [
           "RNA 합성 GMP시설 개념설계 및 적격성평가"
@@ -2460,7 +2460,7 @@ export const gmpReferenceYears: ReferenceYear[] = [
         ]
       },
       {
-        "client": "프레스티지바이오",
+        "client": "프레스티지바이오파마",
         "logo": "",
         "projects": [
           "냉동 및 냉장창고 밸리데이션",
