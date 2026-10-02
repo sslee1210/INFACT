@@ -154,7 +154,7 @@
   width: max-content;
   align-items: center;
   gap: clamp(54px, 6vw, 116px);
-  animation: home-experience-client-marquee 34s linear infinite;
+  animation: home-experience-client-marquee var(--home-client-duration, 34s) linear infinite;
   will-change: transform;
 }
 

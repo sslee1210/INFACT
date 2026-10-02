@@ -530,8 +530,8 @@
     "src": "./images/clients/merck.svg",
     "background": "light",
     "sourcePage": "https://www.merckgroup.com/kr-ko",
-    "sourceAsset": "https://www.merckgroup.com/content/dam/web/corporate/images/general/global/logos/merck.svg",
-    "sha256": "568c28a59b29fcd66108eef174e65c9bb475d3423b686fa9481d06bdcb8d5ed1"
+    "sourceAsset": "User-provided merck.svg",
+    "sha256": "dc24355ed2473f945b92a98362888dc6a5671bfcd281eebd26bff4b295aa387d"
   },
   {
     "id": "genuone",
@@ -1154,11 +1154,11 @@
       "삼천당제약",
       "Samchundang Pharm"
     ],
-    "src": "./images/clients/scd-pharm.jpg",
+    "src": "./images/clients/scd-pharm.gif",
     "background": "light",
-    "sourcePage": "./documents/infact-company-profile-2026-10.pdf#page=14",
-    "sourceAsset": "./documents/infact-company-profile-2026-10.pdf#page=14",
-    "sha256": "055849c69e604307b592e1986f5fbdcd0ddfae79fd045edb24a7ac3c068dfd09"
+    "sourcePage": "http://www.scd.co.kr/",
+    "sourceAsset": "http://www.scd.co.kr/common/images/common/logo.gif",
+    "sha256": "2f733b117142364d66675757538a5aaefc50a5d6ec7c25c73af54060b4315b1e"
   },
   {
     "id": "lnc-bio",

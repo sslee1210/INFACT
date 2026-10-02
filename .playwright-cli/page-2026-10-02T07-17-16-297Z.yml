@@ -1,0 +1,199 @@
+- generic [ref=e3]:
+  - button "본문으로 바로가기" [ref=e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e5]:
+    - generic [ref=e6]:
+      - button "INFACT 홈으로 이동" [ref=e7] [cursor=pointer]:
+        - img "INFACT" [ref=e8]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - button "회사소개" [ref=e12] [cursor=pointer]
+        - listitem [ref=e13]:
+          - button "사업안내" [ref=e14] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "수행실적" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - button "문의하기" [ref=e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=e19]:
+          - generic [ref=e20]: TODAY
+          - strong [ref=e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: References
+      - heading "GMP 수행실적" [level=1] [ref=e26]
+      - paragraph [ref=e27]: 제약·바이오 프로젝트의 GMP 컨설팅, 품질시스템 구축, 밸리데이션 및 규제기관 대응 실적입니다.
+    - generic [ref=e28]:
+      - navigation "페이지 하위 메뉴" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - button "개념설계" [ref=e32] [cursor=pointer]
+            - button "GMP" [ref=e33] [cursor=pointer]
+            - button "CSV" [ref=e34] [cursor=pointer]
+          - list "현재 위치" [ref=e35]:
+            - listitem [ref=e36]: 홈
+            - listitem [ref=e37]: "> 수행실적"
+            - listitem [ref=e38]: "> GMP"
+      - region [ref=e39]:
+        - generic [ref=e41]:
+          - heading "함께해 온 기업들" [level=2] [ref=e42]
+          - paragraph [ref=e43]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=e44]:
+          - generic [ref=e45]: 연도 선택
+          - generic [ref=e46]:
+            - button "2026" [pressed] [ref=e47] [cursor=pointer]
+            - button "2025" [ref=e48] [cursor=pointer]
+            - button "2024" [ref=e49] [cursor=pointer]
+            - button "2023" [ref=e50] [cursor=pointer]
+            - button "2022" [ref=e51] [cursor=pointer]
+            - button "2021" [ref=e52] [cursor=pointer]
+            - button "2020" [ref=e53] [cursor=pointer]
+            - button "2019" [ref=e54] [cursor=pointer]
+            - button "2018" [ref=e55] [cursor=pointer]
+            - button "2017" [ref=e56] [cursor=pointer]
+            - button "2016" [ref=e57] [cursor=pointer]
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - heading "2026" [level=3] [ref=e60]
+            - paragraph [ref=e61]: GMP 수행 기업
+            - text: 주요 수행사례
+          - generic [ref=e62]:
+            - list "2026년 GMP 수행 기업" [ref=e63]:
+              - listitem "머크" [ref=e64]:
+                - img "머크 로고" [ref=e66]
+                - paragraph [ref=e68]: Clean Booth, 자동창고
+              - listitem "LG화학" [ref=e69]:
+                - img "LG화학 로고" [ref=e71]
+                - paragraph [ref=e73]: Clean Booth
+              - listitem "대웅제약" [ref=e74]:
+                - img "대웅제약 로고" [ref=e76]
+                - paragraph [ref=e78]: 표적항암제 제조소
+              - listitem "HK이노엔" [ref=e79]:
+                - img "HK이노엔 로고" [ref=e81]
+                - paragraph [ref=e83]: 압축공기시스템
+              - listitem "동국제약" [ref=e84]:
+                - img "동국제약 로고" [ref=e86]
+                - paragraph [ref=e88]: 헤파필터
+              - listitem "휴젤" [ref=e89]:
+                - img "휴젤 로고" [ref=e91]
+                - paragraph [ref=e93]: 충전기 상부 클린부스
+              - listitem "한올바이오파마" [ref=e94]:
+                - img "한올바이오파마 로고" [ref=e96]
+                - paragraph [ref=e98]: 바이알터널멸균기
+              - listitem "삼천당제약" [ref=e99]:
+                - img "삼천당제약 로고" [ref=e101]
+                - paragraph [ref=e103]: HVAC System
+              - listitem "삼양바이오팜 의약공장" [ref=e104]:
+                - img "삼양바이오팜 의약공장 로고" [ref=e106]
+                - paragraph [ref=e108]: 질소, 압축공기
+              - listitem "삼양바이오팜" [ref=e109]:
+                - img "삼양바이오팜 로고" [ref=e111]
+                - paragraph [ref=e113]: 압축공기, 질소
+              - listitem "종근당바이오" [ref=e114]:
+                - img "종근당바이오 로고" [ref=e116]
+                - paragraph [ref=e118]: 커머셜 생산라인 탈수실
+              - listitem "제일약품" [ref=e119]:
+                - img "제일약품 로고" [ref=e121]
+                - paragraph [ref=e123]: 이층정타정기, 바이알 자동충전기, PQ Test 용역
+              - listitem "한국유나이티드제약" [ref=e124]:
+                - img "한국유나이티드제약 로고" [ref=e126]
+                - paragraph [ref=e128]: 성능적격성평가 수행, 반자동 로딩기
+              - listitem "명인제약" [ref=e129]:
+                - img "명인제약 로고" [ref=e131]
+                - paragraph [ref=e133]: Pure Steam Generator, 포장기
+              - listitem "jw홀딩스" [ref=e134]:
+                - img "jw홀딩스 로고" [ref=e136]
+                - paragraph [ref=e138]: 슬리터
+              - listitem "프레스티지바이오로직스" [ref=e139]:
+                - img "프레스티지바이오로직스 로고" [ref=e141]
+                - paragraph [ref=e143]: IDC 동물실험실
+              - listitem "바이넥스" [ref=e144]:
+                - img "바이넥스 로고" [ref=e146]
+                - paragraph [ref=e148]: 오송공장
+              - listitem "이연제약" [ref=e149]:
+                - img "이연제약 로고" [ref=e151]
+                - paragraph [ref=e153]: Refrigerator, Freezer
+              - listitem "제뉴원사이언스" [ref=e154]:
+                - img "제뉴원사이언스 로고" [ref=e156]
+                - paragraph [ref=e158]: 리모델링공사 연고제 적격성평가
+              - listitem "동광제약" [ref=e159]:
+                - img "동광제약 로고" [ref=e161]
+                - paragraph [ref=e163]: 바이알 포장기
+            - generic [ref=e164]:
+              - paragraph [ref=e165]: 등등, 이 외에도 23개 기업의 수행실적이 있습니다.
+              - generic [ref=e166]: 전체 기업과 상세 프로젝트는 아래 전체 수행실적 엑셀 파일에서 확인해 주세요.
+        - complementary [ref=e167]:
+          - generic [ref=e172]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=e173]
+            - paragraph [ref=e174]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - link "전체 수행실적 다운로드" [ref=e176] [cursor=pointer]:
+            - /url: ./downloads/infact-references-2016-2026-2026-09-28.xls
+  - contentinfo [ref=e180]:
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - link "IN-FACT 홈으로 이동" [ref=e184] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e185]
+          - paragraph [ref=e186]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e187]:
+            - paragraph [ref=e188]: 대표. 고동주
+            - paragraph [ref=e189]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e190]:
+              - link "Tel. 031-378-7220" [ref=e191] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e192] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e193]:
+          - generic [ref=e194]:
+            - generic [ref=e195]: Navigation
+            - link "회사 소개" [ref=e196] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e197] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e198] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e199] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e200]:
+            - generic [ref=e201]: Contact
+            - link "031-378-7220" [ref=e202] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e203] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e204] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e205]:
+        - paragraph [ref=e206]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e207]:
+          - link "홈" [ref=e208] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e209] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e210] [cursor=pointer]:
+            - /url: "#/contact"

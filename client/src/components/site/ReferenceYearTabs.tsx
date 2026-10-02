@@ -40,6 +40,7 @@ function CompanyLogo({ client, logoSrc: suppliedLogoSrc }: ReferenceClient) {
     <div
       className="reference-company__logo"
       data-placeholder={!hasLogo || undefined}
+      data-logo={hasLogo && !suppliedLogoSrc ? registeredLogo?.id : undefined}
       data-surface={hasLogo && !suppliedLogoSrc ? registeredLogo?.background : undefined}
     >
       {hasLogo ? (
@@ -151,8 +152,7 @@ export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsPro
               </ul>
               {remainingCompanyCount > 0 && (
                 <div className="reference-results__footnote">
-                  <p>등등, 이 외에도 {remainingCompanyCount}개 기업의 수행실적이 있습니다.</p>
-                  <span>전체 기업과 상세 프로젝트는 아래 전체 수행실적 엑셀 파일에서 확인해 주세요.</span>
+                  <p>이 외에도 {remainingCompanyCount}개 기업의 수행실적이 있습니다.</p>
                 </div>
               )}
             </>

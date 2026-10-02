@@ -280,7 +280,10 @@ export function HomeExperienceSection() {
       </div>
 
       <div className="home-experience__client-marquee" aria-label="주요 수행 고객사">
-        <div className="home-experience__client-track">
+        <div
+          className="home-experience__client-track"
+          style={{ "--home-client-duration": `${homeExperienceClients.length * 3.4}s` } as CSSProperties}
+        >
           {[...homeExperienceClients, ...homeExperienceClients].map((client, index) => {
             const logo = getCompanyLogo(client);
             return (
