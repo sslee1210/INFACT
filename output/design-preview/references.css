@@ -1,0 +1,302 @@
+/* Isolated presentation preview. Existing archive data and interactions are reused. */
+.dp-references.references-page {
+  --archive-ink: #20252e;
+  --archive-copy: #59616d;
+  --archive-muted: #6d7480;
+  --archive-line: #e5e7eb;
+  --archive-accent: #30358b;
+  --archive-soft: #f5f6f8;
+}
+
+.dp-references .reference-archive {
+  padding-block: 88px 96px;
+}
+
+.dp-references .reference-archive__heading {
+  display: block;
+  margin-bottom: 38px;
+}
+
+/* Scoped importance is needed only to supersede existing global subpage type rules. */
+.dp-references .reference-archive__heading h2 {
+  font-size: 36px !important;
+  font-weight: 650 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.04em !important;
+}
+
+.dp-references .reference-archive__heading p {
+  max-width: 800px;
+  margin: 16px 0 0;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1.8 !important;
+  color: var(--archive-copy);
+}
+
+.dp-references .reference-years {
+  gap: 32px;
+  padding-bottom: 24px;
+}
+
+.dp-references .reference-years__label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dp-references .reference-years__options {
+  gap: 8px;
+}
+
+.dp-references .reference-years button {
+  min-width: 68px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.dp-references .reference-years button:hover {
+  color: var(--archive-ink);
+  background: var(--archive-soft);
+}
+
+.dp-references .reference-years button[aria-pressed="true"] {
+  color: #fff;
+  background: var(--archive-accent);
+  font-weight: 600;
+}
+
+.dp-references .reference-results {
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 56px;
+  padding-block: 40px 0;
+}
+
+.dp-references .reference-results__year {
+  padding-top: 16px;
+}
+
+.dp-references .reference-results__year h3 {
+  color: var(--archive-ink);
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.dp-references .reference-results__year p {
+  margin: 14px 0 6px;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  font-weight: 500 !important;
+}
+
+.dp-references .reference-results__year span {
+  font-size: 13px;
+}
+
+.dp-references .reference-companies {
+  column-gap: 48px;
+}
+
+.dp-references .reference-companies li {
+  grid-template-columns: 144px minmax(0, 1fr);
+  min-height: 136px;
+  padding: 28px 0;
+  gap: 28px;
+  border-bottom-color: var(--archive-line);
+}
+
+.dp-references .reference-company__logo {
+  height: 80px;
+}
+
+.dp-references .reference-company__logo[data-placeholder] {
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--archive-ink);
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.dp-references .reference-company__logo small {
+  display: none;
+}
+
+.dp-references .reference-company__logo img {
+  max-width: 144px;
+  height: 72px;
+}
+
+.dp-references .reference-company__summary {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.015em;
+}
+
+.dp-references .reference-results__footnote {
+  margin-top: 36px;
+  font-size: 13px;
+}
+
+.dp-references .reference-results__footnote p {
+  color: var(--archive-ink);
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+.dp-references .dp-reference-logo-note {
+  display: none;
+  margin: 18px 0 0 196px;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  color: var(--archive-muted);
+}
+
+.dp-references:has(.reference-company__logo[data-placeholder]) .dp-reference-logo-note {
+  display: block;
+}
+
+.dp-references .reference-empty {
+  min-height: 218px;
+  padding: 20px 0 28px 40px;
+}
+
+.dp-references .reference-empty .reference-empty__title {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.035em;
+}
+
+.dp-references .reference-empty p {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+}
+
+.dp-references .reference-empty span {
+  font-size: 14px;
+}
+
+.dp-references .reference-download {
+  margin-top: 56px;
+  padding: 32px 0 0;
+  border-top: 1px solid var(--archive-line);
+  border-radius: 0;
+  background: transparent;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.dp-references .reference-download__intro {
+  display: block;
+}
+
+.dp-references .reference-download h2 {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.dp-references .reference-download__intro p {
+  margin-top: 10px;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.75 !important;
+}
+
+.dp-references .reference-download__button {
+  min-height: 48px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.dp-references .reference-download__button:disabled {
+  color: #69717d;
+  background: #eef0f3;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.dp-references .reference-download__action p {
+  margin-top: 9px;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 1199px) {
+  .dp-references .reference-archive { padding-block: 64px 72px; }
+  .dp-references .reference-results { display: block; padding-top: 32px; }
+  .dp-references .reference-results__year {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 16px;
+    margin-bottom: 18px;
+    padding: 0;
+  }
+  .dp-references .reference-results__year h3 { font-size: 36px; grid-row: span 2; }
+  .dp-references .reference-results__year p { margin: 0; align-self: end; }
+  .dp-references .reference-results__year span { text-align: right; }
+  .dp-references .reference-companies { grid-template-columns: minmax(0, 1fr); }
+  .dp-references .reference-companies li { grid-template-columns: 176px minmax(0, 1fr); gap: 40px; min-height: 116px; padding-block: 20px; }
+  .dp-references .dp-reference-logo-note { margin-left: 0; }
+  .dp-references .reference-empty { padding-left: 0; border-left: 0; }
+  .dp-references .reference-download { flex-wrap: wrap; gap: 24px; }
+  .dp-references .reference-download__action { text-align: left; }
+}
+
+@media (max-width: 767px) {
+  .dp-references .reference-archive { padding-block: 48px 56px; }
+  .dp-references .reference-archive__heading { margin-bottom: 28px; }
+  .dp-references .reference-archive__heading h2 { font-size: 28px !important; }
+  .dp-references .reference-archive__heading p { margin-top: 14px; font-size: 17px !important; line-height: 1.75 !important; }
+  .dp-references .reference-years { display: block; padding-bottom: 24px; }
+  .dp-references .reference-years__label { margin-bottom: 12px; font-size: 13px; }
+  .dp-references .reference-years__options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .dp-references .reference-years button { min-width: 0; padding: 10px 4px; font-size: 15px; }
+  .dp-references .reference-results { padding-top: 28px; }
+  .dp-references .reference-results__year { margin-bottom: 12px; }
+  .dp-references .reference-results__year h3 { font-size: 34px; }
+  .dp-references .reference-results__year p { font-size: 13px !important; }
+  .dp-references .reference-results__year span { font-size: 12px; }
+  .dp-references .reference-companies li { grid-template-columns: 112px minmax(0, 1fr); gap: 22px; min-height: 112px; padding-block: 20px; }
+  .dp-references .reference-company__logo { height: 72px; }
+  .dp-references .reference-company__logo[data-placeholder] { font-size: 16px; }
+  .dp-references .reference-company__logo img { max-width: 112px; height: 64px; }
+  .dp-references .reference-company__summary { font-size: 15px !important; line-height: 1.7 !important; }
+  .dp-references .reference-results__footnote { margin-top: 28px; font-size: 12px; }
+  .dp-references .reference-results__footnote p { font-size: 16px !important; }
+  .dp-references .dp-reference-logo-note { margin-top: 16px; font-size: 12px !important; }
+  .dp-references .reference-empty { min-height: 208px; padding-block: 28px; border-top: 0; }
+  .dp-references .reference-empty .reference-empty__title { font-size: 22px !important; }
+  .dp-references .reference-empty p { font-size: 15px !important; }
+  .dp-references .reference-download { display: block; margin-top: 40px; padding-top: 28px; }
+  .dp-references .reference-download h2 { font-size: 21px !important; }
+  .dp-references .reference-download__intro p { font-size: 14px !important; }
+  .dp-references .reference-download__action { margin-top: 22px; }
+  .dp-references .reference-download__button { width: 100%; }
+  .dp-references .reference-download__action p { text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dp-references .reference-years button,
+  .dp-references .reference-download__button { transition: none; }
+}

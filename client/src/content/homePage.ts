@@ -38,8 +38,8 @@ export const homeAbout = {
   ctaLabel: "회사소개서 다운로드",
   // PDF를 client/public/documents/에 추가한 뒤 "./documents/파일명.pdf"를 입력합니다.
   // 빈 값이면 다운로드 버튼이 준비 중 상태로 표시됩니다.
-  ctaHref: "",
-  ctaDownloadName: "INFACT-회사소개서.pdf",
+  ctaHref: "./documents/infact-company-profile-2026-10.pdf",
+  ctaDownloadName: "(주)인팩트 -회사소개서 2026.10.pdf",
   metrics: [
     { value: 2016, label: "회사 설립" },
     { value: 1000, suffix: "+", label: "누적 프로젝트 수행", format: true },

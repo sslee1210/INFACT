@@ -339,8 +339,49 @@
   color: #f0f3f8 !important;
 }
 @media (max-width: 1199px) {
+  .home-main .service-immersive {
+    padding-top: 0 !important;
+    gap: 28px !important;
+  }
+  .home-main .service-immersive__showcase {
+    margin-top: 0 !important;
+  }
   .home-main .service-card__scope {
     color: var(--home-text-soft) !important;
+  }
+  .home-main .service-card__label {
+    display: none !important;
+  }
+  .home-main .service-card__description {
+    display: block !important;
+    max-height: none !important;
+    margin: 0 !important;
+    color: var(--home-text-soft) !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .home-main .service-card__cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    align-self: flex-start !important;
+    gap: 8px !important;
+    margin-top: 8px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid rgba(22, 28, 129, 0.1) !important;
+    color: var(--home-blue-strong) !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-main .service-card {
+    min-height: 250px !important;
+  }
+  .home-main .service-card__media img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
   }
 }
 .home-main .service-card__label {
@@ -395,12 +436,21 @@
   .home-main .home-company-intro__inner {
     padding-block: 64px !important;
   }
+  .home-main .home-company-intro__lead {
+    margin-bottom: 28px !important;
+  }
+  .home-main .home-company-intro__copy {
+    margin-top: 24px !important;
+  }
   .home-main .home-company-intro__copy p {
     font-size: 16px !important;
     line-height: 1.85 !important;
   }
   .home-main .home-company-intro__media {
-    height: 390px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3 !important;
+    margin: 0 !important;
     border-radius: 12px !important;
   }
   .home-main .about-blend-content {
@@ -448,14 +498,20 @@
   .home-main .home-experience__metric span {
     font-size: 12px !important;
   }
-  .home-main .service-immersive {
+  .home-main .service-immersive-section {
     padding-top: 64px !important;
   }
   .home-main .service-card-rail {
     gap: 14px !important;
   }
   .home-main .service-card {
-    min-height: 380px !important;
+    min-height: 0 !important;
+  }
+  .home-main .service-card__media {
+    aspect-ratio: 16 / 9 !important;
+  }
+  .home-main .service-card__content {
+    padding: 20px 16px !important;
   }
   .home-main .home-cta-banner {
     margin-top: 32px !important;
@@ -465,6 +521,29 @@
   }
   .home-main .home-cta-banner h2 {
     font-size: 27px !important;
+  }
+}
+/* Short, landscape phone viewports still expose the hero action without clipping. */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 560px) {
+  .home-main .hero__inner {
+    padding-block: calc(var(--fluid-nav-height) + 20px) 24px !important;
+  }
+  .home-main .hero__title {
+    font-size: 13px !important;
+    margin-bottom: 0 !important;
+  }
+  .home-main .hero__brand-logo {
+    width: 220px !important;
+    margin-block: 12px !important;
+  }
+  .home-main .hero__subtitle {
+    max-width: 600px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-top: 12px !important;
+  }
+  .home-main .hero__contact-link {
+    margin-top: 16px !important;
   }
 }
 @media (min-width: 1024px) {

@@ -3,8 +3,9 @@
 
    범위
    - 회사소개 / CEO 인사말
-   - 연혁
    - 조직 구성
+
+   연혁의 단일 축 레이아웃은 company-history-responsive.css에서 관리한다.
 
    Desktop  : 1200px+
    Tablet   : 768px ~ 1199px
@@ -63,7 +64,7 @@
   }
 
   .company-greeting__visual img {
-    object-position: 58% center !important;
+    object-position: right center !important;
     transform: none;
   }
 
@@ -84,114 +85,6 @@
     margin-top: 30px !important;
     padding-top: 22px !important;
     font-size: 1.05rem !important;
-  }
-
-  /* ---------------------------------------------------------
-     HISTORY — tablet single-rail timeline
-     --------------------------------------------------------- */
-
-  .history-panel__head {
-    max-width: 720px !important;
-    margin-bottom: clamp(50px, 7vw, 72px) !important;
-  }
-
-  .history-list {
-    --history-rail-x: 40px;
-    width: min(100%, 840px) !important;
-    max-width: 840px !important;
-    gap: 24px !important;
-    padding-bottom: 18px !important;
-  }
-
-  .history-list::before,
-  .history-list::after {
-    left: var(--history-rail-x) !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .history-list::before {
-    width: 8px !important;
-  }
-
-  .history-list::after {
-    width: 4px !important;
-  }
-
-  .history-list__item,
-  .history-list__item--left,
-  .history-list__item--right {
-    position: relative !important;
-    display: grid !important;
-    grid-template-columns: 84px minmax(0, 1fr) !important;
-    gap: 28px !important;
-    align-items: start !important;
-    min-height: 0 !important;
-    padding: 0 0 30px !important;
-  }
-
-  .history-list__marker,
-  .history-list__titleLine {
-    display: none !important;
-  }
-
-  .history-list__item time,
-  .history-list__item--left time,
-  .history-list__item--right time {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    justify-self: start !important;
-    width: 64px !important;
-    height: 64px !important;
-    margin-left: 8px !important;
-    font-size: 0.82rem !important;
-    transform: none !important;
-  }
-
-  .history-list__content,
-  .history-list__item--left .history-list__content,
-  .history-list__item--right .history-list__content {
-    position: static !important;
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    width: auto !important;
-    padding-top: 6px !important;
-    text-align: left !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .history-list__titleRow,
-  .history-list__item--left .history-list__titleRow,
-  .history-list__item--right .history-list__titleRow {
-    justify-content: flex-start !important;
-  }
-
-  .history-list__content h3 {
-    font-size: 1.12rem !important;
-    line-height: 1.45 !important;
-  }
-
-  .history-list__item ul {
-    margin-top: 12px !important;
-    gap: 7px !important;
-  }
-
-  .history-list__item li {
-    position: relative !important;
-    padding-left: 13px !important;
-    font-size: 0.9rem !important;
-    line-height: 1.65 !important;
-  }
-
-  .history-list__item li::before {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0.72em !important;
-    width: 4px !important;
-    height: 4px !important;
-    border-radius: 50% !important;
-    background: rgba(44, 54, 143, 0.48) !important;
   }
 
   /* ---------------------------------------------------------
@@ -398,7 +291,7 @@
   }
 
   .company-greeting__visual img {
-    object-position: 56% center !important;
+    object-position: right center !important;
     transform: none;
   }
 
@@ -424,123 +317,6 @@
   .company-greeting__signature {
     margin-top: 16px !important;
     font-size: 0.86rem !important;
-  }
-
-  /* ---------------------------------------------------------
-     HISTORY — mobile single rail
-     --------------------------------------------------------- */
-
-  .history-panel__head {
-    max-width: 100% !important;
-    margin-bottom: clamp(42px, 11vw, 56px) !important;
-  }
-
-  .history-panel__head .body-copy {
-    max-width: 30em !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  .history-list {
-    --history-rail-x: 28px;
-    width: 100% !important;
-    max-width: none !important;
-    gap: 18px !important;
-    padding-bottom: 12px !important;
-  }
-
-  .history-list::before,
-  .history-list::after {
-    left: var(--history-rail-x) !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .history-list::before {
-    width: 7px !important;
-  }
-
-  .history-list::after {
-    width: 3px !important;
-  }
-
-  .history-list__item,
-  .history-list__item--left,
-  .history-list__item--right {
-    position: relative !important;
-    display: grid !important;
-    grid-template-columns: 62px minmax(0, 1fr) !important;
-    gap: 18px !important;
-    align-items: start !important;
-    min-height: 0 !important;
-    padding: 0 0 28px !important;
-  }
-
-  .history-list__marker,
-  .history-list__titleLine {
-    display: none !important;
-  }
-
-  .history-list__item time,
-  .history-list__item--left time,
-  .history-list__item--right time {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    justify-self: start !important;
-    width: 52px !important;
-    height: 52px !important;
-    margin-left: 2px !important;
-    font-size: 0.74rem !important;
-    transform: none !important;
-  }
-
-  .history-list__content,
-  .history-list__item--left .history-list__content,
-  .history-list__item--right .history-list__content {
-    position: static !important;
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    width: auto !important;
-    padding-top: 3px !important;
-    text-align: left !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .history-list__titleRow,
-  .history-list__item--left .history-list__titleRow,
-  .history-list__item--right .history-list__titleRow {
-    justify-content: flex-start !important;
-  }
-
-  .history-list__content h3 {
-    margin: 0 !important;
-    font-size: 1rem !important;
-    line-height: 1.45 !important;
-  }
-
-  .history-list__item ul {
-    margin-top: 10px !important;
-    gap: 6px !important;
-  }
-
-  .history-list__item li {
-    position: relative !important;
-    padding-left: 12px !important;
-    color: rgba(31, 39, 56, 0.72) !important;
-    font-size: 0.84rem !important;
-    line-height: 1.6 !important;
-    font-weight: 500 !important;
-  }
-
-  .history-list__item li::before {
-    content: "" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0.72em !important;
-    width: 4px !important;
-    height: 4px !important;
-    border-radius: 50% !important;
-    background: rgba(44, 54, 143, 0.46) !important;
   }
 
   /* ---------------------------------------------------------
@@ -698,21 +474,6 @@
 
   .company-greeting__visual {
     aspect-ratio: 4 / 3.1 !important;
-  }
-
-  .history-list__item,
-  .history-list__item--left,
-  .history-list__item--right {
-    grid-template-columns: 56px minmax(0, 1fr) !important;
-    gap: 14px !important;
-  }
-
-  .history-list__item time,
-  .history-list__item--left time,
-  .history-list__item--right time {
-    width: 48px !important;
-    height: 48px !important;
-    font-size: 0.7rem !important;
   }
 
   .org-fixed__secondary {

@@ -1,0 +1,227 @@
+- generic [ref=e3]:
+  - button "본문으로 바로가기" [ref=e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e5]:
+    - generic [ref=e6]:
+      - button "INFACT 홈으로 이동" [ref=e7] [cursor=pointer]:
+        - img "INFACT" [ref=e8]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - button "회사소개" [ref=e12] [cursor=pointer]
+        - listitem [ref=e13]:
+          - button "사업안내" [ref=e14] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "수행실적" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - button "문의하기" [ref=e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=e19]:
+          - generic [ref=e20]: TODAY
+          - strong [ref=e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Service
+      - heading "개념설계" [level=1] [ref=e26]
+      - paragraph [ref=e27]: 공정, 레이아웃, 유틸리티와 규제 요건을 하나의 실행 가능한 전략으로 통합합니다.
+    - generic [ref=e28]:
+      - navigation "페이지 하위 메뉴" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - button "개념설계" [ref=e32] [cursor=pointer]
+            - button "GMP 컨설팅" [ref=e33] [cursor=pointer]
+            - button "CSV 컨설팅" [ref=e34] [cursor=pointer]
+          - list "현재 위치" [ref=e35]:
+            - listitem [ref=e36]: 홈
+            - listitem [ref=e37]: "> 사업안내"
+            - listitem [ref=e38]: "> 개념설계"
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: 01 · Core Value
+          - generic [ref=e43]:
+            - heading "개념설계 컨설팅 핵심 가치" [level=2] [ref=e44]
+            - generic [ref=e45]: 우수의약품 제조 관리 기준을 충족하고 제품과 생산설비를 구축하기 위한 개념으로 해당 규제기관에 위배되지 않고 GMP Layout을 구체화하여 상세 설계의 완전성을 높입니다.
+        - generic [ref=e46]:
+          - article [ref=e47]:
+            - heading "생산계획을 공간 기준으로 전환" [level=3] [ref=e48]
+            - paragraph [ref=e49]: 제형, Batch Size, 생산량과 제조공정을 분석해 필요한 작업실, 장비 수량과 시설 규모를 산정합니다.
+          - article [ref=e50]:
+            - heading "상세설계 전 핵심 쟁점 합의" [level=3] [ref=e51]
+            - paragraph [ref=e52]: 공정 인접성, 청정구역, 인동선·물동선과 유틸리티 조건을 초기에 검토해 후속 설계의 재작업을 줄입니다.
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - paragraph [ref=e56]: 02 · Applicable Fields
+          - generic [ref=e57]:
+            - heading "개념설계 컨설팅 적용 분야 및 대상 제조소" [level=2] [ref=e58]
+            - generic [ref=e59]: GMP 의약품의 생산을 위한 제조소가 필요하여 GMP 공장을 건축하기 위하거나 기존 설비들의 노후화 또는 새로운 Guide의 요구사항 충족을 위해 Layout을 재구성해야 하는 프로젝트에 적용합니다.
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - article [ref=e62]:
+              - strong [ref=e63]: 신규 제조소
+              - paragraph [ref=e64]: 부지 검토, 시설 규모 산정과 생산동선의 기본 방향이 필요한 프로젝트
+            - article [ref=e65]:
+              - strong [ref=e66]: 증설·생산능력 확대
+              - paragraph [ref=e67]: 신규 라인, 장비 증설과 창고·지원시설 확장이 필요한 제조소
+            - article [ref=e68]:
+              - strong [ref=e69]: 리모델링·공정 변경
+              - paragraph [ref=e70]: 기존 구획, 작업실과 인원·자재 동선을 재배치해야 하는 제조소
+            - article [ref=e71]:
+              - strong [ref=e72]: GMP 전환·개선
+              - paragraph [ref=e73]: 청정등급, 차압, Air Lock과 오염관리 기준의 보완이 필요한 시설
+          - figure [ref=e74]:
+            - img "제약 제조시설의 개념설계와 공간 검토" [ref=e75]
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - paragraph [ref=e79]: 03 · Service Roadmap
+          - generic [ref=e80]:
+            - heading "개념설계 컨설팅 수행 로드맵" [level=2] [ref=e81]
+            - generic [ref=e82]: 기초자료 수집, 조정, 확인부터 공간·동선과 유틸리티 기준 확정까지 개념설계의 주요 지원 범위를 4단계 수행 흐름으로 연결합니다.
+        - generic [ref=e83]:
+          - article [ref=e84]:
+            - generic [ref=e85]: "01"
+            - heading "기초자료·범위 정의" [level=3] [ref=e86]
+            - paragraph [ref=e87]: 질의서와 Workshop을 통해 제품, 생산계획, 제조공정, 장비와 운영조건을 수집하고 프로젝트 범위를 합의합니다.
+          - article [ref=e88]:
+            - generic [ref=e89]: "02"
+            - heading "공정·시설 규모 분석" [level=3] [ref=e90]
+            - paragraph [ref=e91]: 생산량, 공정별 처리용량과 장비 조건을 분석해 작업실, 창고와 지원시설의 필요 규모를 산정합니다.
+          - article [ref=e92]:
+            - generic [ref=e93]: "03"
+            - heading "GMP Layout·동선 개발" [level=3] [ref=e94]
+            - paragraph [ref=e95]: 공정 인접성, 장비 배치와 청정구역을 검토하고 인원·자재·제품·폐기물 동선을 구체화합니다.
+          - article [ref=e96]:
+            - generic [ref=e97]: "04"
+            - heading "Design Basis 확정" [level=3] [ref=e98]
+            - paragraph [ref=e99]: 청정등급, 차압, 온·습도와 유틸리티 요구조건을 반영해 후속 상세설계에 사용할 기준을 확정합니다.
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - paragraph [ref=e103]: 04 · Deliverables
+          - generic [ref=e104]:
+            - heading "개념설계 컨설팅 단계별 대표 수행 결과자료" [level=2] [ref=e105]
+            - generic [ref=e106]: 각 수행단계에서 합의한 검토 결과를 상세설계의 기초 자료로서 사용됩니다.
+        - generic [ref=e107]:
+          - generic [aria-hidden] [ref=e108]:
+            - generic [ref=e109]: 단계
+            - generic [ref=e110]: 수행 구분
+            - generic [ref=e111]: 대표 결과자료
+          - list [ref=e112]:
+            - listitem [ref=e113]:
+              - generic [ref=e114]: "01"
+              - generic [ref=e115]:
+                - heading "질의서·Workshop" [level=3] [ref=e116]
+                - paragraph [ref=e117]: 제품, 생산계획, 제조공정, 장비와 운영조건을 수집하고 프로젝트 범위를 합의합니다.
+              - generic [ref=e118]:
+                - strong [ref=e119]: 개념설계 질의서 · Project Brief
+                - paragraph [ref=e120]: 제품·생산·장비 기초 Data
+            - listitem [ref=e121]:
+              - generic [ref=e122]: "02"
+              - generic [ref=e123]:
+                - heading "시설 규모 산정" [level=3] [ref=e124]
+                - paragraph [ref=e125]: 생산량과 공정별 처리용량을 기준으로 작업실, 창고와 지원시설의 필요 규모를 산정합니다.
+              - generic [ref=e126]:
+                - strong [ref=e127]: Process Analysis Sheet
+                - paragraph [ref=e128]: Facility Size, Warehouse, Utility, Equipment List
+            - listitem [ref=e129]:
+              - generic [ref=e130]: "03"
+              - generic [ref=e131]:
+                - heading "Layout Development" [level=3] [ref=e132]
+                - paragraph [ref=e133]: 공정 인접성, 장비 배치, 청정구역과 인원·자재·폐기물 동선을 반복 검토합니다.
+              - generic [ref=e134]:
+                - strong [ref=e135]: Site Plan · GMP Layout · Equipment Plan
+                - paragraph [ref=e136]: Personnel / Material / Waste Flow
+            - listitem [ref=e137]:
+              - generic [ref=e138]: "04"
+              - generic [ref=e139]:
+                - heading "Design Basis 확정" [level=3] [ref=e140]
+                - paragraph [ref=e141]: 유틸리티와 작업실 요구사항을 반영해 최종 도면과 개념설계 보고서를 확정합니다.
+              - generic [ref=e142]:
+                - strong [ref=e143]: Room Design Requirement · Conceptual Design Report
+                - paragraph [ref=e144]: 개념배치도(Layout), 청정도, 장비배치도, 차압도, Air flow, 인동선, 물동선, 폐기물동선
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: 05 · IN-FACT Difference
+          - generic [ref=e149]:
+            - heading "IN-FACT 개념설계 컨설팅 차별화 포인트" [level=2] [ref=e150]
+            - generic [ref=e151]: 도면 작성에 머무르지 않고 제조, 품질과 시설 운영의 관점에서 후속 단계에 필요한 판단기준을 함께 정리합니다.
+        - generic [ref=e152]:
+          - article [ref=e153]:
+            - heading "공정과 GMP를 함께 보는 공간계획" [level=3] [ref=e154]
+            - paragraph [ref=e155]: GMP 현장 경험을 바탕으로 생산 현장의 배치와 제조순서, 작업자 행위, 자재이동과 오염관리 요구사항을 밀접하게 검토합니다.
+          - article [ref=e156]:
+            - heading "상세설계·DQ로 이어지는 근거자료" [level=3] [ref=e157]
+            - paragraph [ref=e158]: 주요 의사결정, Room Requirement와 Utility 조건을 문서화해 상세설계와 후속 DQ의 기준으로 사용할 수 있게 합니다.
+      - generic [ref=e160]:
+        - generic [ref=e161]:
+          - paragraph [ref=e162]: Contact
+          - heading "신·증축과 리모델링의 설계 기준을 먼저 정리합니다." [level=2] [ref=e163]: 신·증축과 리모델링의설계 기준을 먼저 정리합니다.
+          - paragraph [ref=e165]: 제품과 생산계획을 알려주시면개념설계의 출발점과 검토 범위를 함께 정리합니다.
+        - link "프로젝트 문의하기" [ref=e167] [cursor=pointer]:
+          - /url: "#/contact"
+  - contentinfo [ref=e171]:
+    - generic [ref=e172]:
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - link "IN-FACT 홈으로 이동" [ref=e175] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e176]
+          - paragraph [ref=e177]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e178]:
+            - paragraph [ref=e179]: 대표. 고동주
+            - paragraph [ref=e180]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e181]:
+              - link "Tel. 031-378-7220" [ref=e182] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e183] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e184]:
+          - generic [ref=e185]:
+            - generic [ref=e186]: Navigation
+            - link "회사 소개" [ref=e187] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e188] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e189] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e190] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e191]:
+            - generic [ref=e192]: Contact
+            - link "031-378-7220" [ref=e193] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e194] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e195] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e196]:
+        - paragraph [ref=e197]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e198]:
+          - link "홈" [ref=e199] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e200] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e201] [cursor=pointer]:
+            - /url: "#/contact"

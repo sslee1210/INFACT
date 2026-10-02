@@ -1,0 +1,163 @@
+/* Appearance-only study of Apple enterprise typography and Toss component consistency.
+ * These are our own styles, not Apple/Toss code or an official design-system package.
+ * All original React pages, content, assets, sizes, spacing, grids and breakpoints remain.
+ * Keep brand logo/hero palette, meaningful process geometry and black sticky subnav.
+ */
+html:root {
+  --home-text: #202124;
+  --home-text-soft: #565d66;
+  --home-bg: #f7f8fa;
+  --home-border: #e2e5e9;
+  --ui-surface-soft: #f7f8fa;
+  --ui-border: #e2e5e9;
+  --ui-border-strong: #cbd0d6;
+  --subpage-ink: #202124;
+  --subpage-copy: #565d66;
+  --subpage-muted: #68717d;
+  --subpage-line: #e2e5e9;
+  --subpage-soft: #f7f8fa;
+
+  /* Repeated ornamental arcs compete with the information; the circular GMP
+     diagram itself remains fully intact and in its original position. */
+  .home-company-intro__inner::after,
+  .home-experience::after,
+  .service-immersive::before,
+  .home-main .home-framework::before { opacity: 0 !important; }
+
+  .home-main { --home-text-soft: #565d66; }
+  .home-main :is(.home-company-intro__lead h2, .home-experience__head h2, .service-immersive__title),
+  .home-main .home-framework .home-framework__copy h2,
+  .site-main :is(.section-title, .company-organization__title),
+  .site-main .service-business-heading h2,
+  .references-page .reference-archive__heading h2 {
+    color: #202124 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+  }
+  .home-main .home-heading-accent,
+  .home-main .home-framework .home-framework__copy h2 strong { font-weight: inherit !important; }
+
+  .home-main :is(.home-company-intro__copy p, .home-experience__head p, .service-immersive__summary),
+  .home-main .home-framework .home-framework__copy p,
+  .site-main .body-copy,
+  .service-business-heading__description,
+  .consulting-service-page :is(.consulting-template__value p, .consulting-template__difference-item p, .consulting-template__scope-item p, .consulting-template__execution-copy p, .consulting-template__execution-output p) {
+    color: #565d66 !important;
+    text-shadow: none !important;
+  }
+  .home-main .home-company-intro__copy .home-company-intro__statement { color: #30343a !important; }
+
+  /* Quiet labels retain their exact space and content, without the recurring
+     wide-tracked blue mini-headline treatment. */
+  .service-business-heading .section-label,
+  .service-immersive__eyebrow,
+  .company-section__heading .section-label,
+  .contact-page .section-label {
+    color: #68717d !important;
+    font-weight: 500 !important;
+    letter-spacing: .02em !important;
+  }
+  .service-business-heading .section-label::before,
+  .company-section__heading .section-label::before,
+  .contact-page .section-label::before { background: transparent !important; }
+
+  /* Keep navigation positions and states; make the stuck subnav fully opaque. */
+  .home-nav.is-scrolled,
+  .home-nav__mega,
+  .page-subnav-wrap { box-shadow: none !important; }
+  .page-subnav-wrap.is-stuck {
+    background: #111 !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  .home-nav__menu-button { font-weight: 550 !important; text-shadow: none !important; }
+  .page-subnav > button { font-weight: 500 !important; }
+  .page-subnav > button[aria-current="page"] { font-weight: 600 !important; }
+
+  :is(.home-nav__contact-btn, .hero__contact-link, .home-company-intro__link, .ui-button, .reference-download__button) {
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-weight: 600 !important;
+  }
+  :is(.hero__contact-link, .home-company-intro__link, .home-nav__contact-btn):hover { transform: none !important; }
+  :is(.hero__contact-link, .home-nav__contact-btn) { border-color: transparent !important; }
+
+  /* Existing media frames keep their dimensions and crops. */
+  .home-main .home-company-intro__media,
+  .consulting-template__application-image { border-radius: 8px !important; box-shadow: none !important; }
+  .home-main .service-card { box-shadow: none !important; }
+  .home-main :is(.service-card__title, .service-card__scope, .service-card__description, .service-card__label) { text-shadow: none !important; }
+  .home-main .service-card__label {
+    font-weight: 500 !important;
+    letter-spacing: .025em !important;
+    /* A small contrast aid is useful over photography, unlike decorative glows. */
+    text-shadow: 0 1px 2px rgb(0 0 0 / .24) !important;
+  }
+  .home-main .service-card__title { font-weight: 600 !important; }
+
+  .home-main .home-framework { background: #f7f8fa !important; }
+  .home-main .home-framework .home-framework__orbit { border-color: #d9dde3 !important; }
+  .home-main .home-framework .home-framework__hub { background: #eeeff2 !important; box-shadow: none !important; }
+  .home-main .home-framework .home-framework__hub strong { color: #30343a !important; font-weight: 600 !important; text-shadow: none !important; }
+  .home-main .home-framework .home-framework__hub span { color: #68717d !important; letter-spacing: .04em !important; }
+  .home-main .home-framework .home-framework__node strong { color: #30343a !important; font-weight: 550 !important; text-shadow: none !important; }
+  .home-main .home-framework .home-framework__node span { color: #68717d !important; }
+  .home-main .home-framework .home-framework__node::before { border-color: #f7f8fa !important; }
+  .home-main .home-experience__metric span { color: #68717d !important; }
+  .home-main .home-experience__metric:nth-child(3) > span { color: #30358b !important; }
+  .home-main .home-experience__client { color: #68717d !important; }
+
+  /* Service content remains in the existing two-column, roadmap and table layouts. */
+  .consulting-service-page {
+    --consulting-copy: #565d66;
+    --consulting-line: #e2e5e9;
+    --consulting-soft: #f7f8fa;
+  }
+  .consulting-service-page :is(.consulting-template__value h3, .consulting-template__difference-item h3, .consulting-template__scope-item h3, .consulting-template__execution-copy h3) {
+    color: #30343a !important; text-shadow: none !important;
+  }
+  .consulting-template__execution-output strong { color: #30343a !important; }
+  .consulting-template__scope-item > span { color: #30358b !important; border-color: #d8dce3 !important; box-shadow: none !important; }
+  .consulting-template__execution { border-radius: 6px !important; }
+  .consulting-template__execution-head { background: #eff1f4 !important; }
+  .consulting-template__value-grid,
+  .consulting-template__difference-grid,
+  .consulting-template__application-list { border-color: #d8dce3 !important; }
+
+  /* Organization, history and references retain all semantic lines and states. */
+  .org-tree { --org-line: #d8dce3; --org-light-bg: #f5f6f8; --org-ink: #30343a; }
+  .org-mobile-tree { --org-light-bg: #f5f6f8; --org-ink: #30343a; --org-line: #d8dce3; --org-line-soft: #e2e5e9; }
+  :is(.org-tree__box, .org-mobile-tree__lead, .org-mobile-branch__node, .org-mobile-branch__team) {
+    border-radius: 6px !important; box-shadow: none !important; font-weight: 550 !important;
+  }
+  .org-tree__box--primary { background: #f5f6f8 !important; color: #30343a !important; border-color: #e2e5e9 !important; }
+  .org-tree__box--secondary,
+  .org-tree__box--team { border-color: #e2e5e9 !important; }
+  .org-mobile-branch__node--validation { background: #f5f6f8 !important; }
+  .org-mobile-branch__team { color: #30343a !important; border-color: #e2e5e9 !important; }
+  .history-list::before { background: #e2e5e9 !important; }
+  .history-list::after { background: #30358b !important; }
+  .history-list__marker::before { background: transparent !important; box-shadow: none !important; }
+  .history-list__item time { background: #f0f2f5 !important; color: #565d66 !important; font-weight: 600 !important; text-shadow: none !important; box-shadow: none !important; }
+  .history-list__item.is-active time { background: #30358b !important; color: #fff !important; }
+  .history-list__yearLine { border-color: #d1d6db !important; }
+  .history-list__content h3 { color: #333d4b !important; font-weight: 600 !important; }
+  .history-list__item li { color: #68717d !important; font-weight: 400 !important; }
+  .history-list__item.is-active li { color: #4e5968 !important; }
+  .references-page { --archive-ink: #202124; --archive-copy: #565d66; --archive-muted: #68717d; --archive-soft: #f7f8fa; --archive-line: #e2e5e9; }
+  .references-page .reference-company__logo[data-placeholder] { background: transparent !important; border-color: transparent !important; }
+  .references-page .reference-company__logo small { color: #68717d !important; font-weight: 400 !important; letter-spacing: 0 !important; }
+  .references-page .reference-download { border-radius: 8px !important; box-shadow: none !important; background: #f7f8fa !important; }
+  .references-page .reference-years button { border-radius: 6px !important; box-shadow: none !important; font-weight: 500 !important; }
+
+  .contact-team-item,
+  .contact-page .detail-table__row { border-color: #e2e5e9 !important; }
+  .contact-team-item__title h3,
+  .contact-page .detail-table__row > span { color: #30343a !important; font-weight: 600 !important; }
+  .contact-team-item__details :is(dt, dd, a) { color: #565d66 !important; }
+  .contact-team-item__details a:is(:hover, :focus-visible) { color: #30358b !important; }
+  .site-footer { --home-text-soft: #68717d; border-color: #e2e5e9 !important; }
+  .site-footer__heading { color: #565d66 !important; font-weight: 600 !important; letter-spacing: .02em !important; }
+  .site-footer__col a:is(:hover, :focus-visible) { transform: none; }
+}

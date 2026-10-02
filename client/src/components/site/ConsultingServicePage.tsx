@@ -33,7 +33,12 @@ function TextLines({ lines }: { lines: string[] }) {
       {lines.map((line, index) => (
         <Fragment key={`${index}-${line}`}>
           {line}
-          {index < lines.length - 1 ? <br /> : null}
+          {index < lines.length - 1 ? (
+            <>
+              {" "}
+              <br />
+            </>
+          ) : null}
         </Fragment>
       ))}
     </>

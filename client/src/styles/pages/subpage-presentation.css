@@ -1,5 +1,23 @@
 /* Approved subpage presentation. Opt-in via PageLayout; history, projects and home retain their existing design.
    Bounded overrides preserve existing content, layout order and interactions. */
+/* All PageIntro banners share one height, including pages without refined bodies.
+   Use a minimum, not a fixed height, so enlarged text can still expand safely. */
+html:has(.site-app) .page-intro {
+  min-height: 400px !important;
+  padding: 145px 0 70px !important;
+}
+@media (max-width: 1199px) {
+  html:has(.site-app) .page-intro {
+    padding: 112px 0 40px !important;
+  }
+}
+@media (max-width: 767px) {
+  html:has(.site-app) .page-intro {
+    min-height: 360px !important;
+    padding: 96px 0 32px !important;
+  }
+}
+
 html:has(.site-app--refined) {
   --subpage-ink: #191f28;
   --subpage-copy: #4e5968;
@@ -39,10 +57,6 @@ html:has(.site-app--refined) {
     width: var(--site-content-width) !important;
     max-width: var(--site-content-max) !important;
     margin-inline: auto !important;
-  }
-  .page-intro {
-    min-height: 360px !important;
-    padding: 145px 0 72px !important;
   }
   .page-intro .section-label {
     font-size: 12px !important;
@@ -669,10 +683,6 @@ html:has(.site-app--refined) {
     .org-mobile-branch__teams {
       width: auto;
       max-width: 222px;
-    }
-    .page-intro {
-      min-height: 330px !important;
-      padding: 128px 0 56px !important;
     }
     .page-intro .page-title {
       font-size: 34px !important;

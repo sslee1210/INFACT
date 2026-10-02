@@ -1,0 +1,155 @@
+- generic [ref=f1e85]:
+  - button "본문으로 바로가기" [ref=f1e86] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f1e87]:
+    - generic [ref=f1e88]:
+      - button "INFACT 홈으로 이동" [ref=f1e89] [cursor=pointer]:
+        - img "INFACT" [ref=f1e90]
+      - generic "오늘 방문자 1명" [ref=f1e92]:
+        - generic [ref=f1e93]: TODAY
+        - strong [ref=f1e94]: "1"
+      - button "메뉴 열기" [ref=f1e95] [cursor=pointer]
+  - main [ref=f1e99]:
+    - generic [ref=f1e101]:
+      - paragraph [ref=f1e102]: Contact
+      - heading "프로젝트 상담이 필요하신가요?" [level=1] [ref=f1e103]
+      - paragraph [ref=f1e104]: 연락처, 위치, 문의 가능 범위를 확인하고 프로젝트 상황에 맞는 상담을 요청할 수 있습니다.
+    - generic [ref=f1e106]:
+      - generic "분야별 담당 연락처" [ref=f1e108]:
+        - article [ref=f1e109]:
+          - generic [ref=f1e110]:
+            - generic [ref=f1e111]: Conceptual Design
+            - heading "개념설계" [level=3] [ref=f1e112]
+          - generic [ref=f1e113]:
+            - generic [ref=f1e114]:
+              - term [ref=f1e115]: 담당자
+              - definition [ref=f1e116]: 개념설계 팀장
+            - generic [ref=f1e117]:
+              - term [ref=f1e118]: E-Mail
+              - definition [ref=f1e119]:
+                - link "infact@in-fact.co.kr" [ref=f1e120] [cursor=pointer]:
+                  - /url: mailto:infact@in-fact.co.kr
+            - generic [ref=f1e121]:
+              - term [ref=f1e122]: TEL
+              - definition [ref=f1e123]:
+                - link "031-378-7220" [ref=f1e124] [cursor=pointer]:
+                  - /url: tel:0313787220
+        - article [ref=f1e125]:
+          - generic [ref=f1e126]:
+            - generic [ref=f1e127]: GMP Consulting
+            - heading "GMP" [level=3] [ref=f1e128]
+          - generic [ref=f1e129]:
+            - generic [ref=f1e130]:
+              - term [ref=f1e131]: 담당자
+              - definition [ref=f1e132]: GMP 팀장
+            - generic [ref=f1e133]:
+              - term [ref=f1e134]: E-Mail
+              - definition [ref=f1e135]:
+                - link "infact@in-fact.co.kr" [ref=f1e136] [cursor=pointer]:
+                  - /url: mailto:infact@in-fact.co.kr
+            - generic [ref=f1e137]:
+              - term [ref=f1e138]: TEL
+              - definition [ref=f1e139]:
+                - link "031-378-7220" [ref=f1e140] [cursor=pointer]:
+                  - /url: tel:0313787220
+        - article [ref=f1e141]:
+          - generic [ref=f1e142]:
+            - generic [ref=f1e143]: CSV Consulting
+            - heading "CSV" [level=3] [ref=f1e144]
+          - generic [ref=f1e145]:
+            - generic [ref=f1e146]:
+              - term [ref=f1e147]: 담당자
+              - definition [ref=f1e148]: CSV 팀장
+            - generic [ref=f1e149]:
+              - term [ref=f1e150]: E-Mail
+              - definition [ref=f1e151]:
+                - link "infact@in-fact.co.kr" [ref=f1e152] [cursor=pointer]:
+                  - /url: mailto:infact@in-fact.co.kr
+            - generic [ref=f1e153]:
+              - term [ref=f1e154]: TEL
+              - definition [ref=f1e155]:
+                - link "031-378-7220" [ref=f1e156] [cursor=pointer]:
+                  - /url: tel:0313787220
+      - generic [ref=f1e157]:
+        - generic [ref=f1e158]:
+          - paragraph [ref=f1e159]: Contact Information
+          - generic [ref=f1e160]:
+            - generic [ref=f1e161]:
+              - generic [ref=f1e162]: 전화
+              - link "031-378-7220" [ref=f1e164] [cursor=pointer]:
+                - /url: tel:0313787220
+            - generic [ref=f1e165]:
+              - generic [ref=f1e166]: 팩스
+              - generic [ref=f1e167]: 031-378-7221
+            - generic [ref=f1e168]:
+              - generic [ref=f1e169]: 이메일
+              - link "infact@in-fact.co.kr" [ref=f1e171] [cursor=pointer]:
+                - /url: mailto:infact@in-fact.co.kr
+            - generic [ref=f1e172]:
+              - generic [ref=f1e173]: 주소
+              - generic [ref=f1e174]: 경기도 오산시 내삼미로 80번길 36-11
+            - generic [ref=f1e175]:
+              - generic [ref=f1e176]: 운영 안내
+              - generic [ref=f1e177]: 평일 09:00 - 18:00 / 방문 상담은 사전 일정 확인 후 진행합니다.
+        - generic "회사 위치" [ref=f1e178]:
+          - paragraph [ref=f1e179]: Location
+          - generic [ref=f1e180]:
+            - link "카카오맵에서 INFACT 위치 보기" [ref=f1e181] [cursor=pointer]:
+              - /url: https://map.kakao.com/link/search/경기도 오산시 내삼미로80번길 36-11
+              - generic [ref=f1e183]:
+                - strong [ref=f1e184]: 경기 오산시 내삼미로80번길 36-11
+                - generic [ref=f1e185]: (지번) 경기 오산시 수청동 636-3
+                - emphasis [ref=f1e186]: 정보 수정 제안
+                - generic [ref=f1e187]:
+                  - generic [ref=f1e188]: 저장
+                  - generic [ref=f1e189]: 공유
+                  - generic [ref=f1e190]: 길찾기
+            - generic "지도 확대 축소" [ref=f1e192]:
+              - button "지도 확대" [active] [ref=f1e193] [cursor=pointer]: +
+              - button "지도 축소" [ref=f1e194] [cursor=pointer]: "-"
+            - generic [aria-hidden] [ref=f1e195]: kakao
+            - generic [aria-hidden] [ref=f1e196]: 200m
+  - contentinfo [ref=f1e197]:
+    - generic [ref=f1e198]:
+      - generic [ref=f1e199]:
+        - generic [ref=f1e200]:
+          - link "IN-FACT 홈으로 이동" [ref=f1e201] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f1e202]
+          - paragraph [ref=f1e203]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f1e204]:
+            - paragraph [ref=f1e205]: 대표. 고동주
+            - paragraph [ref=f1e206]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f1e207]:
+              - link "Tel. 031-378-7220" [ref=f1e208] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f1e209] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f1e210]:
+          - generic [ref=f1e211]:
+            - generic [ref=f1e212]: Navigation
+            - link "회사 소개" [ref=f1e213] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f1e214] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f1e215] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f1e216] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f1e217]:
+            - generic [ref=f1e218]: Contact
+            - link "031-378-7220" [ref=f1e219] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f1e220] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f1e221] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f1e222]:
+        - paragraph [ref=f1e223]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f1e224]:
+          - link "홈" [ref=f1e225] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f1e226] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f1e227] [cursor=pointer]:
+            - /url: "#/contact"

@@ -1,0 +1,137 @@
+- generic [ref=f1e223]:
+  - button "본문으로 바로가기" [ref=f1e224] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f1e225]:
+    - generic [ref=f1e226]:
+      - button "INFACT 홈으로 이동" [ref=f1e227] [cursor=pointer]:
+        - img "INFACT" [ref=f1e228]
+      - list [ref=f1e230]:
+        - listitem [ref=f1e231]:
+          - button "회사소개" [ref=f1e232] [cursor=pointer]
+        - listitem [ref=f1e233]:
+          - button "사업안내" [ref=f1e234] [cursor=pointer]
+        - listitem [ref=f1e235]:
+          - button "수행실적" [ref=f1e236] [cursor=pointer]
+      - generic [ref=f1e237]:
+        - button "문의하기" [ref=f1e238] [cursor=pointer]
+        - generic "오늘 방문자 0명" [ref=f1e239]:
+          - generic [ref=f1e240]: TODAY
+          - strong [ref=f1e241]: "0"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=f1e242]:
+    - generic [ref=f1e244]:
+      - paragraph [ref=f1e245]: References
+      - heading "개념설계 수행실적" [level=1] [ref=f1e246]
+      - paragraph [ref=f1e247]: 제약·바이오 제조시설의 공정 분석, GMP Layout, 구역·동선·유틸리티 계획과 개념설계 보고서 작성 실적입니다.
+    - generic [ref=f1e248]:
+      - navigation "페이지 하위 메뉴" [ref=f1e249]:
+        - generic [ref=f1e250]:
+          - generic [ref=f1e251]:
+            - button "개념설계" [ref=f1e252] [cursor=pointer]
+            - button "GMP" [ref=f1e253] [cursor=pointer]
+            - button "CSV" [ref=f1e254] [cursor=pointer]
+          - list "현재 위치" [ref=f1e255]:
+            - listitem [ref=f1e256]: 홈
+            - listitem [ref=f1e257]: "> 수행실적"
+            - listitem [ref=f1e258]: "> 개념설계"
+      - region [ref=f1e259]:
+        - generic [ref=f1e261]:
+          - heading "함께해 온 기업들" [level=2] [ref=f1e262]
+          - paragraph [ref=f1e263]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=f1e264]:
+          - generic [ref=f1e265]: 연도 선택
+          - generic [ref=f1e266]:
+            - button "2026" [pressed] [ref=f1e267] [cursor=pointer]
+            - button "2025" [ref=f1e268] [cursor=pointer]
+            - button "2023" [ref=f1e269] [cursor=pointer]
+            - button "2022" [ref=f1e270] [cursor=pointer]
+            - button "2021" [ref=f1e271] [cursor=pointer]
+            - button "2020" [ref=f1e272] [cursor=pointer]
+        - generic [ref=f1e273]:
+          - generic [ref=f1e274]:
+            - heading "2026" [level=3] [ref=f1e275]
+            - paragraph [ref=f1e276]: 개념설계 수행 기업
+            - text: 주요 수행사례
+          - list "2026년 개념설계 수행 기업" [ref=f1e278]:
+            - listitem "휴바이오켐" [ref=f1e279]:
+              - generic [ref=f1e281]:
+                - text: 휴바이오켐
+                - generic [ref=f1e282]: 로고 등록 예정
+              - paragraph [ref=f1e284]: 충주 GMP 공장
+        - complementary [ref=f1e285]:
+          - generic [ref=f1e290]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f1e291]
+            - paragraph [ref=f1e292]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f1e293]:
+            - link "전체 수행실적 다운로드" [ref=f1e294] [cursor=pointer]:
+              - /url: ./downloads/infact-references-2016-2026-2026-09-28.xls
+            - paragraph [ref=f1e298]: Excel · 전체 수행실적
+  - contentinfo [ref=f1e299]:
+    - generic [ref=f1e300]:
+      - generic [ref=f1e301]:
+        - generic [ref=f1e302]:
+          - link "IN-FACT 홈으로 이동" [ref=f1e303] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f1e304]
+          - paragraph [ref=f1e305]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f1e306]:
+            - paragraph [ref=f1e307]: 대표. 고동주
+            - paragraph [ref=f1e308]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f1e309]:
+              - link "Tel. 031-378-7220" [ref=f1e310] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f1e311] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f1e312]:
+          - generic [ref=f1e313]:
+            - generic [ref=f1e314]: Navigation
+            - link "회사 소개" [ref=f1e315] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f1e316] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f1e317] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f1e318] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f1e319]:
+            - generic [ref=f1e320]: Contact
+            - link "031-378-7220" [ref=f1e321] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f1e322] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f1e323] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f1e324]:
+        - paragraph [ref=f1e325]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f1e326]:
+          - link "홈" [ref=f1e327] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f1e328] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f1e329] [cursor=pointer]:
+            - /url: "#/contact"

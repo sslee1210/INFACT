@@ -171,13 +171,28 @@ export default function CompanyHistory() {
 
       const firstMarkerCenter = markerCentersInList[0];
       const activeMarkerCenter = markerCentersInList[nextIndex];
+      const lastItem = items[items.length - 1];
+      const reachedTimelineEnd =
+        nextIndex === items.length - 1 &&
+        viewportBottom >=
+          listTopAbs + lastItem.offsetTop + lastItem.offsetHeight;
+      // The rail continues below the last marker alongside its final text.
+      const completedRail = reachedTimelineEnd
+        ? window.getComputedStyle(listEl, "::before")
+        : null;
+      const progressStart = completedRail
+        ? parseFloat(completedRail.top)
+        : firstMarkerCenter;
+      const progressHeight = completedRail
+        ? listRect.height - progressStart - parseFloat(completedRail.bottom)
+        : Math.max(0, activeMarkerCenter - firstMarkerCenter);
       listEl.style.setProperty(
         "--history-progress-start",
-        `${firstMarkerCenter}px`,
+        `${progressStart}px`,
       );
       listEl.style.setProperty(
         "--history-progress-px",
-        `${Math.max(0, activeMarkerCenter - firstMarkerCenter)}px`,
+        `${progressHeight}px`,
       );
 
       ticking = false;

@@ -7,5 +7,6 @@ import "./styles/pages/home-visual-refinement.css";
 import "./styles/pages/home-experience-arc-final.css";
 import "./styles/pages/home-presentation.css";
 import "./styles/pages/subpage-presentation.css";
+import "./styles/common/site-refinement.css";
 
 createRoot(document.getElementById("root")!).render(<App />);

@@ -90,11 +90,13 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
   useEffect(() => {
     if (!mobileMenuOpen) return;
 
+    const root = document.documentElement;
     const body = document.body;
     const previousOverflow = body.style.overflow;
     const previousPaddingRight = body.style.paddingRight;
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
+    root.classList.add("is-nav-locked");
     body.classList.add("is-nav-locked");
     body.style.overflow = "hidden";
 
@@ -103,6 +105,7 @@ export function SiteHeader({ transparentOnTop = false }: SiteHeaderProps) {
     }
 
     return () => {
+      root.classList.remove("is-nav-locked");
       body.classList.remove("is-nav-locked");
       body.style.overflow = previousOverflow;
       body.style.paddingRight = previousPaddingRight;

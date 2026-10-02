@@ -159,6 +159,10 @@
 }
 .references-page .reference-company__details { min-width: 0; }
 .references-page .reference-company__summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   margin: 0;
   color: var(--archive-copy);
   font-size: 15px;
@@ -167,6 +171,13 @@
   letter-spacing: -0.015em;
   word-break: keep-all;
   overflow-wrap: anywhere;
+}
+.references-page .reference-company__more {
+  display: block;
+  margin-top: 4px;
+  color: var(--archive-muted);
+  font-size: 12px;
+  line-height: 1.5;
 }
 .references-page .reference-results__footnote {
   margin-top: 32px;
@@ -345,23 +356,24 @@
   .references-page .reference-archive__heading p { font-size: 14px; }
   .references-page .reference-years { display: block; padding-bottom: 20px; }
   .references-page .reference-years__label { display: block; margin-bottom: 10px; }
-  .references-page .reference-years__options { gap: 4px; }
-  .references-page .reference-years button { flex: 0 0 calc(20% - 4px); min-width: 0; padding-inline: 7px; font-size: 14px; }
+  .references-page .reference-years__options { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+  .references-page .reference-years button { min-width: 0; padding-inline: 7px; font-size: 14px; scroll-margin-top: calc(var(--fluid-nav-height) + var(--fluid-subnav-height) + 16px); }
   .references-page .reference-results { display: block; padding-block: 28px 32px; }
   .references-page .reference-results__year { display: grid; grid-template-columns: 1fr auto; margin-bottom: 16px; gap: 4px 12px; }
   .references-page .reference-results__year h3 { font-size: 36px; grid-row: span 2; }
   .references-page .reference-results__year p { margin: 0; align-self: end; font-size: 13px; }
   .references-page .reference-results__year span { font-size: 12px; text-align: right; }
-  .references-page .reference-companies li { grid-template-columns: clamp(88px, 26vw, 120px) minmax(0, 1fr); gap: 20px; min-height: 120px; padding: 22px 0; }
-  .references-page .reference-company__logo { height: 68px; }
-  .references-page .reference-company__logo img { height: 60px; }
+  .references-page .reference-companies li { grid-template-columns: minmax(0, 1fr); gap: 10px; min-height: 0; padding: 22px 0; }
+  .references-page .reference-company__logo { justify-content: flex-start; height: auto; }
+  .references-page .reference-company__logo[data-placeholder] { padding: 0; color: var(--archive-ink); font-size: 16px; font-weight: 600; text-align: left; }
+  .references-page .reference-company__logo img { width: 144px; max-width: 100%; height: 60px; object-position: left center; }
   .references-page .reference-company__summary { font-size: 14px; }
   .references-page .reference-results__footnote { font-size: 12px; margin-top: 28px; }
   .references-page .reference-results__footnote p { font-size: 16px; }
   .references-page .reference-download { display: block; padding: 24px 22px; border-radius: 12px; }
   .references-page .reference-download__intro { align-items: flex-start; gap: 14px; }
   .references-page .reference-download__icon { width: 23px; height: 26px; }
-  .references-page .reference-download h2 { font-size: 20px; text-wrap: initial; word-break: keep-all; }
+  .references-page .reference-download h2 { font-size: 20px !important; line-height: 1.4 !important; text-wrap: initial; word-break: keep-all; }
   .references-page .reference-download__intro p { font-size: 13px; }
   .references-page .reference-download__action { margin-top: 24px; }
   .references-page .reference-download__button { width: 100%; padding-inline: 8px; font-size: 13px; }

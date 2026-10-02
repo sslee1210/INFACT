@@ -1,0 +1,103 @@
+- generic [ref=e3]:
+  - button "본문으로 바로가기" [ref=e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e5]:
+    - generic [ref=e6]:
+      - button "INFACT 홈으로 이동" [ref=e7] [cursor=pointer]:
+        - img "INFACT" [ref=e8]
+      - generic "오늘 방문자 1명" [ref=e231]:
+        - generic [ref=e232]: TODAY
+        - strong [ref=e233]: "1"
+      - button "메뉴 열기" [ref=e234] [cursor=pointer]
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: References
+      - heading "CSV 수행실적" [level=1] [ref=e26]
+      - paragraph [ref=e27]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+    - generic [ref=e28]:
+      - navigation "페이지 하위 메뉴" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - button "개념설계" [ref=e32] [cursor=pointer]
+            - button "GMP" [ref=e33] [cursor=pointer]
+            - button "CSV" [ref=e34] [cursor=pointer]
+          - text: "> >"
+      - region [ref=e39]:
+        - generic [ref=e41]:
+          - heading "함께해 온 기업들" [level=2] [ref=e42]
+          - paragraph [ref=e43]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=e44]:
+          - generic [ref=e45]: 연도 선택
+          - generic [ref=e46]:
+            - button "2026" [ref=e47] [cursor=pointer]
+            - button "2025" [ref=e48] [cursor=pointer]
+            - button "2024" [ref=e49] [cursor=pointer]
+            - button "2023" [ref=e50] [cursor=pointer]
+            - button "2022" [ref=e51] [cursor=pointer]
+            - button "2021" [ref=e52] [cursor=pointer]
+            - button "2020" [ref=e53] [cursor=pointer]
+            - button "2019" [ref=e54] [cursor=pointer]
+            - button "2017" [active] [pressed] [ref=e55] [cursor=pointer]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - heading "2017" [level=3] [ref=e240]
+            - paragraph [ref=e59]: CSV 수행 기업
+            - generic [ref=e238]: 주요 수행사례
+          - list "2017년 CSV 수행 기업" [ref=e241]:
+            - listitem "우정BSC" [ref=e242]:
+              - generic [ref=e244]:
+                - text: 우정BSC
+                - generic [ref=e245]: 로고 등록 예정
+              - paragraph [ref=e247]: ISOLATOR
+        - complementary [ref=e186]:
+          - generic [ref=e191]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=e192]
+            - paragraph [ref=e193]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=e194]:
+            - link "전체 수행실적 다운로드" [ref=e195] [cursor=pointer]:
+              - /url: ./downloads/infact-references-2016-2026-2026-09-28.xls
+            - paragraph [ref=e199]: Excel · 전체 수행실적
+  - contentinfo [ref=e200]:
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - link "IN-FACT 홈으로 이동" [ref=e204] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e205]
+          - paragraph [ref=e206]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e207]:
+            - paragraph [ref=e208]: 대표. 고동주
+            - paragraph [ref=e209]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e210]:
+              - link "Tel. 031-378-7220" [ref=e211] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e212] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e213]:
+          - generic [ref=e214]:
+            - generic [ref=e215]: Navigation
+            - link "회사 소개" [ref=e216] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e217] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e218] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e219] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e220]:
+            - generic [ref=e221]: Contact
+            - link "031-378-7220" [ref=e222] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e223] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e224] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e225]:
+        - paragraph [ref=e226]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e227]:
+          - link "홈" [ref=e228] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e229] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e230] [cursor=pointer]:
+            - /url: "#/contact"

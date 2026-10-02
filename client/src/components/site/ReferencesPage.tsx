@@ -54,7 +54,7 @@ export function ReferencesPage({ label, title, description, years }: ReferencesP
                   전체 수행실적 다운로드
                 </button>
               )}
-              <p id="download-status">{referenceDownload.href ? "Excel · 전체 수행실적" : "엑셀 파일 준비 중"}</p>
+              {!referenceDownload.href && <p id="download-status">엑셀 파일 준비 중</p>}
             </div>
           </aside>
         </section>

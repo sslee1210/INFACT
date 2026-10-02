@@ -1,0 +1,149 @@
+- generic [ref=e3]:
+  - button "본문으로 바로가기" [ref=e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e5]:
+    - generic [ref=e6]:
+      - button "INFACT 홈으로 이동" [ref=e7] [cursor=pointer]:
+        - img "INFACT" [ref=e8]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - button "회사소개" [ref=e12] [cursor=pointer]
+        - listitem [ref=e13]:
+          - button "사업안내" [ref=e14] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "수행실적" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - button "문의하기" [ref=e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=e19]:
+          - generic [ref=e20]: TODAY
+          - strong [ref=e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Company
+      - heading "제약·바이오 현장과 규제를 연결합니다." [level=1] [ref=e26]
+      - paragraph [ref=e27]: 인팩트의 인사말, 연혁, 조직 구성을 통해 수행 방식과 전문성을 확인할 수 있습니다.
+    - generic [ref=e28]:
+      - navigation "페이지 하위 메뉴" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - button "인사말" [ref=e32] [cursor=pointer]
+            - button "연혁" [ref=e33] [cursor=pointer]
+            - button "조직도" [ref=e34] [cursor=pointer]
+          - list "현재 위치" [ref=e35]:
+            - listitem [ref=e36]: 홈
+            - listitem [ref=e37]: "> 회사 소개"
+            - listitem [ref=e38]: "> 연혁"
+      - generic "인팩트 연혁" [ref=e40]:
+        - generic [ref=e41]:
+          - paragraph [ref=e42]: 연혁
+          - heading "HISTORY" [level=2] [ref=e43]
+          - paragraph [ref=e44]: 주요 연혁과 조직 성장 흐름을 시간 순서에 따라 정리했습니다.
+        - generic [ref=e45]:
+          - article [ref=e46]:
+            - generic [ref=e47]:
+              - time [ref=e49]: "2026"
+              - heading "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요." [level=3] [ref=e52]
+          - article [ref=e55]:
+            - generic [ref=e56]:
+              - time [ref=e59]: "2025"
+              - heading "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜 한해가 되었습니다." [level=3] [ref=e61]
+              - list [ref=e62]:
+                - listitem [ref=e63]: 그동안 국내 서비스만 진행한 건 아니지만 개념과 건축 및 GMP System 구축까지의 업무를 서비스하게 되었으니 조금은 많이 고무적인 일이 되었습니다.
+          - article [ref=e66]:
+            - generic [ref=e67]:
+              - time [ref=e69]: 2021 ~ 2022
+              - heading "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 물리적인 거리를 좁히기 위해 경기 오산시에 사옥을 지어 이전하는 일이 있었습니다." [level=3] [ref=e72]
+          - article [ref=e75]:
+            - generic [ref=e76]:
+              - time [ref=e79]: 2019 ~ 2020
+              - heading "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 협력사로 성장하는 시기가 있었습니다." [level=3] [ref=e81]
+              - list [ref=e82]:
+                - listitem [ref=e83]: 고객님들 감사합니다.
+          - article [ref=e86]:
+            - generic [ref=e87]:
+              - time [ref=e89]: "2018"
+              - heading "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지요." [level=3] [ref=e92]
+              - list [ref=e93]:
+                - listitem [ref=e94]: 생산시설과 함께 배양실도 같이 구축함으로써 좀더 고객의 요구에 가까워 졌습니다.
+          - article [ref=e97]:
+            - generic [ref=e98]:
+              - time [ref=e101]: "2017"
+              - heading "2017년에는 CSV 컨설팅도 시작했어요." [level=3] [ref=e103]
+              - list [ref=e104]:
+                - listitem [ref=e105]: GMP 컨설팅은 인팩트에서 CSV 컨설팅은 협력업체에서 진행하던 업무를 과감한 인적 투자와 System 구축을 통해 사업부를 만들고 서비스를 제공하기 시작했습니다.
+          - article [ref=e108]:
+            - generic [ref=e109]:
+              - time [ref=e111]: "2016"
+              - heading "2016년부터 GMP 컨설팅을 시작했어요." [level=3] [ref=e114]
+              - list [ref=e115]:
+                - listitem [ref=e116]: 인팩트라는 이름으로 경기 용인의 흥덕IT밸리에서 세상에 이름을 알렸습니다.
+  - contentinfo [ref=e119]:
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - link "IN-FACT 홈으로 이동" [ref=e123] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e124]
+          - paragraph [ref=e125]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e126]:
+            - paragraph [ref=e127]: 대표. 고동주
+            - paragraph [ref=e128]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e129]:
+              - link "Tel. 031-378-7220" [ref=e130] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e131] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e132]:
+          - generic [ref=e133]:
+            - generic [ref=e134]: Navigation
+            - link "회사 소개" [ref=e135] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e136] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e137] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e138] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e139]:
+            - generic [ref=e140]: Contact
+            - link "031-378-7220" [ref=e141] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e142] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e143] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e144]:
+        - paragraph [ref=e145]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e146]:
+          - link "홈" [ref=e147] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e148] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e149] [cursor=pointer]:
+            - /url: "#/contact"

@@ -1,0 +1,137 @@
+- generic [ref=e246]:
+  - button "본문으로 바로가기" [ref=e247] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e248]:
+    - generic [ref=e249]:
+      - button "INFACT 홈으로 이동" [ref=e250] [cursor=pointer]:
+        - img "INFACT" [ref=e251]
+      - generic "오늘 방문자 0명" [ref=e253]:
+        - generic [ref=e254]: TODAY
+        - strong [ref=e255]: "0"
+      - button "메뉴 열기" [ref=e256] [cursor=pointer]
+  - main [ref=e260]:
+    - generic [ref=e262]:
+      - paragraph [ref=e263]: References
+      - heading "CSV 수행실적" [level=1] [ref=e264]
+      - paragraph [ref=e265]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+    - generic [ref=e266]:
+      - navigation "페이지 하위 메뉴" [ref=e267]:
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - button "개념설계" [ref=e270] [cursor=pointer]
+            - button "GMP" [ref=e271] [cursor=pointer]
+            - button "CSV" [ref=e272] [cursor=pointer]
+          - text: "> >"
+      - region [ref=e273]:
+        - generic [ref=e275]:
+          - heading "함께해 온 기업들" [level=2] [ref=e276]
+          - paragraph [ref=e277]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=e278]:
+          - generic [ref=e279]: 연도 선택
+          - generic [ref=e280]:
+            - button "2020" [pressed] [ref=e281] [cursor=pointer]
+            - button "2019" [ref=e282] [cursor=pointer]
+            - button "2018" [ref=e283] [cursor=pointer]
+            - button "2017" [ref=e284] [cursor=pointer]
+            - button "2016" [ref=e285] [cursor=pointer]
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - heading "2020" [level=3] [ref=e288]
+            - paragraph [ref=e289]: CSV 수행 기업
+            - generic [ref=e290]: 주요 수행사례
+          - generic [ref=e291]:
+            - list "2020년 CSV 수행 기업" [ref=e292]:
+              - listitem "건일제약" [ref=e293]:
+                - generic [ref=e295]:
+                  - text: 건일제약
+                  - generic [ref=e296]: 로고 등록 예정
+                - paragraph [ref=e298]: 카톤인쇄기
+              - listitem "아이큐어" [ref=e299]:
+                - generic [ref=e301]:
+                  - text: 아이큐어
+                  - generic [ref=e302]: 로고 등록 예정
+                - paragraph [ref=e304]: 생산실행시스템(MES)
+              - listitem "미생물실증지원센터" [ref=e305]:
+                - generic [ref=e307]:
+                  - text: 미생물실증지원센터
+                  - generic [ref=e308]: 로고 등록 예정
+                - paragraph [ref=e310]: 분석기
+              - listitem "GC녹십자" [ref=e311]:
+                - generic [ref=e313]:
+                  - text: GC녹십자
+                  - generic [ref=e314]: 로고 등록 예정
+                - paragraph [ref=e316]: PLM, ELN
+              - listitem "동아ST" [ref=e317]:
+                - generic [ref=e319]:
+                  - text: 동아ST
+                  - generic [ref=e320]: 로고 등록 예정
+                - paragraph [ref=e322]: MES, SCADA System
+              - listitem "삼천당제약" [ref=e323]:
+                - generic [ref=e325]:
+                  - text: 삼천당제약
+                  - generic [ref=e326]: 로고 등록 예정
+                - paragraph [ref=e328]: ERP 외
+              - listitem "한국얀센" [ref=e329]:
+                - generic [ref=e331]:
+                  - text: 한국얀센
+                  - generic [ref=e332]: 로고 등록 예정
+                - paragraph [ref=e334]: 생산효율시스템
+              - listitem "에스티팜" [ref=e335]:
+                - generic [ref=e337]:
+                  - text: 에스티팜
+                  - generic [ref=e338]: 로고 등록 예정
+                - paragraph [ref=e340]: 생산설비
+            - generic [ref=e341]:
+              - paragraph [ref=e342]: 이 외에도 다양한 기업의 프로젝트를 수행했습니다.
+              - generic [ref=e343]: 위 내용은 주요 수행사례의 일부입니다.
+        - complementary [ref=e344]:
+          - generic [ref=e349]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=e350]
+            - paragraph [ref=e351]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=e352]:
+            - button "전체 수행실적 다운로드" [disabled] [ref=e353]
+            - paragraph [ref=e357]: 엑셀 파일 준비 중
+  - contentinfo [ref=e358]:
+    - generic [ref=e359]:
+      - generic [ref=e360]:
+        - generic [ref=e361]:
+          - link "IN-FACT 홈으로 이동" [ref=e362] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e363]
+          - paragraph [ref=e364]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e365]:
+            - paragraph [ref=e366]: 대표. 고동주
+            - paragraph [ref=e367]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e368]:
+              - link "Tel. 031-378-7220" [ref=e369] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e370] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e371]:
+          - generic [ref=e372]:
+            - generic [ref=e373]: Navigation
+            - link "회사 소개" [ref=e374] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e375] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e376] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e377] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e378]:
+            - generic [ref=e379]: Contact
+            - link "031-378-7220" [ref=e380] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e381] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e382] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e383]:
+        - paragraph [ref=e384]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e385]:
+          - link "홈" [ref=e386] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e387] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e388] [cursor=pointer]:
+            - /url: "#/contact"

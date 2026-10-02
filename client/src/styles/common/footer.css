@@ -213,13 +213,6 @@
   }
 }
 
-@media (max-width: 420px) {
-  .site-footer__links {
-    grid-template-columns: 1fr;
-    gap: var(--ui-space-4);
-  }
-}
-
 @media (min-width: 1200px) {
   .site-footer {
     --home-text-soft: #626d7c;

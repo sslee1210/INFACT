@@ -1,0 +1,204 @@
+- generic [ref=f3e3]:
+  - button "본문으로 바로가기" [ref=f3e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=f3e5]:
+    - generic [ref=f3e6]:
+      - button "INFACT 홈으로 이동" [ref=f3e7] [cursor=pointer]:
+        - img "INFACT" [ref=f3e8]
+      - generic "오늘 방문자 1명" [ref=f3e10]:
+        - generic [ref=f3e11]: TODAY
+        - strong [ref=f3e12]: "1"
+      - button "메뉴 열기" [ref=f3e13] [cursor=pointer]
+  - main [ref=f3e17]:
+    - generic [ref=f3e19]:
+      - paragraph [ref=f3e20]: References
+      - heading "CSV 수행실적" [level=1] [ref=f3e21]
+      - paragraph [ref=f3e22]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+    - generic [ref=f3e23]:
+      - navigation "페이지 하위 메뉴" [ref=f3e24]:
+        - generic [ref=f3e25]:
+          - generic [ref=f3e26]:
+            - button "개념설계" [ref=f3e27] [cursor=pointer]
+            - button "GMP" [ref=f3e28] [cursor=pointer]
+            - button "CSV" [ref=f3e29] [cursor=pointer]
+          - text: "> >"
+      - region [ref=f3e30]:
+        - generic [ref=f3e32]:
+          - heading "함께해 온 기업들" [level=2] [ref=f3e33]
+          - paragraph [ref=f3e34]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=f3e35]:
+          - generic [ref=f3e36]: 연도 선택
+          - generic [ref=f3e37]:
+            - button "2026" [pressed] [ref=f3e38] [cursor=pointer]
+            - button "2025" [ref=f3e39] [cursor=pointer]
+            - button "2024" [ref=f3e40] [cursor=pointer]
+            - button "2023" [ref=f3e41] [cursor=pointer]
+            - button "2022" [ref=f3e42] [cursor=pointer]
+            - button "2021" [ref=f3e43] [cursor=pointer]
+            - button "2020" [ref=f3e44] [cursor=pointer]
+            - button "2019" [ref=f3e45] [cursor=pointer]
+            - button "2017" [ref=f3e46] [cursor=pointer]
+        - generic [ref=f3e47]:
+          - generic [ref=f3e48]:
+            - heading "2026" [level=3] [ref=f3e49]
+            - paragraph [ref=f3e50]: CSV 수행 기업
+            - generic [ref=f3e51]: 주요 수행사례
+          - generic [ref=f3e52]:
+            - list "2026년 CSV 수행 기업" [ref=f3e53]:
+              - listitem "LG화학" [ref=f3e54]:
+                - generic [ref=f3e56]:
+                  - text: LG화학
+                  - generic [ref=f3e57]: 로고 등록 예정
+                - paragraph [ref=f3e59]: PUPSIT Line, VIAL
+              - listitem "롯데바이오로직스" [ref=f3e60]:
+                - generic [ref=f3e62]:
+                  - text: 롯데바이오로직스
+                  - generic [ref=f3e63]: 로고 등록 예정
+                - paragraph [ref=f3e65]: 전기영동장치
+              - listitem "jw중외제약" [ref=f3e66]:
+                - generic [ref=f3e68]:
+                  - text: jw중외제약
+                  - generic [ref=f3e69]: 로고 등록 예정
+                - paragraph [ref=f3e71]: BMS
+              - listitem "휴온스" [ref=f3e72]:
+                - generic [ref=f3e74]:
+                  - text: 휴온스
+                  - generic [ref=f3e75]: 로고 등록 예정
+                - paragraph [ref=f3e77]: ERP, MES, RWS, WMS, LIMS, QMS, EDMS, LAS
+              - listitem "종근당바이오 안산공장" [ref=f3e78]:
+                - generic [ref=f3e80]:
+                  - text: 종근당바이오 안산공장
+                  - generic [ref=f3e81]: 로고 등록 예정
+                - paragraph [ref=f3e83]: VA-723, RA-759, 발효 공정 PLC, 발효 공정 HMI, 커머셜 생산라인
+              - listitem "대웅바이오" [ref=f3e84]:
+                - generic [ref=f3e86]:
+                  - text: 대웅바이오
+                  - generic [ref=f3e87]: 로고 등록 예정
+                - paragraph [ref=f3e89]: MES
+              - listitem "명인제약" [ref=f3e90]:
+                - generic [ref=f3e92]:
+                  - text: 명인제약
+                  - generic [ref=f3e93]: 로고 등록 예정
+                - paragraph [ref=f3e95]: ERP, RWS, WMS
+              - listitem "태준제약" [ref=f3e96]:
+                - generic [ref=f3e98]:
+                  - text: 태준제약
+                  - generic [ref=f3e99]: 로고 등록 예정
+                - paragraph [ref=f3e101]: NTP 서버
+              - listitem "프레스티지바이오로직스" [ref=f3e102]:
+                - generic [ref=f3e104]:
+                  - text: 프레스티지바이오로직스
+                  - generic [ref=f3e105]: 로고 등록 예정
+                - generic [ref=f3e106]:
+                  - paragraph [ref=f3e107]: FIT, MM-DFZ-02, MM-DFZ-03, MM-DFZ-04, EMS, 설비관리시스템, 엔도톡신 장비, QC-DFZ-06, Solo VPE, CO2 Incubator
+                  - generic [aria-hidden] [ref=f3e108]: 등등
+              - listitem "바이넥스" [ref=f3e109]:
+                - generic [ref=f3e111]:
+                  - text: 바이넥스
+                  - generic [ref=f3e112]: 로고 등록 예정
+                - paragraph [ref=f3e114]: 수처리시스템
+              - listitem "펩트론" [ref=f3e115]:
+                - generic [ref=f3e117]:
+                  - text: 펩트론
+                  - generic [ref=f3e118]: 로고 등록 예정
+                - paragraph [ref=f3e120]: Refiner System, PCS
+              - listitem "엘앤씨바이오" [ref=f3e121]:
+                - generic [ref=f3e123]:
+                  - text: 엘앤씨바이오
+                  - generic [ref=f3e124]: 로고 등록 예정
+                - paragraph [ref=f3e126]: 전자제조기록서, 로그북시스템
+              - listitem "보령바이오파마" [ref=f3e127]:
+                - generic [ref=f3e129]:
+                  - text: 보령바이오파마
+                  - generic [ref=f3e130]: 로고 등록 예정
+                - paragraph [ref=f3e132]: LIMS, LAS
+              - listitem "영진약품" [ref=f3e133]:
+                - generic [ref=f3e135]:
+                  - text: 영진약품
+                  - generic [ref=f3e136]: 로고 등록 예정
+                - paragraph [ref=f3e138]: MES
+              - listitem "건일제약" [ref=f3e139]:
+                - generic [ref=f3e141]:
+                  - text: 건일제약
+                  - generic [ref=f3e142]: 로고 등록 예정
+                - paragraph [ref=f3e144]: AG
+              - listitem "동광제약" [ref=f3e145]:
+                - generic [ref=f3e147]:
+                  - text: 동광제약
+                  - generic [ref=f3e148]: 로고 등록 예정
+                - paragraph [ref=f3e150]: 정제수시스템
+              - listitem "제네웰" [ref=f3e151]:
+                - generic [ref=f3e153]:
+                  - text: 제네웰
+                  - generic [ref=f3e154]: 로고 등록 예정
+                - paragraph [ref=f3e156]: GxP System
+              - listitem "미래셀바이오" [ref=f3e157]:
+                - generic [ref=f3e159]:
+                  - text: 미래셀바이오
+                  - generic [ref=f3e160]: 로고 등록 예정
+                - paragraph [ref=f3e162]: LIMS
+              - listitem "오레온" [ref=f3e163]:
+                - generic [ref=f3e165]:
+                  - text: 오레온
+                  - generic [ref=f3e166]: 로고 등록 예정
+                - paragraph [ref=f3e168]: 충전기
+              - listitem "유니메드제약" [ref=f3e169]:
+                - generic [ref=f3e171]:
+                  - text: 유니메드제약
+                  - generic [ref=f3e172]: 로고 등록 예정
+                - paragraph [ref=f3e174]: 멸균탱크
+            - generic [ref=f3e175]:
+              - paragraph [ref=f3e176]: 등등, 이 외에도 2개 기업의 수행실적이 있습니다.
+              - generic [ref=f3e177]: 전체 기업과 상세 프로젝트는 아래 전체 수행실적 엑셀 파일에서 확인해 주세요.
+        - complementary [ref=f3e178]:
+          - generic [ref=f3e183]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f3e184]
+            - paragraph [ref=f3e185]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=f3e186]:
+            - link "전체 수행실적 다운로드" [ref=f3e187] [cursor=pointer]:
+              - /url: ./downloads/infact-references-2016-2026-2026-09-28.xls
+            - paragraph [ref=f3e191]: Excel · 전체 수행실적
+  - contentinfo [ref=f3e192]:
+    - generic [ref=f3e193]:
+      - generic [ref=f3e194]:
+        - generic [ref=f3e195]:
+          - link "IN-FACT 홈으로 이동" [ref=f3e196] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=f3e197]
+          - paragraph [ref=f3e198]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=f3e199]:
+            - paragraph [ref=f3e200]: 대표. 고동주
+            - paragraph [ref=f3e201]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=f3e202]:
+              - link "Tel. 031-378-7220" [ref=f3e203] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=f3e204] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=f3e205]:
+          - generic [ref=f3e206]:
+            - generic [ref=f3e207]: Navigation
+            - link "회사 소개" [ref=f3e208] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=f3e209] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=f3e210] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=f3e211] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=f3e212]:
+            - generic [ref=f3e213]: Contact
+            - link "031-378-7220" [ref=f3e214] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=f3e215] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=f3e216] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=f3e217]:
+        - paragraph [ref=f3e218]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=f3e219]:
+          - link "홈" [ref=f3e220] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=f3e221] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=f3e222] [cursor=pointer]:
+            - /url: "#/contact"

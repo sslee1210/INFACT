@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { prioritizeReferenceCompanies } from "@/content/references/referencePriority";
 
 export type ReferenceClient = {
   client: string;
@@ -21,8 +22,7 @@ function collectCompanies(records: ReferenceClient[]) {
       logoSrc: previous?.logoSrc ?? record.logoSrc,
       summary: Array.from(new Set([
         ...(previous?.summary ?? []),
-        ...(record.systems ?? []),
-        ...(record.projects ?? []),
+        ...(record.systems ?? record.projects ?? []),
       ])),
     });
   });
@@ -50,13 +50,53 @@ function CompanyLogo({ client, logoSrc }: ReferenceClient) {
   );
 }
 
+function ProjectSummary({ text }: { text: string }) {
+  const summaryRef = useRef<HTMLParagraphElement>(null);
+  const [isTruncated, setIsTruncated] = useState(false);
+
+  useLayoutEffect(() => {
+    const summary = summaryRef.current;
+    if (!summary) return;
+
+    let disposed = false;
+    const measureOverflow = () => {
+      if (!disposed) {
+        setIsTruncated(summary.scrollHeight > summary.clientHeight + 1);
+      }
+    };
+
+    measureOverflow();
+    const resizeObserver = new ResizeObserver(measureOverflow);
+    resizeObserver.observe(summary);
+    void document.fonts.ready.then(measureOverflow);
+    document.fonts.addEventListener("loadingdone", measureOverflow);
+
+    return () => {
+      disposed = true;
+      resizeObserver.disconnect();
+      document.fonts.removeEventListener("loadingdone", measureOverflow);
+    };
+  }, [text]);
+
+  return (
+    <>
+      <p ref={summaryRef} className="reference-company__summary" title={text}>
+        {text}
+      </p>
+      {isTruncated && <span className="reference-company__more" aria-hidden="true">등등</span>}
+    </>
+  );
+}
+
 export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsProps) {
   const [selectedYear, setSelectedYear] = useState(() =>
     Number(new URLSearchParams(window.location.search).get("year")),
   );
   const selected = years.find((item) => item.year === selectedYear) ?? years[0];
   // 대표 기업의 표시 수만 제한하고, 전체 원본 실적은 그대로 유지합니다.
-  const visibleClients = collectCompanies(selected?.clients ?? []).slice(0, 30);
+  const companies = collectCompanies(selected?.clients ?? []);
+  const visibleClients = prioritizeReferenceCompanies(companies).slice(0, 20);
+  const remainingCompanyCount = companies.length - visibleClients.length;
 
   function chooseYear(year: number) {
     setSelectedYear(year);
@@ -97,23 +137,22 @@ export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsPro
                   <li key={company.client} className="reference-company" aria-label={company.client}>
                     <CompanyLogo {...company} />
                     <div className="reference-company__details">
-                      <p className="reference-company__summary">
-                        {company.summary.length ? company.summary.join(", ") : "수행 내용 확인 중"}
-                      </p>
+                      <ProjectSummary text={company.summary.length ? company.summary.join(", ") : "수행 내용 확인 중"} />
                     </div>
                   </li>
                 ))}
               </ul>
-              <div className="reference-results__footnote">
-                <p>이 외에도 다양한 기업의 프로젝트를 수행했습니다.</p>
-                <span>위 내용은 주요 수행사례의 일부입니다.</span>
-              </div>
+              {remainingCompanyCount > 0 && (
+                <div className="reference-results__footnote">
+                  <p>등등, 이 외에도 {remainingCompanyCount}개 기업의 수행실적이 있습니다.</p>
+                  <span>전체 기업과 상세 프로젝트는 아래 전체 수행실적 엑셀 파일에서 확인해 주세요.</span>
+                </div>
+              )}
             </>
           ) : (
             <div className="reference-empty">
-              <p className="reference-empty__title">수행실적을 정리하고 있습니다.</p>
-              <p>{selected ? `${selected.year}년 기업 목록은` : "기업 목록은"} 자료 확인 후 업데이트합니다.</p>
-              <span>전체 실적 자료도 함께 준비하고 있습니다.</span>
+              <p className="reference-empty__title">등록된 수행실적이 없습니다.</p>
+              <p>전체 자료를 확인해 주세요.</p>
             </div>
           )}
         </div>

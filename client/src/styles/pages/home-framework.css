@@ -192,10 +192,10 @@
     gap: 3px;
   }
   .home-main .home-framework .home-framework__node strong {
-    font-size: 13px;
+    font-size: 14px;
   }
   .home-main .home-framework .home-framework__node span {
-    font-size: 10px;
+    font-size: 12px;
   }
   .home-main .home-framework .home-framework__hub {
     inset: 31%;
@@ -205,7 +205,7 @@
     font-size: 17px;
   }
   .home-main .home-framework .home-framework__hub span {
-    font-size: 7px;
+    font-size: 9px;
     letter-spacing: 0.08em;
   }
   .home-main .home-framework .home-framework__node::before {

@@ -1,0 +1,167 @@
+- generic [ref=f7e2]:
+  - generic [ref=f7e3]:
+    - button "본문으로 바로가기" [ref=f7e4] [cursor=pointer]
+    - navigation "주요 메뉴" [ref=f7e5]:
+      - generic [ref=f7e6]:
+        - button "INFACT 홈으로 이동" [ref=f7e7] [cursor=pointer]:
+          - img "INFACT" [ref=f7e8]
+        - generic "오늘 방문자 1명" [ref=f7e10]:
+          - generic [ref=f7e11]: TODAY
+          - strong [ref=f7e12]: "1"
+        - button "메뉴 열기" [ref=f7e13] [cursor=pointer]
+    - main [ref=f7e17]:
+      - generic [ref=f7e20]:
+        - heading "CSV 수행실적" [level=1] [ref=f7e21]
+        - paragraph [ref=f7e22]: 제약·바이오 산업의 전산시스템과 제조·시험설비를 대상으로 수행한 컴퓨터화 시스템 밸리데이션 실적입니다.
+      - generic [ref=f7e23]:
+        - navigation "페이지 하위 메뉴" [ref=f7e25]:
+          - generic [ref=f7e26]:
+            - generic [ref=f7e27]:
+              - button "개념설계" [ref=f7e28] [cursor=pointer]
+              - button "GMP" [ref=f7e29] [cursor=pointer]
+              - button "CSV" [ref=f7e30] [cursor=pointer]
+            - text: "> >"
+        - region [ref=f7e31]:
+          - generic [ref=f7e32]:
+            - heading "함께해 온 기업들" [level=2] [ref=f7e33]
+            - paragraph [ref=f7e34]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+          - group "수행 연도 선택" [ref=f7e35]:
+            - generic [ref=f7e36]: 연도 선택
+            - generic [ref=f7e37]:
+              - button "2020" [ref=f7e38] [cursor=pointer]
+              - button "2019" [pressed] [ref=f7e39] [cursor=pointer]
+              - button "2018" [ref=f7e40] [cursor=pointer]
+              - button "2017" [ref=f7e41] [cursor=pointer]
+              - button "2016" [ref=f7e42] [cursor=pointer]
+          - generic [ref=f7e43]:
+            - generic [ref=f7e44]:
+              - heading "2019" [level=3] [ref=f7e45]
+              - paragraph [ref=f7e46]: CSV 수행 기업
+              - generic [ref=f7e47]: 주요 수행사례
+            - generic [ref=f7e48]:
+              - list "2019년 CSV 수행 기업" [ref=f7e49]:
+                - listitem "셀트리온" [ref=f7e50]:
+                  - paragraph [ref=f7e54]: 2D Barcode System, 바코드시스템, Print 시스템
+                - listitem "휴젤" [ref=f7e55]:
+                  - paragraph [ref=f7e59]: 시험일지, EDMS, 포장기, LIMS, QMS
+                - listitem "OLIC Thailand" [ref=f7e60]:
+                  - paragraph [ref=f7e64]: 2D Barcode System
+                - listitem "유니메드제약" [ref=f7e65]:
+                  - paragraph [ref=f7e69]: 바코드 일련번호(RFID AG)
+                - listitem "종근당바이오" [ref=f7e70]:
+                  - paragraph [ref=f7e74]: 프로바이오틱스 신축공장
+                - listitem "한국프라임제약" [ref=f7e75]:
+                  - paragraph [ref=f7e79]: RWS
+                - listitem "휴메딕스" [ref=f7e80]:
+                  - paragraph [ref=f7e84]: QMS
+                - listitem "삼양바이오팜" [ref=f7e85]:
+                  - paragraph [ref=f7e89]: QC 장비
+                - listitem "도미노코리아" [ref=f7e90]:
+                  - paragraph [ref=f7e94]: 카톤인쇄기, 장비
+                - listitem "이수앱지스" [ref=f7e95]:
+                  - paragraph [ref=f7e99]: 실험정보관리시스템(LAS)
+                - listitem "이니스트바이오제약" [ref=f7e100]:
+                  - paragraph [ref=f7e104]: RWS
+                - listitem "에이프로젠" [ref=f7e105]:
+                  - paragraph [ref=f7e109]: 자동화창고관리시스템
+                - listitem "SK바이오텍" [ref=f7e110]:
+                  - paragraph [ref=f7e114]: 타임서버
+                - listitem "GC녹십자" [ref=f7e115]:
+                  - paragraph [ref=f7e119]: Isolator
+                - listitem "휴온스" [ref=f7e120]:
+                  - paragraph [ref=f7e124]: SCADA System
+                - listitem "넥스팜코리아" [ref=f7e125]:
+                  - paragraph [ref=f7e129]: 출하관리시스템
+                - listitem "한국오츠카제약" [ref=f7e130]:
+                  - paragraph [ref=f7e134]: EDMS
+                - listitem "국제약품" [ref=f7e135]:
+                  - paragraph [ref=f7e139]: ERP, AG, DPS 변경관리
+                - listitem "동광제약" [ref=f7e140]:
+                  - paragraph [ref=f7e144]: 원료칭량관리시스템, 시험일지, MRP 시스템, 이동식 부스, 분석장비
+                - listitem "메디톡스" [ref=f7e145]:
+                  - paragraph [ref=f7e149]: 일련번호시스템
+                - listitem "한국콜마" [ref=f7e150]:
+                  - paragraph [ref=f7e154]: 창고관리시스템
+                - listitem "동화약품" [ref=f7e155]:
+                  - paragraph [ref=f7e159]: Agilent OpenLAB ECM System
+                - listitem "애니젠" [ref=f7e160]:
+                  - paragraph [ref=f7e164]: 장비 및 시스템
+                - listitem "코러스제약" [ref=f7e165]:
+                  - paragraph [ref=f7e169]: 클린부스
+                - listitem "한림제약" [ref=f7e170]:
+                  - paragraph [ref=f7e174]: GLT
+                - listitem "하이텍팜" [ref=f7e175]:
+                  - paragraph [ref=f7e179]: PW, WFI, PS System
+                - listitem "종근당" [ref=f7e180]:
+                  - paragraph [ref=f7e184]: Pass Box
+                - listitem "한미약품" [ref=f7e185]:
+                  - paragraph [ref=f7e189]: 글러브 리크테스트 장비
+                - listitem "동아제약" [ref=f7e190]:
+                  - paragraph [ref=f7e194]: 클린부스
+                - listitem "휴온스제약" [ref=f7e195]:
+                  - paragraph [ref=f7e199]: 모바일 부스
+              - generic [ref=f7e200]:
+                - paragraph [ref=f7e201]: 이 외에도 다양한 기업의 프로젝트를 수행했습니다.
+                - generic [ref=f7e202]: 위 내용은 주요 수행사례의 일부입니다.
+          - paragraph [ref=f7e203]: 로고 미등록 기업은 회사명으로 표시합니다.
+          - complementary [ref=f7e204]:
+            - generic [ref=f7e205]:
+              - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=f7e206]
+              - paragraph [ref=f7e207]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+            - generic [ref=f7e208]:
+              - button "전체 수행실적 다운로드" [disabled] [ref=f7e209]
+              - paragraph [ref=f7e213]: 엑셀 파일 준비 중
+    - contentinfo [ref=f7e214]:
+      - generic [ref=f7e215]:
+        - generic [ref=f7e216]:
+          - generic [ref=f7e217]:
+            - link "IN-FACT 홈으로 이동" [ref=f7e218] [cursor=pointer]:
+              - /url: "#/"
+              - img "IN-FACT" [ref=f7e219]
+            - paragraph [ref=f7e220]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+            - generic "회사 정보" [ref=f7e221]:
+              - paragraph [ref=f7e222]: 대표. 고동주
+              - paragraph [ref=f7e223]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+              - paragraph [ref=f7e224]:
+                - link "Tel. 031-378-7220" [ref=f7e225] [cursor=pointer]:
+                  - /url: tel:0313787220
+                - text: ·
+                - link "Fax. 031-378-7221" [ref=f7e226] [cursor=pointer]:
+                  - /url: tel:0313787221
+          - navigation "푸터 메뉴" [ref=f7e227]:
+            - generic [ref=f7e228]:
+              - generic [ref=f7e229]: Navigation
+              - link "회사 소개" [ref=f7e230] [cursor=pointer]:
+                - /url: "#/company"
+              - link "서비스" [ref=f7e231] [cursor=pointer]:
+                - /url: "#/service-design"
+              - link "수행 실적" [ref=f7e232] [cursor=pointer]:
+                - /url: "#/references-design"
+              - link "문의하기" [ref=f7e233] [cursor=pointer]:
+                - /url: "#/contact"
+            - generic [ref=f7e234]:
+              - generic [ref=f7e235]: Contact
+              - link "031-378-7220" [ref=f7e236] [cursor=pointer]:
+                - /url: tel:0313787220
+              - link "infact@in-fact.co.kr" [ref=f7e237] [cursor=pointer]:
+                - /url: mailto:infact@in-fact.co.kr
+              - link "www.in-fact.co.kr" [ref=f7e238] [cursor=pointer]:
+                - /url: https://www.in-fact.co.kr
+        - generic [ref=f7e239]:
+          - paragraph [ref=f7e240]: © 2026 IN-FACT. All rights reserved.
+          - generic "보조 메뉴" [ref=f7e241]:
+            - link "홈" [ref=f7e242] [cursor=pointer]:
+              - /url: "#/"
+            - link "회사 소개" [ref=f7e243] [cursor=pointer]:
+              - /url: "#/company"
+            - link "문의하기" [ref=f7e244] [cursor=pointer]:
+              - /url: "#/contact"
+  - navigation "디자인 미리보기 화면 선택" [ref=f7e245]:
+    - link "메인" [ref=f7e246] [cursor=pointer]:
+      - /url: "#/"
+    - link "사업안내" [ref=f7e247] [cursor=pointer]:
+      - /url: "#/service-gmp"
+    - link "수행실적" [ref=f7e248] [cursor=pointer]:
+      - /url: "#/references-csv"
+    - link "현재 사이트 ↗" [ref=f7e249] [cursor=pointer]:
+      - /url: http://127.0.0.1:3000/#/

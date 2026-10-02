@@ -1,0 +1,249 @@
+- generic [ref=e3]:
+  - button "본문으로 바로가기" [ref=e4] [cursor=pointer]
+  - navigation "주요 메뉴" [ref=e5]:
+    - generic [ref=e6]:
+      - button "INFACT 홈으로 이동" [ref=e7] [cursor=pointer]:
+        - img "INFACT" [ref=e8]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - button "회사소개" [ref=e12] [cursor=pointer]
+        - listitem [ref=e13]:
+          - button "사업안내" [ref=e14] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "수행실적" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - button "문의하기" [ref=e18] [cursor=pointer]
+        - generic "오늘 방문자 1명" [ref=e19]:
+          - generic [ref=e20]: TODAY
+          - strong [ref=e21]: "1"
+    - generic:
+      - generic:
+        - generic:
+          - list:
+            - listitem:
+              - button "인사말"
+            - listitem:
+              - button "연혁"
+            - listitem:
+              - button "조직도"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP Consulting"
+            - listitem:
+              - button "CSV Consulting"
+        - generic:
+          - list:
+            - listitem:
+              - button "개념설계"
+            - listitem:
+              - button "GMP"
+            - listitem:
+              - button "CSV"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: References
+      - heading "GMP 수행실적" [level=1] [ref=e26]
+      - paragraph [ref=e27]: 제약·바이오 프로젝트의 GMP 컨설팅, 품질시스템 구축, 밸리데이션 및 규제기관 대응 실적입니다.
+    - generic [ref=e28]:
+      - navigation "페이지 하위 메뉴" [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - button "개념설계" [ref=e32] [cursor=pointer]
+            - button "GMP" [ref=e33] [cursor=pointer]
+            - button "CSV" [ref=e34] [cursor=pointer]
+          - list "현재 위치" [ref=e35]:
+            - listitem [ref=e36]: 홈
+            - listitem [ref=e37]: "> 수행실적"
+            - listitem [ref=e38]: "> GMP"
+      - region [ref=e39]:
+        - generic [ref=e41]:
+          - heading "함께해 온 기업들" [level=2] [ref=e42]
+          - paragraph [ref=e43]: 주요 고객사와 수행한 장비·시스템을 소개합니다. 더 많은 수행실적은 전체 자료로 제공합니다.
+        - group "수행 연도 선택" [ref=e44]:
+          - generic [ref=e45]: 연도 선택
+          - generic [ref=e46]:
+            - button "2026" [pressed] [ref=e47] [cursor=pointer]
+            - button "2025" [ref=e48] [cursor=pointer]
+            - button "2024" [ref=e49] [cursor=pointer]
+            - button "2023" [ref=e50] [cursor=pointer]
+            - button "2022" [ref=e51] [cursor=pointer]
+            - button "2021" [ref=e52] [cursor=pointer]
+            - button "2020" [ref=e53] [cursor=pointer]
+            - button "2019" [ref=e54] [cursor=pointer]
+            - button "2018" [ref=e55] [cursor=pointer]
+            - button "2017" [ref=e56] [cursor=pointer]
+            - button "2016" [ref=e57] [cursor=pointer]
+        - generic [ref=e58]:
+          - generic [ref=e59]:
+            - heading "2026" [level=3] [ref=e60]
+            - paragraph [ref=e61]: GMP 수행 기업
+            - text: 주요 수행사례
+          - generic [ref=e62]:
+            - list "2026년 GMP 수행 기업" [ref=e63]:
+              - listitem "한국유나이티드제약" [ref=e64]:
+                - generic [ref=e66]:
+                  - text: 한국유나이티드제약
+                  - generic [ref=e67]: 로고 등록 예정
+                - paragraph [ref=e69]: 성능적격성평가 수행, 반자동 로딩기 적격성평가
+              - listitem "가온이앤아이" [ref=e70]:
+                - generic [ref=e72]:
+                  - text: 가온이앤아이
+                  - generic [ref=e73]: 로고 등록 예정
+                - paragraph [ref=e75]: 제네톡스 조제실 크린부스 2대 적격성평가
+              - listitem "동방메디컬" [ref=e76]:
+                - generic [ref=e78]:
+                  - text: 동방메디컬
+                  - generic [ref=e79]: 로고 등록 예정
+                - generic [ref=e80]:
+                  - paragraph [ref=e81]: 라벨러 IQ, OQ 수행, CaHA필러 Autoclave 열침투 테스트 수행, 반자동 분말충전기 적격성평가, 카토너 적격성평가
+                  - generic [aria-hidden] [ref=e82]: 등등
+              - listitem "대한뉴팜" [ref=e83]:
+                - generic [ref=e85]:
+                  - text: 대한뉴팜
+                  - generic [ref=e86]: 로고 등록 예정
+                - paragraph [ref=e88]: 믹싱&충진포장기 Qualification
+              - listitem "바이넥스" [ref=e89]:
+                - generic [ref=e91]:
+                  - text: 바이넥스
+                  - generic [ref=e92]: 로고 등록 예정
+                - paragraph [ref=e94]: 오송공장 리모델링에 따른 적격성평가 수행
+              - listitem "오가노이드사이언스" [ref=e95]:
+                - generic [ref=e97]:
+                  - text: 오가노이드사이언스
+                  - generic [ref=e98]: 로고 등록 예정
+                - paragraph [ref=e100]: 광명GMP센터 2026년 재적격성평가
+              - listitem "종근당바이오" [ref=e101]:
+                - generic [ref=e103]:
+                  - text: 종근당바이오
+                  - generic [ref=e104]: 로고 등록 예정
+                - paragraph [ref=e106]: 생산1팀 커머셜 생산라인 탈수실 적격성 평가
+              - listitem "머크" [ref=e107]:
+                - generic [ref=e109]:
+                  - text: 머크
+                  - generic [ref=e110]: 로고 등록 예정
+                - generic [ref=e111]:
+                  - paragraph [ref=e112]: Clean Booth OQ Test, 대전 신 공장 자동창고 밸리데이션 개정 대응 사외용역
+                  - generic [aria-hidden] [ref=e113]: 등등
+              - listitem "한국BMI" [ref=e114]:
+                - generic [ref=e116]:
+                  - text: 한국BMI
+                  - generic [ref=e117]: 로고 등록 예정
+                - paragraph [ref=e119]: Prefilled 밀대조립기 적격성평가
+              - listitem "셀론텍" [ref=e120]:
+                - generic [ref=e122]:
+                  - text: 셀론텍
+                  - generic [ref=e123]: 로고 등록 예정
+                - generic [ref=e124]:
+                  - paragraph [ref=e125]: Prefilled syringe 충전기 적격성평가, 추가 탈포기, 이동식 클린부스 IQ, OQ
+                  - generic [aria-hidden] [ref=e126]: 등등
+              - listitem "아이티켐" [ref=e127]:
+                - generic [ref=e129]:
+                  - text: 아이티켐
+                  - generic [ref=e130]: 로고 등록 예정
+                - paragraph [ref=e132]: 아이티켐 G/L 반응기 적격성평가
+              - listitem "피알피사이언스" [ref=e133]:
+                - generic [ref=e135]:
+                  - text: 피알피사이언스
+                  - generic [ref=e136]: 로고 등록 예정
+                - paragraph [ref=e138]: 압축공기 밸리데이션 수행
+              - listitem "코오롱제약" [ref=e139]:
+                - generic [ref=e141]:
+                  - text: 코오롱제약
+                  - generic [ref=e142]: 로고 등록 예정
+                - paragraph [ref=e144]: 역회전과립기 적격성평가
+              - listitem "신일제약" [ref=e145]:
+                - generic [ref=e147]:
+                  - text: 신일제약
+                  - generic [ref=e148]: 로고 등록 예정
+                - generic [ref=e149]:
+                  - paragraph [ref=e150]: 신규 포장라인 밸리데이션, 충주공장 LIMS 및 LAS데 대한 컴퓨터시스템 밸리데이션 수행
+                  - generic [aria-hidden] [ref=e151]: 등등
+              - listitem "휴바이오켐" [ref=e152]:
+                - generic [ref=e154]:
+                  - text: 휴바이오켐
+                  - generic [ref=e155]: 로고 등록 예정
+                - paragraph [ref=e157]: 충주 GMP 공장 구축을 위한 개념설계
+              - listitem "HK이노엔" [ref=e158]:
+                - generic [ref=e160]:
+                  - text: HK이노엔
+                  - generic [ref=e161]: 로고 등록 예정
+                - paragraph [ref=e163]: 대소공장 압축공기시스템 Qualification
+              - listitem "지반" [ref=e164]:
+                - generic [ref=e166]:
+                  - text: 지반
+                  - generic [ref=e167]: 로고 등록 예정
+                - paragraph [ref=e169]: 정남농협 압축공기 품질시험
+              - listitem "건일바이오팜" [ref=e170]:
+                - generic [ref=e172]:
+                  - text: 건일바이오팜
+                  - generic [ref=e173]: 로고 등록 예정
+                - paragraph [ref=e175]: CO-Mill에 대한 적격성평가 수행
+              - listitem "휴젤" [ref=e176]:
+                - generic [ref=e178]:
+                  - text: 휴젤
+                  - generic [ref=e179]: 로고 등록 예정
+                - paragraph [ref=e181]: 거두공장 충전기상부 크린부스 적격성평가
+              - listitem "삼성제약" [ref=e182]:
+                - generic [ref=e184]:
+                  - text: 삼성제약
+                  - generic [ref=e185]: 로고 등록 예정
+                - paragraph [ref=e187]: 증류수 포인트 변경작업 IQ, OQ
+            - generic [ref=e188]:
+              - paragraph [ref=e189]: 등등, 이 외에도 23개 기업의 수행실적이 있습니다.
+              - generic [ref=e190]: 전체 기업과 상세 프로젝트는 아래 전체 수행실적 엑셀 파일에서 확인해 주세요.
+        - complementary [ref=e191]:
+          - generic [ref=e196]:
+            - heading "전체 수행실적을 한 번에 확인하세요." [level=2] [ref=e197]
+            - paragraph [ref=e198]: 연도별 수행 기업과 상세 업무 내역을 엑셀 파일로 제공합니다.
+          - generic [ref=e199]:
+            - link "전체 수행실적 다운로드" [ref=e200] [cursor=pointer]:
+              - /url: ./downloads/infact-references-2016-2026-2026-09-28.xls
+            - paragraph [ref=e204]: Excel · 전체 수행실적
+  - contentinfo [ref=e205]:
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - link "IN-FACT 홈으로 이동" [ref=e209] [cursor=pointer]:
+            - /url: "#/"
+            - img "IN-FACT" [ref=e210]
+          - paragraph [ref=e211]: 현장의 요구와 규제 기준을 연결해, 제약·바이오 프로젝트가 실행 가능한 계획으로 이어지도록 지원합니다.
+          - generic "회사 정보" [ref=e212]:
+            - paragraph [ref=e213]: 대표. 고동주
+            - paragraph [ref=e214]: 주소. 경기도 오산시 내삼미로 80번길 36-11
+            - paragraph [ref=e215]:
+              - link "Tel. 031-378-7220" [ref=e216] [cursor=pointer]:
+                - /url: tel:0313787220
+              - text: ·
+              - link "Fax. 031-378-7221" [ref=e217] [cursor=pointer]:
+                - /url: tel:0313787221
+        - navigation "푸터 메뉴" [ref=e218]:
+          - generic [ref=e219]:
+            - generic [ref=e220]: Navigation
+            - link "회사 소개" [ref=e221] [cursor=pointer]:
+              - /url: "#/company"
+            - link "서비스" [ref=e222] [cursor=pointer]:
+              - /url: "#/service-design"
+            - link "수행 실적" [ref=e223] [cursor=pointer]:
+              - /url: "#/references-design"
+            - link "문의하기" [ref=e224] [cursor=pointer]:
+              - /url: "#/contact"
+          - generic [ref=e225]:
+            - generic [ref=e226]: Contact
+            - link "031-378-7220" [ref=e227] [cursor=pointer]:
+              - /url: tel:0313787220
+            - link "infact@in-fact.co.kr" [ref=e228] [cursor=pointer]:
+              - /url: mailto:infact@in-fact.co.kr
+            - link "www.in-fact.co.kr" [ref=e229] [cursor=pointer]:
+              - /url: https://www.in-fact.co.kr
+      - generic [ref=e230]:
+        - paragraph [ref=e231]: © 2026 IN-FACT. All rights reserved.
+        - generic "보조 메뉴" [ref=e232]:
+          - link "홈" [ref=e233] [cursor=pointer]:
+            - /url: "#/"
+          - link "회사 소개" [ref=e234] [cursor=pointer]:
+            - /url: "#/company"
+          - link "문의하기" [ref=e235] [cursor=pointer]:
+            - /url: "#/contact"

@@ -16,7 +16,31 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Keep label/value pairs readable inside the tablet's title/detail split. */
+  .contact-page .contact-team-item__details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .contact-page .contact-team-item__details a,
+  .contact-page .contact-info-link {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
 @media (max-width: 767px) {
+  /* Reserve the map's right-hand control column instead of covering the address. */
+  .contact-page .contact-map__address {
+    left: 14px;
+    width: calc(100% - 86px);
+    max-width: 300px;
+    transform: none;
+  }
+
   .home-cta-banner {
     inline-size: 100% !important;
     width: 100% !important;
