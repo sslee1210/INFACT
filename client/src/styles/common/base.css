@@ -22,6 +22,19 @@ body {
   line-height: 1.72;
 }
 
+@media (min-width: 1200px) {
+  :root {
+    --site-reading-font: InfactPretendard, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Malgun Gothic", sans-serif;
+  }
+
+  body {
+    font-family: var(--site-reading-font);
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: none;

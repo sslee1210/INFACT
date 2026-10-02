@@ -583,3 +583,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (min-width: 1200px) {
+  .home-nav__menu-button,
+  .home-nav__contact-btn {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  .home-nav__mega-link {
+    font-weight: 500;
+  }
+
+  .home-nav__mega-link.is-current {
+    font-weight: 650;
+  }
+
+  .home-nav button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -5px;
+  }
+}

@@ -1,0 +1,2591 @@
+[
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 252.5,
+        "right": 1172.5,
+        "size": "17px",
+        "text": "제약·바이오 전문 컨설팅 파트너",
+        "weight": "400"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 703.84375,
+        "size": "34.56px",
+        "text": "GMP는 검증되어야 하고,INFACT는  Valification을",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 612.21875,
+        "size": "33.12px",
+        "text": "기획부터 승인까지,GMP 전 과정을 지원합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 706.859375,
+        "size": "34.56px",
+        "text": "검증된 전문 컨설턴트가함께합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 496.296875,
+        "right": 928.6875,
+        "size": "34.56px",
+        "text": "프로젝트 단계에 맞는전문 서비스를 연결합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 208,
+        "right": 418.25,
+        "size": "21.6px",
+        "text": "Conceptual Design",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 474.25,
+        "right": 684.5,
+        "size": "21.6px",
+        "text": "GMP Consulting",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 740.5,
+        "right": 950.75,
+        "size": "21.6px",
+        "text": "GMP Qualification",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 1006.75,
+        "right": 1217,
+        "size": "21.6px",
+        "text": "Computerized System Validation",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 777.25,
+        "size": "34px",
+        "text": "프로젝트 범위가 흐려지기 전에기준부터 정리하세요",
+        "weight": "700"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 970,
+        "size": "34px",
+        "text": "완벽한 개념설계에서 시작해야 합니다.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/company",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 338.09375,
+        "right": 1086.890625,
+        "size": "34px",
+        "text": "HISTORY",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 236.5,
+        "right": 676.5,
+        "size": "18px",
+        "text": "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 748.5,
+        "right": 1188.5,
+        "size": "18px",
+        "text": "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 236.5,
+        "right": 676.5,
+        "size": "18px",
+        "text": "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 748.5,
+        "right": 1188.5,
+        "size": "18px",
+        "text": "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 236.5,
+        "right": 676.5,
+        "size": "18px",
+        "text": "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 748.5,
+        "right": 1188.5,
+        "size": "18px",
+        "text": "2017년에는 CSV 컨설팅도 시작했어요.",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 236.5,
+        "right": 676.5,
+        "size": "18px",
+        "text": "2016년부터 GMP 컨설팅을 시작했어요.",
+        "weight": "600"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/history",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1245,
+        "size": "34px",
+        "text": "조직 구성",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/organization",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "개념설계",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1245,
+        "size": "34px",
+        "text": "개념설계 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 216,
+        "right": 675.5,
+        "size": "21px",
+        "text": "생산계획을 공간 기준으로 전환",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 748.5,
+        "right": 1209,
+        "size": "21px",
+        "text": "상세설계 전 핵심 쟁점 합의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "개념설계 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "개념설계 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 204,
+        "right": 422.25,
+        "size": "20px",
+        "text": "기초자료·범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 470.25,
+        "right": 688.5,
+        "size": "20px",
+        "text": "공정·시설 규모 분석",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 736.5,
+        "right": 954.75,
+        "size": "20px",
+        "text": "GMP Layout·동선 개발",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1002.75,
+        "right": 1221,
+        "size": "20px",
+        "text": "Design Basis 확정",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-design",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "GMP 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1245,
+        "size": "34px",
+        "text": "GMP 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 216,
+        "right": 675.5,
+        "size": "21px",
+        "text": "실질적 가이드 제공",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 748.5,
+        "right": 1209,
+        "size": "21px",
+        "text": "실사 리스크 최소화",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "GMP 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "GMP 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 204,
+        "right": 422.25,
+        "size": "20px",
+        "text": "범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 470.25,
+        "right": 688.5,
+        "size": "20px",
+        "text": "QMS 구축",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 736.5,
+        "right": 954.75,
+        "size": "20px",
+        "text": "밸리데이션",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1002.75,
+        "right": 1221,
+        "size": "20px",
+        "text": "실사 대응",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-gmp",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "CSV 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "CSV 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 216,
+        "right": 675.5,
+        "size": "21px",
+        "text": "규제 준수와 Data Integrity 확보",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 748.5,
+        "right": 1209,
+        "size": "21px",
+        "text": "위험 기반 검증과 Lifecycle 관리",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "CSV 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 1030,
+        "size": "34px",
+        "text": "CSV 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 204,
+        "right": 369,
+        "size": "20px",
+        "text": "프로젝트 착수·계획",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 417,
+        "right": 582,
+        "size": "20px",
+        "text": "요구사항·설계 검토",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 630,
+        "right": 795,
+        "size": "20px",
+        "text": "위험평가",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 843,
+        "right": 1008,
+        "size": "20px",
+        "text": "검증 실행",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-csv",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "개념설계 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 757.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 324,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 268,
+        "right": 626.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-design",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "GMP 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 757.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 324,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 268,
+        "right": 626.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-gmp",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "CSV 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 757.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 180,
+        "right": 324,
+        "size": "48px",
+        "text": "2020",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 268,
+        "right": 626.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-csv",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 180,
+        "right": 1044,
+        "size": "40px",
+        "text": "프로젝트 상담이 필요하신가요?",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 212,
+        "right": 490.484375,
+        "size": "22px",
+        "text": "개념설계",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 572.75,
+        "right": 851.234375,
+        "size": "22px",
+        "text": "GMP",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 933.5,
+        "right": 1213,
+        "size": "22px",
+        "text": "CSV",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 180,
+        "right": 318.65625
+      },
+      {
+        "left": 549.0859375,
+        "right": 875.9140625
+      },
+      {
+        "left": 1086.0625,
+        "right": 1245
+      }
+    ],
+    "overflow": false,
+    "route": "#/contact",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 492.5,
+        "right": 1412.5,
+        "size": "17px",
+        "text": "제약·바이오 전문 컨설팅 파트너",
+        "weight": "400"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 926.5,
+        "size": "40px",
+        "text": "GMP는 검증되어야 하고,INFACT는  Valification을",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 825.21875,
+        "size": "42px",
+        "text": "기획부터 승인까지,GMP 전 과정을 지원합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 790,
+        "size": "40px",
+        "text": "검증된 전문 컨설턴트가함께합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 736.296875,
+        "right": 1168.6875,
+        "size": "40px",
+        "text": "프로젝트 단계에 맞는전문 서비스를 연결합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 268,
+        "right": 568.25,
+        "size": "23px",
+        "text": "Conceptual Design",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 624.25,
+        "right": 924.5,
+        "size": "23px",
+        "text": "GMP Consulting",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 980.5,
+        "right": 1280.75,
+        "size": "23px",
+        "text": "GMP Qualification",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 1336.75,
+        "right": 1637,
+        "size": "23px",
+        "text": "Computerized System Validation",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1179,
+        "size": "34px",
+        "text": "프로젝트 범위가 흐려지기 전에기준부터 정리하세요",
+        "weight": "700"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1030,
+        "size": "34px",
+        "text": "완벽한 개념설계에서 시작해야 합니다.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/company",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 572.5,
+        "right": 1332.5,
+        "size": "34px",
+        "text": "HISTORY",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 476.5,
+        "right": 916.5,
+        "size": "18px",
+        "text": "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 988.5,
+        "right": 1428.5,
+        "size": "18px",
+        "text": "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 476.5,
+        "right": 916.5,
+        "size": "18px",
+        "text": "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 988.5,
+        "right": 1428.5,
+        "size": "18px",
+        "text": "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 476.5,
+        "right": 916.5,
+        "size": "18px",
+        "text": "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 988.5,
+        "right": 1428.5,
+        "size": "18px",
+        "text": "2017년에는 CSV 컨설팅도 시작했어요.",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 476.5,
+        "right": 916.5,
+        "size": "18px",
+        "text": "2016년부터 GMP 컨설팅을 시작했어요.",
+        "weight": "600"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/history",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1665,
+        "size": "34px",
+        "text": "조직 구성",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/organization",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "개념설계",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1665,
+        "size": "34px",
+        "text": "개념설계 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 276,
+        "right": 915.5,
+        "size": "21px",
+        "text": "생산계획을 공간 기준으로 전환",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 988.5,
+        "right": 1629,
+        "size": "21px",
+        "text": "상세설계 전 핵심 쟁점 합의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "개념설계 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "개념설계 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 264,
+        "right": 572.25,
+        "size": "20px",
+        "text": "기초자료·범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 620.25,
+        "right": 928.5,
+        "size": "20px",
+        "text": "공정·시설 규모 분석",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 976.5,
+        "right": 1284.75,
+        "size": "20px",
+        "text": "GMP Layout·동선 개발",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1332.75,
+        "right": 1641,
+        "size": "20px",
+        "text": "Design Basis 확정",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-design",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "GMP 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1665,
+        "size": "34px",
+        "text": "GMP 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 276,
+        "right": 915.5,
+        "size": "21px",
+        "text": "실질적 가이드 제공",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 988.5,
+        "right": 1629,
+        "size": "21px",
+        "text": "실사 리스크 최소화",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "GMP 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "GMP 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 264,
+        "right": 572.25,
+        "size": "20px",
+        "text": "범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 620.25,
+        "right": 928.5,
+        "size": "20px",
+        "text": "QMS 구축",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 976.5,
+        "right": 1284.75,
+        "size": "20px",
+        "text": "밸리데이션",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1332.75,
+        "right": 1641,
+        "size": "20px",
+        "text": "실사 대응",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-gmp",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "CSV 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "CSV 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 276,
+        "right": 915.5,
+        "size": "21px",
+        "text": "규제 준수와 Data Integrity 확보",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 988.5,
+        "right": 1629,
+        "size": "21px",
+        "text": "위험 기반 검증과 Lifecycle 관리",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "CSV 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 1090,
+        "size": "34px",
+        "text": "CSV 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 264,
+        "right": 501,
+        "size": "20px",
+        "text": "프로젝트 착수·계획",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 549,
+        "right": 786,
+        "size": "20px",
+        "text": "요구사항·설계 검토",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 834,
+        "right": 1071,
+        "size": "20px",
+        "text": "위험평가",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1119,
+        "right": 1356,
+        "size": "20px",
+        "text": "검증 실행",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-csv",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "개념설계 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 817.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 384,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 328,
+        "right": 686.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-design",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "GMP 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 817.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 384,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 328,
+        "right": 686.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-gmp",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "CSV 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 817.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 240,
+        "right": 384,
+        "size": "48px",
+        "text": "2020",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 328,
+        "right": 686.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-csv",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 240,
+        "right": 1120,
+        "size": "44px",
+        "text": "프로젝트 상담이 필요하신가요?",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 272,
+        "right": 670,
+        "size": "22px",
+        "text": "개념설계",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 753,
+        "right": 1151,
+        "size": "22px",
+        "text": "GMP",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1234,
+        "right": 1633,
+        "size": "22px",
+        "text": "CSV",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 240,
+        "right": 381.90625
+      },
+      {
+        "left": 734.6015625,
+        "right": 1170.3984375
+      },
+      {
+        "left": 1497.0625,
+        "right": 1665
+      }
+    ],
+    "overflow": false,
+    "route": "#/contact",
+    "width": 1920
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 812.5,
+        "right": 1732.5,
+        "size": "17px",
+        "text": "제약·바이오 전문 컨설팅 파트너",
+        "weight": "400"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1246.5,
+        "size": "40px",
+        "text": "GMP는 검증되어야 하고,INFACT는  Valification을",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1145.21875,
+        "size": "42px",
+        "text": "기획부터 승인까지,GMP 전 과정을 지원합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1110,
+        "size": "40px",
+        "text": "검증된 전문 컨설턴트가함께합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 1056.296875,
+        "right": 1488.6875,
+        "size": "40px",
+        "text": "프로젝트 단계에 맞는전문 서비스를 연결합니다.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 588,
+        "right": 888.25,
+        "size": "23px",
+        "text": "Conceptual Design",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 944.25,
+        "right": 1244.5,
+        "size": "23px",
+        "text": "GMP Consulting",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 1300.5,
+        "right": 1600.75,
+        "size": "23px",
+        "text": "GMP Qualification",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 1656.75,
+        "right": 1957,
+        "size": "23px",
+        "text": "Computerized System Validation",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1483.8125,
+        "size": "34px",
+        "text": "프로젝트 범위가 흐려지기 전에기준부터 정리하세요",
+        "weight": "700"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1350,
+        "size": "34px",
+        "text": "완벽한 개념설계에서 시작해야 합니다.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/company",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 880.625,
+        "right": 1664.375,
+        "size": "34px",
+        "text": "HISTORY",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 796.5,
+        "right": 1236.5,
+        "size": "18px",
+        "text": "현업에 열심으로 임하며 또한 새로운 꿈을 만들고 있어요.",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 1308.5,
+        "right": 1748.5,
+        "size": "18px",
+        "text": "2025년에는 해외 개념사업 및 종합 컨설팅 계약이 이루어져 바쁜",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 796.5,
+        "right": 1236.5,
+        "size": "18px",
+        "text": "2021년에는 성장하는 인팩트 직원들의 근무환경 개선과 고객과의 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 1308.5,
+        "right": 1748.5,
+        "size": "18px",
+        "text": "인팩트가 성장하며 여러 고객사로부터 사업 파트너십 요청이 있었고 ",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 796.5,
+        "right": 1236.5,
+        "size": "18px",
+        "text": "2018년에는 선택적 배지 생산시설을 구축하고 매출도 만들어 냈지",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 1308.5,
+        "right": 1748.5,
+        "size": "18px",
+        "text": "2017년에는 CSV 컨설팅도 시작했어요.",
+        "weight": "600"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 796.5,
+        "right": 1236.5,
+        "size": "18px",
+        "text": "2016년부터 GMP 컨설팅을 시작했어요.",
+        "weight": "600"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/history",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "제약·바이오 현장과 규제를 연결합니다.",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1985,
+        "size": "34px",
+        "text": "조직 구성",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/company/organization",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "개념설계",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1985,
+        "size": "34px",
+        "text": "개념설계 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 596,
+        "right": 1235.5,
+        "size": "21px",
+        "text": "생산계획을 공간 기준으로 전환",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1308.5,
+        "right": 1949,
+        "size": "21px",
+        "text": "상세설계 전 핵심 쟁점 합의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "개념설계 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "개념설계 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 584,
+        "right": 892.25,
+        "size": "20px",
+        "text": "기초자료·범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 940.25,
+        "right": 1248.5,
+        "size": "20px",
+        "text": "공정·시설 규모 분석",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1296.5,
+        "right": 1604.75,
+        "size": "20px",
+        "text": "GMP Layout·동선 개발",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1652.75,
+        "right": 1961,
+        "size": "20px",
+        "text": "Design Basis 확정",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-design",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "GMP 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1985,
+        "size": "34px",
+        "text": "GMP 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 596,
+        "right": 1235.5,
+        "size": "21px",
+        "text": "실질적 가이드 제공",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1308.5,
+        "right": 1949,
+        "size": "21px",
+        "text": "실사 리스크 최소화",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "GMP 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "GMP 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 584,
+        "right": 892.25,
+        "size": "20px",
+        "text": "범위 정의",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 940.25,
+        "right": 1248.5,
+        "size": "20px",
+        "text": "QMS 구축",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1296.5,
+        "right": 1604.75,
+        "size": "20px",
+        "text": "밸리데이션",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1652.75,
+        "right": 1961,
+        "size": "20px",
+        "text": "실사 대응",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-gmp",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "CSV 컨설팅",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "CSV 컨설팅 핵심 가치",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 596,
+        "right": 1235.5,
+        "size": "21px",
+        "text": "규제 준수와 Data Integrity 확보",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1308.5,
+        "right": 1949,
+        "size": "21px",
+        "text": "위험 기반 검증과 Lifecycle 관리",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "CSV 컨설팅 적용 분야 및 대상 제조소",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 1410,
+        "size": "34px",
+        "text": "CSV 컨설팅 수행 로드맵",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 584,
+        "right": 821,
+        "size": "20px",
+        "text": "프로젝트 착수·계획",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 869,
+        "right": 1106,
+        "size": "20px",
+        "text": "요구사항·설계 검토",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1154,
+        "right": 1391,
+        "size": "20px",
+        "text": "위험평가",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1439,
+        "right": 1676,
+        "size": "20px",
+        "text": "검증 실행",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/service-csv",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "개념설계 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1137.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 704,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 648,
+        "right": 1006.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-design",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "GMP 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1137.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 704,
+        "size": "48px",
+        "text": "2025",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 648,
+        "right": 1006.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-gmp",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "CSV 수행실적",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1137.796875,
+        "size": "32px",
+        "text": "함께해 온 기업들",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 560,
+        "right": 704,
+        "size": "48px",
+        "text": "2020",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+        "left": 648,
+        "right": 1006.03125,
+        "size": "24px",
+        "text": "전체 수행실적을 한 번에 확인하세요.",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/references-csv",
+    "width": 2560
+  },
+  {
+    "brokenImages": [],
+    "headings": [
+      {
+        "clipped": false,
+        "font": "InfactPretendard, \"Malgun Gothic\", sans-serif",
+        "left": 560,
+        "right": 1467.5,
+        "size": "44px",
+        "text": "프로젝트 상담이 필요하신가요?",
+        "weight": "700"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 592,
+        "right": 990,
+        "size": "22px",
+        "text": "개념설계",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1073,
+        "right": 1471,
+        "size": "22px",
+        "text": "GMP",
+        "weight": "650"
+      },
+      {
+        "clipped": false,
+        "font": "InfactPretendard, Pretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "left": 1554,
+        "right": 1953,
+        "size": "22px",
+        "text": "CSV",
+        "weight": "650"
+      }
+    ],
+    "nav": [
+      {
+        "left": 560,
+        "right": 706.34375
+      },
+      {
+        "left": 981.953125,
+        "right": 1563.046875
+      },
+      {
+        "left": 1816.0625,
+        "right": 1985
+      }
+    ],
+    "overflow": false,
+    "route": "#/contact",
+    "width": 2560
+  }
+]

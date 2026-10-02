@@ -785,3 +785,45 @@
     font-size: 15px !important;
   }
 }
+
+@media (min-width: 1200px) {
+  .home-main .home-company-intro__lead h2,
+  .home-main .home-experience__head h2,
+  .home-main .service-immersive__title {
+    font-size: clamp(32px, 2.4vw, 40px) !important;
+    font-weight: 650 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  .home-main .home-company-intro__copy p,
+  .home-main .home-experience__head p,
+  .home-main .service-immersive__summary {
+    line-height: 1.8 !important;
+    letter-spacing: -0.015em !important;
+    color: #586477 !important;
+  }
+
+  .home-main .service-card__content {
+    padding: 32px 28px !important;
+  }
+
+  .home-main .service-card__label {
+    font-size: 12px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .home-main .service-card__scope {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+  }
+
+  .home-main .service-card__cta {
+    font-size: 14px !important;
+  }
+
+  .home-main :is(a, button):focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+}

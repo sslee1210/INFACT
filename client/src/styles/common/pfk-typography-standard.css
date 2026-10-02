@@ -29,6 +29,18 @@
   --pfk-label: 11px;
 }
 
+/* Desktop reading scale; tablet and mobile retain their existing sizes. */
+@media (min-width: 1200px) {
+  :root {
+    --pfk-page-title: clamp(40px, 2.3vw, 44px);
+    --pfk-section-title: 32px;
+    --pfk-support: 15px;
+    --pfk-control: 14px;
+    --pfk-meta: 13px;
+    --pfk-label: 12px;
+  }
+}
+
 /* Shared navigation and controls */
 .home-nav__menu-button {
   font-size: var(--pfk-body) !important;
@@ -171,6 +183,20 @@
 
 .history-list__content li {
   font-size: calc(var(--pfk-control) + 1px) !important;
+}
+
+@media (min-width: 1200px) {
+  .history-list__titleRow h3 {
+    font-size: 18px !important;
+  }
+
+  .history-list__content li {
+    font-size: 16px !important;
+  }
+
+  .history-list__item time {
+    font-size: 14px !important;
+  }
 }
 
 .org-tree__box--lead {

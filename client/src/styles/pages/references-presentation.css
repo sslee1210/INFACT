@@ -270,6 +270,57 @@
   color: var(--archive-muted);
 }
 
+@media (min-width: 1200px) {
+  /* Keep archive-specific hierarchy above the legacy shared h2/p rules. */
+  .references-page .reference-archive__heading h2 {
+    font-size: 32px !important;
+    font-weight: 650 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .references-page .reference-archive__heading p,
+  .references-page .reference-company__summary,
+  .references-page .reference-empty p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+    font-weight: 400 !important;
+  }
+
+  .references-page .reference-empty .reference-empty__title {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+  }
+
+  .references-page .reference-results__year p {
+    font-size: 14px !important;
+  }
+
+  .references-page .reference-results__footnote p {
+    font-size: 17px !important;
+  }
+
+  .references-page .reference-download h2 {
+    font-size: 24px !important;
+    font-weight: 650 !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .references-page .reference-download__intro p {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+  }
+
+  .references-page .reference-download__action p {
+    font-size: 13px !important;
+  }
+
+  .references-page .reference-years button {
+    font-variant-numeric: tabular-nums;
+    transition: background-color 160ms ease, color 160ms ease;
+  }
+}
+
 @media (max-width: 1199px) {
   .references-page .reference-archive__heading { display: block; }
 

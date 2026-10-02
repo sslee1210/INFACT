@@ -298,7 +298,9 @@
   --subnav-stuck-current: #fff;
   --subnav-stuck-border: rgba(255, 255, 255, 0.16);
   /* Override the existing white mobile navigation surface. */
-  background: #000 !important;
+  background: rgba(0, 0, 0, 0.64) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-bottom-color: var(--subnav-stuck-border);
 }
 

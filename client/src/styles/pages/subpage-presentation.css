@@ -505,9 +505,126 @@ html:has(.site-app--refined) {
 }
 
 @media (min-width: 1200px) {
+  /* Shared desktop type hierarchy, including the existing history layout. */
+  html:has(.site-app) {
+    .page-intro .page-title {
+      font-size: var(--pfk-page-title) !important;
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+      letter-spacing: -0.035em !important;
+    }
+
+    .page-intro .page-description {
+      font-size: 18px !important;
+      line-height: 1.75 !important;
+      letter-spacing: -0.015em;
+      font-weight: 400 !important;
+      max-width: 760px !important;
+    }
+
+    .page-subnav > button {
+      font-size: 15px !important;
+      font-weight: 550 !important;
+    }
+
+    .page-subnav > button[aria-current="page"] {
+      font-weight: 650 !important;
+    }
+
+    .page-breadcrumb > li {
+      font-size: 12px !important;
+      font-weight: 500;
+    }
+
+    .site-main :is(.section-title, .company-organization__title) {
+      font-size: 34px !important;
+      font-weight: 650 !important;
+      line-height: 1.4 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    .site-main .section-label {
+      font-weight: 600 !important;
+      letter-spacing: 0.06em !important;
+    }
+  }
+
   html:has(.site-app--refined) .org-tree__box {
     min-height: 72px !important;
     font-size: 16px !important;
+  }
+
+  html:has(.site-app--refined) {
+    .site-main .body-copy {
+      line-height: 1.85 !important;
+      letter-spacing: -0.015em;
+    }
+
+    .org-tree__box {
+      font-weight: 550 !important;
+      letter-spacing: -0.015em;
+    }
+
+    .org-tree__box--lead {
+      font-size: 18px !important;
+      font-weight: 650 !important;
+    }
+
+    .service-business-heading {
+      margin-bottom: 36px !important;
+    }
+
+    .service-business-heading h2 {
+      font-weight: 650 !important;
+      letter-spacing: -0.025em !important;
+    }
+
+    .consulting-template__value h3,
+    .consulting-template__difference-item h3 {
+      font-size: 21px !important;
+      letter-spacing: -0.02em;
+    }
+
+    .consulting-template__value p,
+    .consulting-template__difference-item p {
+      margin-top: 12px !important;
+    }
+
+    .consulting-template__execution-head span {
+      font-size: 14px !important;
+    }
+
+    .consulting-template__execution-copy p,
+    .consulting-template__execution-output p {
+      font-size: 16px !important;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-team-item {
+      padding-inline: 32px !important;
+    }
+
+    .contact-team-item__details dt {
+      font-size: 14px !important;
+    }
+
+    .contact-team-item__details dd,
+    .contact-team-item__details a {
+      font-size: 16px !important;
+    }
+
+    .contact-page__overview {
+      gap: 64px !important;
+    }
+
+    .contact-page :is(.contact-info-link, .contact-team-item__details a) {
+      text-underline-offset: 4px;
+      text-decoration-thickness: 1px;
+    }
+
+    .contact-page :is(.contact-info-link, .contact-team-item__details a):hover {
+      text-decoration-line: underline;
+    }
   }
 }
 

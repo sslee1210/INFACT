@@ -1,0 +1,46 @@
+{
+  "scope": "Desktop detail refinement across all 11 routes; min-width 1200px",
+  "desktop": {
+    "widths": [
+      1440,
+      1920,
+      2560
+    ],
+    "routeCount": 11,
+    "combinations": 33,
+    "horizontalOverflow": false,
+    "sampledHeadingClipping": false,
+    "headerOverlap": false
+  },
+  "mobile": {
+    "width": 390,
+    "routes": 11,
+    "comparedTypographyAndSpacingUnchanged": true
+  },
+  "interaction": {
+    "referenceYearSelection": "PASS",
+    "keyboardFocus": "PASS",
+    "homeScrollReveal": "PASS"
+  },
+  "checks": {
+    "typecheck": "PASS",
+    "responsiveIntegrity": "PASS",
+    "cssOwnership": "PASS",
+    "appIntegrity": "PASS",
+    "build": "PASS",
+    "diffWhitespace": "PASS",
+    "homepageBuildHashMatch": "PASS"
+  },
+  "workDelegation": {
+    "status": "unavailable",
+    "error": "fetch failed",
+    "submittedTasks": 0,
+    "delivery": "local"
+  },
+  "git": {
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "preview": "desktop-preview.jpg"
+}

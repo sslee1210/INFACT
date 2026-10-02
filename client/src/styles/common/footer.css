@@ -219,3 +219,33 @@
     gap: var(--ui-space-4);
   }
 }
+
+@media (min-width: 1200px) {
+  .site-footer {
+    --home-text-soft: #626d7c;
+    --ui-border: #e5e8ed;
+  }
+
+  .site-footer__brand-copy {
+    line-height: 1.8;
+  }
+
+  .site-footer__heading {
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+
+  .site-footer__col a {
+    font-weight: 500;
+  }
+
+  .site-footer__company-meta p {
+    line-height: 1.75;
+  }
+
+  .site-footer__bottom p,
+  .site-footer__bottom-links a {
+    color: #6b7684;
+    font-weight: 400;
+  }
+}

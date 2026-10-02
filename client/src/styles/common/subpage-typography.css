@@ -41,12 +41,12 @@
 .contact-page h2,
 .history-page h2,
 .company-section__heading h2 {
-  font-family:
+  font-family: var(--site-reading-font,
     "Pretendard",
     "Noto Sans KR",
     "Malgun Gothic",
     "맑은 고딕",
-    sans-serif !important;
+    sans-serif) !important;
   font-kerning: normal;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
