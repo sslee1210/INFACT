@@ -12,7 +12,13 @@ export type ReferenceClient = {
 };
 
 export type ReferenceYear = { year: number; clients: ReferenceClient[] };
-type ReferenceYearTabsProps = { years: ReferenceYear[]; categoryLabel: string };
+type ReferenceYearTabsProps = {
+  years: ReferenceYear[];
+  categoryLabel: string;
+  combineYears?: boolean;
+  selectedYear: number;
+  onYearChange: (year: number) => void;
+};
 
 function collectCompanies(records: ReferenceClient[]) {
   const companies = new Map<string, ReferenceClient & { summary: string[] }>();
@@ -96,26 +102,28 @@ function ProjectSummary({ text }: { text: string }) {
   );
 }
 
-export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsProps) {
-  const [selectedYear, setSelectedYear] = useState(() =>
-    Number(new URLSearchParams(window.location.search).get("year")),
-  );
+export function ReferenceYearTabs({ years, categoryLabel, combineYears = false, selectedYear, onYearChange }: ReferenceYearTabsProps) {
   const selected = years.find((item) => item.year === selectedYear) ?? years[0];
-  // 대표 기업의 표시 수만 제한하고, 전체 원본 실적은 그대로 유지합니다.
   const companies = collectCompanies(selected?.clients ?? []);
-  const visibleClients = prioritizeReferenceCompanies(companies).slice(0, 20);
-  const remainingCompanyCount = companies.length - visibleClients.length;
-
-  function chooseYear(year: number) {
-    setSelectedYear(year);
-    const url = new URL(window.location.href);
-    url.searchParams.set("year", String(year));
-    window.history.replaceState(window.history.state, "", url);
-  }
+  const visibleClients = combineYears
+    ? years.flatMap(({ clients }) => clients.flatMap((company) =>
+      (company.projects ?? company.systems ?? []).map((project, index) => ({
+        ...company,
+        summary: [company.systems?.[index] ?? project],
+      }))
+    ))
+    : prioritizeReferenceCompanies(companies).slice(0, 20);
+  const remainingCompanyCount = combineYears ? 0 : companies.length - visibleClients.length;
+  const periodLabel = combineYears ? `~${Math.max(...years.map(({ year }) => year))}` : String(selected?.year);
 
   return (
     <>
-      <div className="reference-years" role="group" aria-label="수행 연도 선택">
+      {combineYears ? (
+        <div className="reference-years">
+          <span className="reference-years__label">수행 기간</span>
+          <span className="reference-years__range">{periodLabel}</span>
+        </div>
+      ) : <div className="reference-years" role="group" aria-label="수행 연도 선택">
         <span className="reference-years__label">연도 선택</span>
         <div className="reference-years__options">
           {years.map(({ year }) => (
@@ -124,28 +132,32 @@ export function ReferenceYearTabs({ years, categoryLabel }: ReferenceYearTabsPro
               type="button"
               aria-pressed={year === selected?.year}
               aria-controls="reference-results"
-              onClick={() => chooseYear(year)}
+              onClick={() => onYearChange(year)}
             >
               {year}
             </button>
           ))}
         </div>
-      </div>
+      </div>}
       <div id="reference-results" className="reference-results">
         <header className="reference-results__year" aria-live="polite" aria-atomic="true">
-          <h3>{selected?.year}</h3>
+          <h3>{periodLabel}</h3>
           <p>{categoryLabel} 수행 기업</p>
-          {visibleClients.length > 0 && <span>주요 수행사례</span>}
+          {visibleClients.length > 0 && <span>{combineYears ? `전체 ${visibleClients.length}건의 수행실적` : "주요 수행사례"}</span>}
         </header>
         <div className="reference-results__body">
           {visibleClients.length ? (
             <>
-              <ul className="reference-companies" aria-label={`${selected?.year}년 ${categoryLabel} 수행 기업`}>
-                {visibleClients.map((company) => (
-                  <li key={company.client} className="reference-company" aria-label={company.client}>
+              <ul className="reference-companies" aria-label={`${periodLabel}년 ${categoryLabel} 수행 기업`}>
+                {visibleClients.map((company, index) => (
+                  <li key={`${company.client}-${index}`} className="reference-company" aria-label={company.client}>
                     <CompanyLogo {...company} />
                     <div className="reference-company__details">
-                      <ProjectSummary text={company.summary.length ? company.summary.join(", ") : "수행 내용 확인 중"} />
+                      {combineYears && company.summary.length ? company.summary.map((project) => (
+                        <p key={project} className="reference-company__summary reference-company__summary--expanded">
+                          {project}
+                        </p>
+                      )) : <ProjectSummary text={company.summary.length ? company.summary.join(", ") : "수행 내용 확인 중"} />}
                     </div>
                   </li>
                 ))}

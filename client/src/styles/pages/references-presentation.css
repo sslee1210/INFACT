@@ -75,6 +75,17 @@
   color: #fff;
   background: var(--archive-accent);
 }
+.references-page .reference-years__range {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--archive-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 550;
+}
 .references-page :is(button, a):focus-visible {
   outline: 3px solid #4978bd;
   outline-offset: 3px;
@@ -180,6 +191,14 @@
   letter-spacing: -0.015em;
   word-break: keep-all;
   overflow-wrap: anywhere;
+}
+.references-page .reference-company__summary--expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.references-page .reference-company__summary--expanded + .reference-company__summary--expanded {
+  margin-top: 8px;
 }
 .references-page .reference-company__more {
   display: block;
