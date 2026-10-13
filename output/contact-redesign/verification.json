@@ -1,0 +1,40 @@
+{
+  "viewports": [
+    {
+      "brokenImages": [],
+      "font": "PreviewPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+      "h1": "48.96px",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "font": "PreviewPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+      "h1": "52px",
+      "overflow": false,
+      "width": 1920
+    },
+    {
+      "brokenImages": [],
+      "font": "PreviewPretendard, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Malgun Gothic\", sans-serif",
+      "h1": "36px",
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "choices": [
+    {
+      "title": "GMP 팀장에게 문의하세요.",
+      "href": "mailto:infact@in-fact.co.kr?subject=%5BINFACT%5D%20GMP%20%EB%AC%B8%EC%9D%98"
+    },
+    {
+      "title": "CSV 팀장에게 문의하세요.",
+      "href": "mailto:infact@in-fact.co.kr?subject=%5BINFACT%5D%20CSV%20%EB%AC%B8%EC%9D%98"
+    },
+    {
+      "title": "개념설계 팀장에게 문의하세요.",
+      "href": "mailto:infact@in-fact.co.kr?subject=%5BINFACT%5D%20%EA%B0%9C%EB%85%90%EC%84%A4%EA%B3%84%20%EB%AC%B8%EC%9D%98"
+    }
+  ],
+  "previewOnly": true
+}

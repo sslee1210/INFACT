@@ -475,7 +475,7 @@
   line-height: 1;
   font-weight: 850;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .contact-team-item__title h3 {

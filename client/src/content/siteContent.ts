@@ -16,23 +16,23 @@ export const teamContacts = [
   {
     label: "개념설계",
     service: "Conceptual Design",
-    manager: "개념설계 팀장",
-    email: "infact@in-fact.co.kr",
+    manager: "김영석 부사장",
+    email: "yskim@in-fact.co.kr",
     phone: "031-378-7220",
   },
   {
     label: "GMP",
     service: "GMP Consulting",
-    manager: "GMP 팀장",
-    email: "infact@in-fact.co.kr",
+    manager: "김경환 이사",
+    email: "khkim@in-fact.co.kr",
     phone: "031-378-7220",
   },
   {
     label: "CSV",
     service: "CSV Consulting",
-    manager: "CSV 팀장",
-    email: "infact@in-fact.co.kr",
-    phone: "031-378-7220",
+    manager: "최지훈 수석부장",
+    email: "jhchoi@in-fact.co.kr",
+    phone: "010-7271-4885",
   },
 ];
 

@@ -1,0 +1,5 @@
+
+    const choices={design:{name:'개념설계',manager:'개념설계 팀장',description:'제조소 개념설계 범위 협의 및 초기 요구사항 정리'},gmp:{name:'GMP',manager:'GMP 팀장',description:'GMP 프로젝트 기획 및 운영 체계 검토'},csv:{name:'CSV',manager:'CSV 팀장',description:'CSV 대상 시스템 검증 전략 협의'}};
+    document.querySelectorAll('input[name="service"]').forEach(input=>input.addEventListener('change',()=>{const c=choices[input.value];document.querySelector('#selected-title').textContent=c.manager+'에게 문의하세요.';document.querySelector('#selected-description').textContent=c.description;document.querySelector('#service-email').href='mailto:infact@in-fact.co.kr?subject='+encodeURIComponent('[INFACT] '+c.name+' 문의');}));
+    const menu=document.querySelector('.menu-toggle');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'메뉴 닫기':'메뉴 열기');document.querySelector('.site-nav').classList.toggle('is-open',open)});
+  

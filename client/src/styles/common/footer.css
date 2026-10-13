@@ -87,7 +87,8 @@
   text-transform: uppercase;
 }
 
-.site-footer__col a {
+.site-footer__col a,
+.site-footer__contact-text {
   width: fit-content;
   max-width: 100%;
   min-height: 32px;
@@ -196,6 +197,7 @@
   }
 
   .site-footer__col a,
+  .site-footer__contact-text,
   .site-footer__bottom-links a {
     min-height: 44px;
   }
@@ -228,7 +230,8 @@
     letter-spacing: 0.08em;
   }
 
-  .site-footer__col a {
+  .site-footer__col a,
+  .site-footer__contact-text {
     font-weight: 500;
   }
 

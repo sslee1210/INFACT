@@ -1,7 +1,7 @@
 import { useState, type CSSProperties } from "react";
 import { PageIntro } from "@/components/site/PageIntro";
 import { PageLayout } from "@/components/site/PageLayout";
-import { contactInfo, teamContacts } from "@/content/siteContent";
+import { contactInfo } from "@/content/siteContent";
 
 const KAKAO_MAP_URL =
   "https://map.kakao.com/link/search/경기도 오산시 내삼미로80번길 36-11";
@@ -74,8 +74,6 @@ function KakaoMapPreview() {
 }
 
 export default function Contact() {
-  const contactPhoneHref = `tel:${contactInfo.phone.replace(/\D/g, "")}`;
-
   return (
     <PageLayout presentation="refined">
       <PageIntro
@@ -86,50 +84,13 @@ export default function Contact() {
 
       <section className="section section--white">
         <div className="site-shell contact-page">
-          <div className="contact-team-directory">
-            <div className="contact-team-list" aria-label="분야별 담당 연락처">
-              {teamContacts.map((contact) => (
-                <article className="contact-team-item" key={contact.label}>
-                  <div className="contact-team-item__title">
-                    <span>{contact.service}</span>
-                    <h3>{contact.label}</h3>
-                  </div>
-                  <dl className="contact-team-item__details">
-                    <div>
-                      <dt>담당자</dt>
-                      <dd>{contact.manager}</dd>
-                    </div>
-                    <div>
-                      <dt>E-Mail</dt>
-                      <dd>
-                        <a href={`mailto:${contact.email}`}>{contact.email}</a>
-                      </dd>
-                    </div>
-                    <div>
-                      <dt>TEL</dt>
-                      <dd>
-                        <a href={`tel:${contact.phone.replace(/\D/g, "")}`}>
-                          {contact.phone}
-                        </a>
-                      </dd>
-                    </div>
-                  </dl>
-                </article>
-              ))}
-            </div>
-          </div>
-
           <div className="contact-page__overview company-section">
             <div id="contact-info" className="contact-page__info">
               <p className="section-label">Contact Information</p>
               <div className="detail-table">
                 <div className="detail-table__row">
                   <span>전화</span>
-                  <div>
-                    <a className="contact-info-link" href={contactPhoneHref}>
-                      {contactInfo.phone}
-                    </a>
-                  </div>
+                  <div>{contactInfo.phone}</div>
                 </div>
                 <div className="detail-table__row">
                   <span>팩스</span>
@@ -137,14 +98,7 @@ export default function Contact() {
                 </div>
                 <div className="detail-table__row">
                   <span>이메일</span>
-                  <div>
-                    <a
-                      className="contact-info-link"
-                      href={`mailto:${contactInfo.email}`}
-                    >
-                      {contactInfo.email}
-                    </a>
-                  </div>
+                  <div>{contactInfo.email}</div>
                 </div>
                 <div className="detail-table__row">
                   <span>주소</span>

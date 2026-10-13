@@ -12,7 +12,6 @@ export default function Company() {
 
         <div className="site-shell company-section company-greeting">
           <div className="company-section__heading">
-            <p className="section-label">인사말</p>
             <h2 className="section-title">완벽한 개념설계에서 시작해야 합니다.</h2>
           </div>
 

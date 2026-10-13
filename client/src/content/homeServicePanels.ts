@@ -40,7 +40,7 @@ export const SERVICE_PANELS = [
     phase: "Clean Room / Utility",
     output: "DQ · IQ · OQ · PQ · Qualification Report",
     tags: ["시설·설비", "Utility", "DQ·IQ·OQ·PQ", "결과 문서화"],
-    link: "#/service-gmp",
+    link: "#/service-csv",
     linkLabel: "GMP 적격성평가 관련 서비스 보기",
     image: "./images/home/service-qualification-v1.png",
   },

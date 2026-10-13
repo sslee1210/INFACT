@@ -30,9 +30,9 @@ export function SiteFooter() {
               <p>대표. 고동주</p>
               <p>주소. 경기도 오산시 내삼미로 80번길 36-11</p>
               <p>
-                <a href="tel:0313787220">Tel. 031-378-7220</a>
+                <span>Tel. 031-378-7220</span>
                 <span aria-hidden="true"> · </span>
-                <a href="tel:0313787221">Fax. 031-378-7221</a>
+                <span>Fax. 031-378-7221</span>
               </p>
             </div>
           </div>
@@ -49,11 +49,11 @@ export function SiteFooter() {
 
             <div className="site-footer__col">
               <span className="site-footer__heading">Contact</span>
-              <a href="tel:0313787220">031-378-7220</a>
-              <a href="mailto:infact@in-fact.co.kr">infact@in-fact.co.kr</a>
-              <a href="https://www.in-fact.co.kr" target="_blank" rel="noreferrer">
+              <span className="site-footer__contact-text">031-378-7220</span>
+              <span className="site-footer__contact-text">infact@in-fact.co.kr</span>
+              <span className="site-footer__contact-text">
                 www.in-fact.co.kr
-              </a>
+              </span>
             </div>
           </nav>
         </div>

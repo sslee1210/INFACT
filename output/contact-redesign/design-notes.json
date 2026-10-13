@@ -1,0 +1,27 @@
+{
+  "status": "preview-only",
+  "date": "2026-10-13",
+  "references": [
+    "https://www.apple.com/kr/contact/",
+    "https://support.toss.im/",
+    "https://toss.tech/article/1st-product-designer-tools"
+  ],
+  "decisions": [
+    "대표 연락처를 상단에 통합",
+    "문의 분야 선택과 메일 제목 연결",
+    "밝은 배경과 Pretendard의 명확한 정보 위계",
+    "기존 지도 이미지와 정확한 연락처 유지"
+  ],
+  "originalPageModified": false,
+  "source": "client/src/content/siteContent.ts",
+  "localPreview": "http://127.0.0.1:4174/",
+  "checks": [
+    "1440px, 1920px, 390px 가로 넘침 없음",
+    "로고와 지도 로딩 확인",
+    "3개 문의 분야의 담당 안내 및 mailto 제목 확인",
+    "모바일 메뉴와 준비 안내 펼치기 확인",
+    "지도 비율 수정 후 390px 및 1440px 재검증",
+    "JavaScript 문법 검사 통과",
+    "브라우저 콘솔 오류 없음"
+  ]
+}
